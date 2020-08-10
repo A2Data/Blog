@@ -1,0 +1,2983 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#3.0.0-rc.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+  <title>从零搭建ubuntu - A2Data</title>
+  
+    <meta name="keywords" content="Linux,Ubuntu">
+  
+
+  
+    <meta name="description" content="安装ubuntu、sublime骚操作">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/styles/solarized-light.css">
+
+    
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  
+  
+</head>
+
+<body>
+  
+  
+  
+  <div class="cover-wrapper">
+    <cover class='cover post' style="display: none;">
+      <div class='cover-body'>
+  <div class='a'>
+    
+    
+      <p class="title">数据科学</p>
+    
+    
+      <p class="subtitle">Welcome To A2Data</p>
+    
+  </div>
+  <div class='b'>
+    <div class='menu navigation dock'>
+      <div class='list-h'>
+        
+          
+            <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/user/6511370"
+              
+              
+              id="https:cloudtencentcomdeveloperuser6511370">
+              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/txy1.png'><p>云+社区</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://www.cnblogs.com/a2data/"
+              
+              
+              id="https:wwwcnblogscoma2data">
+              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/bky.png'><p>博客园</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://my.oschina.net/u/4159456"
+              
+              
+              id="https:myoschinanetu4159456">
+              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/kyzg.png'><p>OsChina</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://support.qq.com/products/176810/"
+              
+              
+              id="https:supportqqcomproducts176810">
+              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/shequ.png'><p>社群</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+    </cover>
+    <header class="l_header shadow blur">
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://gitee.com/sqlsq_admin/cdn/raw/master/logos.jpg'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-flag fa-fw'></i>开始
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://learngitbranching.js.org/?demo=&amp;locale=zh_CN
+                  
+                  
+                  
+                    id="https:learngitbranchingjsorg?demo=&amp;locale=zh_CN"
+                  >
+                  <i class='fas fa-pen-alt fa-fw'></i>Git
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-palette fa-fw'></i>娱乐
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/relax/mofang
+                  
+                  
+                  
+                    id="relaxmofang"
+                  >
+                  魔方
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/relax/2048
+                  
+                  
+                  
+                    id="relax2048"
+                  >
+                  2048
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-fan fa-spin fa-fw'></i>社区
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/books/
+                  
+                  
+                  
+                    id="books"
+                  >
+                  <i class='fa fa-book fa-fw fa-fw'></i>悦读
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/movies/
+                  
+                  
+                  
+                    id="movies"
+                  >
+                  <i class='fas fa-play-circle fa-fw fa-fw'></i>电影
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              
+                <li>
+                  <a class="menuitem flat-box">
+                    <i class='fas fa-compact-disc fa-fw music'></i>音乐
+                  </a>
+                  <ul class="list-v">
+                    <li>
+                      <div class="aplayer-container">
+                        
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='random'
+      fixed='false'
+      list-max-height='320px'
+      server='netease'
+      type='playlist'
+      id='986297619'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+                      </div>
+                    </li>
+                  </ul>
+                <li>
+              
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-comment-dots fa-fw fa-fw'></i>聆听
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/contact/
+                  
+                  
+                  
+                    id="contact"
+                  >
+                  <i class='fa fa-paper-plane fa-fw fa-fw'></i>留言
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/contact/
+                  
+                  
+                  
+                    id="contact"
+                  >
+                  <i class='fas fa-comment-dots fa-fw fa-fw'></i>话痨
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fa fa-history fa-fw fa-fw'></i>关于
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/confession/
+                  
+                  
+                  
+                    id="confession"
+                  >
+                  <i class='fa-fw fa fa-heart fa-fw'></i>表白
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw fa-fw'></i>自述
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/history/
+                  
+                  
+                  
+                    id="history"
+                  >
+                  <i class='fas fa-location-arrow fa-fw'></i>历程
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/sponsor/
+                  
+                  
+                  
+                    id="sponsor"
+                  >
+                  <i class='fa fa-credit-card fa-fw'></i>赞助
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  镜像
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=http://mirrors.163.com/
+                  
+                  
+                  
+                    id="http:mirrors163com"
+                  >
+                  网易
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=http://mirrors.sohu.com/ubuntu/indices/
+                  
+                  
+                  
+                    id="http:mirrorssohucomubuntuindices"
+                  >
+                  搜狐
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://mirrors.tuna.tsinghua.edu.cn/apache/
+                  
+                  
+                  
+                    id="https:mirrorstunatsinghuaeducnapache"
+                  >
+                  Apache
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  Centos
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=http://man.linuxde.net/download/CentOS
+                  
+                  
+                  
+                    id="http:manlinuxdenetdownloadCentOS"
+                  >
+                  国内
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://www.centos.org/download/
+                  
+                  
+                  
+                    id="https:wwwcentosorgdownload"
+                  >
+                  官方
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=http://mirror.lzu.edu.cn/
+                  
+                  
+                  
+                    id="http:mirrorlzueducn"
+                  >
+                  兰大
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  工具
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://encycolorpedia.cn/named
+                  
+                  
+                  
+                    id="https:encycolorpediacnnamed"
+                  >
+                  颜色码
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://www.iconfont.cn/
+                  
+                  
+                  
+                    id="https:wwwiconfontcn"
+                  >
+                  图标库
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://www.sojson.com/dwz.html
+                  
+                  
+                  
+                    id="https:wwwsojsoncomdwzhtml"
+                  >
+                  短链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://cli.im/
+                  
+                  
+                  
+                    id="https:cliim"
+                  >
+                  二维码
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=http://www.aigei.com/bgremover/
+                  
+                  
+                  
+                    id="http:wwwaigeicombgremover"
+                  >
+                  透明图
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  站点
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=http://a2data.github.io/
+                  
+                  
+                  
+                    id="http:a2datagithubio"
+                  >
+                  Github
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://sqlsq_admin.gitee.io/
+                  
+                  
+                  
+                    id="https:sqlsq_admingiteeio"
+                  >
+                  Gitee
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-flag fa-fw'></i>开始
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://learngitbranching.js.org/?demo=&amp;locale=zh_CN
+                  
+                  
+                  
+                    id="https:learngitbranchingjsorg?demo=&amp;locale=zh_CN"
+                  >
+                  <i class='fas fa-pen-alt fa-fw'></i>Git
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-palette fa-fw'></i>娱乐
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/relax/mofang
+                  
+                  
+                  
+                    id="relaxmofang"
+                  >
+                  魔方
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/relax/2048
+                  
+                  
+                  
+                    id="relax2048"
+                  >
+                  2048
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-fan fa-spin fa-fw'></i>社区
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/books/
+                  
+                  
+                  
+                    id="books"
+                  >
+                  <i class='fa fa-book fa-fw fa-fw'></i>悦读
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/movies/
+                  
+                  
+                  
+                    id="movies"
+                  >
+                  <i class='fas fa-play-circle fa-fw fa-fw'></i>电影
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-comment-dots fa-fw fa-fw'></i>聆听
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/contact/
+                  
+                  
+                  
+                    id="contact"
+                  >
+                  <i class='fa fa-paper-plane fa-fw fa-fw'></i>留言
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/contact/
+                  
+                  
+                  
+                    id="contact"
+                  >
+                  <i class='fas fa-comment-dots fa-fw fa-fw'></i>话痨
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fa fa-history fa-fw fa-fw'></i>关于
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/confession/
+                  
+                  
+                  
+                    id="confession"
+                  >
+                  <i class='fa-fw fa fa-heart fa-fw'></i>表白
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw fa-fw'></i>自述
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/history/
+                  
+                  
+                  
+                    id="history"
+                  >
+                  <i class='fas fa-location-arrow fa-fw'></i>历程
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/sponsor/
+                  
+                  
+                  
+                    id="sponsor"
+                  >
+                  <i class='fa fa-credit-card fa-fw'></i>赞助
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  镜像
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=http://mirrors.163.com/
+                  
+                  
+                  
+                    id="http:mirrors163com"
+                  >
+                  网易
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=http://mirrors.sohu.com/ubuntu/indices/
+                  
+                  
+                  
+                    id="http:mirrorssohucomubuntuindices"
+                  >
+                  搜狐
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://mirrors.tuna.tsinghua.edu.cn/apache/
+                  
+                  
+                  
+                    id="https:mirrorstunatsinghuaeducnapache"
+                  >
+                  Apache
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  Centos
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=http://man.linuxde.net/download/CentOS
+                  
+                  
+                  
+                    id="http:manlinuxdenetdownloadCentOS"
+                  >
+                  国内
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://www.centos.org/download/
+                  
+                  
+                  
+                    id="https:wwwcentosorgdownload"
+                  >
+                  官方
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=http://mirror.lzu.edu.cn/
+                  
+                  
+                  
+                    id="http:mirrorlzueducn"
+                  >
+                  兰大
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  工具
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://encycolorpedia.cn/named
+                  
+                  
+                  
+                    id="https:encycolorpediacnnamed"
+                  >
+                  颜色码
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://www.iconfont.cn/
+                  
+                  
+                  
+                    id="https:wwwiconfontcn"
+                  >
+                  图标库
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://www.sojson.com/dwz.html
+                  
+                  
+                  
+                    id="https:wwwsojsoncomdwzhtml"
+                  >
+                  短链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://cli.im/
+                  
+                  
+                  
+                    id="https:cliim"
+                  >
+                  二维码
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=http://www.aigei.com/bgremover/
+                  
+                  
+                  
+                    id="http:wwwaigeicombgremover"
+                  >
+                  透明图
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  站点
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=http://a2data.github.io/
+                  
+                  
+                  
+                    id="http:a2datagithubio"
+                  >
+                  Github
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://sqlsq_admin.gitee.io/
+                  
+                  
+                  
+                    id="https:sqlsq_admingiteeio"
+                  >
+                  Gitee
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  </div>
+  
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper' id="pjax-container">
+      
+        <!--此文件用来存放一些不方便取值的变量--> 
+<!--思路大概是将值藏到重加载的区域内--> 
+ 
+ 
+ 
+<div id="pjax-data" style="display: none"> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">从零搭建ubuntu</div> 
+  <div id="pjax-enable-cover">true</div> 
+  <div id="pjax-comment-path">none</div> 
+  <div id="pjax-comment-placeholder">none</div> 
+</div> 
+ 
+ 
+<script> 
+  // 处理封面 此时 jquery 还没加载 
+  if ("none" == "none") { // 移除封面 
+    document.getElementsByClassName('cover')[0].style.display = "none"; 
+    document.getElementsByClassName('l_body')[0].classList.add("nocover"); 
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
+  } else { 
+    if ("none" == "blog") { // 半屏 
+      document.getElementsByClassName('cover')[0].classList.remove("full"); 
+      document.getElementsByClassName('cover')[0].classList.add("half"); 
+      document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
+    } else if ("none" == "docs") { // 全屏 
+      document.getElementsByClassName('cover')[0].classList.remove("half"); 
+      document.getElementsByClassName('cover')[0].classList.add("full"); 
+      document.getElementsByClassName('scroll-down')[0].style.display = ""; 
+    } 
+    document.getElementsByClassName('cover')[0].style.display = ""; 
+    document.getElementsByClassName('l_body', 'show')[0].classList.remove("nocover"); 
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show"); 
+  } 
+</script> 
+
+      
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  <h1 class="title">
+    <a href="/posts/48061.html">
+      从零搭建ubuntu
+    </a>
+  </h1>
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
+    <p>JackFeng</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/Linux/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>Linux</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Dec 30, 2019</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          
+          <p>安装ubuntu、sublime骚操作</p>
+<a id="more"></a>
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230114723.png" alt="ubuntu"></p>
+<h1 id="Ubuntu系统"><a href="#Ubuntu系统" class="headerlink" title="Ubuntu系统"></a>Ubuntu系统</h1><h2 id="1、虚拟机操作系统"><a href="#1、虚拟机操作系统" class="headerlink" title="1、虚拟机操作系统"></a>1、虚拟机操作系统</h2><p><strong>VMware</strong>  <strong>Virtualbox</strong></p>
+<blockquote>
+<ul>
+<li>1、<a target="_blank" rel="noopener" href="https://www.vmware.com/cn.html">https://www.vmware.com/cn.html</a> </li>
+<li>2、<a target="_blank" rel="noopener" href="https://www.virtualbox.org/">https://www.virtualbox.org/</a></li>
+</ul>
+</blockquote>
+<h2 id="2、小编哪个都玩得很溜"><a href="#2、小编哪个都玩得很溜" class="headerlink" title="2、小编哪个都玩得很溜"></a>2、小编哪个都玩得很溜</h2><p><strong>此处采用 Virtualbox</strong>  原因是不用破解。 支持一下官方。</p>
+<h2 id="3、-下载ubuntu镜像"><a href="#3、-下载ubuntu镜像" class="headerlink" title="3、 下载ubuntu镜像"></a>3、 下载ubuntu镜像</h2><blockquote>
+<p>这里说明一下，官方下载贼慢。</p>
+<p><a target="_blank" rel="noopener" href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a></p>
+</blockquote>
+<pre><code class="python">
+# 所以小编收集了一个镜像网站 比官网快NNN倍不止
+http://mirrors.aliyun.com/ubuntu-releases/
+
+#以及上传到自己的微云网盘，供大家使用。如有需要，请加小编微信。</code></pre>
+<h2 id="4、万事具备开始安装"><a href="#4、万事具备开始安装" class="headerlink" title="4、万事具备开始安装"></a>4、万事具备开始安装</h2><blockquote>
+<p>每一步都是截图，这样更加直观明了。 </p>
+<p>走你！！！</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230141259.png" alt="打开vbox"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230141355.png" alt="新建虚拟"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230141418.png" alt="配置内存大小"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230141455.png" alt="创建磁盘"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230141507.png" alt="磁盘文件类型"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230141533.png" alt="动态可以更加节省空间"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230141611.png" alt="配置硬盘大小"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230141638.png" alt="创建完成"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230141729.png" alt="选择下载的ubuntu镜像"></p>
+<h2 id="5、ubuntu安装"><a href="#5、ubuntu安装" class="headerlink" title="5、ubuntu安装"></a>5、ubuntu安装</h2><h3 id="5-1、启动"><a href="#5-1、启动" class="headerlink" title="5.1、启动"></a>5.1、启动</h3><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230141916.png" alt="启动"></p>
+<h3 id="5-2、选择语言"><a href="#5-2、选择语言" class="headerlink" title="5.2、选择语言"></a>5.2、选择语言</h3><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230141951.png" alt="选择语言"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230142039.png"></p>
+<h3 id="5-3、根据自己需求安装"><a href="#5-3、根据自己需求安装" class="headerlink" title="5.3、根据自己需求安装"></a>5.3、根据自己需求安装</h3><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230142132.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230142230.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230142248.png" alt="默认磁盘分区"></p>
+<h3 id="5-4、选择地区"><a href="#5-4、选择地区" class="headerlink" title="5.4、选择地区"></a>5.4、选择地区</h3><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230142316.png"></p>
+<h3 id="5-5、创建用户信息"><a href="#5-5、创建用户信息" class="headerlink" title="5.5、创建用户信息"></a>5.5、创建用户信息</h3><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230142353.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230142416.png" alt="安装进行中"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230142813.png" alt="安装插件下载"></p>
+<h2 id="6、安装完成重启"><a href="#6、安装完成重启" class="headerlink" title="6、安装完成重启"></a>6、安装完成重启</h2><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230143441.png"></p>
+<h2 id="7、安装扩展组件"><a href="#7、安装扩展组件" class="headerlink" title="7、安装扩展组件"></a>7、安装扩展组件</h2><blockquote>
+<p>支持全屏，自定义大小。 双向拖动等。</p>
+<ul>
+<li>Vmware 中安装的是  Tools  需要sudo ./ 执行解压的文件即可</li>
+<li>Vbox 直接根据菜单操作安装即可。</li>
+</ul>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230144342.png"></p>
+<h2 id="8、Python"><a href="#8、Python" class="headerlink" title="8、Python"></a>8、Python</h2><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230150043.png" alt="安装python3"></p>
+<blockquote>
+<p>安装pip</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230152454.png"></p>
+<h2 id="9、安装sublime"><a href="#9、安装sublime" class="headerlink" title="9、安装sublime"></a>9、安装sublime</h2><blockquote>
+<p>对于Ubuntu 18.04及更高版本，只需打开Ubuntu软件搜索并安装sublime-text即可</p>
+<p>对于Ubuntu 16.04，打开终端（Ctrl + Alt + T）并运行snap命令来安装：</p>
+<p><code>sudo apt install snapd &amp;&amp; sudo snap install sublime-text</code></p>
+</blockquote>
+<blockquote>
+<p>1.通过Ctrl + Alt + T键盘快捷键或从应用程序启动器打开终端。 打开时，运行命令添加密钥环：</p>
+<p>wget -qO - <a target="_blank" rel="noopener" href="https://download.sublimetext.com/sublimehq-pub.gpg">https://download.sublimetext.com/sublimehq-pub.gpg</a> | sudo apt-key add -</p>
+<p>在提示时键入用户密码（无星号反馈），然后按Enter键。</p>
+<p>2.然后运行命令添加apt存储库：</p>
+<p>echo “deb <a target="_blank" rel="noopener" href="https://download.sublimetext.com/">https://download.sublimetext.com/</a> apt/stable/“ | sudo tee /etc/apt/sources.list.d/sublime-text.list</p>
+<p>3.最后通过Synaptic包管理器或运行命令安装sublime-text包：</p>
+<p>sudo apt update &amp;&amp; sudo apt install sublime-text</p>
+<h4 id="卸载："><a href="#卸载：" class="headerlink" title="卸载："></a>卸载：</h4><h4 id="要删除编辑器，请运行命令："><a href="#要删除编辑器，请运行命令：" class="headerlink" title="要删除编辑器，请运行命令："></a>要删除编辑器，请运行命令：</h4><h4 id="sudo-apt-remove-–autoremove-sublime-text"><a href="#sudo-apt-remove-–autoremove-sublime-text" class="headerlink" title="sudo apt remove –autoremove sublime-text"></a>sudo apt remove –autoremove sublime-text</h4><p>要删除apt存储库，请转到“软件和更新” - &gt;“其他软件”。</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230151657.png"></p>
+<h2 id="10、玩转sublime"><a href="#10、玩转sublime" class="headerlink" title="10、玩转sublime"></a>10、玩转sublime</h2><blockquote>
+<p><strong>选择类</strong><br>Ctrl+D 选中光标所占的文本，继续操作则会选中下一个相同的文本。</p>
+<p>此功能很好。<br>当你想同时修改多个相同代码的时候，比如，将echo 统一改成print，可以双击选中echo，然后Ctrl+D，会向下连选echo，重复，直到你满意的位置，然后就可以统一编辑了。</p>
+<p>有人说了，这不就是查找替换呀，是的，查找替换是可以实现，但这种方式更直观一些，而且不易出错。</p>
+<p>Alt+F3 选中文本按下快捷键，即可一次性选择全部的相同文本进行同时编辑。举个例子：快速选中并更改所有相同的变量名、函数名等。<br>Ctrl+L 选中整行，继续操作则继续选择下一行，效果和 Shift+↓ 效果一样。<br>Ctrl+Shift+L 先选中多行，再按下快捷键，会在每行行尾插入光标，即可同时编辑这些行。<br>Ctrl+Shift+M 选择括号内的内容（继续选择父括号）。举个栗子：快速选中删除函数中的代码，重写函数体代码或重写括号内里的内容。<br>Ctrl+M 光标移动至括号内结束或开始的位置。<br>Ctrl+Enter 在下一行插入新行。举个栗子：即使光标不在行尾，也能快速向下插入一行。<br>Ctrl+Shift+Enter 在上一行插入新行。举个栗子：即使光标不在行首，也能快速向上插入一行。<br>Ctrl+Shift+[ 选中代码，按下快捷键，折叠代码。<br>Ctrl+Shift+] 选中代码，按下快捷键，展开代码。<br>Ctrl+K+0 展开所有折叠代码。<br>Ctrl+← 向左单位性地移动光标，快速移动光标。<br>Ctrl+→ 向右单位性地移动光标，快速移动光标。<br>shift+↑ 向上选中多行。<br>shift+↓ 向下选中多行。<br>Shift+← 向左选中文本。<br>Shift+→ 向右选中文本。<br>Ctrl+Shift+← 向左单位性地选中文本。<br>Ctrl+Shift+→ 向右单位性地选中文本。<br>Ctrl+Shift+↑ 将光标所在行和上一行代码互换（将光标所在行插入到上一行之前）。<br>Ctrl+Shift+↓ 将光标所在行和下一行代码互换（将光标所在行插入到下一行之后）。<br>Ctrl+Alt+↑ 向上添加多行光标，可同时编辑多行。<br>Ctrl+Alt+↓ 向下添加多行光标，可同时编辑多行。</p>
+<p><strong>编辑类</strong><br>Ctrl+J 合并选中的多行代码为一行。举个栗子：将多行格式的CSS属性合并为一行。<br>Ctrl+Shift+D 复制光标所在整行，插入到下一行。<br>Tab 向右缩进。<br>Shift+Tab 向左缩进。<br>Ctrl+K+K 从光标处开始删除代码至行尾。<br>Ctrl+Shift+K 删除整行。<br>Ctrl+/ 注释单行。<br>Ctrl+Shift+/ 注释多行。<br>Ctrl+K+U 转换大写。<br>Ctrl+K+L 转换小写。<br>Ctrl+Z 撤销。<br>Ctrl+Y 恢复撤销。<br>Ctrl+U 软撤销，感觉和 Gtrl+Z 一样。<br>Ctrl+F2 设置书签<br>Ctrl+T 左右字母互换。<br>F6 单词检测拼写</p>
+<p><strong>搜索类</strong><br>Ctrl+F 打开底部搜索框，查找关键字。<br>Ctrl+shift+F 在文件夹内查找，与普通编辑器不同的地方是sublime允许添加多个文件夹进行查找，略高端，未研究。<br>Ctrl+P 打开搜索框。举个栗子：1、输入当前项目中的文件名，快速搜索文件，2、输入@和关键字，查找文件中函数名，3、输入：和数字，跳转到文件中该行代码，4、输入#和关键字，查找变量名。<br>Ctrl+G 打开搜索框，自动带：，输入数字跳转到该行代码。举个栗子：在页面代码比较长的文件中快速定位。<br>Ctrl+R 打开搜索框，自动带@，输入关键字，查找文件中的函数名。举个栗子：在函数较多的页面快速查找某个函数。<br>Ctrl+： 打开搜索框，自动带#，输入关键字，查找文件中的变量名、属性名等。<br>Ctrl+Shift+P 打开命令框。场景栗子：打开命名框，输入关键字，调用sublime text或插件的功能，例如使用package安装插件。</p>
+<p>Esc 退出光标多行选择，退出搜索框，命令框等。</p>
+<p><strong>显示类</strong><br>Ctrl+Tab 按文件浏览过的顺序，切换当前窗口的标签页。<br>Ctrl+PageDown 向左切换当前窗口的标签页。<br>Ctrl+PageUp 向右切换当前窗口的标签页。<br>Alt+Shift+1 窗口分屏，恢复默认1屏（非小键盘的数字）<br>Alt+Shift+2 左右分屏-2列<br>Alt+Shift+3 左右分屏-3列<br>Alt+Shift+4 左右分屏-4列<br>Alt+Shift+5 等分4屏<br>Alt+Shift+8 垂直分屏-2屏<br>Alt+Shift+9 垂直分屏-3屏<br>Ctrl+K+B 开启/关闭侧边栏。</p>
+<p><strong>F11 全屏模式</strong><br>Shift+F11 免打扰模式</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230151907.png"></p>
+
+          
+            <div class='article_footer'>
+              
+                
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=http://www.a2data.cn/posts/48061.html>http://www.a2data.cn/posts/48061.html</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <div class='fancybox'><img src='https://gitee.com/sqlsq_admin/cdn/raw/master/alipay.jpg'
+        
+          height='64px'
+        ></div>
+      
+    
+      
+        <div class='fancybox'><img src='https://gitee.com/sqlsq_admin/cdn/raw/master/wechat.png'
+        
+          height='64px'
+        ></div>
+      
+    
+  </div>
+</section>
+
+  
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-07T18:28:22+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Aug 7, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Linux</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Ubuntu/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Ubuntu</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/48061.html&title=从零搭建ubuntu - A2Data&summary=安装ubuntu、sublime骚操作"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/48061.html&title=从零搭建ubuntu - A2Data&summary=安装ubuntu、sublime骚操作"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/48061.html&title=从零搭建ubuntu - A2Data&summary=安装ubuntu、sublime骚操作"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACSElEQVR42u3dW24CMQwFUPa/6XYBqIpfI4pz8gdMMz7Dz21sidfPpesFDg4ODg6+CP4qrrcND+9HPz/dr1svODg4ODj4Rng4ABTh0cKr949eDw4ODg4OvhkeDRDRgHIqqA3J1gsODg4ODg5eft0NRuDg4ODg4ODPwacPMMDBwcHBwcGfayhEDyayDf/ugwYHBwcHB78JXh6Y+9Drj082goODg4OD/wN4d2ULiw4GVAcHjvWCg4ODg4MvglcDwnQDIHrgUK0PHBwcHBx8I7zawJ8KGNWBgWiDIXwQAQ4ODg4O/oXw7gF/FjQ9kJDeBxwcHBwc/EJ4FNK9rjuYcHwfHBwcHBx8MTxbSDWQdA8Yyg8eHBwcHBx8IbzbcI8GiukBgPRBCjg4ODg4+CJ4tVGQPbCIFjwVZI4BBhwcHBwcfCE8O5jfbeBXB/mqgwfg4ODg4OCb4Nl/6J8KGNWBvXKAAQcHBwcHXwjvDtJVAd0GQvgLBAcHBwcHXwjPNgymDizCg3nFgHUMMODg4ODg4Avh1QGBqb/LDhqUGwrg4ODg4OCL4NmgMfXguitcLzg4ODg4+CJ4d00dWJQb/dkHAw4ODg4OvgjeDQzRA4Lpfcr7goODg4ODL4R3A0u24Ox+U40NcHBwcHDwzfCpBkK0oV9tEJQDFjg4ODg4OPjjP/zWvT49EQEODg4ODn4x/BQgstd1BwH+3B8cHBwcHHwxvBpEsqCnrwMHBwcHB78JXg0G2cKm7jPWUAAHBwcHB/9i+G0LHBwcHBx8wfoFYeiA26LdtvMAAAAASUVORK5CYII=">
+          </div>
+        </div>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/posts/47220.html'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Python强化练习</p>
+                <p class='content'>Python学习阶段钱
+
+
+
+Python强化练习1、给程序传参数import sys
+
+print(sys.argv)
+
+2、列表推导式
+所谓的列表推导式，就是指的轻量级循环创建列表
+
+2.1...</p>
+              </a>
+            
+            
+              <a class='next' href='/posts/39508.html'>
+                <p class='title'>MapReduce深入解析<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>MapReduce必备原理解析
+
+
+
+分布式计算框架MapReduce
+1、概念
+MapReduce是一个基于集群的计算平台，是一个简化分布式编程的计算框架，是一个将分布式计算抽象为Map和Re...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    
+
+  <article class="post white-box reveal comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      <section id="comments">
+        <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+      </section>
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+<section class="widget qrcode shadow desktop">
+  
+  <header>
+    
+      <i class="fas fa-mobile fa-fw" aria-hidden="true"></i><span class='name'>小程序</span>
+    
+  </header>
+
+
+  <div class='content article-entry'>
+    
+      
+        <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/xcx.jpg'
+        >
+      
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-text">1、虚拟机操作系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%B0%8F%E7%BC%96%E5%93%AA%E4%B8%AA%E9%83%BD%E7%8E%A9%E5%BE%97%E5%BE%88%E6%BA%9C"><span class="toc-text">2、小编哪个都玩得很溜</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81-%E4%B8%8B%E8%BD%BDubuntu%E9%95%9C%E5%83%8F"><span class="toc-text">3、 下载ubuntu镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E4%B8%87%E4%BA%8B%E5%85%B7%E5%A4%87%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85"><span class="toc-text">4、万事具备开始安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81ubuntu%E5%AE%89%E8%A3%85"><span class="toc-text">5、ubuntu安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1%E3%80%81%E5%90%AF%E5%8A%A8"><span class="toc-text">5.1、启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2%E3%80%81%E9%80%89%E6%8B%A9%E8%AF%AD%E8%A8%80"><span class="toc-text">5.2、选择语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3%E3%80%81%E6%A0%B9%E6%8D%AE%E8%87%AA%E5%B7%B1%E9%9C%80%E6%B1%82%E5%AE%89%E8%A3%85"><span class="toc-text">5.3、根据自己需求安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4%E3%80%81%E9%80%89%E6%8B%A9%E5%9C%B0%E5%8C%BA"><span class="toc-text">5.4、选择地区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5%E3%80%81%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="toc-text">5.5、创建用户信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%E9%87%8D%E5%90%AF"><span class="toc-text">6、安装完成重启</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95%E7%BB%84%E4%BB%B6"><span class="toc-text">7、安装扩展组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81Python"><span class="toc-text">8、Python</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81%E5%AE%89%E8%A3%85sublime"><span class="toc-text">9、安装sublime</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%B8%E8%BD%BD%EF%BC%9A"><span class="toc-text">卸载：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%81%E5%88%A0%E9%99%A4%E7%BC%96%E8%BE%91%E5%99%A8%EF%BC%8C%E8%AF%B7%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="toc-text">要删除编辑器，请运行命令：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sudo-apt-remove-%E2%80%93autoremove-sublime-text"><span class="toc-text">sudo apt remove –autoremove sublime-text</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E3%80%81%E7%8E%A9%E8%BD%ACsublime"><span class="toc-text">10、玩转sublime</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+    </div>
+    
+  
+  <footer class="clearfix">
+    <br><br>
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="https://github.com/A2Data"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=a2data@163.com"
+                class="social fas fa-envelope-open flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=66860619"
+                class="social fab fa-qq flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://gitee.com/sqlsq_admin/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
+                class="social fab fa-weixin flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://me.csdn.net/weixin_47093227"
+                class="social fab fa-cuttlefish flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+              <div class="pure">
+                  <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+                  <script>
+                      var getOSAndBrowser = function () {
+                          var os = navigator.platform;
+                          var userAgent = navigator.userAgent;
+                          var info = "";
+                          var tempArray = "";
+                          if (os.indexOf("Win") > -1) {
+                              if (userAgent.indexOf("Windows NT 5.0") > -1) {
+                                  info += "Win2000"
+                              } else if (userAgent.indexOf("Windows NT 5.1") > -1) {
+                                  info += "WinXP"
+                              } else if (userAgent.indexOf("Windows NT 5.2") > -1) {
+                                  info += "Win2003"
+                              }
+                              else if (userAgent.indexOf("Windows NT 6.0") > -1) {
+                                  info += "WindowsVista"
+                              } else if (userAgent.indexOf("Windows NT 6.1") > -1 || userAgent.indexOf("Windows 7") > -1) {
+                                  info += "Win7"
+                              } else if (userAgent.indexOf("Windows NT 6.2") > -1 || userAgent.indexOf("Windows 8") > -1) {
+                                  info += "Win8"
+                              }
+                              else if (userAgent.indexOf("Windows NT 6.3") > -1 || userAgent.indexOf("Windows 8.1") > -1) {
+                                  info += "Win8.1"
+                              } else if (userAgent.indexOf("Windows NT 10.0") > -1 || userAgent.indexOf("Windows 10") > -1) {
+                                  info += "Win10"
+                              } else {
+                                  info += "Other"
+                              }
+                          } else if (os.indexOf("Mac") > -1) {
+                              info += "Mac"
+                          } else if (os.indexOf("X11") > -1) {
+                              info += "Unix"
+                          } else if (os.indexOf("Linux") > -1) {
+                              info += "Linux"
+                          } else { info += "Other" } info += "/";
+                          var isOpera = userAgent.indexOf("Opera") > -1;
+                          var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera;
+                          var isEdge = userAgent.toLowerCase().indexOf("edge") > -1 && !isIE;
+                          var isIE11 = (userAgent.toLowerCase().indexOf("trident") > -1 && userAgent.indexOf("rv") > -1);
+                          if (/[Ff]irefox(\/\d+\.\d+)/.test(userAgent)) {
+                              tempArray = /([Ff]irefox)\/(\d+\.\d+)/.exec(userAgent);
+                              info += tempArray[1] + tempArray[2]
+                          } else if (isIE) {
+                              var version = "";
+                              var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+                              reIE.test(userAgent);
+                              var fIEVersion = parseFloat(RegExp["$1"]);
+                              if (fIEVersion == 7) {
+                                  version = "IE7"
+                              } else if (fIEVersion == 8) {
+                                  version = "IE8"
+                              } else if (fIEVersion == 9) { version = "IE9" } else if (fIEVersion == 10) { version = "IE10" } else { version = "0" } info += version
+                          } else if (isEdge) { info += "Edge" } else if (isIE11) { info += "IE11" } else if (/[Cc]hrome\/\d+/.test(userAgent)) { tempArray = /([Cc]hrome)\/(\d+)/.exec(userAgent); info += tempArray[1] + tempArray[2] } else if (/[Vv]ersion\/\d+\.\d+\.\d+(\.\d)* *[Ss]afari/.test(userAgent)) { tempArray = /[Vv]ersion\/(\d+\.\d+\.\d+)(\.\d)* *([Ss]afari)/.exec(userAgent); info += tempArray[3] + tempArray[1] } else if (/[Oo]pera.+[Vv]ersion\/\d+\.\d+/.test(userAgent)) { tempArray = /([Oo]pera).+[Vv]ersion\/(\d+)\.\d+/.exec(userAgent); info += tempArray[1] + tempArray[2] } else { info += "unknown" } return info
+                      }; document.write("欢迎来自" + returnCitySN["cname"] + "的朋友"); document.write(",您的 IP 是:" + returnCitySN["cip"]); document.write(",您使用的是:" + getOSAndBrowser());
+                  </script>
+              </div>
+              <br>
+              <div class="github-badge">
+                  <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+                      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+              </div>
+              <div class="github-badge">
+                  <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages 和 Gitee Pages">
+                      <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub & Gitee</span></a>
+              </div>
+              <div class="github-badge">
+                  <a style="color: #fff" rel="license" href="https://www.a2data.cn/" target="_blank" title="DataScience提供内容创作">
+                      <span class="badge-subject">Copyright © 2017-2020</span><span class="badge-value bg-blueviolet">A2Data</span></a>
+              </div>
+              <div class="github-badge">
+                  <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
+                      <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span></a>
+              </div>
+              <div class="github-badge">
+                  <a style="color: #fff" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
+                      <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
+              </div>
+              <div class="github-badge">
+                  <a style="color: #fff" rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
+                      <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
+              </div>
+      
+    
+  </footer>
+
+
+
+
+<style>
+  .github-badge {
+    display:inline-block;
+    border-radius:4px;
+    text-shadow:none;
+    font-size:13px;
+    color:#fff;
+    line-height:15px;
+    background-color:#ABBAC3;
+    margin-bottom:5px;
+  }
+  .github-badge .badge-subject {
+    display:inline-block;
+    background-color:#4D4D4D;
+    padding:4px 4px 4px 6px;
+    border-top-left-radius:4px;
+    border-bottom-left-radius:4px;
+  }
+  .github-badge .badge-value {
+    display:inline-block;
+    padding:4px 6px 4px 4px;
+    border-top-right-radius:4px;
+    border-bottom-right-radius:4px;
+  }
+  .github-badge .bg-brightgreen {
+    background-color:#4DC820 !important;
+  }
+  .github-badge .bg-orange {
+    background-color:#FFA500 !important;
+  }
+  .github-badge .bg-yellow {
+    background-color:#D8B024 !important;
+  }
+  .github-badge .bg-blueviolet {
+    background-color:#8833D7 !important;
+  }
+  .github-badge .bg-pink {
+    background-color:#F26BAE !important;
+  }
+  .github-badge .bg-red {
+    background-color:#e05d44 !important;
+  }
+  .github-badge .bg-blue {
+    background-color:#007EC6 !important;
+  }
+  .github-badge .bg-lightgrey {
+    background-color:#9F9F9F !important;
+  }
+  .github-badge .bg-grey, .github-badge .bg-gray {
+    background-color:#555 !important;
+  }
+  .github-badge .bg-lightgrey, .github-badge .bg-lightgray {
+    background-color:#9f9f9f !important;
+  }
+</style>
+
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <div>
+    
+      
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick='document.execCommand("copy")'><i class='fa fa-copy fa-fw'></i>Copy Text</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>Copy Link</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>Open Link in New Tab</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>Copy Image Link</a>
+        <hr id='hr-src'>
+      </li>
+      <li class='navigation'>
+        <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+        <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+        <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+        <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+      </li>
+      <hr>
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="menuCopy()"
+        
+        
+          id="menu-copy"
+        >
+        <i class='fa fa-copy fa-fw'></i> 复制文本
+      </a>
+    </li>
+  
+        
+      
+        
+      
+        
+          <hr>
+        
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://support.qq.com/products/176810/
+        
+        
+        
+        
+          id="https:supportqqcomproducts176810"
+        >
+        <i class='fa fa-question fa-fw'></i> 吐槽墙
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=/tools/
+        
+        
+        
+        
+          id="tools"
+        >
+        <i class='fa-fw fa fa-bars fa-fw fa-fw'></i> 软件控
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://gitee.com/sqlsq_admin/cdn/raw/master/sys.png
+        
+        
+        
+        
+          id="https:giteecomsqlsq_admincdnrawmastersyspng"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 公众号
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=/about/
+        
+        
+        
+        
+          id="about"
+        >
+        <i class='fas fa-location-arrow fa-fw'></i> 如人饮水
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=/Creator-said/
+        
+        
+        
+        
+          id="Creator-said"
+        >
+        <i class='fa fa-globe fa-fw fa-fw'></i> 冷暖自知
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          copyText.style.display = 'block';
+          hrText.style.display = 'block';
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if (true == true) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://gitee.com/sqlsq_admin/cdn/raw/master/index.png"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('.cover') {
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  <script>
+    let APlayerController = new Object();
+    APlayerController.id = '986297619';  // 设定全局音乐播放ID
+    APlayerController.volume = '0.7';
+  </script>
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js"></script>
+
+  
+    
+<script src="/js/aplayer.js"></script>
+
+  
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    let pageUrl = $.trim($('#pjax-comment-path').text()) === "none" ? 
+      decodeURI(window.location.pathname) : $.trim($('#pjax-comment-path').text());
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) === "none" ?
+      "" : $.trim($('#pjax-comment-placeholder').text());
+
+    let ALLPATH = '';
+    if(ALLPATH != '') pageUrl = ALLPATH;
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: pageUrl,
+      appId: "i1I90mFU8urYjNXgiqPT05Jt-gzGzoHsz",
+      appKey: "GXgwCzMM0g2CnM8x0WCM7fPQ",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps
+    })
+  }
+
+  $(function () {
+    pjax_valine();
+  });
+</script>
+
+
+
+
+<!-- darkmodejs -->
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+<!-- scrollreveal -->
+
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    function pjax_scrollrebeal() {
+      ScrollReveal().reveal('.l_main .reveal', {
+        distance: '32px',
+        duration: '800',
+        interval: '20',
+        scale: '1',
+        easing: 'ease-out'
+      });
+    }
+
+    $(function () {
+      pjax_scrollrebeal();
+    });
+  </script>
+
+<!-- ******************************** -->
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  function pjax_fancybox() {
+    $(".article-entry").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".article-entry").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  $(function () {
+    pjax_fancybox();
+  });
+</script>
+
+<!-- ******************************** -->
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
+
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      $.fancybox.close();    // 关闭弹窗
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+
+      try{
+        pjax_fancybox();
+        
+          
+          if ('.cover') {
+            $('.cover').backstretch("resize");
+          } else {
+            $.backstretch("resize");
+          }
+        
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+        
+        
+          pjax_scrollrebeal();
+        
+        
+          pjax_initCopyCode();
+        
+        
+          pjax_valine();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+    
+
+      <!--聊天-->
+
+      <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="9e16adc4-63cc-4958-bf99-26d19bf0ede8";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
+
+      <!--    title 变化-->
+      <script type="text/javascript">
+        var OriginTitile=document.title,st;
+        document.addEventListener("visibilitychange",function(){
+          document.hidden?(document.title="ヽ(●-`Д´-)ノ嗨说你呢，别分心",clearTimeout(st)):(document.title="(Ő∀Ő3)ノ欢迎回来！",st=setTimeout(function(){document.title=OriginTitile},3e3))
+        })
+      </script>
+
+  </div>
+</body>
+</html>
