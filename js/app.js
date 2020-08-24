@@ -6,7 +6,7 @@ var customSearch;
 
 	// 校正页面定位（被导航栏挡住的区域）
 	var scrollCorrection = 80; // (header height = 64px) + (gap = 16px)
-	var $headerAnchor = $('.l_header', '.cover-wrapper');
+	var $headerAnchor = $('.l_header');
 	if ($headerAnchor[0]) {
 		scrollCorrection = $headerAnchor[0].clientHeight + 16;
 	}
@@ -14,7 +14,7 @@ var customSearch;
 	// 尝试： 重设数据值
 	function restData() {
 		scrollCorrection = 80;
-		$headerAnchor = $('.l_header', '.cover-wrapper');
+		$headerAnchor = $('.l_header');
 		if ($headerAnchor[0]) {
 			scrollCorrection = $headerAnchor[0].clientHeight + 16;
 		}
@@ -459,3 +459,7 @@ if(window.location.hash){
 	   }
 	}, 100);
 }
+
+
+// Message.js
+$.extend({message:function(e){var n={title:"",message:" 操作成功",time:"3000",type:"success",showClose:!0,autoClose:!0,onClose:function(){}};"string"==typeof e&&(n.message=e),"object"==typeof e&&(n=$.extend({},n,e));var i,o,s,t=n.showClose?'<div class="c-message--close">×</div>':"",a=""!==n.title?'<h2 class="c-message__title">'+n.title+"</h2>":"",c='<div class="c-message animated animated-lento slideInRight"><i class=" c-message--icon c-message--'+n.type+'"></i><div class="el-notification__group">'+a+'<div class="el-notification__content">'+n.message+"</div>"+t+"</div></div>",m=$("body"),d=$(c);o=function(){d.addClass("slideOutRight"),d.one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",function(){s()})},s=function(){d.remove(),n.onClose(n),clearTimeout(i)},$(".c-message").remove(),m.append(d),d.one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",function(){d.removeClass("messageFadeInDown")}),m.one("click",".c-message--close",function(e){o()}),n.autoClose&&(i=setTimeout(function(){o()},n.time))}});
