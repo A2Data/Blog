@@ -16,7 +16,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Python的由来 - A2Data</title>
+  <title>Python环境搭建 - A2Data</title>
   
     <meta name="keywords" content="Python,编程语言">
   
@@ -1539,7 +1539,7 @@
 
 <div id="pjax-data" style="display: none">
   <div id="pjax-ispage">true</div>
-  <div id="pjax-pageTitle">Python的由来</div>
+  <div id="pjax-pageTitle">Python环境搭建</div>
   <div id="pjax-enable-cover">true</div>
   <div id="pjax-comment-path">none</div>
   <div id="pjax-comment-placeholder">none</div>
@@ -1589,7 +1589,7 @@
           
   <h1 class="title">
     <a href="/posts/62910.html">
-      Python的由来
+      Python环境搭建
     </a>
   </h1>
 
@@ -1717,9 +1717,20 @@
 </ul>
 <p>这里我们通过执行<code>Jupyter notebook</code> ，启动方式有两种！</p>
 <p>1、点击 jupyter botebook 图标运行</p>
-<p>2、Ctrl + R  在命令行中输入 <code>Jupyter notebook</code></p>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200830215240.png"></p>
+<p>2、Win+ R  在命令行中输入 <code>Jupyter notebook</code></p>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200830215330.png"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191204223943.png" alt="命令行效果"></p>
 <p>对于小白来说，你可能会遇到这样的问题？</p>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200830215417.png"></p>
+<p><strong>如图所示</strong></p>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200830215448.png"></p>
+<p>默认进入：</p>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200830215730.png"></p>
+<blockquote>
+<p><em>更改工作路径之后的截图</em></p>
+</blockquote>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200830215552.png"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191204224223.png" alt="权限问题"></p>
 <p><strong>恭喜进入Coding的世界</strong></p>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191204224614.png" alt="你的第一行代码"></p>
@@ -1731,6 +1742,173 @@
 <p>因为anaconda 集成了很多库，不用再安装了。</p>
 </blockquote>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191204230533.png"></p>
+<p><strong>注意事项： python需要选择 pythonw.exe</strong></p>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200830220608.png"></p>
+<h2 id="Jupyter-高级配置"><a href="#Jupyter-高级配置" class="headerlink" title="Jupyter 高级配置"></a>Jupyter 高级配置</h2><h3 id="Anaconda-配置"><a href="#Anaconda-配置" class="headerlink" title="Anaconda 配置"></a>Anaconda 配置</h3><ul>
+<li>Flie：文件</li>
+<li>Edit：编辑</li>
+<li>View：视图</li>
+<li>Cell： 单元格工具栏</li>
+<li>Kernel</li>
+</ul>
+<h4 id="更改jupyter-notebook工作空间"><a href="#更改jupyter-notebook工作空间" class="headerlink" title="更改jupyter notebook工作空间"></a>更改jupyter notebook工作空间</h4><p><strong>方式1：</strong></p>
+<blockquote>
+<p><em>不是每次都好使</em></p>
+</blockquote>
+<pre><code class="shell">在其配置文件ipython_notebook_config.py中，有如下一句
+
+# The directorytousefornotebooksandkernels.
+
+# c.NotebookApp.notebook_dir = u&#39;&#39;
+
+该句就是用来指定其工作空间的，例如，默认的工作空间是：用户名文件夹，例如，现在想要将工作空间变为D:\DataScience\Jupyter，那么，需要做如下更改(要记得删掉注释#)
+
+# The directory to use for notebooks and kernels.
+
+c.NotebookApp.notebook_dir =u&#39;\DataScience\Jupyte&#39;
+
+注意：路径最后一级后面不要加符号“\”
+
+</code></pre>
+<p><strong>如何找到该配置文件？</strong></p>
+<p>1.在cmd中输入jupyter notebook –generate-config</p>
+<p>如果该配置文件已经存在，那么，会出现如下信息,从中可以见到配置文件存在的位置，注意，此时，输入N，不要overwrite </p>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200829092435.png"></p>
+<p>如果该配置文件不存在，那么，将会初始化产生一个配置文件</p>
+<p>在cmd中输入：ipython profile create </p>
+<p>2.打开 jupyter_notebook_config.py 文件，找到</p>
+<pre><code class="shell">
+ ## The directory to use for notebooks and kernels.
+ #c.NotebookApp.notebook_dir = &#39;&#39;
+</code></pre>
+<p>　　将要指定的路径填入 #c.NotebookApp.notebook_dir = ‘  ‘ 中的 ‘  ‘ 中即可，同时注意将 #c 中的 # 删去，：</p>
+<pre><code class="shell">
+ c.NotebookApp.notebook_dir = &#39;D:\DataScience\Jupyte&#39;
+</code></pre>
+<p>3.保存，在命令行中再次输入 jupyter notebook 指令即可在指定的文件夹下启动。</p>
+<p><strong>方式2(绝招)：</strong></p>
+<p>进入工作目录文件夹</p>
+<p>键盘Shift+鼠标右键-&gt;在此处打开命令窗口-&gt; 在弹出的命令窗口中输入：<strong>Jupyter Notebook</strong></p>
+<h4 id="利用jupyter的cell是可以运行python文件的，即在cell中运行如下代码："><a href="#利用jupyter的cell是可以运行python文件的，即在cell中运行如下代码：" class="headerlink" title="利用jupyter的cell是可以运行python文件的，即在cell中运行如下代码："></a>利用jupyter的cell是可以运行python文件的，即在cell中运行如下代码：</h4><p>%runfile.py</p>
+<p>1</p>
+<p>file.py为要运行的python程序，结果会显示在该cell中 </p>
+<h4 id="为Jupyter-Notebook添加目录功能"><a href="#为Jupyter-Notebook添加目录功能" class="headerlink" title="为Jupyter Notebook添加目录功能"></a>为Jupyter Notebook添加目录功能</h4><p>利用Anaconda安装Jupyter Notebook extensions </p>
+<p>conda install -c conda-forge jupyter_contrib_nbextensions </p>
+<h4 id="Jupyter-notebook工具栏隐藏和jupyter-notebook主题更改"><a href="#Jupyter-notebook工具栏隐藏和jupyter-notebook主题更改" class="headerlink" title="Jupyter notebook工具栏隐藏和jupyter notebook主题更改"></a>Jupyter notebook工具栏隐藏和jupyter notebook主题更改</h4><blockquote>
+<p>注：有时候jupyter输出后，需要滚动条才能看全，执行下列命令，修改输出段的字号大小，就不需要滚动条了。</p>
+<p><strong>在cmd 命令行执行！！！</strong></p>
+</blockquote>
+<pre><code class="bash">#jt -t monokai -f fira -fs 13 -cellw 90% -ofs 11 -dfs 11 -T -N
+
+#-f(字体)  -fs(字体大小) -cellw(占屏比或宽度)  -ofs(输出段的字号)  -T(显示工具栏)  -N(显示自己主机名)
+
+jt -t gruvboxl -f fira -fs 13 -cellw 90% -ofs 11 -dfs 11 -T -N
+
+
+
+# 主题更改
+pip install --upgrade jupyterthemes
+
+jt -l
+
+jt -t chesterish -T
+
+# 主题列表
+   chesterish
+   grade3
+   gruvboxd
+   gruvboxl
+   monokai
+   oceans16
+   onedork
+   solarizedd
+   solarizedl
+
+恢复默认主题,只需执行代码：jt -r，即可恢复至原来的白色背景。
+
+</code></pre>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200829103308.png"></p>
+<h4 id="Jupyter-Notebook-的快捷键"><a href="#Jupyter-Notebook-的快捷键" class="headerlink" title="Jupyter Notebook 的快捷键"></a>Jupyter Notebook 的快捷键</h4><blockquote>
+<p>Jupyter</p>
+<ul>
+<li>编辑模式</li>
+<li>命令模式</li>
+</ul>
+</blockquote>
+<p>Jupyter Notebook 有两种键盘输入模式。编辑模式，允许你往单元中键入代码或文本；这时的单元框线是绿色的。命令模式，键盘输入运行程序命令；这时的单元框线是灰色。</p>
+<h5 id="命令模式-按键-Esc-开启"><a href="#命令模式-按键-Esc-开启" class="headerlink" title="命令模式 (按键 Esc 开启)"></a>命令模式 (按键 Esc 开启)</h5><ul>
+<li><strong>Enter</strong> : 转入编辑模式</li>
+<li><strong>Shift-Enter</strong> : 运行本单元，选中下个单元</li>
+<li><strong>Ctrl-Enter</strong> : 运行本单元</li>
+<li><strong>Alt-Enter</strong> : 运行本单元，在其下插入新单元</li>
+<li><strong>Y</strong> : 单元转入代码状态</li>
+<li><strong>M</strong> :单元转入markdown状态</li>
+<li><strong>R</strong> : 单元转入raw状态</li>
+<li><strong>1</strong> : 设定 1 级标题</li>
+<li><strong>2</strong> : 设定 2 级标题</li>
+<li><strong>3</strong> : 设定 3 级标题</li>
+<li><strong>4</strong> : 设定 4 级标题</li>
+<li><strong>5</strong> : 设定 5 级标题</li>
+<li><strong>6</strong> : 设定 6 级标题</li>
+<li><strong>Up</strong> : 选中上方单元</li>
+<li><strong>K</strong> : 选中上方单元</li>
+<li><strong>Down</strong> : 选中下方单元</li>
+<li><strong>J</strong> : 选中下方单元</li>
+<li><strong>Shift-K</strong> : 扩大选中上方单元</li>
+<li><strong>Shift-J</strong> : 扩大选中下方单元</li>
+<li><strong>A</strong> : 在上方插入新单元</li>
+<li><strong>B</strong> : 在下方插入新单元</li>
+<li><strong>X</strong> : 剪切选中的单元</li>
+<li><strong>C</strong> : 复制选中的单元</li>
+<li><strong>Shift-V</strong> : 粘贴到上方单元</li>
+<li><strong>V</strong> : 粘贴到下方单元</li>
+<li><strong>Z</strong> : 恢复删除的最后一个单元</li>
+<li><strong>D,D</strong> : 删除选中的单元</li>
+<li><strong>Shift-M</strong> : 合并选中的单元</li>
+<li><strong>Ctrl-S</strong> : 文件存盘</li>
+<li><strong>S</strong> : 文件存盘</li>
+<li><strong>L</strong> : 转换行号</li>
+<li><strong>O</strong> : 转换输出</li>
+<li><strong>Shift-O</strong> : 转换输出滚动</li>
+<li><strong>Esc</strong> : 关闭页面</li>
+<li><strong>Q</strong> : 关闭页面</li>
+<li><strong>H</strong> : 显示快捷键帮助</li>
+<li><strong>I,I</strong> : 中断Notebook内核</li>
+<li><strong>0,0</strong> : 重启Notebook内核</li>
+<li><strong>Shift</strong> : 忽略</li>
+<li><strong>Shift-Space</strong> : 向上滚动</li>
+<li><strong>Space</strong> : 向下滚动</li>
+</ul>
+<h5 id="编辑模式-Enter-键启动"><a href="#编辑模式-Enter-键启动" class="headerlink" title="编辑模式 ( Enter 键启动)"></a>编辑模式 ( Enter 键启动)</h5><ul>
+<li><strong>Tab</strong> : 代码补全或缩进</li>
+<li><strong>Shift-Tab</strong> : 提示</li>
+<li><strong>Ctrl-]</strong> : 缩进</li>
+<li><strong>Ctrl-[</strong> : 解除缩进</li>
+<li><strong>Ctrl-A</strong> : 全选</li>
+<li><strong>Ctrl-Z</strong> : 复原</li>
+<li><strong>Ctrl-Shift-Z</strong> : 再做</li>
+<li><strong>Ctrl-Y</strong> : 再做</li>
+<li><strong>Ctrl-Home</strong> : 跳到单元开头</li>
+<li><strong>Ctrl-Up</strong> : 跳到单元开头</li>
+<li><strong>Ctrl-End</strong> : 跳到单元末尾</li>
+<li><strong>Ctrl-Down</strong> : 跳到单元末尾</li>
+<li><strong>Ctrl-Left</strong> : 跳到左边一个字首</li>
+<li><strong>Ctrl-Right</strong> : 跳到右边一个字首</li>
+<li><strong>Ctrl-Backspace</strong> : 删除前面一个字</li>
+<li><strong>Ctrl-Delete</strong> : 删除后面一个字</li>
+<li><strong>Esc</strong> : 进入命令模式</li>
+<li><strong>Ctrl-M</strong> : 进入命令模式</li>
+<li><strong>Shift-Enter</strong> : 运行本单元，选中下一单元</li>
+<li><strong>Ctrl-Enter</strong> : 运行本单元</li>
+<li><strong>Alt-Enter</strong> : 运行本单元，在下面插入一单元</li>
+<li><strong>Ctrl-Shift–</strong> : 分割单元</li>
+<li><strong>Ctrl-Shift-Subtract</strong> : 分割单元</li>
+<li><strong>Ctrl-S</strong> : 文件存盘</li>
+<li><strong>Shift</strong> : 忽略</li>
+<li><strong>Up</strong> : 光标上移或转入上一单元</li>
+<li><strong>Down</strong> :光标下移或转入下一单元</li>
+</ul>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200829103822.png"></p>
 
           
             <div class='article_footer'>
@@ -1818,10 +1996,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-29T01:36:37+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-30T22:07:47+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Aug 29, 2020</p>
+    <p>更新于：Aug 30, 2020</p>
   </a>
 </div>
 
@@ -1848,7 +2026,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/62910.html&title=Python的由来 - A2Data&summary=‘人生苦短，我用Python。’"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/62910.html&title=Python环境搭建 - A2Data&summary=‘人生苦短，我用Python。’"
           
           >
           
@@ -1860,7 +2038,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/62910.html&title=Python的由来 - A2Data&summary=‘人生苦短，我用Python。’"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/62910.html&title=Python环境搭建 - A2Data&summary=‘人生苦短，我用Python。’"
           
           >
           
@@ -1872,7 +2050,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/62910.html&title=Python的由来 - A2Data&summary=‘人生苦短，我用Python。’"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/62910.html&title=Python环境搭建 - A2Data&summary=‘人生苦短，我用Python。’"
           
           >
           
@@ -2011,7 +2189,7 @@ Python
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Anaconda"><span class="toc-text">Anaconda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pycharm"><span class="toc-text">Pycharm</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python-%E4%BD%A0%E5%A5%BD%EF%BC%81"><span class="toc-text">Python,你好！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Anaconda-1"><span class="toc-text">Anaconda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pycharm-1"><span class="toc-text">Pycharm</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Anaconda"><span class="toc-text">Anaconda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pycharm"><span class="toc-text">Pycharm</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python-%E4%BD%A0%E5%A5%BD%EF%BC%81"><span class="toc-text">Python,你好！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Anaconda-1"><span class="toc-text">Anaconda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pycharm-1"><span class="toc-text">Pycharm</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jupyter-%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE"><span class="toc-text">Jupyter 高级配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Anaconda-%E9%85%8D%E7%BD%AE"><span class="toc-text">Anaconda 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9jupyter-notebook%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4"><span class="toc-text">更改jupyter notebook工作空间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E7%94%A8jupyter%E7%9A%84cell%E6%98%AF%E5%8F%AF%E4%BB%A5%E8%BF%90%E8%A1%8Cpython%E6%96%87%E4%BB%B6%E7%9A%84%EF%BC%8C%E5%8D%B3%E5%9C%A8cell%E4%B8%AD%E8%BF%90%E8%A1%8C%E5%A6%82%E4%B8%8B%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="toc-text">利用jupyter的cell是可以运行python文件的，即在cell中运行如下代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BAJupyter-Notebook%E6%B7%BB%E5%8A%A0%E7%9B%AE%E5%BD%95%E5%8A%9F%E8%83%BD"><span class="toc-text">为Jupyter Notebook添加目录功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Jupyter-notebook%E5%B7%A5%E5%85%B7%E6%A0%8F%E9%9A%90%E8%97%8F%E5%92%8Cjupyter-notebook%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%94%B9"><span class="toc-text">Jupyter notebook工具栏隐藏和jupyter notebook主题更改</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Jupyter-Notebook-%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">Jupyter Notebook 的快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F-%E6%8C%89%E9%94%AE-Esc-%E5%BC%80%E5%90%AF"><span class="toc-text">命令模式 (按键 Esc 开启)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F-Enter-%E9%94%AE%E5%90%AF%E5%8A%A8"><span class="toc-text">编辑模式 ( Enter 键启动)</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
   </section>
 
