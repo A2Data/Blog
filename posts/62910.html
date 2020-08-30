@@ -1627,7 +1627,7 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Dec 4, 2019</p>
+    <p>发布于：Aug 30, 2020</p>
   </a>
 </div>
 
@@ -1909,7 +1909,89 @@ jt -t chesterish -T
 <li><strong>Down</strong> :光标下移或转入下一单元</li>
 </ul>
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200829103822.png"></p>
-<h2 id="Pycharm-常用配置"><a href="#Pycharm-常用配置" class="headerlink" title="Pycharm 常用配置"></a>Pycharm 常用配置</h2>
+<h2 id="Pycharm-常用配置"><a href="#Pycharm-常用配置" class="headerlink" title="Pycharm 常用配置"></a>Pycharm 常用配置</h2><h3 id="1、Anaconda-和Python环境"><a href="#1、Anaconda-和Python环境" class="headerlink" title="1、Anaconda 和Python环境"></a>1、Anaconda 和Python环境</h3><p>点击File，选择Settings/Preferences</p>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831015430.png"></p>
+<p>选择如图：</p>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831015526.png"></p>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831015628.png"></p>
+<h3 id="2、字体大小调整"><a href="#2、字体大小调整" class="headerlink" title="2、字体大小调整"></a>2、字体大小调整</h3><p>pycharm在安装后，默认的字体很小，为了方便编写代码，都会调的大一些。</p>
+<p>调整方式：</p>
+<p>Windows: File - Settings - Editor - Font</p>
+<p>Mac: Pycharm - Preferences - Editor - Font</p>
+<h3 id="3、常用快捷键"><a href="#3、常用快捷键" class="headerlink" title="3、常用快捷键"></a>3、常用快捷键</h3><ol>
+<li>注释(取消注释)选择的行：ctrl + /</li>
+</ol>
+<p>2）缩进/取消缩进选择的行： shift + Tab</p>
+<p>3）在下方新建行并移到新行行首：Shift + Enter</p>
+<ol start="4">
+<li>查看选中函数/类的源码：ctrl + B</li>
+</ol>
+<p>更多的快捷键使用可在网上搜索。也可以在pycharm的快捷键说明中查找。</p>
+<h3 id="4、设置代码模板"><a href="#4、设置代码模板" class="headerlink" title="4、设置代码模板"></a>4、设置代码模板</h3><p>在pycharm当中创建某些文件时，可以设置模板。</p>
+<p>比如，创建python文件 ，在头部自带 作者/时间/文件名称等信息。</p>
+<p>创建unittest文件，生成unittest用例模板。</p>
+<p>配置路径：</p>
+<p>windows: Settings - Editor - File and Code Templates</p>
+<p>Mac: Preferences - Editor - File and Code Templates</p>
+<h4 id="Pycharm-如何设置代码作者信息"><a href="#Pycharm-如何设置代码作者信息" class="headerlink" title="Pycharm 如何设置代码作者信息"></a>Pycharm 如何设置代码作者信息</h4><p>Pycharm 中 File -》Settings -》File and Code Templates》Python Script</p>
+<pre><code class="yaml">### 版本1
+
+# -*- coding: utf-8 -*-
+&quot;&quot;&quot;
+-------------------------------------------------
+# @Project  :$&amp;#123;PROJECT_NAME&amp;#125;
+# @File     :$&amp;#123;NAME&amp;#125;
+# @Date     :$&amp;#123;DATE&amp;#125; $&amp;#123;TIME&amp;#125;
+# @Author   :作者名
+# @Email    :QQ号
+# @Software :$&amp;#123;PRODUCT_NAME&amp;#125;
+# @Blog    : www.a2data.cn
+-------------------------------------------------
+&quot;&quot;&quot;
+
+
+
+### 版本2
+
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+&quot;&quot;&quot;
+__title__ = &#39;$Package_name&#39;
+__author__ = &#39;$USER&#39;
+__mtime__ = &#39;$DATE&#39;
+——blog__ = &#39;www.a2data.cn&#39;
+# 多做多看多想。
+I love DataScience！
+　　 へ　　　　　／|
+　　/＼7　　　 ∠＿/
+　 /　│　　 ／　／
+　│　Z ＿,＜　／　　 /`ヽ
+　│　　　　　ヽ　　 /　　〉
+　 Y　　　　　`　 /　　/
+　ｲ●　､　●　　⊂⊃〈　　/
+　()　 へ　　　　|　＼〈
+　　&gt;ｰ ､_　 ィ　 │ ／／
+　 / へ　　 /　ﾉ＜| ＼＼
+　 ヽ_ﾉ　　(_／　 │／／
+　　7　　　　　　　|／
+　　＞―r￣￣`ｰ―＿
+====== Start Succeed =====
+&quot;&quot;&quot;
+
+</code></pre>
+<h3 id="5、文件默认编码"><a href="#5、文件默认编码" class="headerlink" title="5、文件默认编码"></a>5、文件默认编码</h3><p>File Encodings&gt; IDE Encoding: UTF-8;Project Encoding: UTF-8;</p>
+<h3 id="6-设置缩进符为制表符“Tab”"><a href="#6-设置缩进符为制表符“Tab”" class="headerlink" title="6. 设置缩进符为制表符“Tab”"></a>6. 设置缩进符为制表符“Tab”</h3><p> File -&gt; Default Settings -&gt; Code Style</p>
+<p> -&gt; General -&gt; 勾选“Use tab character”</p>
+<p> -&gt; Python -&gt; 勾选“Use tab character”</p>
+<p> -&gt; 其他的语言代码同理设置</p>
+<h3 id="7、设置Python自动引入包"><a href="#7、设置Python自动引入包" class="headerlink" title="7、设置Python自动引入包"></a>7、设置Python自动引入包</h3><p>先在 &gt;general &gt; autoimport -&gt; python :show popup</p>
+<p>快捷键：Alt + Enter: 自动添加包</p>
+<h3 id="8-代码自动整理设置"><a href="#8-代码自动整理设置" class="headerlink" title="8. 代码自动整理设置"></a>8. 代码自动整理设置</h3><p><strong>原图：</strong></p>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831002310.png"></p>
+<p><strong>去掉之后：</strong></p>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831002359.png"></p>
+<p>这里line breaks去掉√，否则bar, 和baz会分开在不同行，不好看。</p>
+
           
             <div class='article_footer'>
               
@@ -1996,10 +2078,10 @@ jt -t chesterish -T
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-30T22:12:21+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-31T01:58:46+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Aug 30, 2020</p>
+    <p>更新于：Aug 31, 2020</p>
   </a>
 </div>
 
@@ -2084,34 +2166,18 @@ jt -t chesterish -T
         
           <div class="prev-next">
             
-              <a class='prev' href='/posts/59977.html'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Python基础知识</p>
-                <p class='content'>Python的基础语法
-
-
-
-
-Python
-为什么那么多培训机构？那么多的程序员呢？
-很简单啊。 因为 门槛低啊。 ==.
-不信？来动手试试吧。
-
-1、操作系统(科普一下)目标
-
-了解操作系统...</p>
-              </a>
             
-            
-              <a class='next' href='/posts/41382.html'>
-                <p class='title'>运营工具箱<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                <p class='content'>掌握这些工具，你就是自媒体大咖
+              <a class='next' href='/posts/47ce27c8.html'>
+                <p class='title'>Hexo命令<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>Hexo 常用基本命令
 
 
+Hexo语法
+Hexo 
 
-126 种运营人必备工具微场景编辑器
-易企秀：http://www.eqxiu.com/main
-易企微：http://www.e7wei.com/
-兔展：...</p>
+hexo new &quot;postName&quot; #新建文章
+
+hexo new page &quot;pageName&quo...</p>
               </a>
             
           </div>
@@ -2189,7 +2255,7 @@ Python
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Anaconda"><span class="toc-text">Anaconda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pycharm"><span class="toc-text">Pycharm</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python-%E4%BD%A0%E5%A5%BD%EF%BC%81"><span class="toc-text">Python,你好！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Anaconda-1"><span class="toc-text">Anaconda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pycharm-1"><span class="toc-text">Pycharm</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jupyter-%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE"><span class="toc-text">Jupyter 高级配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Anaconda-%E9%85%8D%E7%BD%AE"><span class="toc-text">Anaconda 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9jupyter-notebook%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4"><span class="toc-text">更改jupyter notebook工作空间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E7%94%A8jupyter%E7%9A%84cell%E6%98%AF%E5%8F%AF%E4%BB%A5%E8%BF%90%E8%A1%8Cpython%E6%96%87%E4%BB%B6%E7%9A%84%EF%BC%8C%E5%8D%B3%E5%9C%A8cell%E4%B8%AD%E8%BF%90%E8%A1%8C%E5%A6%82%E4%B8%8B%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="toc-text">利用jupyter的cell是可以运行python文件的，即在cell中运行如下代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BAJupyter-Notebook%E6%B7%BB%E5%8A%A0%E7%9B%AE%E5%BD%95%E5%8A%9F%E8%83%BD"><span class="toc-text">为Jupyter Notebook添加目录功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Jupyter-notebook%E5%B7%A5%E5%85%B7%E6%A0%8F%E9%9A%90%E8%97%8F%E5%92%8Cjupyter-notebook%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%94%B9"><span class="toc-text">Jupyter notebook工具栏隐藏和jupyter notebook主题更改</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Jupyter-Notebook-%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">Jupyter Notebook 的快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F-%E6%8C%89%E9%94%AE-Esc-%E5%BC%80%E5%90%AF"><span class="toc-text">命令模式 (按键 Esc 开启)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F-Enter-%E9%94%AE%E5%90%AF%E5%8A%A8"><span class="toc-text">编辑模式 ( Enter 键启动)</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pycharm-%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE"><span class="toc-text">Pycharm 常用配置</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Anaconda"><span class="toc-text">Anaconda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pycharm"><span class="toc-text">Pycharm</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python-%E4%BD%A0%E5%A5%BD%EF%BC%81"><span class="toc-text">Python,你好！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Anaconda-1"><span class="toc-text">Anaconda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pycharm-1"><span class="toc-text">Pycharm</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jupyter-%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE"><span class="toc-text">Jupyter 高级配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Anaconda-%E9%85%8D%E7%BD%AE"><span class="toc-text">Anaconda 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9jupyter-notebook%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4"><span class="toc-text">更改jupyter notebook工作空间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E7%94%A8jupyter%E7%9A%84cell%E6%98%AF%E5%8F%AF%E4%BB%A5%E8%BF%90%E8%A1%8Cpython%E6%96%87%E4%BB%B6%E7%9A%84%EF%BC%8C%E5%8D%B3%E5%9C%A8cell%E4%B8%AD%E8%BF%90%E8%A1%8C%E5%A6%82%E4%B8%8B%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="toc-text">利用jupyter的cell是可以运行python文件的，即在cell中运行如下代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BAJupyter-Notebook%E6%B7%BB%E5%8A%A0%E7%9B%AE%E5%BD%95%E5%8A%9F%E8%83%BD"><span class="toc-text">为Jupyter Notebook添加目录功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Jupyter-notebook%E5%B7%A5%E5%85%B7%E6%A0%8F%E9%9A%90%E8%97%8F%E5%92%8Cjupyter-notebook%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%94%B9"><span class="toc-text">Jupyter notebook工具栏隐藏和jupyter notebook主题更改</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Jupyter-Notebook-%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">Jupyter Notebook 的快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F-%E6%8C%89%E9%94%AE-Esc-%E5%BC%80%E5%90%AF"><span class="toc-text">命令模式 (按键 Esc 开启)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F-Enter-%E9%94%AE%E5%90%AF%E5%8A%A8"><span class="toc-text">编辑模式 ( Enter 键启动)</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pycharm-%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE"><span class="toc-text">Pycharm 常用配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81Anaconda-%E5%92%8CPython%E7%8E%AF%E5%A2%83"><span class="toc-text">1、Anaconda 和Python环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E8%B0%83%E6%95%B4"><span class="toc-text">2、字体大小调整</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">3、常用快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF"><span class="toc-text">4、设置代码模板</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Pycharm-%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%A0%81%E4%BD%9C%E8%80%85%E4%BF%A1%E6%81%AF"><span class="toc-text">Pycharm 如何设置代码作者信息</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E6%96%87%E4%BB%B6%E9%BB%98%E8%AE%A4%E7%BC%96%E7%A0%81"><span class="toc-text">5、文件默认编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E8%AE%BE%E7%BD%AE%E7%BC%A9%E8%BF%9B%E7%AC%A6%E4%B8%BA%E5%88%B6%E8%A1%A8%E7%AC%A6%E2%80%9CTab%E2%80%9D"><span class="toc-text">6. 设置缩进符为制表符“Tab”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E8%AE%BE%E7%BD%AEPython%E8%87%AA%E5%8A%A8%E5%BC%95%E5%85%A5%E5%8C%85"><span class="toc-text">7、设置Python自动引入包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E6%95%B4%E7%90%86%E8%AE%BE%E7%BD%AE"><span class="toc-text">8. 代码自动整理设置</span></a></li></ol></li></ol>
     </div>
   </section>
 
