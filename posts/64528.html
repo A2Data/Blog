@@ -1737,7 +1737,7 @@ print(tuples[0])</code></pre>
 <pre><code class="python">tupleA</code></pre>
 <p>元组tuple和list⾮常类似，但是tuple⼀旦初始化就不能修改。因为不能修改所以没有append(), insert() 这样的⽅法，可以像访问数组⼀样进⾏访问，⽐如tuples[0]，但不能赋值。</p>
 <h2 id="字典-dictionary"><a href="#字典-dictionary" class="headerlink" title="字典 {dictionary}"></a>字典 {dictionary}</h2><pre><code class="python">#定义⼀个dictionary 
-score = &amp;#123;&#39;小李&#39;:95,&#39;小王&#39;:96&amp;#125; 
+score = &#123;&#39;小李&#39;:95,&#39;小王&#39;:96&#125; 
 #添加⼀个元素 
 score[&#39;小张&#39;]=98 
 print(score)
@@ -1747,18 +1747,18 @@ print(score)
 #查看⼀个key对应的值 
 print(score[&#39;小李&#39;]) </code></pre>
 <p>运行结果：</p>
-<pre><code class="python">&amp;#123;&#39;小李&#39;: 95, &#39;小王&#39;: 96, &#39;小张&#39;: 98&amp;#125;
-&amp;#123;&#39;小李&#39;: 95, &#39;小张&#39;: 98&amp;#125;
+<pre><code class="python">&#123;&#39;小李&#39;: 95, &#39;小王&#39;: 96, &#39;小张&#39;: 98&#125;
+&#123;&#39;小李&#39;: 95, &#39;小张&#39;: 98&#125;
 95</code></pre>
 <p>字典其实就是{key, value}键值对，多次对同⼀个key放入value，后面的值会把前面的值覆盖，同样字典也有增删改查。增加字典的元素相当于赋值，比如score[‘小张’] = 98，删除⼀个元素使⽤pop，字典不支持直接修改元素中的key，可将旧元素删除后添加一个元素。</p>
 <h2 id="集合：set"><a href="#集合：set" class="headerlink" title="集合：set"></a>集合：set</h2><pre><code class="python">s = set([&#39;a&#39;,&#39;b&#39;,&#39;c&#39;])
-# 创建集合也可使用花括号&amp;#123;&amp;#125; s = &amp;#123;&#39;a&#39;,&#39;b&#39;,&#39;c&#39;&amp;#125;
+# 创建集合也可使用花括号&#123;&#125; s = &#123;&#39;a&#39;,&#39;b&#39;,&#39;c&#39;&#125;
 s.add(&#39;d&#39;)
 s.remove(&#39;b&#39;)
 print(s)
 &#39;c&#39; in s</code></pre>
 <p>运行结果：</p>
-<pre><code>&amp;#123;&#39;c&#39;, &#39;d&#39;, &#39;a&#39;&amp;#125;
+<pre><code>&#123;&#39;c&#39;, &#39;d&#39;, &#39;a&#39;&#125;
 True</code></pre>
 <p>集合set和字典dictionary类似，不过它只是key的集合，不存储value。同样可以增删查，增加使⽤add，删除使⽤remove，查询看某个元素是否在这个集合里，使用in。</p>
 <h2 id="引⽤模块-包：import"><a href="#引⽤模块-包：import" class="headerlink" title="引⽤模块/包：import"></a>引⽤模块/包：import</h2><pre><code class="python">导⼊⼀个模块 

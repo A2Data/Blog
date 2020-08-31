@@ -1696,8 +1696,8 @@
  * Created by JackFeng on 2020/3/8.
  */
 
-public class StaticDemo &amp;#123;
-    public static void main(String[] args) &amp;#123;
+public class StaticDemo &#123;
+    public static void main(String[] args) &#123;
 
         /*
         * Math 主要的数学运算方法
@@ -1737,8 +1737,8 @@ public class StaticDemo &amp;#123;
         System.out.println(Math.random());
 
 
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 </code></pre>
 <h2 id="2、代码块"><a href="#2、代码块" class="headerlink" title="2、代码块"></a>2、代码块</h2><blockquote>
@@ -1750,41 +1750,41 @@ public class StaticDemo &amp;#123;
 /**
  * Created by JackFeng on 2020/3/13.
  */
-public class MyArrays &amp;#123;
+public class MyArrays &#123;
     // 数组操作 有关的工具类 ，不需要创建对象，所以 可以私有他的构造方法
 
-    private MyArrays()&amp;#123;&amp;#125;
+    private MyArrays()&#123;&#125;
 
 
     // 取最大值
 
-    public static  int getMax(int[] arr)&amp;#123;
+    public static  int getMax(int[] arr)&#123;
 
         // 定义参照物
         int max = arr[0];
-        for (int i = 1; i &lt;arr.length ; i++) &amp;#123;
+        for (int i = 1; i &lt;arr.length ; i++) &#123;
 
-            if (max&lt;arr[i])&amp;#123;
+            if (max&lt;arr[i])&#123;
                 // 替换参照物
                 max = arr[i];
-            &amp;#125;
-        &amp;#125;
+            &#125;
+        &#125;
         return max;
-    &amp;#125;
+    &#125;
 
     // 获取指定数组中指定元素的索引位置
 
-    public static int getIndex(int[] arr,int a)&amp;#123;
+    public static int getIndex(int[] arr,int a)&#123;
 
-        for (int i = 0; i &lt;arr.length ; i++) &amp;#123;
+        for (int i = 0; i &lt;arr.length ; i++) &#123;
             if (arr[i]== a)
                 return i;
-        &amp;#125;
+        &#125;
         return -1;
-    &amp;#125;
+    &#125;
 
 
-&amp;#125;
+&#125;
 
 
 </code></pre>
@@ -1794,9 +1794,9 @@ public class MyArrays &amp;#123;
 /**
  * Created by JackFeng on 2020/3/13.
  */
-public class MyArrayDemo &amp;#123;
-    public static void main(String[] args) &amp;#123;
-        int[] arr = &amp;#123;1, 2, 3, 4, 5, 21&amp;#125;;
+public class MyArrayDemo &#123;
+    public static void main(String[] args) &#123;
+        int[] arr = &#123;1, 2, 3, 4, 5, 21&#125;;
 
         int max = MyArrays.getMax(arr);
 
@@ -1806,8 +1806,8 @@ public class MyArrayDemo &amp;#123;
         int index1 = MyArrays.getIndex(arr, 6);
         System.out.println(index);
         System.out.println(index1);
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 </code></pre>
 <blockquote>
@@ -1868,56 +1868,56 @@ public class MyArrayDemo &amp;#123;
 /**
  * Created by JackFeng on 2020/3/13.
  */
-public class ExtendsDemo &amp;#123;
-    public static void main(String[] args) &amp;#123;
+public class ExtendsDemo &#123;
+    public static void main(String[] args) &#123;
         Zi zi = new Zi();
         zi.function();
 
-    &amp;#125;
+    &#125;
 
-  static class Die &amp;#123;
+  static class Die &#123;
       int num = 11;
 
-      Die()&amp;#123;
+      Die()&#123;
           System.out.println(&quot;我是父类无参构造&quot;);
-      &amp;#125;
-      public Die(int num)&amp;#123;
+      &#125;
+      public Die(int num)&#123;
           System.out.println(&quot;我是父类有参构造&quot;);
-      &amp;#125;
+      &#125;
 
-      public void method()&amp;#123;
+      public void method()&#123;
           System.out.println(&quot;我是父类的方法&quot;);
-      &amp;#125;
+      &#125;
 
-  &amp;#125;
+  &#125;
 
-  static class Zi extends Die&amp;#123;
+  static class Zi extends Die&#123;
 
       int num = 2020;
 
-      Zi()&amp;#123;
+      Zi()&#123;
           this(1);  // 第一行不调用子类，或者其他方法，默认调用父类
 
           System.out.println(&quot;我是子类无参构造&quot;);
-      &amp;#125;
-      Zi(int num)&amp;#123;
+      &#125;
+      Zi(int num)&#123;
           System.out.println(&quot;我是子类有参构造&quot;);
-      &amp;#125;
+      &#125;
 
 
-      public void  method()&amp;#123;
+      public void  method()&#123;
           System.out.println(&quot;我是子类的方法&quot;);
-      &amp;#125;
+      &#125;
 
-      void function()&amp;#123;
+      void function()&#123;
 //          this.method();
 
           this.num = 20;
-      &amp;#125;
+      &#125;
 
-  &amp;#125;
+  &#125;
 
-&amp;#125;
+&#125;
 
 </code></pre>
 <h4 id="this和super的区别"><a href="#this和super的区别" class="headerlink" title="this和super的区别"></a>this和super的区别</h4><blockquote>
@@ -1951,25 +1951,25 @@ public class ExtendsDemo &amp;#123;
 /**
  * Created by JackFeng on 2020/3/13.
  */
-public class AnonyDemo &amp;#123;
-    public static void main(String[] args) &amp;#123;
+public class AnonyDemo &#123;
+    public static void main(String[] args) &#123;
 
 //        Student s = new Student();
 //        s.study();
 
         new Student(); // 匿名对象，没有变量名引用的对象
 
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
-class Student&amp;#123;
+class Student&#123;
     String name;
     int age;
 
-    public void study()&amp;#123;
+    public void study()&#123;
         System.out.println(&quot;加油提升自己&quot;);
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 </code></pre>
 <h3 id="Final"><a href="#Final" class="headerlink" title="Final"></a>Final</h3><blockquote>
 <p>修饰符： 可以用于修饰类，成员方法和成员变量</p>
@@ -2042,8 +2042,8 @@ import sun.plugin2.message.JavaReplyMessage;
 *
 * */
 
-public class AbastractTest &amp;#123;
-    public static void main(String[] args) &amp;#123;
+public class AbastractTest &#123;
+    public static void main(String[] args) &#123;
 
         BasicTeacher bt = new BasicTeacher();
         bt.name = &quot;小白教练&quot;;
@@ -2055,35 +2055,35 @@ public class AbastractTest &amp;#123;
         jt.teach();
 
 
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 
-abstract class  Teacher&amp;#123;
+abstract class  Teacher&#123;
     String name; // 姓名
     int age; // 年龄
     String gender;
 
     public abstract void teach();
 
-&amp;#125;
+&#125;
 
-class BasicTeacher extends Teacher&amp;#123;
+class BasicTeacher extends Teacher&#123;
 
     @Override
-    public void teach() &amp;#123;
+    public void teach() &#123;
         System.out.println(name + &quot;讲基础内容&quot;);
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 
-class JobTeacher extends Teacher&amp;#123;
+class JobTeacher extends Teacher&#123;
 
     @Override
-    public void teach() &amp;#123;
+    public void teach() &#123;
         System.out.println(name+ &quot;讲高级实战内容&quot;);
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 
 
@@ -2182,8 +2182,8 @@ class JobTeacher extends Teacher&amp;#123;
 * */
 
 
-public class InterfaceTest &amp;#123;
-    public static void main(String[] args) &amp;#123;
+public class InterfaceTest &#123;
+    public static void main(String[] args) &#123;
         //篮球运动员对象
         BasketBallPlayer bp = new BasketBallPlayer();
         bp.name = &quot;姚明&quot;;
@@ -2203,114 +2203,114 @@ public class InterfaceTest &amp;#123;
         pp.teach();
 //        pp.speak()
 
-    &amp;#125;
+    &#125;
 
 
-&amp;#125;
+&#125;
 
 
-class  Person&amp;#123;
+class  Person&#123;
     String name;
     int age;
     String gender;
 
-    public Person() &amp;#123;
-    &amp;#125;
+    public Person() &#123;
+    &#125;
 
-    public Person(String name, int age, String gender) &amp;#123;
+    public Person(String name, int age, String gender) &#123;
         // 成员变量初始化
         this.name = name;
         this.age = age;
         this.gender = gender;
-    &amp;#125;
+    &#125;
 
 
-    public void eat()&amp;#123;
+    public void eat()&#123;
         System.out.println(&quot;吃饭&quot;);
-    &amp;#125;
+    &#125;
 
 
-    public void sleep()&amp;#123;
+    public void sleep()&#123;
         System.out.println(&quot;睡觉&quot;);
-    &amp;#125;
+    &#125;
 
 
 
-&amp;#125;
+&#125;
 
-interface SpeakEnglish &amp;#123;
+interface SpeakEnglish &#123;
 
     public abstract void speak();
-&amp;#125;
+&#125;
 
 
 // 运动员
-abstract class Player extends Person&amp;#123;
+abstract class Player extends Person&#123;
     //学习
     public abstract void study();
 
-&amp;#125;
+&#125;
 
 // 教练
 
-abstract class Coach extends Person&amp;#123;
+abstract class Coach extends Person&#123;
     // 教
     public abstract void teach();
 
-&amp;#125;
+&#125;
 
 
 //篮球运动员
 
-class BasketBallPlayer extends Player implements SpeakEnglish&amp;#123;
+class BasketBallPlayer extends Player implements SpeakEnglish&#123;
 
     @Override
-    public void study() &amp;#123;
+    public void study() &#123;
         System.out.println(&quot;学扣篮&quot;);
-    &amp;#125;
+    &#125;
 
     @Override
-    public void speak() &amp;#123;
+    public void speak() &#123;
         System.out.println(&quot;说英语&quot;);
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 
 //乒乓球运动员
 
-class  PingpangPlayer extends Player&amp;#123;
+class  PingpangPlayer extends Player&#123;
 
     @Override
-    public void study() &amp;#123;
+    public void study() &#123;
         System.out.println(&quot;学颠球&quot;);
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 
 //篮球教练
 
-class BasketBallCoach extends Coach implements SpeakEnglish&amp;#123;
+class BasketBallCoach extends Coach implements SpeakEnglish&#123;
 
     @Override
-    public void teach() &amp;#123;
+    public void teach() &#123;
         System.out.println(&quot;教扣篮&quot;);
-    &amp;#125;
+    &#125;
 
     @Override
-    public void speak() &amp;#123;
+    public void speak() &#123;
         System.out.println(&quot;说英语&quot;);
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 
 //乒乓球教练
-class PingpangCoache extends  Coach&amp;#123;
+class PingpangCoache extends  Coach&#123;
 
     @Override
-    public void teach() &amp;#123;
+    public void teach() &#123;
         System.out.println(&quot;教颠球&quot;);
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 
 </code></pre>
@@ -2333,8 +2333,8 @@ class PingpangCoache extends  Coach&amp;#123;
 /**
  * Created by JackFeng on 2020/3/15.
  */
-public class PoymorphicDemo &amp;#123;
-    public static void main(String[] args) &amp;#123;
+public class PoymorphicDemo &#123;
+    public static void main(String[] args) &#123;
 //        Cat cat = new Cat();
 //        cat.eat();
 
@@ -2346,22 +2346,22 @@ public class PoymorphicDemo &amp;#123;
         a.eat();
 
 
-    &amp;#125;
+    &#125;
 
 
-&amp;#125;
+&#125;
 
-class Animal &amp;#123;
-    public void eat()&amp;#123;
+class Animal &#123;
+    public void eat()&#123;
         System.out.println(&quot;c吃东西&quot;);
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
-class Cat extends Animal&amp;#123;
-    public void eat()&amp;#123;
+class Cat extends Animal&#123;
+    public void eat()&#123;
         System.out.println(&quot;猫吃鱼&quot;);
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 
 
@@ -2391,8 +2391,8 @@ import java.util.Date;
 /**
  * Created by JackFeng on 2020/3/15.
  */
-public class PoymorphicDemo &amp;#123;
-    public static void main(String[] args) &amp;#123;
+public class PoymorphicDemo &#123;
+    public static void main(String[] args) &#123;
 
         // 成员变量
         // 在继承中没有被重写的概念，没有动态绑定的概念
@@ -2411,37 +2411,37 @@ public class PoymorphicDemo &amp;#123;
         d.function(); // 使用变量去调用静态方法，相当于用变量类型的类名去调用  所以输出父类的静态方法
 
 
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 
-class  Dad&amp;#123;
+class  Dad&#123;
     int num = 1;
 
 
-    public void method()&amp;#123;
+    public void method()&#123;
         System.out.println(&quot;我是父类的方法&quot;);
-    &amp;#125;
+    &#125;
 
-    public static void function()&amp;#123;
+    public static void function()&#123;
         System.out.println(&quot;我是父类的静态方法&quot;);
-    &amp;#125;
+    &#125;
 
-&amp;#125;
+&#125;
 
-class Kid extends Dad&amp;#123;
+class Kid extends Dad&#123;
     int num = 21;
 
-    public void method()&amp;#123;
+    public void method()&#123;
 
         System.out.println(&quot;我是子类的方法&quot;);
-    &amp;#125;
+    &#125;
 
-    public static void function()&amp;#123;
+    public static void function()&#123;
         System.out.println(&quot;我是子类的静态方法&quot;);
-    &amp;#125;
+    &#125;
 
-&amp;#125;
+&#125;
 
 </code></pre>
 <h3 id="多态转型"><a href="#多态转型" class="headerlink" title="多态转型"></a>多态转型</h3><blockquote>
@@ -2477,8 +2477,8 @@ class Kid extends Dad&amp;#123;
 /**
  * Created by JackFeng on 2020/3/15.
  */
-public class polymorphicDemo &amp;#123;
-    public static void main(String[] args) &amp;#123;
+public class polymorphicDemo &#123;
+    public static void main(String[] args) &#123;
 
         Animal a = new Dog(); // 向上转型
         a.eat();
@@ -2487,29 +2487,29 @@ public class polymorphicDemo &amp;#123;
         Dog d = (Dog) a; // 向下转型  本身是什么类型 转换成什么类型
         d.swim();
 
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 
-class Animal&amp;#123;
-    public void eat()&amp;#123;
+class Animal&#123;
+    public void eat()&#123;
         System.out.println(&quot;吃东西&quot;);
-    &amp;#125;
+    &#125;
 
-&amp;#125;
+&#125;
 
 
-class Dog extends  Animal&amp;#123;
+class Dog extends  Animal&#123;
 
-    public void eat()&amp;#123;
+    public void eat()&#123;
         System.out.println(&quot;啃骨头&quot;);
-    &amp;#125;
+    &#125;
 
-    public void swim()&amp;#123;
+    public void swim()&#123;
         System.out.println(&quot;狗刨&quot;);
-    &amp;#125;
+    &#125;
 
-&amp;#125;
+&#125;
 
 </code></pre>
 <h2 id="8、权限修饰符"><a href="#8、权限修饰符" class="headerlink" title="8、权限修饰符"></a>8、权限修饰符</h2><h3 id="包"><a href="#包" class="headerlink" title="包"></a>包</h3><blockquote>
@@ -2591,34 +2591,34 @@ class Dog extends  Animal&amp;#123;
 /**
  * Created by JackFeng on 2020/3/15.
  */
-public class InnerDemo &amp;#123;
-    public static void main(String[] args) &amp;#123;
+public class InnerDemo &#123;
+    public static void main(String[] args) &#123;
 
         Outer.Inner i = new Outer().new Inner();
         i.function();
 
 
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 
-class Outer&amp;#123;
+class Outer&#123;
     private int num = 10;
 
-    public void  method()&amp;#123;
+    public void  method()&#123;
         Inner i = new Inner();
         i.function();
 
-    &amp;#125;
+    &#125;
 
-    class Inner&amp;#123;
-        public void function()&amp;#123;
+    class Inner&#123;
+        public void function()&#123;
             // 私有成员 可以i直接访问
             System.out.println(num);
-        &amp;#125;
-    &amp;#125;
+        &#125;
+    &#125;
 
-&amp;#125;
+&#125;
 </code></pre>
 
           

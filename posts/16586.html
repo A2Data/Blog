@@ -1703,7 +1703,7 @@ g-----所属组
 
 chomd a=rwx root  所有都拥有读写执行权限 
 
-cat /etc/passwd|grep -v nologin|grep -v halt|grep -v shutdown|awk -F&quot;:&quot; &#39;&amp;#123; print $1&quot;|&quot;$3&quot;|&quot;$4 &amp;#125;&#39;|more
+cat /etc/passwd|grep -v nologin|grep -v halt|grep -v shutdown|awk -F&quot;:&quot; &#39;&#123; print $1&quot;|&quot;$3&quot;|&quot;$4 &#125;&#39;|more
 </code></pre>
 <h2 id="用户控制命令"><a href="#用户控制命令" class="headerlink" title="用户控制命令"></a>用户控制命令</h2><ol>
 <li>useradd 添加用户</li>

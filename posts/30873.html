@@ -1838,7 +1838,7 @@ n = 7
 &gt;&gt;&gt;
 &gt;&gt;&gt;
 &gt;&gt;&gt; c = (3, 4, 5)
-&gt;&gt;&gt; d = &amp;#123;&quot;m&quot;:6, &quot;n&quot;:7, &quot;p&quot;:8&amp;#125;
+&gt;&gt;&gt; d = &#123;&quot;m&quot;:6, &quot;n&quot;:7, &quot;p&quot;:8&#125;
 &gt;&gt;&gt; fun(1, 2, *c, **d)    # 注意元组与字典的传参方式
 a = 1
 b = 2
@@ -1853,7 +1853,7 @@ n = 7
 &gt;&gt;&gt; fun(1, 2, c, d) # 注意不加星号与上面的区别
 a = 1
 b = 2
-args = ((3, 4, 5), &amp;#123;&#39;p&#39;: 8, &#39;m&#39;: 6, &#39;n&#39;: 7&amp;#125;)
+args = ((3, 4, 5), &#123;&#39;p&#39;: 8, &#39;m&#39;: 6, &#39;n&#39;: 7&#125;)
 kwargs:
 &gt;&gt;&gt;
 &gt;&gt;&gt;</code></pre>

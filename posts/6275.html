@@ -1738,16 +1738,16 @@ result = 3</code></pre>
 </ol>
 <h4 id="3-2想一想，下面的数据如何指定按age或name排序？"><a href="#3-2想一想，下面的数据如何指定按age或name排序？" class="headerlink" title="3.2想一想，下面的数据如何指定按age或name排序？"></a>3.2想一想，下面的数据如何指定按age或name排序？</h4><pre><code class="python"># A2Data制作
 stus = [
-    &amp;#123;&quot;name&quot;:&quot;zhangsan&quot;, &quot;age&quot;:18&amp;#125;, 
-    &amp;#123;&quot;name&quot;:&quot;lisi&quot;, &quot;age&quot;:19&amp;#125;, 
-    &amp;#123;&quot;name&quot;:&quot;wangwu&quot;, &quot;age&quot;:17&amp;#125;
+    &#123;&quot;name&quot;:&quot;zhangsan&quot;, &quot;age&quot;:18&#125;, 
+    &#123;&quot;name&quot;:&quot;lisi&quot;, &quot;age&quot;:19&#125;, 
+    &#123;&quot;name&quot;:&quot;wangwu&quot;, &quot;age&quot;:17&#125;
 ]</code></pre>
 <h4 id="3-3-按name排序："><a href="#3-3-按name排序：" class="headerlink" title="3.3 按name排序："></a>3.3 按name排序：</h4><pre><code class="python">&gt;&gt;&gt; stus.sort(key = lambda x:x[&#39;name&#39;])
 &gt;&gt;&gt; stus
-[&amp;#123;&#39;age&#39;: 19, &#39;name&#39;: &#39;lisi&#39;&amp;#125;, &amp;#123;&#39;age&#39;: 17, &#39;name&#39;: &#39;wangwu&#39;&amp;#125;, &amp;#123;&#39;age&#39;: 18, &#39;name&#39;: &#39;zhangsan&#39;&amp;#125;]</code></pre>
+[&#123;&#39;age&#39;: 19, &#39;name&#39;: &#39;lisi&#39;&#125;, &#123;&#39;age&#39;: 17, &#39;name&#39;: &#39;wangwu&#39;&#125;, &#123;&#39;age&#39;: 18, &#39;name&#39;: &#39;zhangsan&#39;&#125;]</code></pre>
 <h4 id="3-4按age排序："><a href="#3-4按age排序：" class="headerlink" title="3.4按age排序："></a>3.4按age排序：</h4><pre><code class="python">&gt;&gt;&gt; stus.sort(key = lambda x:x[&#39;age&#39;])
 &gt;&gt;&gt; stus
-[&amp;#123;&#39;age&#39;: 17, &#39;name&#39;: &#39;wangwu&#39;&amp;#125;, &amp;#123;&#39;age&#39;: 18, &#39;name&#39;: &#39;zhangsan&#39;&amp;#125;, &amp;#123;&#39;age&#39;: 19, &#39;name&#39;: &#39;lisi&#39;&amp;#125;]</code></pre>
+[&#123;&#39;age&#39;: 17, &#39;name&#39;: &#39;wangwu&#39;&#125;, &#123;&#39;age&#39;: 18, &#39;name&#39;: &#39;zhangsan&#39;&#125;, &#123;&#39;age&#39;: 19, &#39;name&#39;: &#39;lisi&#39;&#125;]</code></pre>
 <h2 id="4、函数使用注意事项"><a href="#4、函数使用注意事项" class="headerlink" title="4、函数使用注意事项"></a>4、函数使用注意事项</h2><h3 id="4-1、自定义函数"><a href="#4-1、自定义函数" class="headerlink" title="4.1、自定义函数"></a>4.1、自定义函数</h3><blockquote>
 <p>1、无参数、无返回值</p>
 <pre><code class="python">    def 函数名():

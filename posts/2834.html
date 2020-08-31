@@ -1679,9 +1679,9 @@
 
 
 
-public class ObjectDemo &amp;#123;
+public class ObjectDemo &#123;
 
-    public static void main(String[] args) throws ClassNotFoundException &amp;#123;
+    public static void main(String[] args) throws ClassNotFoundException &#123;
         // 获取对象字节码的方式 ----- 应用层 反射
 
 
@@ -1707,22 +1707,22 @@ public class ObjectDemo &amp;#123;
         System.out.println(clazz1 == clazz2);
 
 
-    &amp;#125;
+    &#125;
 
 
-&amp;#125;</code></pre>
+&#125;</code></pre>
 <h4 id="2、Object-equals"><a href="#2、Object-equals" class="headerlink" title="2、Object-equals"></a>2、Object-equals</h4><blockquote>
 <p><strong>== :</strong> 比较两个对象是否相等</p>
 <p>i基本类型比值，引用类型比地址值。（需要重写）</p>
 </blockquote>
 <pre><code class="java">@Override
-public boolean equals(Object o) &amp;#123;
+public boolean equals(Object o) &#123;
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     Person person = (Person) o;
     return age == person.age &amp;&amp;
             Objects.equals(name, person.name);
-&amp;#125;</code></pre>
+&#125;</code></pre>
 <h4 id="3、System"><a href="#3、System" class="headerlink" title="3、System"></a>3、System</h4><table>
 <thead>
 <tr>
@@ -1813,8 +1813,8 @@ import java.util.Date;
  * @date 2020/3/25
  */
 
-public class SimpleDateFormatDemo &amp;#123;
-    public static void main(String[] args) throws ParseException &amp;#123;
+public class SimpleDateFormatDemo &#123;
+    public static void main(String[] args) throws ParseException &#123;
         SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy年MM月dd日&quot;);
 
         //格式化
@@ -1829,9 +1829,9 @@ public class SimpleDateFormatDemo &amp;#123;
         System.out.println(d.toLocaleString());
 
 
-    &amp;#125;
+    &#125;
 
-&amp;#125;</code></pre>
+&#125;</code></pre>
 <h4 id="6、Calendar"><a href="#6、Calendar" class="headerlink" title="6、Calendar"></a>6、Calendar</h4><blockquote>
 <p>日历，提供操作年月日时的方法。</p>
 <p>获取，月是 从 0开始。 所以 一般情况下 要 +1</p>
@@ -1861,9 +1861,9 @@ import java.util.ArrayList;
  * @author JackFeng
  * @date 2020/3/25
  */
-public class IntegerDemo &amp;#123;
+public class IntegerDemo &#123;
 
-    public static void main(String[] args) &amp;#123;
+    public static void main(String[] args) &#123;
 
         // 自动装箱
         // 相当于
@@ -1888,9 +1888,9 @@ public class IntegerDemo &amp;#123;
 
 
 
-    &amp;#125;
+    &#125;
 
-&amp;#125;</code></pre>
+&#125;</code></pre>
 <h3 id="5-1、正则表达式"><a href="#5-1、正则表达式" class="headerlink" title="5.1、正则表达式"></a>5.1、正则表达式</h3><blockquote>
 <p>正则表达式：</p>
 <p>​    规则规范，用于匹配字符串</p>
@@ -1987,33 +1987,33 @@ public class IntegerDemo &amp;#123;
  * @author JackFeng
  * @date 2020/3/25
  */
-public class RegexDemo &amp;#123;
-    public static void main(String[] args) &amp;#123;
+public class RegexDemo &#123;
+    public static void main(String[] args) &#123;
 
 
         String qq = &quot;66860619&quot;;
 
-        boolean matches = qq.matches(&quot;[1-9][0-9]&amp;#123;4,14&amp;#125;&quot;);
+        boolean matches = qq.matches(&quot;[1-9][0-9]&#123;4,14&#125;&quot;);
         System.out.println(matches);
 
         String a1 = &quot;00001&quot;;
-        boolean matches1 = a1.matches(&quot;[1-9][0-9]&amp;#123;4,14&amp;#125;&quot;);
+        boolean matches1 = a1.matches(&quot;[1-9][0-9]&#123;4,14&#125;&quot;);
         System.out.println(matches1);
 
-    &amp;#125;
+    &#125;
 
 
-&amp;#125;</code></pre>
+&#125;</code></pre>
 <p><strong>正则判断元音</strong></p>
 <blockquote>
 <p>aeiou AEIOU</p>
 </blockquote>
-<pre><code class="java">public  static  boolean check(String s)&amp;#123;
+<pre><code class="java">public  static  boolean check(String s)&#123;
     // 转换成小写
     s = s.toLowerCase();
     return  s.matches(&quot;\\w[aeiou]\\w&quot;);
 
-&amp;#125;</code></pre>
+&#125;</code></pre>
 <h4 id="Split"><a href="#Split" class="headerlink" title="Split"></a>Split</h4><pre><code class="java">package learn;
 
 /**
@@ -2021,10 +2021,10 @@ public class RegexDemo &amp;#123;
  * @author JackFeng
  * @date 2020/3/25
  */
-public class SplitDemo &amp;#123;
+public class SplitDemo &#123;
 
 
-    public static void main(String[] args) &amp;#123;
+    public static void main(String[] args) &#123;
 
         String s = &quot; -1     2    22  123     88&quot;;
 
@@ -2040,17 +2040,17 @@ public class SplitDemo &amp;#123;
         System.out.println(&quot;正则分割&quot;);
         print(arr1);
 
-    &amp;#125;
+    &#125;
 
 
-    public  static  void print(String[] arr)&amp;#123;
-        for (int i = 0; i &lt;arr.length ; i++) &amp;#123;
+    public  static  void print(String[] arr)&#123;
+        for (int i = 0; i &lt;arr.length ; i++) &#123;
             System.out.println(arr[i]);
-        &amp;#125;
+        &#125;
 
-    &amp;#125;
+    &#125;
 
-&amp;#125;</code></pre>
+&#125;</code></pre>
 
           
             <div class='article_footer'>

@@ -1737,7 +1737,7 @@
 <p>效果如下：</p>
 <p><img src="/resource/image/markdown/111.png"></p>
 <pre><code class="shell">- hexo 3
-&amp;#123;% asset_img test.jpg This is an test image %&amp;#125; </code></pre>
+&#123;% asset_img test.jpg This is an test image %&#125; </code></pre>
 <p><strong>上传本地图片直接点击导航栏的图片标志，选择图片即可</strong></p>
 <h2 id="六、超链接"><a href="#六、超链接" class="headerlink" title="六、超链接"></a>六、超链接</h2><p>语法：</p>
 <pre><code>[超链接名](超链接地址 &quot;超链接title&quot;)
@@ -1871,25 +1871,25 @@ title可加可不加</code></pre>
 <pre><code>`create database hero;`</code></pre>
 <p>代码块</p>
 <pre><code>(```)
-    function fun()&amp;#123;
+    function fun()&#123;
          echo &quot;这是一句非常牛逼的代码&quot;;
-    &amp;#125;
+    &#125;
     fun();
 (```)</code></pre>
 <p>效果如下：</p>
 <p>单行代码</p>
 <pre><code>create database hero;</code></pre>
 <p>代码块</p>
-<pre><code>function fun()&amp;#123;
+<pre><code>function fun()&#123;
   echo &quot;这是一句非常牛逼的代码&quot;;
-&amp;#125;
+&#125;
 fun();</code></pre>
 <h2 id="十、流程图"><a href="#十、流程图" class="headerlink" title="十、流程图"></a>十、流程图</h2><p><img src="/resource/image/markdown/1.png"></p>
 <pre><code class="mermaid">graph LR
 
 A[方形] --&gt;B(圆角)
 
-    B --&gt; C&amp;#123;条件a&amp;#125;
+    B --&gt; C&#123;条件a&#125;
 
     C --&gt;|a=1| D[结果1]
 
@@ -1898,7 +1898,7 @@ A[方形] --&gt;B(圆角)
     F[横向流程图]</code></pre>
 <pre><code class="mermaid">graph TD
 A[方形] --&gt;B(圆角)
-  B --&gt;C&amp;#123;条件a&amp;#125;
+  B --&gt;C&#123;条件a&#125;
   C --&gt;|a=1|D[结果1]
   C --&gt;|a=2|E[结果2]
   F[竖向流程图]    </code></pre>
@@ -1906,9 +1906,9 @@ A[方形] --&gt;B(圆角)
 <p><img src="/resource/image/markdown/2.png" alt="img"></p>
 <pre><code class="mermaid">graph LR
     start[开始] --&gt; input[输入A,B,C]
-    input --&gt; conditionA&amp;#123;A是否大于B&amp;#125;
-    conditionA -- YES --&gt; conditionC&amp;#123;A是否大于C&amp;#125;
-    conditionA -- NO --&gt; conditionB&amp;#123;B是否大于C&amp;#125;
+    input --&gt; conditionA&#123;A是否大于B&#125;
+    conditionA -- YES --&gt; conditionC&#123;A是否大于C&#125;
+    conditionA -- NO --&gt; conditionB&#123;B是否大于C&#125;
     conditionC -- YES --&gt; printA[输出A]
     conditionC -- NO --&gt; printC[输出C]
     conditionB -- YES --&gt; printB[输出B]

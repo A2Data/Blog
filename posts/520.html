@@ -1706,7 +1706,7 @@ ValueError: tuple.index(x): x not in tuple
 <p>学生信息列表，每个学生信息包括学号、姓名、年龄等，如何从中找到某个学生的信息？</p>
 <pre><code class="python">&gt;&gt;&gt; studens = [[1001, &quot;王宝强&quot;, 24], [1002, &quot;马蓉&quot;, 23], [1005, &quot;宋喆&quot;，24], ...]</code></pre>
 <p><strong>循环遍历？ No！</strong></p>
-<h2 id="0、根据键访问值"><a href="#0、根据键访问值" class="headerlink" title="0、根据键访问值"></a>0、根据键访问值</h2><pre><code class="python">    info = &amp;#123;&#39;name&#39;:&#39;班长&#39;, &#39;id&#39;:100, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;地球亚洲中国北京&#39;&amp;#125;
+<h2 id="0、根据键访问值"><a href="#0、根据键访问值" class="headerlink" title="0、根据键访问值"></a>0、根据键访问值</h2><pre><code class="python">    info = &#123;&#39;name&#39;:&#39;班长&#39;, &#39;id&#39;:100, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;地球亚洲中国北京&#39;&#125;
 
     print(info[&#39;name&#39;])
     print(info[&#39;address&#39;])</code></pre>
@@ -1751,7 +1751,7 @@ KeyError: &#39;age&#39;</code></pre>
 <blockquote>
 <p>clear 清空整个字典</p>
 </blockquote>
-<pre><code class="python">info = &amp;#123;&#39;name&#39;:&#39;a2data&#39;, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;China&#39;&amp;#125;
+<pre><code class="python">info = &#123;&#39;name&#39;:&#39;a2data&#39;, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;China&#39;&#125;
 
 print(&#39;清空前,%s&#39;%info)
 
@@ -1879,7 +1879,7 @@ True
 False
 &gt;&gt;&gt; 4 in (1, 2, 3, 4)
 True
-&gt;&gt;&gt; &quot;name&quot; in &amp;#123;&quot;name&quot;:&quot;小风&quot;, &quot;age&quot;:24&amp;#125;
+&gt;&gt;&gt; &quot;name&quot; in &#123;&quot;name&quot;:&quot;小风&quot;, &quot;age&quot;:24&#125;
 True</code></pre>
 <p><strong>注意，in在对字典操作时，判断的是字典的键</strong></p>
 <h3 id="4-2、python内置函数"><a href="#4-2、python内置函数" class="headerlink" title="4.2、python内置函数"></a>4.2、python内置函数</h3><blockquote>
@@ -1932,11 +1932,11 @@ True</code></pre>
 1
 &gt;&gt;&gt; cmp([1, 2], [1, 2, 3])
 -1
-&gt;&gt;&gt; cmp(&amp;#123;&quot;a&quot;:1&amp;#125;, &amp;#123;&quot;b&quot;:1&amp;#125;)
+&gt;&gt;&gt; cmp(&#123;&quot;a&quot;:1&#125;, &#123;&quot;b&quot;:1&#125;)
 -1
-&gt;&gt;&gt; cmp(&amp;#123;&quot;a&quot;:2&amp;#125;, &amp;#123;&quot;a&quot;:1&amp;#125;)
+&gt;&gt;&gt; cmp(&#123;&quot;a&quot;:2&#125;, &#123;&quot;a&quot;:1&#125;)
 1
-&gt;&gt;&gt; cmp(&amp;#123;&quot;a&quot;:2&amp;#125;, &amp;#123;&quot;a&quot;:2, &quot;b&quot;:1&amp;#125;)
+&gt;&gt;&gt; cmp(&#123;&quot;a&quot;:2&#125;, &#123;&quot;a&quot;:2, &quot;b&quot;:1&#125;)
 -1</code></pre>
 <p><strong>注意：cmp在比较字典数据时，先比较键，再比较值。</strong></p>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213230858.png"></p>
@@ -1946,18 +1946,18 @@ True</code></pre>
 4
 &gt;&gt;&gt; len((3,4))
 2
-&gt;&gt;&gt; len(&amp;#123;&quot;a&quot;:1, &quot;b&quot;:2&amp;#125;)
+&gt;&gt;&gt; len(&#123;&quot;a&quot;:1, &quot;b&quot;:2&#125;)
 2</code></pre>
 <p><strong>注意：len在操作字典数据时，返回的是键值对个数。</strong></p>
 <h4 id="max"><a href="#max" class="headerlink" title="max"></a>max</h4><pre><code class="python">&gt;&gt;&gt; max(&quot;hello a2data&quot;)
 &#39;t&#39;
 &gt;&gt;&gt; max([1,4,522,3,4])
 522
-&gt;&gt;&gt; max(&amp;#123;&quot;a&quot;:1, &quot;b&quot;:2&amp;#125;)
+&gt;&gt;&gt; max(&#123;&quot;a&quot;:1, &quot;b&quot;:2&#125;)
 &#39;b&#39;
-&gt;&gt;&gt; max(&amp;#123;&quot;a&quot;:10, &quot;b&quot;:2&amp;#125;)
+&gt;&gt;&gt; max(&#123;&quot;a&quot;:10, &quot;b&quot;:2&#125;)
 &#39;b&#39;
-&gt;&gt;&gt; max(&amp;#123;&quot;c&quot;:10, &quot;b&quot;:2&amp;#125;)
+&gt;&gt;&gt; max(&#123;&quot;c&quot;:10, &quot;b&quot;:2&#125;)
 &#39;c&#39;</code></pre>
 <h4 id="del"><a href="#del" class="headerlink" title="del"></a>del</h4><blockquote>
 <p>del有两种用法，一种是del加空格，另一种是del()</p>

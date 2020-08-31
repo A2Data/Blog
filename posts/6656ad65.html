@@ -1858,7 +1858,7 @@ WHERE column_name REGEXP/RLIKE 模式字符串;</code></pre>
 </tbody></table>
 <pre><code class="sql">案例：
 查询user表中姓名存在字段bb的人员。
-select * from user where user_name regexp &#39;b&amp;#123;2&amp;#125;&#39;;
+select * from user where user_name regexp &#39;b&#123;2&#125;&#39;;
 
 查询user表中姓名为n结尾的人员。
 select * from user where user_name rlike &#39;n$&#39;;
@@ -2112,21 +2112,8 @@ explain select * from Sheet1 where number = 1601;</code></pre>
         
           <div class="prev-next">
             
-              <a class='prev' href='/posts/f8d580eb.html'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>数据库操作-DCL</p>
-                <p class='content'>数据库操作DCL
-
-
-DCL
-DCL（Data Control Language），数据库控制语言。
-主要用途：对数据库访问权限进行控制的指令。
-操纵命令：GRANT、REVOKE
-GRANT：...</p>
-              </a>
-            
-            
-              <a class='next' href='/posts/e4f3239b.html'>
-                <p class='title'>数据库操作-TCL<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+              <a class='prev' href='/posts/e4f3239b.html'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>数据库操作-TCL</p>
                 <p class='content'>数据库操作TCL
 
 
@@ -2134,6 +2121,20 @@ TCL
 TCL（Transaction Control Language），事务控制语言。
 主要用途：对数据库进行事务控制的指令。
 操纵命令：COMMIT、ROLLBACK...</p>
+              </a>
+            
+            
+              <a class='next' href='/posts/4136.html'>
+                <p class='title'>Anaconda闪退<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>anaconda Windows闪退解决方案 。
+
+
+anaconda 打开闪退
+记录windwos 系统下 anaconda 打开闪退修复方式。
+
+解决方式
+1、 管理员模式运行
+conda ...</p>
               </a>
             
           </div>
@@ -2159,7 +2160,7 @@ TCL（Transaction Control Language），事务控制语言。
 
 
     <div class="content">
-      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\4354b039.html" title="认识Mysql" rel="bookmark">认识Mysql</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\f8d580eb.html" title="数据库操作-DCL" rel="bookmark">数据库操作-DCL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\b794162c.html" title="数据库操作-DDL" rel="bookmark">数据库操作-DDL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\e4f3239b.html" title="数据库操作-TCL" rel="bookmark">数据库操作-TCL</a></h3></div></li></ul>
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\4354b039.html" title="认识Mysql" rel="bookmark">认识Mysql</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\b794162c.html" title="数据库操作-DDL" rel="bookmark">数据库操作-DDL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\f8d580eb.html" title="数据库操作-DCL" rel="bookmark">数据库操作-DCL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\e4f3239b.html" title="数据库操作-TCL" rel="bookmark">数据库操作-TCL</a></h3></div></li></ul>
     </div>
   </section>
 

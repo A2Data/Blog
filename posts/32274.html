@@ -1687,8 +1687,8 @@ import java.util.Scanner;
  * Created by JackFeng on 2020/3/2.
  */
 
-public class StringTest &amp;#123;
-    public static void main(String[] args) &amp;#123;
+public class StringTest &#123;
+    public static void main(String[] args) &#123;
 
         Scanner sc = new Scanner(System.in);
 
@@ -1702,21 +1702,21 @@ public class StringTest &amp;#123;
 
         //遍历字符
 
-        for (int i = 0; i &lt;s.length() ; i++) &amp;#123;
+        for (int i = 0; i &lt;s.length() ; i++) &#123;
 
             char ch = s.charAt(i);
 
-            if (ch &gt;= &#39;A&#39; &amp;&amp; ch&lt;= &#39;Z&#39;) &amp;#123;
+            if (ch &gt;= &#39;A&#39; &amp;&amp; ch&lt;= &#39;Z&#39;) &#123;
                 BigCount++;
-            &amp;#125;else if(ch &gt;= &#39;a&#39; &amp;&amp; ch&lt;= &#39;z&#39;)&amp;#123;
+            &#125;else if(ch &gt;= &#39;a&#39; &amp;&amp; ch&lt;= &#39;z&#39;)&#123;
                 SmaCount++;
-            &amp;#125;else if (ch&gt;=&#39;0&#39; &amp;&amp; ch&lt;=&#39;9&#39;)&amp;#123;
+            &#125;else if (ch&gt;=&#39;0&#39; &amp;&amp; ch&lt;=&#39;9&#39;)&#123;
                 numberCount++;
-            &amp;#125;else &amp;#123;
+            &#125;else &#123;
                 System.out.println(&quot;该字符&quot;+ch+&quot;非法&quot;);
-            &amp;#125;
+            &#125;
 
-        &amp;#125;
+        &#125;
 
         System.out.println(&quot;大写字符&quot;+BigCount);
         System.out.println(&quot;小写字符&quot;+SmaCount);
@@ -1724,8 +1724,8 @@ public class StringTest &amp;#123;
 
 
 
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 </code></pre>
 <h3 id="转换功能"><a href="#转换功能" class="headerlink" title="转换功能"></a>转换功能</h3><blockquote>
@@ -1768,9 +1768,9 @@ import java.util.Scanner;
 * */
 
 
-public class StringTest1 &amp;#123;
+public class StringTest1 &#123;
 
-    public static void main(String[] args) &amp;#123;
+    public static void main(String[] args) &#123;
 
 
         Scanner sc = new Scanner(System.in);
@@ -1790,34 +1790,34 @@ public class StringTest1 &amp;#123;
 
 
 
-    &amp;#125;
+    &#125;
 
     // 方案A
-    public  static  String  reverse (String s)&amp;#123;
+    public  static  String  reverse (String s)&#123;
 
         String ss = &quot;&quot;;
 
         // 倒着遍历
-        for (int i = s.length()-1; i &gt;=0 ; i--) &amp;#123;
+        for (int i = s.length()-1; i &gt;=0 ; i--) &#123;
             ss+=s.charAt(i);
-        &amp;#125;
+        &#125;
 
         return ss;
-    &amp;#125;
+    &#125;
 
     // 方案B
 
-    public  static  String reFan( String s)&amp;#123;
+    public  static  String reFan( String s)&#123;
 
         // 把字符串转换为字符数组
         char[] chs = s.toCharArray();
 
-        for (int start = 0,end = chs.length-1; start &lt;=end ; start++,end--) &amp;#123;
+        for (int start = 0,end = chs.length-1; start &lt;=end ; start++,end--) &#123;
             char temp = chs[start];
              chs[start] = chs[end];
             chs[end] = temp;
 
-        &amp;#125;
+        &#125;
 
         // 把字符数组转换为字符串
         String ss = new String(chs);
@@ -1825,9 +1825,9 @@ public class StringTest1 &amp;#123;
         return ss;
 
 
-    &amp;#125;
+    &#125;
 
-&amp;#125;
+&#125;
 
 </code></pre>
 <h2 id="2、StringBuilder类功能"><a href="#2、StringBuilder类功能" class="headerlink" title="2、StringBuilder类功能"></a>2、StringBuilder类功能</h2><blockquote>
@@ -1888,8 +1888,8 @@ import java.util.Scanner;
 * 例如 abc 不是  aba  abba aaa 是对称字符串
 *
 * */
-public class StringBuilderDemo &amp;#123;
-    public static void main(String[] args) &amp;#123;
+public class StringBuilderDemo &#123;
+    public static void main(String[] args) &#123;
         // 键盘录入
 
         Scanner sc = new Scanner(System.in);
@@ -1906,9 +1906,9 @@ public class StringBuilderDemo &amp;#123;
 
 
 
-    &amp;#125;
+    &#125;
 
-    public  static  boolean isDuiChen(String s)&amp;#123;
+    public  static  boolean isDuiChen(String s)&#123;
         StringBuilder sb = new StringBuilder(s);
         sb.reverse();
         String result = sb.toString();
@@ -1916,9 +1916,9 @@ public class StringBuilderDemo &amp;#123;
         return result.equals(s);
 
 
-    &amp;#125;
+    &#125;
 
-&amp;#125;
+&#125;
 </code></pre>
 <h2 id="3、对象数组"><a href="#3、对象数组" class="headerlink" title="3、对象数组"></a>3、对象数组</h2><blockquote>
 <p>对象数组练习：</p>
@@ -1938,9 +1938,9 @@ public class StringBuilderDemo &amp;#123;
 
 
 
-public class StudentDemo &amp;#123;
+public class StudentDemo &#123;
 
-    public static void main(String[] args) &amp;#123;
+    public static void main(String[] args) &#123;
 
         // 创建学生数组
         Student[] students = new Student[3];
@@ -1957,17 +1957,17 @@ public class StudentDemo &amp;#123;
 
         //遍历学生数组
 
-        for (int i = 0; i &lt;students.length ; i++) &amp;#123;
+        for (int i = 0; i &lt;students.length ; i++) &#123;
             Student s = students[i];
             System.out.println(s); //这样输出的是地址值
 
             System.out.println(s.getName()+&quot;=====&quot;+s.getAge());
-        &amp;#125;
+        &#125;
 
 
 
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 </code></pre>
 <p><strong>学生类</strong></p>
 <pre><code class="java">package com.datascience.myArray;
@@ -1980,36 +1980,36 @@ public class StudentDemo &amp;#123;
 
 
 
-public class Student &amp;#123;
+public class Student &#123;
 
     private String name;
     private int age;
 
-    public Student(String name,int age) &amp;#123;
+    public Student(String name,int age) &#123;
         this.name = name;
         this.age = age;
 
-    &amp;#125;
+    &#125;
 
-    public Student() &amp;#123;
-    &amp;#125;
+    public Student() &#123;
+    &#125;
 
-    public String getName() &amp;#123;
+    public String getName() &#123;
         return name;
-    &amp;#125;
+    &#125;
 
-    public void setName(String name) &amp;#123;
+    public void setName(String name) &#123;
         this.name = name;
-    &amp;#125;
+    &#125;
 
-    public int getAge() &amp;#123;
+    public int getAge() &#123;
         return age;
-    &amp;#125;
+    &#125;
 
-    public void setAge(int age) &amp;#123;
+    public void setAge(int age) &#123;
         this.age = age;
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 </code></pre>
 <h2 id="4、集合ArrayList"><a href="#4、集合ArrayList" class="headerlink" title="4、集合ArrayList"></a>4、集合ArrayList</h2><blockquote>
@@ -2058,9 +2058,9 @@ import java.util.ArrayList;
  */
 
 
-public class ArrayListDemo &amp;#123;
+public class ArrayListDemo &#123;
 
-    public static void main(String[] args) &amp;#123;
+    public static void main(String[] args) &#123;
 
         // 创建集合对象
         ArrayList&lt;Object&gt; array = new ArrayList&lt;&gt;();
@@ -2111,26 +2111,26 @@ public class ArrayListDemo &amp;#123;
 
         //遍历集合
         System.out.println(&quot;================&quot;);
-        for (int i = 0; i &lt;array.size() ; i++) &amp;#123;
+        for (int i = 0; i &lt;array.size() ; i++) &#123;
 
             System.out.println(array.get(i));
 
-        &amp;#125;
+        &#125;
 
 
         // 标准遍历
 
-        for (int i = 0; i &lt;array.size() ; i++) &amp;#123;
+        for (int i = 0; i &lt;array.size() ; i++) &#123;
 
             // object
             Object s = array.get(i);
             System.out.println(s);
-        &amp;#125;
+        &#125;
 
 
 
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 </code></pre>
 <p><strong>Test</strong></p>
@@ -2158,8 +2158,8 @@ import java.util.Scanner;
 * */
 
 
-public class ArrayListTest &amp;#123;
-    public static void main(String[] args) &amp;#123;
+public class ArrayListTest &#123;
+    public static void main(String[] args) &#123;
 
         //创建集合对象
         ArrayList&lt;Student&gt; array = new ArrayList&lt;Student&gt;();
@@ -2172,16 +2172,16 @@ public class ArrayListTest &amp;#123;
 
         //遍历集合
 
-        for (int i = 0; i &lt;array.size() ; i++) &amp;#123;
+        for (int i = 0; i &lt;array.size() ; i++) &#123;
 
             Student s = array.get(i);
 
             System.out.println(s.getName() +&quot;-------&quot;+ s.getAge());
-        &amp;#125;
+        &#125;
 
 
 
-    &amp;#125;
+    &#125;
 
 
     /*
@@ -2194,7 +2194,7 @@ public class ArrayListTest &amp;#123;
     *
     * */
 
-    public static  void  addStudent (ArrayList&lt;Student&gt; array)&amp;#123;
+    public static  void  addStudent (ArrayList&lt;Student&gt; array)&#123;
         //键盘录入
 
         Scanner sc = new Scanner(System.in);
@@ -2213,9 +2213,9 @@ public class ArrayListTest &amp;#123;
         //学生对象存储到集合中
 
         array.add(s);
-    &amp;#125;
+    &#125;
 
-&amp;#125;
+&#125;
 
 </code></pre>
 <h3 id="简易学生管理系统"><a href="#简易学生管理系统" class="headerlink" title="简易学生管理系统"></a>简易学生管理系统</h3><blockquote>
@@ -2239,7 +2239,7 @@ public class ArrayListTest &amp;#123;
 *
 * 学生类
 * */
-public class Student &amp;#123;
+public class Student &#123;
 
     private String id;
 
@@ -2251,48 +2251,48 @@ public class Student &amp;#123;
 
     private String address;
 
-    public Student() &amp;#123;
-    &amp;#125;
+    public Student() &#123;
+    &#125;
 
-    public Student(String id, String name, String age, String address) &amp;#123;
+    public Student(String id, String name, String age, String address) &#123;
         this.id = id;
         this.name = name;
         this.age = age;
         this.address = address;
-    &amp;#125;
+    &#125;
 
-    public String getId() &amp;#123;
+    public String getId() &#123;
         return id;
-    &amp;#125;
+    &#125;
 
-    public void setId(String id) &amp;#123;
+    public void setId(String id) &#123;
         this.id = id;
-    &amp;#125;
+    &#125;
 
-    public String getName() &amp;#123;
+    public String getName() &#123;
         return name;
-    &amp;#125;
+    &#125;
 
-    public void setName(String name) &amp;#123;
+    public void setName(String name) &#123;
         this.name = name;
-    &amp;#125;
+    &#125;
 
-    public String getAge() &amp;#123;
+    public String getAge() &#123;
         return age;
-    &amp;#125;
+    &#125;
 
-    public void setAge(String age) &amp;#123;
+    public void setAge(String age) &#123;
         this.age = age;
-    &amp;#125;
+    &#125;
 
-    public String getAddress() &amp;#123;
+    public String getAddress() &#123;
         return address;
-    &amp;#125;
+    &#125;
 
-    public void setAddress(String address) &amp;#123;
+    public void setAddress(String address) &#123;
         this.address = address;
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 </code></pre>
 <p><strong>Test</strong></p>
@@ -2306,16 +2306,16 @@ import java.util.Scanner;
  */
 
 
-public class StudentMangerTest &amp;#123;
+public class StudentMangerTest &#123;
 
-    public static void main(String[] args) &amp;#123;
+    public static void main(String[] args) &#123;
 
         //创建集合对象，存储学生数据
         ArrayList&lt;Student&gt; array = new ArrayList&lt;&gt;();
 
 
 
-        while (true) &amp;#123;
+        while (true) &#123;
 
             // 主界面
             System.out.println(&quot;---------欢迎来到学生管理系统----------&quot;);
@@ -2330,7 +2330,7 @@ public class StudentMangerTest &amp;#123;
 
 
             String choice = sc.nextLine();
-            switch (choice) &amp;#123;
+            switch (choice) &#123;
                 case &quot;1&quot;:
                     // 查看所有学生
                     findAllStudent(array);
@@ -2354,33 +2354,33 @@ public class StudentMangerTest &amp;#123;
                     System.out.println(&quot;谢谢你的使用！&quot;);
                     System.exit(0); // jvm 退出
                     break;
-            &amp;#125;
-        &amp;#125;
+            &#125;
+        &#125;
 
-    &amp;#125;
+    &#125;
 
     //1 查看所有学生
-    public  static  void findAllStudent(ArrayList&lt;Student&gt; array)&amp;#123;
+    public  static  void findAllStudent(ArrayList&lt;Student&gt; array)&#123;
         // 判断集合中是否有数据，如果没有数据，给出提示，并让该方法不继续往下执行
-        if (array.size()==0)&amp;#123;
+        if (array.size()==0)&#123;
             System.out.println(&quot;不好意思，暂无学生信息，请重新选择你的操作&quot;);
             return;// void 没有返回值 可以直接return
-        &amp;#125;
+        &#125;
 
         // \t
         System.out.println(&quot;学号\t\t姓名\t年龄\t地址&quot;);
-        for (int i = 0; i &lt; array.size(); i++) &amp;#123;
+        for (int i = 0; i &lt; array.size(); i++) &#123;
             Student s = array.get(i);
             System.out.println(s.getId()+&quot;--&quot;+s.getName()+&quot;--&quot;+s.getAge()+&quot;---&quot;+s.getAddress());
 
 
-        &amp;#125;
+        &#125;
 
-    &amp;#125;
+    &#125;
 
     // 添加学生
 
-    public  static  void addStudent(ArrayList&lt;Student&gt; array)&amp;#123;
+    public  static  void addStudent(ArrayList&lt;Student&gt; array)&#123;
         //创建键盘录入对象
         Scanner sc = new Scanner(System.in);
 
@@ -2389,7 +2389,7 @@ public class StudentMangerTest &amp;#123;
         String id;
 
         // 代码重复使用
-        while (true)&amp;#123;
+        while (true)&#123;
 
             System.out.println(&quot;请输入 学生ID：&quot;);
 //            String id = sc.nextLine();
@@ -2400,21 +2400,21 @@ public class StudentMangerTest &amp;#123;
             //  定义标记默认为false
             boolean flag = false;
 
-            for (int i = 0; i &lt;array.size() ; i++) &amp;#123;
+            for (int i = 0; i &lt;array.size() ; i++) &#123;
 
                 Student s = array.get(i);
 
-                if (s.getId().equals(id))&amp;#123;
+                if (s.getId().equals(id))&#123;
                     flag = true;  // 说明学号被占用
-                &amp;#125;
+                &#125;
 
-            &amp;#125;
-            if (flag)&amp;#123;
+            &#125;
+            if (flag)&#123;
                 System.out.println(&quot;你输入的学号已经被占用&quot;);
-            &amp;#125;else &amp;#123;
+            &#125;else &#123;
                 break;
-            &amp;#125;
-        &amp;#125;
+            &#125;
+        &#125;
 
 
 
@@ -2438,11 +2438,11 @@ public class StudentMangerTest &amp;#123;
         // 把学生对象添进 集合
         array.add(s);
         System.out.println(&quot;学生信息添加成功====姓名为： &quot;+s.getName());
-    &amp;#125;
+    &#125;
 
 
 
-    public static  void delStudent(ArrayList&lt;Student&gt; array)&amp;#123;
+    public static  void delStudent(ArrayList&lt;Student&gt; array)&#123;
 
         //根据学号删除
 
@@ -2455,30 +2455,30 @@ public class StudentMangerTest &amp;#123;
         int index = -1;
 
         //遍历集合
-        for (int i = 0; i &lt;array.size() ; i++) &amp;#123;
+        for (int i = 0; i &lt;array.size() ; i++) &#123;
             //获取每个学生的对象
             Student s = array.get(i);
 
-            if (s.getId().equals(id))&amp;#123;
+            if (s.getId().equals(id))&#123;
 //                array.remove(i); // 根据索引删除
                 index = i;
                 break;
-            &amp;#125;
+            &#125;
 //            System.out.println(&quot;删除学生成功！&quot;);
-        &amp;#125;
-        if (index == -1)&amp;#123;
+        &#125;
+        if (index == -1)&#123;
             System.out.println(&quot;不好意思，您输入的学号不存在，请重新输入&quot;);
-        &amp;#125;else &amp;#123;
+        &#125;else &#123;
             array.remove(index); // 根据索引删除
             System.out.println(&quot;删除学生成功&quot;);
-        &amp;#125;
+        &#125;
 
 
 
-    &amp;#125;
+    &#125;
 
     // 修改学生
-    public static void updataStudent(ArrayList&lt;Student&gt; array)&amp;#123;
+    public static void updataStudent(ArrayList&lt;Student&gt; array)&#123;
         // 创建键盘录入对象
         Scanner sc = new Scanner(System.in);
         System.out.println(&quot;请输入你要修改学生的学号：&quot;);
@@ -2488,19 +2488,19 @@ public class StudentMangerTest &amp;#123;
         int index = -1;
 
 
-        for (int i = 0; i &lt;array.size() ; i++) &amp;#123;
+        for (int i = 0; i &lt;array.size() ; i++) &#123;
             //获取每一个学生对象
             Student s = array.get(i);
 
-            if (s.getId().equals(id))&amp;#123;
+            if (s.getId().equals(id))&#123;
                 index = i;
                 break;
-            &amp;#125;
-        &amp;#125;
+            &#125;
+        &#125;
 
-        if (index == -1)&amp;#123;
+        if (index == -1)&#123;
             System.out.println(&quot;不好意思，你要修改的学生信息不存在，请重新你的选择&quot;);
-        &amp;#125;else &amp;#123;
+        &#125;else &#123;
             System.out.println(&quot;请输入学生新姓名：&quot;);
             String name = sc.nextLine();
 
@@ -2522,13 +2522,13 @@ public class StudentMangerTest &amp;#123;
 
             System.out.println(&quot;修改学生信息成功&quot;);
 
-        &amp;#125;
+        &#125;
 
 
-    &amp;#125;
+    &#125;
 
 
-&amp;#125;
+&#125;
 
 </code></pre>
 <h2 id="5、IO字符流"><a href="#5、IO字符流" class="headerlink" title="5、IO字符流"></a>5、IO字符流</h2><blockquote>
@@ -2581,8 +2581,8 @@ import java.io.IOException;
 *
 * */
 
-public class FileWriterDemo &amp;#123;
-    public static void main(String[] args) throws IOException &amp;#123;
+public class FileWriterDemo &#123;
+    public static void main(String[] args) throws IOException &#123;
 
         //  创建输出流对象
         //  调用系统资源创建一个文件,创建输出流对象，把输出流对象指向文件
@@ -2612,7 +2612,7 @@ public class FileWriterDemo &amp;#123;
 //        fw.write(97);
 
         // 4 写一个数组
-//        char[] chs = &amp;#123;&#39;a&#39;, &#39;b&#39;, &#39;c&#39;&amp;#125;;
+//        char[] chs = &#123;&#39;a&#39;, &#39;b&#39;, &#39;c&#39;&#125;;
 //        fw.write(chs);
 
         // 5
@@ -2623,10 +2623,10 @@ public class FileWriterDemo &amp;#123;
         // 数据换行 + 数据追加写入
         // \n 可以换行，windows 没有换行 ，\r\n
 
-        for (int i = 0; i &lt; 10 ; i++) &amp;#123;
+        for (int i = 0; i &lt; 10 ; i++) &#123;
             fw.write(&quot;Hi&quot;+i);
             fw.write(&quot;\r\n&quot;);
-        &amp;#125;
+        &#125;
 
 
 
@@ -2634,9 +2634,9 @@ public class FileWriterDemo &amp;#123;
         fw.close(); // 先刷新缓冲区。再通知系统释放资源
 
 
-    &amp;#125;
+    &#125;
 
-&amp;#125;
+&#125;
 
 </code></pre>
 <h3 id="5-1、读数据"><a href="#5-1、读数据" class="headerlink" title="5.1、读数据"></a>5.1、读数据</h3><pre><code class="java">package myIo;
@@ -2650,8 +2650,8 @@ import java.io.IOException;
 
 
 
-public class FileReaderDemo &amp;#123;
-    public static void main(String[] args) throws IOException &amp;#123;
+public class FileReaderDemo &#123;
+    public static void main(String[] args) throws IOException &#123;
 
         // 创建输入流 对象
 
@@ -2680,10 +2680,10 @@ public class FileReaderDemo &amp;#123;
         // 读取 字符串
 /*        int ch;
 
-        while ((ch=fr.read())!= -1)&amp;#123;
+        while ((ch=fr.read())!= -1)&#123;
 //            System.out.println(ch);
             System.out.print((char)ch);
-        &amp;#125;*/
+        &#125;*/
 
 
         //第二种读取数据方式  一次读取一个数组的数据
@@ -2693,15 +2693,15 @@ public class FileReaderDemo &amp;#123;
         char[] chs = new char[1024]; // 一般写1024 及其整数倍
 
         int len;
-        while ((len= fr.read(chs)) != -1)&amp;#123;
+        while ((len= fr.read(chs)) != -1)&#123;
             System.out.print(new String(chs,0,len));
             // 以数组方式读入
-        &amp;#125;
+        &#125;
 
 
         fr.close(); // 释放资源
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 </code></pre>
 <h3 id="5-2、文件复制"><a href="#5-2、文件复制" class="headerlink" title="5.2、文件复制"></a>5.2、文件复制</h3><pre><code class="java">package myIo;
@@ -2716,9 +2716,9 @@ import java.io.IOException;
 
 
 
-public class CopyFileDemo &amp;#123;
+public class CopyFileDemo &#123;
 
-    public static void main(String[] args) throws IOException &amp;#123;
+    public static void main(String[] args) throws IOException &#123;
 
 
         // 创建输入刘对象
@@ -2732,24 +2732,24 @@ public class CopyFileDemo &amp;#123;
         //读写数据
 
 /*        int ch;
-        while ((ch=fr.read())!=-1)&amp;#123;
+        while ((ch=fr.read())!=-1)&#123;
             fw.write(ch);
-        &amp;#125;*/
+        &#125;*/
         char[] chs = new char[1024];
         int len;
 
-        while ((len= fr.read(chs))!= -1)&amp;#123;
+        while ((len= fr.read(chs))!= -1)&#123;
             fw.write(chs,0,len);
-        &amp;#125;
+        &#125;
 
 
 
         fr.close();
         fw.close();
 
-    &amp;#125;
+    &#125;
 
-&amp;#125;
+&#125;
 
 </code></pre>
 <h3 id="5-3、字符缓冲流"><a href="#5-3、字符缓冲流" class="headerlink" title="5.3、字符缓冲流"></a>5.3、字符缓冲流</h3><p><strong>BufferedWriter</strong> —- 高效写入</p>
@@ -2774,8 +2774,8 @@ import java.io.*;
 /**
  * Created by JackFeng on 2020/3/8.
  */
-public class BufferedDemo &amp;#123;
-    public static void main(String[] args) throws IOException &amp;#123;
+public class BufferedDemo &#123;
+    public static void main(String[] args) throws IOException &#123;
 
         // 创建输出缓冲流对象
         BufferedWriter bw = new BufferedWriter(new FileWriter(&quot;a.txt&quot;));
@@ -2784,11 +2784,11 @@ public class BufferedDemo &amp;#123;
 //        bw.flush();
 
 
-        for (int i = 0; i &lt; 10 ; i++) &amp;#123;
+        for (int i = 0; i &lt; 10 ; i++) &#123;
             bw.write(&quot;Hi&quot;+i);
 //            bw.write(&quot;\r\n&quot;);
             bw.newLine(); // 等同于  bw.write(&quot;\r\n&quot;);
-        &amp;#125;
+        &#125;
 
         bw.close();
 
@@ -2801,9 +2801,9 @@ public class BufferedDemo &amp;#123;
         // 一次写一个字符
 /*        int ch;
 
-        while ((ch=br.read())!= -1)&amp;#123;
+        while ((ch=br.read())!= -1)&#123;
             System.out.print((char) ch);
-        &amp;#125;*/
+        &#125;*/
 
         // 一次读写一个数组
 /*
@@ -2819,15 +2819,15 @@ public class BufferedDemo &amp;#123;
 
         String line;
         // br.readLine
-        while((line= br.readLine())!=null)&amp;#123;
+        while((line= br.readLine())!=null)&#123;
             System.out.println(line);
-        &amp;#125;
+        &#125;
 
         br.close();
 
 
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 
 </code></pre>
 <p><strong>集合数据写入文件</strong></p>
@@ -2841,9 +2841,9 @@ import java.util.ArrayList;
 /**
  * Created by JackFeng on 2020/3/8.
  */
-public class ArrayListToFileTest &amp;#123;
+public class ArrayListToFileTest &#123;
 
-    public static void main(String[] args) throws IOException &amp;#123;
+    public static void main(String[] args) throws IOException &#123;
 
         // 创建集合对象
 
@@ -2861,18 +2861,18 @@ public class ArrayListToFileTest &amp;#123;
 
         //遍历集合写入到文件
 
-        for (int i = 0; i &lt;array.size() ; i++) &amp;#123;
+        for (int i = 0; i &lt;array.size() ; i++) &#123;
             String s = array.get(i);
             bw.write(s);
             bw.newLine();  // 读取换行
             bw.flush();
-        &amp;#125;
+        &#125;
 
         bw.close();
 
-    &amp;#125;
+    &#125;
 
-&amp;#125;
+&#125;
 
 </code></pre>
 <p><strong>文件存入集合</strong></p>
@@ -2886,8 +2886,8 @@ import java.util.ArrayList;
 /**
  * Created by JackFeng on 2020/3/8.
  */
-public class FileToArrayList &amp;#123;
-    public static void main(String[] args)  throws IOException &amp;#123;
+public class FileToArrayList &#123;
+    public static void main(String[] args)  throws IOException &#123;
 
         // 创建输入缓冲流对象
 
@@ -2900,22 +2900,22 @@ public class FileToArrayList &amp;#123;
         // 读取数据 每次读取一行数据， 把该行数据作为一个元素存储到集合中
         String line;
 
-        while ((line = br.readLine())!= null)&amp;#123;
+        while ((line = br.readLine())!= null)&#123;
             array.add(line);
-        &amp;#125;
+        &#125;
         br.close();
 
         //遍历集合
-        for (int i = 0; i &lt;array.size() ; i++) &amp;#123;
+        for (int i = 0; i &lt;array.size() ; i++) &#123;
             String s = array.get(i);
             System.out.println(s);
-        &amp;#125;
+        &#125;
 
 
 
-    &amp;#125;
+    &#125;
 
-&amp;#125;
+&#125;
 
 </code></pre>
 <p><strong>学生管理添加升级版本</strong></p>
@@ -2932,8 +2932,8 @@ import java.util.Scanner;
 /**
  * Created by JackFeng on 2020/3/8.
  */
-public class ArratListToFileTest &amp;#123;
-    public static void main(String[] args) throws IOException &amp;#123;
+public class ArratListToFileTest &#123;
+    public static void main(String[] args) throws IOException &#123;
 
         ArrayList&lt;Student&gt; array = new ArrayList&lt;&gt;();
 
@@ -2947,7 +2947,7 @@ public class ArratListToFileTest &amp;#123;
 
         BufferedWriter bw = new BufferedWriter(new FileWriter(&quot;std.txt&quot;));
 
-        for (int i = 0; i &lt;array.size() ; i++) &amp;#123;
+        for (int i = 0; i &lt;array.size() ; i++) &#123;
             Student s = array.get(i);
             // 链式编程
             /// 姓名,年龄,。。。  采用 StringBuilder
@@ -2959,16 +2959,16 @@ public class ArratListToFileTest &amp;#123;
             bw.newLine();  // 换行
             bw.flush(); // 刷新
 
-        &amp;#125;
+        &#125;
 
         bw.close();
 
 
-    &amp;#125;
+    &#125;
 
     // 添加学生
 
-    public  static  void addStudent(ArrayList&lt;Student&gt; array)&amp;#123;
+    public  static  void addStudent(ArrayList&lt;Student&gt; array)&#123;
         //创建键盘录入对象
         Scanner sc = new Scanner(System.in);
 
@@ -2977,7 +2977,7 @@ public class ArratListToFileTest &amp;#123;
         String id;
 
         // 代码重复使用
-        while (true)&amp;#123;
+        while (true)&#123;
 
             System.out.println(&quot;请输入 学生ID：&quot;);
 //            String id = sc.nextLine();
@@ -2988,21 +2988,21 @@ public class ArratListToFileTest &amp;#123;
             //  定义标记默认为false
             boolean flag = false;
 
-            for (int i = 0; i &lt;array.size() ; i++) &amp;#123;
+            for (int i = 0; i &lt;array.size() ; i++) &#123;
 
                 Student s = array.get(i);
 
-                if (s.getId().equals(id))&amp;#123;
+                if (s.getId().equals(id))&#123;
                     flag = true;  // 说明学号被占用
-                &amp;#125;
+                &#125;
 
-            &amp;#125;
-            if (flag)&amp;#123;
+            &#125;
+            if (flag)&#123;
                 System.out.println(&quot;你输入的学号已经被占用&quot;);
-            &amp;#125;else &amp;#123;
+            &#125;else &#123;
                 break;
-            &amp;#125;
-        &amp;#125;
+            &#125;
+        &#125;
 
 
 
@@ -3026,11 +3026,11 @@ public class ArratListToFileTest &amp;#123;
         // 把学生对象添进 集合
         array.add(s);
         System.out.println(&quot;学生信息添加成功====姓名为： &quot;+s.getName());
-    &amp;#125;
+    &#125;
 
 
 
-&amp;#125;
+&#125;
 </code></pre>
 
           
