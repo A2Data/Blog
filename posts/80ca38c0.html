@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -18,9 +16,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2020/5 - A2Data</title>
+  <title>Python变量和运算符 - A2Data</title>
+  
+    <meta name="keywords" content="Python">
   
 
+  
+    <meta name="description" content="Python变量与运算符！！！">
   
 
   <!-- feed -->
@@ -1456,7 +1458,7 @@
   
   
   <div class="cover-wrapper">
-    <div class='cover ' style="display: none;">
+    <div class='cover post' style="display: none;">
       <div class='cover-bg lazyload placeholder' data-bg=""></div>
       <div class='cover-body'>
   <div class='a'>
@@ -1527,7 +1529,7 @@
   
 
 
-  <div class="l_body">
+  <div class="l_body nocover">
     <div class='body-wrapper' id="pjax-container">
       
         <!--此文件用来存放一些不方便取值的变量-->
@@ -1536,8 +1538,8 @@
 
 
 <div id="pjax-data" style="display: none">
-  <div id="pjax-ispage">false</div>
-  <div id="pjax-pageTitle"></div>
+  <div id="pjax-ispage">true</div>
+  <div id="pjax-pageTitle">Python变量和运算符</div>
   <div id="pjax-enable-cover">true</div>
   <div id="pjax-comment-path">none</div>
   <div id="pjax-comment-placeholder">none</div>
@@ -1546,16 +1548,16 @@
 
 <script>
   // 处理封面 此时 jquery 还没加载
-  if ("blog" == "none") { // 移除封面
+  if ("none" == "none") { // 移除封面
     document.getElementsByClassName('cover')[0].style.display = "none"; 
     document.getElementsByClassName('l_body')[0].classList.add("nocover");
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
   } else {
-    if ("blog" == "blog") { // 半屏
+    if ("none" == "blog") { // 半屏
       document.getElementsByClassName('cover')[0].classList.remove("full");
       document.getElementsByClassName('cover')[0].classList.add("half");
       document.getElementsByClassName('scroll-down')[0].style.display = "none";
-    } else if ("blog" == "docs") { // 全屏
+    } else if ("none" == "docs") { // 全屏
       document.getElementsByClassName('cover')[0].classList.remove("half");
       document.getElementsByClassName('cover')[0].classList.add("full");
       document.getElementsByClassName('scroll-down')[0].style.display = "";
@@ -1571,16 +1573,11 @@
       
 
 <div class='l_main'>
-	
-		
-  <section class="post-list ">
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
   
+
+  
+    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
@@ -1590,446 +1587,11 @@
       <div class="meta" id="header-meta">
         
           
-  <h2 class="title">
-    <a href="/posts/36204.html">
-      最快图床搭建
+  <h1 class="title">
+    <a href="/posts/80ca38c0.html">
+      Python变量和运算符
     </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
-    <p>JackFeng</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/Tools/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>Tools</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 6, 2020</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>497 words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>1 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/posts/36204.html" class="leancloud_visitors" data-flag-title="最快图床搭建">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/posts/36204.html#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/36204.html">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最快的图床搭建，有坑请联系小编。</p>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/posts/36204.html">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-        <a title='Redis' href='/posts/bae4ff13.html'>
-          
-            <img class='thumbnail' src='https://cdn.jsdelivr.net/gh/A2Data/cdn/img/2.png'>
-          
-        </a>
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/posts/bae4ff13.html">
-      Redis
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
-    <p>JackFeng</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>数据库工具</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 6, 2020</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.3k words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>5 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/posts/bae4ff13.html" class="leancloud_visitors" data-flag-title="Redis">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/posts/bae4ff13.html#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/bae4ff13.html">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>详细说明Redis的安装。</p>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/posts/bae4ff13.html">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-        <a title='DBeaver安装' href='/posts/773d5f8c.html'>
-          
-            <img class='thumbnail' src='https://cdn.jsdelivr.net/gh/A2Data/cdn/img/2.png'>
-          
-        </a>
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/posts/773d5f8c.html">
-      DBeaver安装
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
-    <p>JackFeng</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>DataBase/Mysql/数据库工具/数据库</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 6, 2020</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>76 words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>1 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/posts/773d5f8c.html" class="leancloud_visitors" data-flag-title="DBeaver安装">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/posts/773d5f8c.html#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/773d5f8c.html">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>DBeaver安装步骤</p>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/posts/773d5f8c.html">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/posts/9e565f9f.html">
-      大数据集群
-    </a>
-  </h2>
+  </h1>
 
 
         
@@ -2057,58 +1619,9 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 6, 2020</p>
+    <p>发布于：Sep 2, 2020</p>
   </a>
 </div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>592 words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>2 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/posts/9e565f9f.html" class="leancloud_visitors" data-flag-title="大数据集群">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/posts/9e565f9f.html#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/9e565f9f.html">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
 
             
           
@@ -2126,133 +1639,709 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>快速搭建Hadoop集群</p>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/posts/9e565f9f.html">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          
+          <p>Python变量与运算符！！！</p>
+<a id="more"></a>
 
-          </div>
-        
-      
-    
-  </section>
+<p>我们还是用一个问题来引出今天的学习内容,同样是计算成绩。</p>
+<p><strong>Q：</strong>给定学生三门成绩</p>
+<p>(1)计算该学生的平均成绩并打印平均成绩保留两位小数点</p>
+<p>(2)计算该学生语文成绩占总成绩的百分之多少？并打印，百分比也保留两位小数</p>
+<blockquote>
+<p>Chinese = 92  </p>
+<p>Math = 98.5 </p>
+<p>English = 93</p>
+</blockquote>
+<p><strong>A：</strong></p>
+<pre><code class="python">
+# ID 生成唯一UUID
+
+Chinese = 92
+Math = 98.5
+English = 93
+
+# 总成绩
+SumScore = Chinese + Math + English
+
+# 平均成绩
+AvgScore = SumScore / 3
+
+# 百分比
+ChinesePercent = ( Chinese / SumScore ) * 100
+print(&quot;%s的平均成绩为%.2f&quot; %(ID,AvgScore))
+
+#输出
+9fde9178-ec75-11ea-9d07-a0510bfd82f6
+9fde9178-ec75-11ea-9d07-a0510bfd82f6的平均成绩为94.50
+</code></pre>
+<p><strong>学前引导：</strong></p>
+<blockquote>
+<p>变量&amp;运算符(本文重点)：</p>
+<ul>
+<li><p>变量</p>
+</li>
+<li><p>转义字符</p>
+</li>
+<li><p>运算符</p>
+</li>
+<li><p>初识判断语句</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="关于变量"><a href="#关于变量" class="headerlink" title="关于变量"></a>关于变量</h2><h3 id="变量的创建过程"><a href="#变量的创建过程" class="headerlink" title="变量的创建过程"></a>变量的创建过程</h3><p>首先，当我们定义了一个变量**name = ‘Data’**的时候，在内存中其实是做了这样一件事。</p>
+<p>程序开辟了一块内存空间，将’Data’存储进去，再让变量名name指向’Data’所在的内存地址。如下所示：</p>
+<pre><code class="python">#通过下列方法可以查看这个变量在内存中的地址
+name = &#39;Data&#39;
+print(id(name))
+2720846969904
+</code></pre>
+<h3 id="变量的修改"><a href="#变量的修改" class="headerlink" title="变量的修改"></a>变量的修改</h3><p>一般我们认为修改一个变量就是用新值把就旧值覆盖掉 实际的原理是什么样的呢？</p>
+<p>程序先申请了一块内存空间来存储’Data’，让name变量名指向这块内存空间，往下执行name = ‘Science’之后，又申请了另一块内存空间来存储’Science’，并让原本指向’Data’内存的链接断开，让name再指向’Science’。</p>
+<pre><code class="python">#案例演示
+
+name = &#39;Data&#39;
+print(id(name))
+name = &#39;Science&#39;
+print(id(name))
+2720846969904
+2718733174640
+</code></pre>
+<h2 id="变量的指向关系"><a href="#变量的指向关系" class="headerlink" title="变量的指向关系"></a>变量的指向关系</h2><p>当执行name2 = name1时，事实上时让name2指向了’Data’所在的内存地址。</p>
+<p>修改name1的值，相当于断开了name1到’Data’的链接，重新建立name1和’Science’之间的链接。</p>
+<p>在这个过程中，始终没有影响到name2和’Data’之间的关系，因此name2还是’Data’，而name1变成了’Science’</p>
+<pre><code class="python">#案例演示
+name1 = &#39;Data&#39;
+name2 = name1
+print(name1, name2)
+name1 = &#39;Science&#39;
+print(name1, name2)
+Data Data
+Science Data</code></pre>
+<h4 id="变量小测试："><a href="#变量小测试：" class="headerlink" title="变量小测试："></a>变量小测试：</h4><p>1、以下可以作为python标识符是<strong>___</strong>。</p>
+<ul>
+<li>A.2morrow</li>
+<li>B.your-name</li>
+<li>C._study</li>
+<li>D.abc*123</li>
+</ul>
+<p>2、如下示例:字符串str1的值赋值给str2时,str2的变量地址是否改变?如果是字典赋值呢?</p>
+<pre><code class="python">str1= &#39;python&#39;
+str2= &#39;pandas&#39;
+str2= str1
+</code></pre>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ul>
+<li><p>算术运算符</p>
+<ul>
+<li>运算优先级</li>
+</ul>
+</li>
+<li><p>赋值运算符</p>
+</li>
+<li><p>复合赋值运算符</p>
+</li>
+</ul>
+<h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><p>即基本的算术运算：加+、 减- 、乘* 、除/ 、取余% 、幂** 、取整除//</p>
+<p>下面以a=10 ,b=20为例进行计算</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="center">描述</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">+</td>
+<td align="center">加</td>
+<td>两个对象相加 a + b 输出结果 30</td>
+</tr>
+<tr>
+<td align="left">-</td>
+<td align="center">减</td>
+<td>得到负数或是一个数减去另一个数 a - b 输出结果 -10</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="center">乘</td>
+<td>两个数相乘或是返回一个被重复若干次的字符串 a * b 输出结果 200</td>
+</tr>
+<tr>
+<td align="left">/</td>
+<td align="center">除</td>
+<td>x除以y b / a 输出结果 2</td>
+</tr>
+<tr>
+<td align="left">%</td>
+<td align="center">取余</td>
+<td>返回除法的余数 b % a 输出结果 0</td>
+</tr>
+<tr>
+<td align="left">**</td>
+<td align="center">幂</td>
+<td>返回x的y次幂 a**b 为10的20次方， 输出结果 100000000000000000000</td>
+</tr>
+<tr>
+<td align="left">//</td>
+<td align="center">取整除</td>
+<td>返回商的整数部分 9//2 输出结果 4 , 9.0//2.0 输出结果 4.0</td>
+</tr>
+</tbody></table>
+<pre><code class="python"># 更多案例
+a=21
+b=3
+c=4
+print(a+b)
+print(a-b)
+print(a/b)
+print(a*b)
+print(c**3)
+print(a%c)
+print(a//c)
+print(45-a)
+24
+18
+7.0
+63
+64
+1
+5
+24</code></pre>
+<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="center">描述</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">=</td>
+<td align="center">赋值运算符</td>
+<td>把=号右边的结果给左边的变量 num=1+2*3 结果num的值为7</td>
+</tr>
+</tbody></table>
+<ul>
+<li>直接赋值=</li>
+<li>加法赋值运算符 +=</li>
+<li>减法赋值运算符 -=</li>
+<li>乘法赋值运算符 *=</li>
+<li>除法赋值运算符 /=</li>
+<li>取余赋值运算符 %=</li>
+<li>幂赋值运算符**=</li>
+<li>取整除赋值运算符//=</li>
+</ul>
+<p>其中比较常见的运算符有+=(自加)和-=(自减)</p>
+<pre><code>a=3
+b=2
+c=10
+# c+=a
+c/=b
+print(c)
+a+=4
+print(a)
+5.0
+7</code></pre>
+<h3 id="复合赋值运算符"><a href="#复合赋值运算符" class="headerlink" title="复合赋值运算符"></a>复合赋值运算符</h3><table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="center">描述</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">+=</td>
+<td align="center">加法赋值运算符</td>
+<td>c += a 等效于 c = c + a</td>
+</tr>
+<tr>
+<td align="left">-=</td>
+<td align="center">减法赋值运算符</td>
+<td>c -= a 等效于 c = c - a</td>
+</tr>
+<tr>
+<td align="left">*=</td>
+<td align="center">乘法赋值运算符</td>
+<td>c *= a 等效于 c = c * a</td>
+</tr>
+<tr>
+<td align="left">/=</td>
+<td align="center">除法赋值运算符</td>
+<td>c /= a 等效于 c = c / a</td>
+</tr>
+<tr>
+<td align="left">%=</td>
+<td align="center">取模赋值运算符</td>
+<td>c %= a 等效于 c = c % a</td>
+</tr>
+<tr>
+<td align="left">**=</td>
+<td align="center">幂赋值运算符</td>
+<td>c ** = a 等效于 c = c ** a</td>
+</tr>
+<tr>
+<td align="left">//=</td>
+<td align="center">取整除赋值运算符</td>
+<td>c //= a 等效于 c = c // a</td>
+</tr>
+</tbody></table>
+<h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><p>比较运算符通常在条件判断中经常使用到</p>
+<ul>
+<li>相等== </li>
+<li>不相等！= </li>
+<li>大于&gt; </li>
+<li>小于&lt; </li>
+<li>大于等于&gt;= </li>
+<li>小于等于&lt;=</li>
+</ul>
+<p>如下表</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">描述</th>
+<th align="left">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">==</td>
+<td align="left">检查两个操作数的值是否相等，如果是则条件变为真。</td>
+<td align="left">如a=3,b=3则（a == b) 为 true.</td>
+</tr>
+<tr>
+<td align="left">!=</td>
+<td align="left">检查两个操作数的值是否相等，如果值不相等，则条件变为真。</td>
+<td align="left">如a=1,b=3则(a != b) 为 true.</td>
+</tr>
+<tr>
+<td align="left">&lt;&gt;</td>
+<td align="left">检查两个操作数的值是否相等，如果值不相等，则条件变为真。</td>
+<td align="left">如a=1,b=3则(a &lt;&gt; b) 为 true。这个类似于 != 运算符</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">检查左操作数的值是否大于右操作数的值，如果是，则条件成立。</td>
+<td align="left">如a=7,b=3则(a &gt; b) 为 true.</td>
+</tr>
+<tr>
+<td align="left">&lt;</td>
+<td align="left">检查左操作数的值是否小于右操作数的值，如果是，则条件成立。</td>
+<td align="left">如a=7,b=3则(a &lt; b) 为 false.</td>
+</tr>
+<tr>
+<td align="left">&gt;=</td>
+<td align="left">检查左操作数的值是否大于或等于右操作数的值，如果是，则条件成立。</td>
+<td align="left">如a=3,b=3则(a &gt;= b) 为 true.</td>
+</tr>
+<tr>
+<td align="left">&lt;=</td>
+<td align="left">检查左操作数的值是否小于或等于右操作数的值，如果是，则条件成立。</td>
+<td align="left">如a=3,b=3则(a &lt;= b) 为 true.</td>
+</tr>
+</tbody></table>
+<pre><code class="python">a=5
+b=10
+c=1
+print(a&gt;b)
+
+if a&gt;b:
+    print(&#39;a大于b&#39;)
+else:
+    print(&#39;a小于b&#39;)
+
+False
+a小于b</code></pre>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>逻辑运算符为结果真假的<strong>与或非</strong>分别用and or not来表示，我们这里可以通过简单的赋值来体会这个逻辑关系。</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">逻辑表达式</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">and</td>
+<td align="left">x and y</td>
+<td align="left">布尔”与” - 如果 x 为 False，x and y 返回 False，否则它返回 y 的计算值。</td>
+<td align="left">(a and b) 返回 20。</td>
+</tr>
+<tr>
+<td align="left">or</td>
+<td align="left">x or y</td>
+<td align="left">布尔”或” - 如果 x 是 True，它返回 True，否则它返回 y 的计算值。</td>
+<td align="left">(a or b) 返回 10。</td>
+</tr>
+<tr>
+<td align="left">not</td>
+<td align="left">not x</td>
+<td align="left">布尔”非” - 如果 x 为 True，返回 False 。如果 x 为 False，它返回 True。</td>
+<td align="left">not(a and b) 返回 False</td>
+</tr>
+</tbody></table>
+<pre><code class="python">a = 10
+b = 20
+
+if  a and b :    #判断a和b是否都为真
+    print(&quot;a，b均为真&quot;) 
+else:
+    print(&quot;a,b中有一个不为真&quot;)
+**********************************
+
+if  a or b :
+    print(&quot;a,b中至少有一个为真&quot;)
+else:
+    print(&quot;a,b都不为真&quot;)
+
+***********************************   
+#修改变量 a 的值
+a = 0
+if  a and b :
+    print (&quot;a,b都为真&quot;)
+else:
+    print(&quot;a,b中有一个不为真&quot;) 
+
+***********************************
+if  a or b :
+    print(&quot;a,b中至少有一个为真&quot;) 
+else:
+    print(&quot;a,b都不为真&quot;) 
+
+************************************
+if not( a and b ):
+    print(&quot;a,b中至少有一个为假&quot;)
+else:
+    print(&quot;a,b都为真&quot;) 
+a，b均为真
+a,b中至少有一个为真
+a,b中有一个不为真
+a,b中至少有一个为真
+a,b中至少有一个为假</code></pre>
+<h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><p>按位运算符是把数字看作二进制来进行计算的。</p>
+<ul>
+<li>‘&amp;’表示为按位与</li>
+<li>‘|’表示为按位或</li>
+<li>‘^’表示按位异或</li>
+<li>‘~’表示按位取反</li>
+<li>‘&lt;&lt;’表示按位左移</li>
+<li>‘&gt;&gt;’表示按位右移</li>
+</ul>
+<pre><code class="python">a = 60            # 60 = 0011 1100 
+b = 13            # 13 = 0000 1101 
+c = 0
+
+c = a &amp; b;        # 12 = 0000 1100
+print(&quot; c 的值为：&quot;, c)
+
+c = a | b;        # 61 = 0011 1101 
+print(&quot;c 的值为：&quot;, c)
+
+c = a ^ b;        # 49 = 0011 0001
+print (&quot;c 的值为：&quot;, c)
+
+c = ~a;           # -61 = -0111101
+print(&quot;c 的值为：&quot;, c) 
+
+c = a &lt;&lt; 2;       # 240 = 1111 0000
+print(&quot;c 的值为：&quot;, c) 
+
+c = a &gt;&gt; 2;       # 15 = 0000 1111
+print(&quot;c 的值为：&quot;, c) 
+</code></pre>
+<h3 id="条件-三元-运算符"><a href="#条件-三元-运算符" class="headerlink" title="条件(三元)运算符"></a>条件(三元)运算符</h3><p>语法：</p>
+<p>​        语句1 if  条件表达式 else 语句2</p>
+<p>执行流程： 　 </p>
+<ul>
+<li>条件运算符在执行时，会先对条件表达式进行求值判断 　 </li>
+<li>如果判断结果为True，则执行语句1，并返回执行结果 　   </li>
+<li>如果判断结果为False，则执行语句2，并返回执行结果</li>
+</ul>
+<p>例子：</p>
+<pre><code class="python">a=10
+b=5
+
+if a&gt;15:
+    c=a
+else:
+    c=b
+print(c)
+5</code></pre>
+<p>上面的运算可以用三元运算来表示，即：</p>
+<pre><code class="python">c=a if a&gt;15 else b
+print(c)
+5
+</code></pre>
+<h2 id="今日小作业"><a href="#今日小作业" class="headerlink" title="今日小作业"></a>今日小作业</h2><p>1、控制台输入半径，计算圆的面积，圆周率取3.14。</p>
+<ul>
+<li>输入格式：<ul>
+<li>系统提示<em>the radius is</em>，输入一个整数</li>
+</ul>
+</li>
+<li>输出格式（以半径2为例）：<ul>
+<li><em>area=12.56</em></li>
+</ul>
+</li>
+</ul>
+<p>2、判断字符串”alpha”和”Beta”的大小：</p>
+<ul>
+<li><p>A.”alpha” &lt; “Beta”</p>
+<p>-B.”alpha” &gt; “Beta”</p>
+</li>
+</ul>
+<p>3、如下代码的运算结果是：</p>
+<pre><code class="python">1 == 1 and not (&quot;apple&quot; == 1 or 1 == 0)
+</code></pre>
+<ul>
+<li>A. True</li>
+<li>B. False</li>
+<li>C. 1</li>
+<li>D. 0</li>
+</ul>
+<p>4、如下代码的运算结果是：</p>
+<pre><code class="python">not 2 &gt; 1 and 3 &lt; 4 or 4 &gt; 5 and 2 &gt; 1 and 9 &gt; 8 or 7 &lt; 6
+</code></pre>
+<ul>
+<li>A. True</li>
+<li>B. False</li>
+<li>C. 无法输出</li>
+</ul>
+<p>5、控制台输入两个整数，输出两数之和，要求不得使用 “+”、“-”、“*”、“/” 四则运算符号。</p>
+<p>6、输入三个整数，用三目运算符输出其中的最大值</p>
+
+          
+            <div class='article_footer'>
+              
+                
   
     
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/archives/2020/05/">
-            <section class="post prev white-box shadow" >
-              <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          2 / 2
-        </p>
-        
-      </div>
     
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
+
+
 
   
 
-
-	
-</div>
-<aside class='l_side'>
-  
   
     
     
 
-<section class="widget blogger shadow desktop mobile">
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
   <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://gitee.com/sqlsq_admin/cdn/raw/master/0d49517cc7f0ea7b452a71f1e26976c.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
+      <blockquote>
         
-          <h2>BigData</h2>
-        
-        
-          <p>Lose in hesitation,win in action.</p>
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
 
-        
-        
-          <p><span id="jinrishici-sentence">A2Data</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="https://github.com/A2Data"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
           
         
           
-            <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=a2data@163.com"
-              class="social fas fa-envelope-open flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
+            <p>本文永久链接是：<a href=http://www.a2data.cn/posts/80ca38c0.html>http://www.a2data.cn/posts/80ca38c0.html</a></p>
           
         
-          
-            <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=66860619"
-              class="social fab fa-qq flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-          
-            <a href="https://gitee.com/sqlsq_admin/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
-              class="social fab fa-weixin flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-          
-            <a href="https://me.csdn.net/weixin_47093227"
-              class="social fab fa-cuttlefish flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-      </div>
+      </blockquote>
     
   </div>
 </section>
 
   
 
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <div class='fancybox'><img src='https://gitee.com/sqlsq_admin/cdn/raw/master/alipay.jpg'
+        
+          height='64px'
+        ></div>
+      
+    
+      
+        <div class='fancybox'><img src='https://gitee.com/sqlsq_admin/cdn/raw/master/wechat.png'
+        
+          height='64px'
+        ></div>
+      
+    
+  </div>
+</section>
+
+  
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-03T10:09:19+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Sep 3, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/80ca38c0.html&title=Python变量和运算符 - A2Data&summary=Python变量与运算符！！！"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/80ca38c0.html&title=Python变量和运算符 - A2Data&summary=Python变量与运算符！！！"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/80ca38c0.html&title=Python变量和运算符 - A2Data&summary=Python变量与运算符！！！"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACSklEQVR42u3bQVLDQAwEwPz/0/AADpZGa+IovTegYqv3NEjK6+dLzwscHBwcHHwR/BWePw/8p89N6wUHBwcHB98ILweAC0D6+2od03rBwcHBwcE3w6sBogq7KnQM6dYLDg4ODg4OXoZXLyINOuDg4ODg4OBzeHohV0EFHBwcHBwc/L6BQvr59AIfM0kBBwcHBwd/EDxemHvTz2/fbAQHBwcHB38AfHq6g4NqEKk+p10vODg4ODj4IngaEK4KPR2MpvWBg4ODg4NvhKcD/jSQpMEoHTBcNiLAwcHBwcE/GN5tCJwKJt1GQ9rwKCc3cHBwcHDwD4R3//G/O8icbliAg4ODg4NvhleDRtpQqAaX6XviSQo4ODg4OPgHw6fQbuMhDU5poLltkgIODg4ODv5geLpAlw4CTgWmcYABBwcHBwdfAJ8GkLThXw4i6XvBwcHBwcEXwasLeN0L6C4SpAEpDjDg4ODg4OAL4acG8acGE92BRXmgAA4ODg4Ovhh+ajA/DUbdxsQ4wICDg4ODg38wPB0AnGpMdANSe3EQHBwcHBz8C+CnzjQYHW9MgIODg4ODL4JPTxowus+ZDiLAwcHBwcE3wk8Fk2qAuLqY9qC/Wx84ODg4OPhC+HRQkC4ITAcR7feDg4ODg4MvhqcB4hTwrgEHODg4ODg4+PyL9t2LSxcIwcHBwcHBwfPC04HDqUWAtzUiwMHBwcHB3wg/vYiXLhZ03/fvkxRwcHBwcPAHweMGffj3buHpc8HBwcHBwTfDv+2Ag4ODg4MvOL8EDwM9WGbTxAAAAABJRU5ErkJggg==">
+          </div>
+        </div>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/posts/901b8cd5.html'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Python判断与循环语句</p>
+                <p class='content'>Python判断与循环语句！！！
+
+
+
+例题引导：
+Q：输入3个整数，按从小到大依次输出，用“-&gt;”符号相连： 例如：输入4，2，6，输出2 -&gt; 4 -&gt; 6
+A：
+a = ...</p>
+              </a>
+            
+            
+              <a class='next' href='/posts/fbd6efa0.html'>
+                <p class='title'>Python基本操作与格式规范<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>Python基本操作与格式规范！！！
+
+
+在开始学习之前，我们做一道题，来作为大家今天的开场白！！
+Q：现有信息学号为u20201111的学生，数学成绩为85，化学成绩为82.46，请按下方格式...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    
+
+  <article class="post white-box reveal comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      <section id="comments">
+        <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+      </section>
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+</div>
+<aside class='l_side'>
+  
   
     
     
@@ -2281,269 +2370,29 @@
   
     
     
-  
 
-  <section class="widget category shadow desktop">
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/DataBase/" href="/categories/DataBase/"
-            id="categoriesDataBase"
-            ><div class='name'>DataBase</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/DataBase/Mysql/" href="/categories/DataBase/Mysql/"
-            id="categoriesDataBaseMysql"
-            ><div class='name'>Mysql</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Git/" href="/categories/Git/"
-            id="categoriesGit"
-            ><div class='name'>Git</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Hexo/" href="/categories/Hexo/"
-            id="categoriesHexo"
-            ><div class='name'>Hexo</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Hexo/Blog/" href="/categories/Hexo/Blog/"
-            id="categoriesHexoBlog"
-            ><div class='name'>Blog</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Hexo/Img/" href="/categories/Hexo/Img/"
-            id="categoriesHexoImg"
-            ><div class='name'>Img</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/IDEA/" href="/categories/IDEA/"
-            id="categoriesIDEA"
-            ><div class='name'>IDEA</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Java/" href="/categories/Java/"
-            id="categoriesJava"
-            ><div class='name'>Java</div><div class='badge'>(7)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Linux/" href="/categories/Linux/"
-            id="categoriesLinux"
-            ><div class='name'>Linux</div><div class='badge'>(17)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/One/" href="/categories/One/"
-            id="categoriesOne"
-            ><div class='name'>One</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Python/" href="/categories/Python/"
-            id="categoriesPython"
-            ><div class='name'>Python</div><div class='badge'>(19)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Tools/" href="/categories/Tools/"
-            id="categoriesTools"
-            ><div class='name'>Tools</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"
-            id="categoriesE5A4A7E695B0E68DAE"
-            ><div class='name'>大数据</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" href="/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"
-            id="categoriesE695B0E68DAEE58FAFE8A786E58C96"
-            ><div class='name'>数据可视化</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"
-            id="categoriesE695B0E68DAEE5BA93"
-            ><div class='name'>数据库</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/"
-            id="categoriesE695B0E68DAEE5BA93E5B7A5E585B7"
-            ><div class='name'>数据库工具</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%81%8C%E5%9C%BA/" href="/categories/%E8%81%8C%E5%9C%BA/"
-            id="categoriesE8818CE59CBA"
-            ><div class='name'>职场</div><div class='badge'>(4)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%8F%98%E9%87%8F"><span class="toc-text">关于变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%9B%E5%BB%BA%E8%BF%87%E7%A8%8B"><span class="toc-text">变量的创建过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E4%BF%AE%E6%94%B9"><span class="toc-text">变量的修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E6%8C%87%E5%90%91%E5%85%B3%E7%B3%BB"><span class="toc-text">变量的指向关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%B0%8F%E6%B5%8B%E8%AF%95%EF%BC%9A"><span class="toc-text">变量小测试：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">算术运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">复合赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">比较运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">逻辑运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">位运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6-%E4%B8%89%E5%85%83-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">条件(三元)运算符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8A%E6%97%A5%E5%B0%8F%E4%BD%9C%E4%B8%9A"><span class="toc-text">今日小作业</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/API/" style="font-size: 15.25px; color: #919191">API</a> <a href="/tags/Anaconda/" style="font-size: 15.25px; color: #919191">Anaconda</a> <a href="/tags/ApaHive/" style="font-size: 14px; color: #999">ApaHive</a> <a href="/tags/DBeaver/" style="font-size: 14px; color: #999">DBeaver</a> <a href="/tags/Git/" style="font-size: 15.25px; color: #919191">Git</a> <a href="/tags/GitBook/" style="font-size: 14px; color: #999">GitBook</a> <a href="/tags/Gitee/" style="font-size: 14px; color: #999">Gitee</a> <a href="/tags/Hadoop/" style="font-size: 14px; color: #999">Hadoop</a> <a href="/tags/Hexo/" style="font-size: 16.5px; color: #888">Hexo</a> <a href="/tags/IDEA/" style="font-size: 14px; color: #999">IDEA</a> <a href="/tags/JDK/" style="font-size: 15.25px; color: #919191">JDK</a> <a href="/tags/JDK%E7%8E%AF%E5%A2%83/" style="font-size: 14px; color: #999">JDK环境</a> <a href="/tags/Java/" style="font-size: 19px; color: #777">Java</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 14px; color: #999">Java基础</a> <a href="/tags/Linux/" style="font-size: 21.5px; color: #666">Linux</a> <a href="/tags/MapReduce/" style="font-size: 14px; color: #999">MapReduce</a> <a href="/tags/MarkDown/" style="font-size: 14px; color: #999">MarkDown</a> <a href="/tags/MobaXterm/" style="font-size: 14px; color: #999">MobaXterm</a> <a href="/tags/Mysql/" style="font-size: 17.75px; color: #808080">Mysql</a> <a href="/tags/Python/" style="font-size: 24px; color: #555">Python</a> <a href="/tags/Python3/" style="font-size: 14px; color: #999">Python3</a> <a href="/tags/Shell/" style="font-size: 20.25px; color: #6f6f6f">Shell</a> <a href="/tags/Tools/" style="font-size: 17.75px; color: #808080">Tools</a> <a href="/tags/Typora/" style="font-size: 14px; color: #999">Typora</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 14px; color: #999">图床</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E5%85%A5%E9%97%A8/" style="font-size: 14px; color: #999">基础语法入门</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/" style="font-size: 14px; color: #999">学习资源</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 15.25px; color: #919191">数据可视化</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 14px; color: #999">正则</a> <a href="/tags/%E6%AF%92%E9%B8%A1%E6%B1%A4/" style="font-size: 15.25px; color: #919191">毒鸡汤</a> <a href="/tags/%E7%BC%96%E7%A0%81%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">编码工具</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" style="font-size: 22.75px; color: #5e5e5e">编程语言</a> <a href="/tags/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/" style="font-size: 20.25px; color: #6f6f6f">脚本语言</a> <a href="/tags/%E8%B5%84%E6%96%99%E5%88%86%E4%BA%AB/" style="font-size: 14px; color: #999">资料分享</a> <a href="/tags/%E8%BF%90%E8%90%A5%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">运营工具</a> <a href="/tags/%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB/" style="font-size: 14px; color: #999">集合体系</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 14px; color: #999">面经</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop mobile">
-  
-  <header>
-    
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>76 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2019/08/18'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>103.5k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          <div><span id="busuanzi_value_site_uv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 人</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          <div><span id="busuanzi_value_site_pv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 次</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Thu Sep 03 2020 11:00:52 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2020-09-03 日</div>
-          
-        </div>
-        
-        <script> 
-          function timeago(dateTimeStamp) { 
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示 
-              var hour = minute * 60; 
-              var day = hour * 24; 
-              var week = day * 7; 
-              var month = day * 30; 
-              var now = new Date().getTime(); //获取当前时间毫秒 
-              var diffValue = now - dateTimeStamp; //时间差 
-              if (diffValue < 0) { 
-                  return; 
-              } 
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月 
-              var hourC = diffValue / hour; 
-              var dayC = diffValue / day; 
-              var weekC = diffValue / week; 
-              var monthC = diffValue / month; 
-              if (monthC >= 1 && monthC <= 3) { 
-                  result = " " + parseInt(monthC) + " 月前" 
-              } else if (weekC >= 1 && weekC <= 3) { 
-                  result = " " + parseInt(weekC) + " 周前" 
-              } else if (dayC >= 1 && dayC <= 6) { 
-                  result = " " + parseInt(dayC) + " 天前" 
-              } else if (hourC >= 1 && hourC <= 23) { 
-                  result = " " + parseInt(hourC) + " 小时前" 
-              } else if (minC >= 1 && minC <= 59) { 
-                  result = " " + parseInt(minC) + " 分钟前" 
-              } else if (diffValue >= 0 && diffValue <= minute) { 
-                  result = "刚刚" 
-              } else { 
-                  var datetime = new Date(); 
-                  datetime.setTime(dateTimeStamp); 
-                  var Nyear = datetime.getFullYear(); 
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1; 
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate(); 
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours(); 
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes(); 
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds(); 
-                  result = Nyear + "-" + Nmonth + "-" + Ndate 
-              } 
-              return result; 
-          } 
-          var lastUpDate = document.getElementById('last-update').innerHTML; 
-          try { 
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate)); 
-          } catch (error) { 
-            document.getElementById('last-update-show').innerHTML = '2020-09-03 日'; 
-          } 
-        </script> 
-        
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 </aside>
 
-
-
-
-
-	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-	
-
-	
 
 
     </div>

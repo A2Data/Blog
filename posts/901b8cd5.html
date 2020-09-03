@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -18,9 +16,11 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2020/5 - A2Data</title>
+  <title>Python判断与循环语句 - A2Data</title>
   
 
+  
+    <meta name="description" content="Python判断与循环语句！！！">
   
 
   <!-- feed -->
@@ -1456,7 +1456,7 @@
   
   
   <div class="cover-wrapper">
-    <div class='cover ' style="display: none;">
+    <div class='cover post' style="display: none;">
       <div class='cover-bg lazyload placeholder' data-bg=""></div>
       <div class='cover-body'>
   <div class='a'>
@@ -1527,7 +1527,7 @@
   
 
 
-  <div class="l_body">
+  <div class="l_body nocover">
     <div class='body-wrapper' id="pjax-container">
       
         <!--此文件用来存放一些不方便取值的变量-->
@@ -1536,8 +1536,8 @@
 
 
 <div id="pjax-data" style="display: none">
-  <div id="pjax-ispage">false</div>
-  <div id="pjax-pageTitle"></div>
+  <div id="pjax-ispage">true</div>
+  <div id="pjax-pageTitle">Python判断与循环语句</div>
   <div id="pjax-enable-cover">true</div>
   <div id="pjax-comment-path">none</div>
   <div id="pjax-comment-placeholder">none</div>
@@ -1546,16 +1546,16 @@
 
 <script>
   // 处理封面 此时 jquery 还没加载
-  if ("blog" == "none") { // 移除封面
+  if ("none" == "none") { // 移除封面
     document.getElementsByClassName('cover')[0].style.display = "none"; 
     document.getElementsByClassName('l_body')[0].classList.add("nocover");
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
   } else {
-    if ("blog" == "blog") { // 半屏
+    if ("none" == "blog") { // 半屏
       document.getElementsByClassName('cover')[0].classList.remove("full");
       document.getElementsByClassName('cover')[0].classList.add("half");
       document.getElementsByClassName('scroll-down')[0].style.display = "none";
-    } else if ("blog" == "docs") { // 全屏
+    } else if ("none" == "docs") { // 全屏
       document.getElementsByClassName('cover')[0].classList.remove("half");
       document.getElementsByClassName('cover')[0].classList.add("full");
       document.getElementsByClassName('scroll-down')[0].style.display = "";
@@ -1571,16 +1571,11 @@
       
 
 <div class='l_main'>
-	
-		
-  <section class="post-list ">
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
   
+
+  
+    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
@@ -1590,446 +1585,11 @@
       <div class="meta" id="header-meta">
         
           
-  <h2 class="title">
-    <a href="/posts/36204.html">
-      最快图床搭建
+  <h1 class="title">
+    <a href="/posts/901b8cd5.html">
+      Python判断与循环语句
     </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
-    <p>JackFeng</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/Tools/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>Tools</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 6, 2020</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>497 words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>1 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/posts/36204.html" class="leancloud_visitors" data-flag-title="最快图床搭建">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/posts/36204.html#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/36204.html">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最快的图床搭建，有坑请联系小编。</p>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/posts/36204.html">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-        <a title='Redis' href='/posts/bae4ff13.html'>
-          
-            <img class='thumbnail' src='https://cdn.jsdelivr.net/gh/A2Data/cdn/img/2.png'>
-          
-        </a>
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/posts/bae4ff13.html">
-      Redis
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
-    <p>JackFeng</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>数据库工具</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 6, 2020</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.3k words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>5 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/posts/bae4ff13.html" class="leancloud_visitors" data-flag-title="Redis">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/posts/bae4ff13.html#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/bae4ff13.html">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>详细说明Redis的安装。</p>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/posts/bae4ff13.html">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-        <a title='DBeaver安装' href='/posts/773d5f8c.html'>
-          
-            <img class='thumbnail' src='https://cdn.jsdelivr.net/gh/A2Data/cdn/img/2.png'>
-          
-        </a>
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/posts/773d5f8c.html">
-      DBeaver安装
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
-    <p>JackFeng</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>DataBase/Mysql/数据库工具/数据库</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 6, 2020</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>76 words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>1 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/posts/773d5f8c.html" class="leancloud_visitors" data-flag-title="DBeaver安装">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/posts/773d5f8c.html#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/773d5f8c.html">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>DBeaver安装步骤</p>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/posts/773d5f8c.html">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/posts/9e565f9f.html">
-      大数据集群
-    </a>
-  </h2>
+  </h1>
 
 
         
@@ -2057,58 +1617,9 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 6, 2020</p>
+    <p>发布于：Sep 3, 2020</p>
   </a>
 </div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>592 words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>2 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/posts/9e565f9f.html" class="leancloud_visitors" data-flag-title="大数据集群">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/posts/9e565f9f.html#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/9e565f9f.html">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
 
             
           
@@ -2126,133 +1637,592 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>快速搭建Hadoop集群</p>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/posts/9e565f9f.html">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          
+          <p>Python判断与循环语句！！！</p>
+<a id="more"></a>
 
-          </div>
-        
-      
-    
-  </section>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_gif/qiaSl3RT1Rc1VU4DBO1jpqB6BPcohxtJAYQPAPd4arWJGKuCbNPg7g0IiaMbNw8PgccicjULQVNaL83USKNekpRiag/640?wx_fmt=gif" alt="img"></p>
+<p><strong>例题引导：</strong></p>
+<p><strong>Q：</strong>输入3个整数，按从小到大依次输出，用“-&gt;”符号相连： 例如：输入<em>4，2，6</em>，输出<em>2 -&gt; 4 -&gt; 6</em></p>
+<p><strong>A：</strong></p>
+<pre><code class="python">a = int(input(&#39;请输入第一个整数：&#39;))
+b = int(input(&#39;请输入第二个整数：&#39;))
+c = int(input(&#39;请输入第三个整数：&#39;))
+if (a &gt; b):
+x = b
+b = a
+a = x
+
+if (a &gt; c):
+x = c
+c = a
+a = x
+
+if (b &gt; c):
+x = c
+c = b
+b = x
+
+print(a,&#39;-&gt;&#39;,b,&#39;-&gt;&#39;,c)</code></pre>
+<p><strong>学习引导：</strong></p>
+<ul>
+<li>if判断语句</li>
+<li>while循环</li>
+<li>continue、break的用法</li>
+<li>for语句</li>
+</ul>
+<h2 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a>判断语句</h2><h3 id="if判断语句"><a href="#if判断语句" class="headerlink" title="if判断语句"></a>if判断语句</h3><p>该语句的语法格式如下：</p>
+<pre><code class="python">#单条件判断：
+if condition_1:
+       result_1
+else:
+       result_2
+
+#多条件判断：
+if condition_1:
+       result_1
+elif:
+       result_2
+elif:
+       result_3
+else:
+       result_4
+
+&#39;&#39;&#39;
+现在我们做一个成绩评级的小程序
+要求：按照90-100/80-89/60-79/40-59/小于39
+划分五个等级
+&#39;&#39;&#39;
+
+score=eval(input(&quot;请输入成绩:\n&quot;))
+#eval是Python的一个内置函数，这个函数的作用是，返回传入字符串的表达式的结果。
+
+if (score&gt;90)&amp;(score&lt;=100):
+       print(&#39;该同学成绩为优&#39;)
+elif (score&gt;80)&amp;(score&lt;=89):   #多条件判断
+       print(&#39;该同学成绩为良&#39;)
+elif (score&gt;60)&amp;(score&lt;=79):
+       print(&#39;该同学成绩为良&#39;)
+elif (score&gt;40)&amp;(score&lt;=59):
+       print(&#39;该同学成绩为不及格&#39;)
+elif (score&lt;39)&amp;(score&gt;0):
+       print(&#39;该同学请自行退学&#39;)
+
+&#39;&#39;&#39;
+请输入成绩:
+34
+该同学请自行退学
+&#39;&#39;&#39;</code></pre>
+<h4 id="小测试："><a href="#小测试：" class="headerlink" title="小测试："></a>小测试：</h4><ol>
+<li><p>在日常编码中if的使用率会很高,但是过度臃肿的if条件会增加代码的理解难度,导致最后只能自己看懂一些</p>
+<pre><code class="python">for a in Data:
+       if a.b:
+           if a.c:
+                   if a.d:
+
+# do sth...
+
+for a in balabala:
+      if not a.b:
+         continue
+
+    if not a.c:
+        continue
+
+     if not a.d:
+           continue
+
+# do sth..</code></pre>
+</li>
+</ol>
+<ol start="2">
+<li><p>如上两端代码,进行测试的时候其中的值可以随意,虽然判断逻辑不尽相同,但是目的是一样的,这时候执行效率会有差别吗?那么if这种不可能避免的代码怎么才能进行优化,提高执行效率呢?</p>
+</li>
+<li><p>体质指数(BMI)=体重(kg)÷身高^2(m)，请根据公式构造一段代码，输入体重和身高，输出BMI指数结果：低于18.5：过轻18.5-25：正常25-28：过重28-32：肥胖高于32：严重肥胖</p>
+</li>
+<li><p>将一个正整数分解质因数。例如：输入90,打印出90=2<em>3</em>3*5</p>
+</li>
+</ol>
+<h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2><h3 id="while-循环"><a href="#while-循环" class="headerlink" title="while 循环"></a>while 循环</h3><p><strong>while语句格式：</strong></p>
+<pre><code class="python">while condition(判断条件):
+       statements(执行语句)</code></pre>
+<p><strong>实例：计算1-100的和</strong></p>
+<pre><code class="python">#简单一点的写法
+n=0
+sum=0
+
+while n&lt;=100:
+       sum +=n
+       n+=1
+print(sum)
+
+
+#规范一点的写法
+# n = 100
+# sum = 0
+# counter = 1
+
+# while counter &lt;= n:
+#     sum = sum + counter
+#     counter += 1
+
+# # print(&quot;1 到 %d 之和为: %d&quot; % (n,sum))
+#5050</code></pre>
+<p>下面做一个小游戏，猜一下随机数</p>
+<blockquote>
+<p>这里用到了random这个随机数模块，这个模块用于生成随机数。</p>
+<p>其中random.randint(a,b)用于生成指定范围内的整数，参数a是下限，参数b是上限，生成的随机数介于二者之间。</p>
+</blockquote>
+<pre><code class="python">import random
+n=random.randint(0,10)
+
+user_guess=int(input(&quot;Input your guess:&quot;))
+
+if user_guess&gt;n:
+       print(&#39;try smaller...&#39;)
+elif user_guess&lt;n:
+       print(&#39;try bigger...&#39;)
+else:
+       print(&#39;Bingo!You got it!&#39;)
+print(n)
+&#39;&#39;&#39;
+Input your guess:9
+try smaller...
+1
+&#39;&#39;&#39;</code></pre>
+<p>上面的这串程序只能猜一次，那如果我们想要猜出结果呢?这个时候就要用到循环。下面我们对上面的代码进行优化</p>
+<pre><code class="python">import random
+
+n = random.randint(0, 10)
+user_guess = int()
+
+while user_guess != n:
+     user_guess = int(input(&quot;Input your guess:&quot;))
+      if user_guess &gt; n:
+         print(&#39;try smaller...&#39;)
+      elif user_guess &lt; n:
+          print(&#39;try bigger...&#39;)
+    else:
+        print(&#39;Bingo!You got it!&#39;)
+print(n)
+
+&#39;&#39;&#39;
+Input your guess:3
+try smaller...
+Input your guess:1
+Bingo!You got it!
+1
+&#39;&#39;&#39;</code></pre>
+<h4 id="小测试：-1"><a href="#小测试：-1" class="headerlink" title="小测试："></a>小测试：</h4><ol>
+<li><p>丑数是只包含质因数 2, 3, 5 的正整数。控制台输入一个正整数，判断其是否为丑数。</p>
+</li>
+<li><p>有n个人围成一圈，顺序排号。从第一个人开始报数（从1到3报数），凡报到3的人退出圈子，问最后留下的是原来的第几号。</p>
+</li>
+<li><p>使用while循环输出1-2+3-4+5…..+99的和。</p>
+</li>
+</ol>
+<h3 id="continue、break的用法"><a href="#continue、break的用法" class="headerlink" title="continue、break的用法"></a>continue、break的用法</h3><ul>
+<li>continue是终止本次循环</li>
+<li>break是终止循环</li>
+</ul>
+<pre><code class="python">#continue举例
+
+#输出十以内小于等于4和大于等于7的数
+
+count=0
+while count&lt;10:
+       count +=1
+       if count&gt;4 and count&lt;7:
+           continue
+
+    print(count)
+
+&#39;&#39;&#39;
+1
+2
+3
+4
+7
+8
+9
+10
+&#39;&#39;&#39;</code></pre>
+<p><strong>continue  +  else  的用法</strong></p>
+<pre><code class="python">count=0
+while count&lt;10:
+       count +=1
+      if count&gt;4 and count&lt;7:     
+       #当数字满足上述条件时，执行continue，终止本次循环，不执行打印语句。
+         continue
+         print(count)
+else:
+      print(&#39;循环正常结束&#39;)
+
+&#39;&#39;&#39;
+1
+2
+3
+4
+7
+8
+9
+10
+循环正常结束
+&#39;&#39;&#39;</code></pre>
+<p><strong>break的用法</strong></p>
+<pre><code class="python">count=0
+while count&lt;10:
+
+    count +=1
+    if count&gt;4:   #当数字大于4的时候执行break，终止循环
+        break
+    print(count)
+else:
+    print(&#39;循环正常结束&#39;)
+&#39;&#39;&#39;
+1
+2
+3
+4
+&#39;&#39;&#39;</code></pre>
+<h4 id="小测试"><a href="#小测试" class="headerlink" title="小测试"></a>小测试</h4><ol>
+<li><p>定义用户名“python”和密码“666666”，控制台提示用户输入用户名和密码，判断用户名和密码是否正确。</p>
+<p>输入正确则跳出循环，输出“你好！”，不正确则提示“验证失败，请重新输入！”并继续提示用户输出用户名和密码，直到用户输入正确的信息，程序结束。</p>
+</li>
+</ol>
+<h3 id="for语句"><a href="#for语句" class="headerlink" title="for语句"></a>for语句</h3><p>for循环可以遍历任何序列的所有元素</p>
+<p><strong>for语句的一般格式如下：</strong></p>
+<pre><code class="python">for variable(变量) in [sequence(序列)]:
+    statements(执行语句)
+else:
+    statements(执行语句)</code></pre>
+<p><strong>循环实例：</strong></p>
+<pre><code class="python">a=[&#39;welcome&#39;,&#39;to&#39;,&#39;data&#39;,&#39;science&#39;]
+for i in a:     #遍历数组内的每一个元素并且打印
+    print (i)
+
+for i in &#39;DataScience&#39;:  #遍历该字符串的每一个元素且打印
+    print (i)
+
+print(&#39;遍历结束&#39;)
+
+&#39;&#39;&#39;
+welcome
+to
+data
+science
+D
+a
+t
+a
+S
+c
+i
+e
+n
+c
+e
+遍历结束
+&#39;&#39;&#39;</code></pre>
+<h4 id="for…else…语句"><a href="#for…else…语句" class="headerlink" title="for…else…语句"></a>for…else…语句</h4><pre><code class="python">#判断一个数是不是质数
+n=int(input(&#39;请随机输入一个实数：&#39;))  
+for i in range(2,n):
+    if n%i == 0:    #判断是否能整除，如能，打印输出，终止循环；若不能，执行else语句        
+        print(n,&#39;能被&#123;&#125;整除，不是质数&#39;.format(i))  #format的用法，之前的课程我们有讲到
+        break
+#         continue
+else:                  
+       print (n,&#39;是一个质数&#39;)
+&#39;&#39;&#39;
+请随机输入一个实数：4
+4 能被2整除，不是质数
+&#39;&#39;&#39;</code></pre>
+<h4 id="循环嵌套"><a href="#循环嵌套" class="headerlink" title="循环嵌套"></a>循环嵌套</h4><p>for 循环嵌套和while 循环嵌套的案例演示</p>
+<p><strong>for 循环嵌套格式</strong></p>
+<pre><code class="python">for variable in seuqence:
+    for veriable_ in sequence_:
+        statements_
+    statements
+
+#while 循环嵌套格式
+while condition:
+    while condition_:
+        statements_
+    statements
+#for 和 while 也可相互嵌套</code></pre>
+<p><strong>判断1-20之间哪些是质数</strong></p>
+<pre><code class="python">i = 2
+while(i &lt; 20):
+
+    j = 2
+    while(j &lt;= (i/j)):
+
+        if not(i%j): 
+            break
+        j = j + 1
+    if (j &gt; i/j): 
+        print (i, &quot; 是质数&quot;)
+    i = i + 1
+print (&quot;结束!&quot;)
+
+&#39;&#39;&#39;
+2 是质数
+3 是质数
+5 是质数
+7 是质数
+11 是质数
+13 是质数
+17 是质数
+19 是质数
+结束!
+&#39;&#39;&#39;</code></pre>
+<h4 id="小测试-1"><a href="#小测试-1" class="headerlink" title="小测试"></a>小测试</h4><ol>
+<li><p>在一行中输入8个人的身高（按空格分隔），输出8人的身高平均值和身高超过平均值的数：</p>
+<p>例如：输入<em>166 178 192 188 173 169 170 172</em>，输出：</p>
+<p><em>avg = 176.0</em></p>
+<p><em>178 192 188</em></p>
+</li>
+<li><p>将一笔零钱换成5分、2分和1分的硬币，要求每种硬币至少有一枚，有几种不同的换法？</p>
+<p>输入待换的零钱数额<em>x</em>∈(8,100)。</p>
+<p>要求按5分、2分和1分硬币的数量依次从大到小的顺序，输出各种换法。每行输出一种换法，格式为：“fen5:5分硬币数量, fen2:2分硬币数量, fen1:1分硬币数量, total:硬币总数量”。最后一行输出“count = 换法个数”。</p>
+<p>例如，输入<em>13</em>，输出如下：</p>
+<pre><code class="python">fen5:2, fen2:1, fen1:1, total:4
+fen5:1, fen2:3, fen1:2, total:6
+fen5:1, fen2:2, fen1:4, total:7
+fen5:1, fen2:1, fen1:6, total:8
+count = 4</code></pre>
+</li>
+<li><p>输入行数，输出高度为该行数的等边三角形，每行个数递增1。例如输入3，输出：</p>
+<pre><code class="python"> * 
+* * 
+* * *</code></pre>
+</li>
+<li><p>计算10到20000之间,所有质数,并思考执行时间(在进行大数据量运算时,代码执行效率会影响很多)</p>
+</li>
+<li><p>一个数如果恰好等于它的因子之和，这个数就称为”完数”。例如6=1＋2＋3。编程找出1000以内的所有完数。</p>
+</li>
+</ol>
+
+          
+            <div class='article_footer'>
+              
+                
   
     
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/archives/2020/05/">
-            <section class="post prev white-box shadow" >
-              <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          2 / 2
-        </p>
-        
-      </div>
     
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
+
+
 
   
 
-
-	
-</div>
-<aside class='l_side'>
-  
   
     
     
 
-<section class="widget blogger shadow desktop mobile">
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
   <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://gitee.com/sqlsq_admin/cdn/raw/master/0d49517cc7f0ea7b452a71f1e26976c.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
+      <blockquote>
         
-          <h2>BigData</h2>
-        
-        
-          <p>Lose in hesitation,win in action.</p>
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
 
-        
-        
-          <p><span id="jinrishici-sentence">A2Data</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="https://github.com/A2Data"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
           
         
           
-            <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=a2data@163.com"
-              class="social fas fa-envelope-open flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
+            <p>本文永久链接是：<a href=http://www.a2data.cn/posts/901b8cd5.html>http://www.a2data.cn/posts/901b8cd5.html</a></p>
           
         
-          
-            <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=66860619"
-              class="social fab fa-qq flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-          
-            <a href="https://gitee.com/sqlsq_admin/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
-              class="social fab fa-weixin flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-          
-            <a href="https://me.csdn.net/weixin_47093227"
-              class="social fab fa-cuttlefish flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-      </div>
+      </blockquote>
     
   </div>
 </section>
 
   
 
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <div class='fancybox'><img src='https://gitee.com/sqlsq_admin/cdn/raw/master/alipay.jpg'
+        
+          height='64px'
+        ></div>
+      
+    
+      
+        <div class='fancybox'><img src='https://gitee.com/sqlsq_admin/cdn/raw/master/wechat.png'
+        
+          height='64px'
+        ></div>
+      
+    
+  </div>
+</section>
+
+  
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-03T10:20:20+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Sep 3, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/901b8cd5.html&title=Python判断与循环语句 - A2Data&summary=Python判断与循环语句！！！"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/901b8cd5.html&title=Python判断与循环语句 - A2Data&summary=Python判断与循环语句！！！"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/901b8cd5.html&title=Python判断与循环语句 - A2Data&summary=Python判断与循环语句！！！"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACS0lEQVR42u3bO5LCQAwFQN//0mzOBqMfYERPBmVjtaNXkrgeP3oucHBwcHDwRfCreP794NP3p8/Z50/VCw4ODg4OvhEeDgCH67PgbB3desHBwcHBwTfDowGiev04JFsvODg4ODg4eDmgRK/PNjjAwcHBwcHB+/BuoDm9KHBwcHBwcPC5gUJ1YSC7CHC7SQo4ODg4OPiN4OWFuQ99/vhmIzg4ODg4+A3g3XMKMNX7qr97fC44ODg4OPgieLdREIV1g9FUfeDg4ODg4Jvg2YZ8dHA/PQioDhjKjQhwcHBwcPAvgGcLf9X30wsJ7eQGDg4ODg7+BfBsIyEbHKKNjmqjIRp0wMHBwcHBN8OzBWUbD91FwakFBXBwcHBw8M3wqe/bQWNooeA4SQEHBwcHB/9ieLchkB7MDzUasgsF4ODg4ODgG+HRQh/JU70vHESSLxwcHBwcHHwj/GWN+2awmXph4ODg4ODgvwAvB4JgY2JqcNBeOAAHBwcHB18IzxbaHRh0GwvVAAQODg4ODr4ZPrWYdyooCs0uEpYHCuDg4ODg4Ivhr1rAu4ZOuF5wcHBwcPBF8O7JFlYdWEw9HxwcHBwcfBO8GxjetShQDVjHRgQ4ODg4OPgCeLeRUL2/e322QQIODg4ODr4ZXg0Q3QCTHRCUBw7g4ODg4ODg5T+8h4NGMLikXyQ4ODg4ODh4OGB0BwbVRYC3NSLAwcHBwcFvBK82+LPBZOp30veBg4ODg4MvhJcb9Eng1HOywQUcHBwcHHwj/NcOODg4ODj4gvMH4EgCTCkUnS4AAAAASUVORK5CYII=">
+          </div>
+        </div>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+            
+              <a class='next' href='/posts/80ca38c0.html'>
+                <p class='title'>Python变量和运算符<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>Python变量与运算符！！！
+
+
+我们还是用一个问题来引出今天的学习内容,同样是计算成绩。
+Q：给定学生三门成绩
+(1)计算该学生的平均成绩并打印平均成绩保留两位小数点
+(2)计算该学生语文成...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    
+
+  <article class="post white-box reveal comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      <section id="comments">
+        <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+      </section>
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+</div>
+<aside class='l_side'>
+  
   
     
     
@@ -2281,269 +2251,29 @@
   
     
     
-  
 
-  <section class="widget category shadow desktop">
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/DataBase/" href="/categories/DataBase/"
-            id="categoriesDataBase"
-            ><div class='name'>DataBase</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/DataBase/Mysql/" href="/categories/DataBase/Mysql/"
-            id="categoriesDataBaseMysql"
-            ><div class='name'>Mysql</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Git/" href="/categories/Git/"
-            id="categoriesGit"
-            ><div class='name'>Git</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Hexo/" href="/categories/Hexo/"
-            id="categoriesHexo"
-            ><div class='name'>Hexo</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Hexo/Blog/" href="/categories/Hexo/Blog/"
-            id="categoriesHexoBlog"
-            ><div class='name'>Blog</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Hexo/Img/" href="/categories/Hexo/Img/"
-            id="categoriesHexoImg"
-            ><div class='name'>Img</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/IDEA/" href="/categories/IDEA/"
-            id="categoriesIDEA"
-            ><div class='name'>IDEA</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Java/" href="/categories/Java/"
-            id="categoriesJava"
-            ><div class='name'>Java</div><div class='badge'>(7)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Linux/" href="/categories/Linux/"
-            id="categoriesLinux"
-            ><div class='name'>Linux</div><div class='badge'>(17)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/One/" href="/categories/One/"
-            id="categoriesOne"
-            ><div class='name'>One</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Python/" href="/categories/Python/"
-            id="categoriesPython"
-            ><div class='name'>Python</div><div class='badge'>(19)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Tools/" href="/categories/Tools/"
-            id="categoriesTools"
-            ><div class='name'>Tools</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"
-            id="categoriesE5A4A7E695B0E68DAE"
-            ><div class='name'>大数据</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" href="/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"
-            id="categoriesE695B0E68DAEE58FAFE8A786E58C96"
-            ><div class='name'>数据可视化</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"
-            id="categoriesE695B0E68DAEE5BA93"
-            ><div class='name'>数据库</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/"
-            id="categoriesE695B0E68DAEE5BA93E5B7A5E585B7"
-            ><div class='name'>数据库工具</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%81%8C%E5%9C%BA/" href="/categories/%E8%81%8C%E5%9C%BA/"
-            id="categoriesE8818CE59CBA"
-            ><div class='name'>职场</div><div class='badge'>(4)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5"><span class="toc-text">判断语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5"><span class="toc-text">if判断语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E6%B5%8B%E8%AF%95%EF%BC%9A"><span class="toc-text">小测试：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-text">循环语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#while-%E5%BE%AA%E7%8E%AF"><span class="toc-text">while 循环</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E6%B5%8B%E8%AF%95%EF%BC%9A-1"><span class="toc-text">小测试：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#continue%E3%80%81break%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-text">continue、break的用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E6%B5%8B%E8%AF%95"><span class="toc-text">小测试</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for%E8%AF%AD%E5%8F%A5"><span class="toc-text">for语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for%E2%80%A6else%E2%80%A6%E8%AF%AD%E5%8F%A5"><span class="toc-text">for…else…语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97"><span class="toc-text">循环嵌套</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E6%B5%8B%E8%AF%95-1"><span class="toc-text">小测试</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/API/" style="font-size: 15.25px; color: #919191">API</a> <a href="/tags/Anaconda/" style="font-size: 15.25px; color: #919191">Anaconda</a> <a href="/tags/ApaHive/" style="font-size: 14px; color: #999">ApaHive</a> <a href="/tags/DBeaver/" style="font-size: 14px; color: #999">DBeaver</a> <a href="/tags/Git/" style="font-size: 15.25px; color: #919191">Git</a> <a href="/tags/GitBook/" style="font-size: 14px; color: #999">GitBook</a> <a href="/tags/Gitee/" style="font-size: 14px; color: #999">Gitee</a> <a href="/tags/Hadoop/" style="font-size: 14px; color: #999">Hadoop</a> <a href="/tags/Hexo/" style="font-size: 16.5px; color: #888">Hexo</a> <a href="/tags/IDEA/" style="font-size: 14px; color: #999">IDEA</a> <a href="/tags/JDK/" style="font-size: 15.25px; color: #919191">JDK</a> <a href="/tags/JDK%E7%8E%AF%E5%A2%83/" style="font-size: 14px; color: #999">JDK环境</a> <a href="/tags/Java/" style="font-size: 19px; color: #777">Java</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 14px; color: #999">Java基础</a> <a href="/tags/Linux/" style="font-size: 21.5px; color: #666">Linux</a> <a href="/tags/MapReduce/" style="font-size: 14px; color: #999">MapReduce</a> <a href="/tags/MarkDown/" style="font-size: 14px; color: #999">MarkDown</a> <a href="/tags/MobaXterm/" style="font-size: 14px; color: #999">MobaXterm</a> <a href="/tags/Mysql/" style="font-size: 17.75px; color: #808080">Mysql</a> <a href="/tags/Python/" style="font-size: 24px; color: #555">Python</a> <a href="/tags/Python3/" style="font-size: 14px; color: #999">Python3</a> <a href="/tags/Shell/" style="font-size: 20.25px; color: #6f6f6f">Shell</a> <a href="/tags/Tools/" style="font-size: 17.75px; color: #808080">Tools</a> <a href="/tags/Typora/" style="font-size: 14px; color: #999">Typora</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 14px; color: #999">图床</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E5%85%A5%E9%97%A8/" style="font-size: 14px; color: #999">基础语法入门</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/" style="font-size: 14px; color: #999">学习资源</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 15.25px; color: #919191">数据可视化</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 14px; color: #999">正则</a> <a href="/tags/%E6%AF%92%E9%B8%A1%E6%B1%A4/" style="font-size: 15.25px; color: #919191">毒鸡汤</a> <a href="/tags/%E7%BC%96%E7%A0%81%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">编码工具</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" style="font-size: 22.75px; color: #5e5e5e">编程语言</a> <a href="/tags/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/" style="font-size: 20.25px; color: #6f6f6f">脚本语言</a> <a href="/tags/%E8%B5%84%E6%96%99%E5%88%86%E4%BA%AB/" style="font-size: 14px; color: #999">资料分享</a> <a href="/tags/%E8%BF%90%E8%90%A5%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">运营工具</a> <a href="/tags/%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB/" style="font-size: 14px; color: #999">集合体系</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 14px; color: #999">面经</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop mobile">
-  
-  <header>
-    
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>76 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2019/08/18'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>103.5k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          <div><span id="busuanzi_value_site_uv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 人</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          <div><span id="busuanzi_value_site_pv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 次</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Thu Sep 03 2020 11:00:52 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2020-09-03 日</div>
-          
-        </div>
-        
-        <script> 
-          function timeago(dateTimeStamp) { 
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示 
-              var hour = minute * 60; 
-              var day = hour * 24; 
-              var week = day * 7; 
-              var month = day * 30; 
-              var now = new Date().getTime(); //获取当前时间毫秒 
-              var diffValue = now - dateTimeStamp; //时间差 
-              if (diffValue < 0) { 
-                  return; 
-              } 
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月 
-              var hourC = diffValue / hour; 
-              var dayC = diffValue / day; 
-              var weekC = diffValue / week; 
-              var monthC = diffValue / month; 
-              if (monthC >= 1 && monthC <= 3) { 
-                  result = " " + parseInt(monthC) + " 月前" 
-              } else if (weekC >= 1 && weekC <= 3) { 
-                  result = " " + parseInt(weekC) + " 周前" 
-              } else if (dayC >= 1 && dayC <= 6) { 
-                  result = " " + parseInt(dayC) + " 天前" 
-              } else if (hourC >= 1 && hourC <= 23) { 
-                  result = " " + parseInt(hourC) + " 小时前" 
-              } else if (minC >= 1 && minC <= 59) { 
-                  result = " " + parseInt(minC) + " 分钟前" 
-              } else if (diffValue >= 0 && diffValue <= minute) { 
-                  result = "刚刚" 
-              } else { 
-                  var datetime = new Date(); 
-                  datetime.setTime(dateTimeStamp); 
-                  var Nyear = datetime.getFullYear(); 
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1; 
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate(); 
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours(); 
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes(); 
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds(); 
-                  result = Nyear + "-" + Nmonth + "-" + Ndate 
-              } 
-              return result; 
-          } 
-          var lastUpDate = document.getElementById('last-update').innerHTML; 
-          try { 
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate)); 
-          } catch (error) { 
-            document.getElementById('last-update-show').innerHTML = '2020-09-03 日'; 
-          } 
-        </script> 
-        
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 </aside>
 
-
-
-
-
-	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-	
-
-	
 
 
     </div>
