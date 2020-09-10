@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -19,7 +17,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2020 - A2Data</title>
+  <title>Python数据类型-列表 - A2Data</title>
+  
+    <meta name="keywords" content="Python">
   
 
   
@@ -1453,7 +1453,7 @@
   
     
     
-        <div class='cover-wrapper  dock' style="display: none;">
+        <div class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://7.dusays.com/2020/09/10/bcac99047bac5.png"></div>
           
@@ -1528,8 +1528,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">Python数据类型-列表</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -1538,14 +1538,14 @@
  
 <script> 
   // 处理封面 此时 jquery 还没加载 
-  if ("half" == "none") { // 移除封面 
+  if ("none" == "none") { // 移除封面 
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none"; 
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
   } else { 
-    if ("half" == "half") { // 半屏 
+    if ("none" == "half") { // 半屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half'); 
       document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
-    } else if ("half" == "full") { // 全屏 
+    } else if ("none" == "full") { // 全屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full'); 
       document.getElementsByClassName('scroll-down')[0].style.display = ""; 
     } 
@@ -1559,597 +1559,473 @@
         
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
+  <article class="article post white-box reveal md shadow floatable article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
     
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable">
-  
-  
-  
-  
     
-    <h2 class="article-title" >
-      <a href="/posts/8c0ed688.html">
+      <h1 class="title">
         Python数据类型-列表
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        例题引导：
-三个小盆友 Candy,Mandy,Sandy 分别拿着玩具 Teddy bear,Barbie,Lego。
-建立列表存储上述变量，并依次输出每位小盆友拿着什么玩具(xxx is holding xxx.)。
-参考答案：
-kids = [&#39;candy&#39;,&#39;mandy&#39;,&#39;sandy&#39;]
-toys = [&#39;Teddy bear...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+      </h1>
+      <div class='new-meta-box'>
         
-        <time>2020-09-03</time>
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
+    <p>JackFeng</p>
+  </a>
+</div>
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Sep 3, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>1.6k words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>7 min</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Python数据类型-列表" data-path="/posts/8c0ed688.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
+  
+  <a href="/posts/8c0ed688.html#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/posts/8c0ed688.html">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <p><strong>例题引导：</strong></p>
+<p>三个小盆友 Candy,Mandy,Sandy 分别拿着玩具 Teddy bear,Barbie,Lego。</p>
+<p>建立列表存储上述变量，并依次输出每位小盆友拿着什么玩具(xxx is holding xxx.)。</p>
+<p><strong>参考答案：</strong></p>
+<pre><code class="python">kids = [&#39;candy&#39;,&#39;mandy&#39;,&#39;sandy&#39;]
+toys = [&#39;Teddy bear&#39;,&#39;Barbie&#39;,&#39;Lego&#39;]  #先建立两个列表
+for i in range(0,3):  #遍历输出
+      print(kids[i].title()+&#39; is holding &#39;+toys[i]+&#39;.&#39;)</code></pre>
+<p><strong>学习引导：</strong></p>
+<ul>
+<li>数据类型-列表<ul>
+<li>增加</li>
+<li>插入</li>
+<li>嵌套</li>
+<li>删除</li>
+<li>修改</li>
+<li>……</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据类型-列表"><a href="#数据类型-列表" class="headerlink" title="数据类型-列表"></a>数据类型-列表</h2><p>List（列表） 是 Python 中使用最频繁的数据类型。   </p>
+<ul>
+<li>列表可以完成大多数集合类的数据结构实现。列表中元素的类型可以不相同，它支持数字，字符串甚至可以包含列表（所谓嵌套）。</li>
+<li>列表是写在方括号 [] 之间、用逗号分隔开的元素列表。</li>
+<li>和字符串一样，列表同样可以被索引和截取，列表被截取后返回一个包含所需元素的新列表。</li>
+<li>列表截取的语法格式如下：<strong>变量[头下标：尾下标]</strong></li>
+<li>列表中的元素是可以改变的，很多操作和字符串类似</li>
+</ul>
+<p>下面演示部分列表常用的操作</p>
+<pre><code class="python">a=[&#39;123&#39;,&#39;datascience&#39;,&#39;4345&#39;,&#39;f&#39;,&#39;3&#39;]
+b=[&#39;ppp&#39;]
+print(a[2])  #输出第三个元素
+a[0]=321  #讲列表a中的第一个元素替换
+print(a[0])  #打印a中第一个元素
+print(a[0:3])  #打印a中第一个到第三个元素。注意：python语言取左不取右
+print(a[2:-1])  #打印a中第三个到倒数第二个元素
+print(a+b)  #将列表a，b相加
+print(b*3)  #将列表b乘以三</code></pre>
+<pre><code class="python">&#39;&#39;&#39;
+4345
+321
+[321, &#39;datascience&#39;, &#39;4345&#39;]
+[&#39;4345&#39;, &#39;f&#39;]
+[321, &#39;datascience&#39;, &#39;4345&#39;, &#39;f&#39;, &#39;3&#39;, &#39;ppp&#39;]
+[&#39;ppp&#39;, &#39;ppp&#39;, &#39;ppp&#39;]
+&#39;&#39;&#39;</code></pre>
+<p><strong>列表的特点：</strong></p>
+<ul>
+<li>可存放多个值</li>
+<li>有序。按照从左到右的顺序定义列表元素，下标从0开始按顺序访问</li>
+<li>可修改指定索引位置的值，是可变的。</li>
+</ul>
+<h4 id="增加-append"><a href="#增加-append" class="headerlink" title="增加 append"></a>增加 append</h4><pre><code class="python">names=[&#39;data&#39;,&#39;science&#39;]
+names</code></pre>
+<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;]</code></pre>
+<pre><code class="python">names.append(&#39;excellent&#39;)
+names</code></pre>
+<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;, &#39;excellent&#39;]</code></pre>
+<h4 id="插入-insert-extend"><a href="#插入-insert-extend" class="headerlink" title="插入 insert/extend"></a>插入 insert/extend</h4><pre><code class="python">names.insert(2,&quot;数据科学&quot;)
+names</code></pre>
+<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;, &#39;数据科学&#39;, &#39;excellent&#39;]</code></pre>
+<pre><code class="python">name=[&#39;数据科学&#39;,&#39;学姐&#39;,&#39;学长&#39;]
+names.extend(name)
+names</code></pre>
+<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;学姐&#39;, &#39;学长&#39;]</code></pre>
+<h4 id="嵌套-insert"><a href="#嵌套-insert" class="headerlink" title="嵌套 insert"></a>嵌套 insert</h4><pre><code class="python">names</code></pre>
+<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;学姐&#39;, &#39;学长&#39;]</code></pre>
+<pre><code class="python">names.insert(2,[0,0,4])
+names</code></pre>
+<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;, [0, 0, 4], &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;学姐&#39;, &#39;学长&#39;]</code></pre>
+<h4 id="直接删除-del"><a href="#直接删除-del" class="headerlink" title="直接删除 del"></a>直接删除 del</h4><pre><code class="python">names</code></pre>
+<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;, [0, 0, 4], &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;学姐&#39;, &#39;学长&#39;]</code></pre>
+<pre><code class="python">del names[2]
+names</code></pre>
+<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;学姐&#39;, &#39;学长&#39;]</code></pre>
+<h4 id="pop-删除"><a href="#pop-删除" class="headerlink" title="pop 删除"></a>pop 删除</h4><pre><code class="python">names</code></pre>
+<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;学姐&#39;, &#39;学长&#39;]</code></pre>
+<pre><code class="python">names.pop()  #默认删除最后一个元素并返回被删除的值
+names.pop(1)
+names</code></pre>
+<pre><code class="python">#[&#39;data&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;学姐&#39;]</code></pre>
+<h4 id="clear-清空"><a href="#clear-清空" class="headerlink" title="clear 清空"></a>clear 清空</h4><pre><code class="python">name</code></pre>
+<pre><code class="python">#[&#39;数据科学&#39;, &#39;学姐&#39;, &#39;学长&#39;]</code></pre>
+<pre><code class="python">name.clear()
+name</code></pre>
+<pre><code class="python">#[]</code></pre>
+<h4 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h4><pre><code class="python">names</code></pre>
+<pre><code class="python">#[&#39;data&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;学姐&#39;]</code></pre>
+<pre><code class="python">names[0]=&#39;data2&#39;
+names[-1]=&#39;Shon&#39;
+names</code></pre>
+<pre><code class="python">#[&#39;data2&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;Shon&#39;]</code></pre>
+<h4 id="查操作-index-count-remove"><a href="#查操作-index-count-remove" class="headerlink" title="查操作 index /count/remove"></a>查操作 index /count/remove</h4><pre><code class="python">names</code></pre>
+<pre><code class="python">#[&#39;data2&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;Shon&#39;]</code></pre>
+<pre><code class="python">names.index(&#39;excellent&#39;)  #返回从左开始匹配到的第一个excellent的索引</code></pre>
+<pre><code class="python">#2</code></pre>
+<pre><code class="python">names.count(&#39;数据科学&#39;)   #返回元素“excellent”的个数</code></pre>
+<pre><code class="python">#2</code></pre>
+<pre><code class="python">&#39;data2&#39; in names</code></pre>
+<pre><code class="python">#True</code></pre>
+<pre><code class="python">names</code></pre>
+<pre><code class="python">#[&#39;data2&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;Shon&#39;]</code></pre>
+<pre><code class="python">names.remove(&#39;Shon&#39;)
+names</code></pre>
+<pre><code class="python">#[&#39;data2&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;]</code></pre>
+<h4 id="切片操作"><a href="#切片操作" class="headerlink" title="切片操作"></a>切片操作</h4><p>就像切面包，一片一片的把列表切开</p>
+<p>切片操作是列表操作中</p>
+<pre><code class="python">a=[&#39;123&#39;,&#39;987&#39;,&#39;3&#39;,&#39;dc&#39;,&#39;真的&#39;,&#39;r&#39;]
+a</code></pre>
+<pre><code class="python">#[&#39;123&#39;, &#39;987&#39;, &#39;3&#39;, &#39;dc&#39;, &#39;真的&#39;, &#39;r&#39;]</code></pre>
+<pre><code class="python">a[0:2]</code></pre>
+<pre><code class="python">#[&#39;123&#39;, &#39;987&#39;]</code></pre>
+<pre><code class="python">a[4:-1]</code></pre>
+<pre><code class="python">#[&#39;真的&#39;]</code></pre>
+<pre><code class="python">a[0:-1]</code></pre>
+<pre><code class="python">#[&#39;123&#39;, &#39;987&#39;, &#39;3&#39;, &#39;dc&#39;, &#39;真的&#39;]</code></pre>
+<pre><code class="python">a[4:]</code></pre>
+<pre><code class="python">#[&#39;真的&#39;, &#39;r&#39;]</code></pre>
+<pre><code class="python">#步长
+a[0:4:2]</code></pre>
+<pre><code class="python">#[&#39;123&#39;, &#39;3&#39;]</code></pre>
+<pre><code class="python">a[0::2]</code></pre>
+<pre><code class="python">#[&#39;123&#39;, &#39;3&#39;, &#39;真的&#39;]</code></pre>
+<pre><code class="python">a[-1:-6:-1]</code></pre>
+<pre><code class="python">#[&#39;r&#39;, &#39;真的&#39;, &#39;dc&#39;, &#39;3&#39;, &#39;987&#39;]</code></pre>
+<pre><code class="python">a[0::]</code></pre>
+<pre><code class="python">#[&#39;123&#39;, &#39;987&#39;, &#39;3&#39;, &#39;dc&#39;, &#39;真的&#39;, &#39;r&#39;]</code></pre>
+<h4 id="反转"><a href="#反转" class="headerlink" title="反转"></a>反转</h4><pre><code class="python">a[::-1]</code></pre>
+<pre><code class="python">#[&#39;r&#39;, &#39;真的&#39;, &#39;dc&#39;, &#39;3&#39;, &#39;987&#39;, &#39;123&#39;]</code></pre>
+<pre><code class="python">a[::-2]</code></pre>
+<pre><code class="python">#[&#39;r&#39;, &#39;dc&#39;, &#39;987&#39;]</code></pre>
+<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><pre><code class="python">b=[4,90,54,23,44,456,1,4]
+b</code></pre>
+<pre><code class="python">#[4, 90, 54, 23, 44, 456, 1, 4]</code></pre>
+<pre><code class="python">b.sort()
+b</code></pre>
+<pre><code class="python">#[1, 4, 4, 23, 44, 54, 90, 456]</code></pre>
+<pre><code class="python">m=&#39;数据科学&#39;
+m</code></pre>
+<pre><code class="python">#&#39;数据科学&#39;</code></pre>
+<pre><code class="python">m[::-1]</code></pre>
+<pre><code class="python">#&#39;学科据数&#39;</code></pre>
+<h4 id="循环列表"><a href="#循环列表" class="headerlink" title="循环列表"></a>循环列表</h4><p>while循环   for循环</p>
+<pre><code class="python">for i in b:
+    print(i)
+</code></pre>
+<pre><code class="python">&#39;&#39;&#39;
+1
+4
+4
+23
+44
+54
+90
+456
+&#39;&#39;&#39;</code></pre>
+<h4 id="今日小作业"><a href="#今日小作业" class="headerlink" title="今日小作业"></a>今日小作业</h4><ol>
+<li><p>输入n个整数，用空格分开，输出这些整数中的最大值及最大值的下标，如对应多个下标，返回最小下标。</p>
+<p>例如输入<em>3 4 7 2 5 7</em>，输出<em>7 2</em></p>
+</li>
+<li><p>判断季节,输入一个月份,判断该季节属于哪个季节</p>
+</li>
+<li><p>敏感词替换习题,模仿评论中出现敏感词后,替换成*,将不敏感的词以列表形式输出</p>
+</li>
+<li><p>用range()函数创建一个1到100的正整数数列：[1, 2, 3, …, 100]请利用切片从上述数列中分别取出：</p>
+</li>
+</ol>
+<p>前10个数；</p>
+<p>后10个偶数；</p>
+<p>3的倍数；</p>
+<p>不大于50的5的倍数。</p>
+<ol start="6">
+<li><p>将输入的一行字符串构造为列表（每个字母为一个元素），依次做如下操作并输出结果：</p>
+<p>1） 将第2个元素（元素个数从0开始计算）直到末尾替换为op；</p>
+<p>2） 将第3个元素替换为ui；</p>
+<p>3） 从第2个元素开始直到末尾，每隔一个元素，替换一个元素，依次替换为wo</p>
+</li>
+</ol>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/posts/8c0ed688.html'>
-            Read More
-          </a>
+      
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\posts\47220.html" title="Python强化练习" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230224850.png" /><span class="title">Python强化练习</span><span class="excerpt">Python学习阶段钱</span></a><a class="item" href="\posts\2b36786b.html" title="Anaconda镜像" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Anaconda镜像</span><span class="excerpt">anaconda 镜像源 。</span></a><a class="item" href="\posts\64528.html" title="Day2.基础语法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.基础语法</span><span class="excerpt">数据可视化，基础语法。</span></a><a class="item" href="\posts\5590.html" title="Day1.概述" rel="bookmark "><img src="Day1-%E6%A6%82%E8%BF%B0.assets/image-20200509225153813.png" /><span class="title">Day1.概述</span><span class="excerpt">数据可视化，基础概述。</span></a><a class="item" href="\posts\4136.html" title="Anaconda闪退" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200414151257.png" /><span class="title">Anaconda闪退</span><span class="excerpt">anaconda Windows闪退解决方案 。</span></a></div></section></div>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>版权声明：本网站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="/">数据科学</a></p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/8c0ed688.html>http://www.a2data.cn/posts/8c0ed688.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+        <div class='donate'>
+          <div class='imgs'>
+            
+              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/alipay.jpg'>
+            
+              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/wechat.png'>
+            
+          </div>
         </div>
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-10T11:29:16+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Sep 10, 2020</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable">
+          
   
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/901b8cd5.html">
-        Python判断与循环语句
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Python判断与循环语句！！！</p>
-    
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python</p></a></div>
+
+
+        
+      
+        
+      
+        
+          
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>1.6k words</p>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-03</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/901b8cd5.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/80ca38c0.html">
-        Python变量和运算符
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Python变量与运算符！！！</p>
-    
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>7 min</p>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-02</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/80ca38c0.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/fbd6efa0.html">
-        Python基本操作与格式规范
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Python基本操作与格式规范！！！</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-01</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/fbd6efa0.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/88fead8.html">
-        Git多平台同步
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Git 将一个项目同步到多平台上。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-08-31</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/88fead8.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/2b36786b.html">
-        Anaconda镜像
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>anaconda 镜像源 。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-08-31</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/2b36786b.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/62910.html">
-        Python环境搭建
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>‘人生苦短，我用Python。’</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-08-30</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/62910.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/47ce27c8.html">
-        Hexo命令
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Hexo 常用基本命令</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-08-01</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Hexo/">Hexo</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/47ce27c8.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/4a17b156.html">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Hexo 初始页面。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-07-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Hexo/">Hexo</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/4a17b156.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/e4f3239b.html">
-        数据库操作-TCL
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>数据库操作TCL</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-06-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/DataBase/">DataBase</a><span class="sep"></span><a class="category-link" href="/categories/DataBase/Mysql/">Mysql</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/e4f3239b.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 5
-        </p>
-        
-          <a class="next" rel="next" href="/archives/2020/page/2/">
-            <section class="post next white-box shadow floatable">
-              &nbsp;Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
 
 
-	
-</div>
-<aside class='l_side'>
-  
-  
-    
-    
-
-<section class="widget blogger shadow floatable desktop mobile">
-  <div class='content'>
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://7.dusays.com/2020/09/10/3694a41d52ade.jpg'/>
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/8c0ed688.html&title=Python数据类型-列表 - A2Data&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
         </a>
       
     
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/8c0ed688.html&title=Python数据类型-列表 - A2Data&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
     
-      <div class='text'>
-        
-          <h2>Jack` Féng</h2>
-        
-        
-          <p>放弃不难,但坚持一定很酷！</p>
-
-        
-        
-      </div>
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/8c0ed688.html&title=Python数据类型-列表 - A2Data&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
     
-    
-      <div class="social-wrapper">
+      
         
-          
-            <a href="https://github.com/A2Data"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=a2data@163.com"
-              class="social fas fa-envelope-open flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=66860619"
-              class="social fab fa-qq flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://gitee.com/sqlsq_admin/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
-              class="social fab fa-weixin flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://me.csdn.net/weixin_47093227"
-              class="social fab fa-cuttlefish flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACSUlEQVR42u3aSXLDMAwEQP3/08kLXMLmRWDzFjsS2fAFheH1d+i6wMHBwcHBF8Gv4rrdIPme6D7d84KDg4ODg2+EhxuAmwPf/d/dvlF4+bzg4ODg4OCL4dFGI3rgaKGyha6eFxwcHBwcHDw/iIg+n4aAg4ODg4ODX92NPzVwAAcHBwcHB58LFLLPRQcR3QYKHBwcHBz8JHj5wtyX/v76zUZwcHBwcPAfgL9rdUHdhunlucDBwcHBwRfBpwOC6WAiOrAIfw4ODg4ODr4QXh34R4OAbOAwFTSUJzDg4ODg4OAPgGeD/GqhsgXsNkblQAEcHBwcHPxB8OmGY+qCQbbBCr8PHBwcHBx8ITwLqjYU1UDh7gcK7wsODg4ODr4QPvXi6qoWNl1gcHBwcHDwg+DZRiMaFEzB0oUEBwcHBwdfDJ9qPKrfRxuoauHBwcHBwcE3wasB/LsvAGQLk25gwMHBwcHBF8KrG04HDNMXBMDBwcHBwTfCqw1GtzHJfp++ABANFMDBwcHBwR8Mnz54t5DdCwblQAEcHBwcHPyB8OyAoRvwZwuQDSxu9wMHBwcHB18Enx74RxuM6SAj3FCBg4ODg4Mvgk81DNWgvjvYiF4MBAcHBwcH3wzPNizVQCIbJEw1RuDg4ODg4CfAuw1Ed3AwVbh0kgIODg4ODn4g/FONSrWBCQ8iwMHBwcHBD4R3YdXnq0EHODg4ODj4Zni1Yche/ItCfj5JAQcHBwcH/wF4d5BQLVAW3h1wgIODg4ODb4KftsDBwcHBwResf0tiRN9sQ0hBAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
     
   </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget text shadow floatable desktop mobile">
-  
-  <header>
-    
-      <i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i><span class='name'>公告</span>
-    
-  </header>
+</div>
 
 
-  <div class='content'>
-    
-      <p>本站默认替换了右键菜单，唤醒原系统菜单：<code>Ctrl</code> + <code>右键</code></p>
 
-    
-      <p>回归本心、去繁从简</p>
-
-    
+        
+      
+    </div>
   </div>
-</section>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/901b8cd5.html'>
+          <p class='title'>Python判断与循环语句<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Python判断与循环语句！！！
+
+
+
+例题引导：
+Q：输入3个整数，按从小到大依次输出，用“-&gt;”符号相连： 例如：输入4，2，6，输出2 -&gt; 4 -&gt; 6
+A：
+a = ...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
 
   
 
+  <article class="post white-box reveal shadow floatable" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
   
     
     
@@ -2242,182 +2118,28 @@ toys = [&#39;Teddy bear...
     
     
 
-<section class="widget qrcode shadow floatable desktop mobile">
-  
+
+
+  <section class="widget toc-wrapper shadow floatable desktop mobile" id="toc-div" >
+    
   <header>
     
-      <i class="fas fa-qrcode fa-fw fa-fw" aria-hidden="true"></i><span class='name'>公众号</span>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-  <div class='content article-entry'>
-    
-      
-        <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/0d49517cc7f0ea7b452a71f1e26976c.png'
-        >
-      
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow floatable desktop mobule">
-  
-  <header>
-    
-      <i class="fas fa-mobile fa-fw" aria-hidden="true"></i><span class='name'>小程序</span>
-    
-  </header>
-
-
-  <div class='content article-entry'>
-    
-      
-        <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/xcx.jpg'
-        >
-      
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget shadow floatable desktop">
-  
-  <header>
-    
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>77 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2019/08/18'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>105.2k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Thu Sep 10 2020 21:17:09 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2020-09-10 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2020-09-10 日';
-          }
-        </script>
-        
-      
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%88%97%E8%A1%A8"><span class="toc-text">数据类型-列表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A2%9E%E5%8A%A0-append"><span class="toc-text">增加 append</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%92%E5%85%A5-insert-extend"><span class="toc-text">插入 insert&#x2F;extend</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B5%8C%E5%A5%97-insert"><span class="toc-text">嵌套 insert</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E5%88%A0%E9%99%A4-del"><span class="toc-text">直接删除 del</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#pop-%E5%88%A0%E9%99%A4"><span class="toc-text">pop 删除</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#clear-%E6%B8%85%E7%A9%BA"><span class="toc-text">clear 清空</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9"><span class="toc-text">修改</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E6%93%8D%E4%BD%9C-index-count-remove"><span class="toc-text">查操作 index &#x2F;count&#x2F;remove</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C"><span class="toc-text">切片操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%8D%E8%BD%AC"><span class="toc-text">反转</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F"><span class="toc-text">排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E5%88%97%E8%A1%A8"><span class="toc-text">循环列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8A%E6%97%A5%E5%B0%8F%E4%BD%9C%E4%B8%9A"><span class="toc-text">今日小作业</span></a></li></ol></li></ol></li></ol>
     </div>
-  </div>
-</section>
+  </section>
+
 
   
 
 
 </aside>
+
 
 
       </div>

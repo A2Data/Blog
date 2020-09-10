@@ -19,7 +19,7 @@ function setAPlayerObject() {
 	document.querySelectorAll('meting-js').forEach((item, index) => {
 		if (item.meta.id == APlayerController.id) {
 			if (document.querySelectorAll('meting-js')[index].aplayer != undefined) {
- 				APlayerController.player = document.querySelectorAll('meting-js')[index].aplayer;
+				APlayerController.player = document.querySelectorAll('meting-js')[index].aplayer;
 				setAPlayerObserver();
 			}
 		}
@@ -43,7 +43,7 @@ function setAPlayerObserver() {
 			var artist = document.querySelector('meting-js').aplayer.list.audios[index].artist;
 			$.message({title: '音乐通知',message: '暂停播放：' + title + ' - ' + artist,type: 'success'});
 		});
-        APlayerController.player.on('volumechange', function (e) {
+		APlayerController.player.on('volumechange', function (e) {
 			onUpdateAPlayerVolume();
 		});
 		APlayerController.player.on('loadstart', function (e) {

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/3.0.0-rc.1'>
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0-rc.3'>
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
@@ -15,6 +15,7 @@
   <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
 
   <!-- 页面元数据 -->
   
@@ -30,25 +31,13 @@
   
 
   <!-- link -->
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
 
   
   
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css">
-
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-
-  
-
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
 
   
 
@@ -66,24 +55,31 @@
   
 
   
-    
-      
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/styles/solarized-light.css">
-
-    
-  
   
     
 <link rel="stylesheet" href="/css/style.css">
 
   
-
   
   
+  <!-- 脚本懒加载函数 -->
+  <script>
+  function loadScript(src, cb) {
+    var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+    var script = document.createElement('script');
+    script.setAttribute('type','text/javascript');
+    if (cb) script.onload = cb;
+    script.setAttribute('src', src);
+    HEAD.appendChild(script);
+  }
+  //https://github.com/filamentgroup/loadCSS
+  !function(c){"use strict";var e=function(e,t,n,r){var o,i=c.document,a=i.createElement("link");if(t)o=t;else{var d=(i.body||i.getElementsByTagName("head")[0]).childNodes;o=d[d.length-1]}var f=i.styleSheets;if(r)for(var l in r)r.hasOwnProperty(l)&&a.setAttribute(l,r[l]);a.rel="stylesheet",a.href=e,a.media="only x",function e(t){if(i.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(a,t?o:o.nextSibling)});var s=function(e){for(var t=a.href,n=f.length;n--;)if(f[n].href===t)return e();setTimeout(function(){s(e)})};function u(){a.addEventListener&&a.removeEventListener("load",u),a.media=n||"all"}return a.addEventListener&&a.addEventListener("load",u),(a.onloadcssdefined=s)(u),a};"undefined"!=typeof exports?exports.loadCSS=e:c.loadCSS=e}("undefined"!=typeof global?global:this);
+  </script>
+  <script id="loadcss"></script>
 </head>
 
 <body>
-  <header class="l_header shadow blur" style='opacity: 0'>
+  <header class="l_header auto shadow blur " style='opacity: 0' >
   <div class='container'>
   <div class='wrapper'>
     <div class='nav-sub'>
@@ -100,7 +96,7 @@
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='https://gitee.com/sqlsq_admin/cdn/raw/master/logos.jpg'/>
+            <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
           
@@ -327,9 +323,9 @@
   
     <meting-js
       theme='#1BCDFC'
-      volume='0.7'
+      volume='0.3'
       loop='all'
-      order='random'
+      order='list'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -790,7 +786,7 @@
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fas fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search..." />
+          <input type="text" class="input u-search-input" placeholder="想找些什么~" />
         </form>
       </div>
 
@@ -1452,14 +1448,17 @@
   </div>
 </header>
 
+  <div class="l_body">
+    <div class="l_cover">
   
-  
-  
-  <div class="cover-wrapper">
-    <div class='cover ' style="display: none;">
-      <div class='cover-bg lazyload placeholder' data-bg=""></div>
-      <div class='cover-body'>
-  <div class='a'>
+    
+    
+        <div class='cover-wrapper  dock' style="display: none;">
+          
+            <div class='cover-bg lazyload placeholder' data-bg="https://7.dusays.com/2020/09/10/bcac99047bac5.png"></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
     
     
       <p class="title">数据科学</p>
@@ -1468,8 +1467,8 @@
       <p class="subtitle">Welcome To A2Data</p>
     
   </div>
-  <div class='b'>
-    <div class='menu navigation dock'>
+  <div class='bottom'>
+    <div class='menu navigation'>
       <div class='list-h'>
         
           
@@ -1477,42 +1476,35 @@
               
               
               id="https:cloudtencentcomdeveloperuser6511370">
-              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/txy1.png'><p>云+社区</p>
+              <img src='https://7bu.top/2020/09/10/3b1a5d01b5bb5.png'><p>云+社区</p>
             </a>
           
             <a target="_blank" rel="noopener" href="https://www.cnblogs.com/a2data/"
               
               
               id="https:wwwcnblogscoma2data">
-              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/bky.png'><p>博客园</p>
+              <img src='https://7bu.top/2020/09/10/6c17234498a6e.png'><p>博客园</p>
             </a>
           
             <a target="_blank" rel="noopener" href="https://my.oschina.net/u/4159456"
               
               
               id="https:myoschinanetu4159456">
-              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/kyzg.png'><p>OsChina</p>
+              <img src='https://7bu.top/2020/09/10/e6c4696c47126.png'><p>OsChina</p>
             </a>
           
-            <a target="_blank" rel="noopener" href="https://support.qq.com/products/176810/"
+            <a target="_blank" rel="noopener" href="https://7bu.top/2020/09/10/90dc33472afa0.png"
               
               
-              id="https:supportqqcomproducts176810">
-              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/shequ.png'><p>社群</p>
+              id="https:7butop2020091090dc33472afa0png">
+              <img src='https://7bu.top/2020/09/10/76cd32a03a642.png'><p>语雀</p>
             </a>
           
-            <a target="_blank" rel="noopener" href="https://my.oschina.net/u/4159456"
+            <a target="_blank" rel="noopener" href="https://www.toutiao.com/c/user/token/MS4wLjABAAAAcK5aMHwt54R5vO187DNnDE_e0k26RFa-W4x5LKX0jao/"
               
               
-              id="https:myoschinanetu4159456">
-              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/kyzg.png'><p>OsChina</p>
-            </a>
-          
-            <a target="_blank" rel="noopener" href="https://support.qq.com/products/176810/"
-              
-              
-              id="https:supportqqcomproducts176810">
-              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/shequ.png'><p>社群</p>
+              id="https:wwwtoutiaocomcusertokenMS4wLjABAAAAcK5aMHwt54R5vO187DNnDE_e0k26RFa-W4x5LKX0jao">
+              <img src='https://7bu.top/2020/09/10/a09f96e91af8d.png'><p>头条</p>
             </a>
           
         
@@ -1521,61 +1513,57 @@
   </div>
 </div>
 
-      <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
-    </div>
+          <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
   </div>
   
+    <div class='safearea'>
+      <div class='body-wrapper' id="pjax-container">
+        
+          <!--此文件用来存放一些不方便取值的变量--> 
+<!--思路大概是将值藏到重加载的区域内--> 
+ 
+ 
+ 
+<div id="pjax-data" style="display: none"> 
+  <div id="pjax-ispage">false</div> 
+  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-enable-cover">true</div> 
+  <div id="pjax-comment-path"></div> 
+  <div id="pjax-comment-placeholder"></div> 
+</div> 
+ 
+ 
+<script> 
+  // 处理封面 此时 jquery 还没加载 
+  if ("none" == "none") { // 移除封面 
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "none"; 
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
+  } else { 
+    if ("none" == "half") { // 半屏 
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half'); 
+      document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
+    } else if ("none" == "full") { // 全屏 
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full'); 
+      document.getElementsByClassName('scroll-down')[0].style.display = ""; 
+    } 
+    document.getElementsByClassName('cover-wrapper')[0].style.display = ""; 
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show"); 
+  } 
+</script> 
+ 
 
-
-  <div class="l_body nocover">
-    <div class='body-wrapper' id="pjax-container">
-      
-        <!--此文件用来存放一些不方便取值的变量-->
-<!--思路大概是将值藏到重加载的区域内-->
-
-
-
-<div id="pjax-data" style="display: none">
-  <div id="pjax-ispage">false</div>
-  <div id="pjax-pageTitle"></div>
-  <div id="pjax-enable-cover">true</div>
-  <div id="pjax-comment-path">none</div>
-  <div id="pjax-comment-placeholder">none</div>
-</div>
-
-
-<script>
-  // 处理封面 此时 jquery 还没加载
-  if ("none" == "none") { // 移除封面
-    document.getElementsByClassName('cover')[0].style.display = "none"; 
-    document.getElementsByClassName('l_body')[0].classList.add("nocover");
-    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
-  } else {
-    if ("none" == "blog") { // 半屏
-      document.getElementsByClassName('cover')[0].classList.remove("full");
-      document.getElementsByClassName('cover')[0].classList.add("half");
-      document.getElementsByClassName('scroll-down')[0].style.display = "none";
-    } else if ("none" == "docs") { // 全屏
-      document.getElementsByClassName('cover')[0].classList.remove("half");
-      document.getElementsByClassName('cover')[0].classList.add("full");
-      document.getElementsByClassName('scroll-down')[0].style.display = "";
-    }
-    document.getElementsByClassName('cover')[0].style.display = "";
-    document.getElementsByClassName('l_body', 'show')[0].classList.remove("nocover");
-    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show");
-  }
-</script>
-
-
-      
-      
+        
+        
 
 
 <div class='l_main'>
   
     
       
-  <section class="post-list ">
+  <section class="post-list">
     
       
         
@@ -1595,729 +1583,220 @@
       
         
           <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
+            <div class="post post-v3 white-box reveal shadow floatable">
   
-
-
-  <section class='meta'>
+  
+  
+  
     
-      
-      
-        <a title='Hexo命令' href='/posts/47ce27c8.html'>
-          
-            <img class='thumbnail' src='https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200418164851.png'>
-          
-        </a>
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/posts/47ce27c8.html">
-      Hexo命令
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
-    <p>JackFeng</p>
-  </a>
-</div>
-
-            
-          
-            
-              
+    <h2 class="article-title" >
+      <a href="/posts/47ce27c8.html">
+        Hexo命令
+      </a>
+    </h2>
   
-  <div class='new-meta-item category'>
-    <a href='/categories/Hexo/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>Hexo</p>
-    </a>
+  <div class='md'>
+    
+      <p>Hexo 常用基本命令</p>
+    
   </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Aug 1, 2020</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>281 words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>1 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/posts/47ce27c8.html" class="leancloud_visitors" data-flag-title="Hexo命令">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
   
-  <a href="/posts/47ce27c8.html#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/47ce27c8.html">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
+    <div class='meta-v3' line_style='solid'>
+      <div>
         
-          <hr>
+        <time>2020-08-01</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Hexo/">Hexo</a>
         
       </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
       
-        <p>Hexo 常用基本命令</p>
+        <div>
+          <a class='readmore' href='/posts/47ce27c8.html'>
+            Read More
+          </a>
+        </div>
       
     </div>
-    
-      
-        <a class= "readmore" href="/posts/47ce27c8.html">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
+  
+
+</div>
 
           </div>
         
       
         
           <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
+            <div class="post post-v3 white-box reveal shadow floatable">
   
-
-
-  <section class='meta'>
+  
+  
+  
     
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/posts/4a17b156.html">
-      Hello World
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
-    <p>JackFeng</p>
-  </a>
-</div>
-
-            
-          
-            
-              
+    <h2 class="article-title" >
+      <a href="/posts/4a17b156.html">
+        Hello World
+      </a>
+    </h2>
   
-  <div class='new-meta-item category'>
-    <a href='/categories/Hexo/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>Hexo</p>
-    </a>
+  <div class='md'>
+    
+      <p>Hexo 初始页面。</p>
+    
   </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jul 31, 2020</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>80 words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>1 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/posts/4a17b156.html" class="leancloud_visitors" data-flag-title="Hello World">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
   
-  <a href="/posts/4a17b156.html#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/4a17b156.html">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
+    <div class='meta-v3' line_style='solid'>
+      <div>
         
-          <hr>
+        <time>2020-07-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Hexo/">Hexo</a>
         
       </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
       
-        <p>Hexo 初始页面。</p>
+        <div>
+          <a class='readmore' href='/posts/4a17b156.html'>
+            Read More
+          </a>
+        </div>
       
     </div>
-    
-      
-        <a class= "readmore" href="/posts/4a17b156.html">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
+  
+
+</div>
 
           </div>
         
       
         
           <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
+            <div class="post post-v3 white-box reveal shadow floatable">
   
-
-
-  <section class='meta'>
+  
+  
+  
     
-      
-      
-        <a title='Hexo博客疑难杂症' href='/posts/f92cb63f.html'>
-          
-            <img class='thumbnail' src='https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200418164851.png'>
-          
-        </a>
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/posts/f92cb63f.html">
-      Hexo博客疑难杂症
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
-    <p>JackFeng</p>
-  </a>
-</div>
-
-            
-          
-            
-              
+    <h2 class="article-title" >
+      <a href="/posts/f92cb63f.html">
+        Hexo博客疑难杂症
+      </a>
+    </h2>
   
-  <div class='new-meta-item category'>
-    <a href='/categories/Hexo/Blog/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>Hexo/Blog</p>
-    </a>
+  <div class='md'>
+    
+      <p>Hexo 疑难杂症</p>
+    
   </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Apr 19, 2020</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>2.1k words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>8 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/posts/f92cb63f.html" class="leancloud_visitors" data-flag-title="Hexo博客疑难杂症">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
   
-  <a href="/posts/f92cb63f.html#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/f92cb63f.html">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
+    <div class='meta-v3' line_style='solid'>
+      <div>
         
-          <hr>
+        <time>2020-04-19</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Hexo/">Hexo</a><span class="sep"></span><a class="category-link" href="/categories/Hexo/Blog/">Blog</a>
         
       </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
       
-        <p>Hexo 疑难杂症</p>
+        <div>
+          <a class='readmore' href='/posts/f92cb63f.html'>
+            Read More
+          </a>
+        </div>
       
     </div>
-    
-      
-        <a class= "readmore" href="/posts/f92cb63f.html">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
+  
+
+</div>
 
           </div>
         
       
         
           <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
+            <div class="post post-v3 white-box reveal shadow floatable">
   
-
-
-  <section class='meta'>
+  
+  
+  
     
-      
-      
-        <a title='Hexo部署到码云' href='/posts/8f004046.html'>
-          
-            <img class='thumbnail' src='https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200418164851.png'>
-          
-        </a>
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/posts/8f004046.html">
-      Hexo部署到码云
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
-    <p>JackFeng</p>
-  </a>
-</div>
-
-            
-          
-            
-              
+    <h2 class="article-title" >
+      <a href="/posts/8f004046.html">
+        Hexo部署到码云
+      </a>
+    </h2>
   
-  <div class='new-meta-item category'>
-    <a href='/categories/Hexo/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>Hexo</p>
-    </a>
+  <div class='md'>
+    
+      <p>Hexo 部署到Gitte</p>
+    
   </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Apr 7, 2020</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>198 words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>1 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/posts/8f004046.html" class="leancloud_visitors" data-flag-title="Hexo部署到码云">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
   
-  <a href="/posts/8f004046.html#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/8f004046.html">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
+    <div class='meta-v3' line_style='solid'>
+      <div>
         
-          <hr>
+        <time>2020-04-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Hexo/">Hexo</a>
         
       </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
       
-        <p>Hexo 部署到Gitte</p>
+        <div>
+          <a class='readmore' href='/posts/8f004046.html'>
+            Read More
+          </a>
+        </div>
       
     </div>
-    
-      
-        <a class= "readmore" href="/posts/8f004046.html">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
+  
+
+</div>
 
           </div>
         
       
         
           <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
+            <div class="post post-v3 white-box reveal shadow floatable">
   
-
-
-  <section class='meta'>
+  
+  
+  
     
-      
-      
-        <a title='Hexo图片问题' href='/posts/ee789513.html'>
-          
-            <img class='thumbnail' src='https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200418164851.png'>
-          
-        </a>
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/posts/ee789513.html">
-      Hexo图片问题
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
-    <p>JackFeng</p>
-  </a>
-</div>
-
-            
-          
-            
-              
+    <h2 class="article-title" >
+      <a href="/posts/ee789513.html">
+        Hexo图片问题
+      </a>
+    </h2>
   
-  <div class='new-meta-item category'>
-    <a href='/categories/Hexo/Img/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>Hexo/Img</p>
-    </a>
+  <div class='md'>
+    
+      <p>Hexo 上传图片相关的问题。</p>
+    
   </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Sep 5, 2019</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>941 words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>4 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/posts/ee789513.html" class="leancloud_visitors" data-flag-title="Hexo图片问题">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
   
-  <a href="/posts/ee789513.html#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/ee789513.html">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
+    <div class='meta-v3' line_style='solid'>
+      <div>
         
-          <hr>
+        <time>2019-09-05</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Hexo/">Hexo</a><span class="sep"></span><a class="category-link" href="/categories/Hexo/Img/">Img</a>
         
       </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
       
-        <p>Hexo 上传图片相关的问题。</p>
+        <div>
+          <a class='readmore' href='/posts/ee789513.html'>
+            Read More
+          </a>
+        </div>
       
     </div>
-    
-      
-        <a class= "readmore" href="/posts/ee789513.html">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
+  
+
+</div>
 
           </div>
         
@@ -2326,16 +1805,11 @@
   </section>
   
     
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
-
   
 
 
     
   
-
 </div>
 <aside class='l_side'>
   
@@ -2343,27 +1817,24 @@
     
     
 
-<section class="widget blogger shadow desktop mobile">
+<section class="widget blogger shadow floatable desktop mobile">
   <div class='content'>
     
       
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://gitee.com/sqlsq_admin/cdn/raw/master/0d49517cc7f0ea7b452a71f1e26976c.png'/>
+        <a class='avatar flat-box circle' href='/about/'>
+          <img no-lazy src='https://7.dusays.com/2020/09/10/3694a41d52ade.jpg'/>
         </a>
       
     
     
       <div class='text'>
         
-          <h2>BigData</h2>
+          <h2>Jack` Féng</h2>
         
         
-          <p>Lose in hesitation,win in action.</p>
+          <p>放弃不难,但坚持一定很酷！</p>
 
         
-        
-          <p><span id="jinrishici-sentence">A2Data</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
         
       </div>
     
@@ -2375,22 +1846,25 @@
               class="social fab fa-github flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
+              
             </a>
           
         
           
-            <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=a2data@163.com"
+            <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=a2data@163.com"
               class="social fas fa-envelope-open flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
+              
             </a>
           
         
           
-            <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=66860619"
+            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=66860619"
               class="social fab fa-qq flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
+              
             </a>
           
         
@@ -2399,6 +1873,7 @@
               class="social fab fa-weixin flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
+              
             </a>
           
         
@@ -2407,6 +1882,7 @@
               class="social fab fa-cuttlefish flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
+              
             </a>
           
         
@@ -2421,7 +1897,146 @@
     
     
 
-<section class="widget qrcode shadow desktop">
+<section class="widget text shadow floatable desktop mobile">
+  
+  <header>
+    
+      <i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i><span class='name'>公告</span>
+    
+  </header>
+
+
+  <div class='content'>
+    
+      <p>本站默认替换了右键菜单，唤醒原系统菜单：<code>Ctrl</code> + <code>右键</code></p>
+
+    
+      <p>回归本心、去繁从简</p>
+
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget grid shadow floatable desktop mobile">
+  
+  <header>
+    
+      <i class="fas fa-map-signs fa-fw" aria-hidden="true"></i><span class='name'>导航</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="grid navigation fixed">
+      
+        <a class="flat-box" title="/" href="/"
+          
+          
+            target="_blank"
+          
+          id="home">
+          
+            <i class="fas fa-clock fa-fw fa-fw" aria-hidden="true"></i>
+          
+          近期文章
+        </a>
+      
+        <a class="flat-box" title="/friends/" href="/friends/"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-users fa-fw" aria-hidden="true"></i>
+          
+          友情链接
+        </a>
+      
+        <a class="flat-box" title="/contact/" href="/contact/"
+          
+          
+          id="contact">
+          
+            <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+          
+          留言板
+        </a>
+      
+        <a class="flat-box" title="/Creator-said/" href="/Creator-said/"
+          
+          
+          id="Creator-said">
+          
+            <i class="fas fa-comment-dots fa-fw fa-fw" aria-hidden="true"></i>
+          
+          主创说
+        </a>
+      
+        <a class="flat-box" title="/tags/" href="/tags/"
+          
+          
+          id="tags">
+          
+            <i class="fas fa-fire fa-fw fa-fw" aria-hidden="true"></i>
+          
+          热门标签
+        </a>
+      
+        <a class="flat-box" title="https://travellings.now.sh/" href="https://travellings.now.sh/"
+          
+            rel="noopener external nofollow noreferrer"
+          
+          
+            target="_blank"
+          
+          id="https:travellingsnowsh">
+          
+            <i class="fas fa-location-arrow fa-fw" aria-hidden="true"></i>
+          
+          开往
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode shadow floatable desktop mobile">
+  
+  <header>
+    
+      <i class="fas fa-qrcode fa-fw fa-fw" aria-hidden="true"></i><span class='name'>公众号</span>
+    
+  </header>
+
+
+  <div class='content article-entry'>
+    
+      
+        <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/0d49517cc7f0ea7b452a71f1e26976c.png'
+        >
+      
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode shadow floatable desktop mobule">
   
   <header>
     
@@ -2445,139 +2060,8 @@
   
     
     
-  
 
-  <section class="widget category shadow desktop">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/DataBase/" href="/categories/DataBase/"
-            id="categoriesDataBase"
-            ><div class='name'>DataBase</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/DataBase/Mysql/" href="/categories/DataBase/Mysql/"
-            id="categoriesDataBaseMysql"
-            ><div class='name'>Mysql</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Git/" href="/categories/Git/"
-            id="categoriesGit"
-            ><div class='name'>Git</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Hexo/" href="/categories/Hexo/"
-            id="categoriesHexo"
-            ><div class='name'>Hexo</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Hexo/Blog/" href="/categories/Hexo/Blog/"
-            id="categoriesHexoBlog"
-            ><div class='name'>Blog</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Hexo/Img/" href="/categories/Hexo/Img/"
-            id="categoriesHexoImg"
-            ><div class='name'>Img</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/IDEA/" href="/categories/IDEA/"
-            id="categoriesIDEA"
-            ><div class='name'>IDEA</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Java/" href="/categories/Java/"
-            id="categoriesJava"
-            ><div class='name'>Java</div><div class='badge'>(7)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Linux/" href="/categories/Linux/"
-            id="categoriesLinux"
-            ><div class='name'>Linux</div><div class='badge'>(17)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/One/" href="/categories/One/"
-            id="categoriesOne"
-            ><div class='name'>One</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Python/" href="/categories/Python/"
-            id="categoriesPython"
-            ><div class='name'>Python</div><div class='badge'>(19)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Tools/" href="/categories/Tools/"
-            id="categoriesTools"
-            ><div class='name'>Tools</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"
-            id="categoriesE5A4A7E695B0E68DAE"
-            ><div class='name'>大数据</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" href="/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"
-            id="categoriesE695B0E68DAEE58FAFE8A786E58C96"
-            ><div class='name'>数据可视化</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"
-            id="categoriesE695B0E68DAEE5BA93"
-            ><div class='name'>数据库</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/"
-            id="categoriesE695B0E68DAEE5BA93E5B7A5E585B7"
-            ><div class='name'>数据库工具</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%81%8C%E5%9C%BA/" href="/categories/%E8%81%8C%E5%9C%BA/"
-            id="categoriesE8818CE59CBA"
-            ><div class='name'>职场</div><div class='badge'>(4)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/API/" style="font-size: 15.25px; color: #919191">API</a> <a href="/tags/Anaconda/" style="font-size: 15.25px; color: #919191">Anaconda</a> <a href="/tags/ApaHive/" style="font-size: 14px; color: #999">ApaHive</a> <a href="/tags/DBeaver/" style="font-size: 14px; color: #999">DBeaver</a> <a href="/tags/Git/" style="font-size: 15.25px; color: #919191">Git</a> <a href="/tags/GitBook/" style="font-size: 14px; color: #999">GitBook</a> <a href="/tags/Gitee/" style="font-size: 14px; color: #999">Gitee</a> <a href="/tags/Hadoop/" style="font-size: 14px; color: #999">Hadoop</a> <a href="/tags/Hexo/" style="font-size: 16.5px; color: #888">Hexo</a> <a href="/tags/IDEA/" style="font-size: 14px; color: #999">IDEA</a> <a href="/tags/JDK/" style="font-size: 15.25px; color: #919191">JDK</a> <a href="/tags/JDK%E7%8E%AF%E5%A2%83/" style="font-size: 14px; color: #999">JDK环境</a> <a href="/tags/Java/" style="font-size: 19px; color: #777">Java</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 14px; color: #999">Java基础</a> <a href="/tags/Linux/" style="font-size: 21.5px; color: #666">Linux</a> <a href="/tags/MapReduce/" style="font-size: 14px; color: #999">MapReduce</a> <a href="/tags/MarkDown/" style="font-size: 14px; color: #999">MarkDown</a> <a href="/tags/MobaXterm/" style="font-size: 14px; color: #999">MobaXterm</a> <a href="/tags/Mysql/" style="font-size: 17.75px; color: #808080">Mysql</a> <a href="/tags/Python/" style="font-size: 24px; color: #555">Python</a> <a href="/tags/Python3/" style="font-size: 14px; color: #999">Python3</a> <a href="/tags/Shell/" style="font-size: 20.25px; color: #6f6f6f">Shell</a> <a href="/tags/Tools/" style="font-size: 17.75px; color: #808080">Tools</a> <a href="/tags/Typora/" style="font-size: 14px; color: #999">Typora</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 14px; color: #999">图床</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E5%85%A5%E9%97%A8/" style="font-size: 14px; color: #999">基础语法入门</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/" style="font-size: 14px; color: #999">学习资源</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 15.25px; color: #919191">数据可视化</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 14px; color: #999">正则</a> <a href="/tags/%E6%AF%92%E9%B8%A1%E6%B1%A4/" style="font-size: 15.25px; color: #919191">毒鸡汤</a> <a href="/tags/%E7%BC%96%E7%A0%81%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">编码工具</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" style="font-size: 22.75px; color: #5e5e5e">编程语言</a> <a href="/tags/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/" style="font-size: 20.25px; color: #6f6f6f">脚本语言</a> <a href="/tags/%E8%B5%84%E6%96%99%E5%88%86%E4%BA%AB/" style="font-size: 14px; color: #999">资料分享</a> <a href="/tags/%E8%BF%90%E8%90%A5%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">运营工具</a> <a href="/tags/%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB/" style="font-size: 14px; color: #999">集合体系</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 14px; color: #999">面经</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop mobile">
+<section class="widget shadow floatable desktop">
   
   <header>
     
@@ -2591,7 +2075,7 @@
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>76 篇</div>
+          <div>77 篇</div>
         </div>
       
 
@@ -2613,21 +2097,25 @@
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>103.5k 字</div>
+          <div>105.2k 字</div>
         </div>
       
 
       
         <div class="webinfo-item">
           <div>本站访客数：</div>
-          <div><span id="busuanzi_value_site_uv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 人</div>
+          
+          <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
+          
         </div>
       
 
       
         <div class="webinfo-item">
           <div>本站总访问量：</div>
-          <div><span id="busuanzi_value_site_pv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 次</div>
+          
+          <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
+          
         </div>
       
 
@@ -2635,60 +2123,60 @@
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Thu Sep 03 2020 11:05:36 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2020-09-03 日</div>
+            <div id="last-update" style="display: none;">Thu Sep 10 2020 21:17:09 GMT+0800 (GMT+08:00)</div>
+            <div id="last-update-show">2020-09-10 日</div>
           
         </div>
         
-        <script> 
-          function timeago(dateTimeStamp) { 
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示 
-              var hour = minute * 60; 
-              var day = hour * 24; 
-              var week = day * 7; 
-              var month = day * 30; 
-              var now = new Date().getTime(); //获取当前时间毫秒 
-              var diffValue = now - dateTimeStamp; //时间差 
-              if (diffValue < 0) { 
-                  return; 
-              } 
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月 
-              var hourC = diffValue / hour; 
-              var dayC = diffValue / day; 
-              var weekC = diffValue / week; 
-              var monthC = diffValue / month; 
-              if (monthC >= 1 && monthC <= 3) { 
-                  result = " " + parseInt(monthC) + " 月前" 
-              } else if (weekC >= 1 && weekC <= 3) { 
-                  result = " " + parseInt(weekC) + " 周前" 
-              } else if (dayC >= 1 && dayC <= 6) { 
-                  result = " " + parseInt(dayC) + " 天前" 
-              } else if (hourC >= 1 && hourC <= 23) { 
-                  result = " " + parseInt(hourC) + " 小时前" 
-              } else if (minC >= 1 && minC <= 59) { 
-                  result = " " + parseInt(minC) + " 分钟前" 
-              } else if (diffValue >= 0 && diffValue <= minute) { 
-                  result = "刚刚" 
-              } else { 
-                  var datetime = new Date(); 
-                  datetime.setTime(dateTimeStamp); 
-                  var Nyear = datetime.getFullYear(); 
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1; 
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate(); 
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours(); 
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes(); 
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds(); 
-                  result = Nyear + "-" + Nmonth + "-" + Ndate 
-              } 
-              return result; 
-          } 
-          var lastUpDate = document.getElementById('last-update').innerHTML; 
-          try { 
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate)); 
-          } catch (error) { 
-            document.getElementById('last-update-show').innerHTML = '2020-09-03 日'; 
-          } 
-        </script> 
+        <script>
+          function timeago(dateTimeStamp) {
+              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
+              var hour = minute * 60;
+              var day = hour * 24;
+              var week = day * 7;
+              var month = day * 30;
+              var now = new Date().getTime(); //获取当前时间毫秒
+              var diffValue = now - dateTimeStamp; //时间差
+              if (diffValue < 0) {
+                  return;
+              }
+              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
+              var hourC = diffValue / hour;
+              var dayC = diffValue / day;
+              var weekC = diffValue / week;
+              var monthC = diffValue / month;
+              if (monthC >= 1 && monthC <= 3) {
+                  result = " " + parseInt(monthC) + " 月前"
+              } else if (weekC >= 1 && weekC <= 3) {
+                  result = " " + parseInt(weekC) + " 周前"
+              } else if (dayC >= 1 && dayC <= 6) {
+                  result = " " + parseInt(dayC) + " 天前"
+              } else if (hourC >= 1 && hourC <= 23) {
+                  result = " " + parseInt(hourC) + " 小时前"
+              } else if (minC >= 1 && minC <= 59) {
+                  result = " " + parseInt(minC) + " 分钟前"
+              } else if (diffValue >= 0 && diffValue <= minute) {
+                  result = "刚刚"
+              } else {
+                  var datetime = new Date();
+                  datetime.setTime(dateTimeStamp);
+                  var Nyear = datetime.getFullYear();
+                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
+                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
+                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
+                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
+                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
+                  result = Nyear + "-" + Nmonth + "-" + Ndate
+              }
+              return result;
+          }
+          var lastUpDate = document.getElementById('last-update').innerHTML;
+          try {
+            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
+          } catch (error) {
+            document.getElementById('last-update-show').innerHTML = '2020-09-10 日';
+          }
+        </script>
         
       
     </div>
@@ -2701,144 +2189,172 @@
 </aside>
 
 
+      </div>
+      
+    
+    <footer class="footer clearfix">
+        <br><br>
+        
+            
+                <br>
+                <div class="social-wrapper">
+                    
+                        
+                            <a href="https://github.com/A2Data"
+                               class="social fab fa-github flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                                
+                            </a>
+                        
+                    
+                        
+                            <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=a2data@163.com"
+                               class="social fas fa-envelope-open flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                                
+                            </a>
+                        
+                    
+                        
+                            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=66860619"
+                               class="social fab fa-qq flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                                
+                            </a>
+                        
+                    
+                        
+                            <a href="https://gitee.com/sqlsq_admin/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
+                               class="social fab fa-weixin flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                                
+                            </a>
+                        
+                    
+                        
+                            <a href="https://me.csdn.net/weixin_47093227"
+                               class="social fab fa-cuttlefish flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                                
+                            </a>
+                        
+                    
+                        
+                            <a href="https://music.163.com/#/user/home?id=405423746"
+                               class="social fas fa-headphones-alt flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                                
+                            </a>
+                        
+                    
+                        
+                            <a href="https://travellings.now.sh/"
+                               class="social fa fa-binoculars flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                                
+                            </a>
+                        
+                    
+                </div>
+                <div class="pure">
+                    <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+                    <script>
+                        var getOSAndBrowser = function () {
+                            var os = navigator.platform;
+                            var userAgent = navigator.userAgent;
+                            var info = "";
+                            var tempArray = "";
+                            if (os.indexOf("Win") > -1) {
+                                if (userAgent.indexOf("Windows NT 5.0") > -1) {
+                                    info += "Win2000"
+                                } else if (userAgent.indexOf("Windows NT 5.1") > -1) {
+                                    info += "WinXP"
+                                } else if (userAgent.indexOf("Windows NT 5.2") > -1) {
+                                    info += "Win2003"
+                                }
+                                else if (userAgent.indexOf("Windows NT 6.0") > -1) {
+                                    info += "WindowsVista"
+                                } else if (userAgent.indexOf("Windows NT 6.1") > -1 || userAgent.indexOf("Windows 7") > -1) {
+                                    info += "Win7"
+                                } else if (userAgent.indexOf("Windows NT 6.2") > -1 || userAgent.indexOf("Windows 8") > -1) {
+                                    info += "Win8"
+                                }
+                                else if (userAgent.indexOf("Windows NT 6.3") > -1 || userAgent.indexOf("Windows 8.1") > -1) {
+                                    info += "Win8.1"
+                                } else if (userAgent.indexOf("Windows NT 10.0") > -1 || userAgent.indexOf("Windows 10") > -1) {
+                                    info += "Win10"
+                                } else {
+                                    info += "Other"
+                                }
+                            } else if (os.indexOf("Mac") > -1) {
+                                info += "Mac"
+                            } else if (os.indexOf("X11") > -1) {
+                                info += "Unix"
+                            } else if (os.indexOf("Linux") > -1) {
+                                info += "Linux"
+                            } else { info += "Other" } info += "/";
+                            var isOpera = userAgent.indexOf("Opera") > -1;
+                            var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera;
+                            var isEdge = userAgent.toLowerCase().indexOf("edge") > -1 && !isIE;
+                            var isIE11 = (userAgent.toLowerCase().indexOf("trident") > -1 && userAgent.indexOf("rv") > -1);
+                            if (/[Ff]irefox(\/\d+\.\d+)/.test(userAgent)) {
+                                tempArray = /([Ff]irefox)\/(\d+\.\d+)/.exec(userAgent);
+                                info += tempArray[1] + tempArray[2]
+                            } else if (isIE) {
+                                var version = "";
+                                var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+                                reIE.test(userAgent);
+                                var fIEVersion = parseFloat(RegExp["$1"]);
+                                if (fIEVersion == 7) {
+                                    version = "IE7"
+                                } else if (fIEVersion == 8) {
+                                    version = "IE8"
+                                } else if (fIEVersion == 9) { version = "IE9" } else if (fIEVersion == 10) { version = "IE10" } else { version = "0" } info += version
+                            } else if (isEdge) { info += "Edge" } else if (isIE11) { info += "IE11" } else if (/[Cc]hrome\/\d+/.test(userAgent)) { tempArray = /([Cc]hrome)\/(\d+)/.exec(userAgent); info += tempArray[1] + tempArray[2] } else if (/[Vv]ersion\/\d+\.\d+\.\d+(\.\d)* *[Ss]afari/.test(userAgent)) { tempArray = /[Vv]ersion\/(\d+\.\d+\.\d+)(\.\d)* *([Ss]afari)/.exec(userAgent); info += tempArray[3] + tempArray[1] } else if (/[Oo]pera.+[Vv]ersion\/\d+\.\d+/.test(userAgent)) { tempArray = /([Oo]pera).+[Vv]ersion\/(\d+)\.\d+/.exec(userAgent); info += tempArray[1] + tempArray[2] } else { info += "unknown" } return info
+                        }; document.write("欢迎来自" + returnCitySN["cname"] + "的朋友"); document.write(",您的 IP 是:" + returnCitySN["cip"]); document.write(",您使用的是:" + getOSAndBrowser());
+                    </script>
+                </div>
+                <br>
+                <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+                        <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+                </div>
+                <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages 和 Gitee Pages">
+                        <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub & Gitee</span></a>
+                </div>
 
-    </div>
-    
-  
-  <footer class="clearfix">
-    <br><br>
-    
-      
-        <br>
-        <div class="social-wrapper">
-          
+                <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="https://www.foreverblog.cn/blog/1579.html" target="_blank" title="[A2Data@十年之约]">
+                        <span class="badge-subject">Forever Blog</span><span class="badge-value bg-lightgrey">十年之约</span></a>
+                </div>
+
+                <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="https://www.a2data.cn/" target="_blank" title="DataScience提供内容创作">
+                        <span class="badge-subject">Copyright © 2017-2020</span><span class="badge-value bg-blueviolet">A2Data</span></a>
+                </div>
+                <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
+                        <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span></a>
+                </div>
+                <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
+                        <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
+                </div>
+                <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
+                        <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
+                </div>
             
-              <a href="https://github.com/A2Data"
-                class="social fab fa-github flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-            
-              <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=a2data@163.com"
-                class="social fas fa-envelope-open flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-            
-              <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=66860619"
-                class="social fab fa-qq flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-            
-              <a href="https://gitee.com/sqlsq_admin/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
-                class="social fab fa-weixin flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-            
-              <a href="https://me.csdn.net/weixin_47093227"
-                class="social fab fa-cuttlefish flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-        </div>
-              <div class="pure">
-                  <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
-                  <script>
-                      var getOSAndBrowser = function () {
-                          var os = navigator.platform;
-                          var userAgent = navigator.userAgent;
-                          var info = "";
-                          var tempArray = "";
-                          if (os.indexOf("Win") > -1) {
-                              if (userAgent.indexOf("Windows NT 5.0") > -1) {
-                                  info += "Win2000"
-                              } else if (userAgent.indexOf("Windows NT 5.1") > -1) {
-                                  info += "WinXP"
-                              } else if (userAgent.indexOf("Windows NT 5.2") > -1) {
-                                  info += "Win2003"
-                              }
-                              else if (userAgent.indexOf("Windows NT 6.0") > -1) {
-                                  info += "WindowsVista"
-                              } else if (userAgent.indexOf("Windows NT 6.1") > -1 || userAgent.indexOf("Windows 7") > -1) {
-                                  info += "Win7"
-                              } else if (userAgent.indexOf("Windows NT 6.2") > -1 || userAgent.indexOf("Windows 8") > -1) {
-                                  info += "Win8"
-                              }
-                              else if (userAgent.indexOf("Windows NT 6.3") > -1 || userAgent.indexOf("Windows 8.1") > -1) {
-                                  info += "Win8.1"
-                              } else if (userAgent.indexOf("Windows NT 10.0") > -1 || userAgent.indexOf("Windows 10") > -1) {
-                                  info += "Win10"
-                              } else {
-                                  info += "Other"
-                              }
-                          } else if (os.indexOf("Mac") > -1) {
-                              info += "Mac"
-                          } else if (os.indexOf("X11") > -1) {
-                              info += "Unix"
-                          } else if (os.indexOf("Linux") > -1) {
-                              info += "Linux"
-                          } else { info += "Other" } info += "/";
-                          var isOpera = userAgent.indexOf("Opera") > -1;
-                          var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera;
-                          var isEdge = userAgent.toLowerCase().indexOf("edge") > -1 && !isIE;
-                          var isIE11 = (userAgent.toLowerCase().indexOf("trident") > -1 && userAgent.indexOf("rv") > -1);
-                          if (/[Ff]irefox(\/\d+\.\d+)/.test(userAgent)) {
-                              tempArray = /([Ff]irefox)\/(\d+\.\d+)/.exec(userAgent);
-                              info += tempArray[1] + tempArray[2]
-                          } else if (isIE) {
-                              var version = "";
-                              var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
-                              reIE.test(userAgent);
-                              var fIEVersion = parseFloat(RegExp["$1"]);
-                              if (fIEVersion == 7) {
-                                  version = "IE7"
-                              } else if (fIEVersion == 8) {
-                                  version = "IE8"
-                              } else if (fIEVersion == 9) { version = "IE9" } else if (fIEVersion == 10) { version = "IE10" } else { version = "0" } info += version
-                          } else if (isEdge) { info += "Edge" } else if (isIE11) { info += "IE11" } else if (/[Cc]hrome\/\d+/.test(userAgent)) { tempArray = /([Cc]hrome)\/(\d+)/.exec(userAgent); info += tempArray[1] + tempArray[2] } else if (/[Vv]ersion\/\d+\.\d+\.\d+(\.\d)* *[Ss]afari/.test(userAgent)) { tempArray = /[Vv]ersion\/(\d+\.\d+\.\d+)(\.\d)* *([Ss]afari)/.exec(userAgent); info += tempArray[3] + tempArray[1] } else if (/[Oo]pera.+[Vv]ersion\/\d+\.\d+/.test(userAgent)) { tempArray = /([Oo]pera).+[Vv]ersion\/(\d+)\.\d+/.exec(userAgent); info += tempArray[1] + tempArray[2] } else { info += "unknown" } return info
-                      }; document.write("欢迎来自" + returnCitySN["cname"] + "的朋友"); document.write(",您的 IP 是:" + returnCitySN["cip"]); document.write(",您使用的是:" + getOSAndBrowser());
-                  </script>
-              </div>
-              <br>
-              <div class="github-badge">
-                  <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
-                      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
-              </div>
-              <div class="github-badge">
-                  <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages 和 Gitee Pages">
-                      <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub & Gitee</span></a>
-              </div>
-              <div class="github-badge">
-                  <a style="color: #fff" rel="license" href="https://www.a2data.cn/" target="_blank" title="DataScience提供内容创作">
-                      <span class="badge-subject">Copyright © 2017-2020</span><span class="badge-value bg-blueviolet">A2Data</span></a>
-              </div>
-              <div class="github-badge">
-                  <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
-                      <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span></a>
-              </div>
-              <div class="github-badge">
-                  <a style="color: #fff" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
-                      <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
-              </div>
-              <div class="github-badge">
-                  <a style="color: #fff" rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
-                      <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
-              </div>
-      
-    
-  </footer>
+        
+    </footer>
 
 
 
@@ -2899,28 +2415,95 @@
   }
 </style>
 
-    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
   </div>
   <div>
-    
-      
+    <!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      // 背景层
+      var bgDiv = document.createElement("div");
+      $(bgDiv).addClass("bg");
+      if ($(this).attr('bg')) {
+        $(bgDiv).css('background', $(this).attr('bg'));
+      }
+      $(this).wrap(bgDiv); // 背景层
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if($(".md").find("img").not('.inline').not('a img').length+$(".article-entry").find("img").length==0)return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+  
   
   <div id="rightmenu-wrapper">
     <ul class="list-v rightmenu" id="rightmenu-content">
-      
+
       
         
           
     <li>
       <a class='vlts-menu fix-cursor-default' 
-        
-        
-        
-          onclick="menuCopy()"
-        
-        
-          id="menu-copy-text"
-        >
+      
+      
+      
+         onclick="menuCopy()"
+              
+      
+         id="menu-copy-text"
+      >
         <i class='fas fa-copy fa-fw'></i> 复制选中内容
       </a>
     </li>
@@ -2944,12 +2527,12 @@
           
     <li>
       <a class='vlts-menu fix-cursor-default' href=https://support.qq.com/products/176810/
-        
-        
-        
-        
-          id="https:supportqqcomproducts176810"
-        >
+      
+      
+      
+      
+         id="https:supportqqcomproducts176810"
+              >
         <i class='fa fa-question fa-fw'></i> 吐槽墙
       </a>
     </li>
@@ -2960,12 +2543,12 @@
           
     <li>
       <a class='vlts-menu fix-cursor-default' href=/tools/
-        
-        
-        
-        
-          id="tools"
-        >
+      
+      
+      
+      
+         id="tools"
+              >
         <i class='fa-fw fa fa-bars fa-fw fa-fw'></i> 软件控
       </a>
     </li>
@@ -2976,12 +2559,12 @@
           
     <li>
       <a class='vlts-menu fix-cursor-default' href=https://gitee.com/sqlsq_admin/cdn/raw/master/sys.png
-        
-        
-        
-        
-          id="https:giteecomsqlsq_admincdnrawmastersyspng"
-        >
+      
+      
+      
+      
+         id="https:giteecomsqlsq_admincdnrawmastersyspng"
+              >
         <i class='fa fa-fan fa-spin fa-fw'></i> 公众号
       </a>
     </li>
@@ -2996,12 +2579,12 @@
           
     <li>
       <a class='vlts-menu fix-cursor-default' href=/about/
-        
-        
-        
-        
-          id="about"
-        >
+      
+      
+      
+      
+         id="about"
+              >
         <i class='fas fa-location-arrow fa-fw'></i> 如人饮水
       </a>
     </li>
@@ -3012,12 +2595,12 @@
           
     <li>
       <a class='vlts-menu fix-cursor-default' href=/Creator-said/
-        
-        
-        
-        
-          id="Creator-said"
-        >
+      
+      
+      
+      
+         id="Creator-said"
+              >
         <i class='fa fa-globe fa-fw fa-fw'></i> 冷暖自知
       </a>
     </li>
@@ -3056,15 +2639,15 @@
     window.document.oncontextmenu = function (event) {
       if (event.ctrlKey || $(window).width() <= 500) {
         if (event.ctrlKey) return true;
-      if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) return true;
+        if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) return true;
       }
       setMenulocation();
       setMenuCopy();
       if (true == true) {
-      	try {
+        try {
           checkAPlayer();
           updateTitle();
-      	} catch (error) {console.log(error);}
+        } catch (error) {console.log(error);}
       }
       return false;
     };
@@ -3112,116 +2695,55 @@
     }
   </script>
 
-    
-    <!-- required -->
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
-
-
-<!-- optional -->
-
-  
-  
-  
-    
-<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
-
-    <script type="text/javascript">
-      $(function(){
-        var imgs=["https://gitee.com/sqlsq_admin/cdn/raw/master/index.png"];
-        if ('true' == 'true') {
-          function shuffle(arr){
-            /*From countercurrent-time*/
-            var n = arr.length;
-            while(n--) {
-              var index = Math.floor(Math.random() * n);
-              var temp = arr[index];
-              arr[index] = arr[n];
-              arr[n] = temp;
-            }
-          }
-          shuffle(imgs);
-        }
-        if ('.cover') {
-          $('.cover').backstretch(
-            imgs,
-          {
-            duration: "20000",
-            fade: "1500"
-          });
-        } else {
-          $.backstretch(
-            imgs,
-          {
-            duration: "20000",
-            fade: "1500"
-          });
-        }
-      });
-    </script>
-  
-
-
-
-  <script>
-  
-  var SEARCH_SERVICE = "hexo" || "hexo";
-  var ROOT = "/" || "/";
-  if (!ROOT.endsWith('/')) ROOT += '/';
-</script>
 
 
 
 
 
 
-  <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
-
-
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
 <script>
-  function pjax_fancybox() {
-    $(".article-entry").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
-      var element = document.createElement("a"); // a 标签
-      $(element).attr("class", "fancybox");
-      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
-      $(element).attr("href", $(this).attr("src"));
-      if ($(this).attr("data-original")) {
-        $(element).attr("href", $(this).attr("data-original"));
-      }
-      $(element).attr("data-fancybox", "images");
-      var caption = "";   // 描述信息
-      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
-        $(element).attr('data-caption', $(this).attr('alt'));
-        caption = $(this).attr('alt');
-      }
-      var div = document.createElement("div");
-      $(div).addClass("fancybox");
-      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
-      var span = document.createElement("span");
-      $(span).addClass("image-caption");
-      $(span).text(caption); // 加描述
-      $(this).after(span);  // 再套一层描述
-      $(this).wrap(element);  // 最后套 a 标签
-    })
-    $(".article-entry").find("img").fancybox({
-      selector: '[data-fancybox="images"]',
-      hash: false,
-      loop: false,
-      closeClick: true,
-      helpers: {
-        overlay: {closeClick: true}
-      },
-      buttons: [
-        "zoom",
-        "close"
-      ]
-    });
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
   };
-  $(function () {
-    pjax_fancybox();
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
   });
 </script>
+
+
+
+
+  
+  
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+  
+
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
@@ -3236,6 +2758,7 @@
         timelag = window.setTimeout(callback, seconds)
     }
     function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
         var copyHtml = '';
         copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
         copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
@@ -3284,6 +2807,7 @@
 
 
 
+
    <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
 <script type="text/javascript">
   function pjax_scrollrebeal() {
@@ -3306,8 +2830,8 @@
   <script>
   let APlayerController = new Object();
   APlayerController.id = '986297619';  // 设定全局音乐播放ID
-  APlayerController.volume = '0.7';
-  APlayerController.autoPlay = 'false';
+  APlayerController.volume = '0.3';
+  APlayerController.autoPlay = 'true';
 </script>
 
   
@@ -3316,10 +2840,6 @@
 
   
 <script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js"></script>
-
-
-  
-<script src="/js/aplayer.js"></script>
 
 
 
@@ -3369,23 +2889,25 @@
   }
 
   function pjax_valine() {
-    let pageUrl = $.trim($('#pjax-comment-path').text()) === "none" ? 
-      decodeURI(window.location.pathname) : $.trim($('#pjax-comment-path').text());
-    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) === "none" ?
-      "" : $.trim($('#pjax-comment-placeholder').text());
+    if(!document.querySelectorAll("#valine_container")[0])return;
 
-    let ALLPATH = '';
-    if(ALLPATH != '') pageUrl = ALLPATH;
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "嗨,请不要吝啬你的想法！小技巧：在昵称位置输入QQ号就可以自动补全邮箱哦~";
+
+    let path = $.trim($('#pjax-comment-path').text());
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
 
     var valine = new Valine();
     valine.init({
       el: '#valine_container',
       meta: meta,
       placeholder: pagePlaceholder,
-      path: pageUrl,
+      path: path,
       appId: "i1I90mFU8urYjNXgiqPT05Jt-gzGzoHsz",
       appKey: "GXgwCzMM0g2CnM8x0WCM7fPQ",
-      pageSize: '10',
+      pageSize: '5',
       avatar: 'robohash',
       lang: 'zh-cn',
       visitor: 'true',
@@ -3408,8 +2930,6 @@
 
 
 
-  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
-
 
   
 <script src="/js/app.js"></script>
@@ -3424,33 +2944,242 @@
   
 
 
+<!-- optional -->
 
-
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+(function ($) {
   
-<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
-
-  <script type="text/javascript">
-    $(function () {
-      Waves.attach('.flat-btn', ['waves-button']);
-      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-      Waves.attach('.flat-box', ['waves-block']);
-      Waves.attach('.float-box', ['waves-block', 'waves-float']);
-      Waves.attach('.waves-image');
-      Waves.init();
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
     });
-  </script>
+  
+})(jQuery);
+
+</script>
+
+
 
 
 
 
 
   
-    
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/comment_typing.js"></script>
 
-    <script>hljs.initHighlightingOnLoad();</script>
-  
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'Fsrd5NtVW8ovmaynVJ18xHO6-gzGzoHsz',
+    app_key: 'QYc2X76ulK8THVLHwpJfvsrG',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://www.a2data.cn' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://www.a2data.cn' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://www.a2data.cn' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
 
 
 
@@ -3501,7 +3230,7 @@
       try {
         var currentUrl = window.location.pathname;
         var targetUrl = e.triggerElement.href;
-        var banUrl = [""];
+        var banUrl = ["/Creator-said/"];
         if (banUrl[0] != "") {
           banUrl.forEach(item => {
             if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
@@ -3512,7 +3241,9 @@
       } catch (error) {}
 
       window.subData = null; // 移除标题（用于一二级导航栏切换处）
-      $.fancybox.close();    // 关闭弹窗
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
       $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
       $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
       $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
@@ -3545,19 +3276,12 @@
         $(this).parent().append($(this).remove());
       });
       try{
-        pjax_fancybox();
-        
-          
-          if ('.cover') {
-            $('.cover').backstretch("resize");
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
           } else {
-            $.backstretch("resize");
+            pjax_fancybox();
           }
         
-        
-        document.querySelectorAll('pre code').forEach((block) => {
-          hljs.highlightBlock(block);
-        });
         
         
           pjax_scrollrebeal();

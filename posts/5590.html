@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/3.0.0-rc.1'>
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0-rc.3'>
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
@@ -13,6 +13,7 @@
   <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
 
   <!-- 页面元数据 -->
   
@@ -32,25 +33,13 @@
   
 
   <!-- link -->
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
 
   
   
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css">
-
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-
-  
-
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
 
   
 
@@ -68,24 +57,31 @@
   
 
   
-    
-      
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/styles/solarized-light.css">
-
-    
-  
   
     
 <link rel="stylesheet" href="/css/style.css">
 
   
-
   
   
+  <!-- 脚本懒加载函数 -->
+  <script>
+  function loadScript(src, cb) {
+    var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+    var script = document.createElement('script');
+    script.setAttribute('type','text/javascript');
+    if (cb) script.onload = cb;
+    script.setAttribute('src', src);
+    HEAD.appendChild(script);
+  }
+  //https://github.com/filamentgroup/loadCSS
+  !function(c){"use strict";var e=function(e,t,n,r){var o,i=c.document,a=i.createElement("link");if(t)o=t;else{var d=(i.body||i.getElementsByTagName("head")[0]).childNodes;o=d[d.length-1]}var f=i.styleSheets;if(r)for(var l in r)r.hasOwnProperty(l)&&a.setAttribute(l,r[l]);a.rel="stylesheet",a.href=e,a.media="only x",function e(t){if(i.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(a,t?o:o.nextSibling)});var s=function(e){for(var t=a.href,n=f.length;n--;)if(f[n].href===t)return e();setTimeout(function(){s(e)})};function u(){a.addEventListener&&a.removeEventListener("load",u),a.media=n||"all"}return a.addEventListener&&a.addEventListener("load",u),(a.onloadcssdefined=s)(u),a};"undefined"!=typeof exports?exports.loadCSS=e:c.loadCSS=e}("undefined"!=typeof global?global:this);
+  </script>
+  <script id="loadcss"></script>
 </head>
 
 <body>
-  <header class="l_header shadow blur" style='opacity: 0'>
+  <header class="l_header auto shadow blur " style='opacity: 0' >
   <div class='container'>
   <div class='wrapper'>
     <div class='nav-sub'>
@@ -102,7 +98,7 @@
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='https://gitee.com/sqlsq_admin/cdn/raw/master/logos.jpg'/>
+            <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
           
@@ -329,9 +325,9 @@
   
     <meting-js
       theme='#1BCDFC'
-      volume='0.7'
+      volume='0.3'
       loop='all'
-      order='random'
+      order='list'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -792,7 +788,7 @@
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fas fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search..." />
+          <input type="text" class="input u-search-input" placeholder="想找些什么~" />
         </form>
       </div>
 
@@ -1454,14 +1450,17 @@
   </div>
 </header>
 
+  <div class="l_body">
+    <div class="l_cover">
   
-  
-  
-  <div class="cover-wrapper">
-    <div class='cover post' style="display: none;">
-      <div class='cover-bg lazyload placeholder' data-bg=""></div>
-      <div class='cover-body'>
-  <div class='a'>
+    
+    
+        <div class='cover-wrapper post dock' style="display: none;">
+          
+            <div class='cover-bg lazyload placeholder' data-bg="https://7.dusays.com/2020/09/10/bcac99047bac5.png"></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
     
     
       <p class="title">数据科学</p>
@@ -1470,8 +1469,8 @@
       <p class="subtitle">Welcome To A2Data</p>
     
   </div>
-  <div class='b'>
-    <div class='menu navigation dock'>
+  <div class='bottom'>
+    <div class='menu navigation'>
       <div class='list-h'>
         
           
@@ -1479,42 +1478,35 @@
               
               
               id="https:cloudtencentcomdeveloperuser6511370">
-              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/txy1.png'><p>云+社区</p>
+              <img src='https://7bu.top/2020/09/10/3b1a5d01b5bb5.png'><p>云+社区</p>
             </a>
           
             <a target="_blank" rel="noopener" href="https://www.cnblogs.com/a2data/"
               
               
               id="https:wwwcnblogscoma2data">
-              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/bky.png'><p>博客园</p>
+              <img src='https://7bu.top/2020/09/10/6c17234498a6e.png'><p>博客园</p>
             </a>
           
             <a target="_blank" rel="noopener" href="https://my.oschina.net/u/4159456"
               
               
               id="https:myoschinanetu4159456">
-              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/kyzg.png'><p>OsChina</p>
+              <img src='https://7bu.top/2020/09/10/e6c4696c47126.png'><p>OsChina</p>
             </a>
           
-            <a target="_blank" rel="noopener" href="https://support.qq.com/products/176810/"
+            <a target="_blank" rel="noopener" href="https://7bu.top/2020/09/10/90dc33472afa0.png"
               
               
-              id="https:supportqqcomproducts176810">
-              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/shequ.png'><p>社群</p>
+              id="https:7butop2020091090dc33472afa0png">
+              <img src='https://7bu.top/2020/09/10/76cd32a03a642.png'><p>语雀</p>
             </a>
           
-            <a target="_blank" rel="noopener" href="https://my.oschina.net/u/4159456"
+            <a target="_blank" rel="noopener" href="https://www.toutiao.com/c/user/token/MS4wLjABAAAAcK5aMHwt54R5vO187DNnDE_e0k26RFa-W4x5LKX0jao/"
               
               
-              id="https:myoschinanetu4159456">
-              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/kyzg.png'><p>OsChina</p>
-            </a>
-          
-            <a target="_blank" rel="noopener" href="https://support.qq.com/products/176810/"
-              
-              
-              id="https:supportqqcomproducts176810">
-              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/shequ.png'><p>社群</p>
+              id="https:wwwtoutiaocomcusertokenMS4wLjABAAAAcK5aMHwt54R5vO187DNnDE_e0k26RFa-W4x5LKX0jao">
+              <img src='https://7bu.top/2020/09/10/a09f96e91af8d.png'><p>头条</p>
             </a>
           
         
@@ -1523,84 +1515,68 @@
   </div>
 </div>
 
-      <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
-    </div>
+          <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
   </div>
   
+    <div class='safearea'>
+      <div class='body-wrapper' id="pjax-container">
+        
+          <!--此文件用来存放一些不方便取值的变量--> 
+<!--思路大概是将值藏到重加载的区域内--> 
+ 
+ 
+ 
+<div id="pjax-data" style="display: none"> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">Day1.概述</div> 
+  <div id="pjax-enable-cover">true</div> 
+  <div id="pjax-comment-path"></div> 
+  <div id="pjax-comment-placeholder"></div> 
+</div> 
+ 
+ 
+<script> 
+  // 处理封面 此时 jquery 还没加载 
+  if ("none" == "none") { // 移除封面 
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "none"; 
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
+  } else { 
+    if ("none" == "half") { // 半屏 
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half'); 
+      document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
+    } else if ("none" == "full") { // 全屏 
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full'); 
+      document.getElementsByClassName('scroll-down')[0].style.display = ""; 
+    } 
+    document.getElementsByClassName('cover-wrapper')[0].style.display = ""; 
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show"); 
+  } 
+</script> 
+ 
 
-
-  <div class="l_body nocover">
-    <div class='body-wrapper' id="pjax-container">
-      
-        <!--此文件用来存放一些不方便取值的变量-->
-<!--思路大概是将值藏到重加载的区域内-->
-
-
-
-<div id="pjax-data" style="display: none">
-  <div id="pjax-ispage">true</div>
-  <div id="pjax-pageTitle">Day1.概述</div>
-  <div id="pjax-enable-cover">true</div>
-  <div id="pjax-comment-path">none</div>
-  <div id="pjax-comment-placeholder">none</div>
-</div>
-
-
-<script>
-  // 处理封面 此时 jquery 还没加载
-  if ("none" == "none") { // 移除封面
-    document.getElementsByClassName('cover')[0].style.display = "none"; 
-    document.getElementsByClassName('l_body')[0].classList.add("nocover");
-    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
-  } else {
-    if ("none" == "blog") { // 半屏
-      document.getElementsByClassName('cover')[0].classList.remove("full");
-      document.getElementsByClassName('cover')[0].classList.add("half");
-      document.getElementsByClassName('scroll-down')[0].style.display = "none";
-    } else if ("none" == "docs") { // 全屏
-      document.getElementsByClassName('cover')[0].classList.remove("half");
-      document.getElementsByClassName('cover')[0].classList.add("full");
-      document.getElementsByClassName('scroll-down')[0].style.display = "";
-    }
-    document.getElementsByClassName('cover')[0].style.display = "";
-    document.getElementsByClassName('l_body', 'show')[0].classList.remove("nocover");
-    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show");
-  }
-</script>
-
-
-      
-      
+        
+        
 
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow floatable article-type-post" id="post" itemscope itemprop="blogPost">
   
 
+
   
-    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
-      
-
-
-  <section class='meta'>
+  <div class="article-meta" id="top">
     
-      
-      
-      <div class="meta" id="header-meta">
+    
+    
+      <h1 class="title">
+        Day1.概述
+      </h1>
+      <div class='new-meta-box'>
         
           
-  <h1 class="title">
-    <a href="/posts/5590.html">
-      Day1.概述
-    </a>
-  </h1>
-
-
-        
-        <div class='new-meta-box'>
-          
             
-          
-            
-              
 <div class='new-meta-item author'>
   <a class='author' href="/" rel="nofollow">
     <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
@@ -1608,50 +1584,86 @@
   </a>
 </div>
 
-            
           
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>数据可视化</p>
-    </a>
-  </div>
-
-
-            
+        
           
-            
-              <div class="new-meta-item date">
+            <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：May 12, 2020</p>
   </a>
 </div>
 
-            
           
-            
-              
-
-            
-          
-        </div>
         
-          <hr>
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/">数据可视化</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>1k words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>3 min</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Day1.概述" data-path="/posts/5590.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
+  
+  <a href="/posts/5590.html#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/posts/5590.html">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+          
         
       </div>
     
-  </section>
+  </div>
 
 
-      <section class="article typo">
-        <div class="article-entry" itemprop="articleBody">
-          
-          
-          <p>数据可视化，基础概述。</p>
+  
+  
+  <p>数据可视化，基础概述。</p>
 <a id="more"></a>
 
 
@@ -1671,99 +1683,64 @@
 <p>等待安装完成后，点击”FInish“完成安装</p>
 <h4 id="启动Jupyter-Notebook"><a href="#启动Jupyter-Notebook" class="headerlink" title="启动Jupyter Notebook"></a>启动Jupyter Notebook</h4><p>Jupyter Notebook是一个开源的Web应用程序，允许用户创建和共享包含代码、方程式、可视化和文本的文档。使用Jupyter Notebook可以让我们在网页中编辑，运行和调试代码，使用起来非常方便。</p>
 <p>Aanconda安装好后，找到菜单目录，找到<strong>Anaconda Navigtor</strong>图标，双击打开，出现以下界面：</p>
-<p><img src="Day1-%E6%A6%82%E8%BF%B0.assets/image-20200509225153813.png" alt="image-20200509225153813"></p>
+<p><img src="Day1-%E6%A6%82%E8%BF%B0.assets/image-20200509225153813.png" class="lazyload" data-srcset="Day1-%E6%A6%82%E8%BF%B0.assets/image-20200509225153813.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200509225153813"></p>
 <p>选择Jupyter Notebook，点击“Launch”。启动Jupyter Notebook，此时网页浏览器会打开File，文件界面。</p>
-<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/5101171-1ff2dee783b7ac11" alt="img"></p>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/5101171-1ff2dee783b7ac11" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/5101171-1ff2dee783b7ac11" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="img"></p>
 <p>我们可以在桌面建立一个文件，命名为“数据可视化”，来保存代码文件。</p>
 <p>在Jupyter Notebook中，选择路径：Desktop/数据可视化/，在右上角处点击New，新建一个Python3文件：</p>
-<p><img src="Day1-%E6%A6%82%E8%BF%B0.assets/image-20200509135037813.png" alt="image-20200509135037813"></p>
+<p><img src="Day1-%E6%A6%82%E8%BF%B0.assets/image-20200509135037813.png" class="lazyload" data-srcset="Day1-%E6%A6%82%E8%BF%B0.assets/image-20200509135037813.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200509135037813"></p>
 <p> 文件建好后，我们在文本框中编辑代码，点击按钮“运行”可以进行调试并出结果。</p>
-<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/5101171-d0731dccc60e4f24" alt="img"></p>
+<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/5101171-d0731dccc60e4f24" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/5101171-d0731dccc60e4f24" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="img"></p>
 <p>有关于Jupyter Notebook的更多使用方法，可以在网上搜索相关文档进行学习。</p>
 
-          
-            <div class='article_footer'>
+  
+  
+    
+    <div class='footer'>
+      
+      
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\posts\64528.html" title="Day2.基础语法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.基础语法</span><span class="excerpt">数据可视化，基础语法。</span></a><a class="item" href="\posts\8c0ed688.html" title="Python数据类型-列表" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Python数据类型-列表</span></a><a class="item" href="\posts\2b36786b.html" title="Anaconda镜像" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Anaconda镜像</span><span class="excerpt">anaconda 镜像源 。</span></a><a class="item" href="\posts\34946.html" title="Python函数(上)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191217081025.png" /><span class="title">Python函数(上)</span><span class="excerpt">Python函数介绍上篇</span></a></div></section></div>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
               
-                
-  
-    
-    
-
-
-
-  
-
-  
-    
-    
-
-
-
-  
-
-  
-    
-    
-
-<section class="widget copyright  desktop mobile">
-  <div class='content'>
-    
-      <blockquote>
-        
-          
-            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
-
-          
-        
-          
-            <p>本文永久链接是：<a href=http://www.a2data.cn/posts/5590.html>http://www.a2data.cn/posts/5590.html</a></p>
-          
-        
-      </blockquote>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode  desktop mobile">
-  
-
-  <div class='content article-entry'>
-    
-      
-        <div class='fancybox'><img src='https://gitee.com/sqlsq_admin/cdn/raw/master/alipay.jpg'
-        
-          height='64px'
-        ></div>
-      
-    
-      
-        <div class='fancybox'><img src='https://gitee.com/sqlsq_admin/cdn/raw/master/wechat.png'
-        
-          height='64px'
-        ></div>
-      
-    
-  </div>
-</section>
-
-  
-
+                <p>版权声明：本网站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="/">数据科学</a></p>
 
               
-            </div>
-          
+            
+              
+                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/5590.html>http://www.a2data.cn/posts/5590.html</a></p>
+              
+            
+          </blockquote>
         </div>
-        
-          
+      
+      
+        <div class='donate'>
+          <div class='imgs'>
+            
+              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/alipay.jpg'>
+            
+              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/wechat.png'>
+            
+          </div>
+        </div>
+      
+    </div>
+  
+  
+    
 
 
-  <section class='meta' id="footer-meta">
+  <div class='article-meta' id="bottom">
     <div class='new-meta-box'>
       
         
@@ -1785,7 +1762,22 @@
         
       
         
+      
+        
           
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>1k words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>3 min</p>
+    </a>
+  </div>
+
 
         
       
@@ -1848,26 +1840,28 @@
         
       
     </div>
-  </section>
+  </div>
 
 
-        
-        
-          <div class="prev-next">
-            
-              <a class='prev' href='/posts/64528.html'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Day2.基础语法</p>
-                <p class='content'>数据可视化，基础语法。
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/posts/64528.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Day2.基础语法</p>
+          <p class='content'>数据可视化，基础语法。
 
 
 
 Day2. Python基础语法基础语法想学好数据分析，最好掌握Python语言。Python语言简洁，有大量的第三方库，功能强大，能解决数据分析的大部分问题。在数...</p>
-              </a>
-            
-            
-              <a class='next' href='/posts/9618.html'>
-                <p class='title'>Java 集合体系<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                <p class='content'>Java集合体系
+        </a>
+      
+      
+        <a class='next' href='/posts/9618.html'>
+          <p class='title'>Java 集合体系<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Java集合体系
 
 
 
@@ -1879,37 +1873,27 @@ Day2. Python基础语法基础语法想学好数据分析，最好掌握Python�
 实现： 最底层
 
 Collection—...</p>
-              </a>
-            
-          </div>
-        
-      </section>
-    </article>
-  
-
-  
-    
-
-  <article class="post white-box reveal comments shadow">
-    <section class="article typo">
-      <p ct><i class='fas fa-comments'></i> 评论</p>
+        </a>
       
-      <section id="comments">
-        <div id="valine_container" class="valine_thread">
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow floatable" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
   <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-      </section>
-    </section>
   </article>
 
 
-  
 
 
-
-
-<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
 
 
 </div>
@@ -1919,22 +1903,85 @@ Collection—...</p>
     
     
 
-<section class="widget qrcode shadow desktop">
+<section class="widget grid shadow floatable desktop mobile">
   
   <header>
     
-      <i class="fas fa-mobile fa-fw" aria-hidden="true"></i><span class='name'>小程序</span>
+      <i class="fas fa-map-signs fa-fw" aria-hidden="true"></i><span class='name'>导航</span>
     
   </header>
 
 
-  <div class='content article-entry'>
-    
+  <div class='content'>
+    <div class="grid navigation fixed">
       
-        <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/xcx.jpg'
-        >
+        <a class="flat-box" title="/" href="/"
+          
+          
+            target="_blank"
+          
+          id="home">
+          
+            <i class="fas fa-clock fa-fw fa-fw" aria-hidden="true"></i>
+          
+          近期文章
+        </a>
       
-    
+        <a class="flat-box" title="/friends/" href="/friends/"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-users fa-fw" aria-hidden="true"></i>
+          
+          友情链接
+        </a>
+      
+        <a class="flat-box" title="/contact/" href="/contact/"
+          
+          
+          id="contact">
+          
+            <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+          
+          留言板
+        </a>
+      
+        <a class="flat-box" title="/Creator-said/" href="/Creator-said/"
+          
+          
+          id="Creator-said">
+          
+            <i class="fas fa-comment-dots fa-fw fa-fw" aria-hidden="true"></i>
+          
+          主创说
+        </a>
+      
+        <a class="flat-box" title="/tags/" href="/tags/"
+          
+          
+          id="tags">
+          
+            <i class="fas fa-fire fa-fw fa-fw" aria-hidden="true"></i>
+          
+          热门标签
+        </a>
+      
+        <a class="flat-box" title="https://travellings.now.sh/" href="https://travellings.now.sh/"
+          
+            rel="noopener external nofollow noreferrer"
+          
+          
+            target="_blank"
+          
+          id="https:travellingsnowsh">
+          
+            <i class="fas fa-location-arrow fa-fw" aria-hidden="true"></i>
+          
+          开往
+        </a>
+      
+    </div>
   </div>
 </section>
 
@@ -1946,7 +1993,7 @@ Collection—...</p>
 
 
 
-  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+  <section class="widget toc-wrapper shadow floatable desktop mobile" id="toc-div" >
     
   <header>
     
@@ -1968,143 +2015,172 @@ Collection—...</p>
 
 
 
-    </div>
-    
-  
-  <footer class="clearfix">
-    <br><br>
-    
-      
-        <br>
-        <div class="social-wrapper">
-          
-            
-              <a href="https://github.com/A2Data"
-                class="social fab fa-github flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-            
-              <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=a2data@163.com"
-                class="social fas fa-envelope-open flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-            
-              <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=66860619"
-                class="social fab fa-qq flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-            
-              <a href="https://gitee.com/sqlsq_admin/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
-                class="social fab fa-weixin flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-            
-              <a href="https://me.csdn.net/weixin_47093227"
-                class="social fab fa-cuttlefish flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-        </div>
-              <div class="pure">
-                  <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
-                  <script>
-                      var getOSAndBrowser = function () {
-                          var os = navigator.platform;
-                          var userAgent = navigator.userAgent;
-                          var info = "";
-                          var tempArray = "";
-                          if (os.indexOf("Win") > -1) {
-                              if (userAgent.indexOf("Windows NT 5.0") > -1) {
-                                  info += "Win2000"
-                              } else if (userAgent.indexOf("Windows NT 5.1") > -1) {
-                                  info += "WinXP"
-                              } else if (userAgent.indexOf("Windows NT 5.2") > -1) {
-                                  info += "Win2003"
-                              }
-                              else if (userAgent.indexOf("Windows NT 6.0") > -1) {
-                                  info += "WindowsVista"
-                              } else if (userAgent.indexOf("Windows NT 6.1") > -1 || userAgent.indexOf("Windows 7") > -1) {
-                                  info += "Win7"
-                              } else if (userAgent.indexOf("Windows NT 6.2") > -1 || userAgent.indexOf("Windows 8") > -1) {
-                                  info += "Win8"
-                              }
-                              else if (userAgent.indexOf("Windows NT 6.3") > -1 || userAgent.indexOf("Windows 8.1") > -1) {
-                                  info += "Win8.1"
-                              } else if (userAgent.indexOf("Windows NT 10.0") > -1 || userAgent.indexOf("Windows 10") > -1) {
-                                  info += "Win10"
-                              } else {
-                                  info += "Other"
-                              }
-                          } else if (os.indexOf("Mac") > -1) {
-                              info += "Mac"
-                          } else if (os.indexOf("X11") > -1) {
-                              info += "Unix"
-                          } else if (os.indexOf("Linux") > -1) {
-                              info += "Linux"
-                          } else { info += "Other" } info += "/";
-                          var isOpera = userAgent.indexOf("Opera") > -1;
-                          var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera;
-                          var isEdge = userAgent.toLowerCase().indexOf("edge") > -1 && !isIE;
-                          var isIE11 = (userAgent.toLowerCase().indexOf("trident") > -1 && userAgent.indexOf("rv") > -1);
-                          if (/[Ff]irefox(\/\d+\.\d+)/.test(userAgent)) {
-                              tempArray = /([Ff]irefox)\/(\d+\.\d+)/.exec(userAgent);
-                              info += tempArray[1] + tempArray[2]
-                          } else if (isIE) {
-                              var version = "";
-                              var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
-                              reIE.test(userAgent);
-                              var fIEVersion = parseFloat(RegExp["$1"]);
-                              if (fIEVersion == 7) {
-                                  version = "IE7"
-                              } else if (fIEVersion == 8) {
-                                  version = "IE8"
-                              } else if (fIEVersion == 9) { version = "IE9" } else if (fIEVersion == 10) { version = "IE10" } else { version = "0" } info += version
-                          } else if (isEdge) { info += "Edge" } else if (isIE11) { info += "IE11" } else if (/[Cc]hrome\/\d+/.test(userAgent)) { tempArray = /([Cc]hrome)\/(\d+)/.exec(userAgent); info += tempArray[1] + tempArray[2] } else if (/[Vv]ersion\/\d+\.\d+\.\d+(\.\d)* *[Ss]afari/.test(userAgent)) { tempArray = /[Vv]ersion\/(\d+\.\d+\.\d+)(\.\d)* *([Ss]afari)/.exec(userAgent); info += tempArray[3] + tempArray[1] } else if (/[Oo]pera.+[Vv]ersion\/\d+\.\d+/.test(userAgent)) { tempArray = /([Oo]pera).+[Vv]ersion\/(\d+)\.\d+/.exec(userAgent); info += tempArray[1] + tempArray[2] } else { info += "unknown" } return info
-                      }; document.write("欢迎来自" + returnCitySN["cname"] + "的朋友"); document.write(",您的 IP 是:" + returnCitySN["cip"]); document.write(",您使用的是:" + getOSAndBrowser());
-                  </script>
-              </div>
-              <br>
-              <div class="github-badge">
-                  <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
-                      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
-              </div>
-              <div class="github-badge">
-                  <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages 和 Gitee Pages">
-                      <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub & Gitee</span></a>
-              </div>
-              <div class="github-badge">
-                  <a style="color: #fff" rel="license" href="https://www.a2data.cn/" target="_blank" title="DataScience提供内容创作">
-                      <span class="badge-subject">Copyright © 2017-2020</span><span class="badge-value bg-blueviolet">A2Data</span></a>
-              </div>
-              <div class="github-badge">
-                  <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
-                      <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span></a>
-              </div>
-              <div class="github-badge">
-                  <a style="color: #fff" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
-                      <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
-              </div>
-              <div class="github-badge">
-                  <a style="color: #fff" rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
-                      <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
-              </div>
+      </div>
       
     
-  </footer>
+    <footer class="footer clearfix">
+        <br><br>
+        
+            
+                <br>
+                <div class="social-wrapper">
+                    
+                        
+                            <a href="https://github.com/A2Data"
+                               class="social fab fa-github flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                                
+                            </a>
+                        
+                    
+                        
+                            <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=a2data@163.com"
+                               class="social fas fa-envelope-open flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                                
+                            </a>
+                        
+                    
+                        
+                            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=66860619"
+                               class="social fab fa-qq flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                                
+                            </a>
+                        
+                    
+                        
+                            <a href="https://gitee.com/sqlsq_admin/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
+                               class="social fab fa-weixin flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                                
+                            </a>
+                        
+                    
+                        
+                            <a href="https://me.csdn.net/weixin_47093227"
+                               class="social fab fa-cuttlefish flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                                
+                            </a>
+                        
+                    
+                        
+                            <a href="https://music.163.com/#/user/home?id=405423746"
+                               class="social fas fa-headphones-alt flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                                
+                            </a>
+                        
+                    
+                        
+                            <a href="https://travellings.now.sh/"
+                               class="social fa fa-binoculars flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                                
+                            </a>
+                        
+                    
+                </div>
+                <div class="pure">
+                    <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+                    <script>
+                        var getOSAndBrowser = function () {
+                            var os = navigator.platform;
+                            var userAgent = navigator.userAgent;
+                            var info = "";
+                            var tempArray = "";
+                            if (os.indexOf("Win") > -1) {
+                                if (userAgent.indexOf("Windows NT 5.0") > -1) {
+                                    info += "Win2000"
+                                } else if (userAgent.indexOf("Windows NT 5.1") > -1) {
+                                    info += "WinXP"
+                                } else if (userAgent.indexOf("Windows NT 5.2") > -1) {
+                                    info += "Win2003"
+                                }
+                                else if (userAgent.indexOf("Windows NT 6.0") > -1) {
+                                    info += "WindowsVista"
+                                } else if (userAgent.indexOf("Windows NT 6.1") > -1 || userAgent.indexOf("Windows 7") > -1) {
+                                    info += "Win7"
+                                } else if (userAgent.indexOf("Windows NT 6.2") > -1 || userAgent.indexOf("Windows 8") > -1) {
+                                    info += "Win8"
+                                }
+                                else if (userAgent.indexOf("Windows NT 6.3") > -1 || userAgent.indexOf("Windows 8.1") > -1) {
+                                    info += "Win8.1"
+                                } else if (userAgent.indexOf("Windows NT 10.0") > -1 || userAgent.indexOf("Windows 10") > -1) {
+                                    info += "Win10"
+                                } else {
+                                    info += "Other"
+                                }
+                            } else if (os.indexOf("Mac") > -1) {
+                                info += "Mac"
+                            } else if (os.indexOf("X11") > -1) {
+                                info += "Unix"
+                            } else if (os.indexOf("Linux") > -1) {
+                                info += "Linux"
+                            } else { info += "Other" } info += "/";
+                            var isOpera = userAgent.indexOf("Opera") > -1;
+                            var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera;
+                            var isEdge = userAgent.toLowerCase().indexOf("edge") > -1 && !isIE;
+                            var isIE11 = (userAgent.toLowerCase().indexOf("trident") > -1 && userAgent.indexOf("rv") > -1);
+                            if (/[Ff]irefox(\/\d+\.\d+)/.test(userAgent)) {
+                                tempArray = /([Ff]irefox)\/(\d+\.\d+)/.exec(userAgent);
+                                info += tempArray[1] + tempArray[2]
+                            } else if (isIE) {
+                                var version = "";
+                                var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+                                reIE.test(userAgent);
+                                var fIEVersion = parseFloat(RegExp["$1"]);
+                                if (fIEVersion == 7) {
+                                    version = "IE7"
+                                } else if (fIEVersion == 8) {
+                                    version = "IE8"
+                                } else if (fIEVersion == 9) { version = "IE9" } else if (fIEVersion == 10) { version = "IE10" } else { version = "0" } info += version
+                            } else if (isEdge) { info += "Edge" } else if (isIE11) { info += "IE11" } else if (/[Cc]hrome\/\d+/.test(userAgent)) { tempArray = /([Cc]hrome)\/(\d+)/.exec(userAgent); info += tempArray[1] + tempArray[2] } else if (/[Vv]ersion\/\d+\.\d+\.\d+(\.\d)* *[Ss]afari/.test(userAgent)) { tempArray = /[Vv]ersion\/(\d+\.\d+\.\d+)(\.\d)* *([Ss]afari)/.exec(userAgent); info += tempArray[3] + tempArray[1] } else if (/[Oo]pera.+[Vv]ersion\/\d+\.\d+/.test(userAgent)) { tempArray = /([Oo]pera).+[Vv]ersion\/(\d+)\.\d+/.exec(userAgent); info += tempArray[1] + tempArray[2] } else { info += "unknown" } return info
+                        }; document.write("欢迎来自" + returnCitySN["cname"] + "的朋友"); document.write(",您的 IP 是:" + returnCitySN["cip"]); document.write(",您使用的是:" + getOSAndBrowser());
+                    </script>
+                </div>
+                <br>
+                <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+                        <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+                </div>
+                <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages 和 Gitee Pages">
+                        <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub & Gitee</span></a>
+                </div>
+
+                <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="https://www.foreverblog.cn/blog/1579.html" target="_blank" title="[A2Data@十年之约]">
+                        <span class="badge-subject">Forever Blog</span><span class="badge-value bg-lightgrey">十年之约</span></a>
+                </div>
+
+                <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="https://www.a2data.cn/" target="_blank" title="DataScience提供内容创作">
+                        <span class="badge-subject">Copyright © 2017-2020</span><span class="badge-value bg-blueviolet">A2Data</span></a>
+                </div>
+                <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
+                        <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span></a>
+                </div>
+                <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
+                        <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
+                </div>
+                <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
+                        <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
+                </div>
+            
+        
+    </footer>
 
 
 
@@ -2165,28 +2241,95 @@ Collection—...</p>
   }
 </style>
 
-    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
   </div>
   <div>
-    
-      
+    <!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      // 背景层
+      var bgDiv = document.createElement("div");
+      $(bgDiv).addClass("bg");
+      if ($(this).attr('bg')) {
+        $(bgDiv).css('background', $(this).attr('bg'));
+      }
+      $(this).wrap(bgDiv); // 背景层
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if($(".md").find("img").not('.inline').not('a img').length+$(".article-entry").find("img").length==0)return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+  
   
   <div id="rightmenu-wrapper">
     <ul class="list-v rightmenu" id="rightmenu-content">
-      
+
       
         
           
     <li>
       <a class='vlts-menu fix-cursor-default' 
-        
-        
-        
-          onclick="menuCopy()"
-        
-        
-          id="menu-copy-text"
-        >
+      
+      
+      
+         onclick="menuCopy()"
+              
+      
+         id="menu-copy-text"
+      >
         <i class='fas fa-copy fa-fw'></i> 复制选中内容
       </a>
     </li>
@@ -2210,12 +2353,12 @@ Collection—...</p>
           
     <li>
       <a class='vlts-menu fix-cursor-default' href=https://support.qq.com/products/176810/
-        
-        
-        
-        
-          id="https:supportqqcomproducts176810"
-        >
+      
+      
+      
+      
+         id="https:supportqqcomproducts176810"
+              >
         <i class='fa fa-question fa-fw'></i> 吐槽墙
       </a>
     </li>
@@ -2226,12 +2369,12 @@ Collection—...</p>
           
     <li>
       <a class='vlts-menu fix-cursor-default' href=/tools/
-        
-        
-        
-        
-          id="tools"
-        >
+      
+      
+      
+      
+         id="tools"
+              >
         <i class='fa-fw fa fa-bars fa-fw fa-fw'></i> 软件控
       </a>
     </li>
@@ -2242,12 +2385,12 @@ Collection—...</p>
           
     <li>
       <a class='vlts-menu fix-cursor-default' href=https://gitee.com/sqlsq_admin/cdn/raw/master/sys.png
-        
-        
-        
-        
-          id="https:giteecomsqlsq_admincdnrawmastersyspng"
-        >
+      
+      
+      
+      
+         id="https:giteecomsqlsq_admincdnrawmastersyspng"
+              >
         <i class='fa fa-fan fa-spin fa-fw'></i> 公众号
       </a>
     </li>
@@ -2262,12 +2405,12 @@ Collection—...</p>
           
     <li>
       <a class='vlts-menu fix-cursor-default' href=/about/
-        
-        
-        
-        
-          id="about"
-        >
+      
+      
+      
+      
+         id="about"
+              >
         <i class='fas fa-location-arrow fa-fw'></i> 如人饮水
       </a>
     </li>
@@ -2278,12 +2421,12 @@ Collection—...</p>
           
     <li>
       <a class='vlts-menu fix-cursor-default' href=/Creator-said/
-        
-        
-        
-        
-          id="Creator-said"
-        >
+      
+      
+      
+      
+         id="Creator-said"
+              >
         <i class='fa fa-globe fa-fw fa-fw'></i> 冷暖自知
       </a>
     </li>
@@ -2322,15 +2465,15 @@ Collection—...</p>
     window.document.oncontextmenu = function (event) {
       if (event.ctrlKey || $(window).width() <= 500) {
         if (event.ctrlKey) return true;
-      if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) return true;
+        if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) return true;
       }
       setMenulocation();
       setMenuCopy();
       if (true == true) {
-      	try {
+        try {
           checkAPlayer();
           updateTitle();
-      	} catch (error) {console.log(error);}
+        } catch (error) {console.log(error);}
       }
       return false;
     };
@@ -2378,116 +2521,55 @@ Collection—...</p>
     }
   </script>
 
-    
-    <!-- required -->
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
-
-
-<!-- optional -->
-
-  
-  
-  
-    
-<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
-
-    <script type="text/javascript">
-      $(function(){
-        var imgs=["https://gitee.com/sqlsq_admin/cdn/raw/master/index.png"];
-        if ('true' == 'true') {
-          function shuffle(arr){
-            /*From countercurrent-time*/
-            var n = arr.length;
-            while(n--) {
-              var index = Math.floor(Math.random() * n);
-              var temp = arr[index];
-              arr[index] = arr[n];
-              arr[n] = temp;
-            }
-          }
-          shuffle(imgs);
-        }
-        if ('.cover') {
-          $('.cover').backstretch(
-            imgs,
-          {
-            duration: "20000",
-            fade: "1500"
-          });
-        } else {
-          $.backstretch(
-            imgs,
-          {
-            duration: "20000",
-            fade: "1500"
-          });
-        }
-      });
-    </script>
-  
-
-
-
-  <script>
-  
-  var SEARCH_SERVICE = "hexo" || "hexo";
-  var ROOT = "/" || "/";
-  if (!ROOT.endsWith('/')) ROOT += '/';
-</script>
 
 
 
 
 
 
-  <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
-
-
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
 <script>
-  function pjax_fancybox() {
-    $(".article-entry").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
-      var element = document.createElement("a"); // a 标签
-      $(element).attr("class", "fancybox");
-      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
-      $(element).attr("href", $(this).attr("src"));
-      if ($(this).attr("data-original")) {
-        $(element).attr("href", $(this).attr("data-original"));
-      }
-      $(element).attr("data-fancybox", "images");
-      var caption = "";   // 描述信息
-      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
-        $(element).attr('data-caption', $(this).attr('alt'));
-        caption = $(this).attr('alt');
-      }
-      var div = document.createElement("div");
-      $(div).addClass("fancybox");
-      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
-      var span = document.createElement("span");
-      $(span).addClass("image-caption");
-      $(span).text(caption); // 加描述
-      $(this).after(span);  // 再套一层描述
-      $(this).wrap(element);  // 最后套 a 标签
-    })
-    $(".article-entry").find("img").fancybox({
-      selector: '[data-fancybox="images"]',
-      hash: false,
-      loop: false,
-      closeClick: true,
-      helpers: {
-        overlay: {closeClick: true}
-      },
-      buttons: [
-        "zoom",
-        "close"
-      ]
-    });
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
   };
-  $(function () {
-    pjax_fancybox();
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
   });
 </script>
+
+
+
+
+  
+  
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+  
+
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
@@ -2502,6 +2584,7 @@ Collection—...</p>
         timelag = window.setTimeout(callback, seconds)
     }
     function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
         var copyHtml = '';
         copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
         copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
@@ -2550,6 +2633,7 @@ Collection—...</p>
 
 
 
+
    <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
 <script type="text/javascript">
   function pjax_scrollrebeal() {
@@ -2572,8 +2656,8 @@ Collection—...</p>
   <script>
   let APlayerController = new Object();
   APlayerController.id = '986297619';  // 设定全局音乐播放ID
-  APlayerController.volume = '0.7';
-  APlayerController.autoPlay = 'false';
+  APlayerController.volume = '0.3';
+  APlayerController.autoPlay = 'true';
 </script>
 
   
@@ -2582,10 +2666,6 @@ Collection—...</p>
 
   
 <script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js"></script>
-
-
-  
-<script src="/js/aplayer.js"></script>
 
 
 
@@ -2635,23 +2715,25 @@ Collection—...</p>
   }
 
   function pjax_valine() {
-    let pageUrl = $.trim($('#pjax-comment-path').text()) === "none" ? 
-      decodeURI(window.location.pathname) : $.trim($('#pjax-comment-path').text());
-    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) === "none" ?
-      "" : $.trim($('#pjax-comment-placeholder').text());
+    if(!document.querySelectorAll("#valine_container")[0])return;
 
-    let ALLPATH = '';
-    if(ALLPATH != '') pageUrl = ALLPATH;
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "嗨,请不要吝啬你的想法！小技巧：在昵称位置输入QQ号就可以自动补全邮箱哦~";
+
+    let path = $.trim($('#pjax-comment-path').text());
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
 
     var valine = new Valine();
     valine.init({
       el: '#valine_container',
       meta: meta,
       placeholder: pagePlaceholder,
-      path: pageUrl,
+      path: path,
       appId: "i1I90mFU8urYjNXgiqPT05Jt-gzGzoHsz",
       appKey: "GXgwCzMM0g2CnM8x0WCM7fPQ",
-      pageSize: '10',
+      pageSize: '5',
       avatar: 'robohash',
       lang: 'zh-cn',
       visitor: 'true',
@@ -2674,8 +2756,6 @@ Collection—...</p>
 
 
 
-  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
-
 
   
 <script src="/js/app.js"></script>
@@ -2690,33 +2770,242 @@ Collection—...</p>
   
 
 
+<!-- optional -->
 
-
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+(function ($) {
   
-<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
-
-  <script type="text/javascript">
-    $(function () {
-      Waves.attach('.flat-btn', ['waves-button']);
-      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-      Waves.attach('.flat-box', ['waves-block']);
-      Waves.attach('.float-box', ['waves-block', 'waves-float']);
-      Waves.attach('.waves-image');
-      Waves.init();
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
     });
-  </script>
+  
+})(jQuery);
+
+</script>
+
+
 
 
 
 
 
   
-    
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/comment_typing.js"></script>
 
-    <script>hljs.initHighlightingOnLoad();</script>
-  
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'Fsrd5NtVW8ovmaynVJ18xHO6-gzGzoHsz',
+    app_key: 'QYc2X76ulK8THVLHwpJfvsrG',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://www.a2data.cn' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://www.a2data.cn' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://www.a2data.cn' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
 
 
 
@@ -2767,7 +3056,7 @@ Collection—...</p>
       try {
         var currentUrl = window.location.pathname;
         var targetUrl = e.triggerElement.href;
-        var banUrl = [""];
+        var banUrl = ["/Creator-said/"];
         if (banUrl[0] != "") {
           banUrl.forEach(item => {
             if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
@@ -2778,7 +3067,9 @@ Collection—...</p>
       } catch (error) {}
 
       window.subData = null; // 移除标题（用于一二级导航栏切换处）
-      $.fancybox.close();    // 关闭弹窗
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
       $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
       $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
       $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
@@ -2811,19 +3102,12 @@ Collection—...</p>
         $(this).parent().append($(this).remove());
       });
       try{
-        pjax_fancybox();
-        
-          
-          if ('.cover') {
-            $('.cover').backstretch("resize");
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
           } else {
-            $.backstretch("resize");
+            pjax_fancybox();
           }
         
-        
-        document.querySelectorAll('pre code').forEach((block) => {
-          hljs.highlightBlock(block);
-        });
         
         
           pjax_scrollrebeal();
