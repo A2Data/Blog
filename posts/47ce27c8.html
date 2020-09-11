@@ -1425,7 +1425,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>281 words</p>
+      <p>277 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1481,36 +1481,15 @@
 <h2 id="Hexo语法"><a href="#Hexo语法" class="headerlink" title="Hexo语法"></a>Hexo语法</h2><blockquote>
 <p>Hexo </p>
 </blockquote>
-<pre><code class="bash">hexo new &quot;postName&quot; #新建文章
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;postName&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line"></span><br><span class="line">hexo new page <span class="string">&quot;pageName&quot;</span> <span class="comment">#新建页面</span></span><br><span class="line"></span><br><span class="line">hexo new post --p 文件夹名/文件名 <span class="string">&quot;title&quot;</span></span><br><span class="line">hexo new post --p Hexo/hexo <span class="string">&quot;title&quot;</span></span><br><span class="line"></span><br><span class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></span><br><span class="line"></span><br><span class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line"></span><br><span class="line">hexo deploy <span class="comment">#部署到GitHub</span></span><br><span class="line"></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line"></span><br><span class="line">hexo version  <span class="comment">#查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
 
-hexo new page &quot;pageName&quot; #新建页面
+<h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo n == hexo new</span><br><span class="line"></span><br><span class="line">hexo g == hexo generate</span><br><span class="line"></span><br><span class="line">hexo s == hexo server</span><br><span class="line"></span><br><span class="line">hexo d == hexo deploy</span><br></pre></td></tr></table></figure>
 
-hexo new post --p 文件夹名/文件名 &quot;title&quot;
-hexo new post --p Hexo/hexo &quot;title&quot;
 
-hexo generate #生成静态页面至public目录
+<h3 id="组合命令"><a href="#组合命令" class="headerlink" title="组合命令"></a>组合命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo s -g <span class="comment">#生成并本地预览</span></span><br><span class="line"></span><br><span class="line">hexo d -g <span class="comment">#生成并上传</span></span><br></pre></td></tr></table></figure>
 
-hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）
+<h3 id="上传插件"><a href="#上传插件" class="headerlink" title="上传插件"></a>上传插件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在生成以及部署文章之前，需要安装一个扩展： 如下图</span></span><br><span class="line"><span class="comment"># mac 用户 需要加 `sudo`</span></span><br><span class="line"></span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
-hexo deploy #部署到GitHub
-
-hexo help  # 查看帮助
-
-hexo version  #查看Hexo的版本</code></pre>
-<h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><pre><code class="bash">hexo n == hexo new
-
-hexo g == hexo generate
-
-hexo s == hexo server
-
-hexo d == hexo deploy</code></pre>
-<h3 id="组合命令"><a href="#组合命令" class="headerlink" title="组合命令"></a>组合命令</h3><pre><code class="bash">hexo s -g #生成并本地预览
-
-hexo d -g #生成并上传</code></pre>
-<h3 id="上传插件"><a href="#上传插件" class="headerlink" title="上传插件"></a>上传插件</h3><pre><code class="bash"># 在生成以及部署文章之前，需要安装一个扩展： 如下图
-# mac 用户 需要加 `sudo`
-
-npm install hexo-deployer-git --save</code></pre>
 <h3 id="CheckBox"><a href="#CheckBox" class="headerlink" title="CheckBox"></a>CheckBox</h3><div class='checkbox'><input type="checkbox" />
             <p>纯文本测试</p>
             </div>
@@ -1580,7 +1559,7 @@ npm install hexo-deployer-git --save</code></pre>
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\4a17b156.html" title="Hello World" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Hello World</span><span class="excerpt">Hexo 初始页面。</span></a><a class="item" href="\posts\f92cb63f.html" title="Hexo博客疑难杂症" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20200403122048.png" /><span class="title">Hexo博客疑难杂症</span><span class="excerpt">Hexo 疑难杂症</span></a><a class="item" href="\posts\ee789513.html" title="Hexo图片问题" rel="bookmark "><img src="/images/wuxiao.png" /><span class="title">Hexo图片问题</span><span class="excerpt">Hexo 上传图片相关的问题。</span></a><a class="item" href="\posts\8f004046.html" title="Hexo部署到码云" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200411181259.png" /><span class="title">Hexo部署到码云</span><span class="excerpt">Hexo 部署到Gitte</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\4a17b156.html" title="Hello World" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Hello World</span><span class="excerpt">Hexo 初始页面。</span></a><a class="item" href="\posts\ee789513.html" title="Hexo图片问题" rel="bookmark "><img src="/images/wuxiao.png" /><span class="title">Hexo图片问题</span><span class="excerpt">Hexo 上传图片相关的问题。</span></a><a class="item" href="\posts\8f004046.html" title="Hexo部署到码云" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200411181259.png" /><span class="title">Hexo部署到码云</span><span class="excerpt">Hexo 部署到Gitte</span></a><a class="item" href="\posts\f92cb63f.html" title="Hexo博客疑难杂症" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20200403122048.png" /><span class="title">Hexo博客疑难杂症</span><span class="excerpt">Hexo 疑难杂症</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1643,7 +1622,7 @@ npm install hexo-deployer-git --save</code></pre>
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>281 words</p>
+      <p>277 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">

@@ -1414,13 +1414,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>2k words</p>
+      <p>1.9k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>8 min</p>
+      <p>7 min</p>
     </a>
   </div>
 
@@ -1474,20 +1474,10 @@
 <p><em>u20201111 的化学分数是 82.46</em></p>
 </blockquote>
 <p><strong>A</strong>:</p>
-<pre><code class="python">uid = &#39;u20201111&#39;
-Math = 85
-Chemistry = 82.46
-Sum = Math + Chemistry
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">uid = <span class="string">&#x27;u20201111&#x27;</span></span><br><span class="line">Math = <span class="number">85</span></span><br><span class="line">Chemistry = <span class="number">82.46</span></span><br><span class="line">Sum = Math + Chemistry</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;%s 的数学成绩是 %d&quot;</span> %(uid,Math))</span><br><span class="line">print(<span class="string">&quot;%s 的化学成绩是 %.2f&quot;</span> %(uid,Chemistry))</span><br><span class="line">print(<span class="string">&quot;%s 的总成绩是 %d&quot;</span>%(uid,Sum))</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">上面的小例题大家看懂了吗？没看懂的要亲手敲一下哦~</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-print(&quot;%s 的数学成绩是 %d&quot; %(uid,Math))
-print(&quot;%s 的化学成绩是 %.2f&quot; %(uid,Chemistry))
-print(&quot;%s 的总成绩是 %d&quot;%(uid,Sum))
 
-&#39;&#39;&#39;
-上面的小例题大家看懂了吗？没看懂的要亲手敲一下哦~
 
-&#39;&#39;&#39;
-</code></pre>
 <p><strong>学前引导：</strong></p>
 <blockquote>
 <p>基本操作和格式规范（本文重点）</p>
@@ -1529,23 +1519,11 @@ print(&quot;%s 的总成绩是 %d&quot;%(uid,Sum))
 <p><strong>现在都是以python3为主</strong></p>
 </blockquote>
 <p>Python中<strong>单行注释</strong>以 <em>#</em> 开头，实例如下：</p>
-<pre><code class="python">#我的第一行代码
-print(&#39;hello world&#39;) #我的第二个注释
-hello world</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#我的第一行代码</span></span><br><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>) <span class="comment">#我的第二个注释</span></span><br><span class="line">hello world</span><br></pre></td></tr></table></figure>
+
 <p><strong>多行注释</strong>可以用多个 <em>#</em> 号，还有 <em>‘’’</em> 和 *”””*：</p>
-<pre><code class="python">&#39;&#39;&#39;
-我真的
-可以
-注释
-很多行
-&#39;&#39;&#39;
-&quot;&quot;&quot;
-我也能
-注释
-很多行
-&quot;&quot;&quot;
-print(&#39;hello world&#39;)
-hello world</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">我真的</span></span><br><span class="line"><span class="string">可以</span></span><br><span class="line"><span class="string">注释</span></span><br><span class="line"><span class="string">很多行</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">我也能</span></span><br><span class="line"><span class="string">注释</span></span><br><span class="line"><span class="string">很多行</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line">hello world</span><br></pre></td></tr></table></figure>
+
 <h2 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h2><p>**拼接符 ‘+’ **</p>
 <p>print(‘变量名：’+变量)</p>
 <p>注意：变量必须为字符串类型</p>
@@ -1555,13 +1533,10 @@ hello world</code></pre>
 <p>%o —— oct 八进制</p>
 <p>%d —— dec 十进制</p>
 <p>%x —— hex 十六进制</p>
-<pre><code class="python">print(&#39;%o&#39; % 20)   #以八进制输出20
-print(&#39;%d&#39; % 20)   #以十进制输出20
-print(&#39;%x&#39; % 20)   #以十六进制输出20
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;%o&#x27;</span> % <span class="number">20</span>)   <span class="comment">#以八进制输出20</span></span><br><span class="line">print(<span class="string">&#x27;%d&#x27;</span> % <span class="number">20</span>)   <span class="comment">#以十进制输出20</span></span><br><span class="line">print(<span class="string">&#x27;%x&#x27;</span> % <span class="number">20</span>)   <span class="comment">#以十六进制输出20</span></span><br><span class="line"></span><br><span class="line"><span class="number">24</span></span><br><span class="line"><span class="number">20</span></span><br><span class="line"><span class="number">14</span></span><br></pre></td></tr></table></figure>
 
-24
-20
-14</code></pre>
+
+
 <p>浮点数输出</p>
 <ul>
 <li>%f ——保留小数点后面六位有效数字</li>
@@ -1576,20 +1551,8 @@ print(&#39;%x&#39; % 20)   #以十六进制输出20
 </ul>
 <p>　　%.3g，保留3位有效数字，使用小数或科学计数法</p>
 <p>下面做一系列的演示：</p>
-<pre><code class="python">print(&#39;%f&#39; % 1.11)  # 默认保留6位小数
-print(&#39;%.1f&#39; % 1.11)  # 取1位小数
-print(&#39;%e&#39; % 1.11)  # 默认6位小数，用科学计数法
-print(&#39;%.3e&#39; % 1.11)  # 取3位小数，用科学计数法
-print(&#39;%g&#39; % 1111.1111)  # 默认6位有效数字
-print(&#39;%.7g&#39; % 1111.1111)  # 取7位有效数字
-print(&#39;%.2g&#39; % 1111.1111)  # 取2位有效数字，自动转换为科学计数法
-1.110000
-1.1
-1.110000e+00
-1.110e+00
-1111.11
-1111.111
-1.1e+03</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;%f&#x27;</span> % <span class="number">1.11</span>)  <span class="comment"># 默认保留6位小数</span></span><br><span class="line">print(<span class="string">&#x27;%.1f&#x27;</span> % <span class="number">1.11</span>)  <span class="comment"># 取1位小数</span></span><br><span class="line">print(<span class="string">&#x27;%e&#x27;</span> % <span class="number">1.11</span>)  <span class="comment"># 默认6位小数，用科学计数法</span></span><br><span class="line">print(<span class="string">&#x27;%.3e&#x27;</span> % <span class="number">1.11</span>)  <span class="comment"># 取3位小数，用科学计数法</span></span><br><span class="line">print(<span class="string">&#x27;%g&#x27;</span> % <span class="number">1111.1111</span>)  <span class="comment"># 默认6位有效数字</span></span><br><span class="line">print(<span class="string">&#x27;%.7g&#x27;</span> % <span class="number">1111.1111</span>)  <span class="comment"># 取7位有效数字</span></span><br><span class="line">print(<span class="string">&#x27;%.2g&#x27;</span> % <span class="number">1111.1111</span>)  <span class="comment"># 取2位有效数字，自动转换为科学计数法</span></span><br><span class="line"><span class="number">1.110000</span></span><br><span class="line"><span class="number">1.1</span></span><br><span class="line"><span class="number">1.110000e+00</span></span><br><span class="line"><span class="number">1.110e+00</span></span><br><span class="line"><span class="number">1111.11</span></span><br><span class="line"><span class="number">1111.111</span></span><br><span class="line"><span class="number">1.1e+03</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="format的用法"><a href="#format的用法" class="headerlink" title="format的用法"></a>format的用法</h4><p>format的用法很常见，并且实用，大家可以根据案例多进行模仿与演示。</p>
 <p>format就是变量之间的映射，它有三种形式</p>
 <ul>
@@ -1598,31 +1561,19 @@ print(&#39;%.2g&#39; % 1111.1111)  # 取2位有效数字，自动转换为科学
 <li>（3）带关键字，即“{a}”、“{tom}”</li>
 </ul>
 <p>映射案例如下：</p>
-<pre><code class="python">print(&#39;&#123;&#125; &#123;&#125;&#39;.format(&#39;hello&#39;,&#39;world&#39;))  # 不带字段
-print(&#39;&#123;0&#125; &#123;1&#125;&#39;.format(&#39;hello&#39;,&#39;world&#39;))  # 带数字编号
-print(&#39;&#123;0&#125; &#123;1&#125; &#123;0&#125;&#39;.format(&#39;hello&#39;,&#39;world&#39;))  # 打乱顺序
-print(&#39;&#123;1&#125; &#123;1&#125; &#123;0&#125;&#39;.format(&#39;hello&#39;,&#39;world&#39;))
-print(&#39;&#123;a&#125; &#123;tom&#125; &#123;a&#125;&#39;.format(tom=&#39;hello&#39;,a=&#39;world&#39;))  # 带关键字
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;&#123;&#125; &#123;&#125;&#x27;</span>.format(<span class="string">&#x27;hello&#x27;</span>,<span class="string">&#x27;world&#x27;</span>))  <span class="comment"># 不带字段</span></span><br><span class="line">print(<span class="string">&#x27;&#123;0&#125; &#123;1&#125;&#x27;</span>.format(<span class="string">&#x27;hello&#x27;</span>,<span class="string">&#x27;world&#x27;</span>))  <span class="comment"># 带数字编号</span></span><br><span class="line">print(<span class="string">&#x27;&#123;0&#125; &#123;1&#125; &#123;0&#125;&#x27;</span>.format(<span class="string">&#x27;hello&#x27;</span>,<span class="string">&#x27;world&#x27;</span>))  <span class="comment"># 打乱顺序</span></span><br><span class="line">print(<span class="string">&#x27;&#123;1&#125; &#123;1&#125; &#123;0&#125;&#x27;</span>.format(<span class="string">&#x27;hello&#x27;</span>,<span class="string">&#x27;world&#x27;</span>))</span><br><span class="line">print(<span class="string">&#x27;&#123;a&#125; &#123;tom&#125; &#123;a&#125;&#x27;</span>.format(tom=<span class="string">&#x27;hello&#x27;</span>,a=<span class="string">&#x27;world&#x27;</span>))  <span class="comment"># 带关键字</span></span><br><span class="line"></span><br><span class="line">hello world</span><br><span class="line">hello world</span><br><span class="line">hello world hello</span><br><span class="line">world world hello</span><br><span class="line">world hello world</span><br></pre></td></tr></table></figure>
 
-hello world
-hello world
-hello world hello
-world world hello
-world hello world</code></pre>
 <h4 id="格式化字符串"><a href="#格式化字符串" class="headerlink" title="格式化字符串"></a>格式化字符串</h4><ul>
 <li>f-string，亦称为格式化字符串常量（formatted string literals），是Python3.6新引入的一种字符串格式化方法。</li>
 <li>f-string在形式上是以 f 或 F 修饰符引领的字符串（f’xxx’ 或 F’xxx’），以大括号 {} 标明被替换的字段；</li>
 <li>f-string在本质上并不是字符串常量，而是一个在运行时运算求值的表达式。</li>
 </ul>
 <p>先尝试一下str、int类型的变量</p>
-<pre><code class="python">name = &quot;小风&quot;
-age = 18
-print(f&quot;姓名：&#123;name&#125;，年龄：&#123;age&#125;&quot;)
-姓名：小风，年龄：18</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&quot;小风&quot;</span></span><br><span class="line">age = <span class="number">18</span></span><br><span class="line">print(<span class="string">f&quot;姓名：<span class="subst">&#123;name&#125;</span>，年龄：<span class="subst">&#123;age&#125;</span>&quot;</span>)</span><br><span class="line">姓名：小风，年龄：<span class="number">18</span></span><br></pre></td></tr></table></figure>
+
 <p>再试一下字典</p>
-<pre><code class="python">one_dict = &#123;&quot;name&quot;: &quot;小风&quot;, &quot;age&quot;: 18, &quot;hobby&quot;: [&quot;running&quot;, &quot;singing&quot;]&#125;
-print(f&quot;姓名：&#123;one_dict[&#39;name&#39;]&#125;,爱好：&#123;one_dict[&#39;hobby&#39;]&#125;&quot;)
-姓名：小风,爱好：[&#39;running&#39;, &#39;singing&#39;]</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">one_dict = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;小风&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">18</span>, <span class="string">&quot;hobby&quot;</span>: [<span class="string">&quot;running&quot;</span>, <span class="string">&quot;singing&quot;</span>]&#125;</span><br><span class="line">print(<span class="string">f&quot;姓名：<span class="subst">&#123;one_dict[<span class="string">&#x27;name&#x27;</span>]&#125;</span>,爱好：<span class="subst">&#123;one_dict[<span class="string">&#x27;hobby&#x27;</span>]&#125;</span>&quot;</span>)</span><br><span class="line">姓名：小风,爱好：[<span class="string">&#x27;running&#x27;</span>, <span class="string">&#x27;singing&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
 <h4 id="格式规范："><a href="#格式规范：" class="headerlink" title="格式规范："></a>格式规范：</h4><p>代码块快捷键:CTRL+ALT+L</p>
 <h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>转义字符‘\’可以转义很多字符</p>
 <ul>
@@ -1631,12 +1582,10 @@ print(f&quot;姓名：&#123;one_dict[&#39;name&#39;]&#125;,爱好：&#123;one_di
 <li>字符’\‘本身也要转义，所以‘\’表示的字符就是‘\’</li>
 </ul>
 <p>下面为‘\’在输出过程中可能出现的情况;</p>
-<pre><code class="python">print(&#39;I\&#39;m ok.&#39;)
-I&#39;m ok.
-print(&#39;I\&#39;m learning\nPython.&#39;)
-I&#39;m learning
-Python.
-print(&#39;\\\n\\&#39;)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;I\&#x27;m ok.&#x27;</span>)</span><br><span class="line">I<span class="string">&#x27;m ok.</span></span><br><span class="line"><span class="string">print(&#x27;</span>I\<span class="string">&#x27;m learning\nPython.&#x27;</span>)</span><br><span class="line">I<span class="string">&#x27;m learning</span></span><br><span class="line"><span class="string">Python.</span></span><br><span class="line"><span class="string">print(&#x27;</span>\\\n\\<span class="string">&#x27;)</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h4 id="小作业"><a href="#小作业" class="headerlink" title="小作业"></a>小作业</h4><ul>
 <li><p>1、学号为u20201111的学生，数学成绩为85，化学成绩为82.46，按格式输出：</p>
 <p><em>u20201111 的数学分数是 85</em></p>
@@ -1654,16 +1603,13 @@ print(&#39;\\\n\\&#39;)</code></pre>
 <li><p>3、给定学生三门成绩</p>
 <p>(1)计算该学生的平均成绩并打印平均成绩保留两位小数点</p>
 <p>(2)计算该学生语文成绩占总成绩的百分之多少？并打印，百分比也保留两位小数</p>
-<pre><code class="python">Chinese = 92
-Math = 98.5
-English = 93</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Chinese = <span class="number">92</span></span><br><span class="line">Math = <span class="number">98.5</span></span><br><span class="line">English = <span class="number">93</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>4、用转义字符，输出一张todo list，包含4条内容并用制表符对齐。格式如下：</p>
-<pre><code class="python">This is todo list for today:
-        * Meeting at 11:00
-        * lunch with Mike
-        * buy milk
-        * do yoga</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">This <span class="keyword">is</span> todo list <span class="keyword">for</span> today:</span><br><span class="line">        * Meeting at <span class="number">11</span>:<span class="number">00</span></span><br><span class="line">        * lunch <span class="keyword">with</span> Mike</span><br><span class="line">        * buy milk</span><br><span class="line">        * do yoga</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ol>
 <ol start="5">
@@ -1672,17 +1618,10 @@ English = 93</code></pre>
 <h4 id="进阶题："><a href="#进阶题：" class="headerlink" title="进阶题："></a>进阶题：</h4><blockquote>
 <p>编辑完成以下名片的显示：</p>
 </blockquote>
-<pre><code class="python">==================================
-姓名: 努力赚钱的小风    
-QQ:xxxxxxx
-手机号:185xxxxxx
-公司地址:北京市xxxx
-Blog:www.a2data.cn
-==================================
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">==================================</span><br><span class="line">姓名: 努力赚钱的小风    </span><br><span class="line">QQ:xxxxxxx</span><br><span class="line">手机号:<span class="number">185</span>xxxxxx</span><br><span class="line">公司地址:北京市xxxx</span><br><span class="line">Blog:www.a2data.cn</span><br><span class="line">==================================</span><br><span class="line"></span><br><span class="line"><span class="comment">#思考，如何格式化输出？换行？</span></span><br><span class="line"><span class="comment">#进阶思路，如果姓名年龄是否可以是变量传入，或者外部输入呢？</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-#思考，如何格式化输出？换行？
-#进阶思路，如果姓名年龄是否可以是变量传入，或者外部输入呢？
-</code></pre>
+
+
 
   
   
@@ -1696,7 +1635,7 @@ Blog:www.a2data.cn
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\8c0ed688.html" title="Python数据类型-列表" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Python数据类型-列表</span><span class="excerpt">Python数据类型-列表！！！</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\5590.html" title="Day1.概述" rel="bookmark "><img src="Day1-%E6%A6%82%E8%BF%B0.assets/image-20200509225153813.png" /><span class="title">Day1.概述</span><span class="excerpt">数据可视化，基础概述。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1759,13 +1698,13 @@ Blog:www.a2data.cn
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>2k words</p>
+      <p>1.9k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>8 min</p>
+      <p>7 min</p>
     </a>
   </div>
 

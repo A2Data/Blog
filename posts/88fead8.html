@@ -1414,7 +1414,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.2k words</p>
+      <p>1.1k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1479,76 +1479,16 @@
 <p><strong>MockData</strong> ：</p>
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831142714.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831142714.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h4 id="常规操作"><a href="#常规操作" class="headerlink" title="常规操作"></a>常规操作</h4><p>我们可以先把项目代码 push 到 gitee上。</p>
-<h4 id="1、克隆在Gitee创建好的空项目"><a href="#1、克隆在Gitee创建好的空项目" class="headerlink" title="1、克隆在Gitee创建好的空项目"></a>1、克隆在Gitee创建好的空项目</h4><pre><code class="bash"># 创建一个文件夹
-# 再该文件夹下边 使用Git进行如下操作
+<h4 id="1、克隆在Gitee创建好的空项目"><a href="#1、克隆在Gitee创建好的空项目" class="headerlink" title="1、克隆在Gitee创建好的空项目"></a>1、克隆在Gitee创建好的空项目</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个文件夹</span></span><br><span class="line"><span class="comment"># 再该文件夹下边 使用Git进行如下操作</span></span><br><span class="line"></span><br><span class="line">git <span class="built_in">clone</span> git@github.com:A2Data/mockdata.git</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-git clone git@github.com:A2Data/mockdata.git
-
-</code></pre>
 <p>就会得到如图所示:</p>
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831145607.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831145607.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h4 id="2、然后我们可以把本地的项目文件放到该目录下"><a href="#2、然后我们可以把本地的项目文件放到该目录下" class="headerlink" title="2、然后我们可以把本地的项目文件放到该目录下"></a>2、然后我们可以把本地的项目文件放到该目录下</h4><p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831145727.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831145727.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h4 id="3、使用git上传该项目到-Gitee上"><a href="#3、使用git上传该项目到-Gitee上" class="headerlink" title="3、使用git上传该项目到 Gitee上"></a>3、使用git上传该项目到 Gitee上</h4><pre><code class="bash">git add. #添加
+<h4 id="3、使用git上传该项目到-Gitee上"><a href="#3、使用git上传该项目到-Gitee上" class="headerlink" title="3、使用git上传该项目到 Gitee上"></a>3、使用git上传该项目到 Gitee上</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git add. <span class="comment">#添加</span></span><br><span class="line"></span><br><span class="line">git commit -m  <span class="string">&quot;更新信息&quot;</span></span><br><span class="line"></span><br><span class="line">git push <span class="comment"># 提交</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-git commit -m  &quot;更新信息&quot;
-
-git push # 提交
-</code></pre>
 <p>详细运行过程如下：</p>
-<pre><code class="bash">JackFeng@JackFeng MINGW64 /d/学习/DataDict/mock-data (master)
-$ ll
-total 41
-drwxr-xr-x 1 JackFeng 197121    0  7月 12 22:09 __pycache__/
--rw-r--r-- 1 JackFeng 197121  746  7月 12 22:07 config_all.conf
--rwxr-xr-x 1 JackFeng 197121 8779  6月 28 21:15 FakerData.py*
--rwxr-xr-x 1 JackFeng 197121 1848  6月 29 14:21 FunctionClassConfig.py*
--rw-r--r-- 1 JackFeng 197121    0  8月 31 14:34 LICENSE
--rwxr-xr-x 1 JackFeng 197121  168  7月 12 22:00 main.py*
--rwxr-xr-x 1 JackFeng 197121 6644  7月 12 22:49 mock.py*
--rw-r--r-- 1 JackFeng 197121 3006  7月 12 21:56 Mock数据使用说明.md
-drwxr-xr-x 1 JackFeng 197121    0  7月  8 12:26 pools/
--rw-r--r-- 1 JackFeng 197121 1008  8月 31 14:34 README.en.md
--rw-r--r-- 1 JackFeng 197121 1227  8月 31 14:38 README.md
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">JackFeng@JackFeng MINGW64 /d/学习/DataDict/mock-data (master)</span><br><span class="line">$ ll</span><br><span class="line">total 41</span><br><span class="line">drwxr-xr-x 1 JackFeng 197121    0  7月 12 22:09 __pycache__/</span><br><span class="line">-rw-r--r-- 1 JackFeng 197121  746  7月 12 22:07 config_all.conf</span><br><span class="line">-rwxr-xr-x 1 JackFeng 197121 8779  6月 28 21:15 FakerData.py*</span><br><span class="line">-rwxr-xr-x 1 JackFeng 197121 1848  6月 29 14:21 FunctionClassConfig.py*</span><br><span class="line">-rw-r--r-- 1 JackFeng 197121    0  8月 31 14:34 LICENSE</span><br><span class="line">-rwxr-xr-x 1 JackFeng 197121  168  7月 12 22:00 main.py*</span><br><span class="line">-rwxr-xr-x 1 JackFeng 197121 6644  7月 12 22:49 mock.py*</span><br><span class="line">-rw-r--r-- 1 JackFeng 197121 3006  7月 12 21:56 Mock数据使用说明.md</span><br><span class="line">drwxr-xr-x 1 JackFeng 197121    0  7月  8 12:26 pools/</span><br><span class="line">-rw-r--r-- 1 JackFeng 197121 1008  8月 31 14:34 README.en.md</span><br><span class="line">-rw-r--r-- 1 JackFeng 197121 1227  8月 31 14:38 README.md</span><br><span class="line"></span><br><span class="line">JackFeng@JackFeng MINGW64 /d/学习/DataDict/mock-data (master)</span><br><span class="line">$ git add .</span><br><span class="line"></span><br><span class="line">JackFeng@JackFeng MINGW64 /d/学习/DataDict/mock-data (master)</span><br><span class="line">$ git commit -m <span class="string">&quot;mockdata&quot;</span></span><br><span class="line">[master 8e72f4b] mockdata</span><br><span class="line"> 16 files changed, 1519 insertions(+)</span><br><span class="line"> create mode 100644 .idea/inspectionProfiles/profiles_settings.xml</span><br><span class="line"> create mode 100644 .idea/misc.xml</span><br><span class="line"> create mode 100644 .idea/mockdata-kath.iml</span><br><span class="line"> create mode 100644 .idea/modules.xml</span><br><span class="line"> create mode 100644 .idea/workspace.xml</span><br><span class="line"> create mode 100644 FakerData.py</span><br><span class="line"> create mode 100644 FunctionClassConfig.py</span><br><span class="line"> create mode 100644 <span class="string">&quot;Mock\346\225\260\346\215\256\344\275\277\347\224\250\350\257\264\346\230\216.md&quot;</span></span><br><span class="line"> create mode 100644 __pycache__/FakerData.cpython-37.pyc</span><br><span class="line"> create mode 100644 __pycache__/FunctionClassConfig.cpython-37.pyc</span><br><span class="line"> create mode 100644 __pycache__/mock.cpython-37.pyc</span><br><span class="line"> create mode 100644 config_all.conf</span><br><span class="line"> create mode 100644 main.py</span><br><span class="line"> create mode 100644 mock.py</span><br><span class="line"> create mode 100644 pools/majors.csv</span><br><span class="line"></span><br><span class="line">JackFeng@JackFeng MINGW64 /d/学习/DataDict/mock-data (master)</span><br><span class="line">$ git push</span><br><span class="line">Enumerating objects: 24, <span class="keyword">done</span>.</span><br><span class="line">Counting objects: 100% (24/24), <span class="keyword">done</span>.</span><br><span class="line">Delta compression using up to 8 threads</span><br><span class="line">Compressing objects: 100% (20/20), <span class="keyword">done</span>.</span><br><span class="line">Writing objects: 100% (22/22), 21.43 KiB | 1.19 MiB/s, <span class="keyword">done</span>.</span><br><span class="line">Total 22 (delta 1), reused 0 (delta 0)</span><br><span class="line">remote: Powered by GITEE.COM [GNK-5.0]</span><br><span class="line">To gitee.com:sqlsq_admin/mock-data.git</span><br><span class="line">   562b3ee..8e72f4b  master -&gt; master</span><br><span class="line"></span><br><span class="line">JackFeng@JackFeng MINGW64 /d/学习/DataDict/mock-data (master)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-JackFeng@JackFeng MINGW64 /d/学习/DataDict/mock-data (master)
-$ git add .
-
-JackFeng@JackFeng MINGW64 /d/学习/DataDict/mock-data (master)
-$ git commit -m &quot;mockdata&quot;
-[master 8e72f4b] mockdata
- 16 files changed, 1519 insertions(+)
- create mode 100644 .idea/inspectionProfiles/profiles_settings.xml
- create mode 100644 .idea/misc.xml
- create mode 100644 .idea/mockdata-kath.iml
- create mode 100644 .idea/modules.xml
- create mode 100644 .idea/workspace.xml
- create mode 100644 FakerData.py
- create mode 100644 FunctionClassConfig.py
- create mode 100644 &quot;Mock\346\225\260\346\215\256\344\275\277\347\224\250\350\257\264\346\230\216.md&quot;
- create mode 100644 __pycache__/FakerData.cpython-37.pyc
- create mode 100644 __pycache__/FunctionClassConfig.cpython-37.pyc
- create mode 100644 __pycache__/mock.cpython-37.pyc
- create mode 100644 config_all.conf
- create mode 100644 main.py
- create mode 100644 mock.py
- create mode 100644 pools/majors.csv
-
-JackFeng@JackFeng MINGW64 /d/学习/DataDict/mock-data (master)
-$ git push
-Enumerating objects: 24, done.
-Counting objects: 100% (24/24), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (20/20), done.
-Writing objects: 100% (22/22), 21.43 KiB | 1.19 MiB/s, done.
-Total 22 (delta 1), reused 0 (delta 0)
-remote: Powered by GITEE.COM [GNK-5.0]
-To gitee.com:sqlsq_admin/mock-data.git
-   562b3ee..8e72f4b  master -&gt; master
-
-JackFeng@JackFeng MINGW64 /d/学习/DataDict/mock-data (master)
-
-
-</code></pre>
 <h4 id="4、查看Gitee提交记录"><a href="#4、查看Gitee提交记录" class="headerlink" title="4、查看Gitee提交记录"></a>4、查看Gitee提交记录</h4><p>此时发现已经不是空项目了。</p>
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831145957.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831145957.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p><strong>Github</strong></p>
@@ -1557,77 +1497,44 @@ JackFeng@JackFeng MINGW64 /d/学习/DataDict/mock-data (master)
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831150133.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831150133.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h3 id="多平台配置"><a href="#多平台配置" class="headerlink" title="多平台配置"></a>多平台配置</h3><p>上边只演示 如何项目同步到单个平台，如何同步到多个平台的不同仓库下呢？</p>
 <ul>
-<li><p>Github： <a href="mailto:&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;</a>:A2Data/MockData.git</p>
+<li><p>Github： <a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#105;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#109;">&#x67;&#105;&#x74;&#64;&#103;&#105;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#109;</a>:A2Data/MockData.git</p>
 </li>
-<li><p>Gitee： <a href="mailto:&#103;&#x69;&#116;&#x40;&#103;&#x69;&#x74;&#x65;&#x65;&#46;&#x63;&#111;&#x6d;">&#103;&#x69;&#116;&#x40;&#103;&#x69;&#x74;&#x65;&#x65;&#46;&#x63;&#111;&#x6d;</a>:sqlsq_admin/mock-data.git</p>
+<li><p>Gitee： <a href="mailto:&#103;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#101;&#101;&#46;&#99;&#x6f;&#109;">&#103;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#101;&#101;&#46;&#99;&#x6f;&#109;</a>:sqlsq_admin/mock-data.git</p>
 </li>
 </ul>
-<h4 id="1、通过命令添加"><a href="#1、通过命令添加" class="headerlink" title="1、通过命令添加"></a>1、通过命令添加</h4><pre><code class="bash"># 添加第一个仓库
+<h4 id="1、通过命令添加"><a href="#1、通过命令添加" class="headerlink" title="1、通过命令添加"></a>1、通过命令添加</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加第一个仓库</span></span><br><span class="line"></span><br><span class="line">git remote add origin git@gitee.com:sqlsq_admin/mock-data.git  <span class="comment"># 默认情况下 就是origin</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加第二个仓库</span></span><br><span class="line"></span><br><span class="line">git remote <span class="built_in">set</span>-url --add origin git@github.com:A2Data/MockData.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果还有其他，则可以像添加第二个一样继续添加其他仓库。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交</span></span><br><span class="line"></span><br><span class="line">git push origin --all</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-git remote add origin git@gitee.com:sqlsq_admin/mock-data.git  # 默认情况下 就是origin
 
-# 添加第二个仓库
 
-git remote set-url --add origin git@github.com:A2Data/MockData.git
+<h4 id="2、仓库状态查看"><a href="#2、仓库状态查看" class="headerlink" title="2、仓库状态查看"></a>2、仓库状态查看</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br><span class="line"></span><br><span class="line">git status</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-# 如果还有其他，则可以像添加第二个一样继续添加其他仓库。
-
-# 提交
-
-git push origin --all
-
-</code></pre>
-<h4 id="2、仓库状态查看"><a href="#2、仓库状态查看" class="headerlink" title="2、仓库状态查看"></a>2、仓库状态查看</h4><pre><code class="bash">git log
-
-git status
-</code></pre>
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831150920.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831150920.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h4 id="3、-git-config-配置"><a href="#3、-git-config-配置" class="headerlink" title="3、 .git/config , 配置"></a>3、 .git/config , 配置</h4><p>可以看到目前只有一个！也可以直接打开**.git/config** 这个文件进行配置。</p>
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831151129.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831151129.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<pre><code class="bash">git remote set-url --add origin  git@github.com:A2Data/MockData.git
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="built_in">set</span>-url --add origin  git@github.com:A2Data/MockData.git</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831162735.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831162735.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<pre><code class="bash">git remote
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git remote</span><br><span class="line"></span><br><span class="line">git remote -v</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-git remote -v
-</code></pre>
+
+
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831153054.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831153054.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h4 id="4、配置方式"><a href="#4、配置方式" class="headerlink" title="4、配置方式"></a>4、配置方式</h4><h5 id="方法一-使用-git-remote-add-命令"><a href="#方法一-使用-git-remote-add-命令" class="headerlink" title="方法一: 使用 git remote add 命令"></a>方法一: 使用 git remote add 命令</h5><pre><code class="bash"># 1、本地仓库与远程仓库关联起来，再查看一下远程仓库情况
+<h4 id="4、配置方式"><a href="#4、配置方式" class="headerlink" title="4、配置方式"></a>4、配置方式</h4><h5 id="方法一-使用-git-remote-add-命令"><a href="#方法一-使用-git-remote-add-命令" class="headerlink" title="方法一: 使用 git remote add 命令"></a>方法一: 使用 git remote add 命令</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1、本地仓库与远程仓库关联起来，再查看一下远程仓库情况</span></span><br><span class="line"></span><br><span class="line">git remote add origin git@gitee.com:sqlsq_admin/mock-data.git</span><br><span class="line"></span><br><span class="line">git remote -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2、使用如下命令再添加另一个远程仓库</span></span><br><span class="line"></span><br><span class="line">git remote add github git@github.com:A2Data/MockData.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3、 再次查看远程仓库的情况，可以看到已经有两个远程仓库了。然后再使用相应的命令 push 到对应的仓库就行了。*这种方法的缺点是每次要* push *两次。*</span></span><br><span class="line"></span><br><span class="line">git  push origin master:master</span><br><span class="line"></span><br><span class="line">git  push github master:master</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-git remote add origin git@gitee.com:sqlsq_admin/mock-data.git
 
-git remote -v
 
-# 2、使用如下命令再添加另一个远程仓库
+<h5 id="方法二-使用-git-remote-set-url-命令"><a href="#方法二-使用-git-remote-set-url-命令" class="headerlink" title="方法二: 使用 git remote set-url 命令"></a>方法二: 使用 git remote set-url 命令</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1、删除方法一的 sundyn 远程仓库。</span></span><br><span class="line"></span><br><span class="line">git remote rm mockdata</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2、使用如下命令添加远程仓库。</span></span><br><span class="line"></span><br><span class="line">git remote <span class="built_in">set</span>-url --add origin git@github.com:A2Data/MockData.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3、查看远程仓库情况。可以看到 github 远程仓库有两个 push 地址。*这种方法的好处是每次只需要* push *一次就行了。*</span></span><br><span class="line"></span><br><span class="line">git remote -v</span><br><span class="line"></span><br><span class="line">git push origin master:master</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-git remote add github git@github.com:A2Data/MockData.git
 
-# 3、 再次查看远程仓库的情况，可以看到已经有两个远程仓库了。然后再使用相应的命令 push 到对应的仓库就行了。*这种方法的缺点是每次要* push *两次。*
 
-git  push origin master:master
-
-git  push github master:master
-</code></pre>
-<h5 id="方法二-使用-git-remote-set-url-命令"><a href="#方法二-使用-git-remote-set-url-命令" class="headerlink" title="方法二: 使用 git remote set-url 命令"></a>方法二: 使用 git remote set-url 命令</h5><pre><code class="bash"># 1、删除方法一的 sundyn 远程仓库。
-
-git remote rm mockdata
-
-# 2、使用如下命令添加远程仓库。
-
-git remote set-url --add origin git@github.com:A2Data/MockData.git
-
-# 3、查看远程仓库情况。可以看到 github 远程仓库有两个 push 地址。*这种方法的好处是每次只需要* push *一次就行了。*
-
-git remote -v
-
-git push origin master:master
-
-</code></pre>
 <h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><p>配置的方式就是两种，这个异常的原因 是因为github 和gitee 账号不用。key不同链接失效。</p>
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831154907.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831154907.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h4 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h4><pre><code class="bash">git push origin master:master -f 
-# 强制推。
-</code></pre>
+<h4 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git push origin master:master -f </span><br><span class="line"><span class="comment"># 强制推。</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
 <blockquote>
 <p>后续优化之后，再进行升级。</p>
 </blockquote>
@@ -1644,7 +1551,7 @@ git push origin master:master
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\47936.html" title="手把手教你玩git" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20200330223604.png" /><span class="title">手把手教你玩git</span><span class="excerpt">Git 深入浅出，史无前例的详细教程。</span></a><a class="item" href="\posts\8c0ed688.html" title="Python数据类型-列表" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Python数据类型-列表</span><span class="excerpt">Python数据类型-列表！！！</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\47936.html" title="手把手教你玩git" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20200330223604.png" /><span class="title">手把手教你玩git</span><span class="excerpt">Git 深入浅出，史无前例的详细教程。</span></a><a class="item" href="\posts\5590.html" title="Day1.概述" rel="bookmark "><img src="Day1-%E6%A6%82%E8%BF%B0.assets/image-20200509225153813.png" /><span class="title">Day1.概述</span><span class="excerpt">数据可视化，基础概述。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1707,7 +1614,7 @@ git push origin master:master
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.2k words</p>
+      <p>1.1k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1807,9 +1714,7 @@ Q：现有信息学号为u20201111的学生，数学成绩为85，化学成绩�
 anaconda下载源1.清华源
 CMD输入以下命令：
 
-
-
-conda config --add channels https://mirrors.tuna...</p>
+12345678910111213141516171819 conda config --add c...</p>
         </a>
       
     </div>

@@ -1414,7 +1414,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>592 words</p>
+      <p>589 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1522,37 +1522,14 @@
 <blockquote>
 <p>默认值：</p>
 </blockquote>
-<pre><code class="shell">DEVICE=&quot;eth0&quot;
-BOOTPROTO=&quot;dhcp&quot;
-DHCP_HOSTNAME=&quot;quickstart.cloudera&quot;
-HOSTNAME=&quot;quickstart.cloudera&quot;
-HWADDR=&quot;00:0C:29:D3:4D:5C&quot;
-IPV6INIT=&quot;no&quot;
-MTU=&quot;1500&quot;
-NM_CONTROLLED=&quot;yes&quot;
-ONBOOT=&quot;yes&quot;
-TYPE=&quot;Ethernet&quot;
-UUID=&quot;f127faf3-7a1f-4bca-a404-0119665a8459&quot;
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">DEVICE=&quot;eth0&quot;</span><br><span class="line">BOOTPROTO=&quot;dhcp&quot;</span><br><span class="line">DHCP_HOSTNAME=&quot;quickstart.cloudera&quot;</span><br><span class="line">HOSTNAME=&quot;quickstart.cloudera&quot;</span><br><span class="line">HWADDR=&quot;00:0C:29:D3:4D:5C&quot;</span><br><span class="line">IPV6INIT=&quot;no&quot;</span><br><span class="line">MTU=&quot;1500&quot;</span><br><span class="line">NM_CONTROLLED=&quot;yes&quot;</span><br><span class="line">ONBOOT=&quot;yes&quot;</span><br><span class="line">TYPE=&quot;Ethernet&quot;</span><br><span class="line">UUID=&quot;f127faf3-7a1f-4bca-a404-0119665a8459&quot;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-</code></pre>
 <p> 注意：使用<code>sudo</code></p>
-<pre><code class="shell"> sudo vim /etc/sysconfig/network-scripts/ifcfg-eth0 
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/sysconfig/network-scripts/ifcfg-eth0 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <p><strong>修改为</strong>:</p>
-<pre><code class="shell">DEVICE=&quot;eth0&quot;
-BOOTPROTO=&quot;static&quot;
-DHCP_HOSTNAME=&quot;quickstart.cloudera&quot;
-HOSTNAME=&quot;quickstart.cloudera&quot;
-HWADDR=&quot;00:0C:29:D3:4D:5C&quot;
-IPV6INIT=&quot;no&quot;
-MTU=&quot;1500&quot;
-NM_CONTROLLED=&quot;yes&quot;
-ONBOOT=&quot;yes&quot;
-TYPE=&quot;Ethernet&quot;
-UUID=&quot;f127faf3-7a1f-4bca-a404-0119665a8459&quot;
-IPADDR=192.168.6.6
-NETMASK=255.255.255.0
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">DEVICE=&quot;eth0&quot;</span><br><span class="line">BOOTPROTO=&quot;static&quot;</span><br><span class="line">DHCP_HOSTNAME=&quot;quickstart.cloudera&quot;</span><br><span class="line">HOSTNAME=&quot;quickstart.cloudera&quot;</span><br><span class="line">HWADDR=&quot;00:0C:29:D3:4D:5C&quot;</span><br><span class="line">IPV6INIT=&quot;no&quot;</span><br><span class="line">MTU=&quot;1500&quot;</span><br><span class="line">NM_CONTROLLED=&quot;yes&quot;</span><br><span class="line">ONBOOT=&quot;yes&quot;</span><br><span class="line">TYPE=&quot;Ethernet&quot;</span><br><span class="line">UUID=&quot;f127faf3-7a1f-4bca-a404-0119665a8459&quot;</span><br><span class="line">IPADDR=192.168.6.6</span><br><span class="line">NETMASK=255.255.255.0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <p><code>重新启动即可:</code></p>
 <blockquote>
 <p>sudo service network restart</p>
@@ -1572,12 +1549,10 @@ NETMASK=255.255.255.0
 </blockquote>
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200501223731768.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/20200501223731768.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200501093303582"></p>
 <p><strong>再次重新启动</strong></p>
-<pre><code class="shell">1.重启服务
-sudo service network restart
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.重启服务</span><br><span class="line">sudo service network restart</span><br><span class="line"></span><br><span class="line">2.查看ip</span><br><span class="line">ip addr/ifconfig</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-2.查看ip
-ip addr/ifconfig
-</code></pre>
+
+
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200501223731978.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/20200501223731978.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200501094403920"></p>
 <h1 id="MobaXterm"><a href="#MobaXterm" class="headerlink" title="MobaXterm"></a>MobaXterm</h1><h2 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a>1、安装</h2><p><strong>MobaXterm</strong></p>
 <blockquote>
@@ -1608,7 +1583,7 @@ ip addr/ifconfig
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\8c0ed688.html" title="Python数据类型-列表" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Python数据类型-列表</span><span class="excerpt">Python数据类型-列表！！！</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\5590.html" title="Day1.概述" rel="bookmark "><img src="Day1-%E6%A6%82%E8%BF%B0.assets/image-20200509225153813.png" /><span class="title">Day1.概述</span><span class="excerpt">数据可视化，基础概述。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1671,7 +1646,7 @@ ip addr/ifconfig
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>592 words</p>
+      <p>589 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1778,9 +1753,7 @@ DBeaver1、下载
 正则表达式
 是指用来描述或者匹配一系列符合某个句法规则的字符串的单个字符串。就是用某种模式去匹配一类字符串的一个公式。
 
-touch bb.txt
-
-grep “m*” b...</p>
+1234touch bb.txtgrep “m*”...</p>
         </a>
       
     </div>

@@ -1425,13 +1425,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>462 words</p>
+      <p>455 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>2 min</p>
+      <p>1 min</p>
     </a>
   </div>
 
@@ -1484,90 +1484,21 @@
 <p>命名格式 ：   bash-3.1-16.1.i386.rpm</p>
 <p>软件包名-版本号-发布次数-硬件平台-后缀名</p>
 </blockquote>
-<h2 id="rpm管理命令"><a href="#rpm管理命令" class="headerlink" title="rpm管理命令"></a>rpm管理命令</h2><pre><code class="shell">  rpm -q [子选项] 【软件名】
+<h2 id="rpm管理命令"><a href="#rpm管理命令" class="headerlink" title="rpm管理命令"></a>rpm管理命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">rpm -q [子选项] 【软件名】</span><br><span class="line"></span><br><span class="line">rpm -qa 查看系统中已安装的所有rpm软件包列表</span><br><span class="line"></span><br><span class="line">rpm -qpi 通过.rpm 包文件查看该软件的详细信息</span><br><span class="line"></span><br><span class="line">rpm -qpl 查看.rpm安装包内所包含的目录.文件列表</span><br></pre></td></tr></table></figure>
 
-  rpm -qa 查看系统中已安装的所有rpm软件包列表
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">rpm -i rpm包文件   安装一个新的rpm软件包</span><br><span class="line"></span><br><span class="line">rpm - U 升级某个rpm软件包，若原本未安装，则进行安装</span><br><span class="line"></span><br><span class="line">rpm  -F 更新某个rpm 软件，若原本未安装，则放弃安装</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-  rpm -qpi 通过.rpm 包文件查看该软件的详细信息
-
-  rpm -qpl 查看.rpm安装包内所包含的目录.文件列表</code></pre>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code class="shell">   rpm -i rpm包文件   安装一个新的rpm软件包
-
-   rpm - U 升级某个rpm软件包，若原本未安装，则进行安装
-
-   rpm  -F 更新某个rpm 软件，若原本未安装，则放弃安装
-
-</code></pre>
 <p><strong>安装</strong></p>
-<pre><code class="shell">步骤1： tar 解包
-步骤2： ./configure 配置
-步骤3： make 编译
-步骤4： make instal
-步骤5:  service httpd restart
-       service network restart
-步骤6:  cd /var/www/</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">步骤1： tar 解包</span><br><span class="line">步骤2： ./configure 配置</span><br><span class="line">步骤3： make 编译</span><br><span class="line">步骤4： make instal</span><br><span class="line">步骤5:  service httpd restart</span><br><span class="line">       service network restart</span><br><span class="line">步骤6:  cd /var/www/</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="Yum"><a href="#Yum" class="headerlink" title="Yum"></a>Yum</h2><p><strong>本地：Yum(file本地）</strong></p>
-<pre><code class="shell">命令：
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">命令：</span><br><span class="line"></span><br><span class="line">cd  /etc/yum.repos.d/xd</span><br><span class="line"></span><br><span class="line">挂载：</span><br><span class="line">1. 挂载光盘镜像到/mnt</span><br><span class="line"></span><br><span class="line">mount /dev/cdrom /mnt</span><br><span class="line">    </span><br><span class="line">2. 配置yum源</span><br><span class="line"></span><br><span class="line">vim /etc/yum.repos.d/xxx.repo</span><br><span class="line"></span><br><span class="line">[xxx]</span><br><span class="line"></span><br><span class="line">baseurl=file:///mnt/Server(flie本地)</span><br><span class="line"></span><br><span class="line">enabled=1(是否启动文件 0否 1是）</span><br><span class="line"></span><br><span class="line">gpgcheck=0</span><br><span class="line"></span><br><span class="line">3. 安装</span><br><span class="line">    </span><br><span class="line">yum -y install 软件名称 （vsftpd）</span><br><span class="line"></span><br><span class="line">4. 重启</span><br><span class="line"></span><br><span class="line">yum    service vsftpd start</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-cd  /etc/yum.repos.d/xd
-
-挂载：
-1. 挂载光盘镜像到/mnt
-
-mount /dev/cdrom /mnt
-
-2. 配置yum源
-
-vim /etc/yum.repos.d/xxx.repo
-
-[xxx]
-
-baseurl=file:///mnt/Server(flie本地)
-
-enabled=1(是否启动文件 0否 1是）
-
-gpgcheck=0
-
-3. 安装
-
-yum -y install 软件名称 （vsftpd）
-
-4. 重启
-
-yum    service vsftpd start
-</code></pre>
 <p><strong>服务器Yum</strong></p>
-<pre><code class="shell">------服务器yum
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">------服务器yum</span><br><span class="line"></span><br><span class="line">0、命令：</span><br><span class="line">cd  /etc/yum.repos.d/</span><br><span class="line"></span><br><span class="line">1、服务器端提供共享</span><br><span class="line"></span><br><span class="line">-- 服务器安装一个ftp</span><br><span class="line">-- 把光盘镜像挂载ftp的共享目录</span><br><span class="line"></span><br><span class="line">挂载：</span><br><span class="line"></span><br><span class="line">mount /dev/cdrom /var/ftp/pub</span><br><span class="line"></span><br><span class="line">必须保证两台机器能够正常通信（能够ping通）</span><br><span class="line"></span><br><span class="line">2、配置客户端</span><br><span class="line"></span><br><span class="line">vim /etc/yum.repos.d/xxx.repo</span><br><span class="line"></span><br><span class="line">[xxx]</span><br><span class="line"></span><br><span class="line">baseurl=[ftp://192.168.18.221/dev/cdrom](ftp://192.168.18.221/dev/cdrom)  /var/ftp/pub </span><br><span class="line">【服务器ip地址及共享目录】</span><br><span class="line"></span><br><span class="line">enabled=1(是否启动文件 0否 1是）</span><br><span class="line"></span><br><span class="line">gpgcheck=0</span><br><span class="line"></span><br><span class="line">开启 service vsftpd start</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-0、命令：
-cd  /etc/yum.repos.d/
-
-1、服务器端提供共享
-
--- 服务器安装一个ftp
--- 把光盘镜像挂载ftp的共享目录
-
-挂载：
-
-mount /dev/cdrom /var/ftp/pub
-
-必须保证两台机器能够正常通信（能够ping通）
-
-2、配置客户端
-
-vim /etc/yum.repos.d/xxx.repo
-
-[xxx]
-
-baseurl=[ftp://192.168.18.221/dev/cdrom](ftp://192.168.18.221/dev/cdrom)  /var/ftp/pub 
-【服务器ip地址及共享目录】
-
-enabled=1(是否启动文件 0否 1是）
-
-gpgcheck=0
-
-开启 service vsftpd start
-</code></pre>
 <h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><blockquote>
 <p>rpm -e 软件名</p>
 <p>源代码（灵活定制）</p>
@@ -1575,7 +1506,8 @@ gpgcheck=0
 <p>tar.gz  或者 tar.bz2</p>
 </blockquote>
 <p><strong>效验工具</strong></p>
-<pre><code class="shell">md5 sum </code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">md5 sum </span><br></pre></td></tr></table></figure>
+
 
   
   
@@ -1589,7 +1521,7 @@ gpgcheck=0
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\46411.html" title="Linux基本操作" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200425192236.png" /><span class="title">Linux基本操作</span><span class="excerpt">Linux 基本操作。</span></a><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\10415.html" title="Linux NFS网络文件" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux NFS网络文件</span><span class="excerpt">Linux 手把手教你搭建NFS网络文件系统。</span></a><a class="item" href="\posts\43857.html" title="Linux Shell脚本" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell脚本</span><span class="excerpt">Linux Shell脚本相关学习。</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\61794.html" title="Linux Mdadm案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Mdadm案例</span><span class="excerpt">Linux  Mdadm 案例 raid5。</span></a><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\43857.html" title="Linux Shell脚本" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell脚本</span><span class="excerpt">Linux Shell脚本相关学习。</span></a><a class="item" href="\posts\43150.html" title="Linux安装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux安装</span><span class="excerpt">linux介绍及安装</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1652,13 +1584,13 @@ gpgcheck=0
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>462 words</p>
+      <p>455 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>2 min</p>
+      <p>1 min</p>
     </a>
   </div>
 
@@ -1739,14 +1671,7 @@ gpgcheck=0
 
 
 
-磁盘管理查看磁盘fdisk -l 
-
-fdisk /dev/sdb 磁盘分区
-
-指令 m
-
-l    list known partition   列出所有的分区
-...</p>
+磁盘管理查看磁盘1234567891011121314151617fdisk -l fdisk /dev/sdb 磁盘分区指令 ml    list known p...</p>
         </a>
       
       
@@ -1760,7 +1685,7 @@ l    list known partition   列出所有的分区
 存放位置 —- 以RedHat为例
 /etc/sysconfig/network-scripts/ifcfg-etc0
 
-修改ipsetup  交互式...</p>
+修改ip123setup  ...</p>
         </a>
       
     </div>

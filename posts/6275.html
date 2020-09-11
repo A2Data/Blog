@@ -1480,30 +1480,10 @@
 <p>在python中，值是靠引用来传递来的。</p>
 </blockquote>
 <p><strong>我们可以用id()来判断两个变量是否为同一个值的引用。</strong> 我们可以将id值理解为那块内存的地址标示。</p>
-<pre><code class="python">&gt;&gt;&gt; a = 1
-&gt;&gt;&gt; b = a
-&gt;&gt;&gt; id(a) 
-13033816
-&gt;&gt;&gt; id(b)   # 注意两个变量的id值相同
-13033816
-&gt;&gt;&gt; a = 2
-&gt;&gt;&gt; id(a)   # 注意a的id值已经变了
-13033792
-&gt;&gt;&gt; id(b)   # b的id值依旧
-13033816
-&gt;&gt;&gt; a = [1, 2]
-&gt;&gt;&gt; b = a
-&gt;&gt;&gt; id(a)
-139935018544808
-&gt;&gt;&gt; id(b)
-139935018544808
-&gt;&gt;&gt; a.append(3)
-&gt;&gt;&gt; a
-[1, 2, 3]
-&gt;&gt;&gt; id(a)
-139935018544808
-&gt;&gt;&gt; id(b)       # 注意a与b始终指向同一个地址
-139935018544808</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = a</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(a) </span><br><span class="line"><span class="number">13033816</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(b)   <span class="comment"># 注意两个变量的id值相同</span></span><br><span class="line"><span class="number">13033816</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(a)   <span class="comment"># 注意a的id值已经变了</span></span><br><span class="line"><span class="number">13033792</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(b)   <span class="comment"># b的id值依旧</span></span><br><span class="line"><span class="number">13033816</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = a</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(a)</span><br><span class="line"><span class="number">139935018544808</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(b)</span><br><span class="line"><span class="number">139935018544808</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.append(<span class="number">3</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(a)</span><br><span class="line"><span class="number">139935018544808</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(b)       <span class="comment"># 注意a与b始终指向同一个地址</span></span><br><span class="line"><span class="number">139935018544808</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="2、递归函数"><a href="#2、递归函数" class="headerlink" title="2、递归函数"></a>2、递归函数</h2><h3 id="2-1、什么是递归函数"><a href="#2-1、什么是递归函数" class="headerlink" title="2.1、什么是递归函数"></a>2.1、什么是递归函数</h3><blockquote>
 <p>通过前面的学习知道一个函数可以调用其他函数。</p>
 <p>如果一个函数在内部不调用其它的函数，而是自己本身的话，这个函数就是递归函数。</p>
@@ -1514,12 +1494,8 @@
 <p><strong>方案1：</strong></p>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191219083828.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191219083828.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p><em>阶乘的规律</em></p>
-<pre><code class="python">1! = 1
-2! = 2 × 1 = 2 × 1!
-3! = 3 × 2 × 1 = 3 × 2!
-4! = 4 × 3 × 2 × 1 = 4 × 3!
-...
-n! = n × (n-1)!</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>! = <span class="number">1</span></span><br><span class="line"><span class="number">2</span>! = <span class="number">2</span> × <span class="number">1</span> = <span class="number">2</span> × <span class="number">1</span>!</span><br><span class="line"><span class="number">3</span>! = <span class="number">3</span> × <span class="number">2</span> × <span class="number">1</span> = <span class="number">3</span> × <span class="number">2</span>!</span><br><span class="line"><span class="number">4</span>! = <span class="number">4</span> × <span class="number">3</span> × <span class="number">2</span> × <span class="number">1</span> = <span class="number">4</span> × <span class="number">3</span>!</span><br><span class="line">...</span><br><span class="line">n! = n × (n<span class="number">-1</span>)!</span><br></pre></td></tr></table></figure>
+
 <p><strong>方案2：</strong></p>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191219084252.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191219084252.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="递归"></p>
 <p><em>递归原理</em></p>
@@ -1528,54 +1504,39 @@ n! = n × (n-1)!</code></pre>
 <p>用lambda关键词能创建小型匿名函数。这种函数得名于省略了用def声明函数的标准步骤。</p>
 <p><strong>lambda函数</strong>的语法只包含一个语句，如下：</p>
 </blockquote>
-<pre><code class="python">    lambda [arg1 [,arg2,.....argn]]:expression</code></pre>
-<p>如下实例：</p>
-<pre><code class="python">sum = lambda arg1, arg2: arg1 + arg2
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">lambda</span> [arg1 [,arg2,.....argn]]:expression</span><br></pre></td></tr></table></figure>
 
-#调用sum函数
-print &quot;Value of total : &quot;, sum( 10, 20 )
-print &quot;Value of total : &quot;, sum( 20, 20 )</code></pre>
+<p>如下实例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sum = <span class="keyword">lambda</span> arg1, arg2: arg1 + arg2</span><br><span class="line"></span><br><span class="line"><span class="comment">#调用sum函数</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">&quot;Value of total : &quot;</span>, sum( <span class="number">10</span>, <span class="number">20</span> )</span><br><span class="line"><span class="keyword">print</span> <span class="string">&quot;Value of total : &quot;</span>, sum( <span class="number">20</span>, <span class="number">20</span> )</span><br></pre></td></tr></table></figure>
+
 <p>以上实例输出结果：</p>
-<pre><code class="python">Value of total :  30
-Value of total :  40</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Value of total :  <span class="number">30</span></span><br><span class="line">Value of total :  <span class="number">40</span></span><br></pre></td></tr></table></figure>
+
 <p>Lambda函数能接收任何数量的参数但只能返回一个表达式的值</p>
 <p>匿名函数不能直接调用print，因为lambda需要一个表达式</p>
 <p> <strong>应用场合</strong></p>
 <h4 id="3-1函数作为参数传递"><a href="#3-1函数作为参数传递" class="headerlink" title="3.1函数作为参数传递"></a>3.1函数作为参数传递</h4><ol>
 <li><p>自己定义函数</p>
-<pre><code class="python">&gt;&gt;&gt; def fun(a, b, opt):
-...     print &quot;a =&quot;, a
-...     print &quot;b =&quot;, b
-...     print &quot;result =&quot;, opt(a, b)
-...
-&gt;&gt;&gt; fun(1, 2, lambda x,y:x+y)
-a = 1
-b = 2
-result = 3</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">a, b, opt</span>):</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">print</span> <span class="string">&quot;a =&quot;</span>, a</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">print</span> <span class="string">&quot;b =&quot;</span>, b</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">print</span> <span class="string">&quot;result =&quot;</span>, opt(a, b)</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>fun(<span class="number">1</span>, <span class="number">2</span>, <span class="keyword">lambda</span> x,y:x+y)</span><br><span class="line">a = <span class="number">1</span></span><br><span class="line">b = <span class="number">2</span></span><br><span class="line">result = <span class="number">3</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>作为内置函数的参数</p>
 </li>
 </ol>
-<h4 id="3-2想一想，下面的数据如何指定按age或name排序？"><a href="#3-2想一想，下面的数据如何指定按age或name排序？" class="headerlink" title="3.2想一想，下面的数据如何指定按age或name排序？"></a>3.2想一想，下面的数据如何指定按age或name排序？</h4><pre><code class="python"># A2Data制作
-stus = [
-    &#123;&quot;name&quot;:&quot;zhangsan&quot;, &quot;age&quot;:18&#125;, 
-    &#123;&quot;name&quot;:&quot;lisi&quot;, &quot;age&quot;:19&#125;, 
-    &#123;&quot;name&quot;:&quot;wangwu&quot;, &quot;age&quot;:17&#125;
-]</code></pre>
-<h4 id="3-3-按name排序："><a href="#3-3-按name排序：" class="headerlink" title="3.3 按name排序："></a>3.3 按name排序：</h4><pre><code class="python">&gt;&gt;&gt; stus.sort(key = lambda x:x[&#39;name&#39;])
-&gt;&gt;&gt; stus
-[&#123;&#39;age&#39;: 19, &#39;name&#39;: &#39;lisi&#39;&#125;, &#123;&#39;age&#39;: 17, &#39;name&#39;: &#39;wangwu&#39;&#125;, &#123;&#39;age&#39;: 18, &#39;name&#39;: &#39;zhangsan&#39;&#125;]</code></pre>
-<h4 id="3-4按age排序："><a href="#3-4按age排序：" class="headerlink" title="3.4按age排序："></a>3.4按age排序：</h4><pre><code class="python">&gt;&gt;&gt; stus.sort(key = lambda x:x[&#39;age&#39;])
-&gt;&gt;&gt; stus
-[&#123;&#39;age&#39;: 17, &#39;name&#39;: &#39;wangwu&#39;&#125;, &#123;&#39;age&#39;: 18, &#39;name&#39;: &#39;zhangsan&#39;&#125;, &#123;&#39;age&#39;: 19, &#39;name&#39;: &#39;lisi&#39;&#125;]</code></pre>
+<h4 id="3-2想一想，下面的数据如何指定按age或name排序？"><a href="#3-2想一想，下面的数据如何指定按age或name排序？" class="headerlink" title="3.2想一想，下面的数据如何指定按age或name排序？"></a>3.2想一想，下面的数据如何指定按age或name排序？</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># A2Data制作</span></span><br><span class="line">stus = [</span><br><span class="line">    &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;zhangsan&quot;</span>, <span class="string">&quot;age&quot;</span>:<span class="number">18</span>&#125;, </span><br><span class="line">    &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;lisi&quot;</span>, <span class="string">&quot;age&quot;</span>:<span class="number">19</span>&#125;, </span><br><span class="line">    &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;wangwu&quot;</span>, <span class="string">&quot;age&quot;</span>:<span class="number">17</span>&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-3-按name排序："><a href="#3-3-按name排序：" class="headerlink" title="3.3 按name排序："></a>3.3 按name排序：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>stus.sort(key = <span class="keyword">lambda</span> x:x[<span class="string">&#x27;name&#x27;</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>stus</span><br><span class="line">[&#123;<span class="string">&#x27;age&#x27;</span>: <span class="number">19</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;lisi&#x27;</span>&#125;, &#123;<span class="string">&#x27;age&#x27;</span>: <span class="number">17</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;wangwu&#x27;</span>&#125;, &#123;<span class="string">&#x27;age&#x27;</span>: <span class="number">18</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhangsan&#x27;</span>&#125;]</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-4按age排序："><a href="#3-4按age排序：" class="headerlink" title="3.4按age排序："></a>3.4按age排序：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>stus.sort(key = <span class="keyword">lambda</span> x:x[<span class="string">&#x27;age&#x27;</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>stus</span><br><span class="line">[&#123;<span class="string">&#x27;age&#x27;</span>: <span class="number">17</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;wangwu&#x27;</span>&#125;, &#123;<span class="string">&#x27;age&#x27;</span>: <span class="number">18</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhangsan&#x27;</span>&#125;, &#123;<span class="string">&#x27;age&#x27;</span>: <span class="number">19</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;lisi&#x27;</span>&#125;]</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="4、函数使用注意事项"><a href="#4、函数使用注意事项" class="headerlink" title="4、函数使用注意事项"></a>4、函数使用注意事项</h2><h3 id="4-1、自定义函数"><a href="#4-1、自定义函数" class="headerlink" title="4.1、自定义函数"></a>4.1、自定义函数</h3><blockquote>
 <p>1、无参数、无返回值</p>
-<pre><code class="python">    def 函数名():
-        语句</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> 函数名():</span></span><br><span class="line">    语句</span><br></pre></td></tr></table></figure>
+
 <p>2、无参数、有返回值</p>
-<pre><code class="python">    def 函数名():
-        语句
-        return 需要返回的数值</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> 函数名():</span></span><br><span class="line">    语句</span><br><span class="line">    <span class="keyword">return</span> 需要返回的数值</span><br></pre></td></tr></table></figure>
+
 <p>注意:</p>
 <ul>
 <li>一个函数到底有没有返回值，就看有没有return，因为只有return才可以返回数据</li>
@@ -1583,23 +1544,23 @@ stus = [
 <li>函数中，可以有多个return语句，但是只要执行到一个return语句，那么就意味着这个函数的调用完成</li>
 </ul>
 <p>3、有参数、无返回值</p>
-<pre><code class="python">    def 函数名(形参列表):
-        语句</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> 函数名(<span class="params">形参列表</span>):</span></span><br><span class="line">    语句</span><br></pre></td></tr></table></figure>
+
 <p>注意：</p>
 <ul>
 <li>在调用函数时，如果需要把一些数据一起传递过去，被调用函数就需要用参数来接收</li>
 <li>参数列表中变量的个数根据实际传递的数据的多少来确定</li>
 </ul>
 <p>4、有参数、有返回值</p>
-<pre><code class="python">    def 函数名(形参列表):
-        语句
-        return 需要返回的数值</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> 函数名(<span class="params">形参列表</span>):</span></span><br><span class="line">    语句</span><br><span class="line">    <span class="keyword">return</span> 需要返回的数值</span><br></pre></td></tr></table></figure>
+
 <p>5、函数名不能重复（如下所示）</p>
 </blockquote>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191219084919.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191219084919.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h3 id="4-2、调用函数"><a href="#4-2、调用函数" class="headerlink" title="4.2、调用函数"></a>4.2、调用函数</h3><blockquote>
 <p>1、调用的方式为：</p>
-<pre><code class="python">    函数名([实参列表])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">函数名([实参列表])</span><br></pre></td></tr></table></figure>
+
 <p>2、调用时，到底写不写 实参</p>
 <ul>
 <li>如果调用的函数 在定义时有形参，那么在调用的时候就应该传递参数</li>
@@ -1624,7 +1585,7 @@ stus = [
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\16550.html" title="Python烤地瓜案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223124337.png" /><span class="title">Python烤地瓜案例</span><span class="excerpt">Python烤地瓜实例解析</span></a><a class="item" href="\posts\27081.html" title="python第二天作业答案" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">python第二天作业答案</span><span class="excerpt">第二天作业答案!</span></a><a class="item" href="\posts\30873.html" title="Python函数(中)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191218085353.png" /><span class="title">Python函数(中)</span><span class="excerpt">Python函数介绍中篇</span></a><a class="item" href="\posts\58489.html" title="Python列表介绍" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191212085923.png" /><span class="title">Python列表介绍</span><span class="excerpt">Python列表介绍</span></a><a class="item" href="\posts\4136.html" title="Anaconda闪退" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200414151257.png" /><span class="title">Anaconda闪退</span><span class="excerpt">anaconda Windows闪退解决方案 。</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\16550.html" title="Python烤地瓜案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223124337.png" /><span class="title">Python烤地瓜案例</span><span class="excerpt">Python烤地瓜实例解析</span></a><a class="item" href="\posts\29055.html" title="python的字符串" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211073327.png" /><span class="title">python的字符串</span><span class="excerpt">Python的字符串</span></a><a class="item" href="\posts\30873.html" title="Python函数(中)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191218085353.png" /><span class="title">Python函数(中)</span><span class="excerpt">Python函数介绍中篇</span></a><a class="item" href="\posts\58489.html" title="Python列表介绍" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191212085923.png" /><span class="title">Python列表介绍</span><span class="excerpt">Python列表介绍</span></a><a class="item" href="\posts\4136.html" title="Anaconda闪退" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200414151257.png" /><span class="title">Anaconda闪退</span><span class="excerpt">anaconda Windows闪退解决方案 。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1800,8 +1761,7 @@ Python函数(中)1、回顾函数应用
 
 
 Demo
-# 1.写一个函数打印一条直线
-# 2.打印自定...</p>
+123456789101112131415161...</p>
         </a>
       
     </div>

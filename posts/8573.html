@@ -1495,7 +1495,8 @@
 <p>在python，使用open函数，可以打开一个已经存在的文件，或者创建一个新文件</p>
 <p>open(文件名，访问模式)示例如下：</p>
 </blockquote>
-<pre><code class="python">f = open(&#39;test.txt&#39;, &#39;w&#39;)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">&#x27;test.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
 <p><strong>说明:</strong></p>
 <table>
 <thead>
@@ -1556,11 +1557,10 @@
 <h3 id="2-2、关闭文件"><a href="#2-2、关闭文件" class="headerlink" title="2.2、关闭文件"></a>2.2、关闭文件</h3><blockquote>
 <p>close( ) 示例如下：</p>
 </blockquote>
-<pre><code class="python"># 新建一个文件，文件名为:test.txt
-f = open(&#39;test.txt&#39;, &#39;w&#39;)
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新建一个文件，文件名为:test.txt</span></span><br><span class="line">f = open(<span class="string">&#x27;test.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭这个文件</span></span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
 
-# 关闭这个文件
-f.close()</code></pre>
+
+
 <h2 id="3、文件读写"><a href="#3、文件读写" class="headerlink" title="3、文件读写"></a>3、文件读写</h2><h3 id="3-1、写文件-write"><a href="#3-1、写文件-write" class="headerlink" title="3.1、写文件(write)"></a>3.1、写文件(write)</h3><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191220081703.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191220081703.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p>注意：</p>
 <ul>
@@ -1580,23 +1580,8 @@ f.close()</code></pre>
 <h3 id="3-5、文件定位读写"><a href="#3-5、文件定位读写" class="headerlink" title="3.5、文件定位读写"></a>3.5、文件定位读写</h3><h4 id="3-5-1、获取当前读写的位置"><a href="#3-5-1、获取当前读写的位置" class="headerlink" title="3.5.1、获取当前读写的位置"></a>3.5.1、获取当前读写的位置</h4><blockquote>
 <p>在读写文件的过程中，如果想知道当前的位置，可以使用tell()来获取</p>
 </blockquote>
-<pre><code class="python"># 打开一个已经存在的文件
-f = open(&quot;test.txt&quot;, &quot;r&quot;)
-str = f.read(3)
-print &quot;读取的数据是 : &quot;, str
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开一个已经存在的文件</span></span><br><span class="line">f = open(<span class="string">&quot;test.txt&quot;</span>, <span class="string">&quot;r&quot;</span>)</span><br><span class="line">str = f.read(<span class="number">3</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">&quot;读取的数据是 : &quot;</span>, str</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找当前位置</span></span><br><span class="line">position = f.tell()</span><br><span class="line"><span class="keyword">print</span> <span class="string">&quot;当前文件位置 : &quot;</span>, position</span><br><span class="line"></span><br><span class="line">str = f.read(<span class="number">3</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">&quot;读取的数据是 : &quot;</span>, str</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找当前位置</span></span><br><span class="line">position = f.tell()</span><br><span class="line"><span class="keyword">print</span> <span class="string">&quot;当前文件位置 : &quot;</span>, position</span><br><span class="line"></span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
 
-# 查找当前位置
-position = f.tell()
-print &quot;当前文件位置 : &quot;, position
-
-str = f.read(3)
-print &quot;读取的数据是 : &quot;, str
-
-# 查找当前位置
-position = f.tell()
-print &quot;当前文件位置 : &quot;, position
-
-f.close()</code></pre>
 <h4 id="3-5-2、定位到某个位置"><a href="#3-5-2、定位到某个位置" class="headerlink" title="3.5.2、定位到某个位置"></a>3.5.2、定位到某个位置</h4><blockquote>
 <p>如果在读写文件的过程中，需要从另外一个位置进行操作的话，可以使用seek()</p>
 <p>seek(offset, from)有2个参数</p>
@@ -1611,39 +1596,13 @@ f.close()</code></pre>
 </li>
 </ul>
 <p><em>demo:把位置设置为：从文件开头，偏移5个字节</em></p>
-<pre><code class="python"># 打开一个已经存在的文件
-f = open(&quot;test.txt&quot;, &quot;r&quot;)
-str = f.read(30)
-print &quot;读取的数据是 : &quot;, str
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开一个已经存在的文件</span></span><br><span class="line">f = open(<span class="string">&quot;test.txt&quot;</span>, <span class="string">&quot;r&quot;</span>)</span><br><span class="line">str = f.read(<span class="number">30</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">&quot;读取的数据是 : &quot;</span>, str</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找当前位置</span></span><br><span class="line">position = f.tell()</span><br><span class="line"><span class="keyword">print</span> <span class="string">&quot;当前文件位置 : &quot;</span>, position</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重新设置位置</span></span><br><span class="line">f.seek(<span class="number">5</span>,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找当前位置</span></span><br><span class="line">position = f.tell()</span><br><span class="line"><span class="keyword">print</span> <span class="string">&quot;当前文件位置 : &quot;</span>, position</span><br><span class="line"></span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
 
-# 查找当前位置
-position = f.tell()
-print &quot;当前文件位置 : &quot;, position
-
-# 重新设置位置
-f.seek(5,0)
-
-# 查找当前位置
-position = f.tell()
-print &quot;当前文件位置 : &quot;, position
-
-f.close()</code></pre>
 <p><em>demo:把位置设置为：离文件末尾，3字节处</em></p>
-<pre><code class="python"># 打开一个已经存在的文件
-f = open(&quot;test.txt&quot;, &quot;r&quot;)
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开一个已经存在的文件</span></span><br><span class="line">f = open(<span class="string">&quot;test.txt&quot;</span>, <span class="string">&quot;r&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找当前位置</span></span><br><span class="line">position = f.tell()</span><br><span class="line"><span class="keyword">print</span> <span class="string">&quot;当前文件位置 : &quot;</span>, position</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重新设置位置</span></span><br><span class="line">f.seek(<span class="number">-3</span>,<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取到的数据为：文件最后3个字节数据</span></span><br><span class="line">str = f.read()</span><br><span class="line"><span class="keyword">print</span> <span class="string">&quot;读取的数据是 : &quot;</span>, str</span><br><span class="line"></span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
 
-# 查找当前位置
-position = f.tell()
-print &quot;当前文件位置 : &quot;, position
 
-# 重新设置位置
-f.seek(-3,2)
 
-# 读取到的数据为：文件最后3个字节数据
-str = f.read()
-print &quot;读取的数据是 : &quot;, str
-
-f.close()</code></pre>
 <h2 id="4、制作文件备份"><a href="#4、制作文件备份" class="headerlink" title="4、制作文件备份"></a>4、制作文件备份</h2><blockquote>
 <p>输入文件的名字，然后程序自动完成对文件的备份操作</p>
 </blockquote>
@@ -1655,59 +1614,32 @@ f.close()</code></pre>
 <p>os模块中的rename()可以完成对文件的重命名操作</p>
 <p>rename(需要修改的文件名, 新的文件名)</p>
 </blockquote>
-<pre><code class="python">import os
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.rename(<span class="string">&quot;text.txt&quot;</span>, <span class="string">&quot;test.txt&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 需要注意以下</span></span><br></pre></td></tr></table></figure>
 
-os.rename(&quot;text.txt&quot;, &quot;test.txt&quot;)
-
-# 需要注意以下</code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191220083442.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191220083442.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h3 id="5-2、删除文件"><a href="#5-2、删除文件" class="headerlink" title="5.2、删除文件"></a>5.2、删除文件</h3><blockquote>
 <p>os模块中的remove()可以完成对文件的删除操作</p>
 <p>remove(待删除的文件名)</p>
 </blockquote>
-<pre><code class="python">import os
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.remove(<span class="string">&quot;text.txt&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-os.remove(&quot;text.txt&quot;)</code></pre>
-<h3 id="5-3、创建文件夹"><a href="#5-3、创建文件夹" class="headerlink" title="5.3、创建文件夹"></a>5.3、创建文件夹</h3><pre><code class="python">import os
+<h3 id="5-3、创建文件夹"><a href="#5-3、创建文件夹" class="headerlink" title="5.3、创建文件夹"></a>5.3、创建文件夹</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.mkdir(<span class="string">&quot;小风&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-os.mkdir(&quot;小风&quot;)</code></pre>
-<h3 id="5-4、获取当前目录"><a href="#5-4、获取当前目录" class="headerlink" title="5.4、获取当前目录"></a>5.4、获取当前目录</h3><pre><code class="python">import os
+<h3 id="5-4、获取当前目录"><a href="#5-4、获取当前目录" class="headerlink" title="5.4、获取当前目录"></a>5.4、获取当前目录</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.getcwd()</span><br></pre></td></tr></table></figure>
 
-os.getcwd()</code></pre>
-<h3 id="5-5、改变默认目录"><a href="#5-5、改变默认目录" class="headerlink" title="5.5、改变默认目录"></a>5.5、改变默认目录</h3><pre><code class="python">import os
+<h3 id="5-5、改变默认目录"><a href="#5-5、改变默认目录" class="headerlink" title="5.5、改变默认目录"></a>5.5、改变默认目录</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.chdir(<span class="string">&quot;../&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-os.chdir(&quot;../&quot;)</code></pre>
-<h3 id="5-6、获取目录列表"><a href="#5-6、获取目录列表" class="headerlink" title="5.6、获取目录列表"></a>5.6、获取目录列表</h3><pre><code class="python">import os
+<h3 id="5-6、获取目录列表"><a href="#5-6、获取目录列表" class="headerlink" title="5.6、获取目录列表"></a>5.6、获取目录列表</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.listdir(<span class="string">&quot;./&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-os.listdir(&quot;./&quot;)</code></pre>
-<h3 id="5-7、删除文件夹"><a href="#5-7、删除文件夹" class="headerlink" title="5.7、删除文件夹"></a>5.7、删除文件夹</h3><pre><code class="python">import os
+<h3 id="5-7、删除文件夹"><a href="#5-7、删除文件夹" class="headerlink" title="5.7、删除文件夹"></a>5.7、删除文件夹</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.rmdir(<span class="string">&quot;小风&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-os.rmdir(&quot;小风&quot;)</code></pre>
+
+
 <h2 id="6、批量修改文件名"><a href="#6、批量修改文件名" class="headerlink" title="6、批量修改文件名"></a>6、批量修改文件名</h2><blockquote>
 <p>例如，我们有很多文件，想批量修改，该怎么办呢？</p>
 </blockquote>
-<pre><code class="python"># 批量在文件名前加前缀
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 批量在文件名前加前缀</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">funFlag = <span class="number">1</span> <span class="comment"># 1表示添加标志  2表示删除标志</span></span><br><span class="line"></span><br><span class="line">folderName = <span class="string">&#x27;./小风/&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取指定路径的所有文件名字</span></span><br><span class="line">dirList = os.listdir(folderName)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历输出所有文件名字</span></span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> dirList:</span><br><span class="line">    <span class="keyword">if</span> funFlag == <span class="number">1</span>:</span><br><span class="line">        newName = <span class="string">&#x27;[A2Data出品-]&#x27;</span> + name </span><br><span class="line">    <span class="keyword">elif</span> funFlag == <span class="number">2</span>:</span><br><span class="line">        num = len(<span class="string">&#x27;[A2Data出品]-&#x27;</span>)</span><br><span class="line">        newName = name[num:]</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">print</span> (newName)</span><br><span class="line">            </span><br><span class="line">    os.rename(folderName+name,folderName+newName)</span><br></pre></td></tr></table></figure>
 
-import os
-
-funFlag = 1 # 1表示添加标志  2表示删除标志
-
-folderName = &#39;./小风/&#39;
-
-# 获取指定路径的所有文件名字
-dirList = os.listdir(folderName)
-
-# 遍历输出所有文件名字
-for name in dirList:
-    if funFlag == 1:
-        newName = &#39;[A2Data出品-]&#39; + name 
-    elif funFlag == 2:
-        num = len(&#39;[A2Data出品]-&#39;)
-        newName = name[num:]
-
-    print (newName)
-
-    os.rename(folderName+name,folderName+newName)</code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191220093301.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191220093301.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 
   
@@ -1722,7 +1654,7 @@ for name in dirList:
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\47220.html" title="Python强化练习" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230224850.png" /><span class="title">Python强化练习</span><span class="excerpt">Python学习阶段钱</span></a><a class="item" href="\posts\27081.html" title="python第二天作业答案" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">python第二天作业答案</span><span class="excerpt">第二天作业答案!</span></a><a class="item" href="\posts\29055.html" title="python的字符串" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211073327.png" /><span class="title">python的字符串</span><span class="excerpt">Python的字符串</span></a><a class="item" href="\posts\55248.html" title="Python面向对象(4)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191226205105.png" /><span class="title">Python面向对象(4)</span><span class="excerpt">Python面向对象异常、模块</span></a><a class="item" href="\posts\16550.html" title="Python烤地瓜案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223124337.png" /><span class="title">Python烤地瓜案例</span><span class="excerpt">Python烤地瓜实例解析</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\59977.html" title="Python基础知识" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/py_1.png" /><span class="title">Python基础知识</span><span class="excerpt">Python的基础语法</span></a><a class="item" href="\posts\29055.html" title="python的字符串" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211073327.png" /><span class="title">python的字符串</span><span class="excerpt">Python的字符串</span></a><a class="item" href="\posts\27081.html" title="python第二天作业答案" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">python第二天作业答案</span><span class="excerpt">第二天作业答案!</span></a><a class="item" href="\posts\520.html" title="python元组与字典" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213231406.png" /><span class="title">python元组与字典</span><span class="excerpt">Python的元组与字典</span></a><a class="item" href="\posts\16550.html" title="Python烤地瓜案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223124337.png" /><span class="title">Python烤地瓜案例</span><span class="excerpt">Python烤地瓜实例解析</span></a></div></section></div>
       
       
         <div class='copyright'>

@@ -1414,7 +1414,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.6k words</p>
+      <p>1.7k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1472,10 +1472,8 @@
 <p>三个小盆友 Candy,Mandy,Sandy 分别拿着玩具 Teddy bear,Barbie,Lego。</p>
 <p>建立列表存储上述变量，并依次输出每位小盆友拿着什么玩具(xxx is holding xxx.)。</p>
 <p><strong>参考答案：</strong></p>
-<pre><code class="python">kids = [&#39;candy&#39;,&#39;mandy&#39;,&#39;sandy&#39;]
-toys = [&#39;Teddy bear&#39;,&#39;Barbie&#39;,&#39;Lego&#39;]  #先建立两个列表
-for i in range(0,3):  #遍历输出
-      print(kids[i].title()+&#39; is holding &#39;+toys[i]+&#39;.&#39;)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">kids = [<span class="string">&#x27;candy&#x27;</span>,<span class="string">&#x27;mandy&#x27;</span>,<span class="string">&#x27;sandy&#x27;</span>]</span><br><span class="line">toys = [<span class="string">&#x27;Teddy bear&#x27;</span>,<span class="string">&#x27;Barbie&#x27;</span>,<span class="string">&#x27;Lego&#x27;</span>]  <span class="comment">#先建立两个列表</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">3</span>):  <span class="comment">#遍历输出</span></span><br><span class="line"> 	 print(kids[i].title()+<span class="string">&#x27; is holding &#x27;</span>+toys[i]+<span class="string">&#x27;.&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
 <p><strong>学习引导：</strong></p>
 <ul>
 <li>数据类型-列表<ul>
@@ -1497,133 +1495,246 @@ for i in range(0,3):  #遍历输出
 <li>列表中的元素是可以改变的，很多操作和字符串类似</li>
 </ul>
 <p>下面演示部分列表常用的操作</p>
-<pre><code class="python">a=[&#39;123&#39;,&#39;datascience&#39;,&#39;4345&#39;,&#39;f&#39;,&#39;3&#39;]
-b=[&#39;ppp&#39;]
-print(a[2])  #输出第三个元素
-a[0]=321  #讲列表a中的第一个元素替换
-print(a[0])  #打印a中第一个元素
-print(a[0:3])  #打印a中第一个到第三个元素。注意：python语言取左不取右
-print(a[2:-1])  #打印a中第三个到倒数第二个元素
-print(a+b)  #将列表a，b相加
-print(b*3)  #将列表b乘以三</code></pre>
-<pre><code class="python">&#39;&#39;&#39;
-4345
-321
-[321, &#39;datascience&#39;, &#39;4345&#39;]
-[&#39;4345&#39;, &#39;f&#39;]
-[321, &#39;datascience&#39;, &#39;4345&#39;, &#39;f&#39;, &#39;3&#39;, &#39;ppp&#39;]
-[&#39;ppp&#39;, &#39;ppp&#39;, &#39;ppp&#39;]
-&#39;&#39;&#39;</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a=[<span class="string">&#x27;123&#x27;</span>,<span class="string">&#x27;datascience&#x27;</span>,<span class="string">&#x27;4345&#x27;</span>,<span class="string">&#x27;f&#x27;</span>,<span class="string">&#x27;3&#x27;</span>]</span><br><span class="line">b=[<span class="string">&#x27;ppp&#x27;</span>]</span><br><span class="line">print(a[<span class="number">2</span>])  <span class="comment">#输出第三个元素</span></span><br><span class="line">a[<span class="number">0</span>]=<span class="number">321</span>  <span class="comment">#讲列表a中的第一个元素替换</span></span><br><span class="line">print(a[<span class="number">0</span>])  <span class="comment">#打印a中第一个元素</span></span><br><span class="line">print(a[<span class="number">0</span>:<span class="number">3</span>])  <span class="comment">#打印a中第一个到第三个元素。注意：python语言取左不取右</span></span><br><span class="line">print(a[<span class="number">2</span>:<span class="number">-1</span>])  <span class="comment">#打印a中第三个到倒数第二个元素</span></span><br><span class="line">print(a+b)  <span class="comment">#将列表a，b相加</span></span><br><span class="line">print(b*<span class="number">3</span>)  <span class="comment">#将列表b乘以三</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">4345</span></span><br><span class="line"><span class="string">321</span></span><br><span class="line"><span class="string">[321, &#x27;datascience&#x27;, &#x27;4345&#x27;]</span></span><br><span class="line"><span class="string">[&#x27;4345&#x27;, &#x27;f&#x27;]</span></span><br><span class="line"><span class="string">[321, &#x27;datascience&#x27;, &#x27;4345&#x27;, &#x27;f&#x27;, &#x27;3&#x27;, &#x27;ppp&#x27;]</span></span><br><span class="line"><span class="string">[&#x27;ppp&#x27;, &#x27;ppp&#x27;, &#x27;ppp&#x27;]</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>列表的特点：</strong></p>
 <ul>
 <li>可存放多个值</li>
 <li>有序。按照从左到右的顺序定义列表元素，下标从0开始按顺序访问</li>
 <li>可修改指定索引位置的值，是可变的。</li>
 </ul>
-<h4 id="增加-append"><a href="#增加-append" class="headerlink" title="增加 append"></a>增加 append</h4><pre><code class="python">names=[&#39;data&#39;,&#39;science&#39;]
-names</code></pre>
-<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;]</code></pre>
-<pre><code class="python">names.append(&#39;excellent&#39;)
-names</code></pre>
-<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;, &#39;excellent&#39;]</code></pre>
-<h4 id="插入-insert-extend"><a href="#插入-insert-extend" class="headerlink" title="插入 insert/extend"></a>插入 insert/extend</h4><pre><code class="python">names.insert(2,&quot;数据科学&quot;)
-names</code></pre>
-<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;, &#39;数据科学&#39;, &#39;excellent&#39;]</code></pre>
-<pre><code class="python">name=[&#39;数据科学&#39;,&#39;学姐&#39;,&#39;学长&#39;]
-names.extend(name)
-names</code></pre>
-<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;学姐&#39;, &#39;学长&#39;]</code></pre>
-<h4 id="嵌套-insert"><a href="#嵌套-insert" class="headerlink" title="嵌套 insert"></a>嵌套 insert</h4><pre><code class="python">names</code></pre>
-<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;学姐&#39;, &#39;学长&#39;]</code></pre>
-<pre><code class="python">names.insert(2,[0,0,4])
-names</code></pre>
-<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;, [0, 0, 4], &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;学姐&#39;, &#39;学长&#39;]</code></pre>
-<h4 id="直接删除-del"><a href="#直接删除-del" class="headerlink" title="直接删除 del"></a>直接删除 del</h4><pre><code class="python">names</code></pre>
-<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;, [0, 0, 4], &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;学姐&#39;, &#39;学长&#39;]</code></pre>
-<pre><code class="python">del names[2]
-names</code></pre>
-<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;学姐&#39;, &#39;学长&#39;]</code></pre>
-<h4 id="pop-删除"><a href="#pop-删除" class="headerlink" title="pop 删除"></a>pop 删除</h4><pre><code class="python">names</code></pre>
-<pre><code class="python">#[&#39;data&#39;, &#39;science&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;学姐&#39;, &#39;学长&#39;]</code></pre>
-<pre><code class="python">names.pop()  #默认删除最后一个元素并返回被删除的值
-names.pop(1)
-names</code></pre>
-<pre><code class="python">#[&#39;data&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;学姐&#39;]</code></pre>
-<h4 id="clear-清空"><a href="#clear-清空" class="headerlink" title="clear 清空"></a>clear 清空</h4><pre><code class="python">name</code></pre>
-<pre><code class="python">#[&#39;数据科学&#39;, &#39;学姐&#39;, &#39;学长&#39;]</code></pre>
-<pre><code class="python">name.clear()
-name</code></pre>
-<pre><code class="python">#[]</code></pre>
-<h4 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h4><pre><code class="python">names</code></pre>
-<pre><code class="python">#[&#39;data&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;学姐&#39;]</code></pre>
-<pre><code class="python">names[0]=&#39;data2&#39;
-names[-1]=&#39;Shon&#39;
-names</code></pre>
-<pre><code class="python">#[&#39;data2&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;Shon&#39;]</code></pre>
-<h4 id="查操作-index-count-remove"><a href="#查操作-index-count-remove" class="headerlink" title="查操作 index /count/remove"></a>查操作 index /count/remove</h4><pre><code class="python">names</code></pre>
-<pre><code class="python">#[&#39;data2&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;Shon&#39;]</code></pre>
-<pre><code class="python">names.index(&#39;excellent&#39;)  #返回从左开始匹配到的第一个excellent的索引</code></pre>
-<pre><code class="python">#2</code></pre>
-<pre><code class="python">names.count(&#39;数据科学&#39;)   #返回元素“excellent”的个数</code></pre>
-<pre><code class="python">#2</code></pre>
-<pre><code class="python">&#39;data2&#39; in names</code></pre>
-<pre><code class="python">#True</code></pre>
-<pre><code class="python">names</code></pre>
-<pre><code class="python">#[&#39;data2&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;, &#39;Shon&#39;]</code></pre>
-<pre><code class="python">names.remove(&#39;Shon&#39;)
-names</code></pre>
-<pre><code class="python">#[&#39;data2&#39;, &#39;数据科学&#39;, &#39;excellent&#39;, &#39;数据科学&#39;]</code></pre>
+<h4 id="增加-append"><a href="#增加-append" class="headerlink" title="增加 append"></a>增加 append</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">names=[<span class="string">&#x27;data&#x27;</span>,<span class="string">&#x27;science&#x27;</span>]</span><br><span class="line">names</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;data&#x27;, &#x27;science&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">names.append(<span class="string">&#x27;excellent&#x27;</span>)</span><br><span class="line">names</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;data&#x27;, &#x27;science&#x27;, &#x27;excellent&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="插入-insert-extend"><a href="#插入-insert-extend" class="headerlink" title="插入 insert/extend"></a>插入 insert/extend</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">names.insert(<span class="number">2</span>,<span class="string">&quot;数据科学&quot;</span>)</span><br><span class="line">names</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;data&#x27;, &#x27;science&#x27;, &#x27;数据科学&#x27;, &#x27;excellent&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name=[<span class="string">&#x27;数据科学&#x27;</span>,<span class="string">&#x27;学姐&#x27;</span>,<span class="string">&#x27;学长&#x27;</span>]</span><br><span class="line">names.extend(name)</span><br><span class="line">names</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;data&#x27;, &#x27;science&#x27;, &#x27;数据科学&#x27;, &#x27;excellent&#x27;, &#x27;数据科学&#x27;, &#x27;学姐&#x27;, &#x27;学长&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="嵌套-insert"><a href="#嵌套-insert" class="headerlink" title="嵌套 insert"></a>嵌套 insert</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">names</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;data&#x27;, &#x27;science&#x27;, &#x27;数据科学&#x27;, &#x27;excellent&#x27;, &#x27;数据科学&#x27;, &#x27;学姐&#x27;, &#x27;学长&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">names.insert(<span class="number">2</span>,[<span class="number">0</span>,<span class="number">0</span>,<span class="number">4</span>])</span><br><span class="line">names</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;data&#x27;, &#x27;science&#x27;, [0, 0, 4], &#x27;数据科学&#x27;, &#x27;excellent&#x27;, &#x27;数据科学&#x27;, &#x27;学姐&#x27;, &#x27;学长&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="直接删除-del"><a href="#直接删除-del" class="headerlink" title="直接删除 del"></a>直接删除 del</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">names</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;data&#x27;, &#x27;science&#x27;, [0, 0, 4], &#x27;数据科学&#x27;, &#x27;excellent&#x27;, &#x27;数据科学&#x27;, &#x27;学姐&#x27;, &#x27;学长&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">del</span> names[<span class="number">2</span>]</span><br><span class="line">names</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;data&#x27;, &#x27;science&#x27;, &#x27;数据科学&#x27;, &#x27;excellent&#x27;, &#x27;数据科学&#x27;, &#x27;学姐&#x27;, &#x27;学长&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="pop-删除"><a href="#pop-删除" class="headerlink" title="pop 删除"></a>pop 删除</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">names</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;data&#x27;, &#x27;science&#x27;, &#x27;数据科学&#x27;, &#x27;excellent&#x27;, &#x27;数据科学&#x27;, &#x27;学姐&#x27;, &#x27;学长&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">names.pop()  <span class="comment">#默认删除最后一个元素并返回被删除的值</span></span><br><span class="line">names.pop(<span class="number">1</span>)</span><br><span class="line">names</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;data&#x27;, &#x27;数据科学&#x27;, &#x27;excellent&#x27;, &#x27;数据科学&#x27;, &#x27;学姐&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="clear-清空"><a href="#clear-清空" class="headerlink" title="clear 清空"></a>clear 清空</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;数据科学&#x27;, &#x27;学姐&#x27;, &#x27;学长&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name.clear()</span><br><span class="line">name</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">names</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;data&#x27;, &#x27;数据科学&#x27;, &#x27;excellent&#x27;, &#x27;数据科学&#x27;, &#x27;学姐&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">names[<span class="number">0</span>]=<span class="string">&#x27;data2&#x27;</span></span><br><span class="line">names[<span class="number">-1</span>]=<span class="string">&#x27;Shon&#x27;</span></span><br><span class="line">names</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;data2&#x27;, &#x27;数据科学&#x27;, &#x27;excellent&#x27;, &#x27;数据科学&#x27;, &#x27;Shon&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="查操作-index-count-remove"><a href="#查操作-index-count-remove" class="headerlink" title="查操作 index /count/remove"></a>查操作 index /count/remove</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">names</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;data2&#x27;, &#x27;数据科学&#x27;, &#x27;excellent&#x27;, &#x27;数据科学&#x27;, &#x27;Shon&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">names.index(<span class="string">&#x27;excellent&#x27;</span>)  <span class="comment">#返回从左开始匹配到的第一个excellent的索引</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#2</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">names.count(<span class="string">&#x27;数据科学&#x27;</span>)   <span class="comment">#返回元素“excellent”的个数</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#2</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;data2&#x27;</span> <span class="keyword">in</span> names</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#True</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">names</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;data2&#x27;, &#x27;数据科学&#x27;, &#x27;excellent&#x27;, &#x27;数据科学&#x27;, &#x27;Shon&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">names.remove(<span class="string">&#x27;Shon&#x27;</span>)</span><br><span class="line">names</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;data2&#x27;, &#x27;数据科学&#x27;, &#x27;excellent&#x27;, &#x27;数据科学&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h4 id="切片操作"><a href="#切片操作" class="headerlink" title="切片操作"></a>切片操作</h4><p>就像切面包，一片一片的把列表切开</p>
 <p>切片操作是列表操作中</p>
-<pre><code class="python">a=[&#39;123&#39;,&#39;987&#39;,&#39;3&#39;,&#39;dc&#39;,&#39;真的&#39;,&#39;r&#39;]
-a</code></pre>
-<pre><code class="python">#[&#39;123&#39;, &#39;987&#39;, &#39;3&#39;, &#39;dc&#39;, &#39;真的&#39;, &#39;r&#39;]</code></pre>
-<pre><code class="python">a[0:2]</code></pre>
-<pre><code class="python">#[&#39;123&#39;, &#39;987&#39;]</code></pre>
-<pre><code class="python">a[4:-1]</code></pre>
-<pre><code class="python">#[&#39;真的&#39;]</code></pre>
-<pre><code class="python">a[0:-1]</code></pre>
-<pre><code class="python">#[&#39;123&#39;, &#39;987&#39;, &#39;3&#39;, &#39;dc&#39;, &#39;真的&#39;]</code></pre>
-<pre><code class="python">a[4:]</code></pre>
-<pre><code class="python">#[&#39;真的&#39;, &#39;r&#39;]</code></pre>
-<pre><code class="python">#步长
-a[0:4:2]</code></pre>
-<pre><code class="python">#[&#39;123&#39;, &#39;3&#39;]</code></pre>
-<pre><code class="python">a[0::2]</code></pre>
-<pre><code class="python">#[&#39;123&#39;, &#39;3&#39;, &#39;真的&#39;]</code></pre>
-<pre><code class="python">a[-1:-6:-1]</code></pre>
-<pre><code class="python">#[&#39;r&#39;, &#39;真的&#39;, &#39;dc&#39;, &#39;3&#39;, &#39;987&#39;]</code></pre>
-<pre><code class="python">a[0::]</code></pre>
-<pre><code class="python">#[&#39;123&#39;, &#39;987&#39;, &#39;3&#39;, &#39;dc&#39;, &#39;真的&#39;, &#39;r&#39;]</code></pre>
-<h4 id="反转"><a href="#反转" class="headerlink" title="反转"></a>反转</h4><pre><code class="python">a[::-1]</code></pre>
-<pre><code class="python">#[&#39;r&#39;, &#39;真的&#39;, &#39;dc&#39;, &#39;3&#39;, &#39;987&#39;, &#39;123&#39;]</code></pre>
-<pre><code class="python">a[::-2]</code></pre>
-<pre><code class="python">#[&#39;r&#39;, &#39;dc&#39;, &#39;987&#39;]</code></pre>
-<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><pre><code class="python">b=[4,90,54,23,44,456,1,4]
-b</code></pre>
-<pre><code class="python">#[4, 90, 54, 23, 44, 456, 1, 4]</code></pre>
-<pre><code class="python">b.sort()
-b</code></pre>
-<pre><code class="python">#[1, 4, 4, 23, 44, 54, 90, 456]</code></pre>
-<pre><code class="python">m=&#39;数据科学&#39;
-m</code></pre>
-<pre><code class="python">#&#39;数据科学&#39;</code></pre>
-<pre><code class="python">m[::-1]</code></pre>
-<pre><code class="python">#&#39;学科据数&#39;</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=[<span class="string">&#x27;123&#x27;</span>,<span class="string">&#x27;987&#x27;</span>,<span class="string">&#x27;3&#x27;</span>,<span class="string">&#x27;dc&#x27;</span>,<span class="string">&#x27;真的&#x27;</span>,<span class="string">&#x27;r&#x27;</span>]</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;123&#x27;, &#x27;987&#x27;, &#x27;3&#x27;, &#x27;dc&#x27;, &#x27;真的&#x27;, &#x27;r&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">0</span>:<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;123&#x27;, &#x27;987&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">4</span>:<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;真的&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">0</span>:<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;123&#x27;, &#x27;987&#x27;, &#x27;3&#x27;, &#x27;dc&#x27;, &#x27;真的&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">4</span>:]</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;真的&#x27;, &#x27;r&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#步长</span></span><br><span class="line">a[<span class="number">0</span>:<span class="number">4</span>:<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;123&#x27;, &#x27;3&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">0</span>::<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;123&#x27;, &#x27;3&#x27;, &#x27;真的&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">-1</span>:<span class="number">-6</span>:<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;r&#x27;, &#x27;真的&#x27;, &#x27;dc&#x27;, &#x27;3&#x27;, &#x27;987&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">0</span>::]</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;123&#x27;, &#x27;987&#x27;, &#x27;3&#x27;, &#x27;dc&#x27;, &#x27;真的&#x27;, &#x27;r&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="反转"><a href="#反转" class="headerlink" title="反转"></a>反转</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[::<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;r&#x27;, &#x27;真的&#x27;, &#x27;dc&#x27;, &#x27;3&#x27;, &#x27;987&#x27;, &#x27;123&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[::<span class="number">-2</span>]</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[&#x27;r&#x27;, &#x27;dc&#x27;, &#x27;987&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b=[<span class="number">4</span>,<span class="number">90</span>,<span class="number">54</span>,<span class="number">23</span>,<span class="number">44</span>,<span class="number">456</span>,<span class="number">1</span>,<span class="number">4</span>]</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[4, 90, 54, 23, 44, 456, 1, 4]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b.sort()</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[1, 4, 4, 23, 44, 54, 90, 456]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m=<span class="string">&#x27;数据科学&#x27;</span></span><br><span class="line">m</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#x27;数据科学&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m[::<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#x27;学科据数&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h4 id="循环列表"><a href="#循环列表" class="headerlink" title="循环列表"></a>循环列表</h4><p>while循环   for循环</p>
-<pre><code class="python">for i in b:
-    print(i)
-</code></pre>
-<pre><code class="python">&#39;&#39;&#39;
-1
-4
-4
-23
-44
-54
-90
-456
-&#39;&#39;&#39;</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> b:</span><br><span class="line">    print(i)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">4</span></span><br><span class="line"><span class="string">4</span></span><br><span class="line"><span class="string">23</span></span><br><span class="line"><span class="string">44</span></span><br><span class="line"><span class="string">54</span></span><br><span class="line"><span class="string">90</span></span><br><span class="line"><span class="string">456</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h4 id="今日小作业"><a href="#今日小作业" class="headerlink" title="今日小作业"></a>今日小作业</h4><ol>
 <li><p>输入n个整数，用空格分开，输出这些整数中的最大值及最大值的下标，如对应多个下标，返回最小下标。</p>
 <p>例如输入<em>3 4 7 2 5 7</em>，输出<em>7 2</em></p>
@@ -1659,7 +1770,7 @@ m</code></pre>
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\47220.html" title="Python强化练习" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230224850.png" /><span class="title">Python强化练习</span><span class="excerpt">Python学习阶段钱</span></a><a class="item" href="\posts\4136.html" title="Anaconda闪退" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200414151257.png" /><span class="title">Anaconda闪退</span><span class="excerpt">anaconda Windows闪退解决方案 。</span></a><a class="item" href="\posts\5590.html" title="Day1.概述" rel="bookmark "><img src="Day1-%E6%A6%82%E8%BF%B0.assets/image-20200509225153813.png" /><span class="title">Day1.概述</span><span class="excerpt">数据可视化，基础概述。</span></a><a class="item" href="\posts\64528.html" title="Day2.基础语法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.基础语法</span><span class="excerpt">数据可视化，基础语法。</span></a><a class="item" href="\posts\4a17b156.html" title="Hello World" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Hello World</span><span class="excerpt">Hexo 初始页面。</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\59977.html" title="Python基础知识" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/py_1.png" /><span class="title">Python基础知识</span><span class="excerpt">Python的基础语法</span></a><a class="item" href="\posts\2b36786b.html" title="Anaconda镜像" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Anaconda镜像</span><span class="excerpt">anaconda 镜像源 。</span></a><a class="item" href="\posts\4136.html" title="Anaconda闪退" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200414151257.png" /><span class="title">Anaconda闪退</span><span class="excerpt">anaconda Windows闪退解决方案 。</span></a><a class="item" href="\posts\64528.html" title="Day2.基础语法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.基础语法</span><span class="excerpt">数据可视化，基础语法。</span></a><a class="item" href="\posts\5590.html" title="Day1.概述" rel="bookmark "><img src="Day1-%E6%A6%82%E8%BF%B0.assets/image-20200509225153813.png" /><span class="title">Day1.概述</span><span class="excerpt">数据可视化，基础概述。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1722,7 +1833,7 @@ m</code></pre>
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.6k words</p>
+      <p>1.7k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1813,7 +1924,7 @@ m</code></pre>
 例题引导：
 Q：输入3个整数，按从小到大依次输出，用“-&gt;”符号相连： 例如：输入4，2，6，输出2 -&gt; 4 -&gt; 6
 A：
-a = ...</p>
+1234...</p>
         </a>
       
     </div>

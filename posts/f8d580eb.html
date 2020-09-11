@@ -1425,7 +1425,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>293 words</p>
+      <p>295 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1486,38 +1486,28 @@
 <p>REVOKE：对用户权限进行回收。</p>
 </blockquote>
 <h1 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h1><p>MYSQL8.0后版本不支持grant语句直接创建用户，因此需要先创建用户，再进行赋权。</p>
-<h2 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h2><pre><code class="sql">CREATE USER &#39;username&#39;@&#39;hostname&#39; IDENTIFIED BY &#39;密码&#39;;
+<h2 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">&#x27;username&#x27;</span>@<span class="string">&#x27;hostname&#x27;</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">&#x27;密码&#x27;</span>;</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">user</span> <span class="string">&#x27;csg1&#x27;</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">&#x27;123&#x27;</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-案例：
-create user &#39;csg1&#39; identified by &#39;123&#39;;
-</code></pre>
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614195339691.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614195339691.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614195339691"></p>
 <p>用Create创建的用户仅有系统默认权限usage，无其他权限。</p>
-<h2 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h2><pre><code class="sql">DROP USER &#39;username&#39;@&#39;hostname&#39;;
+<h2 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">USER</span> <span class="string">&#x27;username&#x27;</span>@<span class="string">&#x27;hostname&#x27;</span>;</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">user</span> csg1;</span><br></pre></td></tr></table></figure>
 
-案例：
-drop user csg1;</code></pre>
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614195455547.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614195455547.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614195455547"></p>
-<h1 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h1><h3 id="赋权"><a href="#赋权" class="headerlink" title="赋权"></a>赋权</h3><pre><code class="sql">GRANT priviledge_name[(list_name1,list?_name2)] ON dbname.table_name FROM &#39;username&#39;@&#39;hostname&#39;;
+<h1 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h1><h3 id="赋权"><a href="#赋权" class="headerlink" title="赋权"></a>赋权</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> priviledge_name[(list_name1,<span class="keyword">list</span>?_name2)] <span class="keyword">ON</span> dbname.table_name <span class="keyword">FROM</span> <span class="string">&#x27;username&#x27;</span>@<span class="string">&#x27;hostname&#x27;</span>;</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line">对账号&#x27;csg1&#x27;添加数据库&#x27;mysqlpractice&#x27;所有表的&#x27;<span class="keyword">select</span><span class="string">&#x27;权限。</span></span><br><span class="line"><span class="string">grant select on mysqlpractice.* to csg1;</span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure>
 
-案例：
-对账号&#39;csg1&#39;添加数据库&#39;mysqlpractice&#39;所有表的&#39;select&#39;权限。
-grant select on mysqlpractice.* to csg1;
-</code></pre>
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614201705116.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614201705116.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614201705116"></p>
-<pre><code class="sql">案例：
-对全库全表赋权所有权限。
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">案例：</span><br><span class="line">对全库全表赋权所有权限。</span><br><span class="line"></span><br><span class="line"><span class="keyword">grant</span> <span class="keyword">all</span> <span class="keyword">on</span> *.* <span class="keyword">to</span> dba@localhost;</span><br></pre></td></tr></table></figure>
 
-grant all on *.* to dba@localhost;</code></pre>
-<h3 id="查看权限"><a href="#查看权限" class="headerlink" title="查看权限"></a>查看权限</h3><pre><code class="sql">查看指定账号权限：
-SHOW GRANTS FOR &#39;username&#39;@&#39;hostname&#39;;
 
-查看当前用户自身权限：
-SHOW GRANTS;</code></pre>
-<h3 id="回收权限"><a href="#回收权限" class="headerlink" title="回收权限"></a>回收权限</h3><pre><code class="sql">REVOKE priviledge_name[(list_name1,list?_name2)] FROM dbname.table_name FROM &#39;username&#39;@&#39;hostname&#39;;
 
-案例：
-revoke select on mysqlpractice.* from csg1;</code></pre>
+<h3 id="查看权限"><a href="#查看权限" class="headerlink" title="查看权限"></a>查看权限</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">查看指定账号权限：</span><br><span class="line"><span class="keyword">SHOW</span> <span class="keyword">GRANTS</span> <span class="keyword">FOR</span> <span class="string">&#x27;username&#x27;</span>@<span class="string">&#x27;hostname&#x27;</span>;</span><br><span class="line"></span><br><span class="line">查看当前用户自身权限：</span><br><span class="line"><span class="keyword">SHOW</span> <span class="keyword">GRANTS</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="回收权限"><a href="#回收权限" class="headerlink" title="回收权限"></a>回收权限</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">REVOKE</span> priviledge_name[(list_name1,<span class="keyword">list</span>?_name2)] <span class="keyword">FROM</span> dbname.table_name <span class="keyword">FROM</span> <span class="string">&#x27;username&#x27;</span>@<span class="string">&#x27;hostname&#x27;</span>;</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line"><span class="keyword">revoke</span> <span class="keyword">select</span> <span class="keyword">on</span> mysqlpractice.* <span class="keyword">from</span> csg1;</span><br></pre></td></tr></table></figure>
+
+
+
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614202521110.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614202521110.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614202521110"></p>
 
   
@@ -1532,7 +1522,7 @@ revoke select on mysqlpractice.* from csg1;</code></pre>
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\4354b039.html" title="认识Mysql" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200610232427.png" /><span class="title">认识Mysql</span><span class="excerpt">认识mysql</span></a><a class="item" href="\posts\b794162c.html" title="数据库操作-DDL" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/image-20200421154433187.png" /><span class="title">数据库操作-DDL</span><span class="excerpt">数据库操作DDL</span></a><a class="item" href="\posts\6656ad65.html" title="数据库操作-DML" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200615211933034.png" /><span class="title">数据库操作-DML</span><span class="excerpt">数据库操作DML</span></a><a class="item" href="\posts\e4f3239b.html" title="数据库操作-TCL" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614215919792.png" /><span class="title">数据库操作-TCL</span><span class="excerpt">数据库操作TCL</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\b794162c.html" title="数据库操作-DDL" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/image-20200421154433187.png" /><span class="title">数据库操作-DDL</span><span class="excerpt">数据库操作DDL</span></a><a class="item" href="\posts\4354b039.html" title="认识Mysql" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200610232427.png" /><span class="title">认识Mysql</span><span class="excerpt">认识mysql</span></a><a class="item" href="\posts\6656ad65.html" title="数据库操作-DML" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200615211933034.png" /><span class="title">数据库操作-DML</span><span class="excerpt">数据库操作DML</span></a><a class="item" href="\posts\e4f3239b.html" title="数据库操作-TCL" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614215919792.png" /><span class="title">数据库操作-TCL</span><span class="excerpt">数据库操作TCL</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1595,7 +1585,7 @@ revoke select on mysqlpractice.* from csg1;</code></pre>
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>293 words</p>
+      <p>295 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1676,28 +1666,28 @@ revoke select on mysqlpractice.* from csg1;</code></pre>
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/e4f3239b.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>数据库操作-TCL</p>
-          <p class='content'>数据库操作TCL
+        <a class='prev' href='/posts/6656ad65.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>数据库操作-DML</p>
+          <p class='content'>数据库操作DML
 
 
-TCL
-TCL（Transaction Control Language），事务控制语言。
-主要用途：对数据库进行事务控制的指令。
-操纵命令：COMMIT、ROLLBACK...</p>
+DML
+DML（Data Manipulation Language），是通过对表中数据的插入、删除和修改等操作，实现对数据库的基本操作。
+主要用途：对数据表进行数据插入、...</p>
         </a>
       
       
-        <a class='next' href='/posts/4354b039.html'>
-          <p class='title'>认识Mysql<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>认识mysql
+        <a class='next' href='/posts/4136.html'>
+          <p class='title'>Anaconda闪退<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>anaconda Windows闪退解决方案 。
 
 
-背景介绍
-数据库，就是数据的仓库。它是长期存储在计算机内，有组织、可共享的数据的集合。简而言之，即放置信息的文件柜。
+anaconda 打开闪退
+记录windwos 系统下 anaconda 打开闪退修复方式。
 
-数据库分类
-当今互联网中，最常见的数据库模型主要为两种...</p>
+解决方式
+1、 管理员模式运行
+conda ...</p>
         </a>
       
     </div>

@@ -1487,21 +1487,10 @@
 <p>Shell:操作系统与用户进行交互操作的界面，提供脚本语言编程环境，方便用户自动批量处理大量的工作任务。</p>
 <p>红帽企业版linux一般默认的Shell是bash shell。</p>
 </blockquote>
-<pre><code class="shell">vim aa.sh           #编辑aa脚本
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">vim aa.sh           #编辑aa脚本</span><br><span class="line"></span><br><span class="line">cd /root/Desktop   #切换到root下的桌面</span><br><span class="line"></span><br><span class="line">mkdir aa            #创建aa目录</span><br><span class="line"></span><br><span class="line">touch aa/aa.txt    #在aa目录下创建aa.txt</span><br><span class="line"></span><br><span class="line">sh aa.sh            #运行aa.sh脚本</span><br><span class="line"></span><br><span class="line">echo $$   查看当前进程号 </span><br><span class="line"></span><br><span class="line">bash      进入另一个shell</span><br><span class="line"></span><br><span class="line">exit      退出</span><br></pre></td></tr></table></figure>
 
-cd /root/Desktop   #切换到root下的桌面
 
-mkdir aa            #创建aa目录
 
-touch aa/aa.txt    #在aa目录下创建aa.txt
-
-sh aa.sh            #运行aa.sh脚本
-
-echo $$   查看当前进程号 
-
-bash      进入另一个shell
-
-exit      退出</code></pre>
 <h2 id="history-历史"><a href="#history-历史" class="headerlink" title="history 历史"></a>history 历史</h2><table>
 <thead>
 <tr>
@@ -1526,41 +1515,16 @@ exit      退出</code></pre>
 <td>最后用来启动cmd的命令</td>
 </tr>
 </tbody></table>
-<h2 id="多命令运行"><a href="#多命令运行" class="headerlink" title="多命令运行"></a>多命令运行</h2><pre><code class="shell">#！/bin/sh  注释信息，可写可不写
+<h2 id="多命令运行"><a href="#多命令运行" class="headerlink" title="多命令运行"></a>多命令运行</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">！/bin/sh  注释信息，可写可不写</span></span><br><span class="line"></span><br><span class="line">echo $?  返回值：通过$?变量进行查看，返回0成功，不成功则返回非0值！</span><br><span class="line"></span><br><span class="line">有条件的链接命令</span><br><span class="line"></span><br><span class="line">&amp;&amp;  把两个命令链接在一起，只有第一个命令成功执行时，才会执行第二个命令。</span><br><span class="line"></span><br><span class="line">||  把两个命令链接在一起，只有第一个命令失败时，才会执行第二个命令。</span><br></pre></td></tr></table></figure>
 
-echo $?  返回值：通过$?变量进行查看，返回0成功，不成功则返回非0值！
 
-有条件的链接命令
 
-&amp;&amp;  把两个命令链接在一起，只有第一个命令成功执行时，才会执行第二个命令。
+<h2 id="Bash变量"><a href="#Bash变量" class="headerlink" title="Bash变量"></a>Bash变量</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">例如：aa=DataScience</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$aa</span> 则会显示DataScience</span><br></pre></td></tr></table></figure>
 
-||  把两个命令链接在一起，只有第一个命令失败时，才会执行第二个命令。</code></pre>
-<h2 id="Bash变量"><a href="#Bash变量" class="headerlink" title="Bash变量"></a>Bash变量</h2><pre><code class="bash">例如：aa=DataScience
+<h2 id="Shell变量"><a href="#Shell变量" class="headerlink" title="Shell变量"></a>Shell变量</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">A和B  A=123 B=234</span><br><span class="line"></span><br><span class="line">echo a:$A b:$B  显示AB变量内容</span><br><span class="line"></span><br><span class="line">a：123 b：234</span><br><span class="line"></span><br><span class="line">export A 将A变量提升为环境变量</span><br><span class="line"></span><br><span class="line">bash</span><br><span class="line"></span><br><span class="line">ps</span><br><span class="line"></span><br><span class="line">echo a:$A b:$B---- 启动一个bash ，通过ps运行，确定有俩个shell在运行；父shell（B），子shell（A）由于被提升为一个环境变量，A shell从B shell中继承了它，相反，A shell对B shell的变量B一无所知。Bshell 属于sleep状态。结果如下</span><br><span class="line"></span><br><span class="line">a：123 ：b：</span><br><span class="line"></span><br><span class="line">exit  </span><br><span class="line"></span><br><span class="line">echo a:$A b:$B 退出再次查看</span><br><span class="line"></span><br><span class="line"> a：123 b：234</span><br><span class="line"></span><br><span class="line">unset A B----- 取消环境变量A和shell变量 B </span><br></pre></td></tr></table></figure>
 
-echo $aa 则会显示DataScience</code></pre>
-<h2 id="Shell变量"><a href="#Shell变量" class="headerlink" title="Shell变量"></a>Shell变量</h2><pre><code class="shell">A和B  A=123 B=234
 
-echo a:$A b:$B  显示AB变量内容
 
-a：123 b：234
-
-export A 将A变量提升为环境变量
-
-bash
-
-ps
-
-echo a:$A b:$B---- 启动一个bash ，通过ps运行，确定有俩个shell在运行；父shell（B），子shell（A）由于被提升为一个环境变量，A shell从B shell中继承了它，相反，A shell对B shell的变量B一无所知。Bshell 属于sleep状态。结果如下
-
-a：123 ：b：
-
-exit  
-
-echo a:$A b:$B 退出再次查看
-
- a：123 b：234
-
-unset A B----- 取消环境变量A和shell变量 B </code></pre>
 <h2 id="命令替换"><a href="#命令替换" class="headerlink" title="命令替换"></a>命令替换</h2><table>
 <thead>
 <tr>
@@ -1605,25 +1569,12 @@ unset A B----- 取消环境变量A和shell变量 B </code></pre>
 <td>文件系统中匹配的文件名</td>
 </tr>
 </tbody></table>
-<pre><code class="shell">mkdir chap&#123;a1,a2,a3,a4,&#125;/&#123;bb,cc&#125; 需要先创建&#123;a1,a2,a3,a4&#125;
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir chap&#123;a1,a2,a3,a4,&#125;/&#123;bb,cc&#125; 需要先创建&#123;a1,a2,a3,a4&#125;</span><br><span class="line"></span><br><span class="line">mkdir -p &#123;a1,a2,a3,a4,&#125;/&#123;bb,cc&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-mkdir -p &#123;a1,a2,a3,a4,&#125;/&#123;bb,cc&#125;
-</code></pre>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><pre><code class="shell">a=123 b=234
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">a=123 b=234</span><br><span class="line"></span><br><span class="line">echo $(($a+$b))  ----- a+b</span><br><span class="line"></span><br><span class="line">357         ---------- 结果</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2、计算器</span><br><span class="line"></span><br><span class="line">Scale=2  保留几位小数, %取余。</span><br><span class="line">Quit     退出计算器</span><br><span class="line"> \;反斜杠 转义字符</span><br></pre></td></tr></table></figure>
 
-echo $(($a+$b))  ----- a+b
+<h2 id="创建时间文档"><a href="#创建时间文档" class="headerlink" title="创建时间文档"></a>创建时间文档</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">date +%Y%m%d  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-357         ---------- 结果
-
-
-2、计算器
-
-Scale=2  保留几位小数, %取余。
-Quit     退出计算器
- \;反斜杠 转义字符</code></pre>
-<h2 id="创建时间文档"><a href="#创建时间文档" class="headerlink" title="创建时间文档"></a>创建时间文档</h2><pre><code class="shell">
- date +%Y%m%d  
-</code></pre>
 <table>
 <thead>
 <tr>
@@ -1644,56 +1595,17 @@ Quit     退出计算器
 <td>避免单引号内的字符被shell解释</td>
 </tr>
 </tbody></table>
-<pre><code class="shell">alias 命令  Shell别名可创建扩展（替换）为任意文本的命令
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">alias 命令  Shell别名可创建扩展（替换）为任意文本的命令</span><br><span class="line"></span><br><span class="line">alias NAME=a</span><br><span class="line"></span><br><span class="line">unalias 取消 </span><br><span class="line"></span><br><span class="line">unalias a 取消a替换NAME的命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-alias NAME=a
+<h2 id="标准输入-标准输出"><a href="#标准输入-标准输出" class="headerlink" title="标准输入 标准输出"></a>标准输入 标准输出</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">echo “aaa”&gt; aa.txt   创建aa.txt文档</span><br><span class="line"></span><br><span class="line">cat aa.txt       查看aa.txt文档</span><br><span class="line"></span><br><span class="line">设置密码（可批量设置用户密码）</span><br><span class="line"></span><br><span class="line">useradd u1   创建u1用户</span><br><span class="line"></span><br><span class="line">passwd u1    设置u1 密码</span><br><span class="line"></span><br><span class="line">useradd u2   创建u2用户</span><br><span class="line"></span><br><span class="line">vim bb.txt   新建立一个bb.txt文档</span><br><span class="line"></span><br><span class="line">123456      将密码输入 bb.txt文档中</span><br><span class="line"></span><br><span class="line">passwd u2  --stdin &lt; bb.txt    将输入定向到文档中</span><br><span class="line"></span><br><span class="line">su - u1  切换到u1</span><br><span class="line"></span><br><span class="line">su - u2   切换到u2</span><br><span class="line"></span><br><span class="line">输入密码  123456</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-unalias 取消 
 
-unalias a 取消a替换NAME的命令
-</code></pre>
-<h2 id="标准输入-标准输出"><a href="#标准输入-标准输出" class="headerlink" title="标准输入 标准输出"></a>标准输入 标准输出</h2><pre><code>echo “aaa”&gt; aa.txt   创建aa.txt文档
 
-cat aa.txt       查看aa.txt文档
 
-设置密码（可批量设置用户密码）
+<h2 id="标准输出和错误输出"><a href="#标准输出和错误输出" class="headerlink" title="标准输出和错误输出"></a>标准输出和错误输出</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">echo “aaabbccc”&gt;aa.txt</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;文件续写</span></span><br><span class="line"></span><br><span class="line">echo “aaabbbcc”&gt;&gt;aa.txt</span><br><span class="line"></span><br><span class="line">意思是用&gt;把内容输入到文档中。</span><br><span class="line"></span><br><span class="line">head -1 /etc/rc.d/\* &gt; aa.txt 2&gt;bb.txt </span><br><span class="line"></span><br><span class="line">将标准输出和错误输出分别传到aa.txt和bb.txt</span><br><span class="line"></span><br><span class="line">head -1 /etc/re.d/\* &gt;aa.txt 2&gt;&amp;1 </span><br><span class="line"></span><br><span class="line">head -1 /etc/rc.d/\* &gt;&amp; aa.txt</span><br><span class="line"></span><br><span class="line">将标准输出和错误输出合并到aa.txt</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-useradd u1   创建u1用户
 
-passwd u1    设置u1 密码
 
-useradd u2   创建u2用户
-
-vim bb.txt   新建立一个bb.txt文档
-
-123456      将密码输入 bb.txt文档中
-
-passwd u2  --stdin &lt; bb.txt    将输入定向到文档中
-
-su - u1  切换到u1
-
-su - u2   切换到u2
-
-输入密码  123456
-</code></pre>
-<h2 id="标准输出和错误输出"><a href="#标准输出和错误输出" class="headerlink" title="标准输出和错误输出"></a>标准输出和错误输出</h2><pre><code class="shell">echo “aaabbccc”&gt;aa.txt
-
-&gt;&gt;文件续写
-
-echo “aaabbbcc”&gt;&gt;aa.txt
-
-意思是用&gt;把内容输入到文档中。
-
-head -1 /etc/rc.d/\* &gt; aa.txt 2&gt;bb.txt 
-
-将标准输出和错误输出分别传到aa.txt和bb.txt
-
-head -1 /etc/re.d/\* &gt;aa.txt 2&gt;&amp;1 
-
-head -1 /etc/rc.d/\* &gt;&amp; aa.txt
-
-将标准输出和错误输出合并到aa.txt
-</code></pre>
 <h2 id="Shell-scripts"><a href="#Shell-scripts" class="headerlink" title="Shell scripts"></a>Shell scripts</h2><blockquote>
 <p>scripts脚本返回值 echo $?</p>
 </blockquote>
@@ -1725,13 +1637,10 @@ head -1 /etc/rc.d/\* &gt;&amp; aa.txt
 <td>Command not found</td>
 </tr>
 </tbody></table>
-<pre><code class="shell">vim aa.sh 编辑aa.sh脚本
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim aa.sh 编辑aa.sh脚本</span><br><span class="line"></span><br><span class="line">read -p &quot;qing shu ru yong hu ming cheng &quot; name</span><br><span class="line"></span><br><span class="line">echo $name</span><br><span class="line"></span><br><span class="line">sh aa.sh  运行aa，name脚本</span><br></pre></td></tr></table></figure>
 
-read -p &quot;qing shu ru yong hu ming cheng &quot; name
 
-echo $name
 
-sh aa.sh  运行aa，name脚本</code></pre>
 <h2 id="只读变量"><a href="#只读变量" class="headerlink" title="只读变量"></a>只读变量</h2><table>
 <thead>
 <tr>
@@ -1904,7 +1813,7 @@ sh aa.sh  运行aa，name脚本</code></pre>
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\61794.html" title="Linux Mdadm案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Mdadm案例</span><span class="excerpt">Linux  Mdadm 案例 raid5。</span></a><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\10415.html" title="Linux NFS网络文件" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux NFS网络文件</span><span class="excerpt">Linux 手把手教你搭建NFS网络文件系统。</span></a><a class="item" href="\posts\64423.html" title="Linux Shell语法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell语法</span><span class="excerpt">Linux Shell 语言得一些基本语法。</span></a><a class="item" href="\posts\46411.html" title="Linux基本操作" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200425192236.png" /><span class="title">Linux基本操作</span><span class="excerpt">Linux 基本操作。</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\46411.html" title="Linux基本操作" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200425192236.png" /><span class="title">Linux基本操作</span><span class="excerpt">Linux 基本操作。</span></a><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\10415.html" title="Linux NFS网络文件" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux NFS网络文件</span><span class="excerpt">Linux 手把手教你搭建NFS网络文件系统。</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\43150.html" title="Linux安装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux安装</span><span class="excerpt">linux介绍及安装</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2057,9 +1966,7 @@ sh aa.sh  运行aa，name脚本</code></pre>
 Shell语法If语句格式
 (number=num)
 
-read -p &quot;请输入一个数字&quot; num 
-
-       if...</p>
+1234567891011121314151617181920read -p &quo...</p>
         </a>
       
       

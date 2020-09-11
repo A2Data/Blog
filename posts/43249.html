@@ -1508,126 +1508,17 @@
 </li>
 </ul>
 </blockquote>
-<pre><code class="java">package one;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> one;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/8.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StaticDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        * Math 主要的数学运算方法</span></span><br><span class="line"><span class="comment">        * */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//        static double abs ( double a) : 返回绝对值</span></span><br><span class="line">        System.out.println(Math.abs(<span class="number">15</span>));</span><br><span class="line">        System.out.println(Math.abs(-<span class="number">10</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;----------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// ceil  天花板 向上取整</span></span><br><span class="line">        System.out.println(Math.ceil(<span class="number">1.2</span>));</span><br><span class="line">        System.out.println(Math.ceil(<span class="number">1.6</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;----------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// floor 向下取整</span></span><br><span class="line">        System.out.println(Math.floor(<span class="number">1.2</span>));</span><br><span class="line">        System.out.println(Math.floor(<span class="number">1.8</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;==========&quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// round 四舍五入</span></span><br><span class="line">        System.out.println(Math.round(<span class="number">1.2</span>));</span><br><span class="line">        System.out.println(Math.round(<span class="number">1.6</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;---------&quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// max  min</span></span><br><span class="line">        System.out.println(Math.max(<span class="number">3</span>,<span class="number">8</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// pow 次幂  第一个参数的第二个参数次幂</span></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;2 的3 次方&quot;</span>);</span><br><span class="line">        System.out.println(Math.pow(<span class="number">2</span>,<span class="number">3</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// random 随机数  大于0 &lt;1</span></span><br><span class="line">        System.out.println(Math.random());</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-/**
- * Created by JackFeng on 2020/3/8.
- */
-
-public class StaticDemo &#123;
-    public static void main(String[] args) &#123;
-
-        /*
-        * Math 主要的数学运算方法
-        * */
-
-//        static double abs ( double a) : 返回绝对值
-        System.out.println(Math.abs(15));
-        System.out.println(Math.abs(-10));
-        System.out.println(&quot;----------&quot;);
-
-        // ceil  天花板 向上取整
-        System.out.println(Math.ceil(1.2));
-        System.out.println(Math.ceil(1.6));
-        System.out.println(&quot;----------&quot;);
-
-        // floor 向下取整
-        System.out.println(Math.floor(1.2));
-        System.out.println(Math.floor(1.8));
-        System.out.println(&quot;==========&quot;);
-
-
-        // round 四舍五入
-        System.out.println(Math.round(1.2));
-        System.out.println(Math.round(1.6));
-        System.out.println(&quot;---------&quot;);
-
-
-        // max  min
-        System.out.println(Math.max(3,8));
-
-        // pow 次幂  第一个参数的第二个参数次幂
-
-        System.out.println(&quot;2 的3 次方&quot;);
-        System.out.println(Math.pow(2,3));
-
-        // random 随机数  大于0 &lt;1
-        System.out.println(Math.random());
-
-
-    &#125;
-&#125;
-
-</code></pre>
 <h2 id="2、代码块"><a href="#2、代码块" class="headerlink" title="2、代码块"></a>2、代码块</h2><blockquote>
 <p>写一个数据操作的工具类，取最大值，已经取数组中指定索引的值</p>
 </blockquote>
 <p><strong>MyArray</strong> 工具类</p>
-<pre><code class="java">package com.a2data;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.a2data;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/13.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyArrays</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 数组操作 有关的工具类 ，不需要创建对象，所以 可以私有他的构造方法</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">MyArrays</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 取最大值</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">int</span> <span class="title">getMax</span><span class="params">(<span class="keyword">int</span>[] arr)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 定义参照物</span></span><br><span class="line">        <span class="keyword">int</span> max = arr[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;arr.length ; i++) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (max&lt;arr[i])&#123;</span><br><span class="line">                <span class="comment">// 替换参照物</span></span><br><span class="line">                max = arr[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取指定数组中指定元素的索引位置</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getIndex</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;arr.length ; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[i]== a)</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-/**
- * Created by JackFeng on 2020/3/13.
- */
-public class MyArrays &#123;
-    // 数组操作 有关的工具类 ，不需要创建对象，所以 可以私有他的构造方法
-
-    private MyArrays()&#123;&#125;
-
-
-    // 取最大值
-
-    public static  int getMax(int[] arr)&#123;
-
-        // 定义参照物
-        int max = arr[0];
-        for (int i = 1; i &lt;arr.length ; i++) &#123;
-
-            if (max&lt;arr[i])&#123;
-                // 替换参照物
-                max = arr[i];
-            &#125;
-        &#125;
-        return max;
-    &#125;
-
-    // 获取指定数组中指定元素的索引位置
-
-    public static int getIndex(int[] arr,int a)&#123;
-
-        for (int i = 0; i &lt;arr.length ; i++) &#123;
-            if (arr[i]== a)
-                return i;
-        &#125;
-        return -1;
-    &#125;
-
-
-&#125;
-
-
-</code></pre>
 <p><strong>MyArrayDemo</strong>  工具类使用</p>
-<pre><code class="java">package com.a2data;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.a2data;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/13.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyArrayDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">21</span>&#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> max = MyArrays.getMax(arr);</span><br><span class="line"></span><br><span class="line">        System.out.println(max);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> index = MyArrays.getIndex(arr, <span class="number">3</span>);</span><br><span class="line">        <span class="keyword">int</span> index1 = MyArrays.getIndex(arr, <span class="number">6</span>);</span><br><span class="line">        System.out.println(index);</span><br><span class="line">        System.out.println(index1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-/**
- * Created by JackFeng on 2020/3/13.
- */
-public class MyArrayDemo &#123;
-    public static void main(String[] args) &#123;
-        int[] arr = &#123;1, 2, 3, 4, 5, 21&#125;;
-
-        int max = MyArrays.getMax(arr);
-
-        System.out.println(max);
-
-        int index = MyArrays.getIndex(arr, 3);
-        int index1 = MyArrays.getIndex(arr, 6);
-        System.out.println(index);
-        System.out.println(index1);
-    &#125;
-&#125;
-
-</code></pre>
 <blockquote>
 <p>局部代码块：</p>
 <p>​    存在于方法中，控制变量的生命周期（作用域）</p>
@@ -1681,63 +1572,8 @@ public class MyArrayDemo &#123;
 <li>耦合：类与类的关系</li>
 </ul>
 </blockquote>
-<pre><code class="java">package com.a2data;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.a2data;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/13.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExtendsDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Zi zi = <span class="keyword">new</span> Zi();</span><br><span class="line">        zi.function();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Die</span> </span>&#123;</span><br><span class="line">      <span class="keyword">int</span> num = <span class="number">11</span>;</span><br><span class="line"></span><br><span class="line">      Die()&#123;</span><br><span class="line">          System.out.println(<span class="string">&quot;我是父类无参构造&quot;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="title">Die</span><span class="params">(<span class="keyword">int</span> num)</span></span>&#123;</span><br><span class="line">          System.out.println(<span class="string">&quot;我是父类有参构造&quot;</span>);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">          System.out.println(<span class="string">&quot;我是父类的方法&quot;</span>);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Zi</span> <span class="keyword">extends</span> <span class="title">Die</span></span>&#123;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">int</span> num = <span class="number">2020</span>;</span><br><span class="line"></span><br><span class="line">      Zi()&#123;</span><br><span class="line">          <span class="keyword">this</span>(<span class="number">1</span>);  <span class="comment">// 第一行不调用子类，或者其他方法，默认调用父类</span></span><br><span class="line"></span><br><span class="line">          System.out.println(<span class="string">&quot;我是子类无参构造&quot;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      Zi(<span class="keyword">int</span> num)&#123;</span><br><span class="line">          System.out.println(<span class="string">&quot;我是子类有参构造&quot;</span>);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">void</span>  <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">          System.out.println(<span class="string">&quot;我是子类的方法&quot;</span>);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="keyword">void</span> <span class="title">function</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="comment">//          this.method();</span></span><br><span class="line"></span><br><span class="line">          <span class="keyword">this</span>.num = <span class="number">20</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-/**
- * Created by JackFeng on 2020/3/13.
- */
-public class ExtendsDemo &#123;
-    public static void main(String[] args) &#123;
-        Zi zi = new Zi();
-        zi.function();
-
-    &#125;
-
-  static class Die &#123;
-      int num = 11;
-
-      Die()&#123;
-          System.out.println(&quot;我是父类无参构造&quot;);
-      &#125;
-      public Die(int num)&#123;
-          System.out.println(&quot;我是父类有参构造&quot;);
-      &#125;
-
-      public void method()&#123;
-          System.out.println(&quot;我是父类的方法&quot;);
-      &#125;
-
-  &#125;
-
-  static class Zi extends Die&#123;
-
-      int num = 2020;
-
-      Zi()&#123;
-          this(1);  // 第一行不调用子类，或者其他方法，默认调用父类
-
-          System.out.println(&quot;我是子类无参构造&quot;);
-      &#125;
-      Zi(int num)&#123;
-          System.out.println(&quot;我是子类有参构造&quot;);
-      &#125;
-
-
-      public void  method()&#123;
-          System.out.println(&quot;我是子类的方法&quot;);
-      &#125;
-
-      void function()&#123;
-//          this.method();
-
-          this.num = 20;
-      &#125;
-
-  &#125;
-
-&#125;
-
-</code></pre>
 <h4 id="this和super的区别"><a href="#this和super的区别" class="headerlink" title="this和super的区别"></a>this和super的区别</h4><blockquote>
 <p>this和super的区别：</p>
 <ul>
@@ -1763,32 +1599,8 @@ public class ExtendsDemo &#123;
 <p>注意：</p>
 <p>​    匿名对象可以调用成员对象，并赋值，但是并没有意义，因为只调用一次</p>
 </blockquote>
-<pre><code class="java">package com.a2data;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.a2data;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/13.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnonyDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//        Student s = new Student();</span></span><br><span class="line"><span class="comment">//        s.study();</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> Student(); <span class="comment">// 匿名对象，没有变量名引用的对象</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;加油提升自己&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-
-/**
- * Created by JackFeng on 2020/3/13.
- */
-public class AnonyDemo &#123;
-    public static void main(String[] args) &#123;
-
-//        Student s = new Student();
-//        s.study();
-
-        new Student(); // 匿名对象，没有变量名引用的对象
-
-    &#125;
-&#125;
-
-class Student&#123;
-    String name;
-    int age;
-
-    public void study()&#123;
-        System.out.println(&quot;加油提升自己&quot;);
-    &#125;
-&#125;
-</code></pre>
 <h3 id="Final"><a href="#Final" class="headerlink" title="Final"></a>Final</h3><blockquote>
 <p>修饰符： 可以用于修饰类，成员方法和成员变量</p>
 </blockquote>
@@ -1840,72 +1652,8 @@ class Student&#123;
 <p><em>注意：</em></p>
 <p>​    一个类继承了抽象类需要重写他所有的抽象方法,否则这个类就得是抽象类</p>
 </blockquote>
-<pre><code class="java">package com.a2data;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.a2data;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> sun.plugin2.message.JavaReplyMessage;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/15.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* 普通教练，高级教练</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* 共性：</span></span><br><span class="line"><span class="comment">*   属性  姓名 年龄 性别</span></span><br><span class="line"><span class="comment">*   行为  教学</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AbastractTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        BasicTeacher bt = <span class="keyword">new</span> BasicTeacher();</span><br><span class="line">        bt.name = <span class="string">&quot;小白教练&quot;</span>;</span><br><span class="line">        bt.teach();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        JobTeacher jt = <span class="keyword">new</span> JobTeacher();</span><br><span class="line">        jt.name = <span class="string">&quot;小灰教练&quot;</span>;</span><br><span class="line">        jt.teach();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span>  <span class="title">Teacher</span></span>&#123;</span><br><span class="line">    String name; <span class="comment">// 姓名</span></span><br><span class="line">    <span class="keyword">int</span> age; <span class="comment">// 年龄</span></span><br><span class="line">    String gender;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">teach</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BasicTeacher</span> <span class="keyword">extends</span> <span class="title">Teacher</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">teach</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">&quot;讲基础内容&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">JobTeacher</span> <span class="keyword">extends</span> <span class="title">Teacher</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">teach</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name+ <span class="string">&quot;讲高级实战内容&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-import sun.plugin2.message.JavaReplyMessage;
-
-/**
- * Created by JackFeng on 2020/3/15.
- */
-
-
-/*
-*
-* 普通教练，高级教练
-*
-*
-* 共性：
-*   属性  姓名 年龄 性别
-*   行为  教学
-*
-* */
-
-public class AbastractTest &#123;
-    public static void main(String[] args) &#123;
-
-        BasicTeacher bt = new BasicTeacher();
-        bt.name = &quot;小白教练&quot;;
-        bt.teach();
-
-
-        JobTeacher jt = new JobTeacher();
-        jt.name = &quot;小灰教练&quot;;
-        jt.teach();
-
-
-    &#125;
-&#125;
-
-
-abstract class  Teacher&#123;
-    String name; // 姓名
-    int age; // 年龄
-    String gender;
-
-    public abstract void teach();
-
-&#125;
-
-class BasicTeacher extends Teacher&#123;
-
-    @Override
-    public void teach() &#123;
-        System.out.println(name + &quot;讲基础内容&quot;);
-    &#125;
-&#125;
-
-
-class JobTeacher extends Teacher&#123;
-
-    @Override
-    public void teach() &#123;
-        System.out.println(name+ &quot;讲高级实战内容&quot;);
-    &#125;
-&#125;
-
-
-
-</code></pre>
 <h2 id="6、接口"><a href="#6、接口" class="headerlink" title="6、接口"></a>6、接口</h2><blockquote>
 <p><strong>interface</strong>: 接口是一个比抽象类还抽象的类，接口里所有的方法全是抽象方法,接口和类的关系是实现，<em>implements</em></p>
 <p><strong>格式：</strong></p>
@@ -1982,156 +1730,8 @@ class JobTeacher extends Teacher&#123;
 <p>应用：</p>
 <p>​    使用具体的子类</p>
 </blockquote>
-<pre><code class="java">package com.a2data;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.a2data;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/15.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* 篮球运动员和教练</span></span><br><span class="line"><span class="comment">* 乒乓球运动员和教练</span></span><br><span class="line"><span class="comment">* 篮球运动员和教练要出国访问，需要学习英语</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InterfaceTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//篮球运动员对象</span></span><br><span class="line">        BasketBallPlayer bp = <span class="keyword">new</span> BasketBallPlayer();</span><br><span class="line">        bp.name = <span class="string">&quot;姚明&quot;</span>;</span><br><span class="line">        bp.age = <span class="number">35</span>;</span><br><span class="line">        bp.gender = <span class="string">&quot;男&quot;</span>;</span><br><span class="line">        bp.sleep();</span><br><span class="line">        bp.study();</span><br><span class="line">        bp.speak();</span><br><span class="line">        System.out.println(<span class="string">&quot;------------&quot;</span>);</span><br><span class="line">        <span class="comment">//乒乓球教练对象</span></span><br><span class="line"></span><br><span class="line">        PingpangCoache pp = <span class="keyword">new</span> PingpangCoache();</span><br><span class="line">        pp.name = <span class="string">&quot;刘教练&quot;</span>;</span><br><span class="line">        pp.age = <span class="number">40</span>;</span><br><span class="line">        pp.gender = <span class="string">&quot;男&quot;</span>;</span><br><span class="line">        pp.sleep();</span><br><span class="line">        pp.teach();</span><br><span class="line"><span class="comment">//        pp.speak()</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span>  <span class="title">Person</span></span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    String gender;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span> age, String gender)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 成员变量初始化</span></span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="keyword">this</span>.gender = gender;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;吃饭&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sleep</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;睡觉&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">SpeakEnglish</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 运动员</span></span><br><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Player</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="comment">//学习</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 教练</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Coach</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="comment">// 教</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">teach</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//篮球运动员</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BasketBallPlayer</span> <span class="keyword">extends</span> <span class="title">Player</span> <span class="keyword">implements</span> <span class="title">SpeakEnglish</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;学扣篮&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;说英语&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//乒乓球运动员</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span>  <span class="title">PingpangPlayer</span> <span class="keyword">extends</span> <span class="title">Player</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;学颠球&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//篮球教练</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BasketBallCoach</span> <span class="keyword">extends</span> <span class="title">Coach</span> <span class="keyword">implements</span> <span class="title">SpeakEnglish</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">teach</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;教扣篮&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;说英语&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//乒乓球教练</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PingpangCoache</span> <span class="keyword">extends</span>  <span class="title">Coach</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">teach</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;教颠球&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-/**
- * Created by JackFeng on 2020/3/15.
- */
-
-
-/*
-*
-* 篮球运动员和教练
-* 乒乓球运动员和教练
-* 篮球运动员和教练要出国访问，需要学习英语
-*
-*
-*
-* */
-
-
-public class InterfaceTest &#123;
-    public static void main(String[] args) &#123;
-        //篮球运动员对象
-        BasketBallPlayer bp = new BasketBallPlayer();
-        bp.name = &quot;姚明&quot;;
-        bp.age = 35;
-        bp.gender = &quot;男&quot;;
-        bp.sleep();
-        bp.study();
-        bp.speak();
-        System.out.println(&quot;------------&quot;);
-        //乒乓球教练对象
-
-        PingpangCoache pp = new PingpangCoache();
-        pp.name = &quot;刘教练&quot;;
-        pp.age = 40;
-        pp.gender = &quot;男&quot;;
-        pp.sleep();
-        pp.teach();
-//        pp.speak()
-
-    &#125;
-
-
-&#125;
-
-
-class  Person&#123;
-    String name;
-    int age;
-    String gender;
-
-    public Person() &#123;
-    &#125;
-
-    public Person(String name, int age, String gender) &#123;
-        // 成员变量初始化
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-    &#125;
-
-
-    public void eat()&#123;
-        System.out.println(&quot;吃饭&quot;);
-    &#125;
-
-
-    public void sleep()&#123;
-        System.out.println(&quot;睡觉&quot;);
-    &#125;
-
-
-
-&#125;
-
-interface SpeakEnglish &#123;
-
-    public abstract void speak();
-&#125;
-
-
-// 运动员
-abstract class Player extends Person&#123;
-    //学习
-    public abstract void study();
-
-&#125;
-
-// 教练
-
-abstract class Coach extends Person&#123;
-    // 教
-    public abstract void teach();
-
-&#125;
-
-
-//篮球运动员
-
-class BasketBallPlayer extends Player implements SpeakEnglish&#123;
-
-    @Override
-    public void study() &#123;
-        System.out.println(&quot;学扣篮&quot;);
-    &#125;
-
-    @Override
-    public void speak() &#123;
-        System.out.println(&quot;说英语&quot;);
-    &#125;
-&#125;
-
-
-//乒乓球运动员
-
-class  PingpangPlayer extends Player&#123;
-
-    @Override
-    public void study() &#123;
-        System.out.println(&quot;学颠球&quot;);
-    &#125;
-&#125;
-
-
-//篮球教练
-
-class BasketBallCoach extends Coach implements SpeakEnglish&#123;
-
-    @Override
-    public void teach() &#123;
-        System.out.println(&quot;教扣篮&quot;);
-    &#125;
-
-    @Override
-    public void speak() &#123;
-        System.out.println(&quot;说英语&quot;);
-    &#125;
-&#125;
-
-
-//乒乓球教练
-class PingpangCoache extends  Coach&#123;
-
-    @Override
-    public void teach() &#123;
-        System.out.println(&quot;教颠球&quot;);
-    &#125;
-&#125;
-
-
-</code></pre>
 <h2 id="7、多态"><a href="#7、多态" class="headerlink" title="7、多态"></a>7、多态</h2><h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><blockquote>
 <p><strong>多态的前提：</strong></p>
 <ul>
@@ -2146,44 +1746,8 @@ class PingpangCoache extends  Coach&#123;
 <li>缺点： 无法直接访问子类特有的成员</li>
 </ul>
 </blockquote>
-<pre><code class="java">package com.a2data;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.a2data;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/15.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PoymorphicDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="comment">//        Cat cat = new Cat();</span></span><br><span class="line"><span class="comment">//        cat.eat();</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 父类引用  Animal a</span></span><br><span class="line">        <span class="comment">// 指向  =</span></span><br><span class="line">        <span class="comment">// 子类对象  new Cat()</span></span><br><span class="line">        <span class="comment">// 动态绑定</span></span><br><span class="line">        Animal a = <span class="keyword">new</span> Cat();</span><br><span class="line">        a.eat();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;c吃东西&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword">extends</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;猫吃鱼&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-/**
- * Created by JackFeng on 2020/3/15.
- */
-public class PoymorphicDemo &#123;
-    public static void main(String[] args) &#123;
-//        Cat cat = new Cat();
-//        cat.eat();
-
-        // 父类引用  Animal a
-        // 指向  =
-        // 子类对象  new Cat()
-        // 动态绑定
-        Animal a = new Cat();
-        a.eat();
-
-
-    &#125;
-
-
-&#125;
-
-class Animal &#123;
-    public void eat()&#123;
-        System.out.println(&quot;c吃东西&quot;);
-    &#125;
-&#125;
-
-class Cat extends Animal&#123;
-    public void eat()&#123;
-        System.out.println(&quot;猫吃鱼&quot;);
-    &#125;
-&#125;
-
-
-
-</code></pre>
 <h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><blockquote>
 <p>多态的成员特点：</p>
 <ul>
@@ -2202,66 +1766,8 @@ class Cat extends Animal&#123;
 </ul>
 <p>编译时看的都是左边，运行时成员方法看的是右边，其他（成员变量和静态方法）看的都是左边</p>
 </blockquote>
-<pre><code class="java">package com.java;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/15.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PoymorphicDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 成员变量</span></span><br><span class="line">        <span class="comment">// 在继承中没有被重写的概念，没有动态绑定的概念</span></span><br><span class="line">        <span class="comment">// 执行的是父类的</span></span><br><span class="line"></span><br><span class="line">        Dad d = <span class="keyword">new</span> Kid();</span><br><span class="line">        System.out.println(d.num);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 成员方法</span></span><br><span class="line">        <span class="comment">// 运行看右边</span></span><br><span class="line">        System.out.println(<span class="string">&quot;----------&quot;</span>);</span><br><span class="line">        d.method();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 静态方法</span></span><br><span class="line">        d.function(); <span class="comment">// 使用变量去调用静态方法，相当于用变量类型的类名去调用  所以输出父类的静态方法</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span>  <span class="title">Dad</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;我是父类的方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;我是父类的静态方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Kid</span> <span class="keyword">extends</span> <span class="title">Dad</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">21</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;我是子类的方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;我是子类的静态方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-import java.util.Date;
-
-/**
- * Created by JackFeng on 2020/3/15.
- */
-public class PoymorphicDemo &#123;
-    public static void main(String[] args) &#123;
-
-        // 成员变量
-        // 在继承中没有被重写的概念，没有动态绑定的概念
-        // 执行的是父类的
-
-        Dad d = new Kid();
-        System.out.println(d.num);
-
-
-        // 成员方法
-        // 运行看右边
-        System.out.println(&quot;----------&quot;);
-        d.method();
-
-        // 静态方法
-        d.function(); // 使用变量去调用静态方法，相当于用变量类型的类名去调用  所以输出父类的静态方法
-
-
-    &#125;
-&#125;
-
-
-class  Dad&#123;
-    int num = 1;
-
-
-    public void method()&#123;
-        System.out.println(&quot;我是父类的方法&quot;);
-    &#125;
-
-    public static void function()&#123;
-        System.out.println(&quot;我是父类的静态方法&quot;);
-    &#125;
-
-&#125;
-
-class Kid extends Dad&#123;
-    int num = 21;
-
-    public void method()&#123;
-
-        System.out.println(&quot;我是子类的方法&quot;);
-    &#125;
-
-    public static void function()&#123;
-        System.out.println(&quot;我是子类的静态方法&quot;);
-    &#125;
-
-&#125;
-
-</code></pre>
 <h3 id="多态转型"><a href="#多态转型" class="headerlink" title="多态转型"></a>多态转型</h3><blockquote>
 <p>多态中的向上转型和向下转型：</p>
 <ul>
@@ -2290,46 +1796,10 @@ class Kid extends Dad&#123;
 </li>
 </ul>
 </blockquote>
-<pre><code class="java">package com.java;
-
-/**
- * Created by JackFeng on 2020/3/15.
- */
-public class polymorphicDemo &#123;
-    public static void main(String[] args) &#123;
-
-        Animal a = new Dog(); // 向上转型
-        a.eat();
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/15.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">polymorphicDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Animal a = <span class="keyword">new</span> Dog(); <span class="comment">// 向上转型</span></span><br><span class="line">        a.eat();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        Dog d = (Dog) a; <span class="comment">// 向下转型  本身是什么类型 转换成什么类型</span></span><br><span class="line">        d.swim();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;吃东西&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span>  <span class="title">Animal</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;啃骨头&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">swim</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;狗刨&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
-        Dog d = (Dog) a; // 向下转型  本身是什么类型 转换成什么类型
-        d.swim();
 
-    &#125;
-&#125;
-
-
-class Animal&#123;
-    public void eat()&#123;
-        System.out.println(&quot;吃东西&quot;);
-    &#125;
-
-&#125;
-
-
-class Dog extends  Animal&#123;
-
-    public void eat()&#123;
-        System.out.println(&quot;啃骨头&quot;);
-    &#125;
-
-    public void swim()&#123;
-        System.out.println(&quot;狗刨&quot;);
-    &#125;
-
-&#125;
-
-</code></pre>
 <h2 id="8、权限修饰符"><a href="#8、权限修饰符" class="headerlink" title="8、权限修饰符"></a>8、权限修饰符</h2><h3 id="包"><a href="#包" class="headerlink" title="包"></a>包</h3><blockquote>
 <p>特点：（<em>package</em>）</p>
 <ul>
@@ -2404,40 +1874,8 @@ class Dog extends  Animal&#123;
 <li>作为参数传递 </li>
 </ul>
 </blockquote>
-<pre><code class="java">package com.java;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/15.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InnerDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Outer.Inner i = <span class="keyword">new</span> Outer().<span class="function">new <span class="title">Inner</span><span class="params">()</span></span>;</span><br><span class="line">        i.function();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Outer</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> num = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span>  <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Inner i = <span class="keyword">new</span> Inner();</span><br><span class="line">        i.function();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Inner</span></span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="comment">// 私有成员 可以i直接访问</span></span><br><span class="line">            System.out.println(num);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-/**
- * Created by JackFeng on 2020/3/15.
- */
-public class InnerDemo &#123;
-    public static void main(String[] args) &#123;
-
-        Outer.Inner i = new Outer().new Inner();
-        i.function();
-
-
-    &#125;
-&#125;
-
-
-class Outer&#123;
-    private int num = 10;
-
-    public void  method()&#123;
-        Inner i = new Inner();
-        i.function();
-
-    &#125;
-
-    class Inner&#123;
-        public void function()&#123;
-            // 私有成员 可以i直接访问
-            System.out.println(num);
-        &#125;
-    &#125;
-
-&#125;
-</code></pre>
 
   
   
@@ -2451,7 +1889,7 @@ class Outer&#123;
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\8589.html" title="Java面向对象(封装)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Java面向对象(封装)</span><span class="excerpt">Java面向对象 封装！</span></a><a class="item" href="\posts\2834.html" title="Java 常用API-II" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Java 常用API-II</span><span class="excerpt">JavaAPP-II</span></a><a class="item" href="\posts\17415.html" title="Java环境" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200508000334.png" /><span class="title">Java环境</span><span class="excerpt">Java JDK 环境安装</span></a><a class="item" href="\posts\32274.html" title="Java常用API" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Java常用API</span><span class="excerpt">Java常用API-I</span></a><a class="item" href="\posts\9618.html" title="Java 集合体系" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Java 集合体系</span><span class="excerpt">Java集合体系</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8589.html" title="Java面向对象(封装)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Java面向对象(封装)</span><span class="excerpt">Java面向对象 封装！</span></a><a class="item" href="\posts\2834.html" title="Java 常用API-II" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Java 常用API-II</span><span class="excerpt">JavaAPP-II</span></a><a class="item" href="\posts\17415.html" title="Java环境" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200508000334.png" /><span class="title">Java环境</span><span class="excerpt">Java JDK 环境安装</span></a><a class="item" href="\posts\32274.html" title="Java常用API" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Java常用API</span><span class="excerpt">Java常用API-I</span></a><a class="item" href="\posts\34708.html" title="Java基础语法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png" /><span class="title">Java基础语法</span><span class="excerpt">Java基础语法</span></a></div></section></div>
       
       
         <div class='copyright'>

@@ -1486,61 +1486,18 @@
 <p><strong>Integer.toHexString():</strong> 返回指定参数的十六进制字符串形式</p>
 <p>**hashCode():**返回该对象的哈希码值（内存地址）</p>
 </blockquote>
-<pre><code class="java">package api;
-
-
-/**
- *
- * @author JackFeng
- * @date 2020/3/24
- */
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> api;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> JackFeng</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2020/3/24</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ObjectDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException </span>&#123;</span><br><span class="line">        <span class="comment">// 获取对象字节码的方式 ----- 应用层 反射</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//方式1  通过Object类的getClass()方法获取</span></span><br><span class="line"></span><br><span class="line">        Teacher t = <span class="keyword">new</span> Teacher();</span><br><span class="line">        Class clazz = t.getClass();</span><br><span class="line">        System.out.println(clazz);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//方式2  通过类名调用熟悉class来获取</span></span><br><span class="line">        Class&lt;Teacher&gt; clazz1 = Teacher.class;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 方式3 通过class类的静态方法 forName() 来获取  此时需要跑异常，例如输入错误</span></span><br><span class="line">        Class clazz2 = Class.forName(<span class="string">&quot;api.Teacher&quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// true</span></span><br><span class="line">        System.out.println(clazz == clazz1);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// true</span></span><br><span class="line">        System.out.println(clazz1 == clazz2);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-public class ObjectDemo &#123;
-
-    public static void main(String[] args) throws ClassNotFoundException &#123;
-        // 获取对象字节码的方式 ----- 应用层 反射
-
-
-        //方式1  通过Object类的getClass()方法获取
-
-        Teacher t = new Teacher();
-        Class clazz = t.getClass();
-        System.out.println(clazz);
-
-        //方式2  通过类名调用熟悉class来获取
-        Class&lt;Teacher&gt; clazz1 = Teacher.class;
-
-
-
-        // 方式3 通过class类的静态方法 forName() 来获取  此时需要跑异常，例如输入错误
-        Class clazz2 = Class.forName(&quot;api.Teacher&quot;);
-
-
-        // true
-        System.out.println(clazz == clazz1);
-
-        // true
-        System.out.println(clazz1 == clazz2);
-
-
-    &#125;
-
-
-&#125;</code></pre>
 <h4 id="2、Object-equals"><a href="#2、Object-equals" class="headerlink" title="2、Object-equals"></a>2、Object-equals</h4><blockquote>
 <p><strong>== :</strong> 比较两个对象是否相等</p>
 <p>i基本类型比值，引用类型比地址值。（需要重写）</p>
 </blockquote>
-<pre><code class="java">@Override
-public boolean equals(Object o) &#123;
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    Person person = (Person) o;
-    return age == person.age &amp;&amp;
-            Objects.equals(name, person.name);
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span> == o) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    <span class="keyword">if</span> (o == <span class="keyword">null</span> || getClass() != o.getClass()) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    Person person = (Person) o;</span><br><span class="line">    <span class="keyword">return</span> age == person.age &amp;&amp;</span><br><span class="line">            Objects.equals(name, person.name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 <h4 id="3、System"><a href="#3、System" class="headerlink" title="3、System"></a>3、System</h4><table>
 <thead>
 <tr>
@@ -1619,42 +1576,16 @@ public boolean equals(Object o) &#123;
 <td><code>SimpleDateFormat(String pattern)</code>  使用给定的模式和默认的日期格式符号默认 <a href="../../java/util/Locale.Category.html#FORMAT"><code>FORMAT</code></a>现场构建了一个  <code>SimpleDateFormat</code>。</td>
 </tr>
 </tbody></table>
-<pre><code class="java">package learn;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-/**
- *
- * @author JackFeng
- * @date 2020/3/25
- */
-
-public class SimpleDateFormatDemo &#123;
-    public static void main(String[] args) throws ParseException &#123;
-        SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy年MM月dd日&quot;);
-
-        //格式化
-        Date date = new Date();
-        String s = sdf.format(date);
-
-        // 2020年03月25日
-        System.out.println(s);
-
-        //解析
-        Date d = sdf.parse(&quot;2020年3月25日&quot;);
-        System.out.println(d.toLocaleString());
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> learn;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.text.ParseException;</span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> JackFeng</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2020/3/25</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SimpleDateFormatDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ParseException </span>&#123;</span><br><span class="line">        SimpleDateFormat sdf = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy年MM月dd日&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//格式化</span></span><br><span class="line">        Date date = <span class="keyword">new</span> Date();</span><br><span class="line">        String s = sdf.format(date);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2020年03月25日</span></span><br><span class="line">        System.out.println(s);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//解析</span></span><br><span class="line">        Date d = sdf.parse(<span class="string">&quot;2020年3月25日&quot;</span>);</span><br><span class="line">        System.out.println(d.toLocaleString());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-    &#125;
 
-&#125;</code></pre>
 <h4 id="6、Calendar"><a href="#6、Calendar" class="headerlink" title="6、Calendar"></a>6、Calendar</h4><blockquote>
 <p>日历，提供操作年月日时的方法。</p>
 <p>获取，月是 从 0开始。 所以 一般情况下 要 +1</p>
-<pre><code class="java">int month = c.get(Calendar.MONTH) +1 
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> month = c.get(Calendar.MONTH) +<span class="number">1</span> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
 </blockquote>
 <h4 id="7、包装类"><a href="#7、包装类" class="headerlink" title="7、包装类"></a>7、包装类</h4><blockquote>
 <p>包装类：封装了基本数据类型的类，Java 为我们提供了更多复杂的方法和一些变量</p>
@@ -1670,45 +1601,10 @@ public class SimpleDateFormatDemo &#123;
 <p>2、 String toString()   —- 无参</p>
 <p>3、 static toString() 类似</p>
 </blockquote>
-<h4 id="8、自动装箱和拆箱"><a href="#8、自动装箱和拆箱" class="headerlink" title="8、自动装箱和拆箱"></a>8、自动装箱和拆箱</h4><pre><code class="java">package learn;
-
-import java.util.ArrayList;
-
-/**
- *
- * @author JackFeng
- * @date 2020/3/25
- */
-public class IntegerDemo &#123;
-
-    public static void main(String[] args) &#123;
-
-        // 自动装箱
-        // 相当于
-        Integer i = new Integer(10);
-        Integer i1 = 10;
-
-        // 自动拆箱
-        // 相当于 int a = i.intValue();
-        Integer i2 = 10;
-        int a = i2;
-
-
-        //  Integer i3 = new Integer(i1.intValue()  +  i2.intValue());
-        Integer i3 = i1 + i2;
-
-
-       // 应用场景
-        ArrayList arrayList = new ArrayList();
-
-        // 自动装箱 ,arrayList.add(new Integer(1))
-        arrayList.add(1);
+<h4 id="8、自动装箱和拆箱"><a href="#8、自动装箱和拆箱" class="headerlink" title="8、自动装箱和拆箱"></a>8、自动装箱和拆箱</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> learn;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> JackFeng</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2020/3/25</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IntegerDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 自动装箱</span></span><br><span class="line">        <span class="comment">// 相当于</span></span><br><span class="line">        Integer i = <span class="keyword">new</span> Integer(<span class="number">10</span>);</span><br><span class="line">        Integer i1 = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 自动拆箱</span></span><br><span class="line">        <span class="comment">// 相当于 int a = i.intValue();</span></span><br><span class="line">        Integer i2 = <span class="number">10</span>;</span><br><span class="line">        <span class="keyword">int</span> a = i2;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//  Integer i3 = new Integer(i1.intValue()  +  i2.intValue());</span></span><br><span class="line">        Integer i3 = i1 + i2;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       <span class="comment">// 应用场景</span></span><br><span class="line">        ArrayList arrayList = <span class="keyword">new</span> ArrayList();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 自动装箱 ,arrayList.add(new Integer(1))</span></span><br><span class="line">        arrayList.add(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-    &#125;
-
-&#125;</code></pre>
 <h3 id="5-1、正则表达式"><a href="#5-1、正则表达式" class="headerlink" title="5.1、正则表达式"></a>5.1、正则表达式</h3><blockquote>
 <p>正则表达式：</p>
 <p>​    规则规范，用于匹配字符串</p>
@@ -1798,77 +1694,19 @@ public class IntegerDemo &#123;
 <li>必须是数字</li>
 </ul>
 </blockquote>
-<pre><code class="java">package learn;
-
-/**
- *
- * @author JackFeng
- * @date 2020/3/25
- */
-public class RegexDemo &#123;
-    public static void main(String[] args) &#123;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> learn;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> JackFeng</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2020/3/25</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RegexDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        String qq = <span class="string">&quot;66860619&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">boolean</span> matches = qq.matches(<span class="string">&quot;[1-9][0-9]&#123;4,14&#125;&quot;</span>);</span><br><span class="line">        System.out.println(matches);</span><br><span class="line"></span><br><span class="line">        String a1 = <span class="string">&quot;00001&quot;</span>;</span><br><span class="line">        <span class="keyword">boolean</span> matches1 = a1.matches(<span class="string">&quot;[1-9][0-9]&#123;4,14&#125;&quot;</span>);</span><br><span class="line">        System.out.println(matches1);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-        String qq = &quot;66860619&quot;;
 
-        boolean matches = qq.matches(&quot;[1-9][0-9]&#123;4,14&#125;&quot;);
-        System.out.println(matches);
-
-        String a1 = &quot;00001&quot;;
-        boolean matches1 = a1.matches(&quot;[1-9][0-9]&#123;4,14&#125;&quot;);
-        System.out.println(matches1);
-
-    &#125;
-
-
-&#125;</code></pre>
 <p><strong>正则判断元音</strong></p>
 <blockquote>
 <p>aeiou AEIOU</p>
 </blockquote>
-<pre><code class="java">public  static  boolean check(String s)&#123;
-    // 转换成小写
-    s = s.toLowerCase();
-    return  s.matches(&quot;\\w[aeiou]\\w&quot;);
-
-&#125;</code></pre>
-<h4 id="Split"><a href="#Split" class="headerlink" title="Split"></a>Split</h4><pre><code class="java">package learn;
-
-/**
- *
- * @author JackFeng
- * @date 2020/3/25
- */
-public class SplitDemo &#123;
-
-
-    public static void main(String[] args) &#123;
-
-        String s = &quot; -1     2    22  123     88&quot;;
-
-
-        System.out.println(&quot;正常分割&quot;);
-        String[] arr = s.split(&quot; &quot;);
-        print(arr);
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span>  <span class="keyword">static</span>  <span class="keyword">boolean</span> <span class="title">check</span><span class="params">(String s)</span></span>&#123;</span><br><span class="line">    <span class="comment">// 转换成小写</span></span><br><span class="line">    s = s.toLowerCase();</span><br><span class="line">    <span class="keyword">return</span>  s.matches(<span class="string">&quot;\\w[aeiou]\\w&quot;</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-        // 正则分割
-        String[] arr1 = s.split(&quot; +&quot;);
-        System.out.println(&quot;正则分割&quot;);
-        print(arr1);
-
-    &#125;
-
-
-    public  static  void print(String[] arr)&#123;
-        for (int i = 0; i &lt;arr.length ; i++) &#123;
-            System.out.println(arr[i]);
-        &#125;
-
-    &#125;
-
-&#125;</code></pre>
+<h4 id="Split"><a href="#Split" class="headerlink" title="Split"></a>Split</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> learn;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> JackFeng</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2020/3/25</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SplitDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        String s = <span class="string">&quot; -1     2    22  123     88&quot;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;正常分割&quot;</span>);</span><br><span class="line">        String[] arr = s.split(<span class="string">&quot; &quot;</span>);</span><br><span class="line">        print(arr);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 正则分割</span></span><br><span class="line">        String[] arr1 = s.split(<span class="string">&quot; +&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;正则分割&quot;</span>);</span><br><span class="line">        print(arr1);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">print</span><span class="params">(String[] arr)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;arr.length ; i++) &#123;</span><br><span class="line">            System.out.println(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   
   
@@ -1882,7 +1720,7 @@ public class SplitDemo &#123;
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\32274.html" title="Java常用API" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Java常用API</span><span class="excerpt">Java常用API-I</span></a><a class="item" href="\posts\8589.html" title="Java面向对象(封装)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Java面向对象(封装)</span><span class="excerpt">Java面向对象 封装！</span></a><a class="item" href="\posts\17415.html" title="Java环境" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200508000334.png" /><span class="title">Java环境</span><span class="excerpt">Java JDK 环境安装</span></a><a class="item" href="\posts\43249.html" title="Java面向对象 (继承、多态)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Java面向对象 (继承、多态)</span><span class="excerpt">Java面向对象 继承 多态</span></a><a class="item" href="\posts\9618.html" title="Java 集合体系" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Java 集合体系</span><span class="excerpt">Java集合体系</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\32274.html" title="Java常用API" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Java常用API</span><span class="excerpt">Java常用API-I</span></a><a class="item" href="\posts\17415.html" title="Java环境" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200508000334.png" /><span class="title">Java环境</span><span class="excerpt">Java JDK 环境安装</span></a><a class="item" href="\posts\8589.html" title="Java面向对象(封装)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Java面向对象(封装)</span><span class="excerpt">Java面向对象 封装！</span></a><a class="item" href="\posts\43249.html" title="Java面向对象 (继承、多态)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Java面向对象 (继承、多态)</span><span class="excerpt">Java面向对象 继承 多态</span></a><a class="item" href="\posts\34708.html" title="Java基础语法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png" /><span class="title">Java基础语法</span><span class="excerpt">Java基础语法</span></a></div></section></div>
       
       
         <div class='copyright'>

@@ -1485,14 +1485,11 @@
 <h2 id="2、函数的定义和调用"><a href="#2、函数的定义和调用" class="headerlink" title="2、函数的定义和调用"></a>2、函数的定义和调用</h2><h3 id="2-1、定义函数"><a href="#2-1、定义函数" class="headerlink" title="2.1、定义函数"></a>2.1、定义函数</h3><blockquote>
 <p>格式如下：</p>
 </blockquote>
-<pre><code class="python">def 函数名():
-    代码
-</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> 函数名():</span></span><br><span class="line">	代码</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <p><em>定义一个函数打印信息</em></p>
-<pre><code class="python">def printinfo():
-    print (&#39;-&#39;*21)
-    print(&#39;--人生苦短，我用Python--&#39;)
-    print(&#39;-&#39;*21)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>():</span></span><br><span class="line">    <span class="keyword">print</span> (<span class="string">&#x27;-&#x27;</span>*<span class="number">21</span>)</span><br><span class="line">    print(<span class="string">&#x27;--人生苦短，我用Python--&#x27;</span>)</span><br><span class="line">    print(<span class="string">&#x27;-&#x27;</span>*<span class="number">21</span>)</span><br></pre></td></tr></table></figure>
+
 <h3 id="2-2、调用函数"><a href="#2-2、调用函数" class="headerlink" title="2.2、调用函数"></a>2.2、调用函数</h3><blockquote>
 <p>定义函数之后，就相当于具备一些功能的代码块，想要这些代码执行，就需要调用函数。</p>
 <p>（定义函数后，函数不会自动执行的）如何调用呢？</p>
@@ -1509,26 +1506,20 @@
 </ul>
 </blockquote>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191217075538.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191217075538.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="2-4、函数的文档说明"><a href="#2-4、函数的文档说明" class="headerlink" title="2.4、函数的文档说明"></a>2.4、函数的文档说明</h3><pre><code class="python">&gt;&gt;&gt; def test(a,b):
-...     &quot;用来完成对2个数求和&quot;
-...     print(&quot;%d&quot;%(a+b))
-... 
-&gt;&gt;&gt; 
-&gt;&gt;&gt; test(11,22)
-33</code></pre>
-<p>如果执行，以下代码</p>
-<pre><code class="python">&gt;&gt;&gt; help(test)</code></pre>
-<p>能够看到test函数的相关说明</p>
-<pre><code class="python">Help on function test in module __main__:
+<h3 id="2-4、函数的文档说明"><a href="#2-4、函数的文档说明" class="headerlink" title="2.4、函数的文档说明"></a>2.4、函数的文档说明</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">test</span>(<span class="params">a,b</span>):</span></span><br><span class="line"><span class="meta">... </span>    <span class="string">&quot;用来完成对2个数求和&quot;</span></span><br><span class="line"><span class="meta">... </span>    print(<span class="string">&quot;%d&quot;</span>%(a+b))</span><br><span class="line"><span class="meta">... </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>test(<span class="number">11</span>,<span class="number">22</span>)</span><br><span class="line"><span class="number">33</span></span><br></pre></td></tr></table></figure>
 
-test(a, b)
-    用来完成对2个数求和
-(END)</code></pre>
-<h2 id="3、函数参数"><a href="#3、函数参数" class="headerlink" title="3、函数参数"></a>3、函数参数</h2><h3 id="3-1、定义带有参数的函数"><a href="#3-1、定义带有参数的函数" class="headerlink" title="3.1、定义带有参数的函数"></a>3.1、定义带有参数的函数</h3><pre><code class="python">def addnum(a,b):
-    c =a+b
-    print (c)</code></pre>
-<h3 id="3-2、调用带参函数"><a href="#3-2、调用带参函数" class="headerlink" title="3.2、调用带参函数"></a>3.2、调用带参函数</h3><pre><code class="python"># 调用带有参数的函数时，需要在小括号中，传递数据
-addnum(12,28)</code></pre>
+<p>如果执行，以下代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>help(test)</span><br></pre></td></tr></table></figure>
+
+<p>能够看到test函数的相关说明</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Help on function test <span class="keyword">in</span> module __main__:</span><br><span class="line"></span><br><span class="line">test(a, b)</span><br><span class="line">    用来完成对<span class="number">2</span>个数求和</span><br><span class="line">(END)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3、函数参数"><a href="#3、函数参数" class="headerlink" title="3、函数参数"></a>3、函数参数</h2><h3 id="3-1、定义带有参数的函数"><a href="#3-1、定义带有参数的函数" class="headerlink" title="3.1、定义带有参数的函数"></a>3.1、定义带有参数的函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">addnum</span>(<span class="params">a,b</span>):</span></span><br><span class="line">    c =a+b</span><br><span class="line">    <span class="keyword">print</span> (c)</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2、调用带参函数"><a href="#3-2、调用带参函数" class="headerlink" title="3.2、调用带参函数"></a>3.2、调用带参函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 调用带有参数的函数时，需要在小括号中，传递数据</span></span><br><span class="line">addnum(<span class="number">12</span>,<span class="number">28</span>)</span><br></pre></td></tr></table></figure>
+
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191217075841.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191217075841.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h3 id="3-3、参数练习题"><a href="#3-3、参数练习题" class="headerlink" title="3.3、参数练习题"></a>3.3、参数练习题</h3><blockquote>
 <p>要求：定义一个函数，完成前2个数完成加法运算，然后对第3个数，进行减法；然后调用这个函数</p>
@@ -1538,18 +1529,8 @@ addnum(12,28)</code></pre>
 </ul>
 </blockquote>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191217080256.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191217080256.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="3-4、调用函数时参数的顺序"><a href="#3-4、调用函数时参数的顺序" class="headerlink" title="3.4、调用函数时参数的顺序"></a>3.4、调用函数时参数的顺序</h3><pre><code class="python">&gt;&gt;&gt; def test(a,b):
-...     print(a,b)
-... 
-&gt;&gt;&gt; test(1,2)
-1 2
-&gt;&gt;&gt; test(b=1,a=2)
-2 1
-&gt;&gt;&gt; 
-&gt;&gt;&gt; test(b=1,2)
-  File &quot;&lt;stdin&gt;&quot;, line 1
-SyntaxError: positional argument follows keyword argument
-&gt;&gt;&gt; </code></pre>
+<h3 id="3-4、调用函数时参数的顺序"><a href="#3-4、调用函数时参数的顺序" class="headerlink" title="3.4、调用函数时参数的顺序"></a>3.4、调用函数时参数的顺序</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">test</span>(<span class="params">a,b</span>):</span></span><br><span class="line"><span class="meta">... </span>    print(a,b)</span><br><span class="line"><span class="meta">... </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>test(<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line"><span class="number">1</span> <span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>test(b=<span class="number">1</span>,a=<span class="number">2</span>)</span><br><span class="line"><span class="number">2</span> <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>test(b=<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span></span><br><span class="line">SyntaxError: positional argument follows keyword argument</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br></pre></td></tr></table></figure>
+
 <h3 id="3-5、总结"><a href="#3-5、总结" class="headerlink" title="3.5、总结"></a>3.5、总结</h3><blockquote>
 <ul>
 <li>定义时小括号中的参数，用来接收参数用的，称为 “形参”</li>
@@ -1563,23 +1544,18 @@ SyntaxError: positional argument follows keyword argument
 <p>想要在函数中把结果返回给调用者，需要在函数中使用return</p>
 </blockquote>
 <p><em>如下示例</em></p>
-<pre><code class="python">    def add2num(a, b):
-        c = a+b
-        return c</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add2num</span>(<span class="params">a, b</span>):</span></span><br><span class="line">    c = a+b</span><br><span class="line">    <span class="keyword">return</span> c</span><br></pre></td></tr></table></figure>
+
 <p><em>或者</em></p>
-<pre><code class="python">    def add2num(a, b):
-        return a+b</code></pre>
-<h3 id="4-2、保存函数的返回值"><a href="#4-2、保存函数的返回值" class="headerlink" title="4.2、保存函数的返回值"></a>4.2、保存函数的返回值</h3><pre><code class="python">    #定义函数
-    def add2num(a, b):
-        return a+b
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add2num</span>(<span class="params">a, b</span>):</span></span><br><span class="line">    <span class="keyword">return</span> a+b</span><br></pre></td></tr></table></figure>
 
-    #调用函数，顺便保存函数的返回值
-    result = add2num(100,98)
+<h3 id="4-2、保存函数的返回值"><a href="#4-2、保存函数的返回值" class="headerlink" title="4.2、保存函数的返回值"></a>4.2、保存函数的返回值</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add2num</span>(<span class="params">a, b</span>):</span></span><br><span class="line">    <span class="keyword">return</span> a+b</span><br><span class="line"></span><br><span class="line"><span class="comment">#调用函数，顺便保存函数的返回值</span></span><br><span class="line">result = add2num(<span class="number">100</span>,<span class="number">98</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#因为result已经保存了add2num的返回值，所以接下来就可以使用了</span></span><br><span class="line"><span class="keyword">print</span> result</span><br></pre></td></tr></table></figure>
 
-    #因为result已经保存了add2num的返回值，所以接下来就可以使用了
-    print result</code></pre>
 <p><em>结果</em></p>
-<pre><code class="python">    198</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">198</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="5、函数的类型"><a href="#5、函数的类型" class="headerlink" title="5、函数的类型"></a>5、函数的类型</h2><blockquote>
 <p>根据有没有参数，有没有返回值，可以互相结合，一共有4种</p>
 <ul>
@@ -1592,23 +1568,13 @@ SyntaxError: positional argument follows keyword argument
 <h3 id="5-1、无参数，无返回值"><a href="#5-1、无参数，无返回值" class="headerlink" title="5.1、无参数，无返回值"></a>5.1、无参数，无返回值</h3><blockquote>
 <p>此类函数，不能接收参数，也没有返回值，一般情况下，打印提示灯类似的功能，使用这类的函数</p>
 </blockquote>
-<pre><code class="python">def printMenu():
-    print(&#39;-----------&#39;)
-    print(&quot;欢迎关注A2Data&quot;)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printMenu</span>():</span></span><br><span class="line">    print(<span class="string">&#x27;-----------&#x27;</span>)</span><br><span class="line">    print(<span class="string">&quot;欢迎关注A2Data&quot;</span>)</span><br></pre></td></tr></table></figure>
+
 <h3 id="5-2、无参数，有返回值"><a href="#5-2、无参数，有返回值" class="headerlink" title="5.2、无参数，有返回值"></a>5.2、无参数，有返回值</h3><blockquote>
 <p>此类函数，不能接收参数，但是可以返回某个数据，一般情况下，像采集数据，用此类函数</p>
 </blockquote>
-<pre><code class="python"># 获取温度
-def getTemperature():
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取温度</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getTemperature</span>():</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#这里是获取温度的一些处理过程</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#为了简单起见，先模拟返回一个数据</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">24</span></span><br><span class="line"></span><br><span class="line">temperature = getTemperature()</span><br><span class="line">print(<span class="string">&#x27;当前的温度为:%d&#x27;</span>%temperature)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-    #这里是获取温度的一些处理过程
-
-    #为了简单起见，先模拟返回一个数据
-    return 24
-
-temperature = getTemperature()
-print(&#39;当前的温度为:%d&#39;%temperature)
-</code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191217080730.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191217080730.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h3 id="5-3、有参数，无返回值"><a href="#5-3、有参数，无返回值" class="headerlink" title="5.3、有参数，无返回值"></a>5.3、有参数，无返回值</h3><blockquote>
 <p>此类函数，能接收参数，但不可以返回数据，一般情况下，对某些变量设置数据而不需结果时，用此类函数</p>
@@ -1616,20 +1582,11 @@ print(&#39;当前的温度为:%d&#39;%temperature)
 <h3 id="5-4、有参数，又返回值"><a href="#5-4、有参数，又返回值" class="headerlink" title="5.4、有参数，又返回值"></a>5.4、有参数，又返回值</h3><blockquote>
 <p>此类函数，不仅能接收参数，还可以返回某个数据，一般情况下，像数据处理并需要结果的应用，用此类函数</p>
 </blockquote>
-<pre><code class="python"># 计算1~num的累积和
-def calculateNum(num):
-    result = 0
-    i = 1
-    while i&lt;=num:
-        result = result + i
-        i+=1
-        return result
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 计算1~num的累积和</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculateNum</span>(<span class="params">num</span>):</span></span><br><span class="line">    result = <span class="number">0</span></span><br><span class="line">    i = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> i&lt;=num:</span><br><span class="line">        result = result + i</span><br><span class="line">        i+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line">result = calculateNum(<span class="number">100</span>)</span><br><span class="line">print(<span class="string">&#x27;1~100的累积和为:%d&#x27;</span>%result)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-result = calculateNum(100)
-print(&#39;1~100的累积和为:%d&#39;%result)
-</code></pre>
 <p><em>结果</em></p>
-<pre><code class="python">1~100的累积和为: 5050</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>~<span class="number">100</span>的累积和为: <span class="number">5050</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="5-5、小归纳"><a href="#5-5、小归纳" class="headerlink" title="5.5、小归纳"></a>5.5、小归纳</h3><blockquote>
 <ul>
 <li>函数根据有没有参数，有没有返回值可以相互组合</li>
@@ -1650,7 +1607,7 @@ print(&#39;1~100的累积和为:%d&#39;%result)
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\16550.html" title="Python烤地瓜案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223124337.png" /><span class="title">Python烤地瓜案例</span><span class="excerpt">Python烤地瓜实例解析</span></a><a class="item" href="\posts\27081.html" title="python第二天作业答案" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">python第二天作业答案</span><span class="excerpt">第二天作业答案!</span></a><a class="item" href="\posts\30873.html" title="Python函数(中)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191218085353.png" /><span class="title">Python函数(中)</span><span class="excerpt">Python函数介绍中篇</span></a><a class="item" href="\posts\58489.html" title="Python列表介绍" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191212085923.png" /><span class="title">Python列表介绍</span><span class="excerpt">Python列表介绍</span></a><a class="item" href="\posts\4136.html" title="Anaconda闪退" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200414151257.png" /><span class="title">Anaconda闪退</span><span class="excerpt">anaconda Windows闪退解决方案 。</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\16550.html" title="Python烤地瓜案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223124337.png" /><span class="title">Python烤地瓜案例</span><span class="excerpt">Python烤地瓜实例解析</span></a><a class="item" href="\posts\29055.html" title="python的字符串" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211073327.png" /><span class="title">python的字符串</span><span class="excerpt">Python的字符串</span></a><a class="item" href="\posts\6275.html" title="Python函数(下)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191219085422.png" /><span class="title">Python函数(下)</span><span class="excerpt">Python函数介绍下篇</span></a><a class="item" href="\posts\58489.html" title="Python列表介绍" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191212085923.png" /><span class="title">Python列表介绍</span><span class="excerpt">Python列表介绍</span></a><a class="item" href="\posts\4136.html" title="Anaconda闪退" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200414151257.png" /><span class="title">Anaconda闪退</span><span class="excerpt">anaconda Windows闪退解决方案 。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1808,8 +1765,7 @@ Python函数(中)1、回顾函数应用
 
 
 Demo
-# 1.写一个函数打印一条直线
-# 2.打印自定...</p>
+123456789101112131415161...</p>
         </a>
       
       
@@ -1823,7 +1779,7 @@ Demo
 元组
 Python的元组与列表类似，不同之处在于元组的元素不能修改。元组使用小括号，列表使用方括号。
 
-&gt;&gt;&gt; aTuple = (&#39;...</p>
+123&gt;&gt;&gt; aTuple = (&#...</p>
         </a>
       
     </div>

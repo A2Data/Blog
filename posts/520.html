@@ -1479,9 +1479,8 @@
 <h1 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h1><blockquote>
 <p>Python的元组与列表类似，不同之处在于<strong>元组的元素不能修改</strong>。元组使用小括号，列表使用方括号。</p>
 </blockquote>
-<pre><code class="python">&gt;&gt;&gt; aTuple = (&#39;a2data&#39;,66,99.9)
-&gt;&gt;&gt; aTuple
-(&#39;a2data&#39;,66,99.9)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>aTuple = (<span class="string">&#x27;a2data&#x27;</span>,<span class="number">66</span>,<span class="number">99.9</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>aTuple</span><br><span class="line">(<span class="string">&#x27;a2data&#x27;</span>,<span class="number">66</span>,<span class="number">99.9</span>)</span><br></pre></td></tr></table></figure>
+
 <h2 id="1、访问元组"><a href="#1、访问元组" class="headerlink" title="1、访问元组"></a>1、访问元组</h2><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213182328.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213182328.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="查看元组"></p>
 <h2 id="2、修改元组"><a href="#2、修改元组" class="headerlink" title="2、修改元组"></a>2、修改元组</h2><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213182827.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213182827.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <blockquote>
@@ -1490,17 +1489,10 @@
 <h2 id="3、元组的内置函数count-index"><a href="#3、元组的内置函数count-index" class="headerlink" title="3、元组的内置函数count, index"></a>3、元组的内置函数count, index</h2><blockquote>
 <p>index和count与字符串和列表中的用法相同</p>
 </blockquote>
-<pre><code class="python">&gt;&gt;&gt; a = (&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;a&#39;, &#39;b&#39;)
-&gt;&gt;&gt; a.index(&#39;a&#39;, 1, 3) # 注意是左闭右开区间
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-ValueError: tuple.index(x): x not in tuple
-&gt;&gt;&gt; a.index(&#39;a&#39;, 1, 4)
-3
-&gt;&gt;&gt; a.count(&#39;b&#39;)
-2
-&gt;&gt;&gt; a.count(&#39;d&#39;)
-0</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = (<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.index(<span class="string">&#x27;a&#x27;</span>, <span class="number">1</span>, <span class="number">3</span>) <span class="comment"># 注意是左闭右开区间</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">ValueError: tuple.index(x): x <span class="keyword">not</span> <span class="keyword">in</span> tuple</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.index(<span class="string">&#x27;a&#x27;</span>, <span class="number">1</span>, <span class="number">4</span>)</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.count(<span class="string">&#x27;b&#x27;</span>)</span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.count(<span class="string">&#x27;d&#x27;</span>)</span><br><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h1 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h1><blockquote>
 <h1 id="字典介绍"><a href="#字典介绍" class="headerlink" title="字典介绍"></a>字典介绍</h1><ul>
 <li>定义字典</li>
@@ -1510,13 +1502,17 @@ ValueError: tuple.index(x): x not in tuple
 <p>想一想：</p>
 <blockquote>
 <p>如果有列表</p>
-<pre><code class="python">     nameList = [&#39;a2data&#39;, &#39;a2data1&#39;, &#39;a2data2&#39;];</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nameList = [<span class="string">&#x27;a2data&#x27;</span>, <span class="string">&#x27;a2data1&#x27;</span>, <span class="string">&#x27;a2data2&#x27;</span>];</span><br></pre></td></tr></table></figure>
+
 <p>需要对”xiaoWang”这个名字写错了，通过代码修改：</p>
-<pre><code class="python">     nameList[1] = &#39;a2data112&#39;</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nameList[<span class="number">1</span>] = <span class="string">&#x27;a2data112&#x27;</span></span><br></pre></td></tr></table></figure>
+
 <p>如果列表的顺序发生了变化，如下</p>
-<pre><code class="python">     nameList = [&#39;a2data&#39;, &#39;a2data2&#39;,  &#39;a2data112&#39;];</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nameList = [<span class="string">&#x27;a2data&#x27;</span>, <span class="string">&#x27;a2data2&#x27;</span>,  <span class="string">&#x27;a2data112&#x27;</span>];</span><br></pre></td></tr></table></figure>
+
 <p>此时就需要修改下标，才能完成名字的修改</p>
-<pre><code class="python">     nameList[2] = &#39;a2data112&#39;</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nameList[<span class="number">2</span>] = <span class="string">&#x27;a2data112&#x27;</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="有没有方法，既能存储多个数据，还能在访问元素的很方便就能够定位到需要的那个元素呢？"><a href="#有没有方法，既能存储多个数据，还能在访问元素的很方便就能够定位到需要的那个元素呢？" class="headerlink" title="有没有方法，既能存储多个数据，还能在访问元素的很方便就能够定位到需要的那个元素呢？"></a><strong><code>有没有方法，既能存储多个数据，还能在访问元素的很方便就能够定位到需要的那个元素呢？</code></strong></h4></blockquote>
 <p>答：</p>
 <blockquote>
@@ -1524,28 +1520,22 @@ ValueError: tuple.index(x): x not in tuple
 </blockquote>
 <p>另一个场景：</p>
 <p>学生信息列表，每个学生信息包括学号、姓名、年龄等，如何从中找到某个学生的信息？</p>
-<pre><code class="python">&gt;&gt;&gt; studens = [[1001, &quot;王宝强&quot;, 24], [1002, &quot;马蓉&quot;, 23], [1005, &quot;宋喆&quot;，24], ...]</code></pre>
-<p><strong>循环遍历？ No！</strong></p>
-<h2 id="0、根据键访问值"><a href="#0、根据键访问值" class="headerlink" title="0、根据键访问值"></a>0、根据键访问值</h2><pre><code class="python">    info = &#123;&#39;name&#39;:&#39;班长&#39;, &#39;id&#39;:100, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;地球亚洲中国北京&#39;&#125;
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>studens = [[<span class="number">1001</span>, <span class="string">&quot;王宝强&quot;</span>, <span class="number">24</span>], [<span class="number">1002</span>, <span class="string">&quot;马蓉&quot;</span>, <span class="number">23</span>], [<span class="number">1005</span>, <span class="string">&quot;宋喆&quot;</span>，<span class="number">24</span>], ...]</span><br></pre></td></tr></table></figure>
 
-    print(info[&#39;name&#39;])
-    print(info[&#39;address&#39;])</code></pre>
+<p><strong>循环遍历？ No！</strong></p>
+<h2 id="0、根据键访问值"><a href="#0、根据键访问值" class="headerlink" title="0、根据键访问值"></a>0、根据键访问值</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">info = &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;班长&#x27;</span>, <span class="string">&#x27;id&#x27;</span>:<span class="number">100</span>, <span class="string">&#x27;sex&#x27;</span>:<span class="string">&#x27;f&#x27;</span>, <span class="string">&#x27;address&#x27;</span>:<span class="string">&#x27;地球亚洲中国北京&#x27;</span>&#125;</span><br><span class="line"></span><br><span class="line">print(info[<span class="string">&#x27;name&#x27;</span>])</span><br><span class="line">print(info[<span class="string">&#x27;address&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
 <p>结果:</p>
-<pre><code>    班长
-    地球亚洲中国北京</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">班长</span><br><span class="line">地球亚洲中国北京</span><br></pre></td></tr></table></figure>
+
 <p>若访问不存在的键，则会报错：</p>
-<pre><code class="python">&gt;&gt;&gt; info[&#39;age&#39;]
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-KeyError: &#39;age&#39;</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>info[<span class="string">&#x27;age&#x27;</span>]</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">KeyError: <span class="string">&#x27;age&#x27;</span></span><br></pre></td></tr></table></figure>
+
 <p>在我们不确定字典中是否存在某个键而又想获取其值时，可以使用get方法，还可以设置默认值：</p>
-<pre><code class="python">&gt;&gt;&gt; age = info.get(&#39;age&#39;)
-&gt;&gt;&gt; age #&#39;age&#39;键不存在，所以age为None
-&gt;&gt;&gt; type(age)
-&lt;type &#39;NoneType&#39;&gt;
-&gt;&gt;&gt; age = info.get(&#39;age&#39;, 18) # 若info中不存在&#39;age&#39;这个键，就返回默认值18
-&gt;&gt;&gt; age
-18</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>age = info.get(<span class="string">&#x27;age&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>age <span class="comment">#&#x27;age&#x27;键不存在，所以age为None</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(age)</span><br><span class="line">&lt;type <span class="string">&#x27;NoneType&#x27;</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>age = info.get(<span class="string">&#x27;age&#x27;</span>, <span class="number">18</span>) <span class="comment"># 若info中不存在&#x27;age&#x27;这个键，就返回默认值18</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>age</span><br><span class="line"><span class="number">18</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="1、常见操作1"><a href="#1、常见操作1" class="headerlink" title="1、常见操作1"></a>1、常见操作1</h2><h3 id="1-1、查看元素"><a href="#1-1、查看元素" class="headerlink" title="1.1、查看元素"></a>1.1、查看元素</h3><p>除了使用key查找数据，还可以使用get来获取数据</p>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213183314.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213183314.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="key获取值"></p>
 <h3 id="1-2、修改元素"><a href="#1-2、修改元素" class="headerlink" title="1.2、修改元素"></a>1.2、修改元素</h3><p>字典的每个元素中的数据是可以修改的，只要通过key找到，即可修改</p>
@@ -1571,13 +1561,8 @@ KeyError: &#39;age&#39;</code></pre>
 <blockquote>
 <p>clear 清空整个字典</p>
 </blockquote>
-<pre><code class="python">info = &#123;&#39;name&#39;:&#39;a2data&#39;, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;China&#39;&#125;
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">info = &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;a2data&#x27;</span>, <span class="string">&#x27;sex&#x27;</span>:<span class="string">&#x27;f&#x27;</span>, <span class="string">&#x27;address&#x27;</span>:<span class="string">&#x27;China&#x27;</span>&#125;</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;清空前,%s&#x27;</span>%info)</span><br><span class="line"></span><br><span class="line">info.clear()</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;清空后,%s&#x27;</span>%info)</span><br></pre></td></tr></table></figure>
 
-print(&#39;清空前,%s&#39;%info)
-
-info.clear()
-
-print(&#39;清空后,%s&#39;%info)</code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213190644.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213190644.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h2 id="2、常见操作2"><a href="#2、常见操作2" class="headerlink" title="2、常见操作2"></a>2、常见操作2</h2><h3 id="2-1、len"><a href="#2-1、len" class="headerlink" title="2.1、len()"></a>2.1、len()</h3><blockquote>
 <p>测量字典中，键值对的个数</p>
@@ -1604,44 +1589,22 @@ print(&#39;清空后,%s&#39;%info)</code></pre>
 <p>通过for … in …:的语法结构，我们可以遍历字符串、列表、元组、字典等数据结构。</p>
 </blockquote>
 <p><strong>注意python语法的缩进</strong></p>
-<h3 id="3-1、字符串遍历"><a href="#3-1、字符串遍历" class="headerlink" title="3.1、字符串遍历"></a>3.1、字符串遍历</h3><pre><code class="python">&gt;&gt;&gt; a_str = &quot;hello itcast&quot;
-&gt;&gt;&gt; for char in a_str:
-...     print(char,end=&#39; &#39;)
-...
-h e l l o   i t c a s t</code></pre>
-<h3 id="3-2、列表遍历"><a href="#3-2、列表遍历" class="headerlink" title="3.2、列表遍历"></a>3.2、列表遍历</h3><pre><code class="python">&gt;&gt;&gt; a_list = [1, 2, 3, 4, 5]
-&gt;&gt;&gt; for num in a_list:
-...     print(num,end=&#39; &#39;)
-...
-1 2 3 4 5</code></pre>
-<h3 id="3-3、元组遍历"><a href="#3-3、元组遍历" class="headerlink" title="3.3、元组遍历"></a>3.3、元组遍历</h3><pre><code class="python">&gt;&gt;&gt; a_turple = (1, 2, 3, 4, 5)
-&gt;&gt;&gt; for num in a_turple:
-...     print(num,end=&quot; &quot;)
-1 2 3 4 5</code></pre>
+<h3 id="3-1、字符串遍历"><a href="#3-1、字符串遍历" class="headerlink" title="3.1、字符串遍历"></a>3.1、字符串遍历</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a_str = <span class="string">&quot;hello itcast&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> char <span class="keyword">in</span> a_str:</span><br><span class="line"><span class="meta">... </span>    print(char,end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">...</span><br><span class="line">h e l l o   i t c a s t</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2、列表遍历"><a href="#3-2、列表遍历" class="headerlink" title="3.2、列表遍历"></a>3.2、列表遍历</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a_list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> num <span class="keyword">in</span> a_list:</span><br><span class="line"><span class="meta">... </span>    print(num,end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">...</span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3、元组遍历"><a href="#3-3、元组遍历" class="headerlink" title="3.3、元组遍历"></a>3.3、元组遍历</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a_turple = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> num <span class="keyword">in</span> a_turple:</span><br><span class="line"><span class="meta">... </span>    print(num,end=<span class="string">&quot; &quot;</span>)</span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="3-4字典遍历"><a href="#3-4字典遍历" class="headerlink" title="3.4字典遍历"></a>3.4字典遍历</h3><h4 id="3-4-1、key（键）"><a href="#3-4-1、key（键）" class="headerlink" title="3.4.1、key（键）"></a>3.4.1、key（键）</h4><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213230115.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213230115.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h4 id="3-4-2、value（值）"><a href="#3-4-2、value（值）" class="headerlink" title="3.4.2、value（值）"></a>3.4.2、value（值）</h4><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213230133.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213230133.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h4 id="3-4-3、项（元素）"><a href="#3-4-3、项（元素）" class="headerlink" title="3.4.3、项（元素）"></a>3.4.3、项（元素）</h4><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213230153.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213230153.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h4 id="3-4-4、-key-value（键值对）"><a href="#3-4-4、-key-value（键值对）" class="headerlink" title="3.4.4、 key-value（键值对）"></a>3.4.4、 key-value（键值对）</h4><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213230213.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213230213.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p>想一想，如何实现带下标索引的遍历</p>
-<pre><code class="python">&gt;&gt;&gt; chars = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]
-&gt;&gt;&gt; i = 0
-&gt;&gt;&gt; for chr in chars:
-...     print(&quot;%d %s&quot;%(i, chr))
-...     i += 1
-...
-0 a
-1 b
-2 c
-3 d</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>chars = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>i = <span class="number">0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> chr <span class="keyword">in</span> chars:</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">&quot;%d %s&quot;</span>%(i, chr))</span><br><span class="line"><span class="meta">... </span>    i += <span class="number">1</span></span><br><span class="line">...</span><br><span class="line"><span class="number">0</span> a</span><br><span class="line"><span class="number">1</span> b</span><br><span class="line"><span class="number">2</span> c</span><br><span class="line"><span class="number">3</span> d</span><br></pre></td></tr></table></figure>
+
 <p> <strong>enumerate()</strong></p>
-<pre><code class="python">&gt;&gt;&gt; chars = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]
-&gt;&gt;&gt; for i, chr in enumerate(chars):
-...     print i, chr
-...
-0 a
-1 b
-2 c
-3 d</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>chars = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> i, chr <span class="keyword">in</span> enumerate(chars):</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">print</span> i, chr</span><br><span class="line">...</span><br><span class="line"><span class="number">0</span> a</span><br><span class="line"><span class="number">1</span> b</span><br><span class="line"><span class="number">2</span> c</span><br><span class="line"><span class="number">3</span> d</span><br></pre></td></tr></table></figure>
+
 <h2 id="4、公共方法"><a href="#4、公共方法" class="headerlink" title="4、公共方法"></a>4、公共方法</h2><h3 id="4-1、运算符"><a href="#4-1、运算符" class="headerlink" title="4.1、运算符"></a>4.1、运算符</h3><table>
 <thead>
 <tr>
@@ -1681,26 +1644,12 @@ h e l l o   i t c a s t</code></pre>
 <td>字符串、列表、元组、字典</td>
 </tr>
 </tbody></table>
-<h4 id=""><a href="#" class="headerlink" title="+"></a>+</h4><pre><code class="python">&gt;&gt;&gt; &quot;hello &quot; + &quot;a2data&quot;
-&#39;hello a2data&#39;
-&gt;&gt;&gt; [1, 2] + [3, 4]
-[1, 2, 3, 4]
-&gt;&gt;&gt; (&#39;a&#39;, &#39;b&#39;) + (&#39;c&#39;, &#39;d&#39;)
-(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;)</code></pre>
-<h4 id="-1"><a href="#-1" class="headerlink" title="*"></a>*</h4><pre><code class="python">&gt;&gt;&gt; &#39;ab&#39;*4
-&#39;ababab&#39;
-&gt;&gt;&gt; [1, 2]*4
-[1, 2, 1, 2, 1, 2, 1, 2]
-&gt;&gt;&gt; (&#39;a&#39;, &#39;b&#39;)*4
-(&#39;a&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;)</code></pre>
-<h4 id="in"><a href="#in" class="headerlink" title="in"></a>in</h4><pre><code class="python">&gt;&gt;&gt; &#39;a2&#39; in &#39;hello a2data&#39;
-True
-&gt;&gt;&gt; 3 in [1, 2]
-False
-&gt;&gt;&gt; 4 in (1, 2, 3, 4)
-True
-&gt;&gt;&gt; &quot;name&quot; in &#123;&quot;name&quot;:&quot;小风&quot;, &quot;age&quot;:24&#125;
-True</code></pre>
+<h4 id=""><a href="#" class="headerlink" title="+"></a>+</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&quot;hello &quot;</span> + <span class="string">&quot;a2data&quot;</span></span><br><span class="line"><span class="string">&#x27;hello a2data&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[<span class="number">1</span>, <span class="number">2</span>] + [<span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>(<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>) + (<span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>)</span><br><span class="line">(<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="-1"><a href="#-1" class="headerlink" title="*"></a>*</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&#x27;ab&#x27;</span>*<span class="number">4</span></span><br><span class="line"><span class="string">&#x27;ababab&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[<span class="number">1</span>, <span class="number">2</span>]*<span class="number">4</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>(<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>)*<span class="number">4</span></span><br><span class="line">(<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="in"><a href="#in" class="headerlink" title="in"></a>in</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&#x27;a2&#x27;</span> <span class="keyword">in</span> <span class="string">&#x27;hello a2data&#x27;</span></span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">3</span> <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">4</span> <span class="keyword">in</span> (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&quot;name&quot;</span> <span class="keyword">in</span> &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;小风&quot;</span>, <span class="string">&quot;age&quot;</span>:<span class="number">24</span>&#125;</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>注意，in在对字典操作时，判断的是字典的键</strong></p>
 <h3 id="4-2、python内置函数"><a href="#4-2、python内置函数" class="headerlink" title="4.2、python内置函数"></a>4.2、python内置函数</h3><blockquote>
 <p>Python包含了以下内置函数</p>
@@ -1740,89 +1689,21 @@ True</code></pre>
 <td>删除变量</td>
 </tr>
 </tbody></table>
-<h4 id="cmp"><a href="#cmp" class="headerlink" title="cmp"></a>cmp</h4><pre><code class="python">&gt;&gt;&gt; cmp(&quot;hello&quot;, &quot;a2data&quot;)
--1
-&gt;&gt;&gt; cmp(&quot;a2data&quot;, &quot;hello&quot;)
-1
-&gt;&gt;&gt; cmp(&quot;a2data&quot;, &quot;a2data&quot;)
-0
-&gt;&gt;&gt; cmp([1, 2], [3, 4])
--1
-&gt;&gt;&gt; cmp([1, 2], [1, 1])
-1
-&gt;&gt;&gt; cmp([1, 2], [1, 2, 3])
--1
-&gt;&gt;&gt; cmp(&#123;&quot;a&quot;:1&#125;, &#123;&quot;b&quot;:1&#125;)
--1
-&gt;&gt;&gt; cmp(&#123;&quot;a&quot;:2&#125;, &#123;&quot;a&quot;:1&#125;)
-1
-&gt;&gt;&gt; cmp(&#123;&quot;a&quot;:2&#125;, &#123;&quot;a&quot;:2, &quot;b&quot;:1&#125;)
--1</code></pre>
+<h4 id="cmp"><a href="#cmp" class="headerlink" title="cmp"></a>cmp</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>cmp(<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;a2data&quot;</span>)</span><br><span class="line"><span class="number">-1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>cmp(<span class="string">&quot;a2data&quot;</span>, <span class="string">&quot;hello&quot;</span>)</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>cmp(<span class="string">&quot;a2data&quot;</span>, <span class="string">&quot;a2data&quot;</span>)</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>cmp([<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line"><span class="number">-1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>cmp([<span class="number">1</span>, <span class="number">2</span>], [<span class="number">1</span>, <span class="number">1</span>])</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>cmp([<span class="number">1</span>, <span class="number">2</span>], [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line"><span class="number">-1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>cmp(&#123;<span class="string">&quot;a&quot;</span>:<span class="number">1</span>&#125;, &#123;<span class="string">&quot;b&quot;</span>:<span class="number">1</span>&#125;)</span><br><span class="line"><span class="number">-1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>cmp(&#123;<span class="string">&quot;a&quot;</span>:<span class="number">2</span>&#125;, &#123;<span class="string">&quot;a&quot;</span>:<span class="number">1</span>&#125;)</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>cmp(&#123;<span class="string">&quot;a&quot;</span>:<span class="number">2</span>&#125;, &#123;<span class="string">&quot;a&quot;</span>:<span class="number">2</span>, <span class="string">&quot;b&quot;</span>:<span class="number">1</span>&#125;)</span><br><span class="line"><span class="number">-1</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>注意：cmp在比较字典数据时，先比较键，再比较值。</strong></p>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213230858.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191213230858.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h4 id="len"><a href="#len" class="headerlink" title="len"></a>len</h4><pre><code class="python">&gt;&gt;&gt; len(&quot;hello a2data&quot;)
-12
-&gt;&gt;&gt; len([1, 2, 3, 4])
-4
-&gt;&gt;&gt; len((3,4))
-2
-&gt;&gt;&gt; len(&#123;&quot;a&quot;:1, &quot;b&quot;:2&#125;)
-2</code></pre>
+<h4 id="len"><a href="#len" class="headerlink" title="len"></a>len</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>len(<span class="string">&quot;hello a2data&quot;</span>)</span><br><span class="line"><span class="number">12</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>len([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>len((<span class="number">3</span>,<span class="number">4</span>))</span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>len(&#123;<span class="string">&quot;a&quot;</span>:<span class="number">1</span>, <span class="string">&quot;b&quot;</span>:<span class="number">2</span>&#125;)</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>注意：len在操作字典数据时，返回的是键值对个数。</strong></p>
-<h4 id="max"><a href="#max" class="headerlink" title="max"></a>max</h4><pre><code class="python">&gt;&gt;&gt; max(&quot;hello a2data&quot;)
-&#39;t&#39;
-&gt;&gt;&gt; max([1,4,522,3,4])
-522
-&gt;&gt;&gt; max(&#123;&quot;a&quot;:1, &quot;b&quot;:2&#125;)
-&#39;b&#39;
-&gt;&gt;&gt; max(&#123;&quot;a&quot;:10, &quot;b&quot;:2&#125;)
-&#39;b&#39;
-&gt;&gt;&gt; max(&#123;&quot;c&quot;:10, &quot;b&quot;:2&#125;)
-&#39;c&#39;</code></pre>
+<h4 id="max"><a href="#max" class="headerlink" title="max"></a>max</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>max(<span class="string">&quot;hello a2data&quot;</span>)</span><br><span class="line"><span class="string">&#x27;t&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>max([<span class="number">1</span>,<span class="number">4</span>,<span class="number">522</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"><span class="number">522</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>max(&#123;<span class="string">&quot;a&quot;</span>:<span class="number">1</span>, <span class="string">&quot;b&quot;</span>:<span class="number">2</span>&#125;)</span><br><span class="line"><span class="string">&#x27;b&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>max(&#123;<span class="string">&quot;a&quot;</span>:<span class="number">10</span>, <span class="string">&quot;b&quot;</span>:<span class="number">2</span>&#125;)</span><br><span class="line"><span class="string">&#x27;b&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>max(&#123;<span class="string">&quot;c&quot;</span>:<span class="number">10</span>, <span class="string">&quot;b&quot;</span>:<span class="number">2</span>&#125;)</span><br><span class="line"><span class="string">&#x27;c&#x27;</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="del"><a href="#del" class="headerlink" title="del"></a>del</h4><blockquote>
 <p>del有两种用法，一种是del加空格，另一种是del()</p>
 </blockquote>
-<pre><code class="python">&gt;&gt;&gt; a = 1
-&gt;&gt;&gt; a
-1
-&gt;&gt;&gt; del a
-&gt;&gt;&gt; a
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-NameError: name &#39;a&#39; is not defined
-&gt;&gt;&gt; a = [&#39;a&#39;, &#39;b&#39;]
-&gt;&gt;&gt; del a[0]
-&gt;&gt;&gt; a
-[&#39;b&#39;]
-&gt;&gt;&gt; del(a)
-&gt;&gt;&gt; a
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-NameError: name &#39;a&#39; is not defined</code></pre>
-<h3 id="4-3、多维列表-元祖访问的示例"><a href="#4-3、多维列表-元祖访问的示例" class="headerlink" title="4.3、多维列表/元祖访问的示例"></a>4.3、多维列表/元祖访问的示例</h3><pre><code class="python">&gt;&gt;&gt; tuple1 = [(2,3),(4,5)]
-&gt;&gt;&gt; tuple1[0]
-(2, 3)
-&gt;&gt;&gt; tuple1[0][0]
-2
-&gt;&gt;&gt; tuple1[0][2]
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-IndexError: tuple index out of range
-&gt;&gt;&gt; tuple1[0][1]
-3
-&gt;&gt;&gt; tuple1[2][2]
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-IndexError: list index out of range
-&gt;&gt;&gt; tuple2 = tuple1+[(3)]
-&gt;&gt;&gt; tuple2
-[(2, 3), (4, 5), 3]
-&gt;&gt;&gt; tuple2[2]
-3
-&gt;&gt;&gt; tuple2[2][0]
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-TypeError: &#39;int&#39; object is not subscriptable</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span> a</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">NameError: name <span class="string">&#x27;a&#x27;</span> <span class="keyword">is</span> <span class="keyword">not</span> defined</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span> a[<span class="number">0</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="string">&#x27;b&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span>(a)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">NameError: name <span class="string">&#x27;a&#x27;</span> <span class="keyword">is</span> <span class="keyword">not</span> defined</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-3、多维列表-元祖访问的示例"><a href="#4-3、多维列表-元祖访问的示例" class="headerlink" title="4.3、多维列表/元祖访问的示例"></a>4.3、多维列表/元祖访问的示例</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tuple1 = [(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">4</span>,<span class="number">5</span>)]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tuple1[<span class="number">0</span>]</span><br><span class="line">(<span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tuple1[<span class="number">0</span>][<span class="number">0</span>]</span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tuple1[<span class="number">0</span>][<span class="number">2</span>]</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">IndexError: tuple index out of range</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tuple1[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tuple1[<span class="number">2</span>][<span class="number">2</span>]</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">IndexError: list index out of range</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tuple2 = tuple1+[(<span class="number">3</span>)]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tuple2</span><br><span class="line">[(<span class="number">2</span>, <span class="number">3</span>), (<span class="number">4</span>, <span class="number">5</span>), <span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tuple2[<span class="number">2</span>]</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tuple2[<span class="number">2</span>][<span class="number">0</span>]</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">TypeError: <span class="string">&#x27;int&#x27;</span> object <span class="keyword">is</span> <span class="keyword">not</span> subscriptable</span><br></pre></td></tr></table></figure>
 
   
   
@@ -1836,7 +1717,7 @@ TypeError: &#39;int&#39; object is not subscriptable</code></pre>
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\47220.html" title="Python强化练习" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230224850.png" /><span class="title">Python强化练习</span><span class="excerpt">Python学习阶段钱</span></a><a class="item" href="\posts\27081.html" title="python第二天作业答案" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">python第二天作业答案</span><span class="excerpt">第二天作业答案!</span></a><a class="item" href="\posts\29055.html" title="python的字符串" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211073327.png" /><span class="title">python的字符串</span><span class="excerpt">Python的字符串</span></a><a class="item" href="\posts\55248.html" title="Python面向对象(4)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191226205105.png" /><span class="title">Python面向对象(4)</span><span class="excerpt">Python面向对象异常、模块</span></a><a class="item" href="\posts\16550.html" title="Python烤地瓜案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223124337.png" /><span class="title">Python烤地瓜案例</span><span class="excerpt">Python烤地瓜实例解析</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\59977.html" title="Python基础知识" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/py_1.png" /><span class="title">Python基础知识</span><span class="excerpt">Python的基础语法</span></a><a class="item" href="\posts\29055.html" title="python的字符串" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211073327.png" /><span class="title">python的字符串</span><span class="excerpt">Python的字符串</span></a><a class="item" href="\posts\27081.html" title="python第二天作业答案" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">python第二天作业答案</span><span class="excerpt">第二天作业答案!</span></a><a class="item" href="\posts\55248.html" title="Python面向对象(4)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191226205105.png" /><span class="title">Python面向对象(4)</span><span class="excerpt">Python面向对象异常、模块</span></a><a class="item" href="\posts\16550.html" title="Python烤地瓜案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223124337.png" /><span class="title">Python烤地瓜案例</span><span class="excerpt">Python烤地瓜实例解析</span></a></div></section></div>
       
       
         <div class='copyright'>

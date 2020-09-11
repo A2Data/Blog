@@ -1508,21 +1508,10 @@
 </tbody></table>
 <hr>
 <p> <strong>修改权限的命令</strong></p>
-<pre><code class="shell">【 su - u2 切换用户】 
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">【 su - u2 切换用户】 </span><br><span class="line"></span><br><span class="line">1、 chmod 修改文件权限</span><br><span class="line"></span><br><span class="line">2、 chown，chgrp 修改文件权属 </span><br><span class="line"></span><br><span class="line">U----所有者  </span><br><span class="line">O----其他人  </span><br><span class="line">a-----所有人  </span><br><span class="line">g-----所属组</span><br><span class="line"></span><br><span class="line">chomd a=rwx root  所有都拥有读写执行权限 </span><br><span class="line"></span><br><span class="line">cat /etc/passwd|grep -v nologin|grep -v halt|grep -v shutdown|awk -F&quot;:&quot; &#x27;&#123; print $1&quot;|&quot;$3&quot;|&quot;$4 &#125;&#x27;|more</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-1、 chmod 修改文件权限
 
-2、 chown，chgrp 修改文件权属 
 
-U----所有者  
-O----其他人  
-a-----所有人  
-g-----所属组
-
-chomd a=rwx root  所有都拥有读写执行权限 
-
-cat /etc/passwd|grep -v nologin|grep -v halt|grep -v shutdown|awk -F&quot;:&quot; &#39;&#123; print $1&quot;|&quot;$3&quot;|&quot;$4 &#125;&#39;|more
-</code></pre>
 <h2 id="用户控制命令"><a href="#用户控制命令" class="headerlink" title="用户控制命令"></a>用户控制命令</h2><ol>
 <li>useradd 添加用户</li>
 <li>useradd -g  指定用户所属用户组</li>
@@ -1533,19 +1522,10 @@ cat /etc/passwd|grep -v nologin|grep -v halt|grep -v shutdown|awk -F&quot;:&quot
 <p>命令：指定用户所属组</p>
 <p>useradd -g 组名 -u 用户号 用户名</p>
 </blockquote>
-<pre><code class="shell">例如
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">例如</span><br><span class="line"></span><br><span class="line">useradd -g g3 -u 510 u5</span><br><span class="line"></span><br><span class="line">指定用户附属组</span><br><span class="line"></span><br><span class="line">useradd -g 组名 -G 所在组 用户名</span><br><span class="line"></span><br><span class="line">例如:</span><br><span class="line"></span><br><span class="line">useradd -g g4 -G g1 u7</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-useradd -g g3 -u 510 u5
 
-指定用户附属组
 
-useradd -g 组名 -G 所在组 用户名
-
-例如:
-
-useradd -g g4 -G g1 u7
-
-</code></pre>
 <h2 id="修改账户信息"><a href="#修改账户信息" class="headerlink" title="修改账户信息"></a>修改账户信息</h2><ol>
 <li>usermod 修改账户信息</li>
 <li>usermod -g 用户组指定用户所属的用户组</li>
@@ -1597,7 +1577,7 @@ useradd -g g4 -G g1 u7
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\46411.html" title="Linux基本操作" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200425192236.png" /><span class="title">Linux基本操作</span><span class="excerpt">Linux 基本操作。</span></a><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\10415.html" title="Linux NFS网络文件" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux NFS网络文件</span><span class="excerpt">Linux 手把手教你搭建NFS网络文件系统。</span></a><a class="item" href="\posts\43857.html" title="Linux Shell脚本" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell脚本</span><span class="excerpt">Linux Shell脚本相关学习。</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\61794.html" title="Linux Mdadm案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Mdadm案例</span><span class="excerpt">Linux  Mdadm 案例 raid5。</span></a><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\43857.html" title="Linux Shell脚本" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell脚本</span><span class="excerpt">Linux Shell脚本相关学习。</span></a><a class="item" href="\posts\43150.html" title="Linux安装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux安装</span><span class="excerpt">linux介绍及安装</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1751,7 +1731,7 @@ useradd -g g4 -G g1 u7
 存放位置 —- 以RedHat为例
 /etc/sysconfig/network-scripts/ifcfg-etc0
 
-修改ipsetup  交互式...</p>
+修改ip123setup  ...</p>
         </a>
       
       

@@ -1494,32 +1494,8 @@
 <p>隔离性(lsolation)，一个事务不受其他事务的干扰，在多用户并发访问时相互不受干扰。</p>
 <p>持久性(Durability)，一旦提交了事务，数据的改变永久保存本地。</p>
 <h1 id="2、事务的提交：COMMIT"><a href="#2、事务的提交：COMMIT" class="headerlink" title="2、事务的提交：COMMIT"></a>2、事务的提交：COMMIT</h1><p>事务的执行内容只有使用commit进行提交后，其中的修改操作才可以成为永久性操作。</p>
-<pre><code class="sql">先转换MYSQL结束符：
-DELIMITER //
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">先转换MYSQL结束符：</span><br><span class="line">DELIMITER //</span><br><span class="line"></span><br><span class="line">事务结构：</span><br><span class="line"><span class="keyword">START</span> <span class="keyword">TRANSACTION</span>｜<span class="keyword">BEGIN</span>:</span><br><span class="line">查询主体;</span><br><span class="line"><span class="keyword">COMMIT</span>;</span><br><span class="line">//</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line">对user表进行如下事务操作：</span><br><span class="line">1. 姓名为Olivia的人员年龄修改为40</span><br><span class="line">2. 插入新记录user_id为018的男性在职人员Ian，年龄23，电话13173629832，部门为CS</span><br><span class="line">3. 删除原表中user_id为017的记录</span><br><span class="line">4. 查询上述修改结果</span><br><span class="line"></span><br><span class="line"><span class="keyword">start</span> <span class="keyword">transaction</span>;</span><br><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> age = <span class="string">&#x27;40&#x27;</span> <span class="keyword">where</span> user_name = <span class="string">&#x27;Olivia&#x27;</span>;</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">user</span> <span class="keyword">values</span>(<span class="string">&#x27;018&#x27;</span>,<span class="string">&#x27;Ian&#x27;</span>,<span class="string">&#x27;23&#x27;</span>,<span class="string">&#x27;0&#x27;</span>,<span class="string">&#x27;13173629832&#x27;</span>,<span class="string">&#x27;0&#x27;</span>,<span class="string">&#x27;CS&#x27;</span>);</span><br><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> <span class="keyword">user</span> <span class="keyword">where</span> user_id = <span class="string">&#x27;017&#x27;</span>;</span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> <span class="keyword">user</span> <span class="keyword">where</span> user_dept = <span class="string">&#x27;CS&#x27;</span> <span class="keyword">or</span> user_name  = <span class="string">&#x27;Olivia&#x27;</span>;</span><br><span class="line"><span class="keyword">commit</span>;</span><br><span class="line">//</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-事务结构：
-START TRANSACTION｜BEGIN:
-查询主体;
-COMMIT;
-//
-
-
-案例：
-对user表进行如下事务操作：
-1. 姓名为Olivia的人员年龄修改为40
-2. 插入新记录user_id为018的男性在职人员Ian，年龄23，电话13173629832，部门为CS
-3. 删除原表中user_id为017的记录
-4. 查询上述修改结果
-
-start transaction;
-update user set age = &#39;40&#39; where user_name = &#39;Olivia&#39;;
-insert user values(&#39;018&#39;,&#39;Ian&#39;,&#39;23&#39;,&#39;0&#39;,&#39;13173629832&#39;,&#39;0&#39;,&#39;CS&#39;);
-delete from user where user_id = &#39;017&#39;;
-select * from user where user_dept = &#39;CS&#39; or user_name  = &#39;Olivia&#39;;
-commit;
-//
-
-</code></pre>
 <p>我们先查询事务执行前的相关表内容：</p>
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614215919792.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614215919792.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614215919792"></p>
 <p>执行事务：</p>
@@ -1535,7 +1511,8 @@ commit;
 <p>案例：</p>
 <p>对user表中user_id为018的人员修改姓名为Peter，年龄为50。</p>
 <p>我们开启两个终端，并仅将终端一的autocommit参数修改为OFF：</p>
-<pre><code class="sql">set autocommit = 0//</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> autocommit = <span class="number">0</span>//</span><br></pre></td></tr></table></figure>
+
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614222243940.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614222243940.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614222243940"></p>
 <p>在终端一进行姓名的修改操作，不执行commit。</p>
 <p>我们可以在终端一中查询到修改后的记录：</p>
@@ -1554,23 +1531,10 @@ commit;
 <p>执行事务后并回滚，可以看到数据修改成功后又回滚到修改前状态：</p>
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614224156208.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614224156208.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614224156208"></p>
 <h1 id="5、设置保存点：SAVEPOINT"><a href="#5、设置保存点：SAVEPOINT" class="headerlink" title="5、设置保存点：SAVEPOINT"></a>5、设置保存点：SAVEPOINT</h1><p>在事务中设置savepoint，可以将事务回滚到savepoint前。</p>
-<pre><code class="sql">设置保存点：
-SAVEPOINT savepoint_name;
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">设置保存点：</span><br><span class="line"><span class="keyword">SAVEPOINT</span> savepoint_name;</span><br><span class="line"></span><br><span class="line">回滚到保存点：</span><br><span class="line"><span class="keyword">ROLLBACK</span> <span class="keyword">TO</span> <span class="keyword">SAVEPOINT</span> savepoint_name;</span><br><span class="line"></span><br><span class="line">解除保存点：</span><br><span class="line"><span class="keyword">RELEASE</span> <span class="keyword">SAVEPOINT</span> savepoint_name;</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line"><span class="keyword">start</span> <span class="keyword">transaction</span>;</span><br><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> remove = <span class="number">1</span> <span class="keyword">where</span> user_id = <span class="string">&#x27;016&#x27;</span>;</span><br><span class="line"><span class="keyword">savepoint</span> s1;</span><br><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> <span class="keyword">user</span> <span class="keyword">where</span> user_id = <span class="string">&#x27;016&#x27;</span>;</span><br><span class="line"><span class="keyword">rollback</span> <span class="keyword">to</span> <span class="keyword">savepoint</span> s1;</span><br><span class="line"><span class="keyword">release</span> <span class="keyword">savepoint</span> s1;</span><br><span class="line">//</span><br></pre></td></tr></table></figure>
 
-回滚到保存点：
-ROLLBACK TO SAVEPOINT savepoint_name;
 
-解除保存点：
-RELEASE SAVEPOINT savepoint_name;
 
-案例：
-start transaction;
-update user set remove = 1 where user_id = &#39;016&#39;;
-savepoint s1;
-delete from user where user_id = &#39;016&#39;;
-rollback to savepoint s1;
-release savepoint s1;
-//</code></pre>
 <img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200615000422781.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200615000422781.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200615000422781" style="zoom: 67%;" />
 
 
@@ -1581,15 +1545,16 @@ release savepoint s1;
 <p>​    read committed 读已提交，该模式不支持重复读</p>
 <p>​    repeatable read 可重复读，也是MYSQL中默认隔离级别</p>
 <p>​    serializable 串行化，不允许读写并发操作</p>
-<h2 id="6-1、查看当前的事务隔离级别："><a href="#6-1、查看当前的事务隔离级别：" class="headerlink" title="6.1、查看当前的事务隔离级别："></a>6.1、查看当前的事务隔离级别：</h2><pre><code class="sql">SHOW VARIABLES LIKE &#39;TRANSACTION ISOLATION&#39;;</code></pre>
+<h2 id="6-1、查看当前的事务隔离级别："><a href="#6-1、查看当前的事务隔离级别：" class="headerlink" title="6.1、查看当前的事务隔离级别："></a>6.1、查看当前的事务隔离级别：</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> <span class="keyword">VARIABLES</span> <span class="keyword">LIKE</span> <span class="string">&#x27;TRANSACTION ISOLATION&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200616114343560.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200616114343560.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616114343560"></p>
-<h2 id="6-2、修改事务隔离级别："><a href="#6-2、修改事务隔离级别：" class="headerlink" title="6.2、修改事务隔离级别："></a>6.2、修改事务隔离级别：</h2><pre><code class="sql">SET [GLOBAL|SESSION] TRANSACTION ISOLATION LEVEL READ 新的事务隔离级别;</code></pre>
+<h2 id="6-2、修改事务隔离级别："><a href="#6-2、修改事务隔离级别：" class="headerlink" title="6.2、修改事务隔离级别："></a>6.2、修改事务隔离级别：</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> [<span class="keyword">GLOBAL</span>|<span class="keyword">SESSION</span>] <span class="keyword">TRANSACTION</span> <span class="keyword">ISOLATION</span> <span class="keyword">LEVEL</span> <span class="keyword">READ</span> 新的事务隔离级别;</span><br></pre></td></tr></table></figure>
+
 <p>global：设置全局默认隔离级别</p>
 <p>session：设置本次会话隔离级别</p>
 <p>如果二者均不写：仅设置本次事务命令的隔离级别，下一个事务将回到默认隔离级别</p>
-<pre><code class="sql">案例：将当前会话的隔离级别修改为read committed。
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">案例：将当前会话的隔离级别修改为read committed。</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">session</span> <span class="keyword">transaction</span> <span class="keyword">isolation</span> <span class="keyword">level</span> <span class="keyword">read</span> committed;</span><br></pre></td></tr></table></figure>
 
-set session transaction isolation level read committed;</code></pre>
 <p>当前会话隔离级别已更改为read committed：</p>
 <p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200616120501297.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200616120501297.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616120501297"></p>
 <p>新开终端再次查询隔离级别，其又回到了默认值repeatable read：</p>
@@ -1607,7 +1572,7 @@ set session transaction isolation level read committed;</code></pre>
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\4354b039.html" title="认识Mysql" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200610232427.png" /><span class="title">认识Mysql</span><span class="excerpt">认识mysql</span></a><a class="item" href="\posts\b794162c.html" title="数据库操作-DDL" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/image-20200421154433187.png" /><span class="title">数据库操作-DDL</span><span class="excerpt">数据库操作DDL</span></a><a class="item" href="\posts\6656ad65.html" title="数据库操作-DML" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200615211933034.png" /><span class="title">数据库操作-DML</span><span class="excerpt">数据库操作DML</span></a><a class="item" href="\posts\f8d580eb.html" title="数据库操作-DCL" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614195339691.png" /><span class="title">数据库操作-DCL</span><span class="excerpt">数据库操作DCL</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\b794162c.html" title="数据库操作-DDL" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/image-20200421154433187.png" /><span class="title">数据库操作-DDL</span><span class="excerpt">数据库操作DDL</span></a><a class="item" href="\posts\4354b039.html" title="认识Mysql" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200610232427.png" /><span class="title">认识Mysql</span><span class="excerpt">认识mysql</span></a><a class="item" href="\posts\6656ad65.html" title="数据库操作-DML" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200615211933034.png" /><span class="title">数据库操作-DML</span><span class="excerpt">数据库操作DML</span></a><a class="item" href="\posts\f8d580eb.html" title="数据库操作-DCL" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614195339691.png" /><span class="title">数据库操作-DCL</span><span class="excerpt">数据库操作DCL</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1751,27 +1716,32 @@ set session transaction isolation level read committed;</code></pre>
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/6656ad65.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>数据库操作-DML</p>
-          <p class='content'>数据库操作DML
+        <a class='prev' href='/posts/b794162c.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>数据库操作-DDL</p>
+          <p class='content'>数据库操作DDL
 
 
-DML
-DML（Data Manipulation Language），是通过对表中数据的插入、删除和修改等操作，实现对数据库的基本操作。
-主要用途：对数据表进行数据插入、...</p>
+DDL
+DDL（Data Definition Language）是连接存储世界与现实世界的高铁！
+
+
+主要用途：
+对数据库对象进行创建、修改、删除等操作。
+操作对象：
+数...</p>
         </a>
       
       
-        <a class='next' href='/posts/f8d580eb.html'>
-          <p class='title'>数据库操作-DCL<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>数据库操作DCL
+        <a class='next' href='/posts/4354b039.html'>
+          <p class='title'>认识Mysql<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>认识mysql
 
 
-DCL
-DCL（Data Control Language），数据库控制语言。
-主要用途：对数据库访问权限进行控制的指令。
-操纵命令：GRANT、REVOKE
-GRANT：...</p>
+背景介绍
+数据库，就是数据的仓库。它是长期存储在计算机内，有组织、可共享的数据的集合。简而言之，即放置信息的文件柜。
+
+数据库分类
+当今互联网中，最常见的数据库模型主要为两种...</p>
         </a>
       
     </div>

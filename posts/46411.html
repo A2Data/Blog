@@ -1555,95 +1555,30 @@
 <td>临时文件</td>
 </tr>
 </tbody></table>
-<h1 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h1><pre><code class="shell">图形界面 到 字符界面Ctrl Alt Fn （F1-----F6） init 3
+<h1 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">图形界面 到 字符界面Ctrl Alt Fn （F1-----F6） init 3</span><br><span class="line"></span><br><span class="line">字符界面 到 图形界面 Alt F7   init 5</span><br><span class="line"></span><br><span class="line">Tab键 ：自动补齐</span><br><span class="line"></span><br><span class="line">反斜杠\ ：强制换行</span><br><span class="line"></span><br><span class="line">ctrl+u 清空至行首</span><br><span class="line"></span><br><span class="line">ctrl+k 清空至行尾</span><br><span class="line"></span><br><span class="line">ctrl+L 清屏</span><br><span class="line"></span><br><span class="line">ctrl+c 取消本次命令编辑</span><br><span class="line"></span><br><span class="line">touch 创建文件</span><br><span class="line"></span><br><span class="line">mkdir 创建目录  mkdir -p  创建嵌套的多层目录结构</span><br><span class="line"></span><br><span class="line">cd 切换工作目录 cd -  切换两个目录  cd .. 返回上个目录</span><br><span class="line"></span><br><span class="line">du 统计目录及文件 du -s 只统计大小 du -a 统计所有文件 du -h 人性化显示</span><br><span class="line"></span><br><span class="line">du -sh \*  查看所有文件及大小</span><br><span class="line"></span><br><span class="line">pwd ------- 查看当前所在位置</span><br><span class="line"></span><br><span class="line">vim  ------查看日志（编辑器）</span><br><span class="line"></span><br><span class="line">Ls ------ 打印（当前目录下所包含的内容）ls 显示目录内容（ls=ll）</span><br><span class="line"></span><br><span class="line">./ ------直接运行脚本</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-字符界面 到 图形界面 Alt F7   init 5
 
-Tab键 ：自动补齐
 
-反斜杠\ ：强制换行
+<h2 id="查看帮助"><a href="#查看帮助" class="headerlink" title="查看帮助"></a>查看帮助</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">help， -help man info （man ls）</span><br><span class="line"></span><br><span class="line">常用命令 uname 查看系统信息及内核版本（-a 显示主机；-r 显示内核版本）</span><br><span class="line"></span><br><span class="line">hostname 查看主机名</span><br><span class="line"></span><br><span class="line">vim /etc/sysconfig/network 更改主机名</span><br><span class="line"></span><br><span class="line">ifconfig 查看网络信息</span><br><span class="line"></span><br><span class="line">shutdown -h now | poweroff | init 0     关闭计算机</span><br><span class="line"></span><br><span class="line">shutdown  -r now  |  reboot  |  init 6   重启计算机</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-ctrl+u 清空至行首
+<h2 id="Ln软链"><a href="#Ln软链" class="headerlink" title="Ln软链"></a>Ln软链</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Ln链接文件</span><br><span class="line"></span><br><span class="line">Ln 要链接的文件 链接到什么地方</span><br><span class="line"></span><br><span class="line">ln 创建链接文件 </span><br><span class="line"></span><br><span class="line">ln -s 软链接 ln 硬链</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-ctrl+k 清空至行尾
 
-ctrl+L 清屏
 
-ctrl+c 取消本次命令编辑
+<h2 id="CP-复制"><a href="#CP-复制" class="headerlink" title="CP 复制"></a>CP 复制</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cp  -r 递归复制整个目录树  cp=cp-i  cp -r 递归复制</span><br><span class="line"></span><br><span class="line">cp -p 保持源文件的属性不变</span><br><span class="line"></span><br><span class="line">cp -f 强制覆盖目标同名文件或目录</span><br><span class="line"></span><br><span class="line">cp -i 需要覆盖文件或目录时进行提醒</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-touch 创建文件
 
-mkdir 创建目录  mkdir -p  创建嵌套的多层目录结构
 
-cd 切换工作目录 cd -  切换两个目录  cd .. 返回上个目录
+<h2 id="RM-删除"><a href="#RM-删除" class="headerlink" title="RM 删除"></a>RM 删除</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">rm -rf 递归强行删除文件或者目录 不进行提醒</span><br><span class="line"></span><br><span class="line">rm -f  强行删除文件或者目录，不进行提醒</span><br><span class="line"></span><br><span class="line">rm -r 递归删除整个目录树</span><br><span class="line"></span><br><span class="line">rm - i 删除文件或者目录时提醒用户确认</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-du 统计目录及文件 du -s 只统计大小 du -a 统计所有文件 du -h 人性化显示
 
-du -sh \*  查看所有文件及大小
 
-pwd ------- 查看当前所在位置
+<h2 id="MV-移动（改名）"><a href="#MV-移动（改名）" class="headerlink" title="MV 移动（改名）"></a>MV 移动（改名）</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Cat 查看文件</span><br><span class="line"></span><br><span class="line">More 分页查看文件 （不可返回）</span><br><span class="line"></span><br><span class="line">Less 分页查看文件 （可返回）</span><br><span class="line"></span><br><span class="line">Head 查看文件头（前10行）</span><br><span class="line"></span><br><span class="line">Tail 查看文件尾 （后10行）</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-vim  ------查看日志（编辑器）
+<h2 id="WC-统计"><a href="#WC-统计" class="headerlink" title="WC 统计"></a>WC 统计</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wc -l 统计行数 </span><br><span class="line">wc -w 统计单词个数 </span><br><span class="line">wc -c 统计字节数</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-Ls ------ 打印（当前目录下所包含的内容）ls 显示目录内容（ls=ll）
 
-./ ------直接运行脚本
 
-</code></pre>
-<h2 id="查看帮助"><a href="#查看帮助" class="headerlink" title="查看帮助"></a>查看帮助</h2><pre><code class="shell">help， -help man info （man ls）
-
-常用命令 uname 查看系统信息及内核版本（-a 显示主机；-r 显示内核版本）
-
-hostname 查看主机名
-
-vim /etc/sysconfig/network 更改主机名
-
-ifconfig 查看网络信息
-
-shutdown -h now | poweroff | init 0     关闭计算机
-
-shutdown  -r now  |  reboot  |  init 6   重启计算机
-</code></pre>
-<h2 id="Ln软链"><a href="#Ln软链" class="headerlink" title="Ln软链"></a>Ln软链</h2><pre><code class="shell">Ln链接文件
-
-Ln 要链接的文件 链接到什么地方
-
-ln 创建链接文件 
-
-ln -s 软链接 ln 硬链
-</code></pre>
-<h2 id="CP-复制"><a href="#CP-复制" class="headerlink" title="CP 复制"></a>CP 复制</h2><pre><code class="shell">cp  -r 递归复制整个目录树  cp=cp-i  cp -r 递归复制
-
-cp -p 保持源文件的属性不变
-
-cp -f 强制覆盖目标同名文件或目录
-
-cp -i 需要覆盖文件或目录时进行提醒
-</code></pre>
-<h2 id="RM-删除"><a href="#RM-删除" class="headerlink" title="RM 删除"></a>RM 删除</h2><pre><code class="shell">rm -rf 递归强行删除文件或者目录 不进行提醒
-
-rm -f  强行删除文件或者目录，不进行提醒
-
-rm -r 递归删除整个目录树
-
-rm - i 删除文件或者目录时提醒用户确认
-
-</code></pre>
-<h2 id="MV-移动（改名）"><a href="#MV-移动（改名）" class="headerlink" title="MV 移动（改名）"></a>MV 移动（改名）</h2><pre><code class="shell">Cat 查看文件
-
-More 分页查看文件 （不可返回）
-
-Less 分页查看文件 （可返回）
-
-Head 查看文件头（前10行）
-
-Tail 查看文件尾 （后10行）
-
-</code></pre>
-<h2 id="WC-统计"><a href="#WC-统计" class="headerlink" title="WC 统计"></a>WC 统计</h2><pre><code class="shell">wc -l 统计行数 
-wc -w 统计单词个数 
-wc -c 统计字节数
-</code></pre>
 <h2 id="压缩指令"><a href="#压缩指令" class="headerlink" title="压缩指令"></a>压缩指令</h2><blockquote>
 <p>压缩 （仅限文件）</p>
 <ul>
@@ -1665,143 +1600,20 @@ wc -c 统计字节数
 <p><strong>口令打包压缩：</strong></p>
 <p>Tar 要打包压缩到什么地方 要打包压缩的文件</p>
 </blockquote>
-<pre><code class="shell">单个解释用法：
-tar -c 创建 . tar格式的包文件
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">单个解释用法：</span><br><span class="line">tar -c 创建 . tar格式的包文件</span><br><span class="line"></span><br><span class="line">tar -x  解开. tar格式的包文件</span><br><span class="line"></span><br><span class="line">tar -v 查看详情信息</span><br><span class="line"></span><br><span class="line">tar -f 表示使用归档文件</span><br><span class="line"></span><br><span class="line">tar -p 打包时保留原始文件及目录的权限</span><br><span class="line"></span><br><span class="line">tar -t 列表查看包内文件</span><br><span class="line"></span><br><span class="line">tar -C 解包时指定释放的目标文件夹</span><br><span class="line"></span><br><span class="line">tar -z 调用gzip程序进行压缩或者解压</span><br><span class="line"></span><br><span class="line">tar -j 调用bzip2 程序进行压缩或者解压</span><br><span class="line"></span><br><span class="line">组合命令：</span><br><span class="line"></span><br><span class="line">tar -cvf 打包</span><br><span class="line"></span><br><span class="line">tar -zcvf 打包压缩</span><br><span class="line"></span><br><span class="line">tar -zcvf  XXX.tar.gz  XX</span><br><span class="line"></span><br><span class="line">tar -xvf 解压 </span><br><span class="line"></span><br><span class="line">tar -xvf xxxx.tar.gz -C aaa 解压到指定目录</span><br><span class="line"></span><br><span class="line">打包压缩---- tar -zcvf</span><br><span class="line"></span><br><span class="line">解压 ----- tar -zxvf </span><br><span class="line"></span><br><span class="line">指定位置解压--- tar -zxcf -C</span><br><span class="line"></span><br><span class="line">xx.bz2用bzip2 -d解压</span><br><span class="line"></span><br><span class="line">xx.gz用gzip -d解压</span><br><span class="line"></span><br><span class="line">xx.tar.gz 用-zxvf解压</span><br><span class="line"></span><br><span class="line">xx.tar.bz2用-jxvf解压</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-tar -x  解开. tar格式的包文件
-
-tar -v 查看详情信息
-
-tar -f 表示使用归档文件
-
-tar -p 打包时保留原始文件及目录的权限
-
-tar -t 列表查看包内文件
-
-tar -C 解包时指定释放的目标文件夹
-
-tar -z 调用gzip程序进行压缩或者解压
-
-tar -j 调用bzip2 程序进行压缩或者解压
-
-组合命令：
-
-tar -cvf 打包
-
-tar -zcvf 打包压缩
-
-tar -zcvf  XXX.tar.gz  XX
-
-tar -xvf 解压 
-
-tar -xvf xxxx.tar.gz -C aaa 解压到指定目录
-
-打包压缩---- tar -zcvf
-
-解压 ----- tar -zxvf 
-
-指定位置解压--- tar -zxcf -C
-
-xx.bz2用bzip2 -d解压
-
-xx.gz用gzip -d解压
-
-xx.tar.gz 用-zxvf解压
-
-xx.tar.bz2用-jxvf解压
-
-</code></pre>
 <p><strong>常用</strong></p>
-<pre><code class="shell">打包：
-1、tar -zcvf a2data.tar.gz ./a2data.cn/*
-2、tar -zcvf a2data.tar.bz2 ./a2data.cn/*  
----- 将a2data.cn文件夹下统一打包 ------
-
-解压(万能)：
-
-tar -xf a2data.tar.bz2 ./ 
----- 解压到当前路径下----
-
-</code></pre>
-<h2 id="VI-编辑器"><a href="#VI-编辑器" class="headerlink" title="VI 编辑器"></a>VI 编辑器</h2><pre><code class="shell">命令模式:
-vim/vi ESC
-
-输出模式:
-a、i、o等键
-
-末行模式：
-(大写)A键
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">打包：</span><br><span class="line">1、tar -zcvf a2data.tar.gz ./a2data.cn/*</span><br><span class="line">2、tar -zcvf a2data.tar.bz2 ./a2data.cn/*  </span><br><span class="line">---- 将a2data.cn文件夹下统一打包 ------</span><br><span class="line"></span><br><span class="line">解压(万能)：</span><br><span class="line"></span><br><span class="line">tar -xf a2data.tar.bz2 ./ </span><br><span class="line">---- 解压到当前路径下----</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
-工作模式：命令模式 输入模式 末行模式
 
-a       #光标后面写
 
-i       #光标前面写
 
-o       #下一行写
+<h2 id="VI-编辑器"><a href="#VI-编辑器" class="headerlink" title="VI 编辑器"></a>VI 编辑器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">命令模式:</span><br><span class="line">vim/vi ESC</span><br><span class="line"></span><br><span class="line">输出模式:</span><br><span class="line">a、i、o等键</span><br><span class="line"></span><br><span class="line">末行模式：</span><br><span class="line">(大写)A键</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">工作模式：命令模式 输入模式 末行模式</span><br><span class="line"></span><br><span class="line">a       #光标后面写</span><br><span class="line"></span><br><span class="line">i       #光标前面写</span><br><span class="line"></span><br><span class="line">o       #下一行写</span><br><span class="line"></span><br><span class="line">dd      #删一行</span><br><span class="line"></span><br><span class="line">n+dd    #删几行</span><br><span class="line"></span><br><span class="line"><span class="meta">d$</span><span class="bash">      <span class="comment">#删除光标后面的同一行 （删光标）</span></span></span><br><span class="line"></span><br><span class="line">d^      #删除光标前面的同一行 （不删光标）</span><br><span class="line"></span><br><span class="line">x       #删光标</span><br><span class="line"></span><br><span class="line">X       #删光标前面的</span><br><span class="line"></span><br><span class="line">yy      #复制</span><br><span class="line"></span><br><span class="line">p       #黏黏到下一行</span><br><span class="line"></span><br><span class="line">P       #黏黏到上一行</span><br><span class="line"></span><br><span class="line">u       #撤销上一步</span><br><span class="line"></span><br><span class="line">U       #撤销这一行的所有修改</span><br><span class="line"></span><br><span class="line">:q!     #不保存退出            </span><br><span class="line"></span><br><span class="line">:w      #保存</span><br><span class="line"></span><br><span class="line">:wq     #保存退出</span><br><span class="line"></span><br><span class="line">:/      #搜索的东西   搜索什么 从上到下搜索</span><br><span class="line"></span><br><span class="line"><span class="meta">%</span><span class="bash">       <span class="comment">#搜索的东西   搜索什么 从下到上搜索</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-dd      #删一行
-
-n+dd    #删几行
-
-d$      #删除光标后面的同一行 （删光标）
-
-d^      #删除光标前面的同一行 （不删光标）
-
-x       #删光标
-
-X       #删光标前面的
-
-yy      #复制
-
-p       #黏黏到下一行
-
-P       #黏黏到上一行
-
-u       #撤销上一步
-
-U       #撤销这一行的所有修改
-
-:q!     #不保存退出            
-
-:w      #保存
-
-:wq     #保存退出
-
-:/      #搜索的东西   搜索什么 从上到下搜索
-
-%       #搜索的东西   搜索什么 从下到上搜索
-</code></pre>
 <p><strong>行号</strong></p>
-<pre><code class="shell">:set nu    #设置行号
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">:set nu    #设置行号</span><br><span class="line"></span><br><span class="line">:set nonu  #不要行号了</span><br><span class="line"></span><br><span class="line">跳转到首行gg</span><br><span class="line"></span><br><span class="line">跳转到尾行G</span><br><span class="line"></span><br><span class="line">\#G跳转到到第几行</span><br><span class="line"></span><br><span class="line">：e/etc/passwd 打开新的编辑文件</span><br><span class="line"></span><br><span class="line">：r/etc/passwd 读入其他文件内容</span><br><span class="line"></span><br><span class="line">文件内个替换</span><br><span class="line"></span><br><span class="line">s/old/new 替换行里的一个old换成new</span><br><span class="line"></span><br><span class="line">s/old/new/g 整行替换 old换成new</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">，<span class="comment">#s/old/new/g #到#行替换 old换成new</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">%</span><span class="bash">s/old/new/g 整篇替换 old换成new</span></span><br><span class="line"></span><br><span class="line">c 末尾加入c 对每个替换提示用户进行确定</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-:set nonu  #不要行号了
-
-跳转到首行gg
-
-跳转到尾行G
-
-\#G跳转到到第几行
-
-：e/etc/passwd 打开新的编辑文件
-
-：r/etc/passwd 读入其他文件内容
-
-文件内个替换
-
-s/old/new 替换行里的一个old换成new
-
-s/old/new/g 整行替换 old换成new
-
-#，#s/old/new/g #到#行替换 old换成new
-
-%s/old/new/g 整篇替换 old换成new
-
-c 末尾加入c 对每个替换提示用户进行确定
-
-
-</code></pre>
 
   
   
@@ -1815,7 +1627,7 @@ c 末尾加入c 对每个替换提示用户进行确定
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\61794.html" title="Linux Mdadm案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Mdadm案例</span><span class="excerpt">Linux  Mdadm 案例 raid5。</span></a><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\10415.html" title="Linux NFS网络文件" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux NFS网络文件</span><span class="excerpt">Linux 手把手教你搭建NFS网络文件系统。</span></a><a class="item" href="\posts\43857.html" title="Linux Shell脚本" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell脚本</span><span class="excerpt">Linux Shell脚本相关学习。</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\61794.html" title="Linux Mdadm案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Mdadm案例</span><span class="excerpt">Linux  Mdadm 案例 raid5。</span></a><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\43857.html" title="Linux Shell脚本" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell脚本</span><span class="excerpt">Linux Shell脚本相关学习。</span></a><a class="item" href="\posts\43150.html" title="Linux安装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux安装</span><span class="excerpt">linux介绍及安装</span></a></div></section></div>
       
       
         <div class='copyright'>

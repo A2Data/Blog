@@ -1469,25 +1469,8 @@
 <p><strong>例题引导：</strong></p>
 <p><strong>Q：</strong>输入3个整数，按从小到大依次输出，用“-&gt;”符号相连： 例如：输入<em>4，2，6</em>，输出<em>2 -&gt; 4 -&gt; 6</em></p>
 <p><strong>A：</strong></p>
-<pre><code class="python">a = int(input(&#39;请输入第一个整数：&#39;))
-b = int(input(&#39;请输入第二个整数：&#39;))
-c = int(input(&#39;请输入第三个整数：&#39;))
-if (a &gt; b):
-x = b
-b = a
-a = x
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">a = int(input(<span class="string">&#x27;请输入第一个整数：&#x27;</span>))</span><br><span class="line">b = int(input(<span class="string">&#x27;请输入第二个整数：&#x27;</span>))</span><br><span class="line">c = int(input(<span class="string">&#x27;请输入第三个整数：&#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> (a &gt; b):</span><br><span class="line">x = b</span><br><span class="line">b = a</span><br><span class="line">a = x</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (a &gt; c):</span><br><span class="line">x = c</span><br><span class="line">c = a</span><br><span class="line">a = x</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (b &gt; c):</span><br><span class="line">x = c</span><br><span class="line">c = b</span><br><span class="line">b = x</span><br><span class="line"></span><br><span class="line">print(a,<span class="string">&#x27;-&gt;&#x27;</span>,b,<span class="string">&#x27;-&gt;&#x27;</span>,c)</span><br></pre></td></tr></table></figure>
 
-if (a &gt; c):
-x = c
-c = a
-a = x
-
-if (b &gt; c):
-x = c
-c = b
-b = x
-
-print(a,&#39;-&gt;&#39;,b,&#39;-&gt;&#39;,c)</code></pre>
 <p><strong>学习引导：</strong></p>
 <ul>
 <li>if判断语句</li>
@@ -1496,67 +1479,16 @@ print(a,&#39;-&gt;&#39;,b,&#39;-&gt;&#39;,c)</code></pre>
 <li>for语句</li>
 </ul>
 <h2 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a>判断语句</h2><h3 id="if判断语句"><a href="#if判断语句" class="headerlink" title="if判断语句"></a>if判断语句</h3><p>该语句的语法格式如下：</p>
-<pre><code class="python">#单条件判断：
-if condition_1:
-       result_1
-else:
-       result_2
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#单条件判断：</span></span><br><span class="line"><span class="keyword">if</span> condition_1:</span><br><span class="line">   	result_1</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   	result_2</span><br><span class="line"></span><br><span class="line"><span class="comment">#多条件判断：</span></span><br><span class="line"><span class="keyword">if</span> condition_1:</span><br><span class="line">   	result_1</span><br><span class="line"><span class="keyword">elif</span>:</span><br><span class="line">   	result_2</span><br><span class="line"><span class="keyword">elif</span>:</span><br><span class="line">   	result_3</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   	result_4</span><br><span class="line">    </span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">现在我们做一个成绩评级的小程序</span></span><br><span class="line"><span class="string">要求：按照90-100/80-89/60-79/40-59/小于39</span></span><br><span class="line"><span class="string">划分五个等级</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">score=eval(input(<span class="string">&quot;请输入成绩:\n&quot;</span>))</span><br><span class="line"><span class="comment">#eval是Python的一个内置函数，这个函数的作用是，返回传入字符串的表达式的结果。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (score&gt;<span class="number">90</span>)&amp;(score&lt;=<span class="number">100</span>):</span><br><span class="line">   	print(<span class="string">&#x27;该同学成绩为优&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> (score&gt;<span class="number">80</span>)&amp;(score&lt;=<span class="number">89</span>):   <span class="comment">#多条件判断</span></span><br><span class="line">   	print(<span class="string">&#x27;该同学成绩为良&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> (score&gt;<span class="number">60</span>)&amp;(score&lt;=<span class="number">79</span>):</span><br><span class="line">   	print(<span class="string">&#x27;该同学成绩为良&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> (score&gt;<span class="number">40</span>)&amp;(score&lt;=<span class="number">59</span>):</span><br><span class="line">   	print(<span class="string">&#x27;该同学成绩为不及格&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> (score&lt;<span class="number">39</span>)&amp;(score&gt;<span class="number">0</span>):</span><br><span class="line">   	print(<span class="string">&#x27;该同学请自行退学&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">请输入成绩:</span></span><br><span class="line"><span class="string">34</span></span><br><span class="line"><span class="string">该同学请自行退学</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 
-#多条件判断：
-if condition_1:
-       result_1
-elif:
-       result_2
-elif:
-       result_3
-else:
-       result_4
 
-&#39;&#39;&#39;
-现在我们做一个成绩评级的小程序
-要求：按照90-100/80-89/60-79/40-59/小于39
-划分五个等级
-&#39;&#39;&#39;
 
-score=eval(input(&quot;请输入成绩:\n&quot;))
-#eval是Python的一个内置函数，这个函数的作用是，返回传入字符串的表达式的结果。
-
-if (score&gt;90)&amp;(score&lt;=100):
-       print(&#39;该同学成绩为优&#39;)
-elif (score&gt;80)&amp;(score&lt;=89):   #多条件判断
-       print(&#39;该同学成绩为良&#39;)
-elif (score&gt;60)&amp;(score&lt;=79):
-       print(&#39;该同学成绩为良&#39;)
-elif (score&gt;40)&amp;(score&lt;=59):
-       print(&#39;该同学成绩为不及格&#39;)
-elif (score&lt;39)&amp;(score&gt;0):
-       print(&#39;该同学请自行退学&#39;)
-
-&#39;&#39;&#39;
-请输入成绩:
-34
-该同学请自行退学
-&#39;&#39;&#39;</code></pre>
 <h4 id="小测试："><a href="#小测试：" class="headerlink" title="小测试："></a>小测试：</h4><ol>
 <li><p>在日常编码中if的使用率会很高,但是过度臃肿的if条件会增加代码的理解难度,导致最后只能自己看懂一些</p>
-<pre><code class="python">for a in Data:
-       if a.b:
-           if a.c:
-                   if a.d:
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> a <span class="keyword">in</span> Data:</span><br><span class="line">   	<span class="keyword">if</span> a.b:</span><br><span class="line">      	 <span class="keyword">if</span> a.c:</span><br><span class="line">        	  	 <span class="keyword">if</span> a.d:</span><br><span class="line"></span><br><span class="line"><span class="comment"># do sth...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> a <span class="keyword">in</span> balabala:</span><br><span class="line">  	<span class="keyword">if</span> <span class="keyword">not</span> a.b:</span><br><span class="line">     	<span class="keyword">continue</span></span><br><span class="line"> 	</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> a.c:</span><br><span class="line">    	<span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line"> 	<span class="keyword">if</span> <span class="keyword">not</span> a.d:</span><br><span class="line">       	<span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># do sth..</span></span><br></pre></td></tr></table></figure>
 
-# do sth...
 
-for a in balabala:
-      if not a.b:
-         continue
 
-    if not a.c:
-        continue
-
-     if not a.d:
-           continue
-
-# do sth..</code></pre>
 </li>
 </ol>
 <ol start="2">
@@ -1568,75 +1500,25 @@ for a in balabala:
 </li>
 </ol>
 <h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2><h3 id="while-循环"><a href="#while-循环" class="headerlink" title="while 循环"></a>while 循环</h3><p><strong>while语句格式：</strong></p>
-<pre><code class="python">while condition(判断条件):
-       statements(执行语句)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> condition(判断条件):</span><br><span class="line">   	statements(执行语句)</span><br></pre></td></tr></table></figure>
+
+
+
 <p><strong>实例：计算1-100的和</strong></p>
-<pre><code class="python">#简单一点的写法
-n=0
-sum=0
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#简单一点的写法</span></span><br><span class="line">n=<span class="number">0</span></span><br><span class="line">sum=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> n&lt;=<span class="number">100</span>:</span><br><span class="line">   	sum +=n</span><br><span class="line">   	n+=<span class="number">1</span></span><br><span class="line">print(sum)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#规范一点的写法</span></span><br><span class="line"><span class="comment"># n = 100</span></span><br><span class="line"><span class="comment"># sum = 0</span></span><br><span class="line"><span class="comment"># counter = 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># while counter &lt;= n:</span></span><br><span class="line"><span class="comment">#     sum = sum + counter</span></span><br><span class="line"><span class="comment">#     counter += 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># # print(&quot;1 到 %d 之和为: %d&quot; % (n,sum))</span></span><br><span class="line"><span class="comment">#5050</span></span><br></pre></td></tr></table></figure>
 
-while n&lt;=100:
-       sum +=n
-       n+=1
-print(sum)
-
-
-#规范一点的写法
-# n = 100
-# sum = 0
-# counter = 1
-
-# while counter &lt;= n:
-#     sum = sum + counter
-#     counter += 1
-
-# # print(&quot;1 到 %d 之和为: %d&quot; % (n,sum))
-#5050</code></pre>
 <p>下面做一个小游戏，猜一下随机数</p>
 <blockquote>
 <p>这里用到了random这个随机数模块，这个模块用于生成随机数。</p>
 <p>其中random.randint(a,b)用于生成指定范围内的整数，参数a是下限，参数b是上限，生成的随机数介于二者之间。</p>
 </blockquote>
-<pre><code class="python">import random
-n=random.randint(0,10)
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line">n=random.randint(<span class="number">0</span>,<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">user_guess=int(input(<span class="string">&quot;Input your guess:&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> user_guess&gt;n:</span><br><span class="line">   	print(<span class="string">&#x27;try smaller...&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> user_guess&lt;n:</span><br><span class="line">   	print(<span class="string">&#x27;try bigger...&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  	 print(<span class="string">&#x27;Bingo!You got it!&#x27;</span>)</span><br><span class="line">print(n)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">Input your guess:9</span></span><br><span class="line"><span class="string">try smaller...</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 
-user_guess=int(input(&quot;Input your guess:&quot;))
-
-if user_guess&gt;n:
-       print(&#39;try smaller...&#39;)
-elif user_guess&lt;n:
-       print(&#39;try bigger...&#39;)
-else:
-       print(&#39;Bingo!You got it!&#39;)
-print(n)
-&#39;&#39;&#39;
-Input your guess:9
-try smaller...
-1
-&#39;&#39;&#39;</code></pre>
 <p>上面的这串程序只能猜一次，那如果我们想要猜出结果呢?这个时候就要用到循环。下面我们对上面的代码进行优化</p>
-<pre><code class="python">import random
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">n = random.randint(<span class="number">0</span>, <span class="number">10</span>)</span><br><span class="line">user_guess = int()</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> user_guess != n:</span><br><span class="line"> 	user_guess = int(input(<span class="string">&quot;Input your guess:&quot;</span>))</span><br><span class="line">  	<span class="keyword">if</span> user_guess &gt; n:</span><br><span class="line">     	print(<span class="string">&#x27;try smaller...&#x27;</span>)</span><br><span class="line">  	<span class="keyword">elif</span> user_guess &lt; n:</span><br><span class="line">      	print(<span class="string">&#x27;try bigger...&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">&#x27;Bingo!You got it!&#x27;</span>)</span><br><span class="line">print(n)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">Input your guess:3</span></span><br><span class="line"><span class="string">try smaller...</span></span><br><span class="line"><span class="string">Input your guess:1</span></span><br><span class="line"><span class="string">Bingo!You got it!</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 
-n = random.randint(0, 10)
-user_guess = int()
 
-while user_guess != n:
-     user_guess = int(input(&quot;Input your guess:&quot;))
-      if user_guess &gt; n:
-         print(&#39;try smaller...&#39;)
-      elif user_guess &lt; n:
-          print(&#39;try bigger...&#39;)
-    else:
-        print(&#39;Bingo!You got it!&#39;)
-print(n)
 
-&#39;&#39;&#39;
-Input your guess:3
-try smaller...
-Input your guess:1
-Bingo!You got it!
-1
-&#39;&#39;&#39;</code></pre>
 <h4 id="小测试：-1"><a href="#小测试：-1" class="headerlink" title="小测试："></a>小测试：</h4><ol>
 <li><p>丑数是只包含质因数 2, 3, 5 的正整数。控制台输入一个正整数，判断其是否为丑数。</p>
 </li>
@@ -1649,66 +1531,16 @@ Bingo!You got it!
 <li>continue是终止本次循环</li>
 <li>break是终止循环</li>
 </ul>
-<pre><code class="python">#continue举例
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#continue举例</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#输出十以内小于等于4和大于等于7的数</span></span><br><span class="line"></span><br><span class="line">count=<span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> count&lt;<span class="number">10</span>:</span><br><span class="line">  	 count +=<span class="number">1</span></span><br><span class="line">   	<span class="keyword">if</span> count&gt;<span class="number">4</span> <span class="keyword">and</span> count&lt;<span class="number">7</span>:</span><br><span class="line">      	 <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">    print(count)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">2</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">4</span></span><br><span class="line"><span class="string">7</span></span><br><span class="line"><span class="string">8</span></span><br><span class="line"><span class="string">9</span></span><br><span class="line"><span class="string">10</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 
-#输出十以内小于等于4和大于等于7的数
-
-count=0
-while count&lt;10:
-       count +=1
-       if count&gt;4 and count&lt;7:
-           continue
-
-    print(count)
-
-&#39;&#39;&#39;
-1
-2
-3
-4
-7
-8
-9
-10
-&#39;&#39;&#39;</code></pre>
 <p><strong>continue  +  else  的用法</strong></p>
-<pre><code class="python">count=0
-while count&lt;10:
-       count +=1
-      if count&gt;4 and count&lt;7:     
-       #当数字满足上述条件时，执行continue，终止本次循环，不执行打印语句。
-         continue
-         print(count)
-else:
-      print(&#39;循环正常结束&#39;)
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">count=<span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> count&lt;<span class="number">10</span>:</span><br><span class="line">   	count +=<span class="number">1</span></span><br><span class="line">  	<span class="keyword">if</span> count&gt;<span class="number">4</span> <span class="keyword">and</span> count&lt;<span class="number">7</span>:     </span><br><span class="line">       <span class="comment">#当数字满足上述条件时，执行continue，终止本次循环，不执行打印语句。</span></span><br><span class="line">     	<span class="keyword">continue</span></span><br><span class="line"> 	    print(count)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  	print(<span class="string">&#x27;循环正常结束&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">2</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">4</span></span><br><span class="line"><span class="string">7</span></span><br><span class="line"><span class="string">8</span></span><br><span class="line"><span class="string">9</span></span><br><span class="line"><span class="string">10</span></span><br><span class="line"><span class="string">循环正常结束</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 
-&#39;&#39;&#39;
-1
-2
-3
-4
-7
-8
-9
-10
-循环正常结束
-&#39;&#39;&#39;</code></pre>
 <p><strong>break的用法</strong></p>
-<pre><code class="python">count=0
-while count&lt;10:
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">count=<span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> count&lt;<span class="number">10</span>:</span><br><span class="line">    </span><br><span class="line">    count +=<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> count&gt;<span class="number">4</span>:   <span class="comment">#当数字大于4的时候执行break，终止循环</span></span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    print(count)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;循环正常结束&#x27;</span>)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">2</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">4</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 
-    count +=1
-    if count&gt;4:   #当数字大于4的时候执行break，终止循环
-        break
-    print(count)
-else:
-    print(&#39;循环正常结束&#39;)
-&#39;&#39;&#39;
-1
-2
-3
-4
-&#39;&#39;&#39;</code></pre>
+
+
 <h4 id="小测试"><a href="#小测试" class="headerlink" title="小测试"></a>小测试</h4><ol>
 <li><p>定义用户名“python”和密码“666666”，控制台提示用户输入用户名和密码，判断用户名和密码是否正确。</p>
 <p>输入正确则跳出循环，输出“你好！”，不正确则提示“验证失败，请重新输入！”并继续提示用户输出用户名和密码，直到用户输入正确的信息，程序结束。</p>
@@ -1716,90 +1548,26 @@ else:
 </ol>
 <h3 id="for语句"><a href="#for语句" class="headerlink" title="for语句"></a>for语句</h3><p>for循环可以遍历任何序列的所有元素</p>
 <p><strong>for语句的一般格式如下：</strong></p>
-<pre><code class="python">for variable(变量) in [sequence(序列)]:
-    statements(执行语句)
-else:
-    statements(执行语句)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> variable(变量) <span class="keyword">in</span> [sequence(序列)]:</span><br><span class="line">    statements(执行语句)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    statements(执行语句)</span><br></pre></td></tr></table></figure>
+
 <p><strong>循环实例：</strong></p>
-<pre><code class="python">a=[&#39;welcome&#39;,&#39;to&#39;,&#39;data&#39;,&#39;science&#39;]
-for i in a:     #遍历数组内的每一个元素并且打印
-    print (i)
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">a=[<span class="string">&#x27;welcome&#x27;</span>,<span class="string">&#x27;to&#x27;</span>,<span class="string">&#x27;data&#x27;</span>,<span class="string">&#x27;science&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> a:     <span class="comment">#遍历数组内的每一个元素并且打印</span></span><br><span class="line">    <span class="keyword">print</span> (i)</span><br><span class="line">    </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="string">&#x27;DataScience&#x27;</span>:  <span class="comment">#遍历该字符串的每一个元素且打印</span></span><br><span class="line">    <span class="keyword">print</span> (i)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;遍历结束&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">welcome</span></span><br><span class="line"><span class="string">to</span></span><br><span class="line"><span class="string">data</span></span><br><span class="line"><span class="string">science</span></span><br><span class="line"><span class="string">D</span></span><br><span class="line"><span class="string">a</span></span><br><span class="line"><span class="string">t</span></span><br><span class="line"><span class="string">a</span></span><br><span class="line"><span class="string">S</span></span><br><span class="line"><span class="string">c</span></span><br><span class="line"><span class="string">i</span></span><br><span class="line"><span class="string">e</span></span><br><span class="line"><span class="string">n</span></span><br><span class="line"><span class="string">c</span></span><br><span class="line"><span class="string">e</span></span><br><span class="line"><span class="string">遍历结束</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 
-for i in &#39;DataScience&#39;:  #遍历该字符串的每一个元素且打印
-    print (i)
 
-print(&#39;遍历结束&#39;)
 
-&#39;&#39;&#39;
-welcome
-to
-data
-science
-D
-a
-t
-a
-S
-c
-i
-e
-n
-c
-e
-遍历结束
-&#39;&#39;&#39;</code></pre>
-<h4 id="for…else…语句"><a href="#for…else…语句" class="headerlink" title="for…else…语句"></a>for…else…语句</h4><pre><code class="python">#判断一个数是不是质数
-n=int(input(&#39;请随机输入一个实数：&#39;))  
-for i in range(2,n):
-    if n%i == 0:    #判断是否能整除，如能，打印输出，终止循环；若不能，执行else语句        
-        print(n,&#39;能被&#123;&#125;整除，不是质数&#39;.format(i))  #format的用法，之前的课程我们有讲到
-        break
-#         continue
-else:                  
-       print (n,&#39;是一个质数&#39;)
-&#39;&#39;&#39;
-请随机输入一个实数：4
-4 能被2整除，不是质数
-&#39;&#39;&#39;</code></pre>
+<h4 id="for…else…语句"><a href="#for…else…语句" class="headerlink" title="for…else…语句"></a>for…else…语句</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断一个数是不是质数</span></span><br><span class="line">n=int(input(<span class="string">&#x27;请随机输入一个实数：&#x27;</span>))  </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>,n):</span><br><span class="line">    <span class="keyword">if</span> n%i == <span class="number">0</span>:    <span class="comment">#判断是否能整除，如能，打印输出，终止循环；若不能，执行else语句        </span></span><br><span class="line">        print(n,<span class="string">&#x27;能被&#123;&#125;整除，不是质数&#x27;</span>.format(i))  <span class="comment">#format的用法，之前的课程我们有讲到</span></span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="comment">#         continue</span></span><br><span class="line"><span class="keyword">else</span>:                  </span><br><span class="line">       <span class="keyword">print</span> (n,<span class="string">&#x27;是一个质数&#x27;</span>)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">请随机输入一个实数：4</span></span><br><span class="line"><span class="string">4 能被2整除，不是质数</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h4 id="循环嵌套"><a href="#循环嵌套" class="headerlink" title="循环嵌套"></a>循环嵌套</h4><p>for 循环嵌套和while 循环嵌套的案例演示</p>
 <p><strong>for 循环嵌套格式</strong></p>
-<pre><code class="python">for variable in seuqence:
-    for veriable_ in sequence_:
-        statements_
-    statements
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> variable <span class="keyword">in</span> seuqence:</span><br><span class="line">    <span class="keyword">for</span> veriable_ <span class="keyword">in</span> sequence_:</span><br><span class="line">        statements_</span><br><span class="line">    statements</span><br><span class="line"></span><br><span class="line"><span class="comment">#while 循环嵌套格式</span></span><br><span class="line"><span class="keyword">while</span> condition:</span><br><span class="line">    <span class="keyword">while</span> condition_:</span><br><span class="line">        statements_</span><br><span class="line">    statements</span><br><span class="line"><span class="comment">#for 和 while 也可相互嵌套</span></span><br></pre></td></tr></table></figure>
 
-#while 循环嵌套格式
-while condition:
-    while condition_:
-        statements_
-    statements
-#for 和 while 也可相互嵌套</code></pre>
 <p><strong>判断1-20之间哪些是质数</strong></p>
-<pre><code class="python">i = 2
-while(i &lt; 20):
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">2</span></span><br><span class="line"><span class="keyword">while</span>(i &lt; <span class="number">20</span>):</span><br><span class="line">    </span><br><span class="line">    j = <span class="number">2</span></span><br><span class="line">    <span class="keyword">while</span>(j &lt;= (i/j)):</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span>(i%j): </span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        j = j + <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> (j &gt; i/j): </span><br><span class="line">        <span class="keyword">print</span> (i, <span class="string">&quot; 是质数&quot;</span>)</span><br><span class="line">    i = i + <span class="number">1</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">&quot;结束!&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">2 是质数</span></span><br><span class="line"><span class="string">3 是质数</span></span><br><span class="line"><span class="string">5 是质数</span></span><br><span class="line"><span class="string">7 是质数</span></span><br><span class="line"><span class="string">11 是质数</span></span><br><span class="line"><span class="string">13 是质数</span></span><br><span class="line"><span class="string">17 是质数</span></span><br><span class="line"><span class="string">19 是质数</span></span><br><span class="line"><span class="string">结束!</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 
-    j = 2
-    while(j &lt;= (i/j)):
 
-        if not(i%j): 
-            break
-        j = j + 1
-    if (j &gt; i/j): 
-        print (i, &quot; 是质数&quot;)
-    i = i + 1
-print (&quot;结束!&quot;)
 
-&#39;&#39;&#39;
-2 是质数
-3 是质数
-5 是质数
-7 是质数
-11 是质数
-13 是质数
-17 是质数
-19 是质数
-结束!
-&#39;&#39;&#39;</code></pre>
 <h4 id="小测试-1"><a href="#小测试-1" class="headerlink" title="小测试"></a>小测试</h4><ol>
 <li><p>在一行中输入8个人的身高（按空格分隔），输出8人的身高平均值和身高超过平均值的数：</p>
 <p>例如：输入<em>166 178 192 188 173 169 170 172</em>，输出：</p>
@@ -1810,16 +1578,10 @@ print (&quot;结束!&quot;)
 <p>输入待换的零钱数额<em>x</em>∈(8,100)。</p>
 <p>要求按5分、2分和1分硬币的数量依次从大到小的顺序，输出各种换法。每行输出一种换法，格式为：“fen5:5分硬币数量, fen2:2分硬币数量, fen1:1分硬币数量, total:硬币总数量”。最后一行输出“count = 换法个数”。</p>
 <p>例如，输入<em>13</em>，输出如下：</p>
-<pre><code class="python">fen5:2, fen2:1, fen1:1, total:4
-fen5:1, fen2:3, fen1:2, total:6
-fen5:1, fen2:2, fen1:4, total:7
-fen5:1, fen2:1, fen1:6, total:8
-count = 4</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fen5:<span class="number">2</span>, fen2:<span class="number">1</span>, fen1:<span class="number">1</span>, total:<span class="number">4</span></span><br><span class="line">fen5:<span class="number">1</span>, fen2:<span class="number">3</span>, fen1:<span class="number">2</span>, total:<span class="number">6</span></span><br><span class="line">fen5:<span class="number">1</span>, fen2:<span class="number">2</span>, fen1:<span class="number">4</span>, total:<span class="number">7</span></span><br><span class="line">fen5:<span class="number">1</span>, fen2:<span class="number">1</span>, fen1:<span class="number">6</span>, total:<span class="number">8</span></span><br><span class="line">count = <span class="number">4</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>输入行数，输出高度为该行数的等边三角形，每行个数递增1。例如输入3，输出：</p>
-<pre><code class="python"> * 
-* * 
-* * *</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> * </span><br><span class="line">* * </span><br><span class="line">* * *</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>计算10到20000之间,所有质数,并思考执行时间(在进行大数据量运算时,代码执行效率会影响很多)</p>
 </li>
@@ -1839,7 +1601,7 @@ count = 4</code></pre>
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\8c0ed688.html" title="Python数据类型-列表" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Python数据类型-列表</span><span class="excerpt">Python数据类型-列表！！！</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\5590.html" title="Day1.概述" rel="bookmark "><img src="Day1-%E6%A6%82%E8%BF%B0.assets/image-20200509225153813.png" /><span class="title">Day1.概述</span><span class="excerpt">数据可视化，基础概述。</span></a></div></section></div>
       
       
         <div class='copyright'>

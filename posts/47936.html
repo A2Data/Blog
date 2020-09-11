@@ -1421,7 +1421,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>2.3k words</p>
+      <p>2.2k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1491,30 +1491,15 @@
 </li>
 </ul>
 </blockquote>
-<pre><code class="nginx">JackFeng@JackFeng MINGW64 ~/Desktop
-$ cd ~/.ssh
-
-JackFeng@JackFeng MINGW64 ~/.ssh
-$ ls
-config  id_rsa  id_rsa.pub  id_rsa_sql  id_rsa_sql.pub  known_hosts
-
-JackFeng@JackFeng MINGW64 ~/.ssh
-$ cat id_rsa.pub</code></pre>
-<h2 id="1、配置多个git仓库"><a href="#1、配置多个git仓库" class="headerlink" title="1、配置多个git仓库"></a>1、配置多个git仓库</h2><pre><code class="shell">多仓库之间 &#39;ssh-key切换&#39;
-
-#1、生成客户端自己的密钥对
-
-ssh-keygen ---- 一顿回车即可
-
-# 实际操作 换成你的邮箱即可
-ssh-keygen -t rsa -C &quot;youremail@example.com&quot;
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">JackFeng@JackFeng MINGW64 ~/Desktop</span><br><span class="line">$ cd ~/.ssh</span><br><span class="line"></span><br><span class="line">JackFeng@JackFeng MINGW64 ~/.ssh</span><br><span class="line">$ ls</span><br><span class="line"><span class="attribute">config</span>  id_rsa  id_rsa.pub  id_rsa_sql  id_rsa_sql.pub  known_hosts</span><br><span class="line"></span><br><span class="line">JackFeng<span class="variable">@JackFeng</span> MINGW64 ~/.ssh</span><br><span class="line">$ cat id_rsa.pub</span><br></pre></td></tr></table></figure>
 
 
-可以在客户端的家目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥。
-</code></pre>
+
+<h2 id="1、配置多个git仓库"><a href="#1、配置多个git仓库" class="headerlink" title="1、配置多个git仓库"></a>1、配置多个git仓库</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">多仓库之间 &#x27;ssh-key切换&#x27;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">1、生成客户端自己的密钥对</span></span><br><span class="line"></span><br><span class="line">ssh-keygen ---- 一顿回车即可</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 实际操作 换成你的邮箱即可</span></span><br><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">可以在客户端的家目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <p><strong>生成新的ssh-key</strong></p>
-<pre><code class="shell">#second@mail.com  工作邮箱地址
-ssh-keygen -t rsa -C &#39;second@mail.com&#39; -f id_rsa_second</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">second@mail.com  工作邮箱地址</span></span><br><span class="line">ssh-keygen -t rsa -C &#x27;second@mail.com&#x27; -f id_rsa_second</span><br></pre></td></tr></table></figure>
+
 <p><strong>配置多个仓库</strong></p>
 <blockquote>
 <h4 id="在-ssh目录创建config文本文件并完成相关配置-最核心的地方"><a href="#在-ssh目录创建config文本文件并完成相关配置-最核心的地方" class="headerlink" title="在.ssh目录创建config文本文件并完成相关配置(最核心的地方)"></a>在.ssh目录创建config文本文件并完成相关配置(最核心的地方)</h4><p>每个账号单独配置一个<strong>Host</strong>，每个<strong>Host</strong>要取一个别名，每个Host主要配置<strong>HostName</strong>和<strong>IdentityFile</strong>两个属性即可</p>
@@ -1522,117 +1507,58 @@ ssh-keygen -t rsa -C &#39;second@mail.com&#39; -f id_rsa_second</code></pre>
 <p><strong>HostName</strong> 　　　　　　  这个是真实的域名地址<br><strong>IdentityFile</strong> 　　　　　　  这里是id_rsa的地址<br><strong>PreferredAuthentications</strong>  配置登录时用什么权限认证–可设为<code>publickey,password publickey,keyboard-interactive等</code><br><strong>User</strong> 　　　　　　　　　　配置使用用户名</p>
 </blockquote>
 <p><strong>config</strong></p>
-<pre><code class="bash"># 配置github.com
-Host github.com
-    HostName github.com
-    IdentityFile ~\.ssh\id_rsa
-    PreferredAuthentications publickey
-    User yinjie.feng
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置github.com</span></span><br><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">    IdentityFile ~\.ssh\id_rsa</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    User yinjie.feng</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置SQLSQ</span></span><br><span class="line">Host SQL</span><br><span class="line">    HostName github.com</span><br><span class="line">    IdentityFile ~\.ssh\id_rsa_sql</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    User yinjie.feng</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-# 配置SQLSQ
-Host SQL
-    HostName github.com
-    IdentityFile ~\.ssh\id_rsa_sql
-    PreferredAuthentications publickey
-    User yinjie.feng
-</code></pre>
 <p><strong>测试是否调通</strong></p>
-<pre><code class="nginx">JackFeng@JackFeng MINGW64 ~/.ssh
-$ vim config
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">JackFeng@JackFeng MINGW64 ~/.ssh</span><br><span class="line">$ vim config</span><br><span class="line"></span><br><span class="line">JackFeng@JackFeng MINGW64 ~/.ssh</span><br><span class="line">$ ssh -T git@github.com</span><br><span class="line"><span class="attribute">Hi</span> A2Data! You<span class="string">&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">JackFeng<span class="variable">@JackFeng</span> MINGW64 ~/.ssh</span></span><br><span class="line"><span class="string">$ vim config</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">JackFeng<span class="variable">@JackFeng</span> MINGW64 ~/.ssh</span></span><br><span class="line"><span class="string">$ ssh -T git<span class="variable">@SQL</span></span></span><br><span class="line"><span class="string">Hi MineData-SQL! You&#x27;</span>ve successfully authenticated, but GitHub does not provide shell access.</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-JackFeng@JackFeng MINGW64 ~/.ssh
-$ ssh -T git@github.com
-Hi A2Data! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
 
-JackFeng@JackFeng MINGW64 ~/.ssh
-$ vim config
 
-JackFeng@JackFeng MINGW64 ~/.ssh
-$ ssh -T git@SQL
-Hi MineData-SQL! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
-
-</code></pre>
 <blockquote>
 <h4 id="git-add、git-commit、git-remote-add、git-push"><a href="#git-add、git-commit、git-remote-add、git-push" class="headerlink" title="git add、git commit、git remote add、git push"></a>git add、git commit、git remote add、git push</h4><p>需要说明的一点，在git commit 时需要一次身份验证，正确输入你的用户名和邮箱就可以了。</p>
 <p>另外注意：github根据配置文件的user.email来获取github帐号显示author信息，所以对于多帐号用户一定要记得将user.email改为相应的email(<a href="mailto:monster@mail.com">monster@mail.com</a>)。</p>
 <p>总结一下:其实建立第二个密钥对的区别就在于对第二密钥对的声明，因此需要在.ssh目录下添加config文件，添加语句dentityFile ~/.ssh/id_rsa_sql声明这是第二个密钥对。这条连接命令就体现出来了。</p>
 </blockquote>
 <blockquote>
-<h2 id="查看用户名"><a href="#查看用户名" class="headerlink" title="查看用户名"></a>查看用户名</h2><pre><code class="bash">git config user.name
-git config user.email</code></pre>
-<h2 id="修改用户名"><a href="#修改用户名" class="headerlink" title="修改用户名"></a>修改用户名</h2><pre><code class="bash">git config --global user.name &quot;xxx&quot;
-git config --global user.email &quot;xxx&quot;
-</code></pre>
+<h2 id="查看用户名"><a href="#查看用户名" class="headerlink" title="查看用户名"></a>查看用户名</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改用户名"><a href="#修改用户名" class="headerlink" title="修改用户名"></a>修改用户名</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;xxx&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;xxx&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </blockquote>
-<h2 id="2、从远程项目拉取"><a href="#2、从远程项目拉取" class="headerlink" title="2、从远程项目拉取"></a>2、从远程项目拉取</h2><pre><code class="shell">git clone 项目地址</code></pre>
-<h2 id="3、提交代码到远程仓库"><a href="#3、提交代码到远程仓库" class="headerlink" title="3、提交代码到远程仓库"></a>3、提交代码到远程仓库</h2><pre><code class="shell">常规操作
-##添加
-git add . .
+<h2 id="2、从远程项目拉取"><a href="#2、从远程项目拉取" class="headerlink" title="2、从远程项目拉取"></a>2、从远程项目拉取</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 项目地址</span><br></pre></td></tr></table></figure>
 
-#查看状态
-git status
+<h2 id="3、提交代码到远程仓库"><a href="#3、提交代码到远程仓库" class="headerlink" title="3、提交代码到远程仓库"></a>3、提交代码到远程仓库</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">常规操作</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#添加</span></span></span><br><span class="line">git add . .</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">查看状态</span></span><br><span class="line">git status</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 提交</span></span><br><span class="line">git commit -m &quot;代码描述&quot;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 再次查看状态</span></span><br><span class="line">git status</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 拉取最新代码</span></span><br><span class="line">git pull</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 提交</span></span><br><span class="line">git push</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-# 提交
-git commit -m &quot;代码描述&quot;
 
-# 再次查看状态
-git status
 
-# 拉取最新代码
-git pull
-
-# 提交
-git push
-</code></pre>
 <h2 id="4、git分支操作"><a href="#4、git分支操作" class="headerlink" title="4、git分支操作"></a>4、git分支操作</h2><h4 id="Git初始化"><a href="#Git初始化" class="headerlink" title="Git初始化"></a><strong>Git初始化</strong></h4><blockquote>
 <p><em>解决 fatal: Not a git repository (or any of the parent directories): .git 问题</em></p>
 </blockquote>
-<pre><code class="bash">git init</code></pre>
-<pre><code class="bash">git clone  --- 克隆项目
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 
-JackFeng@JackFeng MINGW64 /d/Practice
-$ git clone git@github.com:MineData-SQL/SQL.git
-Cloning into &#39;SQL&#39;...
-remote: Enumerating objects: 3, done.
-remote: Counting objects: 100% (3/3), done.
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-Receiving objects: 100% (3/3), done.
-</code></pre>
-<h4 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a><strong>创建分支</strong></h4><pre><code class="bash">git branch &lt;branch_name&gt; #指定分支名称
-git checkout -b [&quot;分支名&quot;]</code></pre>
-<h4 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a><strong>查看分支</strong></h4><pre><code class="bash">git branch # 查看所有分支,* 号所属代表当前分支
-git branch # 查看分支详情，包括分支指向得commitid及提交信息
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span>  --- 克隆项目</span><br><span class="line"></span><br><span class="line">JackFeng@JackFeng MINGW64 /d/Practice</span><br><span class="line">$ git <span class="built_in">clone</span> git@github.com:MineData-SQL/SQL.git</span><br><span class="line">Cloning into <span class="string">&#x27;SQL&#x27;</span>...</span><br><span class="line">remote: Enumerating objects: 3, <span class="keyword">done</span>.</span><br><span class="line">remote: Counting objects: 100% (3/3), <span class="keyword">done</span>.</span><br><span class="line">remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</span><br><span class="line">Receiving objects: 100% (3/3), <span class="keyword">done</span>.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a><strong>创建分支</strong></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch &lt;branch_name&gt; <span class="comment">#指定分支名称</span></span><br><span class="line">git checkout -b [<span class="string">&quot;分支名&quot;</span>]</span><br></pre></td></tr></table></figure>
+
+<h4 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a><strong>查看分支</strong></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git branch <span class="comment"># 查看所有分支,* 号所属代表当前分支</span></span><br><span class="line">git branch <span class="comment"># 查看分支详情，包括分支指向得commitid及提交信息</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20200330223604.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20200330223604.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h4 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a><strong>切换分支</strong></h4><pre><code class="bash">git checkout &lt;branch_name&gt; #切换到指定分支
-git checkout -b &lt;branch_name&gt; #创建并切换到指定分支
-</code></pre>
-<h4 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a><strong>删除分支</strong></h4><pre><code class="bash">git branch -d &lt;branch_name&gt;
-.#删除一个干净的分支(即相对当前分支而言该分支没有新的提交记录)
-git branch -D &lt;branch_name&gt;
-.#强制删除一个分支，该分支有没有合并到当前分支的提交记录
-注意：删除分支前都需要先切换到其他分支才能进行删除操作</code></pre>
+<h4 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a><strong>切换分支</strong></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;branch_name&gt; <span class="comment">#切换到指定分支</span></span><br><span class="line">git checkout -b &lt;branch_name&gt; <span class="comment">#创建并切换到指定分支</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a><strong>删除分支</strong></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git branch -d &lt;branch_name&gt;</span><br><span class="line">.<span class="comment">#删除一个干净的分支(即相对当前分支而言该分支没有新的提交记录)</span></span><br><span class="line">git branch -D &lt;branch_name&gt;</span><br><span class="line">.<span class="comment">#强制删除一个分支，该分支有没有合并到当前分支的提交记录</span></span><br><span class="line">注意：删除分支前都需要先切换到其他分支才能进行删除操作</span><br></pre></td></tr></table></figure>
+
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200330224601.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200330224601.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h4 id="分支恢复"><a href="#分支恢复" class="headerlink" title="分支恢复"></a><strong>分支恢复</strong></h4><blockquote>
 <p>思路：对于已经有提交记录的分支删除后，实际上只是删除指针，commit记录还保留，如果想恢复，需要使用git reflog查找该分支指向的</p>
 <p>commitId，然后根据commitId创建新的分支</p>
 <p><code>HEAD@&#123;1&#125;</code></p>
 </blockquote>
-<pre><code class="bash">git reflog
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git reflog</span><br><span class="line"></span><br><span class="line">git branch &lt;branch_name&gt; &lt;hash_val&gt; </span><br><span class="line"><span class="comment">#根据指定commit创建新分支</span></span><br></pre></td></tr></table></figure>
 
-git branch &lt;branch_name&gt; &lt;hash_val&gt; 
-#根据指定commit创建新分支</code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20200330225104.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20200330225104.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h4 id="分支改名"><a href="#分支改名" class="headerlink" title="分支改名"></a><strong>分支改名</strong></h4><pre><code class="bash">git branch -m &lt;branch_name&gt; newname</code></pre>
-<pre><code class="bash">JackFeng@JackFeng MINGW64 /d/Practice/SQL (master-two)
-$ git branch -m master-one master-O
+<h4 id="分支改名"><a href="#分支改名" class="headerlink" title="分支改名"></a><strong>分支改名</strong></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -m &lt;branch_name&gt; newname</span><br></pre></td></tr></table></figure>
 
-JackFeng@JackFeng MINGW64 /d/Practice/SQL (master-two)
-$ git branch
-  master
-  master-O
-* master-two
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">JackFeng@JackFeng MINGW64 /d/Practice/SQL (master-two)</span><br><span class="line">$ git branch -m master-one master-O</span><br><span class="line"></span><br><span class="line">JackFeng@JackFeng MINGW64 /d/Practice/SQL (master-two)</span><br><span class="line">$ git branch</span><br><span class="line">  master</span><br><span class="line">  master-O</span><br><span class="line">* master-two</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <h4 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a><strong>分支合并</strong></h4><blockquote>
 <p><code>git merge </code>  #将指定分支合并到当前分支<br>如果两个分支没有产生分叉情况，那么会进行快速合并，即<code>fast-forward</code>方式，它并不会产生新的commitId，只是改变了指针的指向，产生分叉合并可能会有冲突情况。</p>
 <p><strong>示例：</strong></p>
@@ -1646,42 +1572,8 @@ $ git branch
 <p><strong>示例：</strong>我们在master-two分支上新增一次提交，然后合并到master分支上，<code>git log</code>查看最新一次的提交记录，显示的正是我们合并分支时的记录</p>
 <p><code>git log --pretty=oneline -1</code></p>
 </blockquote>
-<pre><code class="shell">JackFeng@JackFeng MINGW64 /d/Practice/SQL (master)
-$ git checkout master-two
-Switched to branch &#39;master-two&#39;
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">JackFeng@JackFeng MINGW64 /d/Practice/SQL (master)</span><br><span class="line"><span class="meta">$</span><span class="bash"> git checkout master-two</span></span><br><span class="line">Switched to branch &#x27;master-two&#x27;</span><br><span class="line"></span><br><span class="line">JackFeng@JackFeng MINGW64 /d/Practice/SQL (master-two)</span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="string">&quot; thank you for attention DataScience &quot;</span> &gt;&gt; a2data.txt</span></span><br><span class="line"></span><br><span class="line">JackFeng@JackFeng MINGW64 /d/Practice/SQL (master-two)</span><br><span class="line"><span class="meta">$</span><span class="bash"> git add a2data.txt</span></span><br><span class="line">warning: LF will be replaced by CRLF in a2data.txt.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line"></span><br><span class="line">JackFeng@JackFeng MINGW64 /d/Practice/SQL (master-two)</span><br><span class="line"><span class="meta">$</span><span class="bash"> git commit -m <span class="string">&quot; add file&quot;</span></span></span><br><span class="line">[master-two 59a8816]  add file</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line"> create mode 100644 a2data.txt</span><br><span class="line"></span><br><span class="line">JackFeng@JackFeng MINGW64 /d/Practice/SQL (master-two)</span><br><span class="line"><span class="meta">$</span><span class="bash"> git checkout master</span></span><br><span class="line">Switched to branch &#x27;master&#x27;</span><br><span class="line">Your branch is up to date with &#x27;origin/master&#x27;.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">JackFeng@JackFeng MINGW64 /d/Practice/SQL (master)</span><br><span class="line"><span class="meta">$</span><span class="bash"> git merge --ff -m <span class="string">&quot;meger master-two branch&quot;</span> master-two</span></span><br><span class="line">Updating ab83ffb..59a8816</span><br><span class="line">Fast-forward (no commit created; -m option ignored)</span><br><span class="line"> a2data.txt | 1 +</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line"> create mode 100644 a2data.txt</span><br><span class="line"></span><br><span class="line">JackFeng@JackFeng MINGW64 /d/Practice/SQL (master)</span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --pretty=oneline -1</span></span><br><span class="line">59a88161e630f0853b852946fddb6c7e787906fe (HEAD -&gt; master, master-two)  add file</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-JackFeng@JackFeng MINGW64 /d/Practice/SQL (master-two)
-$ echo &quot; thank you for attention DataScience &quot; &gt;&gt; a2data.txt
-
-JackFeng@JackFeng MINGW64 /d/Practice/SQL (master-two)
-$ git add a2data.txt
-warning: LF will be replaced by CRLF in a2data.txt.
-The file will have its original line endings in your working directory
-
-JackFeng@JackFeng MINGW64 /d/Practice/SQL (master-two)
-$ git commit -m &quot; add file&quot;
-[master-two 59a8816]  add file
- 1 file changed, 1 insertion(+)
- create mode 100644 a2data.txt
-
-JackFeng@JackFeng MINGW64 /d/Practice/SQL (master-two)
-$ git checkout master
-Switched to branch &#39;master&#39;
-Your branch is up to date with &#39;origin/master&#39;.
-
-
-JackFeng@JackFeng MINGW64 /d/Practice/SQL (master)
-$ git merge --ff -m &quot;meger master-two branch&quot; master-two
-Updating ab83ffb..59a8816
-Fast-forward (no commit created; -m option ignored)
- a2data.txt | 1 +
- 1 file changed, 1 insertion(+)
- create mode 100644 a2data.txt
-
-JackFeng@JackFeng MINGW64 /d/Practice/SQL (master)
-$ git log --pretty=oneline -1
-59a88161e630f0853b852946fddb6c7e787906fe (HEAD -&gt; master, master-two)  add file
-</code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20200330231956.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20200330231956.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h4 id="冲突解决"><a href="#冲突解决" class="headerlink" title="冲突解决"></a><strong>冲突解决</strong></h4><blockquote>
 <p>当对分叉分支进行合并时，如果两个分支都对同一文件进行了修改，那么合并时就有可能会产生冲突情况。</p>
@@ -1714,7 +1606,7 @@ $ git log --pretty=oneline -1
 <p>主要是 自己的分支与主分支保持同步。</p>
 <p>步骤：</p>
 <ul>
-<li><p>1、git remote add master  <a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#105;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#111;&#109;">&#103;&#x69;&#116;&#64;&#103;&#105;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#111;&#109;</a>:A2Data/A2Data.github.io.git  // 主分支master</p>
+<li><p>1、git remote add master  <a href="mailto:&#x67;&#x69;&#116;&#x40;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#99;&#111;&#109;">&#x67;&#x69;&#116;&#x40;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#99;&#111;&#109;</a>:A2Data/A2Data.github.io.git  // 主分支master</p>
 </li>
 <li><p>2、 git branch -v 查看是否添加</p>
 </li>
@@ -1817,7 +1709,7 @@ $ git log --pretty=oneline -1
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>2.3k words</p>
+      <p>2.2k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">

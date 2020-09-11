@@ -1425,7 +1425,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>264 words</p>
+      <p>254 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1483,61 +1483,25 @@
 <p><strong>存放位置</strong> —- <code>以RedHat为例</code></p>
 <p>/etc/sysconfig/network-scripts/ifcfg-etc0</p>
 </blockquote>
-<h2 id="修改ip"><a href="#修改ip" class="headerlink" title="修改ip"></a>修改ip</h2><pre><code class="shell">setup  交互式图形化工具
-vim /etc/sysconfig/network-scripts/ifcfg-eth0
-</code></pre>
-<h2 id="修改-DNS"><a href="#修改-DNS" class="headerlink" title="修改 DNS"></a>修改 DNS</h2><pre><code class="shell">/etc/resolv.conf
-</code></pre>
-<h2 id="修改主机名"><a href="#修改主机名" class="headerlink" title="修改主机名"></a>修改主机名</h2><pre><code class="shell">vim /etc/sysconfig/network
+<h2 id="修改ip"><a href="#修改ip" class="headerlink" title="修改ip"></a>修改ip</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setup  交互式图形化工具</span><br><span class="line">vim /etc/sysconfig/network-scripts/ifcfg-eth0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-</code></pre>
-<h2 id="网卡控制"><a href="#网卡控制" class="headerlink" title="网卡控制"></a>网卡控制</h2><pre><code class="shell">1.ifdown 关闭网卡 丨 ifup 开启网卡
+<h2 id="修改-DNS"><a href="#修改-DNS" class="headerlink" title="修改 DNS"></a>修改 DNS</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/resolv.conf</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-2.service network stop 丨 start 丨restart
-                    停止     开启     重启</code></pre>
-<h2 id="开机自启动"><a href="#开机自启动" class="headerlink" title="开机自启动"></a>开机自启动</h2><pre><code class="shell">chkconfig  httpd on
-</code></pre>
+<h2 id="修改主机名"><a href="#修改主机名" class="headerlink" title="修改主机名"></a>修改主机名</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/network</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="网卡控制"><a href="#网卡控制" class="headerlink" title="网卡控制"></a>网卡控制</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.ifdown 关闭网卡 丨 ifup 开启网卡</span><br><span class="line"></span><br><span class="line">2.service network stop 丨 start 丨restart</span><br><span class="line">      		      停止     开启     重启</span><br></pre></td></tr></table></figure>
+
+<h2 id="开机自启动"><a href="#开机自启动" class="headerlink" title="开机自启动"></a>开机自启动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chkconfig  httpd on</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <h2 id="开机自动挂载"><a href="#开机自动挂载" class="headerlink" title="开机自动挂载"></a>开机自动挂载</h2><blockquote>
 <h4 id="设置开机自动挂载的路径"><a href="#设置开机自动挂载的路径" class="headerlink" title="设置开机自动挂载的路径"></a>设置开机自动挂载的路径</h4><p>这个是当时学习在虚拟机上使用的多。</p>
 </blockquote>
-<pre><code class="shell">/etc/fstab 
-</code></pre>
-<h2 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h2><pre><code class="shell">IP：是一个逻辑地址，是由32位二进制构成
--------------------------------------------------------
-setup
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/fstab </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-vim /etc/sysconfig/network-scripts/ifcfg-eth0
+<h2 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">IP：是一个逻辑地址，是由32位二进制构成</span><br><span class="line">-------------------------------------------------------</span><br><span class="line">setup</span><br><span class="line"></span><br><span class="line">vim /etc/sysconfig/network-scripts/ifcfg-eth0</span><br><span class="line"></span><br><span class="line">DEVICE=eth0                 网卡</span><br><span class="line"></span><br><span class="line">BOOTPROTO=none                 是否自动获取IP ---&gt; dhcp</span><br><span class="line"></span><br><span class="line">HWADDR=00:0c:29:d6:96:fb         MAC地址</span><br><span class="line"></span><br><span class="line">ONBOOT=yes                  是否随网络服务启动，eth0生效</span><br><span class="line"></span><br><span class="line">NETMASK=255.255.255.0             子网掩码</span><br><span class="line"></span><br><span class="line">IPADDR=192.168.18.76             IP地址</span><br><span class="line"></span><br><span class="line">TYPE=Ethernet                 类型为以太网</span><br><span class="line"></span><br><span class="line">------------------------------------------------------</span><br><span class="line">修改DNS</span><br><span class="line"></span><br><span class="line">vim /etc/resolv.conf</span><br><span class="line"></span><br><span class="line">search localdomain</span><br><span class="line"></span><br><span class="line">nameserver 192.168.40.2</span><br><span class="line"></span><br><span class="line">nameserver 202.106.0.20 联通</span><br><span class="line"></span><br><span class="line">nameserver 114.114.114.114</span><br><span class="line"></span><br><span class="line">nameserver 8.8.8.8 谷歌</span><br><span class="line"></span><br><span class="line">nameserver 4.4.4.4 谷歌</span><br></pre></td></tr></table></figure>
 
-DEVICE=eth0                 网卡
-
-BOOTPROTO=none                 是否自动获取IP ---&gt; dhcp
-
-HWADDR=00:0c:29:d6:96:fb         MAC地址
-
-ONBOOT=yes                  是否随网络服务启动，eth0生效
-
-NETMASK=255.255.255.0             子网掩码
-
-IPADDR=192.168.18.76             IP地址
-
-TYPE=Ethernet                 类型为以太网
-
-------------------------------------------------------
-修改DNS
-
-vim /etc/resolv.conf
-
-search localdomain
-
-nameserver 192.168.40.2
-
-nameserver 202.106.0.20 联通
-
-nameserver 114.114.114.114
-
-nameserver 8.8.8.8 谷歌
-
-nameserver 4.4.4.4 谷歌</code></pre>
 
   
   
@@ -1551,7 +1515,7 @@ nameserver 4.4.4.4 谷歌</code></pre>
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\46411.html" title="Linux基本操作" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200425192236.png" /><span class="title">Linux基本操作</span><span class="excerpt">Linux 基本操作。</span></a><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\10415.html" title="Linux NFS网络文件" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux NFS网络文件</span><span class="excerpt">Linux 手把手教你搭建NFS网络文件系统。</span></a><a class="item" href="\posts\43857.html" title="Linux Shell脚本" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell脚本</span><span class="excerpt">Linux Shell脚本相关学习。</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\61794.html" title="Linux Mdadm案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Mdadm案例</span><span class="excerpt">Linux  Mdadm 案例 raid5。</span></a><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\43857.html" title="Linux Shell脚本" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell脚本</span><span class="excerpt">Linux Shell脚本相关学习。</span></a><a class="item" href="\posts\43150.html" title="Linux安装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux安装</span><span class="excerpt">linux介绍及安装</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1614,7 +1578,7 @@ nameserver 4.4.4.4 谷歌</code></pre>
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>264 words</p>
+      <p>254 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
