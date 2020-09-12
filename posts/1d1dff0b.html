@@ -1286,7 +1286,7 @@
               
               
               id="https:cloudtencentcomdeveloperuser6511370">
-              <img src='https://7bu.top/2020/09/10/3b1a5d01b5bb5.png'><p>云+社区</p>
+              <img src='https://7bu.top/2020/09/10/3b1a5d01b5bb5.png'><p>腾讯云</p>
             </a>
           
             <a target="_blank" rel="noopener" href="https://www.cnblogs.com/a2data/"
@@ -1630,9 +1630,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\55248.html" title="13.Python面向对象(4)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191226205105.png" /><span class="title">13.Python面向对象(4)</span><span class="excerpt">Python面向对象异常、模块</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://7.dusays.com/2020/09/11/9b5e8e205bee9.png" /><span class="title">Day10.高阶函数</span><span class="excerpt"> 
-
-高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80ca38c0.html" title="Day2.Python变量和运算符" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.Python变量和运算符</span><span class="excerpt">Python变量与运算符！！！</span></a><a class="item" href="\posts\901b8cd5.html" title="Day3.Python判断与循环语句" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day3.Python判断与循环语句</span><span class="excerpt">Python判断与循环语句！！！</span></a><a class="item" href="\posts\fbd6efa0.html" title="Day1.Python基本操作与格式规范" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831232755.png" /><span class="title">Day1.Python基本操作与格式规范</span><span class="excerpt">Python基本操作与格式规范！！！</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\55248.html" title="13.Python面向对象(4)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191226205105.png" /><span class="title">13.Python面向对象(4)</span><span class="excerpt">Python面向对象异常、模块</span></a><a class="item" href="\posts\fbd6efa0.html" title="Day1.Python基本操作与格式规范" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831232755.png" /><span class="title">Day1.Python基本操作与格式规范</span><span class="excerpt">Python基本操作与格式规范！！！</span></a><a class="item" href="\posts\901b8cd5.html" title="Day3.Python判断与循环语句" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day3.Python判断与循环语句</span><span class="excerpt">Python判断与循环语句！！！</span></a><a class="item" href="\posts\80ca38c0.html" title="Day2.Python变量和运算符" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.Python变量和运算符</span><span class="excerpt">Python变量与运算符！！！</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2025,6 +2023,28 @@
                         
                     
                 </div>
+                <div>
+<!--                    <span id="timeDate"></span>-->
+                    <i class="fas fa-heartbeat" style="transform:scale(1.1);color:rgba(255,0,0,.9)"></i>
+                    <span id="times"></span>
+                    <i class="fas fa-heartbeat" style="transform:scale(1.1);color:rgba(255,0,0,.9)"></i>
+                    <script>
+                        var now = new Date();
+                        function createtime() {
+                            var grt= new Date("12/18/2018 00:00:00");  //在此处修改你的建站时间，格式：月/日/年 时:分:秒
+                            now.setTime(now.getTime()+250);
+                            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+                            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+                            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+                            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+                            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+                            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+                            // document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" 天 ";
+                            document.getElementById("times").innerHTML = "本站已运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+                        }
+                        setInterval("createtime()",250);
+                    </script>
+                </div>
                 <div class="pure">
                     <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
                     <script>
@@ -2083,21 +2103,19 @@
                         }; document.write("欢迎来自" + returnCitySN["cname"] + "的朋友"); document.write(",您的 IP 是:" + returnCitySN["cip"]); document.write(",您使用的是:" + getOSAndBrowser());
                     </script>
                 </div>
-                <br>
-                <div class="github-badge">
-                    <a style="color: #fff" rel="license" href="http://beian.miit.gov.cn" target="_blank" title="由ICP强力驱动">
-                        <span class="badge-value bg-blue"><img src="/icp.png">京ICP备20010978号</span></a>
-                </div>
-                <br>
                 <div class="github-badge">
                     <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
                         <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
                 </div>
                 <div class="github-badge">
+                    <a style="color: #fff" rel="license" href="http://beian.miit.gov.cn" target="_blank" title="[sqlsq.cn@备案]">
+                        <span class="badge-subject">京ICP</span><span class="github-badge .bg-lightgrey">备20010978号</span></a>
+                </div>
+                <div class="github-badge">
                     <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages 和 Gitee Pages">
                         <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub & Gitee</span></a>
                 </div>
-
+                <br>
                 <div class="github-badge">
                     <a style="color: #fff" rel="license" href="https://www.foreverblog.cn/blog/1579.html" target="_blank" title="[A2Data@十年之约]">
                         <span class="badge-subject">Forever Blog</span><span class="badge-value bg-lightgrey">十年之约</span></a>
@@ -2105,7 +2123,7 @@
 
                 <div class="github-badge">
                     <a style="color: #fff" rel="license" href="https://www.a2data.cn/" target="_blank" title="DataScience提供内容创作">
-                        <span class="badge-subject">Copyright © 2017-2020</span><span class="badge-value bg-blueviolet">A2Data</span></a>
+                        <span class="badge-subject">Copyright © 2018-2020</span><span class="badge-value bg-blueviolet">A2Data</span></a>
                 </div>
                 <div class="github-badge">
                     <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
