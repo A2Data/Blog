@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -19,9 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Category: Python入门 - DataScience</title>
+  <title>Day12.方法的重写和魔法方法 - DataScience</title>
+  
+    <meta name="keywords" content="Python">
   
 
+  
+    <meta name="description" content="方法的重写和魔法方法">
   
 
   <!-- feed -->
@@ -1261,7 +1263,7 @@
   
     
     
-        <div class='cover-wrapper  dock' style="display: none;">
+        <div class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://7.dusays.com/2020/09/10/bcac99047bac5.png"></div>
           
@@ -1336,8 +1338,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">Day12.方法的重写和魔法方法</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -1366,586 +1368,431 @@
         
         
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
+
+
+  
+  <div class="article-meta" id="top">
     
     
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
     
-    <h2 class="article-title" >
-      <a href="/posts/b7cd6609.html">
+      <h1 class="title">
         Day12.方法的重写和魔法方法
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>方法的重写和魔法方法</p>
-    
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
+    <p>JackFeng</p>
+  </a>
+</div>
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Sep 14, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E5%85%A5%E9%97%A8/">Python入门</a>
+    </a>
   </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>1.7k words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>7 min</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Day12.方法的重写和魔法方法" data-path="/posts/b7cd6609.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-14</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E5%85%A5%E9%97%A8/">Python入门</a>
+  <a href="/posts/b7cd6609.html#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/posts/b7cd6609.html">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <p>方法的重写和魔法方法</p>
+<a id="more"></a>
+
+
+<p><strong>例题引导：</strong>使用魔法方法__new__构造一个摄氏度转换为华氏度的类：</p>
+<p>解题思路：构建类-调用魔法方法-表达函数功能</p>
+<p><strong>参考答案：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C2F</span>(<span class="params">float</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span>(<span class="params">cls,arg = <span class="number">0.0</span></span>):</span></span><br><span class="line">        <span class="keyword">return</span> float.__new__(cls,arg * <span class="number">1.8</span> + <span class="number">32</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>学习引导：</strong></p>
+<ul>
+<li><p>魔法方法：</p>
+<p>​    __ init__:</p>
+<p>​    __ class__:</p>
+<p>​    __ str__:</p>
+</li>
+<li><p>类的专有方法</p>
+</li>
+</ul>
+<h3 id="方法重写"><a href="#方法重写" class="headerlink" title="方法重写"></a>方法重写</h3><p>如果你的父类方法的功能不能满足你的需求，你可以在子类重写你父类的方法，实例如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span>:</span>   <span class="comment">#定义父类</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">myMethod</span>(<span class="params">self</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;调用父类方法&#x27;</span>)</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span>(<span class="params">Parent</span>):</span>   <span class="comment">#定义子类</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">myMethod</span>(<span class="params">self</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;调用子类方法&#x27;</span>)</span><br><span class="line">        </span><br><span class="line">c=Child()     <span class="comment">#子类实例</span></span><br><span class="line">c.myMethod() <span class="comment">#子类调用重写方法</span></span><br><span class="line">super(Child,c).myMethod()  <span class="comment">#用子类对象调用父类已被覆盖的方法</span></span><br><span class="line"><span class="comment">#super()是用于调用父类（超类）的一个方法。</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#调用子类方法</span></span><br><span class="line"><span class="comment">#调用父类方法</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="魔法方法"><a href="#魔法方法" class="headerlink" title="魔法方法"></a>魔法方法</h3><p>在python中，有一些内置好的特定的方法，这些方法在进行特定的操作时会自动被调用，称之为魔法方法，下面介绍几种常见的魔法方法。</p>
+<ul>
+<li><p>__ new__(cls[,* argv])</p>
+</li>
+<li><p>__ new__ 是在一个对象实例化的时候所调用的第一个方法，它的第一个参数是这个类，其他的参数是用来直接传递给 __ init__ 方法</p>
+</li>
+<li><p>__ new__ 决定是否要使用该 __ init__ 方法，因为 __ new__ 可以调用其他类的构造方法或者直接返回别的实例对象来作为本类的实例，如果 __ new__ 没有返回实例对象，则 __ init__ 不会被调用</p>
+</li>
+<li><p>__ new__ 主要是用于继承一个不可变的类型比如一个 tuple 或者 string</p>
+</li>
+</ul>
+<ul>
+<li><p>cls：代表一个类的名称</p>
+</li>
+<li><p>self：代表一个实例对象的名称</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">myMethod</span>(<span class="params">str</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span>(<span class="params">cls,string</span>):</span></span><br><span class="line">        string=string.upper()</span><br><span class="line">        <span class="keyword">return</span> str.__new__(cls,string)</span><br><span class="line">    </span><br><span class="line">X=myMethod(<span class="string">&#x27;DataScience&#x27;</span>)</span><br><span class="line">print(X)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#DATASCIENCE</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="init-："><a href="#init-：" class="headerlink" title="__ init__："></a>__ init__：</h4><p>初始化函数，在创建实例对象为其赋值时使用，在__ new__ 之后，__ init __ 必须至少有一个参数self，就是这个 __ new__ 返回的实例，__ init__ 是在 __ new__ 的基础上可以完成一些其它初始化的动作，__ init__不需要返回值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,color,brand</span>):</span></span><br><span class="line">        self.color=color</span><br><span class="line">        self.brand=brand</span><br><span class="line"></span><br><span class="line">puppy=Dog(<span class="string">&#x27;黑色&#x27;</span>,<span class="string">&#x27;拉布拉多&#x27;</span>)</span><br><span class="line">print(puppy)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&lt;__main__.Dog object at 0x0000028EC0609DC8&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<p>下面再来一个结合__ init__ 和__ new__两个魔法方法的例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params">object</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>(<span class="params">A</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;__init__被调用&#x27;</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span>(<span class="params">cls</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;__new__被调用&#x27;</span>)</span><br><span class="line">        print(id(cls))</span><br><span class="line">        <span class="keyword">return</span> object.__new__(A)</span><br><span class="line">        <span class="comment">#注意此处采用了参数A而不是cls，__new__没有正确返回当前类cls的实例</span></span><br><span class="line">b=B()</span><br><span class="line">print(b)</span><br><span class="line">print(type(b))  <span class="comment">#类型所继承的基类</span></span><br><span class="line">print(id(A))</span><br><span class="line">print(id(B))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">__new__被调用</span></span><br><span class="line"><span class="string">2812126085768</span></span><br><span class="line"><span class="string">&lt;__main__.A object at 0x0000028EC0574108&gt;</span></span><br><span class="line"><span class="string">&lt;class &#x27;__main__.A&#x27;&gt;</span></span><br><span class="line"><span class="string">2812126083880</span></span><br><span class="line"><span class="string">2812126085768</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+<p>从运行结果可以看出，__ new__ 中的参数cls和B的id是相同的，表明__ new__ 中默认的参数cls就是B类本身，而在return时，并没有正确返回当前类cls的实例，而是返回了其父类A的实例，因此__ init__ 这一魔法方法并没有被调用，此时__ new__虽然是写在B类中的，但其创建并返回的是一个A类的实例对象。</p>
+<p>现在将return中的参数A变为cls，再来看一下运行结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params">object</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>(<span class="params">A</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;__init__被调用&#x27;</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span>(<span class="params">cls</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;__new__被调用&#x27;</span>)</span><br><span class="line">        print(id(cls))</span><br><span class="line">        <span class="keyword">return</span> object.__new__(cls)</span><br><span class="line">        <span class="comment">#注意此处采用了参数A而不是cls，__new__没有正确返回当前类cls的实例</span></span><br><span class="line">b=B()</span><br><span class="line">print(b)</span><br><span class="line">print(type(b))  <span class="comment">#类型所继承的基类</span></span><br><span class="line">print(id(A))</span><br><span class="line">print(id(B))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">__new__被调用</span></span><br><span class="line"><span class="string">2812126087656</span></span><br><span class="line"><span class="string">__init__被调用</span></span><br><span class="line"><span class="string">&lt;__main__.B object at 0x0000028EC057C148&gt;</span></span><br><span class="line"><span class="string">&lt;class &#x27;__main__.B&#x27;&gt;</span></span><br><span class="line"><span class="string">2812126086712</span></span><br><span class="line"><span class="string">2812126087656</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+<p>可以看出，当__ new__ 正确返回其当前类cls的实例对象时，__ init__被调用了，此时创建并返回的是一个B类的实例对象。</p>
+<h4 id="class-："><a href="#class-：" class="headerlink" title="__ class__："></a>__ class__：</h4><p>获得已知对象的类 ( 对象.__ class__)。</p>
+<p>基础格式如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">My</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line">a=A()</span><br><span class="line">print(a.__class__)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&lt;class &#x27;__main__.A&#x27;&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<p>__ class__在下面这种情况中是有用的：即当一个类中的某个成员变量是所有该类的对象的公共变量时.</p>
+<p>下面看一个例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">My</span>:</span></span><br><span class="line">    count=<span class="number">0</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addcount</span>(<span class="params">self</span>):</span></span><br><span class="line">        self.__class__.count +=<span class="number">1</span></span><br><span class="line">        </span><br><span class="line">a=My()</span><br><span class="line">a.addcount()</span><br><span class="line">print(a.count)</span><br><span class="line">print(<span class="string">&#x27;*&#x27;</span>*<span class="number">50</span>)</span><br><span class="line">b=My()</span><br><span class="line">b.addcount()</span><br><span class="line">print(b.count)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1</span></span><br><span class="line"><span class="comment">#**************************************************</span></span><br><span class="line"><span class="comment">#2</span></span><br></pre></td></tr></table></figure>
+
+
+<p>从运行结果可以看出，虽然a和b是两个不同的My类的实例对象，但采用了__ class__ 之后，分别调用两个对象的addcount方法之后，获取到的对象的count属性却是在不断累加的，此时self.__ class__ .count不再是单纯的某个对象私有的属性，而是类的所有实例对象的共有属性,它相当于self.A.count。若将self.__ class__ .count += 1变为self.count += 1,此时__ class__的效果就十分明显了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">My</span>:</span></span><br><span class="line">    count=<span class="number">0</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addcount</span>(<span class="params">self</span>):</span></span><br><span class="line">        self.count +=<span class="number">1</span></span><br><span class="line">        </span><br><span class="line">a=My()</span><br><span class="line">a.addcount()</span><br><span class="line">print(a.count)</span><br><span class="line">print(<span class="string">&#x27;*&#x27;</span>*<span class="number">50</span>)</span><br><span class="line">b=My()</span><br><span class="line">b.addcount()</span><br><span class="line">print(b.count)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1</span></span><br><span class="line"><span class="comment">#**************************************************</span></span><br><span class="line"><span class="comment">#1</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="str-："><a href="#str-：" class="headerlink" title="__ str__："></a>__ str__：</h4><p>在将对象转换成字符串  str(对象)  测试的时候，打印对象的信息，__ str__ 方法必须要return一个字符串类型的返回值，作为对实例对象的字符串描述，__ str__ 实际上是被print函数默认调用的，当要print（实例对象）时，默认调用__ str__ 方法，将其字符串描述返回。如果不是要用str()函数转换。当你打印一个类的时候，那么print首先调用的就是类里面的定义的__ str__。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">My</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,name</span>):</span></span><br><span class="line">        self.name=name</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span>(<span class="string">&#x27;我是My类的实例对象my，我的名字叫%s&#x27;</span>%self.name)</span><br><span class="line">    </span><br><span class="line">my=My(<span class="string">&#x27;小王&#x27;</span>)</span><br><span class="line">print(My)</span><br><span class="line">print(my)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&lt;class &#x27;__main__.My&#x27;&gt;</span></span><br><span class="line"><span class="comment">#我是My类的实例对象my，我的名字叫小王</span></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="类的专有方法"><a href="#类的专有方法" class="headerlink" title="类的专有方法"></a>类的专有方法</h4><ul>
+<li><p>__ init__ : 构造函数，在生成对象时调用</p>
+</li>
+<li><p>__ del__ : 析构函数，释放对象时使用</p>
+</li>
+<li><p>__ repr__ : 打印，转换</p>
+</li>
+<li><p>__ setitem__ : 按照索引赋值</p>
+</li>
+<li><p>__ getitem__: 按照索引获取值</p>
+</li>
+<li><p>__ len__: 获得长度</p>
+</li>
+<li><p>__ cmp__: 比较运算</p>
+</li>
+<li><p>__ call__: 函数调用</p>
+</li>
+<li><p>__ add__: 加运算</p>
+</li>
+<li><p>__ sub__: 减运算</p>
+</li>
+<li><p>__ mul__: 乘运算</p>
+</li>
+<li><p>__ truediv__: 除运算</p>
+</li>
+<li><p>__ mod__: 求余运算</p>
+</li>
+<li><p>__ pow__: 乘方</p>
+</li>
+</ul>
+<h6 id="做一个总结："><a href="#做一个总结：" class="headerlink" title="做一个总结："></a><strong>做一个总结：</strong></h6><ul>
+<li><p>修改类方法和属性，会影响实例方法和属性</p>
+</li>
+<li><p>一个实例属性的修改，不会影响另一个实例属性</p>
+</li>
+<li><p>类方法可以修改，但实例方法不允许修改</p>
+</li>
+</ul>
+<h4 id="小作业"><a href="#小作业" class="headerlink" title="小作业"></a>小作业</h4><p>​    今天没有小作业，昨天的作业完成情况如何？</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/posts/b7cd6609.html'>
-            Read More
-          </a>
+      
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\posts\47220.html" title="14.Python强化练习" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230224850.png" /><span class="title">14.Python强化练习</span><span class="excerpt">Python学习阶段钱</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\fbd6efa0.html" title="Day1.Python基本操作与格式规范" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831232755.png" /><span class="title">Day1.Python基本操作与格式规范</span><span class="excerpt">Python基本操作与格式规范！！！</span></a><a class="item" href="\posts\80ca38c0.html" title="Day2.Python变量和运算符" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.Python变量和运算符</span><span class="excerpt">Python变量与运算符！！！</span></a><a class="item" href="\posts\901b8cd5.html" title="Day3.Python判断与循环语句" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day3.Python判断与循环语句</span><span class="excerpt">Python判断与循环语句！！！</span></a></div></section></div>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>版权声明：本网站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="/">数据科学</a></p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/b7cd6609.html>http://www.a2data.cn/posts/b7cd6609.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+        <div class='donate'>
+          <div class='imgs'>
+            
+              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/alipay.jpg'>
+            
+              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/wechat.png'>
+            
+          </div>
         </div>
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-14T00:30:54+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Sep 14, 2020</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
+          
   
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/80bb221f.html">
-        Day11.封装
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Python 的封装学习。</p>
-    
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python</p></a></div>
+
+
+        
+      
+        
+      
+        
+          
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>1.7k words</p>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-14</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E5%85%A5%E9%97%A8/">Python入门</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/80bb221f.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/8b540f5a.html">
-        Day10.高阶函数
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>高阶函数 定义 内置的有哪些</p>
-    
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>7 min</p>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E5%85%A5%E9%97%A8/">Python入门</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/8b540f5a.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/b572816f.html">
-        Day9.函数下
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>匿名函数 函数嵌套 函数递归 作用域</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E5%85%A5%E9%97%A8/">Python入门</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/b572816f.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/3fb6e39.html">
-        Day8.函数上
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>函数 概念 定义 创建 参数</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E5%85%A5%E9%97%A8/">Python入门</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/3fb6e39.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/1d1dff0b.html">
-        Day7.集合
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>集合: 创建 增加 转化 删除 遍历 运算</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E5%85%A5%E9%97%A8/">Python入门</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/1d1dff0b.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/71dd948a.html">
-        Day6.字典
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>字典 创建 增加 删除 修改 查询 遍历</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E5%85%A5%E9%97%A8/">Python入门</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/71dd948a.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/f9586000.html">
-        Day5.布尔元组字符串
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>数据类型-元组-字符串-布尔</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E5%85%A5%E9%97%A8/">Python入门</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/f9586000.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/8c0ed688.html">
-        Python数据类型-列表
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Python数据类型-列表！！！</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E5%85%A5%E9%97%A8/">Python入门</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/8c0ed688.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/901b8cd5.html">
-        Day3.Python判断与循环语句
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Python判断与循环语句！！！</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E5%85%A5%E9%97%A8/">Python入门</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/901b8cd5.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 2
-        </p>
-        
-          <a class="next" rel="next" href="/categories/Python/Python%E5%85%A5%E9%97%A8/page/2/">
-            <section class="post next white-box shadow">
-              &nbsp;Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
 
 
-    
-  
-</div>
-<aside class='l_side'>
-  
-  
-    
-    
-
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://7.dusays.com/2020/09/10/3694a41d52ade.jpg'/>
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/b7cd6609.html&title=Day12.方法的重写和魔法方法 - DataScience&summary=方法的重写和魔法方法"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
         </a>
       
     
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/b7cd6609.html&title=Day12.方法的重写和魔法方法 - DataScience&summary=方法的重写和魔法方法"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
     
-      <div class='text'>
-        
-          <h2>Jack` Féng</h2>
-        
-        
-          <p>放弃不难,但坚持一定很酷！</p>
-
-        
-        
-      </div>
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/b7cd6609.html&title=Day12.方法的重写和魔法方法 - DataScience&summary=方法的重写和魔法方法"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
     
-    
-      <div class="social-wrapper">
+      
         
-          
-            <a href="https://github.com/A2Data"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=a2data@163.com"
-              class="social fas fa-envelope-open flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=66860619"
-              class="social fab fa-qq flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://gitee.com/sqlsq_admin/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
-              class="social fab fa-weixin flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://me.csdn.net/weixin_47093227"
-              class="social fab fa-cuttlefish flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACRklEQVR42u3ay3HDMAwFQPXfdFJAxiP8ZDvg8hbLFrk8vQC4fg5dFzg4ODg4+CL4VVyvfv9no+Tz7H7p34ODg4ODgy+EhwNAEH73efb9Y+cFBwcHBwdfDI8GiLuNqu+JBp7qecHBwcHBwcHjhYgqKBtowMHBwcHBwesBJnoB1X3BwcHBwcHB5xsK3cZDtVHx8U4KODg4ODj4F8G7A37v/vtrJhvBwcHBwcE/CO+uboMgW4honxccHBwcHHwRPFsAiD6/u6ju78uFDHBwcHBw8IXwbOCowqaDUfaiwMHBwcHBN8G7AaUbSJ66sJcXBw4ODg4OvhCePUD0gNnBgmqACgcecHBwcHDwRfBs8Kg27LuDg93gAg4ODg4OfhJ8fMNkoaN78eWJCHBwcHBw8H8Er24cDSJTDYnq98DBwcHBwU+Edz/PBqDbRsBQIwIcHBwcHHwTPPsPf7dQUAVMNT7AwcHBwcE3waeg3cLE1CDC7fvAwcHBwcEXwbvB4GquqeATHlAABwcHBwdfBI8GgakC/1MXEz4HODg4ODj4Qng4ADQLEt0BwOr7wcHBwcHBN8Orqxs4pgcHboMQODg4ODj4IvhUgSDbgJi60OzFg4ODg4ODb4S/O2BU4ekGwl2AAQcHBwcHXwSvNuirsKcaCuFCBDg4ODg4+MHw7EGnG/7p84KDg4ODg4OXg0e1YJENUuDg4ODg4CfCswWE6PNsoaINfHowABwcHBwc/Ivg5QJ9MaA8NUgADg4ODg5+Evy0BQ4ODg4OvmD9AvGswYxsWNIEAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
     
   </div>
-</section>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/80bb221f.html'>
+          <p class='title'>Day11.封装<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Python 的封装学习。
+
+
+
+例题引导：构造一个名为Vector的类，用来储存一个平面坐标系中的向量(例如(1,2))；
+在类中构造向量的相加、相减和相乘三种方法，并分别返回计算结果的向量；...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
 
   
 
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
   
     
     
@@ -2068,208 +1915,28 @@
     
     
 
-<section class="widget text shadow desktop mobile">
-  
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
   <header>
     
-      <i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i><span class='name'>公告</span>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-  <div class='content'>
-    
-      <p>本站默认替换了右键菜单，唤醒原系统菜单：<code>Ctrl</code> + <code>右键</code></p>
-
-    
-      <p>回归本心、去繁从简</p>
-
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobile">
-  
-  <header>
-    
-      <i class="fas fa-qrcode fa-fw fa-fw" aria-hidden="true"></i><span class='name'>公众号</span>
-    
-  </header>
-
-
-  <div class='content article-entry'>
-    
-      
-        <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/0d49517cc7f0ea7b452a71f1e26976c.png'
-        >
-      
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobule">
-  
-  <header>
-    
-      <i class="fas fa-mobile fa-fw" aria-hidden="true"></i><span class='name'>小程序</span>
-    
-  </header>
-
-
-  <div class='content article-entry'>
-    
-      
-        <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/xcx.jpg'
-        >
-      
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop">
-  
-  <header>
-    
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>86 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2018/12/18'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>120k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Mon Sep 14 2020 00:31:40 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2020-09-14 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2020-09-14 日';
-          }
-        </script>
-        
-      
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99"><span class="toc-text">方法重写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95"><span class="toc-text">魔法方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#init-%EF%BC%9A"><span class="toc-text">__ init__：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#class-%EF%BC%9A"><span class="toc-text">__ class__：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#str-%EF%BC%9A"><span class="toc-text">__ str__：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E4%B8%93%E6%9C%89%E6%96%B9%E6%B3%95"><span class="toc-text">类的专有方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E4%BD%9C%E4%B8%9A"><span class="toc-text">小作业</span></a></li></ol></li></ol>
     </div>
-  </div>
-</section>
+  </section>
+
 
   
 
 
 </aside>
+
 
 
       </div>
