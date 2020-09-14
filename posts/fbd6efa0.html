@@ -1485,6 +1485,7 @@
 
 
 
+<p><img src="https://7.dusays.com/2020/09/14/ba18a9c432ad6.png" class="lazyload" data-srcset="https://7.dusays.com/2020/09/14/ba18a9c432ad6.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p><strong>学前引导：</strong></p>
 <blockquote>
 <p>基本操作和格式规范（本文重点）</p>
@@ -1531,15 +1532,20 @@
 <p><strong>多行注释</strong>可以用多个 <em>#</em> 号，还有 <em>‘’’</em> 和 *”””*：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">我真的</span></span><br><span class="line"><span class="string">可以</span></span><br><span class="line"><span class="string">注释</span></span><br><span class="line"><span class="string">很多行</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">我也能</span></span><br><span class="line"><span class="string">注释</span></span><br><span class="line"><span class="string">很多行</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line">hello world</span><br></pre></td></tr></table></figure>
 
-<h2 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h2><p>**拼接符 ‘+’ **</p>
+<h3 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h3><p>**拼接符 ‘+’ **</p>
 <p>print(‘变量名：’+变量)</p>
-<p>注意：变量必须为字符串类型</p>
+<p><strong>注意：</strong>变量必须为字符串类型</p>
 <p><strong>拼接符’,’</strong></p>
 <p>print(‘变量名：’，变量)</p>
 <h4 id="格式化符号"><a href="#格式化符号" class="headerlink" title="格式化符号"></a>格式化符号</h4><p>整数输出：</p>
-<p>%o —— oct 八进制</p>
-<p>%d —— dec 十进制</p>
-<p>%x —— hex 十六进制</p>
+<ul>
+<li><p>%o —— oct 八进制</p>
+</li>
+<li><p>%d —— dec 十进制</p>
+</li>
+<li><p>%x —— hex 十六进制</p>
+</li>
+</ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;%o&#x27;</span> % <span class="number">20</span>)   <span class="comment">#以八进制输出20</span></span><br><span class="line">print(<span class="string">&#x27;%d&#x27;</span> % <span class="number">20</span>)   <span class="comment">#以十进制输出20</span></span><br><span class="line">print(<span class="string">&#x27;%x&#x27;</span> % <span class="number">20</span>)   <span class="comment">#以十六进制输出20</span></span><br><span class="line"></span><br><span class="line"><span class="number">24</span></span><br><span class="line"><span class="number">20</span></span><br><span class="line"><span class="number">14</span></span><br></pre></td></tr></table></figure>
 
 
@@ -1581,8 +1587,8 @@
 <p>再试一下字典</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">one_dict = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;小风&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">18</span>, <span class="string">&quot;hobby&quot;</span>: [<span class="string">&quot;running&quot;</span>, <span class="string">&quot;singing&quot;</span>]&#125;</span><br><span class="line">print(<span class="string">f&quot;姓名：<span class="subst">&#123;one_dict[<span class="string">&#x27;name&#x27;</span>]&#125;</span>,爱好：<span class="subst">&#123;one_dict[<span class="string">&#x27;hobby&#x27;</span>]&#125;</span>&quot;</span>)</span><br><span class="line">姓名：小风,爱好：[<span class="string">&#x27;running&#x27;</span>, <span class="string">&#x27;singing&#x27;</span>]</span><br></pre></td></tr></table></figure>
 
-<h4 id="格式规范："><a href="#格式规范：" class="headerlink" title="格式规范："></a>格式规范：</h4><p>代码块快捷键:CTRL+ALT+L</p>
-<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>转义字符‘\’可以转义很多字符</p>
+<h4 id="格式规范："><a href="#格式规范：" class="headerlink" title="格式规范："></a>格式规范：</h4><p>代码块快捷键: <strong>CTRL+ALT+L</strong></p>
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><p>转义字符‘\’可以转义很多字符</p>
 <ul>
 <li>‘\n’表示换行</li>
 <li>’\t‘表示制表符</li>
@@ -1593,26 +1599,24 @@
 
 
 
-<h4 id="小作业"><a href="#小作业" class="headerlink" title="小作业"></a>小作业</h4><ul>
-<li><p>1、学号为u20201111的学生，数学成绩为85，化学成绩为82.46，按格式输出：</p>
-<p><em>u20201111 的数学分数是 85</em></p>
-<p><em>u20201111 的化学分数是 82.46</em> </p>
-<p><strong>并且求出该学号学生的总成绩，以及平均分</strong></p>
+<h4 id="小作业"><a href="#小作业" class="headerlink" title="小作业"></a>小作业</h4><ol>
+<li><p>学号为u20201111的学生，数学成绩为85，化学成绩为82.46，按格式输出：</p>
+<p>​    <em>u20201111 的数学分数是 85</em></p>
+<p>​    <em>u20201111 的化学分数是 82.46</em> </p>
+<p>​    <strong>并且求出该学号学生的总成绩，以及平均分</strong></p>
 </li>
-</ul>
-<ol start="2">
-<li><p>2、给定两个整数<em>A</em>和<em>B</em>，输出从<em>A</em>到<em>B</em>的所有整数以及这些数的和。</p>
+<li><p>给定两个整数<em>A</em>和<em>B</em>，输出从<em>A</em>到<em>B</em>的所有整数以及这些数的和。</p>
 <p>输入格式：</p>
 <p>输入在一行中给出2个整数<em>A</em>和<em>B</em>，其中−100≤<em>A</em>≤<em>B</em>≤100，以空格分隔。</p>
 <p>输出格式：</p>
 <p>首先顺序输出从<em>A</em>到<em>B</em>的所有整数，每5个数字占一行，每个数字占5个字符宽度，向右对齐。最后在一行中按<em>Sum = X</em>的格式输出全部数字的和X。</p>
 </li>
-<li><p>3、给定学生三门成绩</p>
+<li><p>给定学生三门成绩</p>
 <p>(1)计算该学生的平均成绩并打印平均成绩保留两位小数点</p>
 <p>(2)计算该学生语文成绩占总成绩的百分之多少？并打印，百分比也保留两位小数</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Chinese = <span class="number">92</span></span><br><span class="line">Math = <span class="number">98.5</span></span><br><span class="line">English = <span class="number">93</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>4、用转义字符，输出一张todo list，包含4条内容并用制表符对齐。格式如下：</p>
+<li><p>用转义字符，输出一张todo list，包含4条内容并用制表符对齐。格式如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">This <span class="keyword">is</span> todo list <span class="keyword">for</span> today:</span><br><span class="line">        * Meeting at <span class="number">11</span>:<span class="number">00</span></span><br><span class="line">        * lunch <span class="keyword">with</span> Mike</span><br><span class="line">        * buy milk</span><br><span class="line">        * do yoga</span><br></pre></td></tr></table></figure>
 
 
@@ -1620,13 +1624,12 @@
 </li>
 </ol>
 <ol start="5">
-<li>5、分别用多种格式输出,答案不限,输入参数为like,learning:I like Python, and I’am learning（注意上引号）</li>
+<li>分别用多种格式输出,答案不限,输入参数为like,learning:I like Python, and I’am learning（注意上引号）</li>
 </ol>
 <h4 id="进阶题："><a href="#进阶题：" class="headerlink" title="进阶题："></a>进阶题：</h4><blockquote>
 <p>编辑完成以下名片的显示：</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">==================================</span><br><span class="line">姓名: 努力赚钱的小风    </span><br><span class="line">QQ:xxxxxxx</span><br><span class="line">手机号:<span class="number">185</span>xxxxxx</span><br><span class="line">公司地址:北京市xxxx</span><br><span class="line">Blog:www.a2data.cn</span><br><span class="line">==================================</span><br><span class="line"></span><br><span class="line"><span class="comment">#思考，如何格式化输出？换行？</span></span><br><span class="line"><span class="comment">#进阶思路，如果姓名年龄是否可以是变量传入，或者外部输入呢？</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 
 
 
@@ -1642,7 +1645,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\47220.html" title="14.Python强化练习" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230224850.png" /><span class="title">14.Python强化练习</span><span class="excerpt">Python学习阶段钱</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\901b8cd5.html" title="Day3.Python判断与循环语句" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day3.Python判断与循环语句</span><span class="excerpt">Python判断与循环语句！！！</span></a><a class="item" href="\posts\f9586000.html" title="Day5.布尔元组字符串" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day5.布尔元组字符串</span><span class="excerpt">数据类型-元组-字符串-布尔</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\59346.html" title="12.Python面向对象(3)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191225231208.png" /><span class="title">12.Python面向对象(3)</span><span class="excerpt">Python面向对象单例模式</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\80ca38c0.html" title="Day2.Python变量和运算符" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.Python变量和运算符</span><span class="excerpt">Python变量与运算符！！！</span></a><a class="item" href="\posts\8c0ed688.html" title="Python数据类型-列表" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Python数据类型-列表</span><span class="excerpt">Python数据类型-列表！！！</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1681,10 +1684,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-11T16:25:49+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-14T23:12:42+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 11, 2020</p>
+    <p>更新于：Sep 14, 2020</p>
   </a>
 </div>
 
@@ -1973,7 +1976,7 @@ MockData ...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83"><span class="toc-text">编码规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83"><span class="toc-text">命名规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-text">注释</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Python2-3%E8%BE%93%E5%87%BA%E5%8C%BA%E5%88%AB"><span class="toc-text">Python2-3输出区别</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA"><span class="toc-text">格式化输出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%AC%A6%E5%8F%B7"><span class="toc-text">格式化符号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#format%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-text">format的用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">格式化字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83%EF%BC%9A"><span class="toc-text">格式规范：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="toc-text">转义字符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E4%BD%9C%E4%B8%9A"><span class="toc-text">小作业</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6%E9%A2%98%EF%BC%9A"><span class="toc-text">进阶题：</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83"><span class="toc-text">编码规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83"><span class="toc-text">命名规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-text">注释</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Python2-3%E8%BE%93%E5%87%BA%E5%8C%BA%E5%88%AB"><span class="toc-text">Python2-3输出区别</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA"><span class="toc-text">格式化输出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%AC%A6%E5%8F%B7"><span class="toc-text">格式化符号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#format%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-text">format的用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">格式化字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83%EF%BC%9A"><span class="toc-text">格式规范：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="toc-text">转义字符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E4%BD%9C%E4%B8%9A"><span class="toc-text">小作业</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6%E9%A2%98%EF%BC%9A"><span class="toc-text">进阶题：</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 

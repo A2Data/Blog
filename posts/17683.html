@@ -1637,7 +1637,7 @@
 <tr>
 <td>公号</td>
 <td align="center">平台</td>
-<td align="right">A2DATA</td>
+<td align="right">DataScience</td>
 </tr>
 <tr>
 <td>我们</td>
@@ -1649,7 +1649,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#96;代码内容&#96;</span><br></pre></td></tr></table></figure>
 
 <p>代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(&#96;&#96;&#96;)</span><br><span class="line">  代码...</span><br><span class="line">  代码...</span><br><span class="line">  代码...</span><br><span class="line">(&#96;&#96;&#96;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">(```)</span></span><br><span class="line">  <span class="string">代码...</span></span><br><span class="line">  <span class="string">代码...</span></span><br><span class="line">  <span class="string">代码...</span></span><br><span class="line"><span class="string">(```)</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>注：为了防止转译，前后三个反引号处加了小括号，实际是没有的。这里只是用来演示，实际中去掉两边小括号即可。</p>
@@ -1668,10 +1668,14 @@
 <p>代码块</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function fun()&#123;</span><br><span class="line">  echo &quot;这是一句非常牛逼的代码&quot;;</span><br><span class="line">&#125;</span><br><span class="line">fun();</span><br></pre></td></tr></table></figure>
 
-<h2 id="十、流程图"><a href="#十、流程图" class="headerlink" title="十、流程图"></a>十、流程图</h2><p><img src="/resource/image/markdown/1.png" class="lazyload" data-srcset="/resource/image/markdown/1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line"></span><br><span class="line">A[方形] --&gt;B(圆角)</span><br><span class="line"></span><br><span class="line">    B --&gt; C&#123;条件a&#125;</span><br><span class="line"></span><br><span class="line">    C --&gt;|a&#x3D;1| D[结果1]</span><br><span class="line"></span><br><span class="line">    C --&gt;|a&#x3D;2| E[结果2]</span><br><span class="line"></span><br><span class="line">    F[横向流程图]</span><br></pre></td></tr></table></figure>
+<h2 id="十、流程图"><a href="#十、流程图" class="headerlink" title="十、流程图"></a>十、流程图</h2><p><img src="https://7.dusays.com/2020/09/14/45808dc7ed10a.png" class="lazyload" data-srcset="https://7.dusays.com/2020/09/14/45808dc7ed10a.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><strong>横向流程图</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line"></span><br><span class="line">A[方形] --&gt;B(圆角)</span><br><span class="line"></span><br><span class="line">    B --&gt; C&#123;条件a&#125;</span><br><span class="line"></span><br><span class="line">    C --&gt;|a&#x3D;1| D[结果1]</span><br><span class="line"></span><br><span class="line">    C --&gt;|a&#x3D;2| E[结果2]</span><br><span class="line"></span><br><span class="line">    F[横向流程图]</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">A[方形] --&gt;B(圆角)</span><br><span class="line">  B --&gt;C&#123;条件a&#125;</span><br><span class="line">  C --&gt;|a&#x3D;1|D[结果1]</span><br><span class="line">  C --&gt;|a&#x3D;2|E[结果2]</span><br><span class="line">  F[竖向流程图]	</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>竖向流程图</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">graph TD</span><br><span class="line">A[方形] --&gt;B(圆角)</span><br><span class="line">  B --&gt;C&#123;条件a&#125;</span><br><span class="line">  C --&gt;|a&#x3D;1|D[结果1]</span><br><span class="line">  C --&gt;|a&#x3D;2|E[结果2]</span><br><span class="line">  F[竖向流程图]	</span><br></pre></td></tr></table></figure>
 
 <p>效果如下：</p>
 <p><img src="/resource/image/markdown/2.png" class="lazyload" data-srcset="/resource/image/markdown/2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="img"></p>
@@ -1729,10 +1733,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-11T17:28:58+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-14T23:19:40+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 11, 2020</p>
+    <p>更新于：Sep 14, 2020</p>
   </a>
 </div>
 
