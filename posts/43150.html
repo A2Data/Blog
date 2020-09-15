@@ -19,7 +19,7 @@
   
   <title>Linux安装 - DataScience</title>
   
-    <meta name="keywords" content="Linux,环境搭建">
+    <meta name="keywords" content="环境搭建,Linux">
   
 
   
@@ -1543,7 +1543,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\48061.html" title="从零搭建ubuntu" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230114723.png" /><span class="title">从零搭建ubuntu</span><span class="excerpt">安装ubuntu、sublime骚操作</span></a><a class="item" href="\posts\37426.html" title="Linux磁盘管理" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux磁盘管理</span><span class="excerpt">Linux 磁盘管理。</span></a><a class="item" href="\posts\10415.html" title="Linux NFS网络文件" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux NFS网络文件</span><span class="excerpt">Linux 手把手教你搭建NFS网络文件系统。</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\46411.html" title="Linux基本操作" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200425192236.png" /><span class="title">Linux基本操作</span><span class="excerpt">Linux 基本操作。</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\48061.html" title="从零搭建ubuntu" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230114723.png" /><span class="title">从零搭建ubuntu</span><span class="excerpt">安装ubuntu、sublime骚操作</span></a><a class="item" href="\posts\64423.html" title="Linux Shell语法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell语法</span><span class="excerpt">Linux Shell 语言得一些基本语法。</span></a><a class="item" href="\posts\64846.html" title="带你玩转idea" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">带你玩转idea</span><span class="excerpt">IDEA 玩转详细教程</span></a><a class="item" href="\posts\36204.html" title="最快图床搭建" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200501104540308.png" /><span class="title">最快图床搭建</span><span class="excerpt">最快的图床搭建，有坑请联系小编。</span></a><a class="item" href="\posts\46411.html" title="Linux基本操作" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200425192236.png" /><span class="title">Linux基本操作</span><span class="excerpt">Linux 基本操作。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1594,7 +1594,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Linux</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>环境搭建</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>环境搭建</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Linux</p></a></div>
 
 
         
@@ -2548,9 +2548,11 @@ SublimeText 必备插件第一步 安装 Package Control组件快捷键 Ctrl+`
 
 
 
+  <!--https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js-->
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+
   
-  
-<script src="/js/valine.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"></script>
 
 
 <script>
@@ -2616,10 +2618,86 @@ SublimeText 必备插件第一步 安装 Package Control组件快捷键 Ctrl+`
     })
   }
 
+  function newcomment() {
+
+    function queryLeanCloud(k) {
+      let root = this;
+      let len = arguments.length;
+      if (len == 1) {
+        let notExist = new AV.Query("Comment");
+        notExist.doesNotExist('rid');
+        let isEmpty = new AV.Query("Comment");
+        isEmpty.equalTo('rid', '');
+        let q = AV.Query.or(notExist, isEmpty);
+        if (k === '*') q.exists('url');
+        else q.equalTo('url', decodeURI(k));
+        q.addDescending('createdAt');
+        q.addDescending('insertedAt');
+        return q;
+      } else {
+        let ids = JSON.stringify(arguments[1]).replace(/(\[|\])/g, '');
+        let cql = `select * from ${root['config']['clazzName']} where rid in (${ids}) order by -createdAt,-createdAt`;
+        return AV.Query.doCloudQuery(cql)
+      }
+    }
+    var valine = new Valine({
+      el: '#valine_container_ba（因为主题已经有valine的这些参数了，这里随意填都行）',
+      app_id: 'i1I90mFU8urYjNXgiqPT05Jt-gzGzoHsz',
+      app_key: 'GXgwCzMM0g2CnM8x0WCM7fPQ',
+      placeholder: '',
+      serverURLs: 'https://i1i90mfu.lc-cn-n1-shared.com'
+    });
+
+    //判断博主，heson改为自己的昵称
+    function bozhu(e){
+      if (e == "DataScience"){
+        nick = e + '[博主]'
+        return nick;
+      } else {
+        return e
+      }
+    }
+
+    //判断网址
+    function wangzhi(e){
+      http = e.slice(0,4)
+      https = e.slice(0,5)
+      if (http == "http" || https == "https" ){
+        return e
+      } else if (e == "" || e == null || e == undefined){
+        return e
+      } else {
+        e = 'http://'+ e
+        return e
+      }
+    }
+
+    //查询评论
+    valine.Q('*').limit(7).find().then(function (comments) {
+      var hotComments = $("#hot-comments");
+      for (var i = 0; i < comments.length; i++) {
+        if (i === 0) {
+          console.log(comments[0]);
+        }
+        var nick = bozhu(comments[i]._serverData.nick);
+        var content = comments[i]._serverData.comment;
+        var newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+        var url = comments[i]._serverData.url;
+        var link = wangzhi(comments[i]._serverData.link);
+        var updatedAt = timeago(comments[i].updatedAt);
+        var commentId = '#' + comments[i].id;
+        hotComments.append('<div class="card-comment-item"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a>&nbsp;发表于' + updatedAt + '</div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div>');
+      }
+    });
+  };
+
   $(function () {
     pjax_valine();
+    newcomment();
+
   });
 </script>
+
 
 
 
@@ -2976,6 +3054,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             SCload_fancybox();
           } else {
             pjax_fancybox();
+            newcomment();
           }
         
         

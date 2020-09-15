@@ -1606,7 +1606,7 @@
 <p>主要是 自己的分支与主分支保持同步。</p>
 <p>步骤：</p>
 <ul>
-<li><p>1、git remote add master  <a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;</a>:A2Data/A2Data.github.io.git  // 主分支master</p>
+<li><p>1、git remote add master  <a href="mailto:&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;</a>:A2Data/A2Data.github.io.git  // 主分支master</p>
 </li>
 <li><p>2、 git branch -v 查看是否添加</p>
 </li>
@@ -1656,7 +1656,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\88fead8.html" title="2.Git多平台同步" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831142714.png" /><span class="title">2.Git多平台同步</span><span class="excerpt">Git 将一个项目同步到多平台上。</span></a><a class="item" href="\posts\47936.html" title="手把手教你玩git" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20200330223604.png" /><span class="title">手把手教你玩git</span><span class="excerpt">Git 深入浅出，史无前例的详细教程。</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\47936.html" title="手把手教你玩git" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20200330223604.png" /><span class="title">手把手教你玩git</span><span class="excerpt">Git 深入浅出，史无前例的详细教程。</span></a><a class="item" href="\posts\88fead8.html" title="2.Git多平台同步" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200831142714.png" /><span class="title">2.Git多平台同步</span><span class="excerpt">Git 将一个项目同步到多平台上。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2664,9 +2664,11 @@
 
 
 
+  <!--https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js-->
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+
   
-  
-<script src="/js/valine.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"></script>
 
 
 <script>
@@ -2732,10 +2734,86 @@
     })
   }
 
+  function newcomment() {
+
+    function queryLeanCloud(k) {
+      let root = this;
+      let len = arguments.length;
+      if (len == 1) {
+        let notExist = new AV.Query("Comment");
+        notExist.doesNotExist('rid');
+        let isEmpty = new AV.Query("Comment");
+        isEmpty.equalTo('rid', '');
+        let q = AV.Query.or(notExist, isEmpty);
+        if (k === '*') q.exists('url');
+        else q.equalTo('url', decodeURI(k));
+        q.addDescending('createdAt');
+        q.addDescending('insertedAt');
+        return q;
+      } else {
+        let ids = JSON.stringify(arguments[1]).replace(/(\[|\])/g, '');
+        let cql = `select * from ${root['config']['clazzName']} where rid in (${ids}) order by -createdAt,-createdAt`;
+        return AV.Query.doCloudQuery(cql)
+      }
+    }
+    var valine = new Valine({
+      el: '#valine_container_ba（因为主题已经有valine的这些参数了，这里随意填都行）',
+      app_id: 'i1I90mFU8urYjNXgiqPT05Jt-gzGzoHsz',
+      app_key: 'GXgwCzMM0g2CnM8x0WCM7fPQ',
+      placeholder: '',
+      serverURLs: 'https://i1i90mfu.lc-cn-n1-shared.com'
+    });
+
+    //判断博主，heson改为自己的昵称
+    function bozhu(e){
+      if (e == "DataScience"){
+        nick = e + '[博主]'
+        return nick;
+      } else {
+        return e
+      }
+    }
+
+    //判断网址
+    function wangzhi(e){
+      http = e.slice(0,4)
+      https = e.slice(0,5)
+      if (http == "http" || https == "https" ){
+        return e
+      } else if (e == "" || e == null || e == undefined){
+        return e
+      } else {
+        e = 'http://'+ e
+        return e
+      }
+    }
+
+    //查询评论
+    valine.Q('*').limit(7).find().then(function (comments) {
+      var hotComments = $("#hot-comments");
+      for (var i = 0; i < comments.length; i++) {
+        if (i === 0) {
+          console.log(comments[0]);
+        }
+        var nick = bozhu(comments[i]._serverData.nick);
+        var content = comments[i]._serverData.comment;
+        var newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+        var url = comments[i]._serverData.url;
+        var link = wangzhi(comments[i]._serverData.link);
+        var updatedAt = timeago(comments[i].updatedAt);
+        var commentId = '#' + comments[i].id;
+        hotComments.append('<div class="card-comment-item"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a>&nbsp;发表于' + updatedAt + '</div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div>');
+      }
+    });
+  };
+
   $(function () {
     pjax_valine();
+    newcomment();
+
   });
 </script>
+
 
 
 
@@ -3092,6 +3170,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             SCload_fancybox();
           } else {
             pjax_fancybox();
+            newcomment();
           }
         
         
