@@ -1522,7 +1522,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\773d5f8c.html" title="1.DBeaver安装" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200502181911650.png" /><span class="title">1.DBeaver安装</span><span class="excerpt">DBeaver安装步骤</span></a><a class="item" href="\posts\4354b039.html" title="1.认识Mysql" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200610232427.png" /><span class="title">1.认识Mysql</span><span class="excerpt">认识mysql！</span></a><a class="item" href="\posts\b794162c.html" title="2.数据库操作-DDL" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/image-20200421154433187.png" /><span class="title">2.数据库操作-DDL</span><span class="excerpt">数据库操作DDL</span></a><a class="item" href="\posts\6656ad65.html" title="3.数据库操作-DML" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200615211933034.png" /><span class="title">3.数据库操作-DML</span><span class="excerpt">数据库操作DML</span></a><a class="item" href="\posts\e4f3239b.html" title="5.数据库操作-TCL" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614215919792.png" /><span class="title">5.数据库操作-TCL</span><span class="excerpt">数据库操作TCL</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\773d5f8c.html" title="1.DBeaver安装" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200502181911650.png" /><span class="title">1.DBeaver安装</span><span class="excerpt">DBeaver安装步骤</span></a><a class="item" href="\posts\b794162c.html" title="2.数据库操作-DDL" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/image-20200421154433187.png" /><span class="title">2.数据库操作-DDL</span><span class="excerpt">数据库操作DDL</span></a><a class="item" href="\posts\4354b039.html" title="1.认识Mysql" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200610232427.png" /><span class="title">1.认识Mysql</span><span class="excerpt">认识mysql！</span></a><a class="item" href="\posts\6656ad65.html" title="3.数据库操作-DML" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200615211933034.png" /><span class="title">3.数据库操作-DML</span><span class="excerpt">数据库操作DML</span></a><a class="item" href="\posts\e4f3239b.html" title="5.数据库操作-TCL" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614215919792.png" /><span class="title">5.数据库操作-TCL</span><span class="excerpt">数据库操作TCL</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1666,15 +1666,16 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/e4f3239b.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>5.数据库操作-TCL</p>
-          <p class='content'>数据库操作TCL
+        <a class='prev' href='/posts/4354b039.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>1.认识Mysql</p>
+          <p class='content'>认识mysql！
 
 
-TCL
-TCL（Transaction Control Language），事务控制语言。
-主要用途：对数据库进行事务控制的指令。
-操纵命令：COMMIT、ROLLBACK...</p>
+背景介绍
+数据库，就是数据的仓库。它是长期存储在计算机内，有组织、可共享的数据的集合。简而言之，即放置信息的文件柜。
+
+数据库分类
+当今互联网中，最常见的数据库模型主要为两...</p>
         </a>
       
       
@@ -2379,6 +2380,10 @@ DDL（Data Definition Language）是连接存储世界与现实世界的高铁�
 
 
 
+  
+<script src="/js/issues.js" aysc></script>
+
+
 
 
   <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
@@ -2665,7 +2670,8 @@ DDL（Data Definition Language）是连接存储世界与现实世界的高铁�
         }
         var nick = bozhu(comments[i]._serverData.nick);
         var content = comments[i]._serverData.comment;
-        var newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+        // var newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+        var newcontent = content.replace(/<[^>]+>/g,"").replace(/:.*?:/g,"[表情]").substring(0,50);
         var url = comments[i]._serverData.url;
         var link = wangzhi(comments[i]._serverData.link);
         var updatedAt = timeago(comments[i].updatedAt);

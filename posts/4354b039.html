@@ -1710,33 +1710,28 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/b794162c.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>2.数据库操作-DDL</p>
-          <p class='content'>数据库操作DDL
+        <a class='prev' href='/posts/e4f3239b.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>5.数据库操作-TCL</p>
+          <p class='content'>数据库操作TCL
 
 
-DDL
-DDL（Data Definition Language）是连接存储世界与现实世界的高铁！
-
-
-主要用途：
-对数据库对象进行创建、修改、删除等操作。
-操作对象：
-数...</p>
+TCL
+TCL（Transaction Control Language），事务控制语言。
+主要用途：对数据库进行事务控制的指令。
+操纵命令：COMMIT、ROLLBACK...</p>
         </a>
       
       
-        <a class='next' href='/posts/4136.html'>
-          <p class='title'>Anaconda闪退<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>anaconda Windows闪退解决方案 。
+        <a class='next' href='/posts/f8d580eb.html'>
+          <p class='title'>4.数据库操作-DCL<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>数据库操作DCL
 
 
-anaconda 打开闪退
-记录windwos 系统下 anaconda 打开闪退修复方式。
-
-解决方式
-1、 管理员模式运行
-conda ...</p>
+DCL
+DCL（Data Control Language），数据库控制语言。
+主要用途：对数据库访问权限进行控制的指令。
+操纵命令：GRANT、REVOKE
+GRANT：...</p>
         </a>
       
     </div>
@@ -2425,6 +2420,10 @@ conda ...</p>
 
 
 
+  
+<script src="/js/issues.js" aysc></script>
+
+
 
 
   <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
@@ -2711,7 +2710,8 @@ conda ...</p>
         }
         var nick = bozhu(comments[i]._serverData.nick);
         var content = comments[i]._serverData.comment;
-        var newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+        // var newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+        var newcontent = content.replace(/<[^>]+>/g,"").replace(/:.*?:/g,"[表情]").substring(0,50);
         var url = comments[i]._serverData.url;
         var link = wangzhi(comments[i]._serverData.link);
         var updatedAt = timeago(comments[i].updatedAt);

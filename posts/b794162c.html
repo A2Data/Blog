@@ -1753,16 +1753,17 @@ GRANT：...</p>
         </a>
       
       
-        <a class='next' href='/posts/4354b039.html'>
-          <p class='title'>1.认识Mysql<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>认识mysql！
+        <a class='next' href='/posts/4136.html'>
+          <p class='title'>Anaconda闪退<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>anaconda Windows闪退解决方案 。
 
 
-背景介绍
-数据库，就是数据的仓库。它是长期存储在计算机内，有组织、可共享的数据的集合。简而言之，即放置信息的文件柜。
+anaconda 打开闪退
+记录windwos 系统下 anaconda 打开闪退修复方式。
 
-数据库分类
-当今互联网中，最常见的数据库模型主要为两...</p>
+解决方式
+1、 管理员模式运行
+conda ...</p>
         </a>
       
     </div>
@@ -2451,6 +2452,10 @@ GRANT：...</p>
 
 
 
+  
+<script src="/js/issues.js" aysc></script>
+
+
 
 
   <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
@@ -2737,7 +2742,8 @@ GRANT：...</p>
         }
         var nick = bozhu(comments[i]._serverData.nick);
         var content = comments[i]._serverData.comment;
-        var newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+        // var newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+        var newcontent = content.replace(/<[^>]+>/g,"").replace(/:.*?:/g,"[表情]").substring(0,50);
         var url = comments[i]._serverData.url;
         var link = wangzhi(comments[i]._serverData.link);
         var updatedAt = timeago(comments[i].updatedAt);

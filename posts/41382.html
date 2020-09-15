@@ -1649,7 +1649,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\44947.html" title="GitBook" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">GitBook</span><span class="excerpt">‘GitBook文档，安装使用’</span></a><a class="item" href="\posts\55860.html" title="SublimeText" rel="bookmark "><img src="%5Cresource%5Cimage%5Csublime%5Cxg.png" /><span class="title">SublimeText</span><span class="excerpt">超级编辑器</span></a><a class="item" href="\posts\17683.html" title="Markdown" rel="bookmark "><img src="/resource/image/markdown/111.png" /><span class="title">Markdown</span><span class="excerpt">‘MD,原来是这么用的，你懂了吗？’</span></a><a class="item" href="\posts\6059.html" title="打造稳定快速、高效免费图床" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/github.png" /><span class="title">打造稳定快速、高效免费图床</span><span class="excerpt">超级图床，高速稳定</span></a><a class="item" href="\posts\64846.html" title="带你玩转idea" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">带你玩转idea</span><span class="excerpt">IDEA 玩转详细教程</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\44947.html" title="GitBook" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">GitBook</span><span class="excerpt">‘GitBook文档，安装使用’</span></a><a class="item" href="\posts\17683.html" title="Markdown" rel="bookmark "><img src="/resource/image/markdown/111.png" /><span class="title">Markdown</span><span class="excerpt">‘MD,原来是这么用的，你懂了吗？’</span></a><a class="item" href="\posts\55860.html" title="SublimeText" rel="bookmark "><img src="%5Cresource%5Cimage%5Csublime%5Cxg.png" /><span class="title">SublimeText</span><span class="excerpt">超级编辑器</span></a><a class="item" href="\posts\6059.html" title="打造稳定快速、高效免费图床" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/github.png" /><span class="title">打造稳定快速、高效免费图床</span><span class="excerpt">超级图床，高速稳定</span></a><a class="item" href="\posts\64846.html" title="带你玩转idea" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">带你玩转idea</span><span class="excerpt">IDEA 玩转详细教程</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2508,6 +2508,10 @@ GitHub + jsDelivr + PicGo + Imagine 打造稳定快速、高效免费图床前�
 
 
 
+  
+<script src="/js/issues.js" aysc></script>
+
+
 
 
   <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
@@ -2794,7 +2798,8 @@ GitHub + jsDelivr + PicGo + Imagine 打造稳定快速、高效免费图床前�
         }
         var nick = bozhu(comments[i]._serverData.nick);
         var content = comments[i]._serverData.comment;
-        var newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+        // var newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+        var newcontent = content.replace(/<[^>]+>/g,"").replace(/:.*?:/g,"[表情]").substring(0,50);
         var url = comments[i]._serverData.url;
         var link = wangzhi(comments[i]._serverData.link);
         var updatedAt = timeago(comments[i].updatedAt);

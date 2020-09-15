@@ -1561,7 +1561,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\16586.html" title="Linux权限控制" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux权限控制</span><span class="excerpt">Linux 权限控制详解。</span></a><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\61794.html" title="Linux Mdadm案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Mdadm案例</span><span class="excerpt">Linux  Mdadm 案例 raid5。</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\46411.html" title="Linux基本操作" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200425192236.png" /><span class="title">Linux基本操作</span><span class="excerpt">Linux 基本操作。</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\16586.html" title="Linux权限控制" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux权限控制</span><span class="excerpt">Linux 权限控制详解。</span></a><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\10415.html" title="Linux NFS网络文件" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux NFS网络文件</span><span class="excerpt">Linux 手把手教你搭建NFS网络文件系统。</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\46411.html" title="Linux基本操作" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200425192236.png" /><span class="title">Linux基本操作</span><span class="excerpt">Linux 基本操作。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2416,6 +2416,10 @@ Shell:操作系统与用户进行交互操作的界面，提供脚本语言编�
 
 
 
+  
+<script src="/js/issues.js" aysc></script>
+
+
 
 
   <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
@@ -2702,7 +2706,8 @@ Shell:操作系统与用户进行交互操作的界面，提供脚本语言编�
         }
         var nick = bozhu(comments[i]._serverData.nick);
         var content = comments[i]._serverData.comment;
-        var newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+        // var newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+        var newcontent = content.replace(/<[^>]+>/g,"").replace(/:.*?:/g,"[表情]").substring(0,50);
         var url = comments[i]._serverData.url;
         var link = wangzhi(comments[i]._serverData.link);
         var updatedAt = timeago(comments[i].updatedAt);

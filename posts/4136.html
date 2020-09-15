@@ -1654,16 +1654,19 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/4354b039.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>1.认识Mysql</p>
-          <p class='content'>认识mysql！
+        <a class='prev' href='/posts/b794162c.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>2.数据库操作-DDL</p>
+          <p class='content'>数据库操作DDL
 
 
-背景介绍
-数据库，就是数据的仓库。它是长期存储在计算机内，有组织、可共享的数据的集合。简而言之，即放置信息的文件柜。
+DDL
+DDL（Data Definition Language）是连接存储世界与现实世界的高铁！
 
-数据库分类
-当今互联网中，最常见的数据库模型主要为两...</p>
+
+主要用途：
+对数据库对象进行创建、修改、删除等操作。
+操作对象：
+数...</p>
         </a>
       
       
@@ -2361,6 +2364,10 @@ Day2. Python基础语法基础语法想学好数据分析，最好掌握Python�
 
 
 
+  
+<script src="/js/issues.js" aysc></script>
+
+
 
 
   <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
@@ -2647,7 +2654,8 @@ Day2. Python基础语法基础语法想学好数据分析，最好掌握Python�
         }
         var nick = bozhu(comments[i]._serverData.nick);
         var content = comments[i]._serverData.comment;
-        var newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+        // var newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+        var newcontent = content.replace(/<[^>]+>/g,"").replace(/:.*?:/g,"[表情]").substring(0,50);
         var url = comments[i]._serverData.url;
         var link = wangzhi(comments[i]._serverData.link);
         var updatedAt = timeago(comments[i].updatedAt);
