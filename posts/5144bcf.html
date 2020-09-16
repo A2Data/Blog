@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -19,9 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Tag: 面经 - DataScience</title>
+  <title>Day14.模块和包 - DataScience</title>
+  
+    <meta name="keywords" content="Python">
   
 
+  
+    <meta name="description" content="模块和包">
   
 
   <!-- feed -->
@@ -1261,7 +1263,7 @@
   
     
     
-        <div class='cover-wrapper  dock' style="display: none;">
+        <div class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://7.dusays.com/2020/09/10/bcac99047bac5.png"></div>
           
@@ -1336,8 +1338,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">Day14.模块和包</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -1366,157 +1368,393 @@
         
         
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
-      
+    
+      <h1 class="title">
+        Day14.模块和包
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
+    <p>JackFeng</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Sep 16, 2020</p>
+  </a>
+</div>
+
+          
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/9812.html">
-        面试拆招详解
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>面试精选！！！</p>
-    
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E5%85%A5%E9%97%A8/">Python入门</a>
+    </a>
   </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>1.5k words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>5 min</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Day14.模块和包" data-path="/posts/5144bcf.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2019-12-22</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%81%8C%E5%9C%BA/">职场</a>
+  <a href="/posts/5144bcf.html#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/posts/5144bcf.html">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <p>模块和包</p>
+<a id="more"></a>
+
+
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><h4 id="什么是模块？"><a href="#什么是模块？" class="headerlink" title="什么是模块？"></a>什么是模块？</h4><p><strong>定义：</strong>逻辑上就是一组功能的组合；实质上一个模块就是一个包含了python定义和声明的文件，文件名就是模块名字加上.py后缀。</p>
+<p>import加载的模块分为四个通用类别：</p>
+<ul>
+<li><p>使用python编写的代码（.py文件）</p>
+</li>
+<li><p>已被编译为共享库或DLL的C或C++扩展；</p>
+</li>
+<li><p>包好一组模块的包；</p>
+</li>
+<li><p>使用C编写并链接到python解释器的内置模块；</p>
+</li>
+</ul>
+<h4 id="如何使用模块？"><a href="#如何使用模块？" class="headerlink" title="如何使用模块？"></a>如何使用模块？</h4><p>想要使用模块，必须先要将模块加载进来，可以通过关键字 import  或 from进行加载；需要注意的是模块和当前文件在不同的命名空间中。</p>
+<h5 id="模块的构成"><a href="#模块的构成" class="headerlink" title="模块的构成"></a>模块的构成</h5><p>模块可以包含可执行的语句和函数的定义，这些语句的目的是初始化模块，它们只在模块名第一次遇到导入import语句时才执行（import语句是可以在程序中的任意位置使用的,为了避免同一个模块重复导入，python的优化手段是：第一次导入后就将模块名加载到内存了，后续的import语句仅是对已经加载大内存中的模块对象增加了一次引用，不会重新执行模块内的语句）</p>
+<h5 id="模块导入的过程"><a href="#模块导入的过程" class="headerlink" title="模块导入的过程"></a>模块导入的过程</h5><p><strong>import 语句</strong></p>
+<p>想使用 Python 源文件，只需在另一个源文件里执行 import 语句，语法如下：</p>
+<ol>
+<li><h6 id="import-moduels-模块名字）"><a href="#import-moduels-模块名字）" class="headerlink" title="import moduels(模块名字）"></a>import moduels(模块名字）</h6></li>
+</ol>
+<p>导入整个模块，这种导入方式比较占用内存</p>
+<ol start="2">
+<li><h6 id="import-moduels-模块名字-as-XX"><a href="#import-moduels-模块名字-as-XX" class="headerlink" title="import moduels (模块名字) as XX"></a>import moduels (模块名字) as XX</h6><p>这里是导入整个模块的同时给它取一个别名，因为有些模块名字比较长，用一个缩写的别名代替在下次用到它时就比较方便</p>
+</li>
+<li><h6 id="from-modules-模块名字-import-func-方法）"><a href="#from-modules-模块名字-import-func-方法）" class="headerlink" title="from modules(模块名字)  import func(方法）"></a>from modules(模块名字)  import func(方法）</h6><p>从一个模块里导入方法，你要用到模块里的什么方法就从那个模块里导入那个方法，这样占用的内存就比较少</p>
+<p>也可以用别名表示 ： from modules(模块名字) import func(方法）as XX</p>
+</li>
+<li><h6 id="from-package-modules-import-func-方法）"><a href="#from-package-modules-import-func-方法）" class="headerlink" title="from package.modules  import func(方法）"></a>from package.modules  import func(方法）</h6><p>从一个包的模块里导入方法 这个方法跟上面那种基本一样，占用的内存也比较少</p>
+<p>也可以用别名表示，from modules(模块名字)  import func(方法）as   XX</p>
+</li>
+<li><h6 id="from…-import"><a href="#from…-import" class="headerlink" title="from…..import *"></a>from…..import *</h6><p>表示导入模块中所有的不是以下划线(_)开头的名字都导入到当前位置，大部分情况下我们的python程序不应该使用这种导入方式，因为*你不知道你导入什么名字，很有可能会覆盖掉你之前已经定义的名字。而且可读性极其的差，在交互式环境中导入时没有问题。</p>
+</li>
+</ol>
+<p>还有一点要说的是，如果使用* 的方式进行了导入，这时只想使用里面的某个或某些功能时，可以使用__ all__来进行约束；</p>
+<p>注意：__ all__只是用来约束* 方式的，其他方式导入的话，不会生效；</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#直接导入</span></span><br><span class="line"><span class="keyword">import</span> pandas</span><br><span class="line"></span><br><span class="line"><span class="comment">#加别名</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># #看一下from.....import 的使用</span></span><br><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> modules</span><br><span class="line">print(modules)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># #再看一下使用as引用这个模块的某个功能；</span></span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="comment">#这样在之后我们要调用这个模块只需要用plt即可，相当于起别名。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="包"><a href="#包" class="headerlink" title="包"></a>包</h2><p>包是一种组织管理代码的方式，包里放着模块</p>
+<p>用于将模块包含在一起的一个文件夹</p>
+<p>假如一个模块的名称是 A.B，那么他表示一个包 A中的子模块B 。</p>
+<h3 id="包的结构"><a href="#包的结构" class="headerlink" title="包的结构"></a>包的结构</h3><ul>
+<li><p>/— 包   #顶层包</p>
+</li>
+<li><p>/—/— init.py 包的  #初始化顶层包</p>
+</li>
+<li><p>/—/— 模块1</p>
+</li>
+<li><p>/—/— 模块2</p>
+</li>
+<li><p>/—/— 子包</p>
+</li>
+<li><p>/—/—/— init.py 包的标志文件</p>
+</li>
+<li><p>/—/—/— 子包的模块1</p>
+</li>
+</ul>
+<h3 id="包的导入操作"><a href="#包的导入操作" class="headerlink" title="包的导入操作"></a>包的导入操作</h3><p>包的导入分为import和from…import…两种，但是无论哪种方式，在导入时必须都遵循一个原则：凡是在导入时带点的，点的左边必须是一个包，否则非法。在导入后使用时，就没有这些规则了，点的左边可以是包、模块、函数等（他们可以用点的方式调用自己的属性）。 </p>
+<p>包的本质就是文件夹，导入包就相当于导入包下的__ init__.py文件</p>
+<p>下面我们具体看下包的导入有哪些方式</p>
+<ol>
+<li><h6 id="import-package-name"><a href="#import-package-name" class="headerlink" title="import package_name"></a>import package_name</h6><p>直接导入一个包，可以直接使用__ init__.py的内容</p>
+<p>eg.import time， 用import直接导入python的time模块</p>
+</li>
+<li><h6 id="import-package-name-as-p"><a href="#import-package-name-as-p" class="headerlink" title="import package name as p"></a>import package name as p</h6><p>具体用法跟作用方法，跟上面一致，相当于起别名</p>
+<p>注意的是此方法默认是对 __ init__.py的内容进行导入</p>
+</li>
+<li><h6 id="from-…-import-…导"><a href="#from-…-import-…导" class="headerlink" title="from … import …导"></a>from … import …导</h6><p>from package import module,module2…..</p>
+<p>eg. from random import randint   即导入random包中的randint函数</p>
+<p>​      from time import time,localtima  即从time包导入time函数和localtime函数</p>
+</li>
+<li><h6 id="from-package-import"><a href="#from-package-import" class="headerlink" title="from package import *"></a>from package import *</h6><p>导入指定包的所有内容</p>
+</li>
+</ol>
+<h2 id="包和模块区别"><a href="#包和模块区别" class="headerlink" title="包和模块区别"></a>包和模块区别</h2><p>包是比模块更高层的概念，模块一般是一个文件，包是一个目录，一个包中可以包含很多个模块。</p>
+<p>包的<strong>all</strong> 定义在init.py文件中，模块的<strong>all</strong>定义在模块文件的开头</p>
+<p><em>以下包用P表示，模块用M表示，方法用F表示</em></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#在Python中引入模块可以用</span></span><br><span class="line"><span class="keyword">import</span> M</span><br><span class="line"><span class="keyword">from</span> M <span class="keyword">import</span> * </span><br><span class="line"><span class="keyword">from</span> M <span class="keyword">import</span> F</span><br><span class="line"></span><br><span class="line"><span class="comment">#引入包的方式可以是</span></span><br><span class="line"><span class="keyword">import</span> P</span><br><span class="line"><span class="keyword">from</span> P <span class="keyword">import</span> M</span><br><span class="line"><span class="keyword">from</span> P <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> P.M <span class="keyword">import</span> F</span><br><span class="line"><span class="keyword">from</span> P1.P2.M <span class="keyword">import</span> F</span><br></pre></td></tr></table></figure>
+
+<p>另外，包的init.py文件不能少。</p>
+<h3 id="概念说明"><a href="#概念说明" class="headerlink" title="概念说明"></a>概念说明</h3><p>这里理清python中模块、库、包之间的概念差异</p>
+<p>模块(module)其实就是py文件，里面定义了一些函数、类、变量等。</p>
+<p>包(package)是多个模块的聚合体形成的文件夹，里面可以是多个py文件，也可以嵌套文件夹。</p>
+<p>库是参考其他编程语言的说法，是指完成一定功能的代码集合，在python中的形式就是模块和包。</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/posts/9812.html'>
-            Read More
-          </a>
+      
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\posts\59346.html" title="12.Python面向对象(3)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191225231208.png" /><span class="title">12.Python面向对象(3)</span><span class="excerpt">Python面向对象单例模式</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\901b8cd5.html" title="Day3.Python判断与循环语句" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day3.Python判断与循环语句</span><span class="excerpt">Python判断与循环语句！！！</span></a></div></section></div>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>版权声明：本网站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="/">数据科学</a></p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/5144bcf.html>http://www.a2data.cn/posts/5144bcf.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+        <div class='donate'>
+          <div class='imgs'>
+            
+              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/alipay.jpg'>
+            
+              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/wechat.png'>
+            
+          </div>
         </div>
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-16T12:18:22+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Sep 16, 2020</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python</p></a></div>
 
 
-    
-  
-</div>
-<aside class='l_side'>
-  
-  
-    
-    
+        
+      
+        
+      
+        
+          
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>1.5k words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>5 min</p>
+    </a>
+  </div>
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://7.dusays.com/2020/09/10/3694a41d52ade.jpg'/>
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/5144bcf.html&title=Day14.模块和包 - DataScience&summary=模块和包"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
         </a>
       
     
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/5144bcf.html&title=Day14.模块和包 - DataScience&summary=模块和包"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
     
-      <div class='text'>
-        
-          <h2>Jack` Féng</h2>
-        
-        
-          <p>放弃不难,但坚持一定很酷！</p>
-
-        
-        
-      </div>
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/5144bcf.html&title=Day14.模块和包 - DataScience&summary=模块和包"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
     
-    
-      <div class="social-wrapper">
+      
         
-          
-            <a href="https://github.com/A2Data"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=a2data@163.com"
-              class="social fas fa-envelope-open flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=66860619"
-              class="social fab fa-qq flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://gitee.com/sqlsq_admin/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
-              class="social fab fa-weixin flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://me.csdn.net/weixin_47093227"
-              class="social fab fa-cuttlefish flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACTklEQVR42u3bSXLDMAwEQP3/08kDUioSi2ILbN68SGLTlykAvn4OXRc4ODg4OPgg+JVcf2548/7qe9HnVfcLDg4ODg4+Eb4dABbw6MarBxc+aHBwcHBw8MHw3Y1nr88C2vYLDg4ODg4OvgwkXQdRPWhwcHBwcHDweIDJwqIFC3BwcHBwcPBCgX5xfbShkD3Yf++kgIODg4ODfxE8PTD3odcfn2wEBwcHBwf/Anh1RRsF0cJFdoDgdr/g4ODg4OCD4NmAkC1YZA+oa3/g4ODg4OCT4NUNZBsL0YNra2iAg4ODg4MPgmeDQrZAkS0wtN0HHBwcHBz8AHh3IyELig4mLN8HBwcHBwc/GL4LfmpgILsvcHBwcHDwifCuAkR1kC+6j/QfB8DBwcHBwQfBu4LC7uuuQsPuD/B4cgMHBwcHB/8gPBtAqgMC2UbDNnDVUAAHBwcHBx8A7w4eu4Gka2CvLbmBg4ODg4O/GN61oWpho3qQ4YYCODg4ODj4AHh34yA6ENA1eFDupICDg4ODg78Y/nhjvqkRsfs5ODg4ODj4SfDuRn80wDxemAAHBwcHBx8Er67Vg6KFjWwg2j4YcHBwcHDwQfBqYIg2ALYL/8GGRrqhAA4ODg4OPgCebRhUAd0BZrlfcHBwcHDwwfDdgn31+mqDIBuwwMHBwcHBweMD89WgFA1S4YkIcHBwcHDwg+Fdhf+uQYDb+4ODg4ODgw+GdwWL7u9lAww4ODg4OPgJ8GwwqAaY6HN277fdUAAHBwcHB38x/LQFDg4ODg4+YP0CL1H/apULnrwAAAAASUVORK5CYII=">
+          </div>
+        </div>
+      
     
   </div>
-</section>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/8f19a96e.html'>
+          <p class='title'>Day13.继承和多态<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>继承 和多态
+
+
+继承什么是继承？
+继承是一种创建新的类的方式，新创建的叫子类，继承的叫父类、超类、基类。
+
+特点：子类可以使用父类的属性（特征、技能）
+
+继承是类与类之间的关系
+
+
+为什么要继...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
 
   
 
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
   
     
     
@@ -1639,231 +1877,27 @@
     
     
 
-<section class="widget text shadow desktop mobile">
-  
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
   <header>
     
-      <i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i><span class='name'>公告</span>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-  <div class='content'>
-    
-      <p>本站默认替换了右键菜单，唤醒原系统菜单：<code>Ctrl</code> + <code>右键</code></p>
-
-    
-      <p>回归本心、去繁从简</p>
-
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobile">
-  
-  <header>
-    
-      <i class="fas fa-qrcode fa-fw fa-fw" aria-hidden="true"></i><span class='name'>公众号</span>
-    
-  </header>
-
-
-  <div class='content article-entry'>
-    
-      
-        <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/0d49517cc7f0ea7b452a71f1e26976c.png'
-        >
-      
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobule">
-  
-  <header>
-    
-      <i class="fas fa-mobile fa-fw" aria-hidden="true"></i><span class='name'>小程序</span>
-    
-  </header>
-
-
-  <div class='content article-entry'>
-    
-      
-        <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/xcx.jpg'
-        >
-      
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget text shadow desktop">
-  
-  <header>
-    
-      <i class="far fa-comments fa-fw" aria-hidden="true"></i><span class='name'>最新评论</span>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <div id="hot-comments"></div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop">
-  
-  <header>
-    
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>88 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2018/12/18'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>123k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Wed Sep 16 2020 12:18:47 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2020-09-16 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2020-09-16 日';
-          }
-        </script>
-        
-      
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97"><span class="toc-text">模块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%A8%A1%E5%9D%97%EF%BC%9F"><span class="toc-text">什么是模块？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%A8%A1%E5%9D%97%EF%BC%9F"><span class="toc-text">如何使用模块？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E7%9A%84%E6%9E%84%E6%88%90"><span class="toc-text">模块的构成</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%85%A5%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="toc-text">模块导入的过程</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%85"><span class="toc-text">包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-text">包的结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E7%9A%84%E5%AF%BC%E5%85%A5%E6%93%8D%E4%BD%9C"><span class="toc-text">包的导入操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%85%E5%92%8C%E6%A8%A1%E5%9D%97%E5%8C%BA%E5%88%AB"><span class="toc-text">包和模块区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5%E8%AF%B4%E6%98%8E"><span class="toc-text">概念说明</span></a></li></ol></li></ol>
     </div>
-  </div>
-</section>
+  </section>
+
 
   
 
 
 </aside>
-
 
 
 

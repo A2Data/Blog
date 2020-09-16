@@ -4947,28 +4947,28 @@ img.lazyload:not(.placeholder).loaded {
   filter: none;
 }
 .tagred {
-  background: #feecf0;
-  color: #cc0f35;
+  background: #feecf0 !important;
+  color: #cc0f35 !important;
 }
 .tagyellow {
-  background: #f4e9ff;
-  color: #8a51c0;
+  background: #f4e9ff !important;
+  color: #8a51c0 !important;
 }
 .tagblue {
-  background: #eef3fc;
-  color: #2160c4;
+  background: #eef3fc !important;
+  color: #2160c4 !important;
 }
 .taggreen {
-  background: #ebfffc;
-  color: #00947e;
+  background: #ebfffc !important;
+  color: #00947e !important;
 }
 .tagpurple {
-  background: #f4e9ff;
-  color: #8a51c0;
+  background: #f4e9ff !important;
+  color: #8a51c0 !important;
 }
 .taggrown {
-  background: #fffbeb;
-  color: #947600;
+  background: #fffbeb !important;
+  color: #947600 !important;
 }
 .card-comment-item {
   margin: 10px 0 10px 0;
