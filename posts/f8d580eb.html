@@ -1391,7 +1391,7 @@
             
 <div class='new-meta-item author'>
   <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://gitee.com/sqlsq_admin/cdn/raw/master/avatar.png">
+    <img no-lazy src="https://gitee.com/DataITems/cdn/raw/master/avatar.png">
     <p>JackFeng</p>
   </a>
 </div>
@@ -1488,14 +1488,14 @@
 <h1 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h1><p>MYSQL8.0后版本不支持grant语句直接创建用户，因此需要先创建用户，再进行赋权。</p>
 <h2 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">&#x27;username&#x27;</span>@<span class="string">&#x27;hostname&#x27;</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">&#x27;密码&#x27;</span>;</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">user</span> <span class="string">&#x27;csg1&#x27;</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">&#x27;123&#x27;</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614195339691.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614195339691.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614195339691"></p>
+<p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614195339691.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200614195339691.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614195339691"></p>
 <p>用Create创建的用户仅有系统默认权限usage，无其他权限。</p>
 <h2 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">USER</span> <span class="string">&#x27;username&#x27;</span>@<span class="string">&#x27;hostname&#x27;</span>;</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">user</span> csg1;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614195455547.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614195455547.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614195455547"></p>
+<p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614195455547.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200614195455547.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614195455547"></p>
 <h1 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h1><h3 id="赋权"><a href="#赋权" class="headerlink" title="赋权"></a>赋权</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> priviledge_name[(list_name1,<span class="keyword">list</span>?_name2)] <span class="keyword">ON</span> dbname.table_name <span class="keyword">FROM</span> <span class="string">&#x27;username&#x27;</span>@<span class="string">&#x27;hostname&#x27;</span>;</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line">对账号&#x27;csg1&#x27;添加数据库&#x27;mysqlpractice&#x27;所有表的&#x27;<span class="keyword">select</span><span class="string">&#x27;权限。</span></span><br><span class="line"><span class="string">grant select on mysqlpractice.* to csg1;</span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614201705116.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614201705116.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614201705116"></p>
+<p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614201705116.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200614201705116.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614201705116"></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">案例：</span><br><span class="line">对全库全表赋权所有权限。</span><br><span class="line"></span><br><span class="line"><span class="keyword">grant</span> <span class="keyword">all</span> <span class="keyword">on</span> *.* <span class="keyword">to</span> dba@localhost;</span><br></pre></td></tr></table></figure>
 
 
@@ -1508,7 +1508,7 @@
 
 
 
-<p><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614202521110.png" class="lazyload" data-srcset="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614202521110.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614202521110"></p>
+<p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614202521110.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200614202521110.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614202521110"></p>
 
   
   
@@ -1522,7 +1522,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\773d5f8c.html" title="1.DBeaver安装" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200502181911650.png" /><span class="title">1.DBeaver安装</span><span class="excerpt">DBeaver安装步骤</span></a><a class="item" href="\posts\4354b039.html" title="1.认识Mysql" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/20200610232427.png" /><span class="title">1.认识Mysql</span><span class="excerpt">认识mysql！</span></a><a class="item" href="\posts\b794162c.html" title="2.数据库操作-DDL" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/image-20200421154433187.png" /><span class="title">2.数据库操作-DDL</span><span class="excerpt">数据库操作DDL</span></a><a class="item" href="\posts\6656ad65.html" title="3.数据库操作-DML" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200615211933034.png" /><span class="title">3.数据库操作-DML</span><span class="excerpt">数据库操作DML</span></a><a class="item" href="\posts\e4f3239b.html" title="5.数据库操作-TCL" rel="bookmark "><img src="https://gitee.com/sqlsq_admin/cdn/raw/master/image-20200614215919792.png" /><span class="title">5.数据库操作-TCL</span><span class="excerpt">数据库操作TCL</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\773d5f8c.html" title="1.DBeaver安装" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200502181911650.png" /><span class="title">1.DBeaver安装</span><span class="excerpt">DBeaver安装步骤</span></a><a class="item" href="\posts\4354b039.html" title="1.认识Mysql" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/20200610232427.png" /><span class="title">1.认识Mysql</span><span class="excerpt">认识mysql！</span></a><a class="item" href="\posts\b794162c.html" title="2.数据库操作-DDL" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/image-20200421154433187.png" /><span class="title">2.数据库操作-DDL</span><span class="excerpt">数据库操作DDL</span></a><a class="item" href="\posts\6656ad65.html" title="3.数据库操作-DML" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200615211933034.png" /><span class="title">3.数据库操作-DML</span><span class="excerpt">数据库操作DML</span></a><a class="item" href="\posts\e4f3239b.html" title="5.数据库操作-TCL" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614215919792.png" /><span class="title">5.数据库操作-TCL</span><span class="excerpt">数据库操作TCL</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1544,9 +1544,9 @@
         <div class='donate'>
           <div class='imgs'>
             
-              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/alipay.jpg'>
+              <img src='https://gitee.com/DataITems/cdn/raw/master/alipay.jpg'>
             
-              <img src='https://gitee.com/sqlsq_admin/cdn/raw/master/wechat.png'>
+              <img src='https://gitee.com/DataITems/cdn/raw/master/wechat.png'>
             
           </div>
         </div>
@@ -1561,10 +1561,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-11T16:31:16+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-18T10:25:43+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 11, 2020</p>
+    <p>更新于：Sep 18, 2020</p>
   </a>
 </div>
 
@@ -1666,17 +1666,8 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/4a17b156.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Hello World</p>
-          <p class='content'>Hexo 初始页面。
-
-
-Welcome to Hexo! This is your very first post. Check documentation for more info. If...</p>
-        </a>
-      
-      
-        <a class='next' href='/posts/e4f3239b.html'>
-          <p class='title'>5.数据库操作-TCL<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/posts/e4f3239b.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>5.数据库操作-TCL</p>
           <p class='content'>数据库操作TCL
 
 
@@ -1684,6 +1675,22 @@ TCL
 TCL（Transaction Control Language），事务控制语言。
 主要用途：对数据库进行事务控制的指令。
 操纵命令：COMMIT、ROLLBACK...</p>
+        </a>
+      
+      
+        <a class='next' href='/posts/b794162c.html'>
+          <p class='title'>2.数据库操作-DDL<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>数据库操作DDL
+
+
+DDL
+DDL（Data Definition Language）是连接存储世界与现实世界的高铁！
+
+
+主要用途：
+对数据库对象进行创建、修改、删除等操作。
+操作对象：
+数...</p>
         </a>
       
     </div>
@@ -1894,7 +1901,7 @@ TCL（Transaction Control Language），事务控制语言。
                         
                     
                         
-                            <a href="https://gitee.com/sqlsq_admin/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
+                            <a href="https://gitee.com/DataITems/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
                                class="social fab fa-weixin flat-btn"
                                target="_blank"
                                rel="external nofollow noopener noreferrer">
@@ -2231,12 +2238,12 @@ TCL（Transaction Control Language），事务控制语言。
         
           
     <li>
-      <a class='vlts-menu fix-cursor-default' href=https://gitee.com/sqlsq_admin/cdn/raw/master/sys.png
+      <a class='vlts-menu fix-cursor-default' href=https://gitee.com/DataITems/cdn/raw/master/sys.png
       
       
       
       
-         id="https:giteecomsqlsq_admincdnrawmastersyspng"
+         id="https:giteecomDataITemscdnrawmastersyspng"
               >
         <i class='fa fa-fan fa-spin fa-fw'></i> 公众号
       </a>
