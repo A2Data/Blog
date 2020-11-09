@@ -101,6 +101,8 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
+            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
+          
           
         </a>
       
@@ -268,7 +270,7 @@
       list-max-height='320px'
       server='netease'
       type='playlist'
-      id='2948214773'
+      id='5229739363'
       list-folded='true'>
     </meting-js>
   
@@ -1606,7 +1608,7 @@
 <p>主要是 自己的分支与主分支保持同步。</p>
 <p>步骤：</p>
 <ul>
-<li><p>1、git remote add master  <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#117;&#x62;&#x2e;&#99;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#117;&#x62;&#x2e;&#99;&#x6f;&#109;</a>:A2Data/A2Data.github.io.git  // 主分支master</p>
+<li><p>1、git remote add master  <a href="mailto:&#103;&#x69;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#109;">&#103;&#x69;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#109;</a>:A2Data/A2Data.github.io.git  // 主分支master</p>
 </li>
 <li><p>2、 git branch -v 查看是否添加</p>
 </li>
@@ -1656,7 +1658,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\47936.html" title="手把手教你玩git" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20200330223604.png" /><span class="title">手把手教你玩git</span><span class="excerpt">Git 深入浅出，史无前例的详细教程。</span></a><a class="item" href="\posts\88fead8.html" title="2.Git多平台同步" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/20200831142714.png" /><span class="title">2.Git多平台同步</span><span class="excerpt">Git 将一个项目同步到多平台上。</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\88fead8.html" title="2.Git多平台同步" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/20200831142714.png" /><span class="title">2.Git多平台同步</span><span class="excerpt">Git 将一个项目同步到多平台上。</span></a><a class="item" href="\posts\47936.html" title="手把手教你玩git" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20200330223604.png" /><span class="title">手把手教你玩git</span><span class="excerpt">Git 深入浅出，史无前例的详细教程。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2645,7 +2647,7 @@
 
   <script>
   let APlayerController = new Object();
-  APlayerController.id = '2948214773';  // 设定全局音乐播放ID
+  APlayerController.id = '5229739363';  // 设定全局音乐播放ID
   APlayerController.volume = '0.3';
   APlayerController.autoPlay = 'true';
 </script>
@@ -2797,7 +2799,11 @@
       var hotComments = $("#hot-comments");
       for (var i = 0; i < comments.length; i++) {
         if (i === 0) {
-          console.log(comments[0]);
+          // console.log(comments[0]);
+          console.log("\n %c DataScience %c https://www.a2data.cn \n", "color: #fadfa3; background: #030307; padding:5px 0;", "background: #fadfa3; padding:5px 0;"),
+          window.customElements && !window.customElements.get("meting-js") && (window.MetingJSElement = MetingJSElement,
+                  window.customElements.define("meting-js", MetingJSElement));
+
         }
         var nick = bozhu(comments[i]._serverData.nick);
         var content = comments[i]._serverData.comment;

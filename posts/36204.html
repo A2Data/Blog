@@ -101,6 +101,8 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
+            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
+          
           
         </a>
       
@@ -268,7 +270,7 @@
       list-max-height='320px'
       server='netease'
       type='playlist'
-      id='2948214773'
+      id='5229739363'
       list-folded='true'>
     </meting-js>
   
@@ -1557,7 +1559,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\62910.html" title="Python环境搭建" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/p0.png" /><span class="title">Python环境搭建</span><span class="excerpt">人生苦短，我用Python。</span></a><a class="item" href="\posts\43150.html" title="Linux安装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux安装</span><span class="excerpt">linux介绍及安装</span></a><a class="item" href="\posts\48061.html" title="从零搭建ubuntu" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230114723.png" /><span class="title">从零搭建ubuntu</span><span class="excerpt">安装ubuntu、sublime骚操作</span></a><a class="item" href="\posts\64846.html" title="带你玩转idea" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">带你玩转idea</span><span class="excerpt">IDEA 玩转详细教程</span></a><a class="item" href="\posts\44947.html" title="GitBook" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">GitBook</span><span class="excerpt">‘GitBook文档，安装使用’</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\43150.html" title="Linux安装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux安装</span><span class="excerpt">linux介绍及安装</span></a><a class="item" href="\posts\62910.html" title="Python环境搭建" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/p0.png" /><span class="title">Python环境搭建</span><span class="excerpt">人生苦短，我用Python。</span></a><a class="item" href="\posts\48061.html" title="从零搭建ubuntu" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191230114723.png" /><span class="title">从零搭建ubuntu</span><span class="excerpt">安装ubuntu、sublime骚操作</span></a><a class="item" href="\posts\64846.html" title="带你玩转idea" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">带你玩转idea</span><span class="excerpt">IDEA 玩转详细教程</span></a><a class="item" href="\posts\44947.html" title="GitBook" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">GitBook</span><span class="excerpt">‘GitBook文档，安装使用’</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2554,7 +2556,7 @@ Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统�
 
   <script>
   let APlayerController = new Object();
-  APlayerController.id = '2948214773';  // 设定全局音乐播放ID
+  APlayerController.id = '5229739363';  // 设定全局音乐播放ID
   APlayerController.volume = '0.3';
   APlayerController.autoPlay = 'true';
 </script>
@@ -2706,7 +2708,11 @@ Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统�
       var hotComments = $("#hot-comments");
       for (var i = 0; i < comments.length; i++) {
         if (i === 0) {
-          console.log(comments[0]);
+          // console.log(comments[0]);
+          console.log("\n %c DataScience %c https://www.a2data.cn \n", "color: #fadfa3; background: #030307; padding:5px 0;", "background: #fadfa3; padding:5px 0;"),
+          window.customElements && !window.customElements.get("meting-js") && (window.MetingJSElement = MetingJSElement,
+                  window.customElements.define("meting-js", MetingJSElement));
+
         }
         var nick = bozhu(comments[i]._serverData.nick);
         var content = comments[i]._serverData.comment;

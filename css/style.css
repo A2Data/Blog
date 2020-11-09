@@ -5134,7 +5134,7 @@ a.comments-detail:hover {
   z-index: 1000;
   top: 0;
   width: 100%;
-  height: 50px;
+  height: 58px;
   background: var(--color-card);
   box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
 }
@@ -5163,12 +5163,6 @@ a.comments-detail:hover {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-}
-.l_header .wrapper .nav-main {
-  transition: all 0.28s ease;
-  -moz-transition: all 0.28s ease;
-  -webkit-transition: all 0.28s ease;
-  -o-transition: all 0.28s ease;
 }
 .l_header .wrapper.sub .nav-main {
   transform: translateY(-50px);

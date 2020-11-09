@@ -101,6 +101,8 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
+            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
+          
           
         </a>
       
@@ -268,7 +270,7 @@
       list-max-height='320px'
       server='netease'
       type='playlist'
-      id='2948214773'
+      id='5229739363'
       list-folded='true'>
     </meting-js>
   
@@ -2590,7 +2592,7 @@ Hexo 部署到码云
 
   <script>
   let APlayerController = new Object();
-  APlayerController.id = '2948214773';  // 设定全局音乐播放ID
+  APlayerController.id = '5229739363';  // 设定全局音乐播放ID
   APlayerController.volume = '0.3';
   APlayerController.autoPlay = 'true';
 </script>
@@ -2742,7 +2744,11 @@ Hexo 部署到码云
       var hotComments = $("#hot-comments");
       for (var i = 0; i < comments.length; i++) {
         if (i === 0) {
-          console.log(comments[0]);
+          // console.log(comments[0]);
+          console.log("\n %c DataScience %c https://www.a2data.cn \n", "color: #fadfa3; background: #030307; padding:5px 0;", "background: #fadfa3; padding:5px 0;"),
+          window.customElements && !window.customElements.get("meting-js") && (window.MetingJSElement = MetingJSElement,
+                  window.customElements.define("meting-js", MetingJSElement));
+
         }
         var nick = bozhu(comments[i]._serverData.nick);
         var content = comments[i]._serverData.comment;
