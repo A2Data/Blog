@@ -17,13 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Linux Apache论坛 - DataScience</title>
+  <title>什么是需求？ - DataScience</title>
   
-    <meta name="keywords" content="Linux">
+    <meta name="keywords" content="数仓">
   
 
   
-    <meta name="description" content="Linux 手把手教你搭建Apahce论坛">
+    <meta name="description" content="数仓需求的来源,以及流程。">
   
 
   <!-- feed -->
@@ -1341,7 +1341,7 @@
  
 <div id="pjax-data" style="display: none"> 
   <div id="pjax-ispage">true</div> 
-  <div id="pjax-pageTitle">Linux Apache论坛</div> 
+  <div id="pjax-pageTitle">什么是需求？</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -1379,13 +1379,9 @@
   <div class="article-meta" id="top">
     
     
-      <a title='Linux Apache论坛' href='/posts/41055.html'>
-        <img class='thumbnail' src='https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200425200227.png'>
-      </a>
-    
     
       <h1 class="title">
-        Linux Apache论坛
+        什么是需求？
       </h1>
       <div class='new-meta-box'>
         
@@ -1404,7 +1400,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Apr 25, 2020</p>
+    <p>发布于：Nov 10, 2020</p>
   </a>
 </div>
 
@@ -1412,13 +1408,6 @@
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Linux/">Linux</a>
-    </a>
-  </div>
-
 
           
         
@@ -1427,13 +1416,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>476 words</p>
+      <p>1.7k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>2 min</p>
+      <p>5 min</p>
     </a>
   </div>
 
@@ -1445,7 +1434,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="Linux Apache论坛" data-path="/posts/41055.html">
+      <div id="lc-pv" data-title="什么是需求？" data-path="/posts/6f521982.html">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -1460,9 +1449,9 @@
             
 <div class="new-meta-item comments-count">
   
-  <a href="/posts/41055.html#comments">
+  <a href="/posts/6f521982.html#comments">
     <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/41055.html">0</span>
+    <span class="valine-comment-count" data-xid="/posts/6f521982.html">0</span>
     <span class="leancloud-comments-count">&nbsp;</span>
   </a>
 </div>
@@ -1477,28 +1466,63 @@
 
   
   
-  <p>Linux 手把手教你搭建Apahce论坛</p>
+  <p>数仓需求的来源,以及流程。</p>
 <a id="more"></a>
 
-
-<h1 id="搭建一个Apache论坛"><a href="#搭建一个Apache论坛" class="headerlink" title="搭建一个Apache论坛"></a>搭建一个Apache论坛</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">该论坛是再虚拟机环境下运行，实机一样得操作。 </span><br><span class="line"> </span><br><span class="line"> 恢复快照，检测是否有 阿帕奇</span><br><span class="line"></span><br><span class="line"> service httpd restart</span><br><span class="line"></span><br><span class="line"> 源代码安装的 进入apache目录 删除即可</span><br><span class="line"></span><br><span class="line"> yum源安装的 使用 rmp卸载 </span><br></pre></td></tr></table></figure>
-
-<h2 id="一、挂载"><a href="#一、挂载" class="headerlink" title="一、挂载"></a>一、挂载</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mount  /dev/cdrom /mnt 挂载镜像文件到/mnt</span><br><span class="line"></span><br><span class="line">ls /mnt/Server/  查看是否有文件</span><br><span class="line"></span><br><span class="line">vim /etc/yum.repos.d/aa.repo 配置yum文件</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">*【注：\* 为安装http 下所有包】</span><br><span class="line"></span><br><span class="line">1.yum -y install http\* （先装阿帕奇服务）</span><br><span class="line"></span><br><span class="line">2.yum -y install mysq\* （数据库）</span><br><span class="line"></span><br><span class="line">3.yum -y install php\* （php开发语言）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="三、启动"><a href="#三、启动" class="headerlink" title="三、启动"></a>三、启动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">service httpd restart 启动阿帕奇</span><br><span class="line"></span><br><span class="line">service mysqld restart 启动mysq</span><br><span class="line"></span><br><span class="line">再去启动论坛包（Discuz_X2_SC_UTF8）copy到虚拟机</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="四、解压（zip压缩包）"><a href="#四、解压（zip压缩包）" class="headerlink" title="四、解压（zip压缩包）"></a>四、解压（zip压缩包）</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">cd /root/Desktop 切换到桌面</span><br><span class="line"></span><br><span class="line">unzip Discuz_X2_SC_UTF8 解压Discuz到桌面</span><br><span class="line"></span><br><span class="line">cp -r upload /uar/www/html/ 复制upload文件到html</span><br><span class="line"></span><br><span class="line">cd /dav/www/html </span><br><span class="line"></span><br><span class="line">ls 切换到html 查看是否有upload文件</span><br><span class="line"></span><br><span class="line">（恢复快照）重新配置ip</span><br><span class="line"></span><br><span class="line">vim /etc/sysconfig/network-scripts/ifcfg-eth0</span><br><span class="line"></span><br><span class="line">ifdown eth0 &amp;&amp; ifup etho</span><br><span class="line"></span><br><span class="line">ping通（192.168.18.222）--本机</span><br><span class="line"></span><br><span class="line">使用本机或者虚拟机浏览器进行访问</span><br><span class="line"></span><br><span class="line">192.168.18.221 Red Hat  192.168.18.221 upload</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="五、安装"><a href="#五、安装" class="headerlink" title="五、安装"></a>五、安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">192.168.18.221/upload进入Dis 安装向导</span><br><span class="line"></span><br><span class="line">修改阿帕奇权属权限</span><br><span class="line"></span><br><span class="line">chown apache upload html -R</span><br><span class="line">（-R递归修改所有权属）</span><br></pre></td></tr></table></figure>
-
-<h2 id="六、创建数据库"><a href="#六、创建数据库" class="headerlink" title="六、创建数据库"></a>六、创建数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mysql 进入数据库</span><br><span class="line"></span><br><span class="line">show databases； 显示当前数据库</span><br><span class="line"></span><br><span class="line">create database hehe; 创建 hehe</span><br><span class="line"></span><br><span class="line">grant all on hehe.\* to ‘hh’@‘localhost’ identified by ‘123456’; (密码 ，授权）</span><br><span class="line"></span><br><span class="line">数据库名：hehe</span><br><span class="line"></span><br><span class="line">数据库用户名：hh</span><br><span class="line"></span><br><span class="line">密码：123456</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="错误情况方案整理："><a href="#错误情况方案整理：" class="headerlink" title="错误情况方案整理："></a>错误情况方案整理：</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">1、数据库模版错误</span><br><span class="line"></span><br><span class="line">   yum -y install php-\*</span><br><span class="line"></span><br><span class="line">2、安装http中过程中途停止</span><br><span class="line"></span><br><span class="line">   yum -y install httpd-devel</span><br><span class="line"></span><br><span class="line">3、安装mysql时出错</span><br><span class="line"></span><br><span class="line">   yum -y install mysql-connector-odbc</span><br><span class="line"></span><br><span class="line">4、想卸载已安装http（apache）时，需在挂载镜像。</span><br><span class="line"></span><br><span class="line">  yum -y remove http\*</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">5、配置yum（配置服务器中文包）</span><br><span class="line"></span><br><span class="line">yum install fonts-chinese.noarch</span><br><span class="line"></span><br><span class="line">yum install m17n-db-common-cjk</span><br><span class="line"></span><br><span class="line">yum install m17n-db-chinese</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><blockquote>
+<p>概述: </p>
+<ul>
+<li>业务需求(business requirement)表示组织或客户高层次的目标</li>
+<li>用户需求(user requirement)描述的是用户的目标,或是用户要求系统必须完成的任务</li>
+<li>功能需求(functional requirement)规定开发人员必须在产品中实现的软件功能，用户利用这些功能来完成任务，满足业务需求。</li>
+</ul>
+</blockquote>
+<p><strong>需求</strong>是数仓的核心,无论从广度还是深度的层面上做好需求调研的工作,对数仓的建设百利而无一害</p>
+<h2 id="需求分类"><a href="#需求分类" class="headerlink" title="需求分类"></a>需求分类</h2><ul>
+<li>项目需求:搭建数仓需要完成哪些基础目标,以模板作为导向</li>
+<li>业务部门的需求:通过需求调研,了解业务部门希望在数仓搭建完成后,能对业务有多少<strong>实质性</strong>的帮助</li>
+</ul>
+<p><img src="https://gitee.com/DataITems/cdn/raw/master/1601215112590.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/1601215112590.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h2 id="需求调研步骤"><a href="#需求调研步骤" class="headerlink" title="需求调研步骤"></a>需求调研步骤</h2><h3 id="1-确定调研对象"><a href="#1-确定调研对象" class="headerlink" title="1.确定调研对象"></a>1.确定调研对象</h3><p>在数仓调研过程中,不可避免的会遇到业务人员以为某项功能可以很轻松的实现,而技术人员完全听不懂专业的业务术语,会影响整个项目进度,而且在需求不清晰地情况下盲目的进行工作,会给日后的工作留下很多隐患.</p>
+<p>数仓团队中往往会存在一个业务咨询师的角色,主要就是负责技术和业务两方面的需求调研工作</p>
+<p>我记得以前做过一个银行数仓的搭建项目,整个团队埋头苦干,一个星期整理的需求分析的可用度不高,公司调来了一位高级咨询师,只用了三天,就把大致的需求分析做完了.</p>
+<p>术业有精通,这就是提高了整个项目的工作效率,数据仓库团队在进行需求调研时,需要把业务人员、技术人员和类似业务咨询师的项目成员召集起来一起反复谈论需求的细节</p>
+<h3 id="2-了解源系统"><a href="#2-了解源系统" class="headerlink" title="2.了解源系统"></a>2.了解源系统</h3><p>需要了解业务的源系统,包括源系统的所有者,源系统的业务流程,源系统的数据规范,源系统的数据存储方式,源系统的数据流程,源系统是否存在更新换代情况,源系统的数据库类型,源系统的源表等等,可以按照下图进行源系统文档的整理.</p>
+<p><img src="https://gitee.com/DataITems/cdn/raw/master/1601214627558.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/1601214627558.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="3-需求调研"><a href="#3-需求调研" class="headerlink" title="3.需求调研"></a>3.需求调研</h3><p>需求调研的目标是发现问题以及找到现阶段未发现的边界范围</p>
+<p>调查系统需求,主要是通过面谈、问卷调查法、观察法、体验法等方式,了解用户对系统的期待性功能,从而找到系统对应的相关事件,需求调研的重点应该放在业务过程上,而不是侧重于业务部门,例如有三个部门在某一个业务上存在交叉,那这个时候就不应该把部门需求放在第一位,首先应该梳理业务需求,数据服务于部门,而不是部门服务于业务.</p>
+<p>如果基于业务部门建立数据仓库总线矩阵雏形,会造成很多数据的重复性和交叉性,无法完成在数据应用上的目标.</p>
+<p>需要先对源数据进行初步评估,以便日后进行源数据处理</p>
+<h3 id="4-需求分析的内容"><a href="#4-需求分析的内容" class="headerlink" title="4.需求分析的内容"></a>4.需求分析的内容</h3><p>需求分析的内容主要可以分为下面三步:</p>
+<ul>
+<li>1.对象 </li>
+</ul>
+<p>拿到一个需求之后首先要分析的就是这个需求的主体是什么，关键对象是什么，然后再来分析于此相关联的对象都有什么，是否有什么漏洞 </p>
+<ul>
+<li>2.约束</li>
+</ul>
+<p>每一个需求之间都多多少少有关联，而需求分析的难点就在于把众多业务联系在一个平面上，从而解决数据搭建过程中的边界问题。需求的约束有哪些？限制有哪些？这些问题才是重点。</p>
+<p>例如：在银行数仓大环境中，同一个业务名称的指标在不同的业务部门之间会有不同的逻辑，对于A指标，财务部和风险部对其定义可能存在不一样的逻辑，这个时候就需要在需求分析过程中对该指标进行细化调研，搞明白该指标在不同的部门中的逻辑约束关系，为何会出现一个指标，而存在不同逻辑。当这些搞清楚后，对于轻度化汇总的宽表设计会有很大帮助。</p>
+<ul>
+<li>3.关系</li>
+</ul>
+<p>需求之间的关系往往错综复杂，一层套一层。即便不能搞清楚数仓搭建过程中所有的需求关系，但是重要的指标需求一定要搞清楚，避免给以后留下坑。</p>
+<p>例如：A部门的一个需求指标可能是由其他部门的指标加工而来的，或许还存在一些人工录入的数据，搞清楚这些后，可以解决基础层数据存储和模型层逻辑加工的很多问题。</p>
+<p>银行数仓中，有很多指标是交叉的，例如<strong>存量贷款</strong>这个词在财务中可能只需要未核销未结清的贷款部分，而在风险部中不仅需要这部分，还需要90天转表外的不良贷款金额，而这部分的金额是记录在外部账中，不始于财务的统计规则。</p>
+<h3 id="5-编写需求文档"><a href="#5-编写需求文档" class="headerlink" title="5.编写需求文档"></a>5.编写需求文档</h3><p>经过以上步骤产出的文档主要有<strong>需求规格文档</strong>、<strong>源系统跟踪报告</strong>、<strong>总线矩阵文档</strong>、<strong>数据评估报告</strong>。 </p>
+<blockquote>
+<p>下边大概为大家分享总结一些流程以及文档规范。</p>
+</blockquote>
+<h4 id="需求流程"><a href="#需求流程" class="headerlink" title="需求流程"></a>需求流程</h4><p><img src="https://7.dusays.com/2020/11/10/3bc2939923cf9.png" class="lazyload" data-srcset="https://7.dusays.com/2020/11/10/3bc2939923cf9.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h4 id="分析需求"><a href="#分析需求" class="headerlink" title="分析需求"></a>分析需求</h4><p>可行性分析：数据产品经理主导，邀请设计、数据安全与合规人员，对需求进行评估。</p>
+<ul>
+<li>需求合理性：评估该需求的合理性。</li>
+<li>数据可行性：评估当前已有数据能否支撑需求开发，如果缺少数据，则需要另行规划缺失数<br>据的抽取方案。<br>同时建议进行深入的数据探查，包括但不限于数据完整性、字段离散值分布情况、空值、零<br>值、重复值占比等情况。</li>
+<li>技术可行性：评估当前已有数据模型能否支撑需求开发，如果不能，则需要规划模型改造方<br>案，并充分评估其影响。同时在测试环境进行模型测试。</li>
+</ul>
+<h4 id="数据仓库业务模板"><a href="#数据仓库业务模板" class="headerlink" title="数据仓库业务模板"></a>数据仓库业务模板</h4><p><img src="https://7.dusays.com/2020/11/10/a62b65078e1d1.png" class="lazyload" data-srcset="https://7.dusays.com/2020/11/10/a62b65078e1d1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h4 id="单元测试报告"><a href="#单元测试报告" class="headerlink" title="单元测试报告"></a>单元测试报告</h4><p><img src="https://7.dusays.com/2020/11/10/0620bd84cad7a.png" class="lazyload" data-srcset="https://7.dusays.com/2020/11/10/0620bd84cad7a.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h4 id="数据评估报告"><a href="#数据评估报告" class="headerlink" title="数据评估报告"></a>数据评估报告</h4><p><img src="https://7.dusays.com/2020/11/10/d185b375a84ae.png" class="lazyload" data-srcset="https://7.dusays.com/2020/11/10/d185b375a84ae.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 
   
   
@@ -1512,7 +1536,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\46411.html" title="Linux基本操作" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200425192236.png" /><span class="title">Linux基本操作</span><span class="excerpt">Linux 基本操作。</span></a><a class="item" href="\posts\10415.html" title="Linux NFS网络文件" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux NFS网络文件</span><span class="excerpt">Linux 手把手教你搭建NFS网络文件系统。</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\43857.html" title="Linux Shell脚本" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell脚本</span><span class="excerpt">Linux Shell脚本相关学习。</span></a><a class="item" href="\posts\39704.html" title="Linux 计划任务" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux 计划任务</span><span class="excerpt">计划任务</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\19a88b12.html" title="数据仓库是什么" rel="bookmark "><img src="https://7.dusays.com/2020/11/09/a244f012d5f64.png" /><span class="title">数据仓库是什么</span><span class="excerpt">数据仓库是什么?</span></a><a class="item" href="\posts\bae4ff13.html" title="Redis" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200409004147.png" /><span class="title">Redis</span><span class="excerpt">详细说明Redis的安装。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1524,7 +1548,7 @@
               
             
               
-                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/41055.html>http://www.a2data.cn/posts/41055.html</a></p>
+                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/6f521982.html>http://www.a2data.cn/posts/6f521982.html</a></p>
               
             
           </blockquote>
@@ -1551,10 +1575,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-11T16:45:25+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-10T08:35:32+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 11, 2020</p>
+    <p>更新于：Nov 10, 2020</p>
   </a>
 </div>
 
@@ -1563,7 +1587,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Linux</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E4%BB%93/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>数仓</p></a></div>
 
 
         
@@ -1575,13 +1599,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>476 words</p>
+      <p>1.7k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>2 min</p>
+      <p>5 min</p>
     </a>
   </div>
 
@@ -1596,7 +1620,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/41055.html&title=Linux Apache论坛 - DataScience&pics=https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200425200227.png&summary=Linux 手把手教你搭建Apahce论坛"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/6f521982.html&title=什么是需求？ - DataScience&summary=数仓需求的来源,以及流程。"
           
           >
           
@@ -1608,7 +1632,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/41055.html&title=Linux Apache论坛 - DataScience&pics=https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200425200227.png&summary=Linux 手把手教你搭建Apahce论坛"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/6f521982.html&title=什么是需求？ - DataScience&summary=数仓需求的来源,以及流程。"
           
           >
           
@@ -1620,7 +1644,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/41055.html&title=Linux Apache论坛 - DataScience&pics=https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200425200227.png&summary=Linux 手把手教你搭建Apahce论坛"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/6f521982.html&title=什么是需求？ - DataScience&summary=数仓需求的来源,以及流程。"
           
           >
           
@@ -1634,7 +1658,7 @@
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACSUlEQVR42u3aQXLCQAwEQP7/6eQBFGVpVgkg996oMrbaXAZJj5+bngc4ODg4OPgi+CM8Tzf8p++d1gsODg4ODr4RXg4AxevTwqee/+p6cHBwcHDwzfBqgKh+7r6YNqRbLzg4ODg4OPgldCoYVZ8PDg4ODg4OPgdPYdVGBjg4ODg4OPhAgz4s7Oq60xcNDg4ODg5+J3i8MPemz2/fbAQHBwcHB/8A+OlJGxFXiwHp4sBlHeDg4ODg4IvgaUCYHgB0Fw669YGDg4ODg2+EVws/bSBMLwxUn3PZiAAHBwcHB/9i+FQDv9tAmFpIaN8HHBwcHBx8ETwt5HSwMNVoaAcgcHBwcHDwxfBq8OgWkgaU7vfHBgrg4ODg4OBfBO8W8ikLAO26wMHBwcHBF8LTAtKAkS4gnDZEwMHBwcHB7wA/LbT6otJFvnTxABwcHBwcfBP89I/9KaA7EBgLMODg4ODg4IvgUwP508WAdIBQ/uHAwcHBwcEXw6cHDN37VINJtTFSDjDg4ODg4OAL4KfBIV386zYm4hcODg4ODg6+GN5tGEwNEE5PuTEBDg4ODg6+CH560oLGBv3dFwMODg4ODr4IfhoYqgEmHURMNTbAwcHBwcE3w9NAkQ7su7C0MQIODg4ODn4neDro7waQqQWEsQADDg4ODg4OfhwwuvdtBydwcHBwcHDwsYHBXy0CvLw/ODg4ODj4YngaLMoN/e4AoPi8coMEHBwcHBx8ITwNBtWgkwaRNDiVBwrg4ODg4OBfDL/bAQcHBwcHX3B+Ad83gcynCD2aAAAAAElFTkSuQmCC">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACO0lEQVR42u3aS27DMAwFQN//0s0BCsPiR0ZCjXZtEpuj1QPJ6+/Qc4GDg4ODgw+CX8lz9/t/Lwp+Hn1f+Pfg4ODg4OAD4csBYBH+9P/o89vqBQcHBwcHHwxfDRBdQSQbeLL1goODg4ODg8cDTBQUDTTg4ODg4ODg+wJMNYiAg4ODg4OD9w8UsheyayDx2iQFHBwcHBz8i+DRkx3kd/2drhccHBwcHHwQvHq6g8lTI6JcLzg4ODg4+CD47sKyA4lqI2Q5uYGDg4ODg/8wPPuAroK7gOGBAjg4ODg4+CB4NpBEFwGyDY1qYwQcHBwcHHwivCuYRAf42QBSDjzg4ODg4OCD4F3BIBto3gou4ODg4ODgE+GrjYNo0IkuFlTrWK4LHBwcHBz8IHgWlF0wqD738fvg4ODg4OAHwKMD/uz3Vz/vGkSAg4ODg4NPgldf2BV4qosH4ODg4ODgJ8Ojg/9q4797gLBcFzg4ODg4+CB4doCfvYhqo2O17tvngIODg4ODD4J3n2zjIXvh4eAEDg4ODg4+EF5dnIsGluUBQPKAg4ODg4OfBO8OLNmBQNdg4jYIgYODg4ODD4JXA0J1MFBtSIQHH+Dg4ODg4APhXYGlGjCeQNmLBAcHBwcHPwHeteBXDSrVgLXciAAHBwcHBz8YHgVGBxHZi9keYMDBwcHBwQfDq42H6nvBwcHBwcFPhO9auHsduHsxABwcHBwc/Ivg6QZ9EJgNQF0LC+Dg4ODg4JPgpx1wcHBwcPAB5wNzf0L9jsp+LQAAAABJRU5ErkJggg==">
           </div>
         </div>
       
@@ -1656,34 +1680,15 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/10415.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Linux NFS网络文件</p>
-          <p class='content'>Linux 手把手教你搭建NFS网络文件系统。
-
-
-
-NFS网络文件系统
-1.功能：文件共享
-2.协议与端口： 需要RPC进行控制
-
-NFS安装12yum install nfs-utils p...</p>
-        </a>
       
-      
-        <a class='next' href='/posts/39704.html'>
-          <p class='title'>Linux 计划任务<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>计划任务
+        <a class='next' href='/posts/5c0875d6.html'>
+          <p class='title'>任务栏调整神器<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>任务栏调整神器–7+ taskbar tweaker
 
 
 
-计划任务12345date----当前时间 ctrl+D 保存     Atq 查看任务列表 Atrm 删除任务
 
-
-
-At 一次性计划任务
-命令：at + 时间 
-
-Cront...</p>
+7+ Taskbar Tweaker 是Windows任务栏自定义设置即优化调整实用工具，允许用户通过配置任务栏程序行为、分组&am...</p>
         </a>
       
     </div>
@@ -1844,7 +1849,7 @@ Cront...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%8C%82%E8%BD%BD"><span class="toc-text">一、挂载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85"><span class="toc-text">二、安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%90%AF%E5%8A%A8"><span class="toc-text">三、启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%A7%A3%E5%8E%8B%EF%BC%88zip%E5%8E%8B%E7%BC%A9%E5%8C%85%EF%BC%89"><span class="toc-text">四、解压（zip压缩包）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%AE%89%E8%A3%85"><span class="toc-text">五、安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">六、创建数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E6%83%85%E5%86%B5%E6%96%B9%E6%A1%88%E6%95%B4%E7%90%86%EF%BC%9A"><span class="toc-text">错误情况方案整理：</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E6%B1%82"><span class="toc-text">需求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E7%B1%BB"><span class="toc-text">需求分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E8%B0%83%E7%A0%94%E6%AD%A5%E9%AA%A4"><span class="toc-text">需求调研步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%A1%AE%E5%AE%9A%E8%B0%83%E7%A0%94%E5%AF%B9%E8%B1%A1"><span class="toc-text">1.确定调研对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BA%86%E8%A7%A3%E6%BA%90%E7%B3%BB%E7%BB%9F"><span class="toc-text">2.了解源系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%9C%80%E6%B1%82%E8%B0%83%E7%A0%94"><span class="toc-text">3.需求调研</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-text">4.需求分析的内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%BC%96%E5%86%99%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3"><span class="toc-text">5.编写需求文档</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E6%B5%81%E7%A8%8B"><span class="toc-text">需求流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%9E%90%E9%9C%80%E6%B1%82"><span class="toc-text">分析需求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E4%B8%9A%E5%8A%A1%E6%A8%A1%E6%9D%BF"><span class="toc-text">数据仓库业务模板</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A"><span class="toc-text">单元测试报告</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%AF%84%E4%BC%B0%E6%8A%A5%E5%91%8A"><span class="toc-text">数据评估报告</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
