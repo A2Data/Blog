@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -19,9 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Tag: 面经 - DataScience</title>
+  <title>数据仓库架构的设计 - DataScience</title>
+  
+    <meta name="keywords" content="数仓">
   
 
+  
+    <meta name="description" content="数据仓库架构到底是怎么设计的，意义是什么?">
   
 
   <!-- feed -->
@@ -1263,7 +1265,7 @@
   
     
     
-        <div class='cover-wrapper  focus' style="display: none;">
+        <div class='cover-wrapper post focus' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://7.dusays.com/2020/09/10/bcac99047bac5.png"></div>
           
@@ -1338,8 +1340,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">数据仓库架构的设计</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -1368,157 +1370,349 @@
         
         
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
-      
+    
+      <h1 class="title">
+        数据仓库架构的设计
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://gitee.com/DataITems/cdn/raw/master/avatar.png">
+    <p>JackFeng</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Nov 11, 2020</p>
+  </a>
+</div>
+
+          
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/9812.html">
-        面试拆招详解
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>面试精选！！！</p>
-    
+          
+            
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>1.4k words</p>
+    </a>
   </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>4 min</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="数据仓库架构的设计" data-path="/posts/c54e1e5.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2019-12-22</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%81%8C%E5%9C%BA/">职场</a>
+  <a href="/posts/c54e1e5.html#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/posts/c54e1e5.html">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <p>数据仓库架构到底是怎么设计的，意义是什么?</p>
+<a id="more"></a>
+
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><strong>架构</strong>是数据仓库建设的总体规划，从整体视角描述了解决方案的高层模型，描述了各个子系统的功能以及关系，描述了数据从源系统到决策系统的数据流程。业务需求回答了要做什么，架构就是回答怎么做的问题。</p>
+<h2 id="数据仓库架构"><a href="#数据仓库架构" class="headerlink" title="数据仓库架构"></a>数据仓库架构</h2><p>数据仓库的核心功能从<strong>源系统抽取数据</strong>，通过清洗、转换、标准化，将数据加载数据仓库中,通过后续加工到BI平台，进而满足业务用户的数据分析和决策支持</p>
+<p><img src="https://gitee.com/DataITems/cdn/raw/master/%E6%95%B0%E4%BB%93%E6%9E%B6%E6%9E%84%E5%9B%BE.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/%E6%95%B0%E4%BB%93%E6%9E%B6%E6%9E%84%E5%9B%BE.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h2 id="层设施"><a href="#层设施" class="headerlink" title="层设施"></a>层设施</h2><p>底层设施为架构提供了基础，底层设施包括<strong>硬件、数据库平台、网络</strong>。</p>
+<p><strong>硬件</strong>主要指服务器硬件，主要有数据库服务器、ETL服务器、调度服务器、报表服务器、BI门户服务器、接口服务器。</p>
+<p><strong>平台</strong>分为二大类：联机事务处理OLTP（on-line transaction processing）、联机分析处理OLAP（On-Line Analytical Processing），OLAP是为数据分析而设计的数据库管理系统。主要有Oracel，MySQL，Teradata, Greenplum，Hive。</p>
+<p>网络是底层设施的基础，特别是大数据时代对网络的要求越来越高。</p>
+<h2 id="数据架构"><a href="#数据架构" class="headerlink" title="数据架构"></a>数据架构</h2><p>数据架构主要描述数据从源系统抽取数据，然后经过清洗、规范化、提交形成标准模型，最终提交给业务用户，以及对数据的管理。 </p>
+<p><strong>源系统:</strong> 数据仓库一般会面临多个、异构数据源的问题，主要分为<strong>结构化，半结构化</strong>以及<strong>非结构化数据</strong>。为了便于管理需要对源系统建立元数据信息。</p>
+<p><strong>抽取:</strong> 因为源系统的多样性，源抽取阶段一般选择使用工具。在抽取之前还要做以下工作：</p>
+<p><strong>数据剖析</strong>是对数据的技术性分析，对数据的内容、一致性和结构进行描述。对源系统的数据质量进行评估。 </p>
+<p>由于面临多个、异构的源系统,抽取方式不尽相同,例如:数据库直连抽取,<strong>kettle</strong>抽取,<strong>Informatica</strong>抽取,<strong>ftp</strong>抽取文件,生成表结构文件,java方式抽取,sqludr2抽取</p>
+<p>抽取的数据类型也有区分,数据加载入库方式将在后续内容中讲到:</p>
+<p><img src="https://gitee.com/DataITems/cdn/raw/master/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%9B%BE.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%9B%BE.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><strong>数据转换:</strong> 数据从源系统抽取过来之后，就要进入<strong>数据转换</strong>阶段。 这一阶段是数据仓库开发核心阶段。主要有以下步骤： </p>
+<p><strong>清洗:</strong> 数据清洗是制定转换规则，筛选数据并纠正数据的过程。清洗的目的是改进源系统的数据质量，但是不要在数据仓库做过多的清洗，源系统的数据质量应该在源头处理。清洗的主要内容包括： </p>
+<p><img src="https://gitee.com/DataITems/cdn/raw/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200922221515.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200922221515.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><strong>规范化:</strong> 规范化就是整合各个源系统的数据，把数据统一命名，统一取值，建立企业标准版本数据。主要内容包括：</p>
+<p><img src="https://gitee.com/DataITems/cdn/raw/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200922221519.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200922221519.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><strong>提交:</strong> 提交就要根据维度模型生成维度表和事实表。 提交主要内容包括：          </p>
+<ol>
+<li>选择合适的缓慢变化维类型</li>
+<li>为维表生成代理键</li>
+<li>管理不同粒度的层次维</li>
+<li>管理专项维</li>
+<li>生成维度桥接表</li>
+<li>生成代理键管道</li>
+<li>选择合适的事实表类型</li>
+<li>处理延迟到达的事实</li>
+<li>生成维度表</li>
+<li>生成事实表</li>
+</ol>
+<p><strong>聚集:</strong> 聚集是指根据事务事实表进行更高粒度的聚合以及生成相对应的维度表.</p>
+<p>行轻度汇总企业数据模型的构建，能够涵盖业务的各个层面，包括交易<strong>数据、主数据</strong>和参考数据，为整个企业级的数据集成提供一个完整的一致的逻辑视图。为了确保模型对企业经营的映射和相对稳定，采用范式（3NF）化模型，进行定制,为系统间数据交换和使用提供公共汇总数据</p>
+<p>例如在金融行业中,会根据<strong>Teradata 金融数据模型</strong>进行模型层开发</p>
+<h2 id="BI应用程序架构"><a href="#BI应用程序架构" class="headerlink" title="BI应用程序架构"></a>BI应用程序架构</h2><p>数据仓库是数据处理的后台，业务用户并不关心后台怎么处理。BI应用是数据呈现的前台，是业务用户进行查询的入口。BI应用程序的体验也是衡量数据仓库是否成功的主要因素。</p>
+<p><strong>数据服务接口查询:</strong> 在数据仓库中进行业务数据的轻度汇总,给第三方业务提供数据查询接口</p>
+<p><strong>即席查询:</strong> 业务用户根据自己的需求，自定义查询请求，后台自动组织SQL语句访问维度模型</p>
+<p><strong>报表展现:</strong> 根据业务用户的需求，进行定制报表</p>
+<p><strong>驾驶舱和仪表盘:</strong> 它是向企业展示度量信息和关键业务指标现状的数据可视化工具。</p>
+<h3 id="数据仓库架构图"><a href="#数据仓库架构图" class="headerlink" title="数据仓库架构图"></a>数据仓库架构图</h3><p><img src="https://7.dusays.com/2020/11/11/ae78d9a1ac538.png" class="lazyload" data-srcset="https://7.dusays.com/2020/11/11/ae78d9a1ac538.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><img src="https://7.dusays.com/2020/11/11/f4b297cccbbf9.png" class="lazyload" data-srcset="https://7.dusays.com/2020/11/11/f4b297cccbbf9.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p>数据仓库平台逐步从BI报表为主到分析为主、到预测为主、再到操作智能为目标。<br><img src="https://7.dusays.com/2020/11/11/b76e1d4e5226e.png" class="lazyload" data-srcset="https://7.dusays.com/2020/11/11/b76e1d4e5226e.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="数据仓库在系统中得定位"><a href="#数据仓库在系统中得定位" class="headerlink" title="数据仓库在系统中得定位"></a>数据仓库在系统中得定位</h3><p>数据仓库系统的作用：</p>
+<ul>
+<li>能实现跨业务条线、跨系统的数据整合，</li>
+<li>为管理分析和业务决策提供统一的数据支持。</li>
+</ul>
+<p>数据仓库能够从根本上帮助你把公司的<strong>运营数据转化成为高价值</strong>的可以获取的信息（或知识），并且在恰当的时候通过恰当的方式把恰当的信息传递给恰当的人。</p>
+<p><img src="https://7.dusays.com/2020/11/11/6122e2e6768cc.png" class="lazyload" data-srcset="https://7.dusays.com/2020/11/11/6122e2e6768cc.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/posts/9812.html'>
-            Read More
-          </a>
+      
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\posts\19a88b12.html" title="数据仓库是什么" rel="bookmark "><img src="https://7.dusays.com/2020/11/09/a244f012d5f64.png" /><span class="title">数据仓库是什么</span><span class="excerpt">数据仓库是什么?</span></a><a class="item" href="\posts\6f521982.html" title="什么是需求？" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/1601215112590.png" /><span class="title">什么是需求？</span><span class="excerpt">数仓需求的来源,以及流程。</span></a><a class="item" href="\posts\ff995e29.html" title="1.Git使用" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20200330223604.png" /><span class="title">1.Git使用</span><span class="excerpt">Git 快速学习。</span></a></div></section></div>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>版权声明：本网站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="/">数据科学</a></p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/c54e1e5.html>http://www.a2data.cn/posts/c54e1e5.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+        <div class='donate'>
+          <div class='imgs'>
+            
+              <img src='https://gitee.com/DataITems/cdn/raw/master/alipay.jpg'>
+            
+              <img src='https://gitee.com/DataITems/cdn/raw/master/wechat.png'>
+            
+          </div>
         </div>
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-11T08:51:13+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Nov 11, 2020</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E4%BB%93/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>数仓</p></a></div>
 
 
-    
-  
-</div>
-<aside class='l_side'>
-  
-  
-    
-    
+        
+      
+        
+      
+        
+          
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>1.4k words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>4 min</p>
+    </a>
+  </div>
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://7.dusays.com/2020/09/10/3694a41d52ade.jpg'/>
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/c54e1e5.html&title=数据仓库架构的设计 - DataScience&summary=数据仓库架构到底是怎么设计的，意义是什么?"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
         </a>
       
     
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/c54e1e5.html&title=数据仓库架构的设计 - DataScience&summary=数据仓库架构到底是怎么设计的，意义是什么?"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
     
-      <div class='text'>
-        
-          <h2>Jack` Féng</h2>
-        
-        
-          <p>放弃不难,但坚持一定很酷！</p>
-
-        
-        
-      </div>
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/c54e1e5.html&title=数据仓库架构的设计 - DataScience&summary=数据仓库架构到底是怎么设计的，意义是什么?"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
     
-    
-      <div class="social-wrapper">
+      
         
-          
-            <a href="https://github.com/A2Data"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=a2data@163.com"
-              class="social fas fa-envelope-open flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=66860619"
-              class="social fab fa-qq flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://gitee.com/DataITems/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
-              class="social fab fa-weixin flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://me.csdn.net/weixin_47093227"
-              class="social fab fa-cuttlefish flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACOUlEQVR42u3aS27DMAwFwNz/0um+QVH+7CTUaJfAtjRaPZB8PA9dD3BwcHBw8EXwR3H9fv9lg+Dz1f3K5wUHBwcHB18IDweAJDwdMIIXVf4eODg4ODj4YvhVgSV6Qd3n/704cHBwcHBw8HSAyYKygQYcHBwcHBx8LsBMNwLAwcHBwcHB5xsKUwfL/v/2Tgo4ODg4OPgHwcsDc2/6XT4vODg4ODj4Inh3VQNGtRDRPi84ODg4OPgieLUw0B0YqIK7gwjg4ODg4OAb4VMN+ej71cZFNjCBg4ODg4OfAL+qUBA92PQgwJ8ucHBwcHDwRfDuwbMFjG7Doh14wMHBwcHBF8Gzg3xTjfu7gws4ODg4OPhmePdg3YubbkykJyLAwcHBwcG/EJ6FVAcC0wWDZrACBwcHBwc/EV4tNEQDTriBn/xeuMEADg4ODg6+EH5VYeLZXNWBA3BwcHBw8JPg04Gh+/uqAQFwcHBwcPBN8HaBvgkKD+Y1Cxvg4ODg4OAb4dENogerFiSyF5wtpICDg4ODg2+GTwGrBYXuAF85wICDg4ODgy+Adxv30UDSLThk93n5Hjg4ODg4+CJ4NyBEA0t6EC/ZwAjvBw4ODg4OvhBeDSzVBkS1sZC9OHBwcHBw8JPg3cAy3ZC4rKEADg4ODg4O3i4wdEHp84KDg4ODg4Pf9n73wsHBwcHBwU+CVwf6ugWFbsPg9sEAcHBwcHDwD4JXCwLZwDHdoAAHBwcHBz8ZftoCBwcHBwdfsH4A23nBjJ3SGEYAAAAASUVORK5CYII=">
+          </div>
+        </div>
+      
     
   </div>
-</section>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/6f521982.html'>
+          <p class='title'>什么是需求？<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>数仓需求的来源,以及流程。
+
+
+需求
+概述: 
+
+业务需求(business requirement)表示组织或客户高层次的目标
+用户需求(user requirement)描述的是用户的目标,...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
 
   
 
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
   
     
     
@@ -1641,231 +1835,27 @@
     
     
 
-<section class="widget text shadow desktop mobile">
-  
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
   <header>
     
-      <i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i><span class='name'>公告</span>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-  <div class='content'>
-    
-      <p>本站默认替换了右键菜单，唤醒原系统菜单：<code>Ctrl</code> + <code>右键</code></p>
-
-    
-      <p>回归本心、去繁从简</p>
-
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobile">
-  
-  <header>
-    
-      <i class="fas fa-qrcode fa-fw fa-fw" aria-hidden="true"></i><span class='name'>公众号</span>
-    
-  </header>
-
-
-  <div class='content article-entry'>
-    
-      
-        <img src='https://7.dusays.com/2020/09/18/78ec698db1297.png'
-        >
-      
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobule">
-  
-  <header>
-    
-      <i class="fas fa-mobile fa-fw" aria-hidden="true"></i><span class='name'>小程序</span>
-    
-  </header>
-
-
-  <div class='content article-entry'>
-    
-      
-        <img src='https://7.dusays.com/2020/09/18/d3e9c15023e78.png'
-        >
-      
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget text shadow desktop">
-  
-  <header>
-    
-      <i class="far fa-comments fa-fw" aria-hidden="true"></i><span class='name'>最新评论</span>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <div id="hot-comments"></div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop">
-  
-  <header>
-    
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>94 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2018/12/18'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>131.6k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Wed Nov 11 2020 09:50:10 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2020-11-11 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2020-11-11 日';
-          }
-        </script>
-        
-      
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E6%9E%B6%E6%9E%84"><span class="toc-text">数据仓库架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B1%82%E8%AE%BE%E6%96%BD"><span class="toc-text">层设施</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%9E%B6%E6%9E%84"><span class="toc-text">数据架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BI%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%9E%B6%E6%9E%84"><span class="toc-text">BI应用程序架构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E6%9E%B6%E6%9E%84%E5%9B%BE"><span class="toc-text">数据仓库架构图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E5%9C%A8%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%BE%97%E5%AE%9A%E4%BD%8D"><span class="toc-text">数据仓库在系统中得定位</span></a></li></ol></li></ol>
     </div>
-  </div>
-</section>
+  </section>
+
 
   
 
 
 </aside>
-
 
 
 
