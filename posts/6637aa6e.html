@@ -17,13 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Day8.函数上 - DataScience</title>
+  <title>数据仓库元数据 - DataScience</title>
   
-    <meta name="keywords" content="Python">
+    <meta name="keywords" content="数仓">
   
 
   
-    <meta name="description" content="函数 概念 定义 创建 参数">
+    <meta name="description" content="数据仓库架构到底是怎么设计的，意义是什么?">
   
 
   <!-- feed -->
@@ -1341,7 +1341,7 @@
  
 <div id="pjax-data" style="display: none"> 
   <div id="pjax-ispage">true</div> 
-  <div id="pjax-pageTitle">Day8.函数上</div> 
+  <div id="pjax-pageTitle">数据仓库元数据</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -1381,7 +1381,7 @@
     
     
       <h1 class="title">
-        Day8.函数上
+        数据仓库元数据
       </h1>
       <div class='new-meta-box'>
         
@@ -1400,7 +1400,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Sep 11, 2020</p>
+    <p>发布于：Nov 12, 2020</p>
   </a>
 </div>
 
@@ -1408,13 +1408,6 @@
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E5%85%A5%E9%97%A8/">Python入门</a>
-    </a>
-  </div>
-
 
           
         
@@ -1423,13 +1416,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>2.9k words</p>
+      <p>1.9k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>11 min</p>
+      <p>6 min</p>
     </a>
   </div>
 
@@ -1441,7 +1434,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="Day8.函数上" data-path="/posts/3fb6e39.html">
+      <div id="lc-pv" data-title="数据仓库元数据" data-path="/posts/6637aa6e.html">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -1456,9 +1449,9 @@
             
 <div class="new-meta-item comments-count">
   
-  <a href="/posts/3fb6e39.html#comments">
+  <a href="/posts/6637aa6e.html#comments">
     <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/3fb6e39.html">0</span>
+    <span class="valine-comment-count" data-xid="/posts/6637aa6e.html">0</span>
     <span class="leancloud-comments-count">&nbsp;</span>
   </a>
 </div>
@@ -1473,231 +1466,82 @@
 
   
   
-  <p>函数 概念 定义 创建 参数</p>
+  <p>数据仓库架构到底是怎么设计的，意义是什么?</p>
 <a id="more"></a>
 
-
-<p><strong>例题引导：</strong></p>
-<p>【模拟轮盘抽奖游戏】</p>
-<p>轮盘分为三部分: 一等奖, 二等奖和三等奖;轮盘转的时候是随机的,奖项设置如下：<br>如果范围在[0,0.08)之间,代表一等奖,<br>如果范围在[0.08,0.3)之间,代表2等奖,<br>如果范围在[0, 1.0)之间,代表3等奖,</p>
-<p>要求：假设本次活动1000人参加, 模拟游戏时各等级奖品个数需要准备多少个。</p>
-<p>解题思路：定义游戏规则（用字典表达）-构建函数-生成随机数-编写游戏逻辑-调用函数-遍历1000名用户-打印输出</p>
-<p><strong>参考答案：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random  <span class="comment">#导入随机数模块</span></span><br><span class="line"></span><br><span class="line">rewardDict = &#123;</span><br><span class="line">    <span class="string">&#x27;一等奖&#x27;</span>: (<span class="number">0</span>, <span class="number">0.08</span>),</span><br><span class="line">    <span class="string">&#x27;二等奖&#x27;</span>: (<span class="number">0.08</span>, <span class="number">0.3</span>),</span><br><span class="line">    <span class="string">&#x27;三等奖&#x27;</span>: (<span class="number">0.3</span>, <span class="number">1</span>)</span><br><span class="line">&#125;      <span class="comment">#因为该值为一对一映射，所以想到用字典定义得奖范围</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rewardFun</span>():</span>    <span class="comment">#开始构建函数</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;用户得奖等级&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 生成一个0～1之间的随机数</span></span><br><span class="line">    num = random.random()</span><br><span class="line">    <span class="comment"># 判断随机转盘转的数是几等奖</span></span><br><span class="line">    <span class="keyword">for</span> k, v <span class="keyword">in</span> rewardDict.items():  </span><br><span class="line">        <span class="comment"># 这里的v是元组</span></span><br><span class="line">        <span class="keyword">if</span> v[<span class="number">0</span>] &lt;= num &lt; v[<span class="number">1</span>]:</span><br><span class="line">            <span class="keyword">return</span> k</span><br><span class="line"></span><br><span class="line"><span class="comment"># print rewardFun()</span></span><br><span class="line">resultDict = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1000</span>):</span><br><span class="line">    <span class="comment"># res:本次转盘的等级(一/二/三等奖)</span></span><br><span class="line">    res = rewardFun()  <span class="comment">#调用函数</span></span><br><span class="line">    <span class="keyword">if</span> res <span class="keyword">not</span> <span class="keyword">in</span> resultDict:</span><br><span class="line">        resultDict[res] = <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        resultDict[res] = resultDict[res] + <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> k, v <span class="keyword">in</span> resultDict.items():</span><br><span class="line">    <span class="keyword">print</span> k, <span class="string">&#x27;----------&gt;&#x27;</span>, v</span><br></pre></td></tr></table></figure>
-
-<p><strong>学习引导：</strong></p>
-<ul>
-<li>函数概念</li>
-<li>函数定义</li>
-<li>函数调用</li>
-<li>参数调用</li>
-<li>参数传递</li>
+<h2 id="元数据管理"><a href="#元数据管理" class="headerlink" title="元数据管理"></a>元数据管理</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>元数据通常定义为”关于数据的数据”,在数据仓库中是定义和描述DW/BI系统的结构，操作和内容的所有信息。元数据贯穿了数据仓库的整个生命周期，使用元数据驱动数据仓库的开发，使数据仓库自动化，可视化。  </p>
+<p>元数据在构建数仓过程中，定义了源数据系统到数据仓库的映射、数据转换的规则、数据仓库的逻辑结构、数据更新的规则、数据导入历史记录以及装载周期等相关内容。数据抽取和转换的专家以及数据仓库管理员正是通过元数据高效地构建数据仓库。</p>
+<p><img src="https://gitee.com/DataITems/cdn/raw/master/%E5%85%83%E6%95%B0%E6%8D%AE.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/%E5%85%83%E6%95%B0%E6%8D%AE.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="元数据类型"><a href="#元数据类型" class="headerlink" title="元数据类型"></a>元数据类型</h3><h4 id="1-业务元数据"><a href="#1-业务元数据" class="headerlink" title="1.业务元数据"></a>1.业务元数据</h4><p><strong>业务元数据</strong>指从业务角度描述业务领域相关的概念、关系和规则的数据，包括业务术语和业务规则等信息。</p>
+<h4 id="2-技术元数据"><a href="#2-技术元数据" class="headerlink" title="2.技术元数据"></a>2.技术元数据</h4><p><strong>技术元数据</strong>指描述系统中技术细节相关的概念、关系和规则的数据，包括对数据结构、数据处理方面的描述，以及数据仓库、ETL、前端展现等技术细节方面的信息。</p>
+<p>技术元数据又细分为：</p>
+<ol>
+<li>数据源元数据</li>
+<li>ETL元数据</li>
+<li>数据仓库元数据</li>
+<li>BI元数据</li>
+</ol>
+<h4 id="3-管理元数据"><a href="#3-管理元数据" class="headerlink" title="3.管理元数据"></a>3.管理元数据</h4><p><strong>管理元数据</strong>指描述管理领域相关的概念、关系和规则的数据，主要包括管理流程、人员组织、角色职责等信息。</p>
+<h3 id="元数据获取途径"><a href="#元数据获取途径" class="headerlink" title="元数据获取途径"></a>元数据获取途径</h3><ol>
+<li>外部数据源</li>
+</ol>
+<p>主要有<strong>源系统、ETL工具、报表工具</strong>的元数据</p>
+<ol start="2">
+<li>数据仓库</li>
+</ol>
+<p>数据库物理模型的元数据</p>
+<ol start="3">
+<li>手工补录</li>
+</ol>
+<p>主要有Mapping文档、任务配置、业务规则、业务术语、业务人员手工补录的数据，大多数是规则明确的业务数据</p>
+<h3 id="元数据功能"><a href="#元数据功能" class="headerlink" title="元数据功能"></a>元数据功能</h3><p><strong>血缘分析：</strong> 向上追溯元数据对象的数据来源。</p>
+<p>影响分析：向下追溯元数据对象对下游的影响。</p>
+<p><strong>同步检查：</strong> 检查源表到目标表的数据结构是否发生变更。</p>
+<p><strong>指标一致性分析：</strong> 定期分析指标定义是否和实际情况一致。</p>
+<p><strong>实体关联查询：</strong> 事实表与维度表的代理键自动关联</p>
+<h3 id="元数据应用"><a href="#元数据应用" class="headerlink" title="元数据应用"></a>元数据应用</h3><p><strong>ETL自动化管理：</strong> 使用元数据信息自动生成物理模型，ETL程序脚本，任务依赖关系和调度程序。</p>
+<p><strong>数据质量管理：</strong> 使用数据质量规则元数据进行数据质量测量。</p>
+<p><strong>数据安全管理：</strong> 使用元数据信息进行报表权限控制。</p>
+<p><strong>数据标准管理：</strong> 使用元数据信息生成标准的维度模型。</p>
+<p><strong>数据接口管理：</strong> 使用元数据信息进行接口统一管理。</p>
+<h2 id="数据质量管理"><a href="#数据质量管理" class="headerlink" title="数据质量管理"></a>数据质量管理</h2><h3 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h3><p>数据质量的高低代表了该数据满足<strong>数据消费者</strong>期望的程度，这种程度基于他们对数据的使用预期。数据质量必须是可测量的，把测量的结果转化为可以理解的和可重复的数字，使我们能够在不同对象之间和跨越不同时间进行比较。 </p>
+<p><strong>数据质量管理</strong>是通过计划、实施和控制活动，运用质量管理技术度量、评估、改进和保证数据的恰当使用。 </p>
+<h3 id="数据质量产生的根本原因"><a href="#数据质量产生的根本原因" class="headerlink" title="数据质量产生的根本原因"></a>数据质量产生的根本原因</h3><ol>
+<li>源系统：源系统的数据结构发生变化，这是常有的事，数据仓库只是数据存储中心，而源系统的改变会造成数据仓库中数据质量发生变化</li>
+<li>ETL：源系统业务流程发生了变更</li>
+<li>业务需求：<ul>
+<li>源系统数据录入错误或者延迟</li>
+<li>源系统随着时间的推移，数据发生了演变</li>
+<li>需求不明确或者满足不了客户需求</li>
+<li>ETL映射规则错误</li>
+<li>ETL程序错误</li>
+<li>数据没有及时到达或者依赖关系错误</li>
+<li>源系统的业务数据与业务需求发生冲突        </li>
 </ul>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="函数的概念"><a href="#函数的概念" class="headerlink" title="函数的概念"></a>函数的概念</h3><p>函数是将具有独立功能的代码块组织成为一个整体，使其具有特殊功能的代码集。它是编辑好的、可直接调用的、可重复使用的，用来实现单一或相关联功能的代码段</p>
-<p><strong>优点：</strong></p>
-<ul>
-<li>提高程序的模块性；</li>
-<li>使程序变得可扩展；</li>
-<li>减少重复代码；</li>
-<li>使程序变得可维护；</li>
-</ul>
-<h3 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h3><p>函数必须先创建才可以使用，该过程称为函数定义，使用函数的过程称为函数调用。</p>
-<p>函数可以根据自己的需求来定义，但有一些规则需要注意：</p>
-<ul>
-<li><p>函数代码块必须以def开头，后接函数标识符名称和圆括号()；</p>
-</li>
-<li><p>任何传入参数和自变量必须放在圆括号中间，圆括号之间可以用于定义参数；</p>
-</li>
-<li><p>函数的第一行语句可以选择性的使用文档字符-用于存放函数说明；</p>
-</li>
-<li><p>函数内容以冒号起始，并且缩进；</p>
-</li>
-<li><p>函数名称的命名应符合标识符的命名规则；（可由字母、下划线和数字组成；不能以数字开头；不能与关键字重名）</p>
-</li>
-<li><p>return[表达式]结束函数，选择性地返回一个值给调用方。不带表达式的return相当于返回None</p>
-</li>
-</ul>
-<p><strong>函数定义的一般格式：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#函数定义的一般格式：</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> 函数名 (<span class="params">参数列表</span>)：</span></span><br><span class="line"><span class="function">    函数体</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#实例1</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span>():</span></span><br><span class="line">    print(<span class="string">&#x27;Hello World&#x27;</span>)</span><br><span class="line">    </span><br><span class="line">hello()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Hello World</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>实例2-计算圆的面积,带参数</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#实例2-计算圆的面积,带参数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">area</span>(<span class="params">r</span>):</span></span><br><span class="line">    pi=<span class="number">3.412</span></span><br><span class="line">    <span class="keyword">return</span> pi*(r^<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">r=<span class="number">5</span></span><br><span class="line">print(<span class="string">&#x27;圆的面积为:&#x27;</span>,area(r))</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#圆的面积为: 23.884</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h3><p>即使用函数的过程</p>
-<p><strong>简单的调用应用</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#函数功能：打印该字符串</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">println</span>(<span class="params">str</span>):</span></span><br><span class="line">    print(str)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#调用函数</span></span><br><span class="line">println(<span class="string">&#x27;调用上述函数&#x27;</span>)</span><br><span class="line">println(<span class="string">&#x27;打印这段字符串&#x27;</span>)</span><br><span class="line">println(<span class="string">&#x27;多次调用函数&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#调用上述函数</span></span><br><span class="line"><span class="comment">#打印这段字符串</span></span><br><span class="line"><span class="comment">#多次调用函数</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="参数调用"><a href="#参数调用" class="headerlink" title="参数调用"></a>参数调用</h3><p>参数分为形参、实参</p>
-<ul>
-<li><p>形参：函数定义时括号内的参数</p>
-</li>
-<li><p>实参：函数调用时括号内的参数</p>
-</li>
-</ul>
-<ul>
-<li>形参相当于变量，实参相当于变量的值</li>
-</ul>
-<p>在实际代码中表示如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义时：</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">a,b,c</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">其中 a,b,c 为形参</span><br><span class="line"></span><br><span class="line"><span class="comment">#调用时：</span></span><br><span class="line">func(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">其中<span class="number">1</span>，<span class="number">2</span>，<span class="number">3</span>为实参</span><br></pre></td></tr></table></figure>
-
-<h4 id="形参："><a href="#形参：" class="headerlink" title="形参："></a>形参：</h4><p>只在被调用时，才分配存储单元。调用结束，立刻释放所分配的内存。</p>
-<p>形参只在函数内部有效</p>
-<h4 id="实参："><a href="#实参：" class="headerlink" title="实参："></a>实参：</h4><p>可以是：常量、变量、表达式、函数</p>
-<p>进行函数调用时，实参必须是确定的值</p>
-<h4 id="位置参数："><a href="#位置参数：" class="headerlink" title="位置参数："></a>位置参数：</h4><ul>
-<li><p>位置形参：函数定义时，从左往右写的参数，比如上面的 a, b , c</p>
-</li>
-<li><p>位置实参：函数调用时，从左往右写的参数,  比如上面的 1，2，3</p>
-</li>
-<li><p>位置形参定义多少个，调用时位置实参必须写上多少个，多一个少一个都不行。</p>
-</li>
-<li><p>位置参数必须以正确的顺序传入函数。调用时的数量必须和声明时的一样。</p>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">a,b,c</span>):</span></span><br><span class="line">    <span class="keyword">return</span> a+b+c</span><br><span class="line"></span><br><span class="line"><span class="comment">#调用</span></span><br><span class="line">print(func(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>))   </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#9</span></span><br></pre></td></tr></table></figure>
-
-<p>错误演示：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">a,b,c</span>):</span></span><br><span class="line">    <span class="keyword">return</span> a+b+c</span><br><span class="line"></span><br><span class="line"><span class="comment">#调用</span></span><br><span class="line">print(func(<span class="number">2</span>,<span class="number">3</span>)) <span class="comment">#实参数量不对应，报错</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">TypeError                                 Traceback (most recent call last)</span><br><span class="line"></span><br><span class="line">&lt;ipython-input<span class="number">-21</span><span class="number">-38</span>b482e25fef&gt; <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">      <span class="number">3</span> </span><br><span class="line">      <span class="number">4</span> <span class="comment">#调用</span></span><br><span class="line">----&gt; 5 print(func(2,3))</span><br><span class="line">TypeError: func() missing <span class="number">1</span> required positional argument: <span class="string">&#x27;c&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="关键参数："><a href="#关键参数：" class="headerlink" title="关键参数："></a>关键参数：</h4><ul>
-<li><p>正常情况下，给函数传参数，要按顺序。如果不想按顺序，就用关键参数。</p>
-</li>
-<li><p>指定参数名的参数，就叫做关键参数。</p>
-</li>
-<li><p>函数调用时：func(a=1, b=2),  这种指定了参数名的参数，就是关键参数。</p>
-</li>
-<li><p>调用函数时，关键参数可以和位置参数一起用，但是关键参数必须在位置参数的后面。不然会报错。</p>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">a,b,c</span>):</span></span><br><span class="line">    <span class="keyword">return</span> a+b+c</span><br><span class="line"></span><br><span class="line"><span class="comment">#调用</span></span><br><span class="line">print(func(<span class="number">4</span>,c=<span class="number">3</span>,b=<span class="number">2</span>))   </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#9</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="默认参数："><a href="#默认参数：" class="headerlink" title="默认参数："></a>默认参数：</h4><blockquote>
-<ul>
-<li><p>函数定义时，默认参数必须在位置形参的后面。</p>
-</li>
-<li><p>函数调用时，指定参数名的参数，叫关键参数。</p>
-</li>
-<li><p>而在函数定义时，给参数名指定值的时候，这个参数叫做默认参数。</p>
-</li>
-</ul>
-<ul>
-<li><p>关键参数，和默认参数两个参数写法一样，区别在于：</p>
-<p>关键参数是在函数调用时，指定实参的参数名，也可以说指定值的参数名。</p>
-<p>默认参数是在函数定义时，指定参数名的值。</p>
-</li>
-<li><p>写法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> (<span class="params">a, b=<span class="number">100</span></span>):</span></span><br><span class="line">   <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>定义时，有默认参数的话，调用时，这个实参可以不写。如果实参不写的话，这个形参的参数值是他的默认值。</p>
-</li>
-</ul>
-</blockquote>
-<p>实例演示：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">info</span>(<span class="params">name,age=<span class="number">18</span></span>):</span></span><br><span class="line">    print(<span class="string">&#x27;名字:&#x27;</span>,name)</span><br><span class="line">    print(<span class="string">&#x27;年龄:&#x27;</span>,age)</span><br><span class="line">    <span class="keyword">return</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">#调用</span></span><br><span class="line">info(age=<span class="number">22</span>,name=<span class="string">&#x27;Jack&#x27;</span>)</span><br><span class="line">print(<span class="string">&#x27;****************&#x27;</span>)</span><br><span class="line">info(name=<span class="string">&#x27;Jack&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">名字: Jack</span></span><br><span class="line"><span class="string">年龄: 22</span></span><br><span class="line"><span class="string">*****************</span></span><br><span class="line"><span class="string">名字: Jack</span></span><br><span class="line"><span class="string">年龄: 18</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="动态参数：-args-kwargs"><a href="#动态参数：-args-kwargs" class="headerlink" title="动态参数： * args    ** kwargs"></a>动态参数： * args    ** kwargs</h4><p>当你需要一个函数能处理很多参数，超过已声明的参数数量，这时就需要动态参数。与上述两中参数不同的是，该参数声明不需要命名。</p>
-<h5 id="args"><a href="#args" class="headerlink" title="* args"></a>* args</h5><p>一个’* ‘的参数会以元组(tuple)的形式导入，存放未命名的变量参数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params">arg1,*vartuple</span>):</span></span><br><span class="line">    print(<span class="string">&#x27;输出：&#x27;</span>)</span><br><span class="line">    print(arg1)</span><br><span class="line">    print(vartuple)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#调用</span></span><br><span class="line">printinfo(<span class="number">34</span>,<span class="number">45</span>,<span class="number">32</span>,<span class="number">12</span>)</span><br></pre></td></tr></table></figure>
-
-<pre><code>#输出：
-#34
-#(45, 32, 12)</code></pre>
-<p>如果函数调用时没有指定参数，动态参数则表现为空元组。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params">arg1,*vartuple</span>):</span></span><br><span class="line">    print(<span class="string">&#x27;输出：&#x27;</span>)</span><br><span class="line">    print(arg1)</span><br><span class="line">    print(vartuple)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#调用</span></span><br><span class="line">printinfo(<span class="number">34</span>)</span><br></pre></td></tr></table></figure>
-
-<pre><code>#输出：
-#34
-#()</code></pre>
-<h5 id="kwargs"><a href="#kwargs" class="headerlink" title="** kwargs"></a>** kwargs</h5><p>还有一种动态参数,加了两个星号则以字典的形式导入</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params">arg1,**vardict</span>):</span></span><br><span class="line">    print(<span class="string">&#x27;输出：&#x27;</span>)</span><br><span class="line">    print(arg1)</span><br><span class="line">    print(vardict)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#调用</span></span><br><span class="line">printinfo(<span class="number">34</span>,a=<span class="number">45</span>,b=<span class="number">32</span>,c=<span class="number">12</span>)</span><br></pre></td></tr></table></figure>
-
-<pre><code>#输出：
-#34
-#&#123;&#39;a&#39;: 45, &#39;b&#39;: 32, &#39;c&#39;: 12&#125;</code></pre>
-<blockquote>
-<p>声明函数时，参数中的* 可以单独出现。</p>
-<p>如果* 单独出现，后面的参数必须以关键字传入</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">a,b,*,c</span>):</span></span><br><span class="line">    <span class="keyword">return</span> a+b-c</span><br><span class="line"></span><br><span class="line">func(<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>)   <span class="comment">#非关键字传入报错</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">TypeError                                 Traceback (most recent call last)</span><br><span class="line"></span><br><span class="line">&lt;ipython-input<span class="number">-34</span>-f69556d382a4&gt; <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">      <span class="number">2</span>     <span class="keyword">return</span> a+b-c</span><br><span class="line">      <span class="number">3</span> </span><br><span class="line">----&gt; 4 func(3,2,4)</span><br><span class="line">TypeError: func() takes <span class="number">2</span> positional arguments but <span class="number">3</span> were given</span><br></pre></td></tr></table></figure>
-
-<p>关键字传入正确</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">func(<span class="number">3</span>,<span class="number">4</span>,c=<span class="number">5</span>)  </span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#2</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h4><blockquote>
-<p>python语言中，类型属于对象，变量是没有类型的,例如:</p>
-<p>a=[1,2,3]</p>
-<p>a=’DataScience’</p>
-<p>其中[1,2,3]是list类型，’DataScience’是string类型，变量a没有类型，它只是一个对象的引用（一个指针），可以指向list类型对象也可以指向string类型对象</p>
-</blockquote>
-<h3 id="可更改-mutable-与不可更改-immutable-对象"><a href="#可更改-mutable-与不可更改-immutable-对象" class="headerlink" title="可更改(mutable)与不可更改(immutable)对象"></a>可更改(mutable)与不可更改(immutable)对象</h3><blockquote>
-<p>在 python 中，strings, tuples, 和 numbers 是不可更改的对象，而 list,dict 等则是可以修改的对象。</p>
-<ul>
-<li><p>不可变类型：变量赋值 a=5 后再赋值 a=10，这里实际是新生成一个 int 值对象 10，再让 a 指向它，而 5 被丢弃，不是改变a的值，相当于新生成了a。</p>
-</li>
-<li><p>可变类型：变量赋值 la=[1,2,3,4] 后再赋值 la[2]=5 则是将 list la 的第三个元素值更改，本身la没有动，只是其内部的一部分值被修改了。</p>
-</li>
-</ul>
-<p><strong>python 函数的参数传递：</strong></p>
-<ul>
-<li><p>不可变类型：类似 c++ 的值传递，如 整数、字符串、元组。如fun（a），传递的只是a的值，没有影响a对象本身。比如在 fun（a）内部修改 a 的值，只是修改另一个复制的对象，不会影响 a 本身。</p>
-</li>
-<li><p>可变类型：类似 c++ 的引用传递，如 列表，字典。如 fun（la），则是将 la 真正的传过去，修改后fun外部的la也会受影响</p>
-</li>
-</ul>
-<p>python 中一切都是对象，严格意义我们不能说值传递还是引用传递，我们应该说传不可变对象和传可变对象。</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#传不可变对象实例</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">changeInt</span>(<span class="params">a</span>):</span></span><br><span class="line">    a=<span class="number">10</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">#函数调用</span></span><br><span class="line">b=<span class="number">5</span></span><br><span class="line">changeInt(b)</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#5</span></span><br></pre></td></tr></table></figure>
-
-
-<p>实例中有 int 对象 2，指向它的变量是 b，在传递给 ChangeInt 函数时，按传值的方式复制了变量 b，a 和 b 都指向了同一个 Int 对象，在 a=10 时，则新生成一个 int 值对象 10，并让 a 指向它。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#传可变对象实例</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">changelist</span>(<span class="params">List</span>):</span></span><br><span class="line">    <span class="comment">#对传入的列表进行扩展</span></span><br><span class="line">    List.append([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">    print(<span class="string">&#x27;函数内取值:&#x27;</span>,List)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#函数调用</span></span><br><span class="line">List=[<span class="string">&#x27;datascience&#x27;</span>]</span><br><span class="line">changelist(List)</span><br><span class="line">print(<span class="string">&#x27;函数外取值:&#x27;</span>,List)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#函数内取值: [&#x27;datascience&#x27;, [1, 2, 3, 4]]</span></span><br><span class="line"><span class="comment">#函数外取值: [&#x27;datascience&#x27;, [1, 2, 3, 4]]</span></span><br></pre></td></tr></table></figure>
-
-
-<p>可变对象在函数里修改了参数，那么在调用这个函数的函数里，原始的参数也被改变了。</p>
-<p>传入函数的和在末尾添加新内容的对象用的是同一个引用。</p>
-<h4 id="小作业"><a href="#小作业" class="headerlink" title="小作业"></a>小作业</h4><ol>
-<li><p>1.构造一个describe_pet函数，调用该函数输入以下2只宠物的信息：</p>
-<p>I have a cat. My cat’s name is Monkey.</p>
-<p>I have a lizard. My lizard’s name is Cola.</p>
-</li>
-<li><p>编写函数, 接收一个列表(包含10个整形)和一个整形k, 返回一个新列表，要求:</p>
-<pre><code>\- 将列表下标k之前对应(不包含k)的元素逆序;
-\- 将下标k及之后的元素逆序;</code></pre>
-</li>
-<li><p>请用函数实现一个判断用户输入的年份是否是闰年的程序</p>
-</li>
-<li><p>构造一个greeting函数，调用函数并使用循环，对输入的参数返回整理后的greeting信息。</p>
-<p>例如，在控制台分别输入名字“Mary”和姓“Chen”，调用函数后输出”Hello, Mary Chen!”，并提示输入下一组姓和名。直到控制台输入姓或名为“end”时，程序结束。</p>
 </li>
 </ol>
+<h3 id="数据质量面临的挑战"><a href="#数据质量面临的挑战" class="headerlink" title="数据质量面临的挑战"></a>数据质量面临的挑战</h3><p><strong>数据的污染</strong>是在数据仓库中处理的，延伸出去就形成了专业的数据治理，但是数据的污染却在数据仓库之外发生的，所有必须要清楚数据的污染源有哪些：</p>
+<p><strong>系统转换：</strong>源系统的系统升级、转换、迁移是数据污染的重要原因</p>
+<p><strong>数据老化：</strong>在经历一代又一代的系统升级、转换、迁移，历史数据往往无法满足当时时间的业务需求</p>
+<p><strong>复杂的系统集成：</strong>源系统种类繁多，关系日渐复杂，出现污染数据的可能性越来越大</p>
+<p><strong>拙劣的数据库设计：</strong> 坚持实体完整性和参考完整性规则可以防止一些数据污染，但是目前数据仓库存在两种观点：注重模型、注重集市，围绕业务进行数据库设计，这两种观点与传统的十大主题设计存在矛盾点。</p>
+<p>数据输入的不完整性：源系统的数据输入是数据污染的主要来源，信息输入错误会给数据仓库模型建立造成很大的压力</p>
+<p>缺乏数据治理相关的政策：如果一个公司对数据质量没有明确的相关政策，那么他的数据质量不可能得到保证</p>
+<h3 id="数据质量的指标"><a href="#数据质量的指标" class="headerlink" title="数据质量的指标"></a>数据质量的指标</h3><h4 id="准确性"><a href="#准确性" class="headerlink" title="准确性"></a>准确性</h4><p>准确性要求数据能够正确描述客观世界。比如某用户姓名拼音mu chen错误的录入成了muc hen，就应该弹出警告语；</p>
+<h4 id="唯一性（视情况而定）"><a href="#唯一性（视情况而定）" class="headerlink" title="唯一性（视情况而定）"></a>唯一性（视情况而定）</h4><p>唯一性要求数据不能被重复录入，或者不能有两个几乎相同的关系。比如张三李四在不同业务环境下分别建立了近乎相同的关系，这时应将这两个关系合并；</p>
+<h4 id="完整性"><a href="#完整性" class="headerlink" title="完整性"></a>完整性</h4><p>完整性要求进行数据搜集时，需求数据的被描述程度要高。比如一个用户的购买记录中，必然要有支付金额这个属性；规则验证。</p>
+<h4 id="一致性"><a href="#一致性" class="headerlink" title="一致性"></a>一致性</h4><p>一致性要求不同关系、或者同一关系不同字段的数据意义不发生冲突。</p>
+<p>比如某关系中昨天存货量字段+当天进货量字段-当天销售量字段等于当天存货量就可能是数据质量有问题；</p>
+<h4 id="及时性"><a href="#及时性" class="headerlink" title="及时性"></a>及时性</h4><p>及时性要求数据库系统中的数据”保鲜”。比如当天的购买记录当天就要入库；</p>
+<h4 id="统一性"><a href="#统一性" class="headerlink" title="统一性"></a>统一性</h4><p>统一性要求数据格式统一。比如nike这个品牌，不能有的字段描述为”耐克”，而有的字段又是”奈克”；</p>
+<h3 id="元数据的作用"><a href="#元数据的作用" class="headerlink" title="元数据的作用"></a>元数据的作用</h3><p><em>在数据仓库中，元数据的主要作用如下。</em></p>
+<ul>
+<li>（1）描述哪些数据在数据仓库中，帮助决策分析者对数据仓库的内容定位。</li>
+<li>（2）定义数据进入数据仓库的方式，作为数据汇总、映射和清洗的指南。</li>
+<li>（3）记录业务事件发生而随之进行的数据抽取工作时间安排。</li>
+<li>（4）记录并检测系统数据一致性的要求和执行情况。</li>
+<li>（5）评估数据质量。</li>
+</ul>
 
   
   
@@ -1711,7 +1555,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\59346.html" title="12.Python面向对象(3)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191225231208.png" /><span class="title">12.Python面向对象(3)</span><span class="excerpt">Python面向对象单例模式</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\80ca38c0.html" title="Day2.Python变量和运算符" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.Python变量和运算符</span><span class="excerpt">Python变量与运算符！！！</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\19a88b12.html" title="数据仓库是什么" rel="bookmark "><img src="https://7.dusays.com/2020/11/09/a244f012d5f64.png" /><span class="title">数据仓库是什么</span><span class="excerpt">数据仓库是什么?</span></a><a class="item" href="\posts\6f521982.html" title="什么是需求？" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/1601215112590.png" /><span class="title">什么是需求？</span><span class="excerpt">数仓需求的来源,以及流程。</span></a><a class="item" href="\posts\c54e1e5.html" title="数据仓库架构的设计" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/%E6%95%B0%E4%BB%93%E6%9E%B6%E6%9E%84%E5%9B%BE.png" /><span class="title">数据仓库架构的设计</span><span class="excerpt">数据仓库架构到底是怎么设计的，意义是什么?</span></a><a class="item" href="\posts\ff995e29.html" title="1.Git使用" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20200330223604.png" /><span class="title">1.Git使用</span><span class="excerpt">Git 快速学习。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1723,7 +1567,7 @@
               
             
               
-                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/3fb6e39.html>http://www.a2data.cn/posts/3fb6e39.html</a></p>
+                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/6637aa6e.html>http://www.a2data.cn/posts/6637aa6e.html</a></p>
               
             
           </blockquote>
@@ -1750,10 +1594,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-11T17:18:46+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-12T09:09:51+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 11, 2020</p>
+    <p>更新于：Nov 12, 2020</p>
   </a>
 </div>
 
@@ -1762,7 +1606,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E4%BB%93/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>数仓</p></a></div>
 
 
         
@@ -1774,13 +1618,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>2.9k words</p>
+      <p>1.9k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>11 min</p>
+      <p>6 min</p>
     </a>
   </div>
 
@@ -1795,7 +1639,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/3fb6e39.html&title=Day8.函数上 - DataScience&summary=函数 概念 定义 创建 参数"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/6637aa6e.html&title=数据仓库元数据 - DataScience&summary=数据仓库架构到底是怎么设计的，意义是什么?"
           
           >
           
@@ -1807,7 +1651,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/3fb6e39.html&title=Day8.函数上 - DataScience&summary=函数 概念 定义 创建 参数"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/6637aa6e.html&title=数据仓库元数据 - DataScience&summary=数据仓库架构到底是怎么设计的，意义是什么?"
           
           >
           
@@ -1819,7 +1663,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/3fb6e39.html&title=Day8.函数上 - DataScience&summary=函数 概念 定义 创建 参数"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/6637aa6e.html&title=数据仓库元数据 - DataScience&summary=数据仓库架构到底是怎么设计的，意义是什么?"
           
           >
           
@@ -1833,7 +1677,7 @@
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACQklEQVR42u3cSY4CMQwFUO5/6e49Uqk8MTkvOxoq5KU3X7bF4+/Q9QAHBwcHB18EfxTX5cY3n3v+e/b7uucFBwcHBwffCA8HgODnowev7ls9Lzg4ODg4+GZ4NEBUX1cBY+cFBwcHBwcHTz+fLVB0vw8cHBwcHBw8Ds/uEwWDg4ODg4ODv66hMA2qFjbe3kkBBwcHBwf/Inh5YO5Drz8+2QgODg4ODv4F8O7KBoxsAKoOEFx+Pzg4ODg4+CL4uxr72eez+0UvChwcHBwcfCM8W3CYAkeDzlhgAgcHBwcHPxA+XXjIXkh0kCBdiAAHBwcHB18Ej4KqFzFdaEgHK3BwcHBw8APg2QNVg0X34tMOcHBwcHDwRfDpQn61YV8NMnfnumwogIODg4ODHwQPb9wsMEwFmbEAAw4ODg4O/gPwasP/XQN+3YEEcHBwcHDwk+FTDfpsgMmu8QADDg4ODg7+xfBqgz/6XHVAoDqIEG4ogIODg4ODL4JPB5Vqg6FbmEgHGHBwcHBw8IPg2YZ9d//u++Dg4ODg4CfCuwd/VaOhXZgABwcHBwdfBO+uasMg3MgPvh++GHBwcHBw8EXwbmDIXlA2eIwHKnBwcHBw8IXwamDpXth0gLk9Lzg4ODg4+GJ4NUBMFQ6qhYZ2gAEHBwcHBz8Ynr2AaiCpDjCAg4ODg4ODz/8gbXfAIB2IwMHBwcHBF8OzDYVqQaIaTNr/AHBwcHBw8IXwajCoBpNuMBprKICDg4ODg/8w/LQFDg4ODg6+YP0D3+sBWwSYDfMAAAAASUVORK5CYII=">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACWElEQVR42u3cS27CQBAFQN//0uEAEXL/ALtd3iUkMDXZPL1u5fh76HOAg4ODg4Mvgh/F598bvvn+2edEX586Lzg4ODg4+EZ4OAC8OXD256Kw7AWfngMcHBwcHHwxPBo0uhcSBUQvMHpecHBwcHBw8DpoqrAABwcHBwcHH3ijZCDpFg7g4ODg4ODgcwOFKjS7AHC5SQo4ODg4OPiF4OWFuR99/fPNRnBwcHBw8AvAp5/uIKAbWE7PBw4ODg4OvgjeDRTZgX/2orrvCw4ODg4O/gR4d7GvOniIDhiqg4ZyAwMODg4ODn4D+KcPVg0g2QIj/Do4ODg4OPgieDZoZINFt3CYWlAABwcHBwffDI8Gj2qAmAoq4cKhu9kIDg4ODg5+A3i3qI/CsoVH9nPCwQYcHBwcHHwRvDsg6IK7RUb6IsHBwcHBwRfCs6DqokC2OMgGqfJAARwcHBwc/MbwaJEfLu6L4GoR0U5u4ODg4ODgN4RHB+zd4BD9vGgRkl0QAAcHBwcH3wiPBozqokB1wS9bWKQX/MDBwcHBwRfApwqF6qB/KhClBwrg4ODg4OAL4NUBQXawXy0ausEIHBwcHBx8M7z7TAWZqQLj9A8EDg4ODg6+CD4dGLIFxMcGB+Dg4ODg4A+CdwNLtajoFhvpCwYHBwcHB18MjwK6CwDVxYTuYAEcHBwcHBy8f/BsgdENVODg4ODg4OD9f5gzBkheKDg4ODg4+BPg1QNWi4rp3/v6JAUcHBwcHPwC8GpxX13Miy4WZANTuogABwcHBwe/MfxpDzg4ODg4+ILnBQqmwn2/CfaYAAAAAElFTkSuQmCC">
           </div>
         </div>
       
@@ -1855,25 +1699,13 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/b572816f.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Day9.函数下</p>
-          <p class='content'>匿名函数 函数嵌套 函数递归 作用域
-
-
-例题引导：
-一个由元组构成的列表：a = [(‘b’,3), (‘a’,2), (‘d’,4), (‘c’,1)]
-要求：使用lambda表达式和函数s...</p>
-        </a>
       
-      
-        <a class='next' href='/posts/1d1dff0b.html'>
-          <p class='title'>Day7.集合<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>集合: 创建 增加 转化 删除 遍历 运算
+        <a class='next' href='/posts/c54e1e5.html'>
+          <p class='title'>数据仓库架构的设计<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>数据仓库架构到底是怎么设计的，意义是什么?
 
 
-例题引导：
-有两个班英语班和数学班，需要统计这两个班中报名情况，例如统计既报名了英语班又报名数学班的同学名字,即统计为交集。
-12english_...</p>
+概述架构是数据仓库建设的总体规划，从整体视角描述了解决方案的高层模型，描述了各个子系统的功能以及关系，描述了数据从源系统到决策系统的数据流程。业务...</p>
         </a>
       
     </div>
@@ -2034,7 +1866,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">函数的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">函数的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8"><span class="toc-text">函数调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E8%B0%83%E7%94%A8"><span class="toc-text">参数调用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BD%A2%E5%8F%82%EF%BC%9A"><span class="toc-text">形参：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E5%8F%82%EF%BC%9A"><span class="toc-text">实参：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%8D%E7%BD%AE%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="toc-text">位置参数：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="toc-text">关键参数：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="toc-text">默认参数：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%8F%82%E6%95%B0%EF%BC%9A-args-kwargs"><span class="toc-text">动态参数： * args    ** kwargs</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#args"><span class="toc-text">* args</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#kwargs"><span class="toc-text">** kwargs</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92"><span class="toc-text">参数传递</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E6%9B%B4%E6%94%B9-mutable-%E4%B8%8E%E4%B8%8D%E5%8F%AF%E6%9B%B4%E6%94%B9-immutable-%E5%AF%B9%E8%B1%A1"><span class="toc-text">可更改(mutable)与不可更改(immutable)对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E4%BD%9C%E4%B8%9A"><span class="toc-text">小作业</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%83%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86"><span class="toc-text">元数据管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">元数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%B8%9A%E5%8A%A1%E5%85%83%E6%95%B0%E6%8D%AE"><span class="toc-text">1.业务元数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%8A%80%E6%9C%AF%E5%85%83%E6%95%B0%E6%8D%AE"><span class="toc-text">2.技术元数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%AE%A1%E7%90%86%E5%85%83%E6%95%B0%E6%8D%AE"><span class="toc-text">3.管理元数据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96%E9%80%94%E5%BE%84"><span class="toc-text">元数据获取途径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E6%95%B0%E6%8D%AE%E5%8A%9F%E8%83%BD"><span class="toc-text">元数据功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8"><span class="toc-text">元数据应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86"><span class="toc-text">数据质量管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0-1"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F%E4%BA%A7%E7%94%9F%E7%9A%84%E6%A0%B9%E6%9C%AC%E5%8E%9F%E5%9B%A0"><span class="toc-text">数据质量产生的根本原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F%E9%9D%A2%E4%B8%B4%E7%9A%84%E6%8C%91%E6%88%98"><span class="toc-text">数据质量面临的挑战</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F%E7%9A%84%E6%8C%87%E6%A0%87"><span class="toc-text">数据质量的指标</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%86%E7%A1%AE%E6%80%A7"><span class="toc-text">准确性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%94%AF%E4%B8%80%E6%80%A7%EF%BC%88%E8%A7%86%E6%83%85%E5%86%B5%E8%80%8C%E5%AE%9A%EF%BC%89"><span class="toc-text">唯一性（视情况而定）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-text">完整性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E8%87%B4%E6%80%A7"><span class="toc-text">一致性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%8A%E6%97%B6%E6%80%A7"><span class="toc-text">及时性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%9F%E4%B8%80%E6%80%A7"><span class="toc-text">统一性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E6%95%B0%E6%8D%AE%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">元数据的作用</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3273,4 +3105,5 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
       </script>
 
   </div>
-<script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+</body>
+</html>
