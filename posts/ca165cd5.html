@@ -17,13 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>3.Python的字符串 - DataScience</title>
+  <title>ETL开发 - DataScience</title>
   
-    <meta name="keywords" content="Python">
+    <meta name="keywords" content="数仓">
   
 
   
-    <meta name="description" content="Python的字符串">
+    <meta name="description" content="数据仓库之ETL开发。">
   
 
   <!-- feed -->
@@ -1341,7 +1341,7 @@
  
 <div id="pjax-data" style="display: none"> 
   <div id="pjax-ispage">true</div> 
-  <div id="pjax-pageTitle">3.Python的字符串</div> 
+  <div id="pjax-pageTitle">ETL开发</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -1381,7 +1381,7 @@
     
     
       <h1 class="title">
-        3.Python的字符串
+        ETL开发
       </h1>
       <div class='new-meta-box'>
         
@@ -1400,7 +1400,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Dec 11, 2019</p>
+    <p>发布于：Nov 14, 2020</p>
   </a>
 </div>
 
@@ -1408,13 +1408,6 @@
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E9%80%9F%E6%88%90/">Python速成</a>
-    </a>
-  </div>
-
 
           
         
@@ -1423,13 +1416,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.6k words</p>
+      <p>2.2k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>6 min</p>
+      <p>7 min</p>
     </a>
   </div>
 
@@ -1441,7 +1434,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="3.Python的字符串" data-path="/posts/29055.html">
+      <div id="lc-pv" data-title="ETL开发" data-path="/posts/ca165cd5.html">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -1456,9 +1449,9 @@
             
 <div class="new-meta-item comments-count">
   
-  <a href="/posts/29055.html#comments">
+  <a href="/posts/ca165cd5.html#comments">
     <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/29055.html">0</span>
+    <span class="valine-comment-count" data-xid="/posts/ca165cd5.html">0</span>
     <span class="leancloud-comments-count">&nbsp;</span>
   </a>
 </div>
@@ -1473,220 +1466,135 @@
 
   
   
-  <p>Python的字符串</p>
+  <p>数据仓库之ETL开发。</p>
 <a id="more"></a>
 
-
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211073327.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211073327.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Python字符串"></p>
-<h1 id="Python的字符串"><a href="#Python的字符串" class="headerlink" title="Python的字符串"></a>Python的字符串</h1><h2 id="1、字符串介绍"><a href="#1、字符串介绍" class="headerlink" title="1、字符串介绍"></a>1、字符串介绍</h2><ul>
-<li><p>想一想：</p>
-<blockquote>
-<p>当打来浏览器登录某些网站的时候，需要输入密码，浏览器把密码传送到服务器后，服务器会对密码进行验证，其验证过程是把之前保存的密码与本次传递过去的密码进行对比，如果相等，那么就认为密码正确，否则就认为不对；服务器既然想要存储这些密码可以用数据库（比如MySQL），当然为了简单起见，咱们可以先找个变量把密码存储起来即可；那么怎样存储带有字母的密码呢？</p>
-</blockquote>
+<h2 id="ETL开发"><a href="#ETL开发" class="headerlink" title="ETL开发"></a>ETL开发</h2><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><strong>ETL</strong>是数据仓库的后台，主要包含抽取、清洗、规范化、提交四个步骤，传统数据仓库一般分为四层模型。  </p>
+<p><img src="https://gitee.com/DataITems/cdn/raw/master/1600580328638.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/1600580328638.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><strong>分层的作用：</strong></p>
+<p>1.划分ETL阶段工作重心，便于管理</p>
+<p>2.降低开发和维护成本</p>
+<p>3.减少需求变化带来的冲击</p>
+<p>4.便于数据问题跟踪</p>
+<p><strong>名词解释：</strong></p>
+<ul>
+<li>ODS——操作性数据</li>
+<li>DW——数据仓库</li>
+<li>DM——数据集市</li>
+</ul>
+<p><img src="https://7.dusays.com/2020/11/14/c89943edbbff7.png" class="lazyload" data-srcset="https://7.dusays.com/2020/11/14/c89943edbbff7.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h2 id="STG层"><a href="#STG层" class="headerlink" title="STG层"></a>STG层</h2><p>在维度建模阶段已经确定了源系统，而且对源系统进行了数据评估。STG层是根据CDC策略把各个源系统的数据抽取到数据仓库中。STG层主要是面向批处理的形式，如果是根据日志信息实时同步，可以跳过STG层直接进入ODS层。 </p>
+<p><strong>STG作用：</strong> 减轻源系统压力；数据备份，支持重跑；便于问题跟踪；数据质量检查，主要起到缓冲的作用。</p>
+<p><strong>开发步骤：</strong></p>
+<ol>
+<li>确定CDC策略，根据源系统的数据状况选择一个合适的CDC策略。</li>
+<li>设计Mapping文档。</li>
+<li>设计物理模型，STG的物理模型一般包括源系统的所有字段和审计字段，例如：源系统名称，源表名称，加载时间，加载方式。可以去掉其他约束条件，比如主键、索引，默认值。如果源表和目标表的数据库类型不同，最好字段长度要进行扩充，一般目标表的数据类型就选择几种常用，长度就选择几个固定的长度。</li>
+<li>抽取数据，STG层面向异构数据源，最好选择用ETL工具，一般ETL工具都支持多种数据源。STG层不做数据转换。</li>
+<li>加载数据，STG层一般保留7天或一月的数据</li>
+</ol>
+<h2 id="ODS层"><a href="#ODS层" class="headerlink" title="ODS层"></a>ODS层</h2><p>ODS层是把STG层数据进行历史存档，保留源系统的所有历史数据，如果是流式的，可以跳过STG层，实时同步到ODS层。  </p>
+<p><strong>ODS作用：</strong> 全量存储源系统的数据；支持下游系统实时查询业务；数据质量检查</p>
+<p>开发步骤：</p>
+<ol>
+<li>设计Mapping文档。</li>
+<li>设计物理模型，ODS的物理模型一般包括源系统的所有字段和审计字段，但是和源系统最主要的区别是ODS层加了逻辑删除标记和增量时间戳。因为很多源系统都可能进行物理删除数据，即使有逻辑删除标记，但是也可以在后台人工删除数据。</li>
+<li>抽取数据，ODS层从STG层抽取数据，在同一个数据平台上，可以采用ETL工具，也可以手工编码。</li>
+<li>加载数据，进行数据比较，判断是否有物理删除情况，如果有打上删除标记。ODS层保留全量数据。</li>
+</ol>
+<h2 id="DW层"><a href="#DW层" class="headerlink" title="DW层"></a>DW层</h2><p>DW层是清洗、规范化，提交一致化维度和事实的工作区，建立反规范化的维度模型。  </p>
+<p><strong>数据清洗</strong>： 数据清洗是发现数据质量问题并纠正数据的过程，通用的方法是戴明质量环 </p>
+<p>主要步骤：</p>
+<ol>
+<li>定义数据质量需求，根据业务需求和数据剖析结果确定数据质量需求的优先级。</li>
+<li>制定数据质量测量类型</li>
+<li>提交数据质量测量结果表，通常异常数据处理策略有：中断处理；把拒绝记录放在错误时间表里；只做标记，数据继续处理</li>
+<li>纠正数据分为四个优先级：必须在ETL处理；最好在ETL处理；最好在源头处理；必须在源头处理</li>
+</ol>
+<p><strong>数据规范化</strong>：</p>
+<p> 由于数据仓库的数据来源各个业务系统，每个业务系统相对都是封闭的，他们在命名、取值上都有自己的特点。规范化就是经过标准化、去重、合并、拆分、整合等过程把各个业务系统的数据统一命名，统一取值，建立企业标准版本数据。  </p>
+<h3 id="主要步骤："><a href="#主要步骤：" class="headerlink" title="主要步骤："></a>主要步骤：</h3><p><strong>1.数据标准化</strong></p>
+<p>从数据的内容、格式、命名、计算规则等输出为唯一的版本数据，把各个源系统的相同描述对象但是不同取值进行统一，比如：性别字段，有的源系统用0和1或Man和Wonen。通过映射表统一命名为M和F。</p>
+<p><strong>2.删除重复数据</strong></p>
+<p>如果源系统中存在重复数据或者多个源系统维护了相同对象的数据，这时候就要根据保留规则，删除重复数据，只保留唯一的一条数据。</p>
+<p><strong>3.数据共存</strong></p>
+<p>把各个业务系统的数据经过拆分、合并、整合。例如相同的客户号，二个源系统都维护了这个客户的联系方式，这时候就要根据业务规则来选择保留哪那个源系统的值。</p>
+<p><strong>维度表的提交</strong>：</p>
+<ul>
+<li>1.确认粒度</li>
+</ul>
+<p>维度表的粒度就是表的业务主键，根据业务主键来判断记录的唯一性。</p>
+<ul>
+<li>2.选择代理键生成器</li>
+</ul>
+<p>ETL工具和数据库都有设置字段自增长的功能。</p>
+<ul>
+<li>3.选择维度表类型</li>
+</ul>
+<p>根据业务系统的实际情况选择合适的维度表类型，一般采用缓慢变化维类型1和类型2。</p>
+<ul>
+<li>4.增量加载维度数据</li>
+</ul>
+<p>维度表的每个字段都要设置默认值，不能为空。首次加载的时候要有一条代理键为-1的默认记录，为了防止事实表查找不到代理键。</p>
+<ul>
+<li>5.生成代理键管道</li>
+</ul>
+<p>为了生成事实表的维度代理键，一般会建一个查找维表，查找维表包含业务主键和代理键的映射关系。</p>
+<p><strong>事实表的提交</strong>：</p>
+<ul>
+<li>1.选择事实表类型 </li>
+</ul>
+<p>根据业务需求选择合适的事实表类型，一般会先建最细粒度的事务事实表，根据事务事实表建周期快照或累积事实表。</p>
+<ul>
+<li>2.用代理键替换主键</li>
+</ul>
+<p>根据事实表中维表的业务主键关联查找维表替换成代理键，如果关联不上设置为-1。</p>
+<ul>
+<li>3.增量加载事实数据</li>
+</ul>
+<p>事实表的每个字段不能为空，事实表主要包含事实粒度的业务主键、维表业务主键、维表代理键、源表的主键、逻辑删除标识和事实。便于重新加载事实表和问题跟踪。由于事实表的数据量大，一般采用分区的方式进行存储。</p>
+<ul>
+<li>4.提交错误事实表</li>
+</ul>
+<p>把加载事实表的拒绝记录存储在错误事实表中，以便进行数据质量跟踪。</p>
+<ul>
+<li>5.事实表合并</li>
+</ul>
+<p>一级事实表都是根据单个业务过程建立的，为了便于分析和重用，需要把多个业务过程的事实表进行合并，形成二级事实表。</p>
+<ul>
+<li>6.事实表归档</li>
+</ul>
+<p>随着时间的推移，事实表中会存放大量的历史数据，如果这些数据很少再出现在统计分析中，需要把这些数据迁移到其他表中或以文件格式存储。</p>
+<h2 id="DM层"><a href="#DM层" class="headerlink" title="DM层"></a>DM层</h2><p><strong>DM层</strong>根据业务需求把DW层数据进行聚合或生成宽表。  </p>
+<p><strong>创建聚合事实表</strong> </p>
+<p>前台展现的数据一般都是聚合后的数据，聚合后的数据量比最细粒度的事实表小很多，查询性也有很大的提升。</p>
+<p><strong>创建聚合表的方法</strong></p>
+<ul>
+<li><p>1.增量加载，创建聚合表，增量加载聚合表。</p>
 </li>
-<li><p>答：</p>
-<blockquote>
-<p>字符串</p>
-</blockquote>
+<li><p>2.聚合导航，用户通过报表分析工具，根据用户请求把基础事实表自动生成聚合数据。</p>
+</li>
+<li><p>3.物化视图，创建物化视图定时刷新聚合表。</p>
 </li>
 </ul>
-<p><strong>python中字符串的格式</strong></p>
-<p>如下定义的变量a，存储的是数字类型的值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">100</span></span><br></pre></td></tr></table></figure>
-
-<p>如下定义的变量b，存储的是字符串类型的值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">b = <span class="string">&quot;hello a2data.cn&quot;</span></span><br><span class="line">或者</span><br><span class="line">b = <span class="string">&#x27;hello www.a2data.cn&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>小总结：</p>
+<p><strong>创建缩小维度表</strong></p>
+<p>由于聚合事实表的粒度和基础事实表粒度不同，需要创建和聚合表相同粒度的维度表，这些维度表只是基础维度表的缩小版。</p>
+<h2 id="ETL优化"><a href="#ETL优化" class="headerlink" title="ETL优化"></a>ETL优化</h2><p><strong>1.减少磁盘I/O</strong></p>
 <ul>
-<li>双引号或者单引号中的数据，就是字符串</li>
+<li>关联查询的时候，尽可能把无效的数据过滤掉</li>
+<li>只查出需要的列</li>
+<li>大数据量尽量不要有排序</li>
+<li>在加载数据时关闭日志</li>
 </ul>
-<h2 id="2、字符串输出"><a href="#2、字符串输出" class="headerlink" title="2、字符串输出"></a>2、字符串输出</h2><p><strong>demo</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&#x27;小风&#x27;</span></span><br><span class="line">position = <span class="string">&#x27;大数据分析狮&#x27;</span></span><br><span class="line">address = <span class="string">&#x27;北京市朝阳区xxxx&#x27;</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;--------------------------------------------------&#x27;</span>)</span><br><span class="line">    print(<span class="string">&quot;姓名：%s&quot;</span>%name)</span><br><span class="line">    print(<span class="string">&quot;职位：%s&quot;</span>%position)</span><br><span class="line">    print(<span class="string">&quot;公司地址：%s&quot;</span>%address)</span><br><span class="line">print(<span class="string">&#x27;--------------------------------------------------&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><em>结果</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">--------------------------------------------------</span><br><span class="line">    姓名： 小风</span><br><span class="line">    职位： 大数据分析狮</span><br><span class="line">    公司地址： 北京市朝阳区xxxx</span><br><span class="line">--------------------------------------------------</span><br></pre></td></tr></table></figure>
-
-<h2 id="3、字符串输入"><a href="#3、字符串输入" class="headerlink" title="3、字符串输入"></a>3、字符串输入</h2><blockquote>
-<p>在input的时候，通过它能够完成从键盘获取数据，然后保存到指定的变量中；</p>
-<p>注意：input获取的数据，都以字符串的方式进行保存，即使输入的是数字，那么也是以字符串方式保存</p>
-</blockquote>
-<p><strong>demo</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">userName = input(<span class="string">&#x27;请输入用户名:&#x27;</span>)</span><br><span class="line">print(<span class="string">&quot;用户名为：%s&quot;</span>%userName)</span><br><span class="line"></span><br><span class="line">password = input(<span class="string">&#x27;请输入密码:&#x27;</span>)</span><br><span class="line">print(<span class="string">&quot;密码为：%s&quot;</span>%password)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="4、下标和切片"><a href="#4、下标和切片" class="headerlink" title="4、下标和切片"></a>4、下标和切片</h2><h3 id="4-1、下标索引"><a href="#4-1、下标索引" class="headerlink" title="4.1、下标索引"></a>4.1、下标索引</h3><blockquote>
-<p>字符串中”下标”的使用</p>
-<p><strong>列表与元组支持下标索引好理解，字符串实际上就是字符的数组，</strong></p>
-<p><strong>所以也支持下标索引。</strong></p>
-<p>如果有字符串:<code>name = &#39;abcdef&#39;</code>，在内存中的实际存储如下:</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211074509.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211074509.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="下标索引"></p>
-<p>如果想取出部分字符，那么可以通过<code>下标</code>的方法，（注意python中下标从 0 开始）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&#x27;abcdef&#x27;</span></span><br><span class="line"></span><br><span class="line">print(name[<span class="number">0</span>])</span><br><span class="line">print(name[<span class="number">1</span>])</span><br><span class="line">print(name[<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
-
-<p>运行结果</p>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211075204.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211075204.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="如图"></p>
-<h3 id="4-2、切片"><a href="#4-2、切片" class="headerlink" title="4.2、切片"></a>4.2、切片</h3><blockquote>
-<p>切片是指对操作的对象截取其中一部分的操作。<strong>字符串、列表、元组</strong>都支持切片操作。</p>
-<h4 id="切片的语法：-起始-结束-步长"><a href="#切片的语法：-起始-结束-步长" class="headerlink" title="切片的语法：[起始:结束:步长]"></a>切片的语法：[起始:结束:步长]</h4><p><strong>注意：选取的区间属于左闭右开型，即从”起始”位开始，到”结束”位的前一位结束（不包含结束位本身)。</strong></p>
-<p>我们以字符串为例讲解。</p>
-<p>如果取出一部分，则可以在<code>中括号[]</code>中使用 <strong>:</strong></p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&#x27;abcdef&#x27;</span></span><br><span class="line">print(name[<span class="number">0</span>:<span class="number">3</span>]) <span class="comment"># 取 下标0~2 的字符</span></span><br><span class="line">print(name[<span class="number">0</span>:<span class="number">5</span>]) <span class="comment"># 取 下标为0~4 的字符</span></span><br><span class="line">print(name[<span class="number">3</span>:<span class="number">5</span>]) <span class="comment"># 取 下标为3、4 的字符</span></span><br><span class="line">print(name[<span class="number">2</span>:]) <span class="comment"># 取 下标为2开始到最后的字符</span></span><br><span class="line">print(name[<span class="number">1</span>:<span class="number">-1</span>]) <span class="comment"># 取 下标为1开始 到 最后第2个  之间的字符</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211075831.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211075831.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="如图"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&quot;abcdef&quot;</span></span><br><span class="line">a[:<span class="number">3</span>]</span><br><span class="line"> <span class="string">&#x27;abc&#x27;</span></span><br><span class="line">a[::<span class="number">2</span>]</span><br><span class="line"> <span class="string">&#x27;ace&#x27;</span></span><br><span class="line">a[<span class="number">5</span>:<span class="number">1</span>:<span class="number">2</span>] </span><br><span class="line"> <span class="string">&#x27;&#x27;</span></span><br><span class="line">a[<span class="number">1</span>:<span class="number">5</span>:<span class="number">2</span>]</span><br><span class="line"> <span class="string">&#x27;bd&#x27;</span></span><br><span class="line">a[::<span class="number">-2</span>]</span><br><span class="line"> <span class="string">&#x27;fdb&#x27;</span> </span><br><span class="line">a[<span class="number">5</span>:<span class="number">1</span>:<span class="number">-2</span>]</span><br><span class="line"> <span class="string">&#x27;fd&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>想一想</strong></p>
+<p><strong>2.分区和并行</strong></p>
 <ul>
-<li>（面试题）给定一个字符串aStr, 请反转字符串</li>
+<li>大数据量可以进行分区</li>
+<li>查询和任务调度都可以进行并行处理</li>
 </ul>
-<blockquote>
-<p>例如： ‘<a target="_blank" rel="noopener" href="http://www.a2data.cn&/#39;">www.a2data.cn&#39;</a> </p>
-</blockquote>
-<h2 id="5、字符串常见操作"><a href="#5、字符串常见操作" class="headerlink" title="5、字符串常见操作"></a>5、字符串常见操作</h2><blockquote>
-<p>如有字符串<code>mystr = &#39;hello world a2data and jackfeng&#39;</code>，以下是常见的操作</p>
-</blockquote>
-<h3 id="5-1、find"><a href="#5-1、find" class="headerlink" title="5.1、find"></a>5.1、find</h3><blockquote>
-<p>检测 str 是否包含在 mystr中，如果是返回开始的索引值，否则返回-1</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mystr.find(str,start=<span class="number">0</span>, end=len(mystr))</span><br><span class="line">mystr = <span class="string">&#x27;hello world a2data and jackfeng&#x27;</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211080637.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211080637.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Find"></p>
-<h3 id="5-2、index"><a href="#5-2、index" class="headerlink" title="5.2、index"></a>5.2、index</h3><blockquote>
-<p>跟find()方法一样，只不过如果str不在 mystr中会报一个异常.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mystr.index(str, start=<span class="number">0</span>, end=len(mystr)) </span><br><span class="line">mystr = <span class="string">&#x27;hello world a2data and jackfeng&#x27;</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211080919.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211080919.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Index"></p>
-<h3 id="5-3、count"><a href="#5-3、count" class="headerlink" title="5.3、count"></a>5.3、count</h3><blockquote>
-<p>返回 str在start和end之间 在 mystr里面出现的次数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mystr.count(str, start=<span class="number">0</span>, end=len(mystr))</span><br><span class="line">mystr = <span class="string">&#x27;hello world a2data and jackfeng&#x27;</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211081139.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211081139.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Count"></p>
-<h3 id="5-4、replace"><a href="#5-4、replace" class="headerlink" title="5.4、replace"></a>5.4、replace</h3><blockquote>
-<p>把 mystr 中的 str1 替换成 str2,如果 count 指定，则替换不超过 count 次.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mystr.replace(str1, str2,  mystr.count(str1))</span><br><span class="line">name =<span class="string">&quot;hello world ha ha&quot;</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211081609.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211081609.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Replace"></p>
-<h3 id="5-5、split"><a href="#5-5、split" class="headerlink" title="5.5、split"></a>5.5、split</h3><blockquote>
-<p>以 str 为分隔符切片 mystr，如果 maxsplit有指定值，则仅分隔 maxsplit 个子字符串</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mystr.split(str=<span class="string">&quot; &quot;</span>, <span class="number">2</span>)  </span><br><span class="line">name =<span class="string">&quot;hello world ha ha&quot;</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211081917.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211081917.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Split"></p>
-<h3 id="5-6、capitalize"><a href="#5-6、capitalize" class="headerlink" title="5.6、capitalize"></a>5.6、capitalize</h3><blockquote>
-<p>把字符串的第一个字符大写</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.capitalize()</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211082148.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211082148.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Capitalize"></p>
-<h3 id="5-7、title"><a href="#5-7、title" class="headerlink" title="5.7、title"></a>5.7、title</h3><blockquote>
-<p>把字符串的每个单词首字母大写</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211082321.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211082321.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Title"></p>
-<h3 id="5-8、startswith"><a href="#5-8、startswith" class="headerlink" title="5.8、startswith"></a>5.8、startswith</h3><blockquote>
-<p>检查字符串是否是以 obj 开头, 是则返回 True，否则返回 False</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.startswith(obj)</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211082515.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211082515.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Startswith"></p>
-<h3 id="5-9、endswith"><a href="#5-9、endswith" class="headerlink" title="5.9、endswith"></a>5.9、endswith</h3><blockquote>
-<p>检查字符串是否以obj结束，如果是返回True,否则返回 False.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.endswith(obj)</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211082741.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211082741.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="endswith"></p>
-<h3 id="5-10、lower"><a href="#5-10、lower" class="headerlink" title="5.10、lower"></a>5.10、lower</h3><blockquote>
-<p>转换 mystr 中所有大写字符为小写</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.lower()     </span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084145.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084145.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="lower"></p>
-<h3 id="5-11、upper"><a href="#5-11、upper" class="headerlink" title="5.11、upper"></a>5.11、upper</h3><blockquote>
-<p>转换 mystr 中的小写字母为大写</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.upper()    </span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084249.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084249.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="5-12、ljust"><a href="#5-12、ljust" class="headerlink" title="5.12、ljust"></a>5.12、ljust</h3><blockquote>
-<p>返回一个原字符串左对齐,并使用空格填充至长度 width 的新字符串</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.ljust(width) </span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084406.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084406.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="5-13、rjust"><a href="#5-13、rjust" class="headerlink" title="5.13、rjust"></a>5.13、rjust</h3><blockquote>
-<p>返回一个原字符串右对齐,并使用空格填充至长度 width 的新字符串</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.rjust(width)    </span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084420.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084420.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="5-14、center"><a href="#5-14、center" class="headerlink" title="5.14、center"></a>5.14、center</h3><blockquote>
-<p>返回一个原字符串居中,并使用空格填充至长度 width 的新字符串</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.center(width)   </span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084445.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084445.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="5-15、lstrip"><a href="#5-15、lstrip" class="headerlink" title="5.15、lstrip"></a>5.15、lstrip</h3><blockquote>
-<p>删除 mystr 左边的空白字符</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.lstrip()</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084547.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084547.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="5-16、rstrip"><a href="#5-16、rstrip" class="headerlink" title="5.16、rstrip"></a>5.16、rstrip</h3><blockquote>
-<p>删除 mystr 字符串末尾的空白字符</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.rstrip() </span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084620.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084620.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="5-17、strip"><a href="#5-17、strip" class="headerlink" title="5.17、strip"></a>5.17、strip</h3><blockquote>
-<p>删除mystr字符串两端的空白字符</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084704.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084704.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="5-18、rfind"><a href="#5-18、rfind" class="headerlink" title="5.18、rfind"></a>5.18、rfind</h3><blockquote>
-<p>类似于 find()函数，不过是从右边开始查找.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.rfind(str, start=<span class="number">0</span>,end=len(mystr) )</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084802.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084802.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="5-19、rindex"><a href="#5-19、rindex" class="headerlink" title="5.19、rindex"></a>5.19、rindex</h3><blockquote>
-<p>类似于 index()，不过是从右边开始.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.rindex( str, start=<span class="number">0</span>,end=len(mystr))</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084906.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211084906.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="5-20、partition"><a href="#5-20、partition" class="headerlink" title="5.20、partition"></a>5.20、partition</h3><blockquote>
-<p>把mystr以str分割成三部分,str前，str和str后</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.partition(str)</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211085003.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211085003.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="5-21、rpartition"><a href="#5-21、rpartition" class="headerlink" title="5.21、rpartition"></a>5.21、rpartition</h3><blockquote>
-<p>类似于 partition()函数,不过是从右边开始.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.rpartition(str)</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211085041.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211085041.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="5-22、splitlines"><a href="#5-22、splitlines" class="headerlink" title="5.22、splitlines"></a>5.22、splitlines</h3><blockquote>
-<p>按照行分隔，返回一个包含各行作为元素的列表</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.splitlines()  </span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211085356.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211085356.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="5-23、isalpha"><a href="#5-23、isalpha" class="headerlink" title="5.23、isalpha"></a>5.23、isalpha</h3><blockquote>
-<p>如果 mystr 所有字符都是字母 则返回 True,否则返回 False</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.isalpha()  </span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211085450.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211085450.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="5-24、isdigit"><a href="#5-24、isdigit" class="headerlink" title="5.24、isdigit"></a>5.24、isdigit</h3><blockquote>
-<p>如果 mystr 只包含数字则返回 True 否则返回 False.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.isdigit() </span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211085529.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211085529.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="5-25、isalnum"><a href="#5-25、isalnum" class="headerlink" title="5.25、isalnum"></a>5.25、isalnum</h3><blockquote>
-<p>如果 mystr 所有字符都是字母或数字则返回 True,否则返回 False</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.isalnum()  </span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211085656.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211085656.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="5-26、isspace"><a href="#5-26、isspace" class="headerlink" title="5.26、isspace"></a>5.26、isspace</h3><blockquote>
-<p>如果 mystr 中只包含空格，则返回 True，否则返回 False.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.isspace()  </span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211085806.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211085806.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="5-27、join"><a href="#5-27、join" class="headerlink" title="5.27、join"></a>5.27、join</h3><blockquote>
-<p>mystr 中每个字符后面插入str,构造出一个新的字符串</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mystr.join(str)</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211090020.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211090020.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<p><strong>想一想</strong></p>
-<ul>
-<li>（面试题）给定一个字符串aStr，返回使用空格或者’\t’分割后的倒数第二个子串</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211083910.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191211083910.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="面试题"></p>
+<p><strong>3.增量加载</strong></p>
+<p><strong>4.增加索引</strong></p>
+<p><strong>5.大而化小,复杂的查询可以分成多个子任务来执行。</strong></p>
+<p><strong>6.重用结果集,把多个查询任务的共用数据可以单独建临时表。</strong></p>
 
   
   
@@ -1700,7 +1608,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\30675.html" title="11.Python面向对象(2)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191224164151.png" /><span class="title">11.Python面向对象(2)</span><span class="excerpt">Python面向对象介绍中篇</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\34771.html" title="10.Python面向对象(1)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223115817.png" /><span class="title">10.Python面向对象(1)</span><span class="excerpt">Python面向对象介绍上篇</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\19a88b12.html" title="数据仓库是什么" rel="bookmark "><img src="https://7.dusays.com/2020/11/09/a244f012d5f64.png" /><span class="title">数据仓库是什么</span><span class="excerpt">数据仓库是什么?</span></a><a class="item" href="\posts\6f521982.html" title="什么是需求？" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/1601215112590.png" /><span class="title">什么是需求？</span><span class="excerpt">数仓需求的来源,以及流程。</span></a><a class="item" href="\posts\c54e1e5.html" title="数据仓库架构的设计" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/%E6%95%B0%E4%BB%93%E6%9E%B6%E6%9E%84%E5%9B%BE.png" /><span class="title">数据仓库架构的设计</span><span class="excerpt">数据仓库架构到底是怎么设计的，意义是什么?</span></a><a class="item" href="\posts\6637aa6e.html" title="数据仓库元数据" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/%E5%85%83%E6%95%B0%E6%8D%AE.png" /><span class="title">数据仓库元数据</span><span class="excerpt">数据仓库架构到底是怎么设计的，意义是什么?</span></a><a class="item" href="\posts\2834.html" title="Java 常用API-II" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Java 常用API-II</span><span class="excerpt">JavaAPP-II</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1712,7 +1620,7 @@
               
             
               
-                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/29055.html>http://www.a2data.cn/posts/29055.html</a></p>
+                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/ca165cd5.html>http://www.a2data.cn/posts/ca165cd5.html</a></p>
               
             
           </blockquote>
@@ -1739,10 +1647,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-11T16:14:26+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-14T12:52:28+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 11, 2020</p>
+    <p>更新于：Nov 14, 2020</p>
   </a>
 </div>
 
@@ -1751,7 +1659,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E4%BB%93/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>数仓</p></a></div>
 
 
         
@@ -1763,13 +1671,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.6k words</p>
+      <p>2.2k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>6 min</p>
+      <p>7 min</p>
     </a>
   </div>
 
@@ -1784,7 +1692,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/29055.html&title=3.Python的字符串 - DataScience&summary=Python的字符串"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/ca165cd5.html&title=ETL开发 - DataScience&summary=数据仓库之ETL开发。"
           
           >
           
@@ -1796,7 +1704,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/29055.html&title=3.Python的字符串 - DataScience&summary=Python的字符串"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/ca165cd5.html&title=ETL开发 - DataScience&summary=数据仓库之ETL开发。"
           
           >
           
@@ -1808,7 +1716,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/29055.html&title=3.Python的字符串 - DataScience&summary=Python的字符串"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/ca165cd5.html&title=ETL开发 - DataScience&summary=数据仓库之ETL开发。"
           
           >
           
@@ -1822,7 +1730,7 @@
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACPElEQVR42u3ay5ECMQwFQPJPmg2AotBvZkFu36AG4zaXh6TH89D1AAcHBwcHXwR/FNfLhjd9rntecHBwcHDwjfBwAAgC3j2fvZjo90efBwcHBwcH3wyPBojoRXw6UBuSPS84ODg4ODh4+iK6wQgcHBwcHBz8Pni2oTBd2AAHBwcHBz8RXi0EVBv3Vei/d1LAwcHBwcG/CN498N2vxwb8wMHBwcHBfxjeXVMFi6nBgY/nBQcHBwcHXwSvBoRsgz/bcIheSPp84ODg4ODgB8GzgOo+1fez+4ODg4ODg2+CdwsD1Ub+1EBCeh9wcHBwcPBF8OqgXTdQTBUa0gEIHBwcHBx8EXz6QNkCf/UCq4ME4ODg4ODgJ8DvGtibuujwOcHBwcHBwQ+CRwcAoxeSHSToNh7KAQYcHBwcHPyH4NmNuqBuoyLauAAHBwcHB98MnypATEGzgaUcYMDBwcHBwRfCn81V3a/bQAj/cODg4ODg4AvhVzcMsoMI1cJEOsCAg4ODg4Mvgk/94a9ebLagkS54gIODg4ODHwCfavRXBwsuK0yAg4ODg4Mvgk81EKYKDlP7g4ODg4ODnwDvBoZq8OkGlHJjAhwcHBwcfCG8GiimLmJ6f3BwcHBw8BPh1QCRvbhug6AcsMDBwcHBwcHT8GgQmXo+PREBDg4ODg5+MLz6/FWDAG/3BwcHBwcHXwyvBpGpfarfFw1A4ODg4ODgG+FTA3fdwNENTrdNNoKDg4ODg38B/LQFDg4ODg6+YP0BfDuDrk5STAUAAAAASUVORK5CYII=">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACSElEQVR42u3dQW7DMAwEQP//0+k9QGBxKTcOPbq1tSONclmQBHq8HroOcHBwcHDwQfAjXKcbvD336b3qft3zgoODg4ODT4QvB4CT56vg6jm65wUHBwcHB58MXw0Qq89fDqmeFxwcHBwcHHz5/bPfd4MOODg4ODg4+P8FmGrBARwcHBwcHPy6hkJ6kOogwO06KeDg4ODg4DeCxwNzX/r565ON4ODg4ODgN4B3Vxo4VhsM1cByel5wcHBwcPBB8G6hoNoYSIPRrvOBg4ODg4NPgl89INC9sGpgWm4ogIODg4ODD4CXA0ATtusi4s8BBwcHBwcfBO9uUL2I1WC0q2ABDg4ODg4+Gd79wNWL6g4K7gpG4ODg4ODgk+DpBVTfLweNTQMFy50UcHBwcHDwH4TvavCnF5QWGqoDBeDg4ODg4BPh6epeQDoIsAysdlLAwcHBwcEHwLuN/fRg6cDetgADDg4ODg7+g/BqYz8NMrsaB+2BA3BwcHBw8AfA06BxNFe3MNEOMODg4ODg4IPg3Y27g3/dv4ODg4ODgz8RngaNKjh9Li5MgIODg4ODD4J3V3dAIG1EpF8UODg4ODj4JPiuwv8uYLnRX21MgIODg4ODD4TvOnDaiFjdr1rwAAcHBwcHfxK8GyC6BYS00BAXIsDBwcHBwcHjAFNtUFSDETg4ODg4OHj/H7mkDYNuoLm8EAEODg4ODn4jeLWhUA0gqwHltDEQfiHg4ODg4OAT4XGBPixEpPtUAxE4ODg4OPhk+NMWODg4ODj4gPUHOp0DPXnKieMAAAAASUVORK5CYII=">
           </div>
         </div>
       
@@ -1844,23 +1752,14 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/58489.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>4.Python列表介绍</p>
-          <p class='content'>Python列表介绍
-
-
-
-
-Python列表解析章节1、列表介绍想一想：
-
-前面学习的字符串可以用来存储一串信息，那么想一想，怎样存储公号所有粉丝的名字呢？
-定义100个变量，每个变量存放一个...</p>
-        </a>
       
-      
-        <a class='next' href='/posts/27081.html'>
-          <p class='title'>python第二天作业答案<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>您好, 这里需要密码.如若不知,请联系小编。163d7990d844d85d4b343793961f88f6691b2ac9101dd433f612620dfb90183d31e09db6307...</p>
+        <a class='next' href='/posts/65aeda8b.html'>
+          <p class='title'>数据质量管理<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>数据质量是如何管理的?
+
+
+数据质量管理
+概述数据质量的高低代表了该数据满足数据消费者期望的程度，这种程度基于他们对数据的使用预期。数据质量必须是可测量的，把测量的结果转化为可以理解的和可重复的...</p>
         </a>
       
     </div>
@@ -2021,7 +1920,7 @@ Python列表解析章节1、列表介绍想一想：
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%BB%8B%E7%BB%8D"><span class="toc-text">1、字符串介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BE%93%E5%87%BA"><span class="toc-text">2、字符串输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BE%93%E5%85%A5"><span class="toc-text">3、字符串输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E4%B8%8B%E6%A0%87%E5%92%8C%E5%88%87%E7%89%87"><span class="toc-text">4、下标和切片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1%E3%80%81%E4%B8%8B%E6%A0%87%E7%B4%A2%E5%BC%95"><span class="toc-text">4.1、下标索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2%E3%80%81%E5%88%87%E7%89%87"><span class="toc-text">4.2、切片</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%87%E7%89%87%E7%9A%84%E8%AF%AD%E6%B3%95%EF%BC%9A-%E8%B5%B7%E5%A7%8B-%E7%BB%93%E6%9D%9F-%E6%AD%A5%E9%95%BF"><span class="toc-text">切片的语法：[起始:结束:步长]</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C"><span class="toc-text">5、字符串常见操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1%E3%80%81find"><span class="toc-text">5.1、find</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2%E3%80%81index"><span class="toc-text">5.2、index</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3%E3%80%81count"><span class="toc-text">5.3、count</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4%E3%80%81replace"><span class="toc-text">5.4、replace</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5%E3%80%81split"><span class="toc-text">5.5、split</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-6%E3%80%81capitalize"><span class="toc-text">5.6、capitalize</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7%E3%80%81title"><span class="toc-text">5.7、title</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-8%E3%80%81startswith"><span class="toc-text">5.8、startswith</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-9%E3%80%81endswith"><span class="toc-text">5.9、endswith</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-10%E3%80%81lower"><span class="toc-text">5.10、lower</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-11%E3%80%81upper"><span class="toc-text">5.11、upper</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-12%E3%80%81ljust"><span class="toc-text">5.12、ljust</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-13%E3%80%81rjust"><span class="toc-text">5.13、rjust</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-14%E3%80%81center"><span class="toc-text">5.14、center</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-15%E3%80%81lstrip"><span class="toc-text">5.15、lstrip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-16%E3%80%81rstrip"><span class="toc-text">5.16、rstrip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-17%E3%80%81strip"><span class="toc-text">5.17、strip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-18%E3%80%81rfind"><span class="toc-text">5.18、rfind</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-19%E3%80%81rindex"><span class="toc-text">5.19、rindex</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-20%E3%80%81partition"><span class="toc-text">5.20、partition</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-21%E3%80%81rpartition"><span class="toc-text">5.21、rpartition</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-22%E3%80%81splitlines"><span class="toc-text">5.22、splitlines</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-23%E3%80%81isalpha"><span class="toc-text">5.23、isalpha</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-24%E3%80%81isdigit"><span class="toc-text">5.24、isdigit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-25%E3%80%81isalnum"><span class="toc-text">5.25、isalnum</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-26%E3%80%81isspace"><span class="toc-text">5.26、isspace</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-27%E3%80%81join"><span class="toc-text">5.27、join</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ETL%E5%BC%80%E5%8F%91"><span class="toc-text">ETL开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#STG%E5%B1%82"><span class="toc-text">STG层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ODS%E5%B1%82"><span class="toc-text">ODS层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DW%E5%B1%82"><span class="toc-text">DW层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="toc-text">主要步骤：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DM%E5%B1%82"><span class="toc-text">DM层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ETL%E4%BC%98%E5%8C%96"><span class="toc-text">ETL优化</span></a></li></ol>
     </div>
   </section>
 
@@ -3260,4 +3159,5 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
       </script>
 
   </div>
-<script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+</body>
+</html>
