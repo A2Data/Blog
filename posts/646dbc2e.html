@@ -17,13 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>1.认识Mysql - DataScience</title>
+  <title>数据仓库之任务调度 - DataScience</title>
   
-    <meta name="keywords" content="Mysql">
+    <meta name="keywords" content="数仓">
   
 
   
-    <meta name="description" content="认识mysql！">
+    <meta name="description" content="数据仓库之任务调度。">
   
 
   <!-- feed -->
@@ -1341,7 +1341,7 @@
  
 <div id="pjax-data" style="display: none"> 
   <div id="pjax-ispage">true</div> 
-  <div id="pjax-pageTitle">1.认识Mysql</div> 
+  <div id="pjax-pageTitle">数据仓库之任务调度</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -1379,13 +1379,9 @@
   <div class="article-meta" id="top">
     
     
-      <a title='1.认识Mysql' href='/posts/4354b039.html'>
-        <img class='thumbnail' src='https://cdn.jsdelivr.net/gh/A2Data/cdn/img/2.png'>
-      </a>
-    
     
       <h1 class="title">
-        1.认识Mysql
+        数据仓库之任务调度
       </h1>
       <div class='new-meta-box'>
         
@@ -1404,7 +1400,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jun 16, 2020</p>
+    <p>发布于：Nov 15, 2020</p>
   </a>
 </div>
 
@@ -1412,13 +1408,6 @@
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/DataBase/">DataBase</a><span class="sep"></span><a class="category-link" href="/categories/DataBase/Mysql/">Mysql</a>
-    </a>
-  </div>
-
 
           
         
@@ -1427,13 +1416,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.1k words</p>
+      <p>432 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>3 min</p>
+      <p>1 min</p>
     </a>
   </div>
 
@@ -1445,7 +1434,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="1.认识Mysql" data-path="/posts/4354b039.html">
+      <div id="lc-pv" data-title="数据仓库之任务调度" data-path="/posts/646dbc2e.html">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -1460,9 +1449,9 @@
             
 <div class="new-meta-item comments-count">
   
-  <a href="/posts/4354b039.html#comments">
+  <a href="/posts/646dbc2e.html#comments">
     <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/4354b039.html">0</span>
+    <span class="valine-comment-count" data-xid="/posts/646dbc2e.html">0</span>
     <span class="leancloud-comments-count">&nbsp;</span>
   </a>
 </div>
@@ -1477,84 +1466,65 @@
 
   
   
-  <p>认识mysql！</p>
+  <p>数据仓库之任务调度。</p>
 <a id="more"></a>
 
-<h1 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h1><blockquote>
-<p>数据库，就是数据的仓库。它是长期存储在计算机内，有组织、可共享的数据的集合。简而言之，即放置信息的文件柜。</p>
-</blockquote>
-<h1 id="数据库分类"><a href="#数据库分类" class="headerlink" title="数据库分类"></a>数据库分类</h1><blockquote>
-<p>当今互联网中，最常见的数据库模型主要为两种，即关系型数据库（SQL）和非关系型数据库（NoSQL 、Not Only SQL)。</p>
-</blockquote>
-<h2 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h2><ul>
-<li><p>1、定义：指采用了关系模型来组织数据的数据库，其以行和列的形式存储数据，以便于用户理解，关系型数据库这一系列的行和列被称为表，一组表组成了数据库。</p>
-</li>
-<li><p>2、特点</p>
-</li>
-<li><blockquote>
-<p>（1）存储方式：以行和列的方式组成表格进行存储。</p>
-<p>（2）扩展方式：只具备纵向扩展能力。</p>
-<p>（3）查询方式：采用结构化查询语言（即SQL）进行查询。</p>
-<p>（4）原子性：记录之前的版本，允许回滚。</p>
-<p>（5）一致性：事务开始和结束之间的中间状态不会被其他事务看到。</p>
-<p>（6）隔离性：适当的破坏一致性来提升性能与并行度。</p>
-<p>（7）持久性：每一次的事务提交后就会保证不会丢失。</p>
-</blockquote>
-</li>
-<li><p>3、缺点：性能没有非关系型数据库好，一旦想更改存储结构，面对海量数据，操作起来会很复杂。</p>
-</li>
-</ul>
-<h2 id="非关系型数据库"><a href="#非关系型数据库" class="headerlink" title="非关系型数据库"></a>非关系型数据库</h2><blockquote>
-<p>1、定义：数据存储不需要固定的表结构，通常也不存在连接操作。</p>
-<p>2、特点</p>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>随着数据仓库的开发，<strong>ETL</strong>作业会越来越多，怎么把这些作业有序的运行起来，就需要一个健壮的调度系统来保证数据能够准确、及时的提供给BI应用程序。 </p>
+<h2 id="调度系统架构"><a href="#调度系统架构" class="headerlink" title="调度系统架构"></a>调度系统架构</h2><p><img src="https://gitee.com/DataITems/cdn/raw/master/1600587263291.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/1600587263291.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <ul>
-<li>（1）不需要预定义模式：不需要事先定义数据模式，预定义表结构。</li>
-<li>（2）无共享架构：相对于将所有数据存储的存储区域网络中的全共享架构。</li>
-<li>（3）弹性可扩展：可以在系统运行的时候，动态增加或者删除结点。</li>
-<li>（4）分区：相对于将数据存放于同一个节点，NoSQL数据库需要将数据进行分区，将记录分散在多个节点上面。</li>
-<li>（5）异步复制：和RAID存储系统不同的是，NoSQL中的复制，往往是基于日志的异步复制。</li>
-<li>（6）BASE：相对于事务严格的ACID特性，NoSQL数据库保证的是BASE特性。</li>
+<li>ETL作业</li>
 </ul>
-</blockquote>
-<blockquote>
-<p>3、适用场景</p>
+<p>数据仓库的ETL作业可能不至一种，需要把各种作业再次进行封装，建立作业的标准格式，统一作业的输入参数、输出参数和参数格式，达到所有的作业调度方式一致。</p>
 <ul>
-<li>（1）数据模型比较简单。</li>
-<li>（2）需要灵活性更强的IT系统。</li>
-<li>（3）对数据库性能要求较高。</li>
-<li>（4）不需要高度的数据一致性。</li>
-<li>（5）对于给定key，比较容易映射复杂值的环境。</li>
+<li>作业管理</li>
 </ul>
-</blockquote>
-<h1 id="数据库管理系统"><a href="#数据库管理系统" class="headerlink" title="数据库管理系统"></a>数据库管理系统</h1><blockquote>
-<p>这又是啥？</p>
-<p>面对不同种类的数据库，如何精准获取数据库中的数据？智慧的人类创造了一个神奇的产品！！！</p>
-<p>数据库管理系统。数据库管理系统是为管理数据库而设计的电脑软件系统，一般具有存储、截取、安全保障、备份等基础功能。</p>
-</blockquote>
-<h1 id="MySQL-江湖地位！"><a href="#MySQL-江湖地位！" class="headerlink" title="MySQL 江湖地位！"></a>MySQL 江湖地位！</h1><blockquote>
-<p>MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品。它是最流行的关系型数据库管理系统之一，它也是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件之一。</p>
-</blockquote>
-<h1 id="为啥选-MySQL"><a href="#为啥选-MySQL" class="headerlink" title="为啥选 MySQL ?"></a>为啥选 MySQL ?</h1><blockquote>
-<p>MySQL由于其体积小、速度快、总体拥有成本低，尤其是具有开放源码这一特点，一般中小型网站的开发都选择 MySQL 作为网站数据库。</p>
-</blockquote>
-<p><img src="https://gitee.com/DataITems/cdn/raw/master/20200610232427.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200610232427.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h1 id="MAC安装MYSQL："><a href="#MAC安装MYSQL：" class="headerlink" title="MAC安装MYSQL："></a>MAC安装MYSQL：</h1><h2 id="下载安装包："><a href="#下载安装包：" class="headerlink" title="下载安装包："></a>下载安装包：</h2><p>点击链接下载MYSQL安装包：</p>
-<p><a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/">https://dev.mysql.com/downloads/mysql/</a></p>
-<p><img src="https://gitee.com/DataITems/cdn/raw/master/clip_image001.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/clip_image001.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="手机截图图社交软件的信息  描述已自动生成"></p>
-<p>终端输入mysql,发现提示<em>command not found</em>，需要先设置环境路径；</p>
-<p>终端输入*/user/local/mysql/bin*，查看mysql是否安装成功：</p>
-<img src="https://gitee.com/DataITems/cdn/raw/master/image-20200616214951127.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200616214951127.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616214951127" style="zoom:50%;" />
-
-<h2 id="在终端加入环境路径："><a href="#在终端加入环境路径：" class="headerlink" title="在终端加入环境路径："></a>在终端加入环境路径：</h2><p>如果是bash,执行open ~/.bash_profile；如果是zsh,执行open ~/.zshrc；</p>
-<p>在bash_profile或zshrc文件中添加语句<em>PATH=$PATH:/usr/local/mysql/bin</em>,并保存；</p>
-<p>将更改立即生效：终端输入<em>source ~/.bash_profile</em> 或 <em>source ~/.zshrc</em></p>
-<p><strong>注：</strong>如果没有zshrc文件，需要先创建空白文件，再将bash_profile的内容复制粘贴过来，包括上述语句，最后输入上述语句使修改生效</p>
-<p><img src="https://gitee.com/DataITems/cdn/raw/master/clip_image003.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/clip_image003.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="手机屏幕的截图  描述已自动生成"></p>
-<h2 id="登录和退出MYSQL："><a href="#登录和退出MYSQL：" class="headerlink" title="登录和退出MYSQL："></a>登录和退出MYSQL：</h2><p>登陆：终端输入<em>mysql -uroot -p</em>，输入密码</p>
-<img src="https://gitee.com/DataITems/cdn/raw/master/clip_image004.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/clip_image004.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="手机屏幕的截图  描述已自动生成" style="zoom:67%;" />
-
-<p>-u后是用户名，-p后是密码（如不是登陆本机的MYSQL，还有 -h后面加服务器主机地址）。</p>
-<p>退出MYSQL：终端输入<em>\q;</em>   或  <em>quit;</em>   或   <em>exit;</em></p>
+<p>提供便捷的作业配置和依赖关系配置页面。</p>
+<ul>
+<li>作业调度</li>
+</ul>
+<p>根据作业调度算法进行自动执行，如果发生异常情况可以进行人工重启和停止。</p>
+<ul>
+<li>作业监控</li>
+</ul>
+<p>对作业运行情况进行监控，发送邮件或者提供监控页面</p>
+<h2 id="常用的调度组件"><a href="#常用的调度组件" class="headerlink" title="常用的调度组件"></a>常用的调度组件</h2><table>
+<thead>
+<tr>
+<th>组件名</th>
+<th>属性标签</th>
+<th align="center">特性</th>
+<th align="center">使用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>azkaban</td>
+<td>调度工具</td>
+<td align="center">处理有依赖关系的复杂任务调度，只支持mysql存储基本信息</td>
+<td align="center">常用调度工具之一</td>
+</tr>
+<tr>
+<td>crontab</td>
+<td>linux自带调度工具</td>
+<td align="center">简单任务调度</td>
+<td align="center">适用日常少量调度</td>
+</tr>
+<tr>
+<td>ooize</td>
+<td>调度工具</td>
+<td align="center">处理复杂任务调度，但好像并不好用</td>
+<td align="center">大数据领域调度工具之一（Oozie, Azkaban,Cascading,Hamake）</td>
+</tr>
+</tbody></table>
+<h2 id="作业调度状态"><a href="#作业调度状态" class="headerlink" title="作业调度状态"></a>作业调度状态</h2><ol>
+<li><p>初始化：把新添加的作业加入到执行计划中。</p>
+</li>
+<li><p>待运行：根据时间和依赖关系把可执行的任务更新为待运行。</p>
+</li>
+<li><p>运行中：把待运行的任务执行，更新为运行中。</p>
+</li>
+<li><p>结束：作业运行完成，分为成功和失败。</p>
+</li>
+</ol>
 
   
   
@@ -1568,7 +1538,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\773d5f8c.html" title="1.DBeaver安装" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200502181911650.png" /><span class="title">1.DBeaver安装</span><span class="excerpt">DBeaver安装步骤</span></a><a class="item" href="\posts\b794162c.html" title="2.数据库操作-DDL" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/image-20200421154433187.png" /><span class="title">2.数据库操作-DDL</span><span class="excerpt">数据库操作DDL</span></a><a class="item" href="\posts\6656ad65.html" title="3.数据库操作-DML" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200615211933034.png" /><span class="title">3.数据库操作-DML</span><span class="excerpt">数据库操作DML</span></a><a class="item" href="\posts\f8d580eb.html" title="4.数据库操作-DCL" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614195339691.png" /><span class="title">4.数据库操作-DCL</span><span class="excerpt">数据库操作DCL</span></a><a class="item" href="\posts\e4f3239b.html" title="5.数据库操作-TCL" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614215919792.png" /><span class="title">5.数据库操作-TCL</span><span class="excerpt">数据库操作TCL</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\6f521982.html" title="什么是需求？" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/1601215112590.png" /><span class="title">什么是需求？</span><span class="excerpt">数仓需求的来源,以及流程。</span></a><a class="item" href="\posts\19a88b12.html" title="数据仓库是什么" rel="bookmark "><img src="https://7.dusays.com/2020/11/09/a244f012d5f64.png" /><span class="title">数据仓库是什么</span><span class="excerpt">数据仓库是什么?</span></a><a class="item" href="\posts\ca165cd5.html" title="ETL开发" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/1600580328638.png" /><span class="title">ETL开发</span><span class="excerpt">数据仓库之ETL开发。</span></a><a class="item" href="\posts\6637aa6e.html" title="数据仓库元数据" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/%E5%85%83%E6%95%B0%E6%8D%AE.png" /><span class="title">数据仓库元数据</span><span class="excerpt">数据仓库架构到底是怎么设计的，意义是什么?</span></a><a class="item" href="\posts\773d5f8c.html" title="1.DBeaver安装" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200502181911650.png" /><span class="title">1.DBeaver安装</span><span class="excerpt">DBeaver安装步骤</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1580,7 +1550,7 @@
               
             
               
-                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/4354b039.html>http://www.a2data.cn/posts/4354b039.html</a></p>
+                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/646dbc2e.html>http://www.a2data.cn/posts/646dbc2e.html</a></p>
               
             
           </blockquote>
@@ -1607,10 +1577,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-18T10:25:50+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-15T18:21:06+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 18, 2020</p>
+    <p>更新于：Nov 15, 2020</p>
   </a>
 </div>
 
@@ -1619,7 +1589,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Mysql/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Mysql</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E4%BB%93/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>数仓</p></a></div>
 
 
         
@@ -1631,13 +1601,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.1k words</p>
+      <p>432 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>3 min</p>
+      <p>1 min</p>
     </a>
   </div>
 
@@ -1652,7 +1622,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/4354b039.html&title=1.认识Mysql - DataScience&pics=https://cdn.jsdelivr.net/gh/A2Data/cdn/img/2.png&summary=认识mysql！"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/646dbc2e.html&title=数据仓库之任务调度 - DataScience&summary=数据仓库之任务调度。"
           
           >
           
@@ -1664,7 +1634,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/4354b039.html&title=1.认识Mysql - DataScience&pics=https://cdn.jsdelivr.net/gh/A2Data/cdn/img/2.png&summary=认识mysql！"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/646dbc2e.html&title=数据仓库之任务调度 - DataScience&summary=数据仓库之任务调度。"
           
           >
           
@@ -1676,7 +1646,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/4354b039.html&title=1.认识Mysql - DataScience&pics=https://cdn.jsdelivr.net/gh/A2Data/cdn/img/2.png&summary=认识mysql！"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/646dbc2e.html&title=数据仓库之任务调度 - DataScience&summary=数据仓库之任务调度。"
           
           >
           
@@ -1690,7 +1660,7 @@
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACSElEQVR42u3aMXLEQAgEQP3/03ZuB9oB5PKh3syuOmmbS+aA6+ul5wIHBwcHB18Ev4rn5+dPn/frIsX3le8LDg4ODg6+EH4cAG4ucvfcu/edFrZ8X3BwcHBw8MXwNLCkgeS0MKeFiwMWODg4ODg4+FWFpsGm+n5wcHBwcHDwueDRDSLg4ODg4ODg8wOFaoNielDx55MUcHBwcHDwfwSfXvB7+u+xBT9wcHBwcPAPhndPtzBpI6J9X3BwcHBw8EXwtAEwDUwHEu1GBjg4ODg4+CL4dHCpDhy6wHigAA4ODg4OvgBeHdhXQd1GRvq820YEODg4ODj4Avhpo6DasEgDTwo//uLAwcHBwcEXwZ++8NTiYDe4gIODg4ODb4ZPB5h08DA9mIgXA8DBwcHBwT8Y/hR06v/dxgc4ODg4OPib4OWG/dCgoLuQcLsYAA4ODg4OvgB++sO/OmCYAqQFBgcHBwcHfwO8e8F0gP/UAOG4IODg4ODg4Ivg3R/43QWB6cbE8YIfODg4ODj4AngaDLoBpbrgly72gYODg4ODvwmeXjB+YXMw0B1sgIODg4ODb4ZXz+mFy4EjLOjtFwcODg4ODr4I3g0IaeCpBpXuQAMcHBwcHHwzvBpYugsBaeOiG4DAwcHBwcE3w6cGCt1BQTdgHTciwMHBwcHBXwxPL1r9XFrAxwMMODg4ODj4IngaRKYaHPFzwMHBwcHBF8OnF/q6A4apQoGDg4ODg2+Glxv0xYZFtZDVhQVwcHBwcPCN8LcdcHBwcHDwBecbZbBD7vv2zZYAAAAASUVORK5CYII=">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACV0lEQVR42u3dQU4DQQwEwP3/p+EOQnHbDrCzNbeIZHHNhca2lOvjoecCBwcHBwc/CH41z9fPp6+rz/9W+LRecHBwcHDwA+HlAPDD+7uFVC9oq15wcHBwcPCT4Wlg6Rb06uLKkDRggYODg4ODg5cbC2kg2WpsgIODg4ODg+8PEKaBBxwcHBwcHHxvoJAO8tNBxLThAQ4ODg4O/gT4by/4bTce2gt+4ODg4ODgN4ZPTzpAmA4mxvWCg4ODg4MfBK82EroBotsw2Pp97Q4MODg4ODj4DeDVYDINKNXnTusYNyLAwcHBwcFvBE8HB2nB3UCSLhisLwaAg4ODg4PfAJ4OCtIGRfq5NLjEgw5wcHBwcPAHwLsXUi0sveC1AQU4ODg4OPhB8DRobAed6cWnAw9wcHBwcPAnwKcDgGkA6jY8Xr4GBwcHBwc/GN4tLG34rwWSMFiBg4ODg4OfBC//4Q8Lmg4OpguF5UkKODg4ODj4jeHdf+injYK3A6vJDRwcHBwc/MbwapDYWgRIBwJpgCoPFMDBwcHBwQ+EVx/4Clz9+dbFjAMMODg4ODj4DeHdRYAuqLtg0G1ggIODg4ODnwyfnrSA7vu3ghM4ODg4OPhJ8Kt50sbA2wYE3YECODg4ODj4QfC04DRIVMHdgFJdYAAHBwcHBz8Z3g0Q3edNg9S4EQEODg4ODv5geDegbC0MpIsL4ODg4ODg4PkXradBZWtBARwcHBwc/Enw6UChC2sHkv8ySQEHBwcHB/9DeLfwuKG/HJjiiwQHBwcHBz8I/rQDDg4ODg5+wPkEFYsFHxsQlKwAAAAASUVORK5CYII=">
           </div>
         </div>
       
@@ -1712,32 +1682,13 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/b794162c.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>2.数据库操作-DDL</p>
-          <p class='content'>数据库操作DDL
-
-
-DDL
-DDL（Data Definition Language）是连接存储世界与现实世界的高铁！
-
-
-主要用途：
-对数据库对象进行创建、修改、删除等操作。
-操作对象：
-数...</p>
-        </a>
       
-      
-        <a class='next' href='/posts/f8d580eb.html'>
-          <p class='title'>4.数据库操作-DCL<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>数据库操作DCL
+        <a class='next' href='/posts/29966d.html'>
+          <p class='title'>数据仓库之维度建模<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>数据仓库架构到底是怎么设计的，意义是什么?
 
 
-DCL
-DCL（Data Control Language），数据库控制语言。
-主要用途：对数据库访问权限进行控制的指令。
-操纵命令：GRANT、REVOKE
-GRANT：...</p>
+概述在数据建模过程中，最简单的描述就是按照事实表、维度表来构建数据仓库、数据集市。在维度建模方法体系中，维度是描述事实的角度，如日期、客户、供应商...</p>
         </a>
       
     </div>
@@ -1898,7 +1849,7 @@ GRANT：...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">关系型数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">非关系型数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85%EF%BC%9A"><span class="toc-text">下载安装包：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E7%BB%88%E7%AB%AF%E5%8A%A0%E5%85%A5%E7%8E%AF%E5%A2%83%E8%B7%AF%E5%BE%84%EF%BC%9A"><span class="toc-text">在终端加入环境路径：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%99%BB%E5%BD%95%E5%92%8C%E9%80%80%E5%87%BAMYSQL%EF%BC%9A"><span class="toc-text">登录和退出MYSQL：</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%83%E5%BA%A6%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84"><span class="toc-text">调度系统架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E8%B0%83%E5%BA%A6%E7%BB%84%E4%BB%B6"><span class="toc-text">常用的调度组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E4%B8%9A%E8%B0%83%E5%BA%A6%E7%8A%B6%E6%80%81"><span class="toc-text">作业调度状态</span></a></li></ol>
     </div>
   </section>
 
