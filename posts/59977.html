@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1423,7 +1427,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>3k words</p>
+      <p>3.1k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1516,15 +1520,14 @@
 <h4 id="3、注释的作用"><a href="#3、注释的作用" class="headerlink" title="3、注释的作用"></a>3、注释的作用</h4><blockquote>
 <p>通过用自己熟悉的语言，在程序中对某些代码进行标注说明，这就是注释的作用，能够大大增强程序的可读性 </p>
 </blockquote>
-<h3 id="4-2、注释分类"><a href="#4-2、注释分类" class="headerlink" title="4.2、注释分类"></a>4.2、注释分类</h3><h4 id="1、-lt-单行注释-gt"><a href="#1、-lt-单行注释-gt" class="headerlink" title="1、&lt;单行注释&gt;"></a>1、&lt;单行注释&gt;</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 我是注释，可以在里写一些功能说明之类的哦</span></span><br><span class="line">   print(<span class="string">&#x27;hello world&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
+<h3 id="4-2、注释分类"><a href="#4-2、注释分类" class="headerlink" title="4.2、注释分类"></a>4.2、注释分类</h3><h4 id="1、-lt-单行注释-gt"><a href="#1、-lt-单行注释-gt" class="headerlink" title="1、&lt;单行注释&gt;"></a>1、&lt;单行注释&gt;</h4><pre><code class="python"> # 我是注释，可以在里写一些功能说明之类的哦
+    print(&#39;hello world&#39;)</code></pre>
 <h4 id="2、-lt-多行注释-gt"><a href="#2、-lt-多行注释-gt" class="headerlink" title="2、&lt;多行注释&gt;"></a>2、&lt;多行注释&gt;</h4><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191206005951.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191206005951.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="自行练习哦"></p>
 <h4 id="3、-lt-注意-gt"><a href="#3、-lt-注意-gt" class="headerlink" title="3、&lt;注意&gt;"></a>3、&lt;注意&gt;</h4><blockquote>
 <p> 在python的语法规范中推荐使用的方式： </p>
 <p>（早期版本，不写的话，``print(‘努力赚钱的小风’) `就会报错哦）</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python"># -*- coding:utf-8 -*-</code></pre>
 <h2 id="5、变量以及类型"><a href="#5、变量以及类型" class="headerlink" title="5、变量以及类型"></a>5、变量以及类型</h2><p><strong>目标</strong></p>
 <ul>
 <li>掌握变量的定义和修改</li>
@@ -1562,8 +1565,25 @@
 <p> 标示符由字母、下划线和数字组成，且数字不能开头 </p>
 <p> 找一找:（如下，哪些是对的，哪些是错的？）</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">fromNo12</span><br><span class="line"><span class="keyword">from</span><span class="comment">#12</span></span><br><span class="line">my_Boolean</span><br><span class="line">my-Boolean</span><br><span class="line">Obj2</span><br><span class="line"><span class="number">2</span>ndObj</span><br><span class="line">myInt</span><br><span class="line">test1</span><br><span class="line">Mike2jack</span><br><span class="line">My_tExt</span><br><span class="line">_test</span><br><span class="line">test!<span class="number">32</span></span><br><span class="line">haha(da)tt</span><br><span class="line">int</span><br><span class="line">jack_rose</span><br><span class="line">jack&amp;rose</span><br><span class="line">GUI</span><br><span class="line">G.U.I</span><br><span class="line">a2data</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">fromNo12
+from#12
+my_Boolean
+my-Boolean
+Obj2
+2ndObj
+myInt
+test1
+Mike2jack
+My_tExt
+_test
+test!32
+haha(da)tt
+int
+jack_rose
+jack&amp;rose
+GUI
+G.U.I
+a2data</code></pre>
 <p> <strong>python中的标识符是区分大小写的</strong></p>
 <p> <img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191206082419.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191206082419.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="不相等的"></p>
 <h3 id="6-3、命名规则"><a href="#6-3、命名规则" class="headerlink" title="6.3、命名规则"></a>6.3、命名规则</h3><ul>
@@ -1581,13 +1601,19 @@
 </blockquote>
 <p><em>查看关键字</em></p>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191206083430.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191206083430.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="关键字"></p>
-<h2 id="7、输出"><a href="#7、输出" class="headerlink" title="7、输出"></a>7、输出</h2><h3 id="7-1、普通输出"><a href="#7-1、普通输出" class="headerlink" title="7.1、普通输出"></a>7.1、普通输出</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打印提示</span></span><br><span class="line">print(<span class="string">&quot;hello world&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="7、输出"><a href="#7、输出" class="headerlink" title="7、输出"></a>7、输出</h2><h3 id="7-1、普通输出"><a href="#7-1、普通输出" class="headerlink" title="7.1、普通输出"></a>7.1、普通输出</h3><pre><code class="python"># 打印提示
+print(&quot;hello world&quot;)</code></pre>
+<h3 id="7-1、格式化输出"><a href="#7-1、格式化输出" class="headerlink" title="7.1、格式化输出"></a>7.1、格式化输出</h3><h4 id="7-1-1、格式化的目的"><a href="#7-1-1、格式化的目的" class="headerlink" title="7.1.1、格式化的目的"></a>7.1.1、格式化的目的</h4><pre><code class="python">print(&#39;小风今年10岁&#39;)
+print(&#39;小风今年18岁&#39;)
+print(&#39;小风今年20岁&#39;)
 
-<h3 id="7-1、格式化输出"><a href="#7-1、格式化输出" class="headerlink" title="7.1、格式化输出"></a>7.1、格式化输出</h3><h4 id="7-1-1、格式化的目的"><a href="#7-1-1、格式化的目的" class="headerlink" title="7.1.1、格式化的目的"></a>7.1.1、格式化的目的</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;小风今年10岁&#x27;</span>)</span><br><span class="line">print(<span class="string">&#x27;小风今年18岁&#x27;</span>)</span><br><span class="line">print(<span class="string">&#x27;小风今年20岁&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 思考，年龄多次使用，如何简化 -- 字符串可视化</span></span><br></pre></td></tr></table></figure>
-
+# 思考，年龄多次使用，如何简化 -- 字符串可视化</code></pre>
 <h4 id="7-1-2、格式化"><a href="#7-1-2、格式化" class="headerlink" title="7.1.2、格式化"></a>7.1.2、格式化</h4><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191206084128.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191206084128.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="格式化输出"></p>
-<h4 id="7-1-3、换行输出"><a href="#7-1-3、换行输出" class="headerlink" title="7.1.3、换行输出"></a>7.1.3、换行输出</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#在输出的时候，如果有\n那么，此时\n后的内容会在另外一行显示</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;1234567890-------&quot;</span>) <span class="comment"># 会在一行显示</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;1234567890\n-------&quot;</span>) <span class="comment"># 一行显示1234567890，另外一行显示-------</span></span><br></pre></td></tr></table></figure>
+<h4 id="7-1-3、换行输出"><a href="#7-1-3、换行输出" class="headerlink" title="7.1.3、换行输出"></a>7.1.3、换行输出</h4><pre><code class="python">#在输出的时候，如果有\n那么，此时\n后的内容会在另外一行显示
 
+print(&quot;1234567890-------&quot;) # 会在一行显示
+
+print(&quot;1234567890\n-------&quot;) # 一行显示1234567890，另外一行显示-------</code></pre>
 <h4 id="7-1-4、Python2-3输出区别"><a href="#7-1-4、Python2-3输出区别" class="headerlink" title="7.1.4、Python2-3输出区别"></a>7.1.4、Python2-3输出区别</h4><blockquote>
 <p>Python3 使用 print 必须要以小括号包裹打印内容，比如 <code>print(&#39;hi&#39;)</code></p>
 <p>Python2 既可以使用带小括号的方式，也可以使用一个空格来分隔打印内容，比如 <code>print &#39;hi&#39;</code></p>
@@ -1596,8 +1622,14 @@
 <h4 id="7-1-5、动手试试吧"><a href="#7-1-5、动手试试吧" class="headerlink" title="7.1.5、动手试试吧"></a>7.1.5、动手试试吧</h4><blockquote>
 <p>编码完成一下名片的显示：</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">==================================</span><br><span class="line">姓名: 努力赚钱的小风    </span><br><span class="line">QQ:xxxxxxx</span><br><span class="line">手机号:<span class="number">185</span>xxxxxx</span><br><span class="line">公司地址:北京市xxxx</span><br><span class="line">==================================</span><br><span class="line"></span><br><span class="line"><span class="comment">#思考，如何格式化输出？换行？</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">==================================
+姓名: 努力赚钱的小风    
+QQ:xxxxxxx
+手机号:185xxxxxx
+公司地址:北京市xxxx
+==================================
 
+#思考，如何格式化输出？换行？</code></pre>
 <h2 id="8、输入"><a href="#8、输入" class="headerlink" title="8、输入"></a>8、输入</h2><blockquote>
 <p>这里简单说一下，Python2中的输入是 raw_input()函数 </p>
 <p>而在Python3中只有input()</p>
@@ -1656,8 +1688,14 @@
 <td>返回商的整数部分 9//2 输出结果 4 , 9.0//2.0 输出结果 4.0</td>
 </tr>
 </tbody></table>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">9</span> / <span class="number">2.0</span></span><br><span class="line"><span class="number">4.5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">9</span> // <span class="number">2.0</span></span><br><span class="line"><span class="number">4.0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">1</span> + <span class="number">2</span>*<span class="number">3</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>(<span class="number">1</span>+<span class="number">2</span>) * <span class="number">3</span></span><br><span class="line"><span class="number">9</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">&gt;&gt;&gt; 9 / 2.0
+4.5
+&gt;&gt;&gt; 9 // 2.0
+4.0
+&gt;&gt;&gt; 1 + 2*3
+7
+&gt;&gt;&gt; (1+2) * 3
+9</code></pre>
 <h3 id="9-2、赋值运算符"><a href="#9-2、赋值运算符" class="headerlink" title="9.2、赋值运算符"></a>9.2、赋值运算符</h3><table>
 <thead>
 <tr>
@@ -1672,8 +1710,11 @@
 <td>把=号右边的结果给左边的变量 num=1+2*3 结果num的值为7</td>
 </tr>
 </tbody></table>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a, b = <span class="number">1</span>, <span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">&gt;&gt;&gt; a, b = 1, 2
+&gt;&gt;&gt; a
+1
+&gt;&gt;&gt; b
+2</code></pre>
 <h3 id="9-3、复合赋值运算符"><a href="#9-3、复合赋值运算符" class="headerlink" title="9.3、复合赋值运算符"></a>9.3、复合赋值运算符</h3><table>
 <thead>
 <tr>
@@ -1787,14 +1828,31 @@
 </tr>
 </tbody></table>
 <p><strong>举例</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&#x27;100&#x27;</span> <span class="comment"># 此时a的类型是一个字符串，里面存放了100这3个字符</span></span><br><span class="line">b = int(a) <span class="comment"># 此时b的类型是整型，里面存放的是数字100</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;a=%d&quot;</span>%b)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">a = &#39;100&#39; # 此时a的类型是一个字符串，里面存放了100这3个字符
+b = int(a) # 此时b的类型是整型，里面存放的是数字100
 
+print(&quot;a=%d&quot;%b)</code></pre>
 <h2 id="11、判断语句介绍"><a href="#11、判断语句介绍" class="headerlink" title="11、判断语句介绍"></a>11、判断语句介绍</h2><blockquote>
 <p>直接拿一个例子来说明吧。</p>
 <p>&lt;重要日期判断案例&gt;</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 今天是周六或者周日:</span><br><span class="line">    约妹子</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> 今天是情人节:</span><br><span class="line">    买玫瑰</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> 今天发工资:</span><br><span class="line"></span><br><span class="line">    先还信用卡的钱</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> 有剩余:</span><br><span class="line"></span><br><span class="line">        又可以happy了，O(∩_∩)O哈哈~</span><br><span class="line"></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line"></span><br><span class="line">        噢，no。。。还的等<span class="number">30</span>天</span><br></pre></td></tr></table></figure>
+<pre><code class="python">    if 今天是周六或者周日:
+        约妹子
 
+    if 今天是情人节:
+        买玫瑰
+
+    if 今天发工资:
+
+        先还信用卡的钱
+
+        if 有剩余:
+
+            又可以happy了，O(∩_∩)O哈哈~
+
+        else:
+
+            噢，no。。。还的等30天</code></pre>
 <p>小总结：</p>
 <ul>
 <li>如果某些条件满足，才能做某件事情，而不满足时不允许做，这就是所谓的判断</li>
@@ -1806,28 +1864,41 @@
 <h3 id="12-1、if判断语句介绍"><a href="#12-1、if判断语句介绍" class="headerlink" title="12.1、if判断语句介绍"></a>12.1、if判断语句介绍</h3><ul>
 <li>if语句是用来进行判断的，其使用格式如下：</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 要判断的条件:</span><br><span class="line">    条件成立时，要做的事情</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">    if 要判断的条件:
+        条件成立时，要做的事情</code></pre>
 <ul>
 <li>demo1:</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">30</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">&quot;------if判断开始------&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> age&gt;=<span class="number">18</span>:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">&quot;我已经成年了&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">&quot;------if判断结束------&quot;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">    age = 30
 
+    print &quot;------if判断开始------&quot;
+
+    if age&gt;=18:
+        print &quot;我已经成年了&quot;
+
+    print &quot;------if判断结束------&quot;</code></pre>
 <ul>
 <li>运行结果:</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">------<span class="keyword">if</span>判断开始------</span><br><span class="line">我已经成年了</span><br><span class="line">------<span class="keyword">if</span>判断结束------</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">    ------if判断开始------
+    我已经成年了
+    ------if判断结束------</code></pre>
 <ul>
 <li>demo2:</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">16</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">&quot;------if判断开始------&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> age&gt;=<span class="number">18</span>:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">&quot;我已经成年了&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">&quot;------if判断结束------&quot;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">    age = 16
 
+    print &quot;------if判断开始------&quot;
+
+    if age&gt;=18:
+        print &quot;我已经成年了&quot;
+
+    print &quot;------if判断结束------&quot;</code></pre>
 <ul>
 <li>运行结果:</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">------<span class="keyword">if</span>判断开始------</span><br><span class="line">------<span class="keyword">if</span>判断结束------</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">    ------if判断开始------
+    ------if判断结束------</code></pre>
 <p>小总结：</p>
 <ul>
 <li>以上2个demo仅仅是age变量的值不一样，结果却不同；能够看得出if判断语句的作用：就是当满足一定条件时才会执行那块代码，否则就不执行那块代码</li>
@@ -1943,17 +2014,27 @@
 </ul>
 </li>
 <li><p>编写程序，完成以下信息的显示:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">==================================</span><br><span class="line">=        欢迎进入到身份认证系统V1<span class="number">.0</span></span><br><span class="line">= <span class="number">1.</span> 登录</span><br><span class="line">= <span class="number">2.</span> 退出</span><br><span class="line">= <span class="number">3.</span> 认证</span><br><span class="line">= <span class="number">4.</span> 修改密码</span><br><span class="line">==================================</span><br></pre></td></tr></table></figure>
+<pre><code class="Python">==================================
+=        欢迎进入到身份认证系统V1.0
+= 1. 登录
+= 2. 退出
+= 3. 认证
+= 4. 修改密码
+==================================</code></pre>
 </li>
 <li><p>编写程序，从键盘获取一个人的信息，然后按照下面格式显示</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">==================================</span><br><span class="line">姓名: A2Data  </span><br><span class="line">QQ:xxxxxxx</span><br><span class="line">手机号:<span class="number">185</span>xxxxxx</span><br><span class="line">公司地址:北京市xxxx</span><br><span class="line">==================================</span><br></pre></td></tr></table></figure>
+<pre><code class="python">==================================
+姓名: A2Data  
+QQ:xxxxxxx
+手机号:185xxxxxx
+公司地址:北京市xxxx
+==================================</code></pre>
 </li>
 <li><p>编写程序，从键盘获取用户名和密码，然后判断，如果正确就输出以下信息</p>
 </li>
 </ol>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">亲爱的xxx，欢迎登陆 A2Data学习管理系统</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">    亲爱的xxx，欢迎登陆 A2Data学习管理系统</code></pre>
 
   
   
@@ -1967,7 +2048,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\30675.html" title="11.Python面向对象(2)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191224164151.png" /><span class="title">11.Python面向对象(2)</span><span class="excerpt">Python面向对象介绍中篇</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\58489.html" title="4.Python列表介绍" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191212085923.png" /><span class="title">4.Python列表介绍</span><span class="excerpt">Python列表介绍</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\34771.html" title="10.Python面向对象(1)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223115817.png" /><span class="title">10.Python面向对象(1)</span><span class="excerpt">Python面向对象介绍上篇</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2030,7 +2111,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>3k words</p>
+      <p>3.1k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -3136,6 +3217,8 @@
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -3176,6 +3259,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3489,6 +3579,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

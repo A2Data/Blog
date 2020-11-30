@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1515,15 +1519,57 @@
 </ul>
 </blockquote>
 <p><strong>Phone</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myTest;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/2.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Phone</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    String barnd;</span><br><span class="line">    <span class="keyword">int</span> price;</span><br><span class="line">    String color;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;给&quot;</span> + name + <span class="string">&quot;打电话&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sendMessage</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;给所有人群发短信&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package myTest;
+
+/**
+ * Created by JackFeng on 2020/3/2.
+ */
+public class Phone &#123;
 
 
+    String barnd;
+    int price;
+    String color;
 
+
+    public void call(String name) &#123;
+        System.out.println(&quot;给&quot; + name + &quot;打电话&quot;);
+    &#125;
+
+    public void sendMessage()&#123;
+        System.out.println(&quot;给所有人群发短信&quot;);
+    &#125;
+
+
+&#125;
+
+</code></pre>
 <p><strong>PhoneDemo</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myTest;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/2.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PhoneDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Phone p = <span class="keyword">new</span> Phone();</span><br><span class="line"></span><br><span class="line">        System.out.println(p.barnd + <span class="string">&quot;---&quot;</span> +p.price+ <span class="string">&quot;----&quot;</span>+p.color);</span><br><span class="line">        p.barnd = <span class="string">&quot;iphone&quot;</span>;</span><br><span class="line">        p.price = <span class="number">8888</span>;</span><br><span class="line">        p.color = <span class="string">&quot;金色&quot;</span>;</span><br><span class="line">        System.out.println(p.barnd + <span class="string">&quot;---&quot;</span> +p.price+ <span class="string">&quot;----&quot;</span>+p.color);</span><br><span class="line"></span><br><span class="line">        p.call(<span class="string">&quot;DataScience&quot;</span>);</span><br><span class="line">        p.sendMessage();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package myTest;
+
+/**
+ * Created by JackFeng on 2020/3/2.
+ */
+public class PhoneDemo &#123;
+
+    public static void main(String[] args) &#123;
+
+        Phone p = new Phone();
+
+        System.out.println(p.barnd + &quot;---&quot; +p.price+ &quot;----&quot;+p.color);
+        p.barnd = &quot;iphone&quot;;
+        p.price = 8888;
+        p.color = &quot;金色&quot;;
+        System.out.println(p.barnd + &quot;---&quot; +p.price+ &quot;----&quot;+p.color);
+
+        p.call(&quot;DataScience&quot;);
+        p.sendMessage();
+    &#125;
+
+&#125;
 
 
-
+</code></pre>
 <h2 id="成员变量和局部变量的区别"><a href="#成员变量和局部变量的区别" class="headerlink" title="成员变量和局部变量的区别"></a>成员变量和局部变量的区别</h2><blockquote>
 <p>区别：</p>
 <ul>
@@ -1549,16 +1595,97 @@
 </li>
 </ul>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myTest;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/2.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Variable</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 成员变量</span></span><br><span class="line">    <span class="keyword">int</span> x;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span> <span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//局部变量</span></span><br><span class="line"><span class="comment">//        int y;        // 如果y 没有值 就会报错    </span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> y = <span class="number">1</span>; <span class="comment">// 赋值就会不报错</span></span><br><span class="line">        System.out.println(y);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 调用x 有默认值</span></span><br><span class="line">        System.out.println(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package myTest;
 
+/**
+ * Created by JackFeng on 2020/3/2.
+ */
+public class Variable &#123;
+
+    // 成员变量
+    int x;
+
+    public void show ()&#123;
+        //局部变量
+//        int y;        // 如果y 没有值 就会报错    
+
+        int y = 1; // 赋值就会不报错
+        System.out.println(y);
+
+        // 调用x 有默认值
+        System.out.println(x);
+    &#125;
+&#125;
+
+</code></pre>
 <p><strong>标准学生类代码</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myTest;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/2.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//        无参 + set方法</span></span><br><span class="line">        Student s = <span class="keyword">new</span> Student();</span><br><span class="line">        s.setName(<span class="string">&quot;Data&quot;</span>);</span><br><span class="line">        s.setAge(<span class="number">26</span>);</span><br><span class="line">        System.out.println(s.getName()+<span class="string">&quot;====&quot;</span>+s.getAge());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 带参构造</span></span><br><span class="line">        Student s2 = <span class="keyword">new</span> Student(<span class="string">&quot;DataScinece&quot;</span>, <span class="number">26</span>);</span><br><span class="line">        System.out.println(s2.getName()+<span class="string">&quot;====&quot;</span>+s2.getAge());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package myTest;
+
+/**
+ * Created by JackFeng on 2020/3/2.
+ */
+public class StudentDemo &#123;
+    public static void main(String[] args) &#123;
+
+//        无参 + set方法
+        Student s = new Student();
+        s.setName(&quot;Data&quot;);
+        s.setAge(26);
+        System.out.println(s.getName()+&quot;====&quot;+s.getAge());
+
+
+        // 带参构造
+        Student s2 = new Student(&quot;DataScinece&quot;, 26);
+        System.out.println(s2.getName()+&quot;====&quot;+s2.getAge());
 
 
 
+    &#125;
+
+&#125;
+</code></pre>
 <p><strong>学生类</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myTest;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/2.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 构造方法</span></span><br><span class="line">    <span class="comment">// 无参数</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 有参数</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="title">Student</span><span class="params">(String name, <span class="keyword">int</span> age )</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// get set 方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package myTest;
 
+/**
+ * Created by JackFeng on 2020/3/2.
+ */
+public class Student &#123;
+    private String name;
+    private int age;
+
+    // 构造方法
+    // 无参数
+    public Student()&#123;&#125;
+
+    // 有参数
+    public  Student(String name, int age )&#123;
+        this.name = name;
+        this.age = age;
+    &#125;
+
+
+
+
+    // get set 方法
+    public String getName() &#123;
+        return name;
+    &#125;
+
+    public void setName(String name) &#123;
+        this.name = name;
+    &#125;
+
+    public int getAge() &#123;
+        return age;
+    &#125;
+
+    public void setAge(int age) &#123;
+        this.age = age;
+    &#125;
+&#125;
+
+</code></pre>
 <h2 id="类名"><a href="#类名" class="headerlink" title="类名"></a>类名</h2><blockquote>
 <p>如果类名作为形式参数传递</p>
 <ul>
@@ -2766,6 +2893,8 @@ bool...</p>
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2806,6 +2935,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3119,6 +3255,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

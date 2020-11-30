@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1484,8 +1488,23 @@
 </blockquote>
 <p>这道题思路简单，主要是对今天学习内容的应用。</p>
 <p><strong>参考答案：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#读取txt</span></span><br><span class="line">f = open(<span class="string">&#x27;test.txt&#x27;</span>,encoding = ‘utf<span class="number">-8</span>’)</span><br><span class="line">line = f.readline()</span><br><span class="line"></span><br><span class="line"><span class="comment">#新建并存入txt文件：</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">&#x27;文件名.txt&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> a:</span><br><span class="line">a.write()</span><br><span class="line"></span><br><span class="line"><span class="comment">#写入现有的txt文件：</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">&#x27;文件名.txt&#x27;</span>,<span class="string">&#x27;w+&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> a:</span><br><span class="line">a.write()</span><br><span class="line"></span><br><span class="line"><span class="comment">#读取csv</span></span><br><span class="line"><span class="keyword">import</span> csv</span><br><span class="line">f = open(<span class="string">&#x27;文件夹路径&amp;文件名&#x27;</span>, <span class="string">&#x27;r&#x27;</span>,encoding = ‘utf<span class="number">-8</span>’)</span><br><span class="line">csvreader = csv.reader(f)</span><br><span class="line">line = list( a <span class="keyword">for</span> a <span class="keyword">in</span> csvreader)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">#读取txt
+f = open(&#39;test.txt&#39;,encoding = ‘utf-8’)
+line = f.readline()
 
+#新建并存入txt文件：
+with open(&#39;文件名.txt&#39;,&#39;a&#39;,encoding=&#39;utf-8&#39;) as a:
+a.write()
+
+#写入现有的txt文件：
+with open(&#39;文件名.txt&#39;,&#39;w+&#39;,encoding=&#39;utf-8&#39;) as a:
+a.write()
+
+#读取csv
+import csv
+f = open(&#39;文件夹路径&amp;文件名&#39;, &#39;r&#39;,encoding = ‘utf-8’)
+csvreader = csv.reader(f)
+line = list( a for a in csvreader)</code></pre>
 <p><strong>学习引导：</strong></p>
 <ul>
 <li>打开文件</li>
@@ -1496,37 +1515,56 @@
 <p>注意：使用 open() 方法一定要保证关闭文件对象，即调用 close() 方法。</p>
 <p>open() 函数常用形式是接收两个参数：<strong>文件名(file)和模式(mode)</strong></p>
 <p>完整的语法格式如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open(file, mode=<span class="string">&#x27;r&#x27;</span>, buffering=<span class="number">-1</span>, encoding=<span class="literal">None</span>, errors=<span class="literal">None</span>, newline=<span class="literal">None</span>, closefd=<span class="literal">True</span>, opener=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">open(file, mode=&#39;r&#39;, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)</code></pre>
 <h3 id="关闭文件"><a href="#关闭文件" class="headerlink" title="关闭文件"></a>关闭文件</h3><p>调用close()方法关闭文件</p>
 <p>文件使用完毕后必须关闭，因为文件对象会占用操作系统的资源，并且操作系统同一时间能打开的文件数量也是有限的：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f.close()</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">f.close()</code></pre>
 <h3 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h3><p>文件读取的方式有三种:</p>
 <h6 id="1-read"><a href="#1-read" class="headerlink" title="1)read()"></a>1)read()</h6><p>read：如果指定了参数 size，就按照该指定长度从文件中读取内容，否则，就读取全文。被读出来的内容，全部塞到一个字符串里面。这样有好处，就是东西都到内存里面了，随时取用；但如果文件内容太多了，内存会吃不消。注意换行符也为占用一个内存,缺点需要知道光标的位置，以及每一行的大小SIZE。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">r&#x27;C:\Users\WJF\test.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>,encoding=<span class="string">&#x27;gbk&#x27;</span>)   <span class="comment">#这里的文本文件，大家可以自己写一个，没有硬性要求。</span></span><br><span class="line"><span class="comment"># f.read(10)</span></span><br><span class="line">f.read(<span class="number">5</span>)   </span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;DataS&#x27;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">f = open(r&#39;C:\Users\WJF\test.txt&#39;, &#39;r&#39;,encoding=&#39;gbk&#39;)   #这里的文本文件，大家可以自己写一个，没有硬性要求。
+# f.read(10)
+f.read(5)   </code></pre>
+<pre><code class="python">&#39;DataS&#39;</code></pre>
 <h6 id="2-readline"><a href="#2-readline" class="headerlink" title="2)readline()"></a>2)readline()</h6><p>readline() 方法用于从文件读取整行，包括 “\n” 字符。从字面意思可以看出，该方法每次读出一行内容。所以，读取时占用内存小，比较适合大文件，该方法返回一个字符串对象。如果指定了一个非负数的参数，则返回指定大小的字节数，包括 “\n” 字符。</p>
 <p><strong>语法：fileObject.readline();</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">r&#x27;C:\Users\WJF\test.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>,encoding=<span class="string">&#x27;gbk&#x27;</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    line=f.read()</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> line:<span class="comment">#到 EOF，返回空字符串，则终止循环</span></span><br><span class="line">             <span class="keyword">break</span></span><br><span class="line">    print(line)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="python">f = open(r&#39;C:\Users\WJF\test.txt&#39;, &#39;r&#39;,encoding=&#39;gbk&#39;)
+while True:
+    line=f.read()
+    if not line:#到 EOF，返回空字符串，则终止循环
+             break
+    print(line)
+</code></pre>
+<pre><code class="python">DataScience
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">DataScience</span><br><span class="line"></span><br><span class="line">专注数据科学领域</span><br><span class="line">分享python、Java、大数据学习干货；职场面经、求职指南等</span><br><span class="line">不定期组织免费学习计划</span><br><span class="line">欢迎加入我们~~~</span><br><span class="line"></span><br><span class="line">DataScience 官方博客：https://www.a2data.cn/<span class="comment">#indexCard这一行是新加的内容。</span></span><br></pre></td></tr></table></figure>
+专注数据科学领域
+分享python、Java、大数据学习干货；职场面经、求职指南等
+不定期组织免费学习计划
+欢迎加入我们~~~
 
+DataScience 官方博客：https://www.a2data.cn/#indexCard这一行是新加的内容。</code></pre>
 <h6 id="3-readlines"><a href="#3-readlines" class="headerlink" title="3) readlines()"></a>3) readlines()</h6><p>readlines() 方法用于读取所有行(直到结束符 EOF)并返回列表，该列表可以由 Python 的 for… in … 结构进行处理。当文件太大时，内存可能不够用。 如果碰到结束符 EOF 则返回空字符串。</p>
 <p>如果碰到结束符 EOF 则返回空字符串。</p>
 <p><strong>语法：fileObject.readlines( );</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">r&#x27;C:\Users\WJF\test.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>,encoding=<span class="string">&#x27;gbk&#x27;</span>)</span><br><span class="line">print(f.readlines())</span><br></pre></td></tr></table></figure>
+<pre><code class="python">f = open(r&#39;C:\Users\WJF\test.txt&#39;, &#39;r&#39;,encoding=&#39;gbk&#39;)
+print(f.readlines())</code></pre>
+<pre><code class="python">[&#39;DataScience\n&#39;, &#39;\n&#39;, &#39;专注数据科学领域\n&#39;, &#39;分享python、Java、大数据学习干货；职场面经、求职指南等\n&#39;, &#39;不定期组织免费学习计划\n&#39;, &#39;欢迎加入我们~~~\n&#39;, &#39;\n&#39;, &#39;DataScience 官方博客：https://www.a2data.cn/#indexCard这一行是新加的内容。\n&#39;]</code></pre>
+<pre><code class="python">#遍历每行打印
+f = open(r&#39;C:\Users\WJF\test.txt&#39;, &#39;r&#39;,encoding=&#39;gbk&#39;)
+for line in f.readlines():
+     print(line)</code></pre>
+<pre><code class="python">&#39;&#39;&#39;
+DataScience
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">&#x27;DataScience\n&#x27;</span>, <span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;专注数据科学领域\n&#x27;</span>, <span class="string">&#x27;分享python、Java、大数据学习干货；职场面经、求职指南等\n&#x27;</span>, <span class="string">&#x27;不定期组织免费学习计划\n&#x27;</span>, <span class="string">&#x27;欢迎加入我们~~~\n&#x27;</span>, <span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;DataScience 官方博客：https://www.a2data.cn/#indexCard这一行是新加的内容。\n&#x27;</span>]</span><br></pre></td></tr></table></figure>
+专注数据科学领域
 
+分享python、Java、大数据学习干货；职场面经、求职指南等
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#遍历每行打印</span></span><br><span class="line">f = open(<span class="string">r&#x27;C:\Users\WJF\test.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>,encoding=<span class="string">&#x27;gbk&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> f.readlines():</span><br><span class="line">     print(line)</span><br></pre></td></tr></table></figure>
+不定期组织免费学习计划
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">DataScience</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">专注数据科学领域</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">分享python、Java、大数据学习干货；职场面经、求职指南等</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">不定期组织免费学习计划</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">欢迎加入我们~~~</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">DataScience 官方博客：https://www.a2data.cn/#indexCard这一行是新加的内容。</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+欢迎加入我们~~~
 
+DataScience 官方博客：https://www.a2data.cn/#indexCard这一行是新加的内容。
+&#39;&#39;&#39;</code></pre>
 <h4 id="小总结"><a href="#小总结" class="headerlink" title="小总结"></a>小总结</h4><p>其实关于文件的打开有很多种模式，这里我们用一个表格总结一下</p>
 <table>
 <thead>
@@ -1623,7 +1661,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\59346.html" title="12.Python面向对象(3)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191225231208.png" /><span class="title">12.Python面向对象(3)</span><span class="excerpt">Python面向对象单例模式</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\80ca38c0.html" title="Day2.Python变量和运算符" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.Python变量和运算符</span><span class="excerpt">Python变量与运算符！！！</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\fbd6efa0.html" title="Day1.Python基本操作与格式规范" rel="bookmark "><img src="https://7.dusays.com/2020/09/14/ba18a9c432ad6.png" /><span class="title">Day1.Python基本操作与格式规范</span><span class="excerpt">Python基本操作与格式规范！！！</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2796,6 +2834,8 @@
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2836,6 +2876,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3149,6 +3196,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

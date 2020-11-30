@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1485,17 +1489,52 @@
 </ul>
 </blockquote>
 <p><strong>Demo</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.写一个函数打印一条直线</span></span><br><span class="line"><span class="comment"># 2.打印自定义行数的横线</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印一条</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printOneLine</span>():</span></span><br><span class="line">    print(<span class="string">&quot;-&quot;</span>*<span class="number">30</span>)</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印多条</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printNumLine</span>(<span class="params">num</span>):</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># printOneLine 函数已经完成了打印横线的功能</span></span><br><span class="line">    <span class="comment"># 只需要多次调用此函数即可</span></span><br><span class="line">    <span class="keyword">while</span> i &lt; num:</span><br><span class="line">        printOneLine()</span><br><span class="line">        i+=<span class="number">1</span></span><br><span class="line">        </span><br><span class="line"><span class="comment"># 调用</span></span><br><span class="line"></span><br><span class="line">printNumLine(<span class="number">3</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="python"># 1.写一个函数打印一条直线
+# 2.打印自定义行数的横线
 
+# 打印一条
+def printOneLine():
+    print(&quot;-&quot;*30)
+
+
+# 打印多条
+def printNumLine(num):
+    i = 0
+
+    # printOneLine 函数已经完成了打印横线的功能
+    # 只需要多次调用此函数即可
+    while i &lt; num:
+        printOneLine()
+        i+=1
+
+# 调用
+
+printNumLine(3)
+</code></pre>
 <p><strong>Demo1</strong></p>
 <blockquote>
 <p>1.写一个函数求三个数的和</p>
 <p>2.写一个函数求三个数的平均值</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 求三个数的和</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum3Number</span>(<span class="params">a,b,c</span>):</span></span><br><span class="line">    <span class="keyword">return</span> a+b+c	<span class="comment">#return的后面可以是数值，也可以是表达式</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 完成三个数的平均值</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">average3Number</span>(<span class="params">a,b,c</span>):</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 因为sum3Number函数已经完成3个数的求和</span></span><br><span class="line">    <span class="comment"># 将接收到的3个数，当做实参传递即可</span></span><br><span class="line">    </span><br><span class="line">    sumResult = sum3Number(a,b,c)</span><br><span class="line">    aveResult = sumResult/<span class="number">3.0</span></span><br><span class="line">    <span class="keyword">return</span> aveResult</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用函数，完成对3个数求平均值</span></span><br><span class="line">result = average3Number(<span class="number">11</span>,<span class="number">2</span>,<span class="number">55</span>)</span><br><span class="line">print(<span class="string">&quot;average is %d&quot;</span>%result)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="python"># 求三个数的和
+def sum3Number(a,b,c):
+    return a+b+c    #return的后面可以是数值，也可以是表达式
 
+# 完成三个数的平均值
 
+def average3Number(a,b,c):
 
+    # 因为sum3Number函数已经完成3个数的求和
+    # 将接收到的3个数，当做实参传递即可
+
+    sumResult = sum3Number(a,b,c)
+    aveResult = sumResult/3.0
+    return aveResult
+
+# 调用函数，完成对3个数求平均值
+result = average3Number(11,2,55)
+print(&quot;average is %d&quot;%result)
+</code></pre>
 <h2 id="2、局部变量"><a href="#2、局部变量" class="headerlink" title="2、局部变量"></a>2、局部变量</h2><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191218083547.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191218083547.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p><strong>归纳分析</strong></p>
 <blockquote>
@@ -1509,16 +1548,45 @@
 <p>如果一个变量，既能在一个函数中使用，也能在其他的函数中使用，这样的变量就是<code>全局变量</code></p>
 </blockquote>
 <p><strong>Demo</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义全局变量</span></span><br><span class="line">a = <span class="number">100</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test1</span>():</span></span><br><span class="line">    print(a)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test2</span>():</span></span><br><span class="line">    print(a)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用函数</span></span><br><span class="line">test1()</span><br><span class="line">test2()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 结果显而易见</span></span><br><span class="line"><span class="number">100</span></span><br><span class="line"><span class="number">100</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python"># 定义全局变量
+a = 100
 
+def test1():
+    print(a)
 
+def test2():
+    print(a)
 
+# 调用函数
+test1()
+test2()
+
+# 结果显而易见
+100
+100</code></pre>
 <h3 id="3-2、全局和局部变量名一致的情况"><a href="#3-2、全局和局部变量名一致的情况" class="headerlink" title="3.2、全局和局部变量名一致的情况"></a>3.2、全局和局部变量名一致的情况</h3><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191218084338.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191218084338.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h3 id="3-3、修改全局变量"><a href="#3-3、修改全局变量" class="headerlink" title="3.3、修改全局变量"></a>3.3、修改全局变量</h3><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191218084607.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191218084607.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="3-4、可变类型的全局变量"><a href="#3-4、可变类型的全局变量" class="headerlink" title="3.4、可变类型的全局变量"></a>3.4、可变类型的全局变量</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">f</span>():</span></span><br><span class="line"><span class="meta">... </span>    a += <span class="number">1</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">print</span> a</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f()</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">2</span>, <span class="keyword">in</span> f</span><br><span class="line">UnboundLocalError: local variable <span class="string">&#x27;a&#x27;</span> referenced before assignment</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>li = [<span class="number">1</span>,]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">f2</span>():</span></span><br><span class="line"><span class="meta">... </span>    li.append(<span class="number">1</span>)</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">print</span> li</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f2()</span><br><span class="line">[<span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>li</span><br><span class="line">[<span class="number">1</span>, <span class="number">1</span>]</span><br></pre></td></tr></table></figure>
-
-
-
+<h3 id="3-4、可变类型的全局变量"><a href="#3-4、可变类型的全局变量" class="headerlink" title="3.4、可变类型的全局变量"></a>3.4、可变类型的全局变量</h3><pre><code class="python">&gt;&gt;&gt; a = 1
+&gt;&gt;&gt; def f():
+...     a += 1
+...     print a
+...
+&gt;&gt;&gt; f()
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+  File &quot;&lt;stdin&gt;&quot;, line 2, in f
+UnboundLocalError: local variable &#39;a&#39; referenced before assignment
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt; li = [1,]
+&gt;&gt;&gt; def f2():
+...     li.append(1)
+...     print li
+...
+&gt;&gt;&gt; f2()
+[1, 1]
+&gt;&gt;&gt; li
+[1, 1]</code></pre>
 <h3 id="3-5、-归纳总结"><a href="#3-5、-归纳总结" class="headerlink" title="3.5、 归纳总结"></a>3.5、 归纳总结</h3><blockquote>
 <ul>
 <li>在函数外边定义的变量叫做<code>全局变量</code></li>
@@ -1535,38 +1603,123 @@
 <p>在python中我们可不可以返回多个值？</p>
 <p><strong>本质是利用了元组</strong></p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">divid</span>(<span class="params">a, b</span>):</span></span><br><span class="line"><span class="meta">... </span>    shang = a//b</span><br><span class="line"><span class="meta">... </span>    yushu = a%b </span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> shang, yushu</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sh, yu = divid(<span class="number">5</span>, <span class="number">2</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sh</span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>yu</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code class="python">&gt;&gt;&gt; def divid(a, b):
+...     shang = a//b
+...     yushu = a%b 
+...     return shang, yushu
+...
+&gt;&gt;&gt; sh, yu = divid(5, 2)
+&gt;&gt;&gt; sh
+5
+&gt;&gt;&gt; yu
+1</code></pre>
 <h2 id="5、函数参数"><a href="#5、函数参数" class="headerlink" title="5、函数参数"></a>5、函数参数</h2><h3 id="5-1、-缺省参数"><a href="#5-1、-缺省参数" class="headerlink" title="5.1、 缺省参数"></a>5.1、 缺省参数</h3><blockquote>
 <p>调用函数时，缺省参数的值如果没有传入，则被认为是默认值。下例会打印默认的age，如果age没有被传入：</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params"> name, age = <span class="number">35</span> </span>):</span></span><br><span class="line">   <span class="comment"># 打印任何传入的字符串</span></span><br><span class="line">   <span class="keyword">print</span> <span class="string">&quot;Name: &quot;</span>, name</span><br><span class="line">   <span class="keyword">print</span> <span class="string">&quot;Age &quot;</span>, age</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用printinfo函数</span></span><br><span class="line">printinfo(name=<span class="string">&quot;miki&quot;</span> )</span><br><span class="line">printinfo( age=<span class="number">9</span>,name=<span class="string">&quot;miki&quot;</span> )</span><br></pre></td></tr></table></figure>
+<pre><code class="python">def printinfo( name, age = 35 ):
+   # 打印任何传入的字符串
+   print &quot;Name: &quot;, name
+   print &quot;Age &quot;, age
 
+# 调用printinfo函数
+printinfo(name=&quot;miki&quot; )
+printinfo( age=9,name=&quot;miki&quot; )</code></pre>
 <p>以上实例输出结果：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Name:  miki</span><br><span class="line">Age  <span class="number">35</span></span><br><span class="line">Name:  miki</span><br><span class="line">Age  <span class="number">9</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="注意：带有默认值的参数一定要位于参数列表的最后面。"><a href="#注意：带有默认值的参数一定要位于参数列表的最后面。" class="headerlink" title="注意：带有默认值的参数一定要位于参数列表的最后面。"></a>注意：带有默认值的参数一定要位于参数列表的最后面。</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params">name, age=<span class="number">35</span>, sex</span>):</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">print</span> name</span><br><span class="line">...</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span></span><br><span class="line">SyntaxError: non-default argument follows default argument</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">Name:  miki
+Age  35
+Name:  miki
+Age  9</code></pre>
+<h4 id="注意：带有默认值的参数一定要位于参数列表的最后面。"><a href="#注意：带有默认值的参数一定要位于参数列表的最后面。" class="headerlink" title="注意：带有默认值的参数一定要位于参数列表的最后面。"></a>注意：带有默认值的参数一定要位于参数列表的最后面。</h4><pre><code class="python">&gt;&gt;&gt; def printinfo(name, age=35, sex):
+...     print name
+...
+  File &quot;&lt;stdin&gt;&quot;, line 1
+SyntaxError: non-default argument follows default argument</code></pre>
 <h3 id="5-2、不定长参数"><a href="#5-2、不定长参数" class="headerlink" title="5.2、不定长参数"></a>5.2、不定长参数</h3><blockquote>
 <p>有时可能需要一个函数能处理比当初声明时更多的参数。这些参数叫做不定长参数，声明时不会命名。</p>
 </blockquote>
 <p>基本语法如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">functionname</span>(<span class="params">[formal_args,] *args, **kwargs</span>):</span></span><br><span class="line">    <span class="string">&quot;函数_文档字符串&quot;</span></span><br><span class="line">    function_suite</span><br><span class="line">    <span class="keyword">return</span> [expression]</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">def functionname([formal_args,] *args, **kwargs):
+    &quot;函数_文档字符串&quot;
+    function_suite
+    return [expression]</code></pre>
 <p>加了星号（*）的变量args会存放所有未命名的变量参数，args为元组；而加**的变量kwargs会存放命名参数，即形如key=value的参数， kwargs为字典。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">a, b, *args, **kwargs</span>):</span></span><br><span class="line"><span class="meta">... </span>    <span class="string">&quot;&quot;&quot;可变参数演示示例&quot;&quot;&quot;</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">print</span> <span class="string">&quot;a =&quot;</span>, a</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">print</span> <span class="string">&quot;b =&quot;</span>, b</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">print</span> <span class="string">&quot;args =&quot;</span>, args</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">print</span> <span class="string">&quot;kwargs: &quot;</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">for</span> key, value <span class="keyword">in</span> kwargs.items():</span><br><span class="line"><span class="meta">... </span>        <span class="keyword">print</span> key, <span class="string">&quot;=&quot;</span>, value</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>fun(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, m=<span class="number">6</span>, n=<span class="number">7</span>, p=<span class="number">8</span>)  <span class="comment"># 注意传递的参数对应</span></span><br><span class="line">a = <span class="number">1</span></span><br><span class="line">b = <span class="number">2</span></span><br><span class="line">args = (<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line">kwargs: </span><br><span class="line">p = <span class="number">8</span></span><br><span class="line">m = <span class="number">6</span></span><br><span class="line">n = <span class="number">7</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = (<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d = &#123;<span class="string">&quot;m&quot;</span>:<span class="number">6</span>, <span class="string">&quot;n&quot;</span>:<span class="number">7</span>, <span class="string">&quot;p&quot;</span>:<span class="number">8</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>fun(<span class="number">1</span>, <span class="number">2</span>, *c, **d)    <span class="comment"># 注意元组与字典的传参方式</span></span><br><span class="line">a = <span class="number">1</span></span><br><span class="line">b = <span class="number">2</span></span><br><span class="line">args = (<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line">kwargs: </span><br><span class="line">p = <span class="number">8</span></span><br><span class="line">m = <span class="number">6</span></span><br><span class="line">n = <span class="number">7</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>fun(<span class="number">1</span>, <span class="number">2</span>, c, d) <span class="comment"># 注意不加星号与上面的区别</span></span><br><span class="line">a = <span class="number">1</span></span><br><span class="line">b = <span class="number">2</span></span><br><span class="line">args = ((<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>), &#123;<span class="string">&#x27;p&#x27;</span>: <span class="number">8</span>, <span class="string">&#x27;m&#x27;</span>: <span class="number">6</span>, <span class="string">&#x27;n&#x27;</span>: <span class="number">7</span>&#125;)</span><br><span class="line">kwargs:</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">&gt;&gt;&gt; def fun(a, b, *args, **kwargs):
+...     &quot;&quot;&quot;可变参数演示示例&quot;&quot;&quot;
+...     print &quot;a =&quot;, a
+...     print &quot;b =&quot;, b
+...     print &quot;args =&quot;, args
+...     print &quot;kwargs: &quot;
+...     for key, value in kwargs.items():
+...         print key, &quot;=&quot;, value
+...
+&gt;&gt;&gt; fun(1, 2, 3, 4, 5, m=6, n=7, p=8)  # 注意传递的参数对应
+a = 1
+b = 2
+args = (3, 4, 5)
+kwargs: 
+p = 8
+m = 6
+n = 7
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt; c = (3, 4, 5)
+&gt;&gt;&gt; d = &#123;&quot;m&quot;:6, &quot;n&quot;:7, &quot;p&quot;:8&#125;
+&gt;&gt;&gt; fun(1, 2, *c, **d)    # 注意元组与字典的传参方式
+a = 1
+b = 2
+args = (3, 4, 5)
+kwargs: 
+p = 8
+m = 6
+n = 7
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt; fun(1, 2, c, d) # 注意不加星号与上面的区别
+a = 1
+b = 2
+args = ((3, 4, 5), &#123;&#39;p&#39;: 8, &#39;m&#39;: 6, &#39;n&#39;: 7&#125;)
+kwargs:
+&gt;&gt;&gt;
+&gt;&gt;&gt;</code></pre>
 <h3 id="5-3、引用传参"><a href="#5-3、引用传参" class="headerlink" title="5.3、引用传参"></a>5.3、引用传参</h3><ul>
 <li>可变类型与不可变类型的变量分别作为函数参数时，会有什么不同吗？</li>
 <li>Python有没有类似C语言中的指针传参呢？</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">selfAdd</span>(<span class="params">a</span>):</span></span><br><span class="line"><span class="meta">... </span>    <span class="string">&quot;&quot;&quot;自增&quot;&quot;&quot;</span></span><br><span class="line"><span class="meta">... </span>    a += a</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a_int = <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a_int</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>selfAdd(a_int)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a_int</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a_list = [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a_list</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>selfAdd(a_list)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a_list</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>]</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">&gt;&gt;&gt; def selfAdd(a):
+...     &quot;&quot;&quot;自增&quot;&quot;&quot;
+...     a += a
+...
+&gt;&gt;&gt; a_int = 1
+&gt;&gt;&gt; a_int
+1
+&gt;&gt;&gt; selfAdd(a_int)
+&gt;&gt;&gt; a_int
+1
+&gt;&gt;&gt; a_list = [1, 2]
+&gt;&gt;&gt; a_list
+[1, 2]
+&gt;&gt;&gt; selfAdd(a_list)
+&gt;&gt;&gt; a_list
+[1, 2, 1, 2]</code></pre>
 <p><strong>Python中函数参数是引用传递（注意不是值传递）。对于不可变类型，因变量不能修改，所以运算不会影响到变量自身；而对于可变类型来说，函数体中的运算有可能会更改传入的参数变量。</strong></p>
-<h4 id="想一想为什么"><a href="#想一想为什么" class="headerlink" title="想一想为什么"></a>想一想为什么</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">selfAdd</span>(<span class="params">a</span>):</span></span><br><span class="line"><span class="meta">... </span>    <span class="string">&quot;&quot;&quot;自增&quot;&quot;&quot;</span></span><br><span class="line"><span class="meta">... </span>    a = a + a   <span class="comment"># 我们更改了函数体的这句话</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a_int = <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a_int</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>selfAdd(a_int)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a_int</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a_list = [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a_list</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>selfAdd(a_list)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a_list</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>]      <span class="comment"># 想一想为什么没有变呢？</span></span><br></pre></td></tr></table></figure>
-
+<h4 id="想一想为什么"><a href="#想一想为什么" class="headerlink" title="想一想为什么"></a>想一想为什么</h4><pre><code class="python">&gt;&gt;&gt; def selfAdd(a):
+...     &quot;&quot;&quot;自增&quot;&quot;&quot;
+...     a = a + a   # 我们更改了函数体的这句话
+...
+&gt;&gt;&gt; a_int = 1
+&gt;&gt;&gt; a_int
+1
+&gt;&gt;&gt; selfAdd(a_int)
+&gt;&gt;&gt; a_int
+1
+&gt;&gt;&gt; a_list = [1, 2]
+&gt;&gt;&gt; a_list
+[1, 2]
+&gt;&gt;&gt; selfAdd(a_list)
+&gt;&gt;&gt; a_list
+[1, 2]      # 想一想为什么没有变呢？</code></pre>
 
   
   
@@ -1580,7 +1733,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\30675.html" title="11.Python面向对象(2)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191224164151.png" /><span class="title">11.Python面向对象(2)</span><span class="excerpt">Python面向对象介绍中篇</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\58489.html" title="4.Python列表介绍" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191212085923.png" /><span class="title">4.Python列表介绍</span><span class="excerpt">Python列表介绍</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\34771.html" title="10.Python面向对象(1)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223115817.png" /><span class="title">10.Python面向对象(1)</span><span class="excerpt">Python面向对象介绍上篇</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2758,6 +2911,8 @@ Python函数(上)1、什么是函数
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2798,6 +2953,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3111,6 +3273,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

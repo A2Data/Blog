@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1486,8 +1490,27 @@
 <p>English = 93</p>
 </blockquote>
 <p><strong>A：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># ID 生成唯一UUID</span></span><br><span class="line"></span><br><span class="line">Chinese = <span class="number">92</span></span><br><span class="line">Math = <span class="number">98.5</span></span><br><span class="line">English = <span class="number">93</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 总成绩</span></span><br><span class="line">SumScore = Chinese + Math + English</span><br><span class="line"></span><br><span class="line"><span class="comment"># 平均成绩</span></span><br><span class="line">AvgScore = SumScore / <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 百分比</span></span><br><span class="line">ChinesePercent = ( Chinese / SumScore ) * <span class="number">100</span></span><br><span class="line">print(<span class="string">&quot;%s的平均成绩为%.2f&quot;</span> %(ID,AvgScore))</span><br><span class="line"></span><br><span class="line"><span class="comment">#输出</span></span><br><span class="line"><span class="number">9</span>fde9178-ec75<span class="number">-11</span>ea<span class="number">-9</span>d07-a0510bfd82f6</span><br><span class="line"><span class="number">9</span>fde9178-ec75<span class="number">-11</span>ea<span class="number">-9</span>d07-a0510bfd82f6的平均成绩为<span class="number">94.50</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="python">
+# ID 生成唯一UUID
 
+Chinese = 92
+Math = 98.5
+English = 93
+
+# 总成绩
+SumScore = Chinese + Math + English
+
+# 平均成绩
+AvgScore = SumScore / 3
+
+# 百分比
+ChinesePercent = ( Chinese / SumScore ) * 100
+print(&quot;%s的平均成绩为%.2f&quot; %(ID,AvgScore))
+
+#输出
+9fde9178-ec75-11ea-9d07-a0510bfd82f6
+9fde9178-ec75-11ea-9d07-a0510bfd82f6的平均成绩为94.50
+</code></pre>
 <p><strong>学前引导：</strong></p>
 <blockquote>
 <p>变量&amp;运算符(本文重点)：</p>
@@ -1504,19 +1527,33 @@
 </blockquote>
 <h2 id="关于变量"><a href="#关于变量" class="headerlink" title="关于变量"></a>关于变量</h2><h3 id="变量的创建过程"><a href="#变量的创建过程" class="headerlink" title="变量的创建过程"></a>变量的创建过程</h3><p>首先，当我们定义了一个变量**name = ‘Data’**的时候，在内存中其实是做了这样一件事。</p>
 <p>程序开辟了一块内存空间，将’Data’存储进去，再让变量名name指向’Data’所在的内存地址。如下所示：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#通过下列方法可以查看这个变量在内存中的地址</span></span><br><span class="line">name = <span class="string">&#x27;Data&#x27;</span></span><br><span class="line">print(id(name))</span><br><span class="line"><span class="number">2720846969904</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">#通过下列方法可以查看这个变量在内存中的地址
+name = &#39;Data&#39;
+print(id(name))
+2720846969904
+</code></pre>
 <h3 id="变量的修改"><a href="#变量的修改" class="headerlink" title="变量的修改"></a>变量的修改</h3><p>一般我们认为修改一个变量就是用新值把就旧值覆盖掉 实际的原理是什么样的呢？</p>
 <p>程序先申请了一块内存空间来存储’Data’，让name变量名指向这块内存空间，往下执行name = ‘Science’之后，又申请了另一块内存空间来存储’Science’，并让原本指向’Data’内存的链接断开，让name再指向’Science’。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#案例演示</span></span><br><span class="line"></span><br><span class="line">name = <span class="string">&#x27;Data&#x27;</span></span><br><span class="line">print(id(name))</span><br><span class="line">name = <span class="string">&#x27;Science&#x27;</span></span><br><span class="line">print(id(name))</span><br><span class="line"><span class="number">2720846969904</span></span><br><span class="line"><span class="number">2718733174640</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="python">#案例演示
 
+name = &#39;Data&#39;
+print(id(name))
+name = &#39;Science&#39;
+print(id(name))
+2720846969904
+2718733174640
+</code></pre>
 <h2 id="变量的指向关系"><a href="#变量的指向关系" class="headerlink" title="变量的指向关系"></a>变量的指向关系</h2><p>当执行name2 = name1时，事实上时让name2指向了’Data’所在的内存地址。</p>
 <p>修改name1的值，相当于断开了name1到’Data’的链接，重新建立name1和’Science’之间的链接。</p>
 <p>在这个过程中，始终没有影响到name2和’Data’之间的关系，因此name2还是’Data’，而name1变成了’Science’</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#案例演示</span></span><br><span class="line">name1 = <span class="string">&#x27;Data&#x27;</span></span><br><span class="line">name2 = name1</span><br><span class="line">print(name1, name2)</span><br><span class="line">name1 = <span class="string">&#x27;Science&#x27;</span></span><br><span class="line">print(name1, name2)</span><br><span class="line">Data Data</span><br><span class="line">Science Data</span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code class="python">#案例演示
+name1 = &#39;Data&#39;
+name2 = name1
+print(name1, name2)
+name1 = &#39;Science&#39;
+print(name1, name2)
+Data Data
+Science Data</code></pre>
 <h4 id="变量小测试："><a href="#变量小测试：" class="headerlink" title="变量小测试："></a>变量小测试：</h4><p>1、以下可以作为python标识符是<strong>___</strong>。</p>
 <ul>
 <li>A.2morrow</li>
@@ -1525,8 +1562,10 @@
 <li>D.abc*123</li>
 </ul>
 <p>2、如下示例:字符串str1的值赋值给str2时,str2的变量地址是否改变?如果是字典赋值呢?</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str1= <span class="string">&#x27;python&#x27;</span></span><br><span class="line">str2= <span class="string">&#x27;pandas&#x27;</span></span><br><span class="line">str2= str1</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">str1= &#39;python&#39;
+str2= &#39;pandas&#39;
+str2= str1
+</code></pre>
 <h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ul>
 <li><p>算术运算符</p>
 <ul>
@@ -1584,9 +1623,26 @@
 <td>返回商的整数部分 9//2 输出结果 4 , 9.0//2.0 输出结果 4.0</td>
 </tr>
 </tbody></table>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 更多案例</span></span><br><span class="line">a=<span class="number">21</span></span><br><span class="line">b=<span class="number">3</span></span><br><span class="line">c=<span class="number">4</span></span><br><span class="line">print(a+b)</span><br><span class="line">print(a-b)</span><br><span class="line">print(a/b)</span><br><span class="line">print(a*b)</span><br><span class="line">print(c**<span class="number">3</span>)</span><br><span class="line">print(a%c)</span><br><span class="line">print(a//c)</span><br><span class="line">print(<span class="number">45</span>-a)</span><br><span class="line"><span class="number">24</span></span><br><span class="line"><span class="number">18</span></span><br><span class="line"><span class="number">7.0</span></span><br><span class="line"><span class="number">63</span></span><br><span class="line"><span class="number">64</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">24</span></span><br></pre></td></tr></table></figure>
-
-
+<pre><code class="python"># 更多案例
+a=21
+b=3
+c=4
+print(a+b)
+print(a-b)
+print(a/b)
+print(a*b)
+print(c**3)
+print(a%c)
+print(a//c)
+print(45-a)
+24
+18
+7.0
+63
+64
+1
+5
+24</code></pre>
 <h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><table>
 <thead>
 <tr>
@@ -1612,8 +1668,16 @@
 <li>取整除赋值运算符//=</li>
 </ul>
 <p>其中比较常见的运算符有+=(自加)和-=(自减)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;3</span><br><span class="line">b&#x3D;2</span><br><span class="line">c&#x3D;10</span><br><span class="line"># c+&#x3D;a</span><br><span class="line">c&#x2F;&#x3D;b</span><br><span class="line">print(c)</span><br><span class="line">a+&#x3D;4</span><br><span class="line">print(a)</span><br><span class="line">5.0</span><br><span class="line">7</span><br></pre></td></tr></table></figure>
-
+<pre><code>a=3
+b=2
+c=10
+# c+=a
+c/=b
+print(c)
+a+=4
+print(a)
+5.0
+7</code></pre>
 <h3 id="复合赋值运算符"><a href="#复合赋值运算符" class="headerlink" title="复合赋值运算符"></a>复合赋值运算符</h3><table>
 <thead>
 <tr>
@@ -1712,8 +1776,18 @@
 <td align="left">如a=3,b=3则(a &lt;= b) 为 true.</td>
 </tr>
 </tbody></table>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="number">5</span></span><br><span class="line">b=<span class="number">10</span></span><br><span class="line">c=<span class="number">1</span></span><br><span class="line">print(a&gt;b)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> a&gt;b:</span><br><span class="line">    print(<span class="string">&#x27;a大于b&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;a小于b&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="literal">False</span></span><br><span class="line">a小于b</span><br></pre></td></tr></table></figure>
+<pre><code class="python">a=5
+b=10
+c=1
+print(a&gt;b)
 
+if a&gt;b:
+    print(&#39;a大于b&#39;)
+else:
+    print(&#39;a小于b&#39;)
+
+False
+a小于b</code></pre>
 <h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>逻辑运算符为结果真假的<strong>与或非</strong>分别用and or not来表示，我们这里可以通过简单的赋值来体会这个逻辑关系。</p>
 <table>
 <thead>
@@ -1743,8 +1817,44 @@
 <td align="left">not(a and b) 返回 False</td>
 </tr>
 </tbody></table>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">10</span></span><br><span class="line">b = <span class="number">20</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>  a <span class="keyword">and</span> b :    <span class="comment">#判断a和b是否都为真</span></span><br><span class="line">    print(<span class="string">&quot;a，b均为真&quot;</span>) </span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;a,b中有一个不为真&quot;</span>)</span><br><span class="line">**********************************</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>  a <span class="keyword">or</span> b :</span><br><span class="line">    print(<span class="string">&quot;a,b中至少有一个为真&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;a,b都不为真&quot;</span>)</span><br><span class="line">    </span><br><span class="line">***********************************   </span><br><span class="line"><span class="comment">#修改变量 a 的值</span></span><br><span class="line">a = <span class="number">0</span></span><br><span class="line"><span class="keyword">if</span>  a <span class="keyword">and</span> b :</span><br><span class="line">    <span class="keyword">print</span> (<span class="string">&quot;a,b都为真&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;a,b中有一个不为真&quot;</span>) </span><br><span class="line"></span><br><span class="line">***********************************</span><br><span class="line"><span class="keyword">if</span>  a <span class="keyword">or</span> b :</span><br><span class="line">    print(<span class="string">&quot;a,b中至少有一个为真&quot;</span>) </span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;a,b都不为真&quot;</span>) </span><br><span class="line"></span><br><span class="line">************************************</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span>( a <span class="keyword">and</span> b ):</span><br><span class="line">    print(<span class="string">&quot;a,b中至少有一个为假&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;a,b都为真&quot;</span>) </span><br><span class="line">a，b均为真</span><br><span class="line">a,b中至少有一个为真</span><br><span class="line">a,b中有一个不为真</span><br><span class="line">a,b中至少有一个为真</span><br><span class="line">a,b中至少有一个为假</span><br></pre></td></tr></table></figure>
+<pre><code class="python">a = 10
+b = 20
 
+if  a and b :    #判断a和b是否都为真
+    print(&quot;a，b均为真&quot;) 
+else:
+    print(&quot;a,b中有一个不为真&quot;)
+**********************************
+
+if  a or b :
+    print(&quot;a,b中至少有一个为真&quot;)
+else:
+    print(&quot;a,b都不为真&quot;)
+
+***********************************   
+#修改变量 a 的值
+a = 0
+if  a and b :
+    print (&quot;a,b都为真&quot;)
+else:
+    print(&quot;a,b中有一个不为真&quot;) 
+
+***********************************
+if  a or b :
+    print(&quot;a,b中至少有一个为真&quot;) 
+else:
+    print(&quot;a,b都不为真&quot;) 
+
+************************************
+if not( a and b ):
+    print(&quot;a,b中至少有一个为假&quot;)
+else:
+    print(&quot;a,b都为真&quot;) 
+a，b均为真
+a,b中至少有一个为真
+a,b中有一个不为真
+a,b中至少有一个为真
+a,b中至少有一个为假</code></pre>
 <h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><p>按位运算符是把数字看作二进制来进行计算的。</p>
 <ul>
 <li>‘&amp;’表示为按位与</li>
@@ -1754,8 +1864,28 @@
 <li>‘&lt;&lt;’表示按位左移</li>
 <li>‘&gt;&gt;’表示按位右移</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">60</span>            <span class="comment"># 60 = 0011 1100 </span></span><br><span class="line">b = <span class="number">13</span>            <span class="comment"># 13 = 0000 1101 </span></span><br><span class="line">c = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">c = a &amp; b;        <span class="comment"># 12 = 0000 1100</span></span><br><span class="line">print(<span class="string">&quot; c 的值为：&quot;</span>, c)</span><br><span class="line"></span><br><span class="line">c = a | b;        <span class="comment"># 61 = 0011 1101 </span></span><br><span class="line">print(<span class="string">&quot;c 的值为：&quot;</span>, c)</span><br><span class="line"></span><br><span class="line">c = a ^ b;        <span class="comment"># 49 = 0011 0001</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">&quot;c 的值为：&quot;</span>, c)</span><br><span class="line"></span><br><span class="line">c = ~a;           <span class="comment"># -61 = -0111101</span></span><br><span class="line">print(<span class="string">&quot;c 的值为：&quot;</span>, c) </span><br><span class="line"></span><br><span class="line">c = a &lt;&lt; <span class="number">2</span>;       <span class="comment"># 240 = 1111 0000</span></span><br><span class="line">print(<span class="string">&quot;c 的值为：&quot;</span>, c) </span><br><span class="line"></span><br><span class="line">c = a &gt;&gt; <span class="number">2</span>;       <span class="comment"># 15 = 0000 1111</span></span><br><span class="line">print(<span class="string">&quot;c 的值为：&quot;</span>, c) </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="python">a = 60            # 60 = 0011 1100 
+b = 13            # 13 = 0000 1101 
+c = 0
 
+c = a &amp; b;        # 12 = 0000 1100
+print(&quot; c 的值为：&quot;, c)
+
+c = a | b;        # 61 = 0011 1101 
+print(&quot;c 的值为：&quot;, c)
+
+c = a ^ b;        # 49 = 0011 0001
+print (&quot;c 的值为：&quot;, c)
+
+c = ~a;           # -61 = -0111101
+print(&quot;c 的值为：&quot;, c) 
+
+c = a &lt;&lt; 2;       # 240 = 1111 0000
+print(&quot;c 的值为：&quot;, c) 
+
+c = a &gt;&gt; 2;       # 15 = 0000 1111
+print(&quot;c 的值为：&quot;, c) 
+</code></pre>
 <h3 id="条件-三元-运算符"><a href="#条件-三元-运算符" class="headerlink" title="条件(三元)运算符"></a>条件(三元)运算符</h3><p>语法：</p>
 <p>​        语句1 if  条件表达式 else 语句2</p>
 <p>执行流程： 　 </p>
@@ -1765,11 +1895,20 @@
 <li>如果判断结果为False，则执行语句2，并返回执行结果</li>
 </ul>
 <p>例子：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="number">10</span></span><br><span class="line">b=<span class="number">5</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> a&gt;<span class="number">15</span>:</span><br><span class="line">    c=a</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    c=b</span><br><span class="line">print(c)</span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">a=10
+b=5
 
+if a&gt;15:
+    c=a
+else:
+    c=b
+print(c)
+5</code></pre>
 <p>上面的运算可以用三元运算来表示，即：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c=a <span class="keyword">if</span> a&gt;<span class="number">15</span> <span class="keyword">else</span> b</span><br><span class="line">print(c)</span><br><span class="line"><span class="number">5</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">c=a if a&gt;15 else b
+print(c)
+5
+</code></pre>
 <h2 id="今日小作业"><a href="#今日小作业" class="headerlink" title="今日小作业"></a>今日小作业</h2><p>1、控制台输入半径，计算圆的面积，圆周率取3.14。</p>
 <ul>
 <li>输入格式：<ul>
@@ -1788,8 +1927,8 @@
 </li>
 </ul>
 <p>3、如下代码的运算结果是：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> == <span class="number">1</span> <span class="keyword">and</span> <span class="keyword">not</span> (<span class="string">&quot;apple&quot;</span> == <span class="number">1</span> <span class="keyword">or</span> <span class="number">1</span> == <span class="number">0</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">1 == 1 and not (&quot;apple&quot; == 1 or 1 == 0)
+</code></pre>
 <ul>
 <li>A. True</li>
 <li>B. False</li>
@@ -1797,8 +1936,8 @@
 <li>D. 0</li>
 </ul>
 <p>4、如下代码的运算结果是：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">not</span> <span class="number">2</span> &gt; <span class="number">1</span> <span class="keyword">and</span> <span class="number">3</span> &lt; <span class="number">4</span> <span class="keyword">or</span> <span class="number">4</span> &gt; <span class="number">5</span> <span class="keyword">and</span> <span class="number">2</span> &gt; <span class="number">1</span> <span class="keyword">and</span> <span class="number">9</span> &gt; <span class="number">8</span> <span class="keyword">or</span> <span class="number">7</span> &lt; <span class="number">6</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">not 2 &gt; 1 and 3 &lt; 4 or 4 &gt; 5 and 2 &gt; 1 and 9 &gt; 8 or 7 &lt; 6
+</code></pre>
 <ul>
 <li>A. True</li>
 <li>B. False</li>
@@ -1819,7 +1958,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\59346.html" title="12.Python面向对象(3)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191225231208.png" /><span class="title">12.Python面向对象(3)</span><span class="excerpt">Python面向对象单例模式</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\fbd6efa0.html" title="Day1.Python基本操作与格式规范" rel="bookmark "><img src="https://7.dusays.com/2020/09/14/ba18a9c432ad6.png" /><span class="title">Day1.Python基本操作与格式规范</span><span class="excerpt">Python基本操作与格式规范！！！</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1972,7 +2111,7 @@
 例题引导：
 Q：输入3个整数，按从小到大依次输出，用“-&gt;”符号相连： 例如：输入4，2，6，输出2 -&gt; 4 -&gt; 6
 A：
-1234...</p>
+a = ...</p>
         </a>
       
       
@@ -2992,6 +3131,8 @@ Q：现有信息学号为u20201111的学生，数学成绩为85，化学成绩�
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -3032,6 +3173,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3345,6 +3493,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

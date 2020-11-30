@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1480,8 +1484,9 @@
 <p><strong>例题引导：</strong>使用魔法方法__new__构造一个摄氏度转换为华氏度的类：</p>
 <p>解题思路：构建类-调用魔法方法-表达函数功能</p>
 <p><strong>参考答案：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C2F</span>(<span class="params">float</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span>(<span class="params">cls,arg = <span class="number">0.0</span></span>):</span></span><br><span class="line">        <span class="keyword">return</span> float.__new__(cls,arg * <span class="number">1.8</span> + <span class="number">32</span>)</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">class C2F(float):
+    def __new__(cls,arg = 0.0):
+        return float.__new__(cls,arg * 1.8 + 32)</code></pre>
 <p><strong>学习引导：</strong></p>
 <ul>
 <li><p>魔法方法：</p>
@@ -1493,11 +1498,20 @@
 </li>
 </ul>
 <h3 id="方法重写"><a href="#方法重写" class="headerlink" title="方法重写"></a>方法重写</h3><p>如果你的父类方法的功能不能满足你的需求，你可以在子类重写你父类的方法，实例如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span>:</span>   <span class="comment">#定义父类</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">myMethod</span>(<span class="params">self</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;调用父类方法&#x27;</span>)</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span>(<span class="params">Parent</span>):</span>   <span class="comment">#定义子类</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">myMethod</span>(<span class="params">self</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;调用子类方法&#x27;</span>)</span><br><span class="line">        </span><br><span class="line">c=Child()     <span class="comment">#子类实例</span></span><br><span class="line">c.myMethod() <span class="comment">#子类调用重写方法</span></span><br><span class="line">super(Child,c).myMethod()  <span class="comment">#用子类对象调用父类已被覆盖的方法</span></span><br><span class="line"><span class="comment">#super()是用于调用父类（超类）的一个方法。</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">class Parent:   #定义父类
+    def myMethod(self):
+        print(&#39;调用父类方法&#39;)
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#调用子类方法</span></span><br><span class="line"><span class="comment">#调用父类方法</span></span><br></pre></td></tr></table></figure>
+class Child(Parent):   #定义子类
+    def myMethod(self):
+        print(&#39;调用子类方法&#39;)
 
-
+c=Child()     #子类实例
+c.myMethod() #子类调用重写方法
+super(Child,c).myMethod()  #用子类对象调用父类已被覆盖的方法
+#super()是用于调用父类（超类）的一个方法。</code></pre>
+<pre><code class="python">#调用子类方法
+#调用父类方法</code></pre>
 <h3 id="魔法方法"><a href="#魔法方法" class="headerlink" title="魔法方法"></a>魔法方法</h3><p>在python中，有一些内置好的特定的方法，这些方法在进行特定的操作时会自动被调用，称之为魔法方法，下面介绍几种常见的魔法方法。</p>
 <ul>
 <li><p>__ new__(cls[,* argv])</p>
@@ -1515,55 +1529,126 @@
 <li><p>self：代表一个实例对象的名称</p>
 </li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">myMethod</span>(<span class="params">str</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span>(<span class="params">cls,string</span>):</span></span><br><span class="line">        string=string.upper()</span><br><span class="line">        <span class="keyword">return</span> str.__new__(cls,string)</span><br><span class="line">    </span><br><span class="line">X=myMethod(<span class="string">&#x27;DataScience&#x27;</span>)</span><br><span class="line">print(X)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">class myMethod(str):
+    def __new__(cls,string):
+        string=string.upper()
+        return str.__new__(cls,string)
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#DATASCIENCE</span></span><br></pre></td></tr></table></figure>
-
+X=myMethod(&#39;DataScience&#39;)
+print(X)</code></pre>
+<pre><code class="python">#DATASCIENCE</code></pre>
 <h4 id="init-："><a href="#init-：" class="headerlink" title="__ init__："></a>__ init__：</h4><p>初始化函数，在创建实例对象为其赋值时使用，在__ new__ 之后，__ init __ 必须至少有一个参数self，就是这个 __ new__ 返回的实例，__ init__ 是在 __ new__ 的基础上可以完成一些其它初始化的动作，__ init__不需要返回值。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,color,brand</span>):</span></span><br><span class="line">        self.color=color</span><br><span class="line">        self.brand=brand</span><br><span class="line"></span><br><span class="line">puppy=Dog(<span class="string">&#x27;黑色&#x27;</span>,<span class="string">&#x27;拉布拉多&#x27;</span>)</span><br><span class="line">print(puppy)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">class Dog:
+    def __init__(self,color,brand):
+        self.color=color
+        self.brand=brand
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&lt;__main__.Dog object at 0x0000028EC0609DC8&gt;</span></span><br></pre></td></tr></table></figure>
-
-
+puppy=Dog(&#39;黑色&#39;,&#39;拉布拉多&#39;)
+print(puppy)</code></pre>
+<pre><code class="python">#&lt;__main__.Dog object at 0x0000028EC0609DC8&gt;</code></pre>
 <p>下面再来一个结合__ init__ 和__ new__两个魔法方法的例子：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params">object</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>(<span class="params">A</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;__init__被调用&#x27;</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span>(<span class="params">cls</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;__new__被调用&#x27;</span>)</span><br><span class="line">        print(id(cls))</span><br><span class="line">        <span class="keyword">return</span> object.__new__(A)</span><br><span class="line">        <span class="comment">#注意此处采用了参数A而不是cls，__new__没有正确返回当前类cls的实例</span></span><br><span class="line">b=B()</span><br><span class="line">print(b)</span><br><span class="line">print(type(b))  <span class="comment">#类型所继承的基类</span></span><br><span class="line">print(id(A))</span><br><span class="line">print(id(B))</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">__new__被调用</span></span><br><span class="line"><span class="string">2812126085768</span></span><br><span class="line"><span class="string">&lt;__main__.A object at 0x0000028EC0574108&gt;</span></span><br><span class="line"><span class="string">&lt;class &#x27;__main__.A&#x27;&gt;</span></span><br><span class="line"><span class="string">2812126083880</span></span><br><span class="line"><span class="string">2812126085768</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
+<pre><code class="python">class A(object):
+    pass
+class B(A):
+    def __init__(self):
+        print(&#39;__init__被调用&#39;)
+    def __new__(cls):
+        print(&#39;__new__被调用&#39;)
+        print(id(cls))
+        return object.__new__(A)
+        #注意此处采用了参数A而不是cls，__new__没有正确返回当前类cls的实例
+b=B()
+print(b)
+print(type(b))  #类型所继承的基类
+print(id(A))
+print(id(B))</code></pre>
+<pre><code class="python">&#39;&#39;&#39;
+__new__被调用
+2812126085768
+&lt;__main__.A object at 0x0000028EC0574108&gt;
+&lt;class &#39;__main__.A&#39;&gt;
+2812126083880
+2812126085768
+&#39;&#39;&#39;</code></pre>
 <p>从运行结果可以看出，__ new__ 中的参数cls和B的id是相同的，表明__ new__ 中默认的参数cls就是B类本身，而在return时，并没有正确返回当前类cls的实例，而是返回了其父类A的实例，因此__ init__ 这一魔法方法并没有被调用，此时__ new__虽然是写在B类中的，但其创建并返回的是一个A类的实例对象。</p>
 <p>现在将return中的参数A变为cls，再来看一下运行结果：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params">object</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>(<span class="params">A</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;__init__被调用&#x27;</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span>(<span class="params">cls</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;__new__被调用&#x27;</span>)</span><br><span class="line">        print(id(cls))</span><br><span class="line">        <span class="keyword">return</span> object.__new__(cls)</span><br><span class="line">        <span class="comment">#注意此处采用了参数A而不是cls，__new__没有正确返回当前类cls的实例</span></span><br><span class="line">b=B()</span><br><span class="line">print(b)</span><br><span class="line">print(type(b))  <span class="comment">#类型所继承的基类</span></span><br><span class="line">print(id(A))</span><br><span class="line">print(id(B))</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">__new__被调用</span></span><br><span class="line"><span class="string">2812126087656</span></span><br><span class="line"><span class="string">__init__被调用</span></span><br><span class="line"><span class="string">&lt;__main__.B object at 0x0000028EC057C148&gt;</span></span><br><span class="line"><span class="string">&lt;class &#x27;__main__.B&#x27;&gt;</span></span><br><span class="line"><span class="string">2812126086712</span></span><br><span class="line"><span class="string">2812126087656</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
+<pre><code class="python">class A(object):
+    pass
+class B(A):
+    def __init__(self):
+        print(&#39;__init__被调用&#39;)
+    def __new__(cls):
+        print(&#39;__new__被调用&#39;)
+        print(id(cls))
+        return object.__new__(cls)
+        #注意此处采用了参数A而不是cls，__new__没有正确返回当前类cls的实例
+b=B()
+print(b)
+print(type(b))  #类型所继承的基类
+print(id(A))
+print(id(B))</code></pre>
+<pre><code class="python">&#39;&#39;&#39;
+__new__被调用
+2812126087656
+__init__被调用
+&lt;__main__.B object at 0x0000028EC057C148&gt;
+&lt;class &#39;__main__.B&#39;&gt;
+2812126086712
+2812126087656
+&#39;&#39;&#39;</code></pre>
 <p>可以看出，当__ new__ 正确返回其当前类cls的实例对象时，__ init__被调用了，此时创建并返回的是一个B类的实例对象。</p>
 <h4 id="class-："><a href="#class-：" class="headerlink" title="__ class__："></a>__ class__：</h4><p>获得已知对象的类 ( 对象.__ class__)。</p>
 <p>基础格式如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">My</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line">a=A()</span><br><span class="line">print(a.__class__)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&lt;class &#x27;__main__.A&#x27;&gt;</span></span><br></pre></td></tr></table></figure>
-
-
+<pre><code class="python">class My:
+    pass
+a=A()
+print(a.__class__)</code></pre>
+<pre><code class="python">#&lt;class &#39;__main__.A&#39;&gt;</code></pre>
 <p>__ class__在下面这种情况中是有用的：即当一个类中的某个成员变量是所有该类的对象的公共变量时.</p>
 <p>下面看一个例子：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">My</span>:</span></span><br><span class="line">    count=<span class="number">0</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addcount</span>(<span class="params">self</span>):</span></span><br><span class="line">        self.__class__.count +=<span class="number">1</span></span><br><span class="line">        </span><br><span class="line">a=My()</span><br><span class="line">a.addcount()</span><br><span class="line">print(a.count)</span><br><span class="line">print(<span class="string">&#x27;*&#x27;</span>*<span class="number">50</span>)</span><br><span class="line">b=My()</span><br><span class="line">b.addcount()</span><br><span class="line">print(b.count)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">class My:
+    count=0
+    def addcount(self):
+        self.__class__.count +=1
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1</span></span><br><span class="line"><span class="comment">#**************************************************</span></span><br><span class="line"><span class="comment">#2</span></span><br></pre></td></tr></table></figure>
-
-
+a=My()
+a.addcount()
+print(a.count)
+print(&#39;*&#39;*50)
+b=My()
+b.addcount()
+print(b.count)</code></pre>
+<pre><code class="python">#1
+#**************************************************
+#2</code></pre>
 <p>从运行结果可以看出，虽然a和b是两个不同的My类的实例对象，但采用了__ class__ 之后，分别调用两个对象的addcount方法之后，获取到的对象的count属性却是在不断累加的，此时self.__ class__ .count不再是单纯的某个对象私有的属性，而是类的所有实例对象的共有属性,它相当于self.A.count。若将self.__ class__ .count += 1变为self.count += 1,此时__ class__的效果就十分明显了。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">My</span>:</span></span><br><span class="line">    count=<span class="number">0</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addcount</span>(<span class="params">self</span>):</span></span><br><span class="line">        self.count +=<span class="number">1</span></span><br><span class="line">        </span><br><span class="line">a=My()</span><br><span class="line">a.addcount()</span><br><span class="line">print(a.count)</span><br><span class="line">print(<span class="string">&#x27;*&#x27;</span>*<span class="number">50</span>)</span><br><span class="line">b=My()</span><br><span class="line">b.addcount()</span><br><span class="line">print(b.count)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">class My:
+    count=0
+    def addcount(self):
+        self.count +=1
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1</span></span><br><span class="line"><span class="comment">#**************************************************</span></span><br><span class="line"><span class="comment">#1</span></span><br></pre></td></tr></table></figure>
-
+a=My()
+a.addcount()
+print(a.count)
+print(&#39;*&#39;*50)
+b=My()
+b.addcount()
+print(b.count)</code></pre>
+<pre><code class="python">#1
+#**************************************************
+#1</code></pre>
 <h4 id="str-："><a href="#str-：" class="headerlink" title="__ str__："></a>__ str__：</h4><p>在将对象转换成字符串  str(对象)  测试的时候，打印对象的信息，__ str__ 方法必须要return一个字符串类型的返回值，作为对实例对象的字符串描述，__ str__ 实际上是被print函数默认调用的，当要print（实例对象）时，默认调用__ str__ 方法，将其字符串描述返回。如果不是要用str()函数转换。当你打印一个类的时候，那么print首先调用的就是类里面的定义的__ str__。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">My</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,name</span>):</span></span><br><span class="line">        self.name=name</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span>(<span class="string">&#x27;我是My类的实例对象my，我的名字叫%s&#x27;</span>%self.name)</span><br><span class="line">    </span><br><span class="line">my=My(<span class="string">&#x27;小王&#x27;</span>)</span><br><span class="line">print(My)</span><br><span class="line">print(my)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">class My():
+    def __init__(self,name):
+        self.name=name
+    def __str__(self):
+        return(&#39;我是My类的实例对象my，我的名字叫%s&#39;%self.name)
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&lt;class &#x27;__main__.My&#x27;&gt;</span></span><br><span class="line"><span class="comment">#我是My类的实例对象my，我的名字叫小王</span></span><br></pre></td></tr></table></figure>
-
-
+my=My(&#39;小王&#39;)
+print(My)
+print(my)</code></pre>
+<pre><code class="python">#&lt;class &#39;__main__.My&#39;&gt;
+#我是My类的实例对象my，我的名字叫小王</code></pre>
 <h4 id="类的专有方法"><a href="#类的专有方法" class="headerlink" title="类的专有方法"></a>类的专有方法</h4><ul>
 <li><p>__ init__ : 构造函数，在生成对象时调用</p>
 </li>
@@ -1616,7 +1701,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\59346.html" title="12.Python面向对象(3)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191225231208.png" /><span class="title">12.Python面向对象(3)</span><span class="excerpt">Python面向对象单例模式</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\80ca38c0.html" title="Day2.Python变量和运算符" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.Python变量和运算符</span><span class="excerpt">Python变量与运算符！！！</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\fbd6efa0.html" title="Day1.Python基本操作与格式规范" rel="bookmark "><img src="https://7.dusays.com/2020/09/14/ba18a9c432ad6.png" /><span class="title">Day1.Python基本操作与格式规范</span><span class="excerpt">Python基本操作与格式规范！！！</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2794,6 +2879,8 @@
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2834,6 +2921,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3147,6 +3241,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

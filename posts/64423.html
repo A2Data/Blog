@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1427,7 +1431,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>496 words</p>
+      <p>522 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1484,21 +1488,119 @@
 <h1 id="Shell语法"><a href="#Shell语法" class="headerlink" title="Shell语法"></a>Shell语法</h1><h2 id="If语句格式"><a href="#If语句格式" class="headerlink" title="If语句格式"></a>If语句格式</h2><blockquote>
 <p><strong>(number=num)</strong></p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">read -p &quot;请输入一个数字&quot; num </span><br><span class="line"></span><br><span class="line">       if [ $num -eq 3 ]   （如果）</span><br><span class="line"></span><br><span class="line">then</span><br><span class="line"></span><br><span class="line">      echo &quot;wo xiang ni&quot;</span><br><span class="line"></span><br><span class="line">elif [ $num -le 5 ]</span><br><span class="line"></span><br><span class="line">     then （然后）</span><br><span class="line">    </span><br><span class="line">     echo &quot;zhen xiang le &quot;</span><br><span class="line"></span><br><span class="line">else [ $num -ge 6 ] （否则）</span><br><span class="line"></span><br><span class="line">      echo &quot;miss 531&quot;</span><br><span class="line"></span><br><span class="line">fi  （结束）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="shell">read -p &quot;请输入一个数字&quot; num 
 
+       if [ $num -eq 3 ]   （如果）
+
+then
+
+      echo &quot;wo xiang ni&quot;
+
+elif [ $num -le 5 ]
+
+     then （然后）
+
+     echo &quot;zhen xiang le &quot;
+
+else [ $num -ge 6 ] （否则）
+
+      echo &quot;miss 531&quot;
+
+fi  （结束）
+</code></pre>
 <h2 id="闰年"><a href="#闰年" class="headerlink" title="闰年"></a>闰年</h2><p><strong>第一版</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">year=`date +%Y`</span><br><span class="line"></span><br><span class="line">if [ $[ $year % 400 ] -eq 0 ]</span><br><span class="line"></span><br><span class="line">then</span><br><span class="line"></span><br><span class="line">echo &quot;$year is a leap year.&quot;</span><br><span class="line"></span><br><span class="line">elif [ $[ $year % 4 ] -eq 0 ]</span><br><span class="line"></span><br><span class="line">then</span><br><span class="line"></span><br><span class="line">if [ $[ $year % 100 ] -ne 0 ]</span><br><span class="line"></span><br><span class="line">then</span><br><span class="line"></span><br><span class="line">echo &quot;$year is a leap year.&quot;</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line"></span><br><span class="line">echo &quot;$year is not a leap year.&quot;</span><br><span class="line"></span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line"></span><br><span class="line">echo &quot;$year is not a leap year.&quot;</span><br><span class="line"></span><br><span class="line">fi</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="shell">year=`date +%Y`
 
+if [ $[ $year % 400 ] -eq 0 ]
 
+then
 
+echo &quot;$year is a leap year.&quot;
+
+elif [ $[ $year % 4 ] -eq 0 ]
+
+then
+
+if [ $[ $year % 100 ] -ne 0 ]
+
+then
+
+echo &quot;$year is a leap year.&quot;
+
+else
+
+echo &quot;$year is not a leap year.&quot;
+
+fi
+
+else
+
+echo &quot;$year is not a leap year.&quot;
+
+fi
+</code></pre>
 <p><strong>第二版（原版）</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">year=$(date +%Y)</span><br><span class="line"></span><br><span class="line">if [ $[ $year % 400 ] -eq 0 ]</span><br><span class="line"></span><br><span class="line">then</span><br><span class="line"></span><br><span class="line">echo &quot;$year is a leap year.&quot;</span><br><span class="line"></span><br><span class="line">elif [ $[ $year % 4 ] -eq 0 ]</span><br><span class="line"></span><br><span class="line">then</span><br><span class="line"></span><br><span class="line">if [ $[ $year % 100 ] -ne 0 ]</span><br><span class="line"></span><br><span class="line">then</span><br><span class="line"></span><br><span class="line">echo &quot;$year is a leap year.&quot;</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line"></span><br><span class="line">echo &quot;$year is not a leap year.&quot;</span><br><span class="line"></span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line"></span><br><span class="line">echo &quot;$year is not a leap year.&quot;</span><br><span class="line"></span><br><span class="line">fi</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="shell">year=$(date +%Y)
 
+if [ $[ $year % 400 ] -eq 0 ]
 
+then
 
+echo &quot;$year is a leap year.&quot;
+
+elif [ $[ $year % 4 ] -eq 0 ]
+
+then
+
+if [ $[ $year % 100 ] -ne 0 ]
+
+then
+
+echo &quot;$year is a leap year.&quot;
+
+else
+
+echo &quot;$year is not a leap year.&quot;
+
+fi
+
+else
+
+echo &quot;$year is not a leap year.&quot;
+
+fi
+</code></pre>
 <p><strong>第三版（查询哪一年是闰年）</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">read -p &quot;shu ru nian fen&quot; year</span><br><span class="line"></span><br><span class="line">if [ $[ $year % 400 ] -eq 0 ]</span><br><span class="line"></span><br><span class="line">then</span><br><span class="line"></span><br><span class="line">echo &quot;$year is a leap year.&quot;</span><br><span class="line"></span><br><span class="line">elif [ $[ $year % 4 ] -eq 0 ]</span><br><span class="line"></span><br><span class="line">then</span><br><span class="line"></span><br><span class="line">if [ $[ $year % 100 ] -ne 0 ]</span><br><span class="line"></span><br><span class="line">then</span><br><span class="line"></span><br><span class="line">echo &quot;$year is a leap year.&quot;</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line"></span><br><span class="line">echo &quot;$year is not a leap year.&quot;</span><br><span class="line"></span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line"></span><br><span class="line">echo &quot;$year is not a leap year.&quot;</span><br><span class="line"></span><br><span class="line">fi</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="shell">read -p &quot;shu ru nian fen&quot; year
 
+if [ $[ $year % 400 ] -eq 0 ]
+
+then
+
+echo &quot;$year is a leap year.&quot;
+
+elif [ $[ $year % 4 ] -eq 0 ]
+
+then
+
+if [ $[ $year % 100 ] -ne 0 ]
+
+then
+
+echo &quot;$year is a leap year.&quot;
+
+else
+
+echo &quot;$year is not a leap year.&quot;
+
+fi
+
+else
+
+echo &quot;$year is not a leap year.&quot;
+
+fi
+</code></pre>
 <h2 id="FOR-循环"><a href="#FOR-循环" class="headerlink" title="FOR 循环"></a>FOR 循环</h2><blockquote>
 <p>格式语法：for NAME in [ LIST ];do COMMANDS; done</p>
 <p>​                                   列表           执行命令         结束</p>
@@ -1532,24 +1634,96 @@
 </tr>
 </tbody></table>
 <h2 id="ping网段案例"><a href="#ping网段案例" class="headerlink" title="ping网段案例"></a>ping网段案例</h2><p><strong>ping.sh</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">for p in &#123;1..10&#125;    p---变量名称</span><br><span class="line"></span><br><span class="line">do   do----执行内容</span><br><span class="line"></span><br><span class="line">host=(192.168.18.$p)</span><br><span class="line"></span><br><span class="line">ping -c2 192.168.18.$p &gt;&gt; /root/Desktop/2.txt  c2---频率</span><br><span class="line"></span><br><span class="line">if [ $? == 0 ]</span><br><span class="line"></span><br><span class="line">then</span><br><span class="line"></span><br><span class="line">echo &quot;$host is online.&quot;     在线</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line"></span><br><span class="line">echo &quot;$host is offline.&quot;   不在线</span><br><span class="line"></span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">done</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="shell">for p in &#123;1..10&#125;    p---变量名称
 
-<h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">aa=1</span><br><span class="line"></span><br><span class="line">while [ $aa -le 10 ]</span><br><span class="line"></span><br><span class="line">do</span><br><span class="line"></span><br><span class="line">echo &quot;wo xiang ni le&quot;</span><br><span class="line"></span><br><span class="line">aa=$[$aa+1]</span><br><span class="line"></span><br><span class="line">done</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+do   do----执行内容
 
-<h2 id="case-判断"><a href="#case-判断" class="headerlink" title="case 判断"></a>case 判断</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">aa=3      ( 3 变量值）</span><br><span class="line"></span><br><span class="line">case &quot;$aa&quot; in   </span><br><span class="line"></span><br><span class="line">    1)</span><br><span class="line">    </span><br><span class="line">     echo &quot;haha&quot;;;  （1,2,4常量值）</span><br><span class="line">    </span><br><span class="line">    2)</span><br><span class="line">    </span><br><span class="line">     echo &quot;heihei&quot;;;</span><br><span class="line">    </span><br><span class="line">    3)</span><br><span class="line"> </span><br><span class="line">     echo &quot;nimei&quot;;; （有内容两；没有一个；）</span><br><span class="line"></span><br><span class="line">esac</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+host=(192.168.18.$p)
 
+ping -c2 192.168.18.$p &gt;&gt; /root/Desktop/2.txt  c2---频率
+
+if [ $? == 0 ]
+
+then
+
+echo &quot;$host is online.&quot;     在线
+
+else
+
+echo &quot;$host is offline.&quot;   不在线
+
+fi
+
+done
+</code></pre>
+<h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><pre><code class="shell">aa=1
+
+while [ $aa -le 10 ]
+
+do
+
+echo &quot;wo xiang ni le&quot;
+
+aa=$[$aa+1]
+
+done
+</code></pre>
+<h2 id="case-判断"><a href="#case-判断" class="headerlink" title="case 判断"></a>case 判断</h2><pre><code class="shell">aa=3      ( 3 变量值）
+
+case &quot;$aa&quot; in   
+
+    1)
+
+     echo &quot;haha&quot;;;  （1,2,4常量值）
+
+    2)
+
+     echo &quot;heihei&quot;;;
+
+    3)
+
+     echo &quot;nimei&quot;;; （有内容两；没有一个；）
+
+esac
+</code></pre>
 <h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><blockquote>
 <p>终止当前for循环</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">for n in &#123;1..10&#125;</span><br><span class="line"></span><br><span class="line">do</span><br><span class="line"></span><br><span class="line">        if [ $n -eq 3 ]</span><br><span class="line">    </span><br><span class="line">        then</span><br><span class="line">    </span><br><span class="line">                break</span><br><span class="line">    </span><br><span class="line">        fi</span><br><span class="line">    </span><br><span class="line">        echo $n</span><br><span class="line"></span><br><span class="line">done</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="shell">for n in &#123;1..10&#125;
 
+do
 
+        if [ $n -eq 3 ]
 
+        then
+
+                break
+
+        fi
+
+        echo $n
+
+done
+</code></pre>
 <h2 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h2><blockquote>
 <p> 跳出本次循环</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">for n in &#123;1..10&#125;</span><br><span class="line"></span><br><span class="line">do</span><br><span class="line"></span><br><span class="line">        if [ $n -eq 3 ]</span><br><span class="line">    </span><br><span class="line">        then</span><br><span class="line">    </span><br><span class="line">               continue</span><br><span class="line">    </span><br><span class="line">        fi</span><br><span class="line">    </span><br><span class="line">        echo $n</span><br><span class="line"></span><br><span class="line">done</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="shell">for n in &#123;1..10&#125;
 
+do
+
+        if [ $n -eq 3 ]
+
+        then
+
+               continue
+
+        fi
+
+        echo $n
+
+done
+</code></pre>
 
   
   
@@ -1563,7 +1737,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\43150.html" title="Linux安装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux安装</span><span class="excerpt">linux介绍及安装</span></a><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\10415.html" title="Linux NFS网络文件" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux NFS网络文件</span><span class="excerpt">Linux 手把手教你搭建NFS网络文件系统。</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\39704.html" title="Linux 计划任务" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux 计划任务</span><span class="excerpt">计划任务</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\61794.html" title="Linux Mdadm案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Mdadm案例</span><span class="excerpt">Linux  Mdadm 案例 raid5。</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\10415.html" title="Linux NFS网络文件" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux NFS网络文件</span><span class="excerpt">Linux 手把手教你搭建NFS网络文件系统。</span></a><a class="item" href="\posts\43857.html" title="Linux Shell脚本" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell脚本</span><span class="excerpt">Linux Shell脚本相关学习。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1626,7 +1800,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>496 words</p>
+      <p>522 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1716,7 +1890,9 @@
 正则表达式
 是指用来描述或者匹配一系列符合某个句法规则的字符串的单个字符串。就是用某种模式去匹配一类字符串的一个公式。
 
-1234touch bb.txtgrep “m*”...</p>
+touch bb.txt
+
+grep “m*” b...</p>
         </a>
       
       
@@ -2739,6 +2915,8 @@ Shell:操作系统与用户进行交互操作的界面，提供脚本语言编�
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2779,6 +2957,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3092,6 +3277,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1480,8 +1484,21 @@
 <p><strong>例题引导：</strong>编写一个计算减法的方法，自己输入两个数，当第一个数小于第二个数时，抛出“被减数不能小于减数”的异常。</p>
 <p>解题思路：首先需要一个判断的语句，比较两个数大小，其次需要定义异常，主要掌握try/except语句</p>
 <p><strong>参考答案：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">jianfa</span>(<span class="params">a,b</span>):</span></span><br><span class="line">    <span class="keyword">if</span> a&lt;b:</span><br><span class="line">        <span class="keyword">raise</span> BaseException(<span class="string">&#x27;被减数不能小于减数&#x27;</span>)</span><br><span class="line">        <span class="comment">#return 0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> a-b</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    a=int(input())</span><br><span class="line">    b=int(input())</span><br><span class="line">    print(jianfa(a, b))</span><br><span class="line">    print(<span class="string">&quot;没遇到自己定义的错误&quot;</span>) <span class="comment">#不打印</span></span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    print(<span class="string">&quot;被减数不能小于减数&quot;</span>)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    print(<span class="string">&quot;OK&quot;</span>)</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">def jianfa(a,b):
+    if a&lt;b:
+        raise BaseException(&#39;被减数不能小于减数&#39;)
+        #return 0
+    else:
+        return a-b
+try:
+    a=int(input())
+    b=int(input())
+    print(jianfa(a, b))
+    print(&quot;没遇到自己定义的错误&quot;) #不打印
+except:
+    print(&quot;被减数不能小于减数&quot;)
+finally:
+    print(&quot;OK&quot;)</code></pre>
 <p><strong>学习引导：</strong></p>
 <ul>
 <li>语法错误</li>
@@ -1492,20 +1509,26 @@
 </ul>
 <h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>在我们刚接触python的时候，肯定遇到过无数次的报错。<br>python中有两种错误很容易辨认：<strong>语法错误和异常</strong>。</p>
 <h3 id="语法错误"><a href="#语法错误" class="headerlink" title="语法错误"></a>语法错误</h3><p>python的语法错误又称为解析错，多数是语法格式上出现问题。比如：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span>（<span class="string">&#x27;Hello World&#x27;</span>）  <span class="comment">#这里的括号为中文格式下的，所以报错</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  File <span class="string">&quot;&lt;ipython-input-1-f552c294b592&gt;&quot;</span>, line <span class="number">1</span></span><br><span class="line">    <span class="keyword">print</span>（<span class="string">&#x27;Hello World&#x27;</span>）</span><br><span class="line">         ^</span><br><span class="line">SyntaxError: invalid character <span class="keyword">in</span> identifier</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">print（&#39;Hello World&#39;）  #这里的括号为中文格式下的，所以报错</code></pre>
+<pre><code class="python">  File &quot;&lt;ipython-input-1-f552c294b592&gt;&quot;, line 1
+    print（&#39;Hello World&#39;）
+         ^
+SyntaxError: invalid character in identifier</code></pre>
 <h3 id="处理异常"><a href="#处理异常" class="headerlink" title="处理异常"></a>处理异常</h3><p>即使python程序的语法是正确的，在运行它时也可能报错。</p>
 <p>运行过程中出现的错误称为异常。</p>
 <p>大多数的异常不会被程序自动处理，因此产生错误信息（即报错）</p>
 <p><strong>异常捕捉可以用try/except语句：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        x=int(input(<span class="string">&#x27;请输入一个数字：&#x27;</span>))</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">except</span> ValueError:</span><br><span class="line">        print(<span class="string">&#x27;您输入的不是数字，请再次尝试输入！&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">请输入一个数字：s</span></span><br><span class="line"><span class="string">您输入的不是数字，请再次尝试输入！</span></span><br><span class="line"><span class="string">请输入一个数字：3</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
+<pre><code class="python">while True:
+    try:
+        x=int(input(&#39;请输入一个数字：&#39;))
+        break
+    except ValueError:
+        print(&#39;您输入的不是数字，请再次尝试输入！&#39;)</code></pre>
+<pre><code class="python">&#39;&#39;&#39;
+请输入一个数字：s
+您输入的不是数字，请再次尝试输入！
+请输入一个数字：3
+&#39;&#39;&#39;</code></pre>
 <p>try 语句按照如下方式工作；</p>
 <ul>
 <li><p>首先，执行 try 子句（在关键字 try 和关键字 except 之间的语句）。</p>
@@ -1517,24 +1540,55 @@
 <li><p>如果一个异常没有与任何的 except 匹配，那么这个异常将会传递给上层的 try 中。</p>
 </li>
 </ul>
-<h5 id="捕获指定异常："><a href="#捕获指定异常：" class="headerlink" title="捕获指定异常："></a>捕获指定异常：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line"></span><br><span class="line">	&lt;语句&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">except</span>&lt;异常名&gt;:</span><br><span class="line"></span><br><span class="line">	print(<span class="string">&#x27;异常说明&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h5 id="捕获指定异常："><a href="#捕获指定异常：" class="headerlink" title="捕获指定异常："></a>捕获指定异常：</h5><pre><code class="python">try:
 
+    &lt;语句&gt;
+
+except&lt;异常名&gt;:
+
+    print(&#39;异常说明&#39;)</code></pre>
 <p>一个例子：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    f = open(<span class="string">&quot;file-not-exists&quot;</span>, <span class="string">&quot;r&quot;</span>)   <span class="comment">#试图打开一个本不存在的文件</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">except</span> IOError <span class="keyword">as</span> e:   <span class="comment">#IOErro：指要打开的文件不存在的错误提示，Try语句的错误与expect匹配，执行print语句。</span></span><br><span class="line">	</span><br><span class="line">    print(<span class="string">&quot;open exception: %s: %s&quot;</span> %(e.errno, e.strerror))</span><br></pre></td></tr></table></figure>
+<pre><code class="python">try:
+    f = open(&quot;file-not-exists&quot;, &quot;r&quot;)   #试图打开一个本不存在的文件
 
+except IOError as e:   #IOErro：指要打开的文件不存在的错误提示，Try语句的错误与expect匹配，执行print语句。
+
+    print(&quot;open exception: %s: %s&quot; %(e.errno, e.strerror))</code></pre>
 <pre><code>#open exception: 2: No such file or directory</code></pre>
 <h5 id="捕获多个异常"><a href="#捕获多个异常" class="headerlink" title="捕获多个异常"></a>捕获多个异常</h5><p>捕获多个异常有两种方式，<strong>第一种是一个except同时处理多个异常，不区分优先级</strong>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">     &lt;语句&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">except</span> (&lt;异常名<span class="number">1</span>&gt;, &lt;异常名<span class="number">2</span>&gt;, ...):</span><br><span class="line"></span><br><span class="line"> 	 print(<span class="string">&#x27;异常说明&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">try:
+     &lt;语句&gt;
 
+except (&lt;异常名1&gt;, &lt;异常名2&gt;, ...):
+
+      print(&#39;异常说明&#39;)</code></pre>
 <p><strong>第二种是区分优先级的：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>: &lt;语句&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">except</span> &lt;异常名<span class="number">1</span>&gt;:</span><br><span class="line"></span><br><span class="line">  	print(<span class="string">&#x27;异常说明1&#x27;</span>)</span><br><span class="line"><span class="keyword">except</span> &lt;异常名<span class="number">2</span>&gt;:</span><br><span class="line">	</span><br><span class="line"> 	 print(<span class="string">&#x27;异常说明2&#x27;</span>)</span><br><span class="line"><span class="keyword">except</span> &lt;异常名<span class="number">3</span>&gt;:</span><br><span class="line"></span><br><span class="line"> 	 print(<span class="string">&#x27;异常说明3&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">try: &lt;语句&gt;
 
+except &lt;异常名1&gt;:
+
+      print(&#39;异常说明1&#39;)
+except &lt;异常名2&gt;:
+
+      print(&#39;异常说明2&#39;)
+except &lt;异常名3&gt;:
+
+      print(&#39;异常说明3&#39;)</code></pre>
 <p>实例如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    f = open(<span class="string">&#x27;myfile.txt&#x27;</span>)   <span class="comment">#打开文件</span></span><br><span class="line">    s = f.readline()  <span class="comment">#按行读取</span></span><br><span class="line">    i = int(s.strip())  <span class="comment">#都成整数类型</span></span><br><span class="line"><span class="keyword">except</span> OSError <span class="keyword">as</span> err:</span><br><span class="line">    print(<span class="string">&quot;OS error: &#123;0&#125;&quot;</span>.format(err))   <span class="comment">#文件读取错误优先解决</span></span><br><span class="line"><span class="keyword">except</span> ValueError:</span><br><span class="line">    print(<span class="string">&quot;Could not convert data to an integer.&quot;</span>)</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    print(<span class="string">&quot;Unexpected error:&quot;</span>, sys.exc_info()[<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">raise</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">import sys
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#OS error: [Errno 2] No such file or directory: &#x27;myfile.txt&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
+try:
+    f = open(&#39;myfile.txt&#39;)   #打开文件
+    s = f.readline()  #按行读取
+    i = int(s.strip())  #都成整数类型
+except OSError as err:
+    print(&quot;OS error: &#123;0&#125;&quot;.format(err))   #文件读取错误优先解决
+except ValueError:
+    print(&quot;Could not convert data to an integer.&quot;)
+except:
+    print(&quot;Unexpected error:&quot;, sys.exc_info()[0])
+    raise</code></pre>
+<pre><code class="python">#OS error: [Errno 2] No such file or directory: &#39;myfile.txt&#39;</code></pre>
 <p>该种异常处理语法的规则是：</p>
 <ul>
 <li><p>执行try下的语句，如果引发异常，则执行过程会跳到第一个except语句。</p>
@@ -1547,45 +1601,107 @@
 </li>
 </ul>
 <h3 id="异常的else"><a href="#异常的else" class="headerlink" title="异常的else"></a>异常的else</h3><p>如果判断完没有某些异常之后还想做其他事，就可以使用下面这样的else语句。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">	&lt;语句&gt;</span><br><span class="line">	</span><br><span class="line"><span class="keyword">except</span> &lt;异常名<span class="number">1</span>&gt;:</span><br><span class="line">	print(<span class="string">&#x27;异常说明1&#x27;</span>)</span><br><span class="line">	</span><br><span class="line"><span class="keyword">except</span> &lt;异常名<span class="number">2</span>&gt;:</span><br><span class="line">	print(<span class="string">&#x27;异常说明2&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	&lt;语句&gt;  <span class="comment"># try语句中没有异常则执行此段代码</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">try:
+    &lt;语句&gt;
 
+except &lt;异常名1&gt;:
+    print(&#39;异常说明1&#39;)
+
+except &lt;异常名2&gt;:
+    print(&#39;异常说明2&#39;)
+
+else:
+    &lt;语句&gt;  # try语句中没有异常则执行此段代码</code></pre>
 <h3 id="异常的finally"><a href="#异常的finally" class="headerlink" title="异常的finally"></a>异常的finally</h3><p>try…finally…语句无论是否发生异常都将会执行最后的代码。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line"></span><br><span class="line">	&lt;语句&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line"></span><br><span class="line">	&lt;语句&gt;</span><br></pre></td></tr></table></figure>
+<pre><code class="python">try:
 
+    &lt;语句&gt;
+
+finally:
+
+    &lt;语句&gt;</code></pre>
 <p>一个实例如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">&#x27;hello world&#x27;</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    int(str1)</span><br><span class="line"><span class="keyword">except</span> IndexError <span class="keyword">as</span> e:</span><br><span class="line">    print(e)</span><br><span class="line"><span class="keyword">except</span> KeyError <span class="keyword">as</span> e:</span><br><span class="line">    print(e)</span><br><span class="line"><span class="keyword">except</span> ValueError <span class="keyword">as</span> e:</span><br><span class="line">    print(e)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;try内没有异常&#x27;</span>)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    print(<span class="string">&#x27;无论异常与否,都会执行我&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#invalid literal for int() with base 10: &#x27;hello world&#x27;</span></span><br><span class="line"><span class="comment">#无论异常与否,都会执行我</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">str1 = &#39;hello world&#39;
+try:
+    int(str1)
+except IndexError as e:
+    print(e)
+except KeyError as e:
+    print(e)
+except ValueError as e:
+    print(e)
+else:
+    print(&#39;try内没有异常&#39;)
+finally:
+    print(&#39;无论异常与否,都会执行我&#39;)</code></pre>
+<pre><code class="python">#invalid literal for int() with base 10: &#39;hello world&#39;
+#无论异常与否,都会执行我</code></pre>
 <h3 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h3><h5 id="自定义类继承Exception"><a href="#自定义类继承Exception" class="headerlink" title="自定义类继承Exception"></a>自定义类继承Exception</h5><p>你可以通过创建一个新的异常类来拥有自己的异常。异常类继承自 Exception 类，可以直接继承，或者间接继承。</p>
 <p>在try语句块中，抛出用户自定义的异常后执行except部分，变量 e 是用于创建MyError类的实例。</p>
 <p>实例如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyError</span>(<span class="params">Exception</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, value</span>):</span></span><br><span class="line">        self.value = value</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> repr(self.value)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">class MyError(Exception):
+    def __init__(self, value):
+        self.value = value
+    def __str__(self):
+        return repr(self.value)</code></pre>
+<pre><code class="python">try:
+    raise MyError(2*2)
+except MyError as e:
+    print(&#39;My exception occurred, value:&#39;, e.value)</code></pre>
+<pre><code class="python">#My exception occurred, value: 4</code></pre>
+<pre><code class="python">raise MyError(&#39;oops!&#39;)</code></pre>
+<pre><code class="python">
+MyError                                   Traceback (most recent call last)
 
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">raise</span> MyError(<span class="number">2</span>*<span class="number">2</span>)</span><br><span class="line"><span class="keyword">except</span> MyError <span class="keyword">as</span> e:</span><br><span class="line">    print(<span class="string">&#x27;My exception occurred, value:&#x27;</span>, e.value)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#My exception occurred, value: 4</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">raise</span> MyError(<span class="string">&#x27;oops!&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">MyError                                   Traceback (most recent call last)</span><br><span class="line"></span><br><span class="line">&lt;ipython-input<span class="number">-16</span><span class="number">-3e3</span>ae366964f&gt; <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">----&gt; 1 raise MyError(&#x27;oops!&#x27;)</span><br><span class="line">MyError: <span class="string">&#x27;oops!&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
+&lt;ipython-input-16-3e3ae366964f&gt; in &lt;module&gt;
+----&gt; 1 raise MyError(&#39;oops!&#39;)
+MyError: &#39;oops!&#39;</code></pre>
 <p>在上述例子中，类 Exception 默认的 __ init__() 被覆盖。</p>
 <p>当创建一个模块有可能抛出多种不同的异常时，一种通常的做法是为这个包建立一个基础异常类，然后基于这个基础类为不同的错误情况创建不同的子类:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Error</span>(<span class="params">Exception</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Base class for exceptions in this module.&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">InputError</span>(<span class="params">Error</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Exception raised for errors in the input.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Attributes:</span></span><br><span class="line"><span class="string">        expression -- input expression in which the error occurred</span></span><br><span class="line"><span class="string">        message -- explanation of the error</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, expression, message</span>):</span></span><br><span class="line">        self.expression = expression</span><br><span class="line">        self.message = message</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TransitionError</span>(<span class="params">Error</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Raised when an operation attempts a state transition that&#x27;s not</span></span><br><span class="line"><span class="string">    allowed.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Attributes:</span></span><br><span class="line"><span class="string">        previous -- state at beginning of transition</span></span><br><span class="line"><span class="string">        next -- attempted new state</span></span><br><span class="line"><span class="string">        message -- explanation of why the specific transition is not allowed</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, previous, next, message</span>):</span></span><br><span class="line">        self.previous = previous</span><br><span class="line">        self.next = next</span><br><span class="line">        self.message = message</span><br></pre></td></tr></table></figure>
+<pre><code class="python">class Error(Exception):
+    &quot;&quot;&quot;Base class for exceptions in this module.&quot;&quot;&quot;
+    pass
 
+class InputError(Error):
+    &quot;&quot;&quot;Exception raised for errors in the input.
+
+    Attributes:
+        expression -- input expression in which the error occurred
+        message -- explanation of the error
+    &quot;&quot;&quot;
+
+    def __init__(self, expression, message):
+        self.expression = expression
+        self.message = message
+
+class TransitionError(Error):
+    &quot;&quot;&quot;Raised when an operation attempts a state transition that&#39;s not
+    allowed.
+
+    Attributes:
+        previous -- state at beginning of transition
+        next -- attempted new state
+        message -- explanation of why the specific transition is not allowed
+    &quot;&quot;&quot;
+
+    def __init__(self, previous, next, message):
+        self.previous = previous
+        self.next = next
+        self.message = message</code></pre>
 <p>大多数的异常的名字都以”Error”结尾，就跟标准的异常命名一样。</p>
 <h5 id="raise自定义异常类"><a href="#raise自定义异常类" class="headerlink" title="raise自定义异常类"></a>raise自定义异常类</h5><p>raise语法格式如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">raise</span> [Exception [, args [, traceback]]]</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">raise [Exception [, args [, traceback]]]</code></pre>
 <p>语句中Exception是异常的类型（例如ValueError），参数是一个异常参数值。该参数是可选的，如果不提供，异常的参数是”None”。最后一个参数是跟踪异常对象，也是可选的（在实践中很少使用）。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">not_zero</span>(<span class="params">num</span>):</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">if</span> num == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">&#x27;参数错误&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> num</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        print(e)</span><br><span class="line">not_zero(<span class="number">0</span>)</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#参数错误</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">def not_zero(num):
+    try:
+        if num == 0:
+            raise ValueError(&#39;参数错误&#39;)
+        return num
+    except Exception as e:
+        print(e)
+not_zero(0)
+</code></pre>
+<pre><code class="python">#参数错误</code></pre>
 <h4 id="小作业："><a href="#小作业：" class="headerlink" title="小作业："></a>小作业：</h4><ol>
 <li>简述如下各常见异常的含义并举例：SyntaxError、KeyError、IndexError、AttributeError、OSError、TypeError</li>
 </ol>
@@ -1602,7 +1718,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\59346.html" title="12.Python面向对象(3)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191225231208.png" /><span class="title">12.Python面向对象(3)</span><span class="excerpt">Python面向对象单例模式</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\80ca38c0.html" title="Day2.Python变量和运算符" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.Python变量和运算符</span><span class="excerpt">Python变量与运算符！！！</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\fbd6efa0.html" title="Day1.Python基本操作与格式规范" rel="bookmark "><img src="https://7.dusays.com/2020/09/14/ba18a9c432ad6.png" /><span class="title">Day1.Python基本操作与格式规范</span><span class="excerpt">Python基本操作与格式规范！！！</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2776,6 +2892,8 @@ import加载的模块分为四个通用类...</p>
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2816,6 +2934,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3129,6 +3254,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

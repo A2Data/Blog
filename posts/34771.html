@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1486,8 +1490,13 @@
 <p>根据小编的经验，这个项目肯定是失败的。 因为每个人做的事情很多，分工不明确，有些肯定到最后都是没人做的，所以问题来了，必须要进行分工， 哪些人搭架子，做什么。哪些负责哪一块。</p>
 </blockquote>
 <p>例如：数一下如下字符串有多少个字符</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a2datahelloworldwwwa2datacn</span><br><span class="line"></span><br><span class="line">a2data,helloworld,www,a2data,cn</span><br><span class="line"></span><br><span class="line">显然，被分组后的字符更容易计数</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="python">a2datahelloworldwwwa2datacn
 
+a2data,helloworld,www,a2data,cn
+
+显然，被分组后的字符更容易计数
+
+</code></pre>
 <p><em>总结：</em></p>
 <blockquote>
 <p>大型的项目，必须要进行分工，将函数分为几个不同的类型，每个人负责一个或多个类型，比如一个人负责网站首页，一个人负责订单界面，一个人负责用户设置页面。</p>
@@ -1505,11 +1514,17 @@
 </blockquote>
 <p><strong>解决吃啤酒鸭的问题</strong></p>
 <p><em>第一种方式（面向过程）:</em></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、养鸭子</span><br><span class="line"><span class="number">2</span>、鸭子长成</span><br><span class="line"><span class="number">3</span>、杀</span><br><span class="line"><span class="number">4</span>、作料</span><br><span class="line"><span class="number">5</span>、烹饪</span><br><span class="line"><span class="number">6</span>、吃 </span><br><span class="line"><span class="number">7</span>、卒 </span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">1、养鸭子
+2、鸭子长成
+3、杀
+4、作料
+5、烹饪
+6、吃 
+7、卒 </code></pre>
 <p><em>第二种方式（面向对象）:</em></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、找个卖啤酒鸭的人 </span><br><span class="line"><span class="number">2</span>、给钱 交易</span><br><span class="line"><span class="number">3</span>、吃</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">1、找个卖啤酒鸭的人 
+2、给钱 交易
+3、吃</code></pre>
 <blockquote>
 <p>需要了解的定义性文字:</p>
 </blockquote>
@@ -1559,7 +1574,8 @@
 </blockquote>
 <h2 id="3、定义类"><a href="#3、定义类" class="headerlink" title="3、定义类"></a>3、定义类</h2><blockquote>
 <p>定义一个类，格式如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> 类名:</span></span><br><span class="line">    方法列表</span><br></pre></td></tr></table></figure>
+<pre><code class="python">class 类名:
+    方法列表</code></pre>
 </blockquote>
 <h4 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h4><ul>
 <li>定义类时有2种：新式类和经典类，如下的Car为经典类，如果是Car(object)则为新式类</li>
@@ -1568,11 +1584,27 @@
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223111248.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223111248.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h2 id="4、创建对象"><a href="#4、创建对象" class="headerlink" title="4、创建对象"></a>4、创建对象</h2><p>python中，可以根据已经定义的类去创建出一个个对象</p>
 <p>创建对象的格式为:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对象名 = 类名()</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">对象名 = 类名()</code></pre>
 <p>创建对象demo:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span>:</span></span><br><span class="line">    <span class="comment"># 移动</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">move</span>(<span class="params">self</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;车在奔跑...&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 鸣笛</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">toot</span>(<span class="params">self</span>):</span></span><br><span class="line">        print(<span class="string">&quot;车在鸣笛.....&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个对象，并用变量BMW来保存它的引用</span></span><br><span class="line">BM = Car()</span><br><span class="line">BM.color = <span class="string">&#x27;黑色&#x27;</span></span><br><span class="line">BM.wheelNum = <span class="number">4</span> <span class="comment">#轮子数量</span></span><br><span class="line">BM.move()</span><br><span class="line">BM.toot()</span><br><span class="line">print(BM.color)</span><br><span class="line">print(BM.wheelNum)</span><br></pre></td></tr></table></figure>
+<pre><code class="python"># 定义类
+class Car:
+    # 移动
+    def move(self):
+        print(&#39;车在奔跑...&#39;)
 
+    # 鸣笛
+    def toot(self):
+        print(&quot;车在鸣笛.....&quot;)
+
+
+# 创建一个对象，并用变量BMW来保存它的引用
+BM = Car()
+BM.color = &#39;黑色&#39;
+BM.wheelNum = 4 #轮子数量
+BM.move()
+BM.toot()
+print(BM.color)
+print(BM.wheelNum)</code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223112155.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223112155.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h2 id="5、Self"><a href="#5、Self" class="headerlink" title="5、Self"></a>5、Self</h2><p><strong>理解Self</strong></p>
 <blockquote>
@@ -1582,12 +1614,25 @@
 </ul>
 </blockquote>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223113022.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223113022.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="6、init"><a href="#6、init" class="headerlink" title="6、init"></a>6、<strong>init</strong></h2><h3 id="6-1、使用方式"><a href="#6-1、使用方式" class="headerlink" title="6.1、使用方式"></a>6.1、使用方式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> 类名:</span></span><br><span class="line">    <span class="comment">#初始化函数，用来完成一些默认的设定</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>():</span></span><br><span class="line">        <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<h2 id="6、init"><a href="#6、init" class="headerlink" title="6、init"></a>6、<strong>init</strong></h2><h3 id="6-1、使用方式"><a href="#6-1、使用方式" class="headerlink" title="6.1、使用方式"></a>6.1、使用方式</h3><pre><code class="python">def 类名:
+    #初始化函数，用来完成一些默认的设定
+    def __init__():
+        pass</code></pre>
+<h3 id="6-2、init-方法调用"><a href="#6-2、init-方法调用" class="headerlink" title="6.2、init()方法调用"></a>6.2、init()方法调用</h3><pre><code class="python"># 定义汽车类
+class Car:
 
-<h3 id="6-2、init-方法调用"><a href="#6-2、init-方法调用" class="headerlink" title="6.2、init()方法调用"></a>6.2、init()方法调用</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义汽车类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        self.wheelNum = <span class="number">4</span></span><br><span class="line">        self.color = <span class="string">&#x27;蓝色&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">move</span>(<span class="params">self</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;车在跑，目标:北京&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建对象</span></span><br><span class="line">BM = Car()</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;车的颜色为:%s&#x27;</span>%BM.color)</span><br><span class="line">print(<span class="string">&#x27;车轮胎数量为:%d&#x27;</span>%BM.wheelNum)</span><br></pre></td></tr></table></figure>
+    def __init__(self):
+        self.wheelNum = 4
+        self.color = &#39;蓝色&#39;
 
+    def move(self):
+        print(&#39;车在跑，目标:北京&#39;)
 
+# 创建对象
+BM = Car()
 
+print(&#39;车的颜色为:%s&#39;%BM.color)
+print(&#39;车轮胎数量为:%d&#39;%BM.wheelNum)</code></pre>
 <blockquote>
 <ul>
 <li><code>__init__()</code>方法，在创建一个对象时默认被调用，不需要手动调用</li>
@@ -1616,7 +1661,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\59346.html" title="12.Python面向对象(3)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191225231208.png" /><span class="title">12.Python面向对象(3)</span><span class="excerpt">Python面向对象单例模式</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\58489.html" title="4.Python列表介绍" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191212085923.png" /><span class="title">4.Python列表介绍</span><span class="excerpt">Python列表介绍</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\30675.html" title="11.Python面向对象(2)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191224164151.png" /><span class="title">11.Python面向对象(2)</span><span class="excerpt">Python面向对象介绍中篇</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2790,6 +2835,8 @@ Python烤地瓜实例建议跟着操作，所以小编多数以截图的方式
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2830,6 +2877,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3143,6 +3197,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1423,7 +1427,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>961 words</p>
+      <p>944 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1480,8 +1484,25 @@
 <p>【数字重复统计,以字典形式输出】 随机生成1000个数,统计20-100以内的数字,并统计出现次数</p>
 <p><strong>参考答案：</strong></p>
 <p>解题思路：先制造1000个随机数—整理随机数以便统计(排序)—构造字典—遍历随机数，通过key值确定value值—打印输出</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random  <span class="comment">#导入随机数模块</span></span><br><span class="line"></span><br><span class="line">all_nums = []   <span class="comment">#定义空列表存储数字</span></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> range(<span class="number">1000</span>):   <span class="comment">#列表长度为1000</span></span><br><span class="line">    all_nums.append(random.randint(<span class="number">20</span>,<span class="number">100</span>))  <span class="comment">#选择20-100内的随机数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># print(all_nums)  #可以先打印看一下生成的随机数</span></span><br><span class="line"><span class="comment"># print(&#x27;**********&#x27;)</span></span><br><span class="line"></span><br><span class="line">sorted_nums = sorted(all_nums)   <span class="comment">#排序</span></span><br><span class="line">num_dict = &#123;&#125;  <span class="comment">#定义空字典</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> sorted_nums:   <span class="comment">#循环遍历，通过key值找value</span></span><br><span class="line">    <span class="keyword">if</span> num <span class="keyword">in</span> num_dict:</span><br><span class="line">        num_dict[num] += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        num_dict[num] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(num_dict)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">import random  #导入随机数模块
 
+all_nums = []   #定义空列表存储数字
+for item in range(1000):   #列表长度为1000
+    all_nums.append(random.randint(20,100))  #选择20-100内的随机数
+
+# print(all_nums)  #可以先打印看一下生成的随机数
+# print(&#39;**********&#39;)
+
+sorted_nums = sorted(all_nums)   #排序
+num_dict = &#123;&#125;  #定义空字典
+
+for num in sorted_nums:   #循环遍历，通过key值找value
+    if num in num_dict:
+        num_dict[num] += 1
+    else:
+        num_dict[num] = 1
+
+print(num_dict)</code></pre>
 <p><strong>学习引导：</strong></p>
 <ul>
 <li>数据类型-字典<ul>
@@ -1504,107 +1525,89 @@
 <li>无序；</li>
 <li>查询速度快，不受dict大小影响；</li>
 </ul>
-<h4 id="字典的创建"><a href="#字典的创建" class="headerlink" title="字典的创建"></a>字典的创建</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#直接给出key和value</span></span><br><span class="line">info=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;小王&#x27;</span>,</span><br><span class="line">     <span class="string">&#x27;num&#x27;</span>:<span class="string">&#x27;20192812&#x27;</span>,</span><br><span class="line">     <span class="string">&#x27;gender&#x27;</span>:<span class="string">&#x27;女&#x27;</span>&#125;</span><br><span class="line">info</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;&#x27;name&#x27;: &#x27;小王&#x27;, &#x27;num&#x27;: &#x27;20192812&#x27;, &#x27;gender&#x27;: &#x27;女&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
+<h4 id="字典的创建"><a href="#字典的创建" class="headerlink" title="字典的创建"></a>字典的创建</h4><pre><code class="python">#直接给出key和value
+info=&#123;&#39;name&#39;:&#39;小王&#39;,
+     &#39;num&#39;:&#39;20192812&#39;,
+     &#39;gender&#39;:&#39;女&#39;&#125;
+info</code></pre>
+<pre><code class="python">#&#123;&#39;name&#39;: &#39;小王&#39;, &#39;num&#39;: &#39;20192812&#39;, &#39;gender&#39;: &#39;女&#39;&#125;</code></pre>
 <p><strong>法二</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#key和value分别赋值</span></span><br><span class="line">keys=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">&#123;&#125;.fromkeys(keys)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;1: None, 2: None, 3: None, 4: None, 5: None&#125;</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#125;.fromkeys(keys,<span class="number">100</span>)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;1: 100, 2: 100, 3: 100, 4: 100, 5: 100&#125;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="字典的增加"><a href="#字典的增加" class="headerlink" title="字典的增加"></a>字典的增加</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#字典的增加</span></span><br><span class="line">info[<span class="string">&#x27;age&#x27;</span>]=<span class="string">&#x27;20&#x27;</span></span><br><span class="line">info</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;&#x27;name&#x27;: &#x27;小王&#x27;, &#x27;num&#x27;: &#x27;20192812&#x27;, &#x27;gender&#x27;: &#x27;女&#x27;, &#x27;age&#x27;: &#x27;20&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">#key和value分别赋值
+keys=[1,2,3,4,5]
+&#123;&#125;.fromkeys(keys)</code></pre>
+<pre><code class="python">#&#123;1: None, 2: None, 3: None, 4: None, 5: None&#125;</code></pre>
+<pre><code class="python">&#123;&#125;.fromkeys(keys,100)</code></pre>
+<pre><code class="python">#&#123;1: 100, 2: 100, 3: 100, 4: 100, 5: 100&#125;</code></pre>
+<h4 id="字典的增加"><a href="#字典的增加" class="headerlink" title="字典的增加"></a>字典的增加</h4><pre><code class="python">#字典的增加
+info[&#39;age&#39;]=&#39;20&#39;
+info</code></pre>
+<pre><code class="python">#&#123;&#39;name&#39;: &#39;小王&#39;, &#39;num&#39;: &#39;20192812&#39;, &#39;gender&#39;: &#39;女&#39;, &#39;age&#39;: &#39;20&#39;&#125;</code></pre>
 <h4 id="字典的删除-pop-del-clear"><a href="#字典的删除-pop-del-clear" class="headerlink" title="字典的删除 pop/del/clear"></a>字典的删除 pop/del/clear</h4><p><strong>法一</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#字典的删除</span></span><br><span class="line">info.pop(<span class="string">&#x27;gender&#x27;</span>)</span><br><span class="line">info</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;&#x27;name&#x27;: &#x27;小王&#x27;, &#x27;num&#x27;: &#x27;20192812&#x27;, &#x27;age&#x27;: &#x27;20&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">#字典的删除
+info.pop(&#39;gender&#39;)
+info</code></pre>
+<pre><code class="python">#&#123;&#39;name&#39;: &#39;小王&#39;, &#39;num&#39;: &#39;20192812&#39;, &#39;age&#39;: &#39;20&#39;&#125;</code></pre>
 <p><strong>法二</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">del</span> info[<span class="string">&#x27;name&#x27;</span>]</span><br><span class="line">info</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;&#x27;num&#x27;: &#x27;20192812&#x27;, &#x27;age&#x27;: &#x27;20&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">del info[&#39;name&#39;]
+info</code></pre>
+<pre><code class="python">#&#123;&#39;num&#39;: &#39;20192812&#39;, &#39;age&#39;: &#39;20&#39;&#125;</code></pre>
 <p><strong>法三</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">info.clear()</span><br><span class="line">info</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;&#125;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="字典的修改-update"><a href="#字典的修改-update" class="headerlink" title="字典的修改 update"></a>字典的修改 update</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#字典的修改</span></span><br><span class="line">dic=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;小王&#x27;</span>,</span><br><span class="line">     <span class="string">&#x27;num&#x27;</span>:<span class="string">&#x27;20192898&#x27;</span>,</span><br><span class="line">     <span class="string">&#x27;gender&#x27;</span>:<span class="string">&#x27;男&#x27;</span>&#125;</span><br><span class="line">dic2=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;小王&#x27;</span>,</span><br><span class="line">     <span class="string">&#x27;num&#x27;</span>:<span class="string">&#x27;20192812&#x27;</span>,</span><br><span class="line">     <span class="string">&#x27;gender&#x27;</span>:<span class="string">&#x27;女&#x27;</span>,</span><br><span class="line">     <span class="string">&#x27;age&#x27;</span>:<span class="string">&#x27;20&#x27;</span>&#125;</span><br><span class="line">dic2</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;&#x27;name&#x27;: &#x27;小王&#x27;, &#x27;num&#x27;: &#x27;20192812&#x27;, &#x27;gender&#x27;: &#x27;女&#x27;, &#x27;age&#x27;: &#x27;20&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dic.update(dic2)   <span class="comment">#合并后重合的key被覆盖</span></span><br><span class="line">dic</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;&#x27;name&#x27;: &#x27;小王&#x27;, &#x27;num&#x27;: &#x27;20192812&#x27;, &#x27;gender&#x27;: &#x27;女&#x27;, &#x27;age&#x27;: &#x27;20&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="查操作"><a href="#查操作" class="headerlink" title="查操作"></a>查操作</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查操作</span></span><br><span class="line"><span class="string">&#x27;age&#x27;</span><span class="keyword">in</span> dic  <span class="comment">#判断该元素是否在字典中</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#True</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;age2&#x27;</span><span class="keyword">in</span> dic</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#False</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dic.get(<span class="string">&#x27;name&#x27;</span>)  <span class="comment">#读取name的值</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#x27;小王&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dic.keys()  <span class="comment">#获取所有key值</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#dict_keys([&#x27;name&#x27;, &#x27;num&#x27;, &#x27;gender&#x27;, &#x27;age&#x27;])</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dic.values()  <span class="comment">#获取所有value值</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#dict_values([&#x27;小王&#x27;, &#x27;20192812&#x27;, &#x27;女&#x27;, &#x27;20&#x27;])</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dic.items()  <span class="comment">#以列表返回可遍历的(键, 值) 元组数组</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#dict_items([(&#x27;name&#x27;, &#x27;小王&#x27;), (&#x27;num&#x27;, &#x27;20192812&#x27;), (&#x27;gender&#x27;, &#x27;女&#x27;), (&#x27;age&#x27;, &#x27;20&#x27;)])</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">info.clear()
+info</code></pre>
+<pre><code class="python">#&#123;&#125;</code></pre>
+<h4 id="字典的修改-update"><a href="#字典的修改-update" class="headerlink" title="字典的修改 update"></a>字典的修改 update</h4><pre><code class="python">#字典的修改
+dic=&#123;&#39;name&#39;:&#39;小王&#39;,
+     &#39;num&#39;:&#39;20192898&#39;,
+     &#39;gender&#39;:&#39;男&#39;&#125;
+dic2=&#123;&#39;name&#39;:&#39;小王&#39;,
+     &#39;num&#39;:&#39;20192812&#39;,
+     &#39;gender&#39;:&#39;女&#39;,
+     &#39;age&#39;:&#39;20&#39;&#125;
+dic2</code></pre>
+<pre><code class="python">#&#123;&#39;name&#39;: &#39;小王&#39;, &#39;num&#39;: &#39;20192812&#39;, &#39;gender&#39;: &#39;女&#39;, &#39;age&#39;: &#39;20&#39;&#125;</code></pre>
+<pre><code class="python">dic.update(dic2)   #合并后重合的key被覆盖
+dic</code></pre>
+<pre><code class="python">#&#123;&#39;name&#39;: &#39;小王&#39;, &#39;num&#39;: &#39;20192812&#39;, &#39;gender&#39;: &#39;女&#39;, &#39;age&#39;: &#39;20&#39;&#125;</code></pre>
+<h4 id="查操作"><a href="#查操作" class="headerlink" title="查操作"></a>查操作</h4><pre><code class="python">#查操作
+&#39;age&#39;in dic  #判断该元素是否在字典中</code></pre>
+<pre><code class="python">#True</code></pre>
+<pre><code class="python">&#39;age2&#39;in dic</code></pre>
+<pre><code class="python">#False</code></pre>
+<pre><code class="python">dic.get(&#39;name&#39;)  #读取name的值</code></pre>
+<pre><code class="python">#&#39;小王&#39;</code></pre>
+<pre><code class="python">dic.keys()  #获取所有key值</code></pre>
+<pre><code class="python">#dict_keys([&#39;name&#39;, &#39;num&#39;, &#39;gender&#39;, &#39;age&#39;])</code></pre>
+<pre><code class="python">dic.values()  #获取所有value值</code></pre>
+<pre><code class="python">#dict_values([&#39;小王&#39;, &#39;20192812&#39;, &#39;女&#39;, &#39;20&#39;])</code></pre>
+<pre><code class="python">dic.items()  #以列表返回可遍历的(键, 值) 元组数组</code></pre>
+<pre><code class="python">#dict_items([(&#39;name&#39;, &#39;小王&#39;), (&#39;num&#39;, &#39;20192812&#39;), (&#39;gender&#39;, &#39;女&#39;), (&#39;age&#39;, &#39;20&#39;)])</code></pre>
 <h4 id="字典的循环-三种"><a href="#字典的循环-三种" class="headerlink" title="字典的循环 三种"></a>字典的循环 三种</h4><p><strong>第一种</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> dic:</span><br><span class="line">    print(i)       <span class="comment">#遍历Key值</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">name</span></span><br><span class="line"><span class="string">num</span></span><br><span class="line"><span class="string">gender</span></span><br><span class="line"><span class="string">age</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">for i in dic:
+    print(i)       #遍历Key值</code></pre>
+<pre><code class="python">&#39;&#39;&#39;
+name
+num
+gender
+age
+&#39;&#39;&#39;</code></pre>
 <p><strong>第二种</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> dic.items():  <span class="comment">#遍历字典</span></span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">(&#x27;name&#x27;, &#x27;小王&#x27;)</span></span><br><span class="line"><span class="string">(&#x27;num&#x27;, &#x27;20192812&#x27;)</span></span><br><span class="line"><span class="string">(&#x27;gender&#x27;, &#x27;女&#x27;)</span></span><br><span class="line"><span class="string">(&#x27;age&#x27;, &#x27;20&#x27;)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">for i in dic.items():  #遍历字典
+    print(i)</code></pre>
+<pre><code class="python">&#39;&#39;&#39;
+(&#39;name&#39;, &#39;小王&#39;)
+(&#39;num&#39;, &#39;20192812&#39;)
+(&#39;gender&#39;, &#39;女&#39;)
+(&#39;age&#39;, &#39;20&#39;)
+&#39;&#39;&#39;</code></pre>
 <p><strong>第三种</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i,j <span class="keyword">in</span> dic.items():  <span class="comment">#遍历字典</span></span><br><span class="line">    print(i,j)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">name 小王</span></span><br><span class="line"><span class="string">num 20192812</span></span><br><span class="line"><span class="string">gender 女</span></span><br><span class="line"><span class="string">age 20</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">for i,j in dic.items():  #遍历字典
+    print(i,j)</code></pre>
+<pre><code class="python">&#39;&#39;&#39;
+name 小王
+num 20192812
+gender 女
+age 20
+&#39;&#39;&#39;</code></pre>
 <h4 id="小作业"><a href="#小作业" class="headerlink" title="小作业"></a>小作业</h4><ol>
 <li><p>交换字典的key和value</p>
 </li>
@@ -1633,7 +1636,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\59346.html" title="12.Python面向对象(3)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191225231208.png" /><span class="title">12.Python面向对象(3)</span><span class="excerpt">Python面向对象单例模式</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\80ca38c0.html" title="Day2.Python变量和运算符" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.Python变量和运算符</span><span class="excerpt">Python变量与运算符！！！</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\fbd6efa0.html" title="Day1.Python基本操作与格式规范" rel="bookmark "><img src="https://7.dusays.com/2020/09/14/ba18a9c432ad6.png" /><span class="title">Day1.Python基本操作与格式规范</span><span class="excerpt">Python基本操作与格式规范！！！</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1696,7 +1699,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>961 words</p>
+      <p>944 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1784,7 +1787,7 @@
 
 例题引导：
 有两个班英语班和数学班，需要统计这两个班中报名情况，例如统计既报名了英语班又报名数学班的同学名字,即统计为交集。
-12english_...</p>
+english_c ...</p>
         </a>
       
       
@@ -1796,9 +1799,10 @@
 例题引导:
 把True变为False，把False变为True后输出：
 参考答案：
-12print not Trueprint not False 
-
-学习引导...</p>
+print not True
+print not False 
+学习引导：
+...</p>
         </a>
       
     </div>
@@ -2808,6 +2812,8 @@
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2848,6 +2854,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3161,6 +3174,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

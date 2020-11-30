@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1483,8 +1487,40 @@
 <p>最后使用main函数输入两个向量，输出他们的加、减、乘计算结果。</p>
 <p>解题思路：关于类的创建以及函数的创建及调用</p>
 <p><strong>参考答案：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Vector</span>(<span class="params">object</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, x, y</span>):</span></span><br><span class="line">        self.x = x</span><br><span class="line">        self.y = y</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__add__</span>(<span class="params">self, other</span>):</span>  <span class="comment">#加</span></span><br><span class="line">        x = self.x + other.x</span><br><span class="line">        y = self.y + other.y</span><br><span class="line">        <span class="keyword">return</span> Vector(x, y)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__sub__</span>(<span class="params">self, other</span>):</span>  <span class="comment">#减</span></span><br><span class="line">        x = self.x - other.x</span><br><span class="line">        y = self.y - other.y</span><br><span class="line">        <span class="keyword">return</span> Vector(x, y)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__mul__</span>(<span class="params">self, times</span>):</span>  <span class="comment">#乘</span></span><br><span class="line">        <span class="keyword">return</span> Vector(self.x * times, self.y * times)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span>(<span class="params">self</span>):</span>  <span class="comment">#格式化输出</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;Vector(&#123;&#125;, &#123;&#125;)&#x27;</span>.format(self.x, self.y)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    v1 = Vector(<span class="number">3</span>, <span class="number">5</span>)</span><br><span class="line">    v2 = Vector(<span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line">    v3 = v1 + v2</span><br><span class="line">    v4 = v3 * <span class="number">2</span></span><br><span class="line">    v5 = v2 - v1</span><br><span class="line">    print(v3)</span><br><span class="line">    print(v4)</span><br><span class="line">    print(v5)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<pre><code class="python">class Vector(object):
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
+    def __add__(self, other):  #加
+        x = self.x + other.x
+        y = self.y + other.y
+        return Vector(x, y)
+
+    def __sub__(self, other):  #减
+        x = self.x - other.x
+        y = self.y - other.y
+        return Vector(x, y)
+
+    def __mul__(self, times):  #乘
+        return Vector(self.x * times, self.y * times)
+
+    def __repr__(self):  #格式化输出
+        return &#39;Vector(&#123;&#125;, &#123;&#125;)&#39;.format(self.x, self.y)
+
+def main():
+    v1 = Vector(3, 5)
+    v2 = Vector(4, 5)
+    v3 = v1 + v2
+    v4 = v3 * 2
+    v5 = v2 - v1
+    print(v3)
+    print(v4)
+    print(v5)
+
+
+if __name__ == &#39;__main__&#39;:
+    main()</code></pre>
 <p><strong>学习引导：</strong></p>
 <ul>
 <li>类定义</li>
@@ -1534,37 +1570,65 @@
 </ul>
 <h3 id="类定义"><a href="#类定义" class="headerlink" title="类定义"></a>类定义</h3><p>类实例化后，可以使用其属性。创建一个类之后，可以通过类名访问其属性。</p>
 <p>语法格式如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassName</span>():</span> <span class="comment">#类的命名一般首字母大写，括号中参数可带可不带,带只能带继承的基类名称</span></span><br><span class="line">    <span class="string">&#x27;这里可写类的说明文档&#x27;</span></span><br><span class="line">    &lt;statement<span class="number">-1</span>&gt;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    &lt;statement-N&gt;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">class ClassName(): #类的命名一般首字母大写，括号中参数可带可不带,带只能带继承的基类名称
+    &#39;这里可写类的说明文档&#39;
+    &lt;statement-1&gt;
+    .
+    .
+    .
+    &lt;statement-N&gt;</code></pre>
 <h3 id="类对象"><a href="#类对象" class="headerlink" title="类对象"></a>类对象</h3><p>类对象支持两种操作：属性引用和实例化。</p>
 <p><strong>属性引用：</strong>使用和python中所有的属性引用一样的标准语法：obj.name。</p>
 <p>类对象创建后，类命名空间中所有的命名都是有效属性名。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span>:</span></span><br><span class="line">    <span class="string">&quot;演示一个简单的类实例&quot;</span></span><br><span class="line">    i=<span class="string">&#x27;DataScience&#x27;</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;Hello World&#x27;</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">#实例化类</span></span><br><span class="line">x=MyClass()</span><br><span class="line"></span><br><span class="line"><span class="comment">#访问类的属性和方法</span></span><br><span class="line">print(<span class="string">&#x27;MyClass类的属性i为：&#x27;</span>,x.i)</span><br><span class="line">print(<span class="string">&#x27;MyClass类的方法func输出为&#x27;</span>,x.func())</span><br></pre></td></tr></table></figure>
+<pre><code class="python">class MyClass:
+    &quot;演示一个简单的类实例&quot;
+    i=&#39;DataScience&#39;
+    def func(self):
+        return &#39;Hello World&#39;
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#MyClass类的属性i为： DataScience</span></span><br><span class="line"><span class="comment">#MyClass类的方法func输出为 Hello World</span></span><br></pre></td></tr></table></figure>
+#实例化类
+x=MyClass()
 
+#访问类的属性和方法
+print(&#39;MyClass类的属性i为：&#39;,x.i)
+print(&#39;MyClass类的方法func输出为&#39;,x.func())</code></pre>
+<pre><code class="python">#MyClass类的属性i为： DataScience
+#MyClass类的方法func输出为 Hello World</code></pre>
 <p>类有一个名为 __ init__() 的特殊方法（构造方法），该方法在类实例化时会自动调用。</p>
 <p>语法格式如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">    self.data=[]</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">def __init__(self):
+    self.data=[]</code></pre>
 <p>__ init__ () 方法可以有参数，参数通过 __ init__() 传递到类的实例化操作上。例如:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Special</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,realpart,imagpart</span>):</span></span><br><span class="line">        self.r=realpart</span><br><span class="line">        self.i=imagpart</span><br><span class="line"></span><br><span class="line">x=Special(<span class="string">&#x27;welcome&#x27;</span>,<span class="number">12</span>)</span><br><span class="line">print(x.r,x.i)       </span><br></pre></td></tr></table></figure>
+<pre><code class="python">class Special:
+    def __init__(self,realpart,imagpart):
+        self.r=realpart
+        self.i=imagpart
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#welcome 12</span></span><br></pre></td></tr></table></figure>
-
+x=Special(&#39;welcome&#39;,12)
+print(x.r,x.i)       </code></pre>
+<pre><code class="python">#welcome 12</code></pre>
 <h4 id="self"><a href="#self" class="headerlink" title="self"></a>self</h4><p>self 代表类的实例，而非类。</p>
 <p>类的方法与普通的函数有一个区别—它们必须有一个额外的第一个参数名称, 按照惯例它的名称是 self。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test</span>(<span class="params">self</span>):</span></span><br><span class="line">        print(self)</span><br><span class="line">        print(self.__class__)</span><br><span class="line">        </span><br><span class="line">t=Test()</span><br><span class="line">t.test()</span><br></pre></td></tr></table></figure>
+<pre><code class="python">class Test:
+    def test(self):
+        print(self)
+        print(self.__class__)
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&lt;__main__.Test object at 0x000002698B8C56C8&gt;</span></span><br><span class="line"><span class="comment">#&lt;class &#x27;__main__.Test&#x27;&gt;</span></span><br></pre></td></tr></table></figure>
-
-
+t=Test()
+t.test()</code></pre>
+<pre><code class="python">#&lt;__main__.Test object at 0x000002698B8C56C8&gt;
+#&lt;class &#39;__main__.Test&#39;&gt;</code></pre>
 <p>从执行结果可以很明显的看出，self 代表的是类的实例，代表当前对象的地址，而 self.class 则指向类。</p>
 <p>self 不是 python 关键字，我们把他换成 datascience 也是可以正常执行的:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test</span>(<span class="params">datascience</span>):</span></span><br><span class="line">        print(datascience)</span><br><span class="line">        print(datascience.__class__)</span><br><span class="line"></span><br><span class="line">t = Test()</span><br><span class="line">t.test()</span><br></pre></td></tr></table></figure>
+<pre><code class="python">class Test:
+    def test(datascience):
+        print(datascience)
+        print(datascience.__class__)
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&lt;__main__.Test object at 0x000002698B8CC448&gt;</span></span><br><span class="line"><span class="comment">#&lt;class &#x27;__main__.Test&#x27;&gt;</span></span><br></pre></td></tr></table></figure>
-
+t = Test()
+t.test()</code></pre>
+<pre><code class="python">#&lt;__main__.Test object at 0x000002698B8CC448&gt;
+#&lt;class &#39;__main__.Test&#39;&gt;</code></pre>
 <h3 id="类属性与方法"><a href="#类属性与方法" class="headerlink" title="类属性与方法"></a>类属性与方法</h3><ul>
 <li><p>类中的函数叫方法</p>
 </li>
@@ -1576,43 +1640,108 @@
 <p>注意：self这个名字不是定死的，也可以使用this，但最好还是用常用的self。</p>
 <h4 id="类的私有方法"><a href="#类的私有方法" class="headerlink" title="类的私有方法"></a>类的私有方法</h4><p>__ private_method：两个下划线开头，声明该方法为私有方法，只能在类的内部调用 ，不能在类的外部调用。self. __private_methods。</p>
 <h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p><strong>私有属性</strong>的实例如下“</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PrivateEX</span>:</span></span><br><span class="line">    __secretCount = <span class="number">0</span>  <span class="comment"># 私有变量</span></span><br><span class="line">    publicCount = <span class="number">0</span>    <span class="comment"># 公开变量</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">count</span>(<span class="params">self</span>):</span></span><br><span class="line">        self.__secretCount += <span class="number">1</span></span><br><span class="line">        self.publicCount += <span class="number">1</span></span><br><span class="line">        <span class="keyword">print</span> (self.__secretCount)</span><br><span class="line">        </span><br><span class="line">counter = PrivateEX()</span><br><span class="line">counter.count()</span><br><span class="line">counter.count()</span><br><span class="line"><span class="keyword">print</span> (counter.publicCount)</span><br><span class="line"><span class="keyword">print</span> (counter.__secretCount)  <span class="comment"># 报错，实例不能访问私有变量</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">class PrivateEX:
+    __secretCount = 0  # 私有变量
+    publicCount = 0    # 公开变量
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1</span></span><br><span class="line"><span class="comment">#2</span></span><br><span class="line"><span class="comment">#2</span></span><br><span class="line"></span><br><span class="line">---------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">AttributeError                            Traceback (most recent call last)</span><br><span class="line"></span><br><span class="line">&lt;ipython-input<span class="number">-1</span>-f0d64b9d6654&gt; <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">     <span class="number">12</span> counter.count()</span><br><span class="line">     <span class="number">13</span> <span class="keyword">print</span> (counter.publicCount)</span><br><span class="line">---&gt; 14 print (counter.__secretCount)  # 报错，实例不能访问私有变量</span><br><span class="line">AttributeError: <span class="string">&#x27;PrivateEX&#x27;</span> object has no attribute <span class="string">&#x27;__secretCount&#x27;</span></span><br></pre></td></tr></table></figure>
+    def count(self):
+        self.__secretCount += 1
+        self.publicCount += 1
+        print (self.__secretCount)
 
+counter = PrivateEX()
+counter.count()
+counter.count()
+print (counter.publicCount)
+print (counter.__secretCount)  # 报错，实例不能访问私有变量</code></pre>
+<pre><code class="python">#1
+#2
+#2
 
+---------------------------------------------------------------------------
+
+AttributeError                            Traceback (most recent call last)
+
+&lt;ipython-input-1-f0d64b9d6654&gt; in &lt;module&gt;
+     12 counter.count()
+     13 print (counter.publicCount)
+---&gt; 14 print (counter.__secretCount)  # 报错，实例不能访问私有变量
+AttributeError: &#39;PrivateEX&#39; object has no attribute &#39;__secretCount&#39;</code></pre>
 <p>类的<strong>私有方法</strong>实例如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Private</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, name, url</span>):</span></span><br><span class="line">        self.name = name       <span class="comment"># public</span></span><br><span class="line">        self.__url = url   <span class="comment"># private</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">who</span>(<span class="params">self</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;name  : &#x27;</span>, self.name)</span><br><span class="line">        print(<span class="string">&#x27;url : &#x27;</span>, self.__url)</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__foo</span>(<span class="params">self</span>):</span>          <span class="comment"># 私有方法</span></span><br><span class="line">        print(<span class="string">&#x27;这是私有方法&#x27;</span>)</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">foo</span>(<span class="params">self</span>):</span>            <span class="comment"># 公共方法</span></span><br><span class="line">        print(<span class="string">&#x27;这是公共方法&#x27;</span>)</span><br><span class="line">        self.__foo()</span><br><span class="line">        </span><br><span class="line">x = Private(<span class="string">&#x27;DataScience&#x27;</span>, <span class="string">&#x27;https://www.a2data.cn/#indexCard&#x27;</span>)</span><br><span class="line">x.who()        <span class="comment"># 正常输出</span></span><br><span class="line">x.foo()        <span class="comment"># 正常输出</span></span><br><span class="line">x.__foo()      <span class="comment"># 报错  外部不能调用私有方法</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">class Private:
+    def __init__(self, name, url):
+        self.name = name       # public
+        self.__url = url   # private
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">name  :  DataScience</span></span><br><span class="line"><span class="string">url :  https://www.a2data.cn/#indexCard</span></span><br><span class="line"><span class="string">这是公共方法</span></span><br><span class="line"><span class="string">这是私有方法</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">---------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">AttributeError                            Traceback (most recent call last)</span><br><span class="line"></span><br><span class="line">&lt;ipython-input<span class="number">-8</span><span class="number">-0696</span>acdddb15&gt; <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">     <span class="number">18</span> x.who()        <span class="comment"># 正常输出</span></span><br><span class="line">     <span class="number">19</span> x.foo()        <span class="comment"># 正常输出</span></span><br><span class="line">---&gt; 20 x.__foo()      # 报错  外部不能调用私有方法</span><br><span class="line">AttributeError: <span class="string">&#x27;Private&#x27;</span> object has no attribute <span class="string">&#x27;__foo&#x27;</span></span><br></pre></td></tr></table></figure>
+    def who(self):
+        print(&#39;name  : &#39;, self.name)
+        print(&#39;url : &#39;, self.__url)
 
+    def __foo(self):          # 私有方法
+        print(&#39;这是私有方法&#39;)
 
+    def foo(self):            # 公共方法
+        print(&#39;这是公共方法&#39;)
+        self.__foo()
+
+x = Private(&#39;DataScience&#39;, &#39;https://www.a2data.cn/#indexCard&#39;)
+x.who()        # 正常输出
+x.foo()        # 正常输出
+x.__foo()      # 报错  外部不能调用私有方法</code></pre>
+<pre><code class="python">&#39;&#39;&#39;
+name  :  DataScience
+url :  https://www.a2data.cn/#indexCard
+这是公共方法
+这是私有方法
+&#39;&#39;&#39;
+
+---------------------------------------------------------------------------
+
+AttributeError                            Traceback (most recent call last)
+
+&lt;ipython-input-8-0696acdddb15&gt; in &lt;module&gt;
+     18 x.who()        # 正常输出
+     19 x.foo()        # 正常输出
+---&gt; 20 x.__foo()      # 报错  外部不能调用私有方法
+AttributeError: &#39;Private&#39; object has no attribute &#39;__foo&#39;</code></pre>
 <p>通过类的实例化，可以创建多个实例对象。</p>
 <p>下面的例子为多个对象的实例化：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">my_class</span>():</span></span><br><span class="line">    num=<span class="number">100</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">print_num</span>(<span class="params">self</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;num is %d&#x27;</span>%(self.num))</span><br><span class="line">        </span><br><span class="line">class_1=my_class() <span class="comment">#实例化</span></span><br><span class="line">class_2=my_class() <span class="comment">#实例化</span></span><br><span class="line">class_1.print_num()</span><br><span class="line">class_2.print_num()</span><br></pre></td></tr></table></figure>
+<pre><code class="python">class my_class():
+    num=100
+    def print_num(self):
+        print(&#39;num is %d&#39;%(self.num))
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#num is 100</span></span><br><span class="line"><span class="comment">#num is 100</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class_1.num=<span class="number">10</span>  <span class="comment">#修改实例属性</span></span><br><span class="line">my_class.num=<span class="number">50</span>  <span class="comment">#修改类属性</span></span><br><span class="line">class_1.print_num()</span><br><span class="line">class_2.print_num()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#num is 10</span></span><br><span class="line"><span class="comment">#num is 50</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class_1.num2=<span class="number">5</span>  <span class="comment">#新增类属性</span></span><br><span class="line">print(class_1.num2)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#5</span></span><br></pre></td></tr></table></figure>
-
+class_1=my_class() #实例化
+class_2=my_class() #实例化
+class_1.print_num()
+class_2.print_num()</code></pre>
+<pre><code class="python">#num is 100
+#num is 100</code></pre>
+<pre><code class="python">class_1.num=10  #修改实例属性
+my_class.num=50  #修改类属性
+class_1.print_num()
+class_2.print_num()</code></pre>
+<pre><code class="python">#num is 10
+#num is 50</code></pre>
+<pre><code class="python">class_1.num2=5  #新增类属性
+print(class_1.num2)</code></pre>
+<pre><code class="python">#5</code></pre>
 <h4 id="类增加-修改属性"><a href="#类增加-修改属性" class="headerlink" title="类增加/修改属性"></a>类增加/修改属性</h4><p>从外部添加/修改属性</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span>  <span class="title">Example</span>():</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line">Example.num=<span class="number">100</span></span><br><span class="line">print(Example.num)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#100</span></span><br></pre></td></tr></table></figure>
-
-
+<pre><code class="python">class  Example():
+    pass
+Example.num=100
+print(Example.num)</code></pre>
+<pre><code class="python">#100</code></pre>
 <p>从内部添加/修改属性</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span>():</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add_num</span>(<span class="params">cls</span>):</span></span><br><span class="line">        cls.num=input(<span class="string">&#x27;请输入：&#x27;</span>)</span><br><span class="line">        print(cls.num)</span><br><span class="line">        </span><br><span class="line">Example.add_num()</span><br></pre></td></tr></table></figure>
+<pre><code class="python">class Example():
+    @classmethod
+    def add_num(cls):
+        cls.num=input(&#39;请输入：&#39;)
+        print(cls.num)
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#请输入：2</span></span><br><span class="line"><span class="comment">#2</span></span><br></pre></td></tr></table></figure>
-
-
+Example.add_num()</code></pre>
+<pre><code class="python">#请输入：2
+#2</code></pre>
 <p>在这里我们介绍一下上段代码所用到的@classmethod</p>
 <p>一般来说，要使用某个类的方法，需要先实例化一个对象再调用方法。</p>
 <p>而使用@staticmethod或@classmethod，就可以不需要实例化，直接类名.方法名()来调用。这有利于组织代码，把某些应该属于某个类的函数给放到那个类里去，同时有利于命名空间的整洁,既然@staticmethod和@classmethod都可以直接类名.方法名()来调用，那他们有什么区别呢？</p>
@@ -1630,10 +1759,30 @@
 </li>
 </ul>
 <p>下面为一个成绩录入的例子</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">List</span>():</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">enter</span>(<span class="params">cls</span>):</span></span><br><span class="line">        cls.name=input(<span class="string">&#x27;请输入学生姓名：&#x27;</span>)</span><br><span class="line">        cls.grade=int(input(<span class="string">&#x27;请输入考试成绩：&#x27;</span>))</span><br><span class="line">        </span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">count</span>(<span class="params">cls</span>):</span></span><br><span class="line">        <span class="keyword">if</span> cls.grade&gt;=<span class="number">60</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&#x27;及格&#x27;</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&#x27;不及格&#x27;</span></span><br><span class="line">        </span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">result</span>(<span class="params">cls</span>):</span></span><br><span class="line">        print(cls.count())</span><br><span class="line">        </span><br><span class="line">List.enter()</span><br><span class="line">List.result()</span><br></pre></td></tr></table></figure>
+<pre><code class="python">class List():
+    @classmethod
+    def enter(cls):
+        cls.name=input(&#39;请输入学生姓名：&#39;)
+        cls.grade=int(input(&#39;请输入考试成绩：&#39;))
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">请输入学生姓名：xiaowang</span></span><br><span class="line"><span class="string">请输入考试成绩：32</span></span><br><span class="line"><span class="string">不及格</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+    @classmethod
+    def count(cls):
+        if cls.grade&gt;=60:
+            return &#39;及格&#39;
+        else:
+            return &#39;不及格&#39;
 
+    @classmethod
+    def result(cls):
+        print(cls.count())
+
+List.enter()
+List.result()</code></pre>
+<pre><code class="python">&#39;&#39;&#39;
+请输入学生姓名：xiaowang
+请输入考试成绩：32
+不及格
+&#39;&#39;&#39;</code></pre>
 <ul>
 <li><h4 id="小作业："><a href="#小作业：" class="headerlink" title="小作业："></a>小作业：</h4></li>
 </ul>
@@ -1665,7 +1814,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\59346.html" title="12.Python面向对象(3)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191225231208.png" /><span class="title">12.Python面向对象(3)</span><span class="excerpt">Python面向对象单例模式</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\80ca38c0.html" title="Day2.Python变量和运算符" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.Python变量和运算符</span><span class="excerpt">Python变量与运算符！！！</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\fbd6efa0.html" title="Day1.Python基本操作与格式规范" rel="bookmark "><img src="https://7.dusays.com/2020/09/14/ba18a9c432ad6.png" /><span class="title">Day1.Python基本操作与格式规范</span><span class="excerpt">Python基本操作与格式规范！！！</span></a><a class="item" href="\posts\53d1dcfb.html" title="Day16.文件" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day16.文件</span><span class="excerpt">文件操作。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1818,7 +1967,8 @@
 例题引导：使用魔法方法__new__构造一个摄氏度转换为华氏度的类：
 解题思路：构建类-调用魔法方法-表达函数功能
 参考答案：
-123class C2F(float)...</p>
+class C2F(float):
+ ...</p>
         </a>
       
       
@@ -2842,6 +2992,8 @@
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2882,6 +3034,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3195,6 +3354,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

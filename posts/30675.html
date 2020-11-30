@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1554,15 +1558,44 @@
 </blockquote>
 <p><em>鸭子类型</em></p>
 <p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191224162315.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191224162315.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="7、类、实例-属性"><a href="#7、类、实例-属性" class="headerlink" title="7、类、实例 | 属性"></a>7、类、实例 | 属性</h2><h3 id="7-1、类属性"><a href="#7-1、类属性" class="headerlink" title="7.1、类属性"></a>7.1、类属性</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span>(<span class="params">object</span>):</span></span><br><span class="line">    name = <span class="string">&#x27;A2Data&#x27;</span>  <span class="comment">#公有的类属性</span></span><br><span class="line">    __age = <span class="number">22</span>     <span class="comment">#私有的类属性</span></span><br><span class="line"></span><br><span class="line">p = People()</span><br><span class="line"></span><br><span class="line">print(p.name)        <span class="comment">#正确</span></span><br><span class="line">print(People.name)   <span class="comment">#正确</span></span><br><span class="line">print(p.__age)       <span class="comment">#错误，不能在类外通过实例对象访问私有的类属性</span></span><br><span class="line">print(People.__age)  <span class="comment">#错误，不能在类外通过类对象访问私有的类属性</span></span><br></pre></td></tr></table></figure>
+<h2 id="7、类、实例-属性"><a href="#7、类、实例-属性" class="headerlink" title="7、类、实例 | 属性"></a>7、类、实例 | 属性</h2><h3 id="7-1、类属性"><a href="#7-1、类属性" class="headerlink" title="7.1、类属性"></a>7.1、类属性</h3><pre><code class="python">class People(object):
+    name = &#39;A2Data&#39;  #公有的类属性
+    __age = 22     #私有的类属性
 
+p = People()
 
+print(p.name)        #正确
+print(People.name)   #正确
+print(p.__age)       #错误，不能在类外通过实例对象访问私有的类属性
+print(People.__age)  #错误，不能在类外通过类对象访问私有的类属性</code></pre>
+<h3 id="7-2、实例属性-对象属性"><a href="#7-2、实例属性-对象属性" class="headerlink" title="7.2、实例属性(对象属性)"></a>7.2、实例属性(对象属性)</h3><pre><code class="python">class People(object):
+    address = &#39;北京&#39; #类属性
+    def __init__(self):
+        self.name = &#39;A2Data&#39; #实例属性
+        self.age = 22 #实例属性
 
-<h3 id="7-2、实例属性-对象属性"><a href="#7-2、实例属性-对象属性" class="headerlink" title="7.2、实例属性(对象属性)"></a>7.2、实例属性(对象属性)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span>(<span class="params">object</span>):</span></span><br><span class="line">    address = <span class="string">&#x27;北京&#x27;</span> <span class="comment">#类属性</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        self.name = <span class="string">&#x27;A2Data&#x27;</span> <span class="comment">#实例属性</span></span><br><span class="line">        self.age = <span class="number">22</span> <span class="comment">#实例属性</span></span><br><span class="line"></span><br><span class="line">p = People()</span><br><span class="line">p.age =<span class="number">18</span> <span class="comment">#实例属性</span></span><br><span class="line">print(p.address) <span class="comment">#正确</span></span><br><span class="line">print(p.name)    <span class="comment">#正确</span></span><br><span class="line">print(p.age)     <span class="comment">#正确</span></span><br><span class="line"></span><br><span class="line">print(People.address) <span class="comment">#正确</span></span><br><span class="line">print(People.name)    <span class="comment">#错误</span></span><br><span class="line">print(People.age)     <span class="comment">#错误</span></span><br></pre></td></tr></table></figure>
+p = People()
+p.age =18 #实例属性
+print(p.address) #正确
+print(p.name)    #正确
+print(p.age)     #正确
 
+print(People.address) #正确
+print(People.name)    #错误
+print(People.age)     #错误</code></pre>
 <p><strong>通过实例(对象)去修改类属性</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span>(<span class="params">object</span>):</span></span><br><span class="line">    country = <span class="string">&#x27;china&#x27;</span> <span class="comment">#类属性</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(People.country)</span><br><span class="line">p = People()</span><br><span class="line">print(p.country)</span><br><span class="line">p.country = <span class="string">&#x27;japan&#x27;</span> </span><br><span class="line">print(p.country)      <span class="comment">#实例属性会屏蔽掉同名的类属性</span></span><br><span class="line">print(People.country)</span><br><span class="line"><span class="keyword">del</span> p.country    <span class="comment">#删除实例属性</span></span><br><span class="line">print(p.country)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">class People(object):
+    country = &#39;china&#39; #类属性
 
+
+print(People.country)
+p = People()
+print(p.country)
+p.country = &#39;japan&#39; 
+print(p.country)      #实例属性会屏蔽掉同名的类属性
+print(People.country)
+del p.country    #删除实例属性
+print(p.country)</code></pre>
 <blockquote>
 <p><strong>归纳</strong></p>
 <p>如果需要在类外修改<code>类属性</code>，必须通过<code>类对象</code>去引用然后进行修改。如果通过实例对象去引用，会产生一个同名的<code>实例属性</code>，这种方式修改的是<code>实例属性</code>，不会影响到<code>类属性</code>，并且之后如果通过实例对象去引用该名称的属性，实例属性会强制屏蔽掉类属性，即引用的是<code>实例属性</code>，除非删除了该<code>实例属性</code>。</p>
@@ -1592,7 +1625,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\59346.html" title="12.Python面向对象(3)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191225231208.png" /><span class="title">12.Python面向对象(3)</span><span class="excerpt">Python面向对象单例模式</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\58489.html" title="4.Python列表介绍" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191212085923.png" /><span class="title">4.Python列表介绍</span><span class="excerpt">Python列表介绍</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\34771.html" title="10.Python面向对象(1)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223115817.png" /><span class="title">10.Python面向对象(1)</span><span class="excerpt">Python面向对象介绍上篇</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2769,6 +2802,8 @@ Python烤地瓜实例建议跟着操作，所以小编多数以截图的方式
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2809,6 +2844,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3122,6 +3164,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

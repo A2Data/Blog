@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1495,23 +1499,23 @@
 <blockquote>
 <p>在已经安装好NodeJS和NPM的电脑上，通过命令行窗口，输入以下命令安装GitBook：</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install gitbook-cli -g gitbook-cli</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="shell">npm install gitbook-cli -g gitbook-cli
 
+</code></pre>
 <h2 id="2、使用"><a href="#2、使用" class="headerlink" title="2、使用"></a>2、使用</h2><blockquote>
 <p>创建一本书</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitbook init</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">gitbook init</code></pre>
 <blockquote>
 <p>如果你想用现有的目录来创建一本书，你可以通过运行 gitbook init ./directory来实现 使用下面的命令预览您创建的图书：</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitbook serve </span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">gitbook serve </code></pre>
 <blockquote>
 <p>或者使用以下命令构建静态网站：</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">gitbook build</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">
+gitbook build
+</code></pre>
 <blockquote>
 <p>安装其他版本<br>gitbook命令可以方便地下载和安装不同版本的GitBook来测试你的书：<br>$ gitbook fetch 4.0.0-alpha.1 </p>
 <p>使用gitbook ls-remote列出可用于安装的远程版本。 </p>
@@ -1695,13 +1699,14 @@ IDEA快捷键操作
 
 
 
-Python强化练习1、给程序传参数123import sysprint(sys.argv)
+Python强化练习1、给程序传参数import sys
 
+print(sys.argv)
 
 2、列表推导式
 所谓的列表推导式，就是指的轻量级循环创建列表
 
-2...</p>
+2.1...</p>
         </a>
       
     </div>
@@ -2711,6 +2716,8 @@ Python强化练习1、给程序传参数123import sysprint(sys.argv)
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2751,6 +2758,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3064,6 +3078,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

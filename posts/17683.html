@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1423,7 +1427,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.8k words</p>
+      <p>1.7k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1487,24 +1491,33 @@
 <h2 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h2><blockquote>
 <p>在想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。<br>注：标准语法一般在#后跟个空格再写文字，貌似简书不加空格也行。</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">示例：# 这是一级标题## 这是二级标题### 这是三级标题#### 这是四级标题##### 这是五级标题###### 这是六级标题</span><br></pre></td></tr></table></figure>
-
+<pre><code>示例：# 这是一级标题## 这是二级标题### 这是三级标题#### 这是四级标题##### 这是五级标题###### 这是六级标题</code></pre>
 <p><strong>效果如下：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 如上是一级标题</span><br><span class="line"></span><br><span class="line">## 这是二级标题</span><br><span class="line"></span><br><span class="line">### 这是三级标题</span><br><span class="line"></span><br><span class="line">#### 这是四级标题</span><br><span class="line"></span><br><span class="line">##### 这是五级标题</span><br><span class="line"></span><br><span class="line">###### 这是六级标题</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="hexo"># 如上是一级标题
 
+## 这是二级标题
+
+### 这是三级标题
+
+#### 这是四级标题
+
+##### 这是五级标题
+
+###### 这是六级标题
+</code></pre>
 <h2 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h2><blockquote>
 <p><strong>加粗</strong><br>要加粗的文字左右分别用两个<em>号包起来<strong>斜体</strong>要倾斜的文字左右分别用一个</em>号包起来<br><strong>斜体加粗</strong><br>要倾斜和加粗的文字左右分别用三个*号包起来<br><strong>删除线</strong><br>要加删除线的文字左右分别用两个~~号包起来</p>
 </blockquote>
 <p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**这是加粗的文字***这是倾斜的文字*&#96;***这是斜体加粗的文字***~~这是加删除线的文字~~</span><br></pre></td></tr></table></figure>
-
+<pre><code>**这是加粗的文字***这是倾斜的文字*`***这是斜体加粗的文字***~~这是加删除线的文字~~</code></pre>
 <p>效果如下：<br><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em>`<br><strong>这是斜体加粗的文字</strong><br><del>这是加删除线的文字</del></p>
 <h2 id="三、引用块"><a href="#三、引用块" class="headerlink" title="三、引用块"></a>三、引用块</h2><blockquote>
 <p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;<strong>n</strong>个…<br>貌似可以一直加下去，但没神马卵用</p>
 </blockquote>
 <p><strong>示例</strong>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;这是引用的内容</span><br><span class="line">&gt;&gt;这是引用的内容</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</span><br></pre></td></tr></table></figure>
-
+<pre><code>&gt;这是引用的内容
+&gt;&gt;这是引用的内容
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</code></pre>
 <p>效果如下：</p>
 <blockquote>
 <p>这是引用的内容</p>
@@ -1531,44 +1544,50 @@
 </blockquote>
 <h2 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h2><p>三个或者三个以上的 - 或者 * 都可以。</p>
 <p>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">----</span><br><span class="line">***</span><br><span class="line">*****</span><br></pre></td></tr></table></figure>
-
+<pre><code>---
+----
+***
+*****</code></pre>
 <p>效果如下：<br> 可以看到，显示效果是一样的。</p>
 <hr>
 <hr>
 <hr>
 <hr>
 <h2 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a>五、图片</h2><p>语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">![图片alt](图片地址 &#39;&#39;图片title&#39;&#39;)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br></pre></td></tr></table></figure>
+<pre><code>![图片alt](图片地址 &#39;&#39;图片title&#39;&#39;)
 
+图片alt就是显示在图片下面的文字，相当于对图片内容的解释。
+图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</code></pre>
 <p>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![img][A2DATA](&#x2F;resource&#x2F;image&#x2F;markdown&#x2F;1.png)</span><br></pre></td></tr></table></figure>
-
+<pre><code>![img][A2DATA](/resource/image/markdown/1.png)</code></pre>
 <p>效果如下：</p>
 <p><img src="/resource/image/markdown/111.png" class="lazyload" data-srcset="/resource/image/markdown/111.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- hexo 3</span><br><span class="line">&#123;% asset_img test.jpg This is an test image %&#125; </span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code class="shell">- hexo 3
+&#123;% asset_img test.jpg This is an test image %&#125; </code></pre>
 <p><strong>上传本地图片直接点击导航栏的图片标志，选择图片即可</strong></p>
 <h2 id="六、超链接"><a href="#六、超链接" class="headerlink" title="六、超链接"></a>六、超链接</h2><p>语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[超链接名](超链接地址 &quot;超链接title&quot;)</span><br><span class="line">title可加可不加</span><br></pre></td></tr></table></figure>
-
+<pre><code>[超链接名](超链接地址 &quot;超链接title&quot;)
+title可加可不加</code></pre>
 <p>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[简书](http:&#x2F;&#x2F;jianshu.com)</span><br><span class="line">[百度](http:&#x2F;&#x2F;baidu.com)</span><br></pre></td></tr></table></figure>
-
+<pre><code>[简书](http://jianshu.com)
+[百度](http://baidu.com)</code></pre>
 <p>效果如下：</p>
 <p><a target="_blank" rel="noopener" href="https://www.jianshu.com/">简书</a><br><a target="_blank" rel="noopener" href="http://baidu.com/">百度</a></p>
 <p>注：Markdown本身语法不支持链接在新页面中打开，貌似简书做了处理，是可以的。别的平台可能就不行了，如果想要在新页面中打开的话可以用html语言的a标签代替。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href&#x3D;&quot;超链接地址&quot; target&#x3D;&quot;_blank&quot;&gt;超链接名&lt;&#x2F;a&gt;</span><br><span class="line"></span><br><span class="line">示例</span><br><span class="line">&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;www.baidu.com&quot; target&#x3D;&quot;_blank&quot;&gt;百度&lt;&#x2F;a&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;a href=&quot;超链接地址&quot; target=&quot;_blank&quot;&gt;超链接名&lt;/a&gt;
 
+示例
+&lt;a href=&quot;https://www.baidu.com&quot; target=&quot;_blank&quot;&gt;百度&lt;/a&gt;</code></pre>
 <hr>
 <h2 id="七、列表"><a href="#七、列表" class="headerlink" title="七、列表"></a>七、列表</h2><ul>
 <li><h5 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h5></li>
 </ul>
 <p>语法：<br> 无序列表用 - + * 任何一种都可以</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- 列表内容</span><br><span class="line">+ 列表内容</span><br><span class="line">* 列表内容</span><br><span class="line"></span><br><span class="line">注意：- + * 跟内容之间都要有一个空格</span><br></pre></td></tr></table></figure>
+<pre><code>- 列表内容
++ 列表内容
+* 列表内容
 
+注意：- + * 跟内容之间都要有一个空格</code></pre>
 <p>效果如下：</p>
 <ul>
 <li><p>列表内容</p>
@@ -1580,8 +1599,11 @@
 <li><h5 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h5></li>
 </ul>
 <p>语法：<br> 数字加点</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.列表内容</span><br><span class="line">2.列表内容</span><br><span class="line">3.列表内容</span><br><span class="line"></span><br><span class="line">注意：序号跟内容之间要有空格</span><br></pre></td></tr></table></figure>
+<pre><code>1.列表内容
+2.列表内容
+3.列表内容
 
+注意：序号跟内容之间要有空格</code></pre>
 <p>效果如下：</p>
 <p>1.列表内容<br> 2.列表内容<br> 3.列表内容</p>
 <ul>
@@ -1617,11 +1639,23 @@
 </li>
 </ol>
 <h2 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h2><p>语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|:--:|---:</span><br><span class="line">内容|内容|内容</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容。</span><br><span class="line">- 有一个就行，为了对齐，多加了几个</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line">注：原生的语法两边都要用 | 包起来。此处省略</span><br></pre></td></tr></table></figure>
+<pre><code>表头|表头|表头
+---|:--:|---:
+内容|内容|内容
+内容|内容|内容
 
+第二行分割表头和内容。
+- 有一个就行，为了对齐，多加了几个
+文字默认居左
+-两边加：表示文字居中
+-右边加：表示文字居右
+注：原生的语法两边都要用 | 包起来。此处省略</code></pre>
 <p>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">姓名|技能|排行</span><br><span class="line">|--|:--:|--:|</span><br><span class="line">|欢迎|关注|微信|</span><br><span class="line">|公号|平台|A2DATA|</span><br><span class="line">|我们|一起|加油|</span><br></pre></td></tr></table></figure>
-
+<pre><code>姓名|技能|排行
+|--|:--:|--:|
+|欢迎|关注|微信|
+|公号|平台|A2DATA|
+|我们|一起|加油|</code></pre>
 <p>效果如下：</p>
 <table>
 <thead>
@@ -1648,41 +1682,70 @@
 </tr>
 </tbody></table>
 <h2 id="九、代码"><a href="#九、代码" class="headerlink" title="九、代码"></a>九、代码</h2><p>语法：<br> 单行代码：代码之间分别用一个反引号包起来</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#96;代码内容&#96;</span><br></pre></td></tr></table></figure>
-
+<pre><code>    `代码内容`</code></pre>
 <p>代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">(```)</span></span><br><span class="line">  <span class="string">代码...</span></span><br><span class="line">  <span class="string">代码...</span></span><br><span class="line">  <span class="string">代码...</span></span><br><span class="line"><span class="string">(```)</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="yaml">(```)
+  代码...
+  代码...
+  代码...
+(```)</code></pre>
 <blockquote>
 <p>注：为了防止转译，前后三个反引号处加了小括号，实际是没有的。这里只是用来演示，实际中去掉两边小括号即可。</p>
 </blockquote>
 <p>示例：</p>
 <p>单行代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#96;create database hero;&#96;</span><br></pre></td></tr></table></figure>
-
+<pre><code>`create database hero;`</code></pre>
 <p>代码块</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(&#96;&#96;&#96;)</span><br><span class="line">    function fun()&#123;</span><br><span class="line">         echo &quot;这是一句非常牛逼的代码&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    fun();</span><br><span class="line">(&#96;&#96;&#96;)</span><br></pre></td></tr></table></figure>
-
+<pre><code>(```)
+    function fun()&#123;
+         echo &quot;这是一句非常牛逼的代码&quot;;
+    &#125;
+    fun();
+(```)</code></pre>
 <p>效果如下：</p>
 <p>单行代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database hero;</span><br></pre></td></tr></table></figure>
-
+<pre><code>create database hero;</code></pre>
 <p>代码块</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function fun()&#123;</span><br><span class="line">  echo &quot;这是一句非常牛逼的代码&quot;;</span><br><span class="line">&#125;</span><br><span class="line">fun();</span><br></pre></td></tr></table></figure>
-
+<pre><code>function fun()&#123;
+  echo &quot;这是一句非常牛逼的代码&quot;;
+&#125;
+fun();</code></pre>
 <h2 id="十、流程图"><a href="#十、流程图" class="headerlink" title="十、流程图"></a>十、流程图</h2><p><img src="https://7.dusays.com/2020/09/14/45808dc7ed10a.png" class="lazyload" data-srcset="https://7.dusays.com/2020/09/14/45808dc7ed10a.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p><strong>横向流程图</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line"></span><br><span class="line">A[方形] --&gt;B(圆角)</span><br><span class="line"></span><br><span class="line">    B --&gt; C&#123;条件a&#125;</span><br><span class="line"></span><br><span class="line">    C --&gt;|a&#x3D;1| D[结果1]</span><br><span class="line"></span><br><span class="line">    C --&gt;|a&#x3D;2| E[结果2]</span><br><span class="line"></span><br><span class="line">    F[横向流程图]</span><br></pre></td></tr></table></figure>
+<pre><code class="mermaid">
+graph LR
 
+A[方形] --&gt;B(圆角)
 
+    B --&gt; C&#123;条件a&#125;
 
+    C --&gt;|a=1| D[结果1]
+
+    C --&gt;|a=2| E[结果2]
+
+    F[横向流程图]</code></pre>
 <p><strong>竖向流程图</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">graph TD</span><br><span class="line">A[方形] --&gt;B(圆角)</span><br><span class="line">  B --&gt;C&#123;条件a&#125;</span><br><span class="line">  C --&gt;|a&#x3D;1|D[结果1]</span><br><span class="line">  C --&gt;|a&#x3D;2|E[结果2]</span><br><span class="line">  F[竖向流程图]	</span><br></pre></td></tr></table></figure>
-
+<pre><code class="mermaid">
+graph TD
+A[方形] --&gt;B(圆角)
+  B --&gt;C&#123;条件a&#125;
+  C --&gt;|a=1|D[结果1]
+  C --&gt;|a=2|E[结果2]
+  F[竖向流程图]    </code></pre>
 <p>效果如下：</p>
 <p><img src="/resource/image/markdown/2.png" class="lazyload" data-srcset="/resource/image/markdown/2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="img"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    start[开始] --&gt; input[输入A,B,C]</span><br><span class="line">    input --&gt; conditionA&#123;A是否大于B&#125;</span><br><span class="line">    conditionA -- YES --&gt; conditionC&#123;A是否大于C&#125;</span><br><span class="line">    conditionA -- NO --&gt; conditionB&#123;B是否大于C&#125;</span><br><span class="line">    conditionC -- YES --&gt; printA[输出A]</span><br><span class="line">    conditionC -- NO --&gt; printC[输出C]</span><br><span class="line">    conditionB -- YES --&gt; printB[输出B]</span><br><span class="line">    conditionB -- NO --&gt; printC[输出C]</span><br><span class="line">    printA --&gt; stop[结束]</span><br><span class="line">    printC --&gt; stop</span><br><span class="line">    printB --&gt; stop</span><br></pre></td></tr></table></figure>
-
+<pre><code class="mermaid">graph LR
+    start[开始] --&gt; input[输入A,B,C]
+    input --&gt; conditionA&#123;A是否大于B&#125;
+    conditionA -- YES --&gt; conditionC&#123;A是否大于C&#125;
+    conditionA -- NO --&gt; conditionB&#123;B是否大于C&#125;
+    conditionC -- YES --&gt; printA[输出A]
+    conditionC -- NO --&gt; printC[输出C]
+    conditionB -- YES --&gt; printB[输出B]
+    conditionB -- NO --&gt; printC[输出C]
+    printA --&gt; stop[结束]
+    printC --&gt; stop
+    printB --&gt; stop</code></pre>
 
   
   
@@ -1759,7 +1822,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.8k words</p>
+      <p>1.7k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2876,6 +2939,8 @@
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2916,6 +2981,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3229,6 +3301,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

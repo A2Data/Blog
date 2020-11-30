@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1488,26 +1492,31 @@
 <p>UPDATE：修改数据记录。</p>
 <p>DELETE：删除数据库中不必再继续保留的记录。</p>
 </blockquote>
-<h1 id="1、插入数据"><a href="#1、插入数据" class="headerlink" title="1、插入数据"></a>1、插入数据</h1><h2 id="形式一"><a href="#形式一" class="headerlink" title="形式一"></a>形式一</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> TABLE_NAME (字段名<span class="number">1</span>,字段名<span class="number">2</span>,.....) <span class="keyword">VALUES</span>(数值<span class="number">1</span>,数值<span class="number">2</span>,....);</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">user</span>(user_id,user_name,age,remove,tel,sex)</span><br><span class="line"><span class="keyword">VALUES</span>(<span class="number">001</span>,<span class="string">&quot;A2Data&quot;</span>,<span class="number">22</span>,<span class="number">0</span>,<span class="number">18511990011</span>,<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="1、插入数据"><a href="#1、插入数据" class="headerlink" title="1、插入数据"></a>1、插入数据</h1><h2 id="形式一"><a href="#形式一" class="headerlink" title="形式一"></a>形式一</h2><pre><code class="sql">INSERT INTO TABLE_NAME (字段名1,字段名2,.....) VALUES(数值1,数值2,....);
 
-<h2 id="形式二"><a href="#形式二" class="headerlink" title="形式二"></a>形式二</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> TABLE_NAME <span class="keyword">SET</span> 字段名<span class="number">1</span> = 数值<span class="number">1</span>, 字段名<span class="number">2</span> = 数值<span class="number">2</span>,....;</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">user</span> <span class="keyword">SET</span> user_id=<span class="number">001</span>,user_name=<span class="string">&quot;A2Data&quot;</span>,age=<span class="number">22</span>,remove=<span class="number">0</span>,tel=<span class="number">18511990011</span>,sex=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+案例：
+INSERT INTO user(user_id,user_name,age,remove,tel,sex)
+VALUES(001,&quot;A2Data&quot;,22,0,18511990011,0);
 
+</code></pre>
+<h2 id="形式二"><a href="#形式二" class="headerlink" title="形式二"></a>形式二</h2><pre><code class="sql">INSERT INTO TABLE_NAME SET 字段名1 = 数值1, 字段名2 = 数值2,....;
 
+案例：
+INSERT INTO user SET user_id=001,user_name=&quot;A2Data&quot;,age=22,remove=0,tel=18511990011,sex=0;
 
-<h1 id="2、修改数据"><a href="#2、修改数据" class="headerlink" title="2、修改数据"></a>2、修改数据</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> TABLE_NAME <span class="keyword">SET</span> 字段名<span class="number">1</span> = 新数值<span class="number">1</span>,字段名<span class="number">2</span> = 新数值<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line"><span class="keyword">UPDATE</span> <span class="keyword">USER</span> <span class="keyword">SET</span> age = <span class="number">25</span> , sex = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+</code></pre>
+<h1 id="2、修改数据"><a href="#2、修改数据" class="headerlink" title="2、修改数据"></a>2、修改数据</h1><pre><code class="sql">UPDATE TABLE_NAME SET 字段名1 = 新数值1,字段名2 = 新数值2;
 
-
-
+案例：
+UPDATE USER SET age = 25 , sex = 1;</code></pre>
 <h1 id="3、解决重复记录的更新"><a href="#3、解决重复记录的更新" class="headerlink" title="3、解决重复记录的更新"></a>3、解决重复记录的更新</h1><p>使用<strong>on duplicate key update</strong>可以解决插入或更改重复主键，即当insert内容和原表内容存在重复记录时，执行update操作。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> table_name1 <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> table_name2 <span class="keyword">ON</span> <span class="keyword">DUPLICATE</span> <span class="keyword">KEY</span> <span class="keyword">UPDATE</span> column_name = <span class="keyword">VALUES</span>(column_name);</span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">INSERT INTO table_name1 SELECT * FROM table_name2 ON DUPLICATE KEY UPDATE column_name = VALUES(column_name);</code></pre>
 <p><strong>注意：</strong>在使用on duplicate key update时，表中必须要存在至少一个unique key或者primary key。</p>
 <p>案例：<br>现有表v1和v2如下：</p>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200615211933034.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200615211933034.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200615211933034" style="zoom: 50%;" /><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200615211959140.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200615211959140.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200615211959140" style="zoom:50%;" /></p>
 <p>v1表与v2表同时存在id为005的行，且name字段值不一致。</p>
 <p>我们使用on duplicate key update对v1表插入v2内容：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> v1 <span class="keyword">select</span> <span class="keyword">name</span>,tel,remove <span class="keyword">from</span> v2 <span class="keyword">on</span> <span class="keyword">duplicate</span> <span class="keyword">key</span> <span class="keyword">update</span> <span class="keyword">name</span> = <span class="keyword">values</span>(<span class="keyword">name</span>);</span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">insert into v1 select name,tel,remove from v2 on duplicate key update name = values(name);</code></pre>
 <p>查看执行后的v1表内容，可以看到id为005的记录，其name字段值已修改为v2的相应记录：</p>
 <img src="https://gitee.com/DataITems/cdn/raw/master/image-20200615212924946.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200615212924946.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200615212924946" style="zoom:67%;" />
 
@@ -1515,21 +1524,20 @@
 
 
 
-<h1 id="4、删除数据"><a href="#4、删除数据" class="headerlink" title="4、删除数据"></a>4、删除数据</h1><h2 id="方法一：DELETE"><a href="#方法一：DELETE" class="headerlink" title="方法一：DELETE"></a>方法一：DELETE</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> TABLE_NAME</span><br><span class="line">[<span class="keyword">WHERE</span> 子句]</span><br><span class="line">如不加<span class="keyword">WHERE</span>子句则表中数据全部删除</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> <span class="keyword">user</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="4、删除数据"><a href="#4、删除数据" class="headerlink" title="4、删除数据"></a>4、删除数据</h1><h2 id="方法一：DELETE"><a href="#方法一：DELETE" class="headerlink" title="方法一：DELETE"></a>方法一：DELETE</h2><pre><code class="sql">DELETE FROM TABLE_NAME
+[WHERE 子句]
+如不加WHERE子句则表中数据全部删除
 
-
-
+案例：
+DELETE FROM user;</code></pre>
 <h2 id="方法二：TRUNCATE"><a href="#方法二：TRUNCATE" class="headerlink" title="方法二：TRUNCATE"></a>方法二：TRUNCATE</h2><p>TRUNCATE优势：作为DDL语句，比DELETE运行速度更快，且使用资源更少</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> TABLE_NAME</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> <span class="keyword">user</span>;</span><br></pre></td></tr></table></figure>
+<pre><code class="sql">TRUNCATE TABLE TABLE_NAME
 
-
-
-
-
-<h1 id="5、数据库查询"><a href="#5、数据库查询" class="headerlink" title="5、数据库查询"></a>5、数据库查询</h1><h2 id="5-1、基本查询语句"><a href="#5-1、基本查询语句" class="headerlink" title="5.1、基本查询语句"></a>5.1、基本查询语句</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name <span class="keyword">FROM</span> table_name</span><br><span class="line"><span class="keyword">WHERE</span> 条件语句</span><br><span class="line">[<span class="keyword">LIMIT</span> 限制行数]</span><br></pre></td></tr></table></figure>
-
-
-
+案例：
+TRUNCATE TABLE user;</code></pre>
+<h1 id="5、数据库查询"><a href="#5、数据库查询" class="headerlink" title="5、数据库查询"></a>5、数据库查询</h1><h2 id="5-1、基本查询语句"><a href="#5-1、基本查询语句" class="headerlink" title="5.1、基本查询语句"></a>5.1、基本查询语句</h2><pre><code class="sql">SELECT column_name FROM table_name
+WHERE 条件语句
+[LIMIT 限制行数]</code></pre>
 <p>WHERE限制条件一览表：</p>
 <table>
 <thead>
@@ -1570,34 +1578,47 @@
 <td></td>
 </tr>
 </tbody></table>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">案例：</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> user_id,user_name <span class="keyword">FROM</span> <span class="keyword">user</span></span><br><span class="line"><span class="keyword">WHERE</span> age &gt; <span class="number">20</span> <span class="keyword">and</span> tel <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span></span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+<pre><code class="sql">案例：
 
+SELECT user_id,user_name FROM user
+WHERE age &gt; 20 and tel IS NOT NULL
+LIMIT 10;</code></pre>
 <img src="https://gitee.com/DataITems/cdn/raw/master/image-20200612100312585.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200612100312585.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612100312585" style="zoom: 50%;" />
 
 <p>别名</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">column_name AS 别名</span><br><span class="line"></span><br><span class="line">table_name AS 别名</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="sql">column_name AS 别名
 
+table_name AS 别名
+</code></pre>
 <p>*注:*WHERE子句中不可使用别名</p>
 <p>GROUP BY：用于对查询结果进行数据分组</p>
 <p>HAVING：用于对分组后的结果进行统计，其后可以跟聚合函数</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">案例：</span><br><span class="line">user表记录了用户所在部门user_dept，筛选出部门平均年龄大于25的结果。</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> user_dept,<span class="keyword">AVG</span>(age) <span class="keyword">as</span> <span class="string">&#x27;年龄&#x27;</span> <span class="keyword">FROM</span> <span class="string">`user`</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> user_dept</span><br><span class="line"><span class="keyword">HAVING</span> <span class="keyword">AVG</span>(age)&gt;<span class="number">25</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="sql">案例：
+user表记录了用户所在部门user_dept，筛选出部门平均年龄大于25的结果。
 
+SELECT user_dept,AVG(age) as &#39;年龄&#39; FROM `user`
+GROUP BY user_dept
+HAVING AVG(age)&gt;25;
+</code></pre>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200612100428397.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200612100428397.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612100428397"></p>
 <p>HAVING语句用于对分组后的结果进行统计</p>
 <p>ORDER BY：对查询结果进行排序,默认为ASC升序，DESC为降序</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">案例：</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> user_id,user_name <span class="keyword">FROM</span> <span class="string">`user`</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> user_name ;</span><br></pre></td></tr></table></figure>
+<pre><code class="sql">案例：
 
+SELECT user_id,user_name FROM `user`
+ORDER BY user_name ;</code></pre>
 <img src="https://gitee.com/DataITems/cdn/raw/master/image-20200612100524629.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200612100524629.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612100524629" style="zoom:50%;" />
 
 
 
 <p>DISTINCT：取消重复的结果</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">案例：</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> user_dept <span class="keyword">FROM</span> <span class="string">`user`</span>;</span><br></pre></td></tr></table></figure>
+<pre><code class="sql">案例：
 
+SELECT DISTINCT user_dept FROM `user`;</code></pre>
 <img src="https://gitee.com/DataITems/cdn/raw/master/image-20200612100558579.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200612100558579.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612100558579" style="zoom:50%;" />
 
-<h2 id="5-2、模糊查询"><a href="#5-2、模糊查询" class="headerlink" title="5.2、模糊查询"></a>5.2、模糊查询</h2><h3 id="LIKE"><a href="#LIKE" class="headerlink" title="LIKE"></a>LIKE</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name <span class="keyword">FROM</span> table_name</span><br><span class="line"><span class="keyword">WHERE</span> column_name <span class="keyword">LIKE</span> 模式字符串</span><br></pre></td></tr></table></figure>
-
+<h2 id="5-2、模糊查询"><a href="#5-2、模糊查询" class="headerlink" title="5.2、模糊查询"></a>5.2、模糊查询</h2><h3 id="LIKE"><a href="#LIKE" class="headerlink" title="LIKE"></a>LIKE</h3><pre><code class="sql">SELECT column_name FROM table_name
+WHERE column_name LIKE 模式字符串</code></pre>
 <table>
 <thead>
 <tr>
@@ -1614,15 +1635,19 @@
 <td>匹配任意单个字符串，_表示1个长度</td>
 </tr>
 </tbody></table>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">案例：</span><br><span class="line">查询user表中所有姓名为A开头的人员信息。</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="keyword">user</span></span><br><span class="line"><span class="keyword">WHERE</span> user_name <span class="keyword">like</span> <span class="string">&#x27;A%&#x27;</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="sql">案例：
+查询user表中所有姓名为A开头的人员信息。
 
+SELECT * FROM user
+WHERE user_name like &#39;A%&#39;;
+</code></pre>
 <img src="https://gitee.com/DataITems/cdn/raw/master/image-20200612100631405.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200612100631405.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612100631405" style="zoom: 67%;" />
 
 
 
 <h3 id="RLIKE、REGEXP"><a href="#RLIKE、REGEXP" class="headerlink" title="RLIKE、REGEXP"></a>RLIKE、REGEXP</h3><p>这两个主要用于在MYSQL中进行正则表达式的书写。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name <span class="keyword">FROM</span> table_name</span><br><span class="line"><span class="keyword">WHERE</span> column_name REGEXP/<span class="keyword">RLIKE</span> 模式字符串;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">SELECT column_name FROM table_name
+WHERE column_name REGEXP/RLIKE 模式字符串;</code></pre>
 <table>
 <thead>
 <tr>
@@ -1655,32 +1680,55 @@
 <td>多个条件间的“或”连接</td>
 </tr>
 </tbody></table>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">案例：</span><br><span class="line">查询user表中姓名存在字段bb的人员。</span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> <span class="keyword">user</span> <span class="keyword">where</span> user_name regexp <span class="string">&#x27;b&#123;2&#125;&#x27;</span>;</span><br><span class="line"></span><br><span class="line">查询user表中姓名为n结尾的人员。</span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> <span class="keyword">user</span> <span class="keyword">where</span> user_name <span class="keyword">rlike</span> <span class="string">&#x27;n$&#x27;</span>;</span><br><span class="line"></span><br><span class="line">查询user表中姓名存在an字段的人员。</span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> <span class="keyword">user</span> <span class="keyword">where</span> user_name <span class="keyword">rlike</span> <span class="string">&#x27;an&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<pre><code class="sql">案例：
+查询user表中姓名存在字段bb的人员。
+select * from user where user_name regexp &#39;b&#123;2&#125;&#39;;
 
+查询user表中姓名为n结尾的人员。
+select * from user where user_name rlike &#39;n$&#39;;
+
+查询user表中姓名存在an字段的人员。
+select * from user where user_name rlike &#39;an&#39;;</code></pre>
 <img src="https://gitee.com/DataITems/cdn/raw/master/image-20200615223316834.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200615223316834.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200615223316834" style="zoom: 67%;" />
 
 
 
 
 
-<h2 id="5-3、存储过程"><a href="#5-3、存储过程" class="headerlink" title="5.3、存储过程"></a>5.3、存储过程</h2><h3 id="存储过程基本结构"><a href="#存储过程基本结构" class="headerlink" title="存储过程基本结构"></a>存储过程基本结构</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">构造存储过程：</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">PROCEDURE</span> 存储体名称(<span class="keyword">IN</span>/<span class="keyword">OUT</span> 参数名 参数类型)</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">存储内容</span><br><span class="line"><span class="keyword">END</span>;</span><br><span class="line"></span><br><span class="line">调用存储过程：</span><br><span class="line"><span class="keyword">CALL</span> 存储体名称(参数)</span><br></pre></td></tr></table></figure>
+<h2 id="5-3、存储过程"><a href="#5-3、存储过程" class="headerlink" title="5.3、存储过程"></a>5.3、存储过程</h2><h3 id="存储过程基本结构"><a href="#存储过程基本结构" class="headerlink" title="存储过程基本结构"></a>存储过程基本结构</h3><pre><code class="sql">构造存储过程：
+CREATE PROCEDURE 存储体名称(IN/OUT 参数名 参数类型)
+BEGIN
+存储内容
+END;
 
+调用存储过程：
+CALL 存储体名称(参数)</code></pre>
+<h3 id="终端运行存储过程"><a href="#终端运行存储过程" class="headerlink" title="终端运行存储过程"></a>终端运行存储过程</h3><pre><code class="sql">案例：
+构造存储体u1，筛选所有部门为R&amp;D的员工。
 
+首先将MYSQL默认结束符进行修改：
+DELIMITER //
 
-<h3 id="终端运行存储过程"><a href="#终端运行存储过程" class="headerlink" title="终端运行存储过程"></a>终端运行存储过程</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">案例：</span><br><span class="line">构造存储体u1，筛选所有部门为R&amp;D的员工。</span><br><span class="line"></span><br><span class="line">首先将MYSQL默认结束符进行修改：</span><br><span class="line">DELIMITER //</span><br><span class="line"></span><br><span class="line">构造存储过程：</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">PROCEDURE</span> U1()</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="keyword">user</span> <span class="keyword">WHERE</span> user_dept = <span class="string">&#x27;R&amp;D&#x27;</span>;</span><br><span class="line"><span class="keyword">END</span></span><br><span class="line">//</span><br><span class="line"></span><br><span class="line">调用存储体：</span><br><span class="line"><span class="keyword">CALL</span> u1()//</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+构造存储过程：
+CREATE PROCEDURE U1()
+BEGIN
+SELECT * FROM user WHERE user_dept = &#39;R&amp;D&#39;;
+END
+//
 
-
-
+调用存储体：
+CALL u1()//
+</code></pre>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200612095224202.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200612095224202.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612095224202"></p>
-<h2 id="5-4、多表查询"><a href="#5-4、多表查询" class="headerlink" title="5.4、多表查询"></a>5.4、多表查询</h2><h3 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> TABLE_A <span class="keyword">INNER</span> <span class="keyword">JOIN</span> TABLE_B </span><br><span class="line"><span class="keyword">ON</span> TABLE_A.COLUMN 比较运算符 TABLE_B.COLUMN;</span><br></pre></td></tr></table></figure>
-
+<h2 id="5-4、多表查询"><a href="#5-4、多表查询" class="headerlink" title="5.4、多表查询"></a>5.4、多表查询</h2><h3 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h3><pre><code class="sql">SELECT * FROM TABLE_A INNER JOIN TABLE_B 
+ON TABLE_A.COLUMN 比较运算符 TABLE_B.COLUMN;</code></pre>
 <p>内连接用于比较并返回满足连接条件的数据行，结果取交集。</p>
 <p>inner join示意图：</p>
 <img src="https://gitee.com/DataITems/cdn/raw/master/image-20200616222620841.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200616222620841.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616222620841" style="zoom: 33%;" />
 
 <p><strong>注意：</strong>如果两边的表行数不一致，可能会出现丢失数据。</p>
-<h3 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> TABLE_A <span class="keyword">LEFT</span>|<span class="keyword">RIGHT</span>|<span class="keyword">FULL</span> <span class="keyword">JOIN</span> TABLE_B</span><br><span class="line"><span class="keyword">ON</span> TABLE_A.COLUMN 比较运算符 TABLE_B.COLUMN;</span><br></pre></td></tr></table></figure>
-
+<h3 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h3><pre><code class="sql">SELECT * FROM TABLE_A LEFT|RIGHT|FULL JOIN TABLE_B
+ON TABLE_A.COLUMN 比较运算符 TABLE_B.COLUMN;</code></pre>
 <p>外连接的两个表有主从之分，主表全部保存，从表适配保存。</p>
 <p>full outer join示意图：</p>
 <img src="https://gitee.com/DataITems/cdn/raw/master/image-20200616223251275.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200616223251275.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616223251275" style="zoom: 50%;" />
@@ -1692,8 +1740,11 @@
 
 
 
-<h1 id="6、锁表"><a href="#6、锁表" class="headerlink" title="6、锁表"></a>6、锁表</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">锁表；</span><br><span class="line"><span class="keyword">LOCK</span> <span class="keyword">TABLES</span> table_name LOCK_TYPE</span><br><span class="line"></span><br><span class="line">解锁：</span><br><span class="line"><span class="keyword">UNLOCK</span> <span class="keyword">TABLES</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="6、锁表"><a href="#6、锁表" class="headerlink" title="6、锁表"></a>6、锁表</h1><pre><code class="sql">锁表；
+LOCK TABLES table_name LOCK_TYPE
 
+解锁：
+UNLOCK TABLES;</code></pre>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200616123547201.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200616123547201.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616123547201"></p>
 <p>Lock_type包含read和write等。</p>
 <p>锁为read类型的表，可读但不可写；其他会话对该表可读，但写入需要等到解锁后：</p>
@@ -1701,8 +1752,13 @@
 <p>锁为write类型的表，可读也可写；但其他会话对该表的读或写需要等到解锁以后：</p>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200616124427459.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200616124427459.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616124427459"></p>
 <h1 id="7、MYSQL慢查询：EXPLAIN"><a href="#7、MYSQL慢查询：EXPLAIN" class="headerlink" title="7、MYSQL慢查询：EXPLAIN"></a>7、MYSQL慢查询：EXPLAIN</h1><p>explain语句用于分析MYSQL的查询性能，可以显示MySQL如何使用索引等来处理select语句以及连接表。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">用<span class="keyword">explain</span>查看查询是否使用索引：</span><br><span class="line"></span><br><span class="line"><span class="keyword">EXPLAIN</span> <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> table_name <span class="keyword">WHERE</span> 查询条件；</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line">对表Sheet1建立索引i1后，用<span class="keyword">explain</span>查看任意查询情况：</span><br><span class="line"><span class="keyword">explain</span> <span class="keyword">select</span> * <span class="keyword">from</span> Sheet1 <span class="keyword">where</span> <span class="built_in">number</span> = <span class="number">1601</span>;</span><br></pre></td></tr></table></figure>
+<pre><code class="sql">用explain查看查询是否使用索引：
 
+EXPLAIN SELECT * FROM table_name WHERE 查询条件；
+
+案例：
+对表Sheet1建立索引i1后，用explain查看任意查询情况：
+explain select * from Sheet1 where number = 1601;</code></pre>
 <p>explain查询结果type为ref，即使用了索引查询，而非全表遍历查询all；所使用的索引(possible keys/key)为i1：</p>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200616213133759.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200616213133759.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616213133759"></p>
 
@@ -1718,7 +1774,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\773d5f8c.html" title="1.DBeaver安装" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200502181911650.png" /><span class="title">1.DBeaver安装</span><span class="excerpt">DBeaver安装步骤</span></a><a class="item" href="\posts\4354b039.html" title="1.认识Mysql" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/20200610232427.png" /><span class="title">1.认识Mysql</span><span class="excerpt">认识mysql！</span></a><a class="item" href="\posts\b794162c.html" title="2.数据库操作-DDL" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/image-20200421154433187.png" /><span class="title">2.数据库操作-DDL</span><span class="excerpt">数据库操作DDL</span></a><a class="item" href="\posts\f8d580eb.html" title="4.数据库操作-DCL" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614195339691.png" /><span class="title">4.数据库操作-DCL</span><span class="excerpt">数据库操作DCL</span></a><a class="item" href="\posts\e4f3239b.html" title="5.数据库操作-TCL" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614215919792.png" /><span class="title">5.数据库操作-TCL</span><span class="excerpt">数据库操作TCL</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\773d5f8c.html" title="1.DBeaver安装" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200502181911650.png" /><span class="title">1.DBeaver安装</span><span class="excerpt">DBeaver安装步骤</span></a><a class="item" href="\posts\4354b039.html" title="1.认识Mysql" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/20200610232427.png" /><span class="title">1.认识Mysql</span><span class="excerpt">认识mysql！</span></a><a class="item" href="\posts\f8d580eb.html" title="4.数据库操作-DCL" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614195339691.png" /><span class="title">4.数据库操作-DCL</span><span class="excerpt">数据库操作DCL</span></a><a class="item" href="\posts\b794162c.html" title="2.数据库操作-DDL" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/image-20200421154433187.png" /><span class="title">2.数据库操作-DDL</span><span class="excerpt">数据库操作DDL</span></a><a class="item" href="\posts\e4f3239b.html" title="5.数据库操作-TCL" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614215919792.png" /><span class="title">5.数据库操作-TCL</span><span class="excerpt">数据库操作TCL</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1862,12 +1918,16 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/4a17b156.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Hello World</p>
-          <p class='content'>Hexo 初始页面。
+        <a class='prev' href='/posts/f8d580eb.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>4.数据库操作-DCL</p>
+          <p class='content'>数据库操作DCL
 
 
-Welcome to Hexo! This is your very first post. Check documentation for more info. If...</p>
+DCL
+DCL（Data Control Language），数据库控制语言。
+主要用途：对数据库访问权限进行控制的指令。
+操纵命令：GRANT、REVOKE
+GRANT：...</p>
         </a>
       
       
@@ -2893,6 +2953,8 @@ DDL（Data Definition Language）是连接存储世界与现实世界的高铁�
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2933,6 +2995,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3246,6 +3315,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1499,10 +1503,55 @@
 <p>String substring(int start,int end) — 从s-e 截取，包括s 不包括e</p>
 </blockquote>
 <p><strong>统计录入大小写数字</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/2.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;请输入一个字符串数据：&quot;</span>);</span><br><span class="line">        String s = sc.nextLine();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//定义统计变量</span></span><br><span class="line">        <span class="keyword">int</span> BigCount = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> SmaCount = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> numberCount = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//遍历字符</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;s.length() ; i++) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">char</span> ch = s.charAt(i);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (ch &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; ch&lt;= <span class="string">&#x27;Z&#x27;</span>) &#123;</span><br><span class="line">                BigCount++;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(ch &gt;= <span class="string">&#x27;a&#x27;</span> &amp;&amp; ch&lt;= <span class="string">&#x27;z&#x27;</span>)&#123;</span><br><span class="line">                SmaCount++;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span> (ch&gt;=<span class="string">&#x27;0&#x27;</span> &amp;&amp; ch&lt;=<span class="string">&#x27;9&#x27;</span>)&#123;</span><br><span class="line">                numberCount++;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;该字符&quot;</span>+ch+<span class="string">&quot;非法&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;大写字符&quot;</span>+BigCount);</span><br><span class="line">        System.out.println(<span class="string">&quot;小写字符&quot;</span>+SmaCount);</span><br><span class="line">        System.out.println(<span class="string">&quot;数字字符&quot;</span>+numberCount);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package myTest;
+
+import java.util.Scanner;
+
+/**
+ * Created by JackFeng on 2020/3/2.
+ */
+
+public class StringTest &#123;
+    public static void main(String[] args) &#123;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println(&quot;请输入一个字符串数据：&quot;);
+        String s = sc.nextLine();
+
+        //定义统计变量
+        int BigCount = 0;
+        int SmaCount = 0;
+        int numberCount = 0;
+
+        //遍历字符
+
+        for (int i = 0; i &lt;s.length() ; i++) &#123;
+
+            char ch = s.charAt(i);
+
+            if (ch &gt;= &#39;A&#39; &amp;&amp; ch&lt;= &#39;Z&#39;) &#123;
+                BigCount++;
+            &#125;else if(ch &gt;= &#39;a&#39; &amp;&amp; ch&lt;= &#39;z&#39;)&#123;
+                SmaCount++;
+            &#125;else if (ch&gt;=&#39;0&#39; &amp;&amp; ch&lt;=&#39;9&#39;)&#123;
+                numberCount++;
+            &#125;else &#123;
+                System.out.println(&quot;该字符&quot;+ch+&quot;非法&quot;);
+            &#125;
+
+        &#125;
+
+        System.out.println(&quot;大写字符&quot;+BigCount);
+        System.out.println(&quot;小写字符&quot;+SmaCount);
+        System.out.println(&quot;数字字符&quot;+numberCount);
 
 
 
+    &#125;
+&#125;
+
+</code></pre>
 <h3 id="转换功能"><a href="#转换功能" class="headerlink" title="转换功能"></a>转换功能</h3><blockquote>
 <p>char[ ]  toCharArray()  —- 把字符串转换为字符数组</p>
 <p>String toLlowerCase()  —- 把字符串转换为小写字符串 </p>
@@ -1524,8 +1573,87 @@
 </ul>
 </blockquote>
 <p><strong>实现字符串反转</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/2.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 键盘录入：abc 输出 cba</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* 反转方法：</span></span><br><span class="line"><span class="comment">*   A： 把字符串倒着遍历，得到每一个字符拼接成字符串</span></span><br><span class="line"><span class="comment">*   B： 把字符串转换成字符数组，然后对字符数组进行反转，最后把字符数组转换为字符串</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringTest1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;请输入一个字符串：&quot;</span>);</span><br><span class="line">        String s = sc.nextLine();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 调用方法A</span></span><br><span class="line"><span class="comment">//        String result = reverse(s);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//调用方法B</span></span><br><span class="line">        String result = reFan(s);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//输出结果</span></span><br><span class="line">        System.out.println(<span class="string">&quot;result:&quot;</span>+result);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 方案A</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">static</span>  String  <span class="title">reverse</span> <span class="params">(String s)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        String ss = <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 倒着遍历</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = s.length()-<span class="number">1</span>; i &gt;=<span class="number">0</span> ; i--) &#123;</span><br><span class="line">            ss+=s.charAt(i);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ss;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 方案B</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">static</span>  String <span class="title">reFan</span><span class="params">( String s)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 把字符串转换为字符数组</span></span><br><span class="line">        <span class="keyword">char</span>[] chs = s.toCharArray();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> start = <span class="number">0</span>,end = chs.length-<span class="number">1</span>; start &lt;=end ; start++,end--) &#123;</span><br><span class="line">            <span class="keyword">char</span> temp = chs[start];</span><br><span class="line">             chs[start] = chs[end];</span><br><span class="line">            chs[end] = temp;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 把字符数组转换为字符串</span></span><br><span class="line">        String ss = <span class="keyword">new</span> String(chs);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ss;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package myTest;
 
+import java.util.Scanner;
+
+/**
+ * Created by JackFeng on 2020/3/2.
+ */
+
+
+/*
+* 键盘录入：abc 输出 cba
+*
+* 反转方法：
+*   A： 把字符串倒着遍历，得到每一个字符拼接成字符串
+*   B： 把字符串转换成字符数组，然后对字符数组进行反转，最后把字符数组转换为字符串
+*
+* */
+
+
+public class StringTest1 &#123;
+
+    public static void main(String[] args) &#123;
+
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println(&quot;请输入一个字符串：&quot;);
+        String s = sc.nextLine();
+
+        // 调用方法A
+//        String result = reverse(s);
+
+        //调用方法B
+        String result = reFan(s);
+
+        //输出结果
+        System.out.println(&quot;result:&quot;+result);
+
+
+
+
+    &#125;
+
+    // 方案A
+    public  static  String  reverse (String s)&#123;
+
+        String ss = &quot;&quot;;
+
+        // 倒着遍历
+        for (int i = s.length()-1; i &gt;=0 ; i--) &#123;
+            ss+=s.charAt(i);
+        &#125;
+
+        return ss;
+    &#125;
+
+    // 方案B
+
+    public  static  String reFan( String s)&#123;
+
+        // 把字符串转换为字符数组
+        char[] chs = s.toCharArray();
+
+        for (int start = 0,end = chs.length-1; start &lt;=end ; start++,end--) &#123;
+            char temp = chs[start];
+             chs[start] = chs[end];
+            chs[end] = temp;
+
+        &#125;
+
+        // 把字符数组转换为字符串
+        String ss = new String(chs);
+
+        return ss;
+
+
+    &#125;
+
+&#125;
+
+</code></pre>
 <h2 id="2、StringBuilder类功能"><a href="#2、StringBuilder类功能" class="headerlink" title="2、StringBuilder类功能"></a>2、StringBuilder类功能</h2><blockquote>
 <p>StringBuilder : 可变的字符串，字符串缓冲区类</p>
 <ul>
@@ -1569,8 +1697,53 @@
 <li>StringBuilder (String str)  —– 构造方法</li>
 </ul>
 </blockquote>
-<h3 id="键盘录入对称判断"><a href="#键盘录入对称判断" class="headerlink" title="键盘录入对称判断"></a>键盘录入对称判断</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/2.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 判断一个字符串是否是对称字符串</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* 例如 abc 不是  aba  abba aaa 是对称字符串</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringBuilderDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 键盘录入</span></span><br><span class="line"></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;请输入一个字符串：&quot;</span>);</span><br><span class="line">        String s = sc.nextLine();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 方法实现</span></span><br><span class="line">        <span class="comment">// 调用方法</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">boolean</span> b = isDuiChen(s);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;b:&quot;</span>+b);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">static</span>  <span class="keyword">boolean</span> <span class="title">isDuiChen</span><span class="params">(String s)</span></span>&#123;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder(s);</span><br><span class="line">        sb.reverse();</span><br><span class="line">        String result = sb.toString();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result.equals(s);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="键盘录入对称判断"><a href="#键盘录入对称判断" class="headerlink" title="键盘录入对称判断"></a>键盘录入对称判断</h3><pre><code class="java">package myTest;
 
+import java.util.Scanner;
+
+/**
+ * Created by JackFeng on 2020/3/2.
+ */
+
+
+/*
+* 判断一个字符串是否是对称字符串
+*
+* 例如 abc 不是  aba  abba aaa 是对称字符串
+*
+* */
+public class StringBuilderDemo &#123;
+    public static void main(String[] args) &#123;
+        // 键盘录入
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println(&quot;请输入一个字符串：&quot;);
+        String s = sc.nextLine();
+
+        // 方法实现
+        // 调用方法
+
+        boolean b = isDuiChen(s);
+
+        System.out.println(&quot;b:&quot;+b);
+
+
+
+
+    &#125;
+
+    public  static  boolean isDuiChen(String s)&#123;
+        StringBuilder sb = new StringBuilder(s);
+        sb.reverse();
+        String result = sb.toString();
+
+        return result.equals(s);
+
+
+    &#125;
+
+&#125;
+</code></pre>
 <h2 id="3、对象数组"><a href="#3、对象数组" class="headerlink" title="3、对象数组"></a>3、对象数组</h2><blockquote>
 <p>对象数组练习：</p>
 <ul>
@@ -1581,11 +1754,88 @@
 <li>遍历学生数组</li>
 </ul>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.datascience.myArray;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/2.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建学生数组</span></span><br><span class="line">        Student[] students = <span class="keyword">new</span> Student[<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建学生对象</span></span><br><span class="line">        Student s1 = <span class="keyword">new</span> Student(<span class="string">&quot;荣耀王者&quot;</span>, <span class="number">50</span>);</span><br><span class="line">        Student s2 = <span class="keyword">new</span> Student(<span class="string">&quot;星耀&quot;</span>, <span class="number">10</span>);</span><br><span class="line">        Student s3 = <span class="keyword">new</span> Student(<span class="string">&quot;王者&quot;</span>, <span class="number">20</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//学生对象  作为元素赋值给学生数组</span></span><br><span class="line">        students[<span class="number">0</span>] = s1;</span><br><span class="line">        students[<span class="number">1</span>] = s2;</span><br><span class="line">        students[<span class="number">2</span>] = s3;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//遍历学生数组</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;students.length ; i++) &#123;</span><br><span class="line">            Student s = students[i];</span><br><span class="line">            System.out.println(s); <span class="comment">//这样输出的是地址值</span></span><br><span class="line"></span><br><span class="line">            System.out.println(s.getName()+<span class="string">&quot;=====&quot;</span>+s.getAge());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package com.datascience.myArray;
 
+/**
+ * Created by JackFeng on 2020/3/2.
+ */
+
+
+
+public class StudentDemo &#123;
+
+    public static void main(String[] args) &#123;
+
+        // 创建学生数组
+        Student[] students = new Student[3];
+
+        //创建学生对象
+        Student s1 = new Student(&quot;荣耀王者&quot;, 50);
+        Student s2 = new Student(&quot;星耀&quot;, 10);
+        Student s3 = new Student(&quot;王者&quot;, 20);
+
+        //学生对象  作为元素赋值给学生数组
+        students[0] = s1;
+        students[1] = s2;
+        students[2] = s3;
+
+        //遍历学生数组
+
+        for (int i = 0; i &lt;students.length ; i++) &#123;
+            Student s = students[i];
+            System.out.println(s); //这样输出的是地址值
+
+            System.out.println(s.getName()+&quot;=====&quot;+s.getAge());
+        &#125;
+
+
+
+    &#125;
+&#125;
+</code></pre>
 <p><strong>学生类</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.datascience.myArray;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/2.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">// alt + insert 可以快速生成 get/set 方法等</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(String name,<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package com.datascience.myArray;
 
+/**
+ * Created by JackFeng on 2020/3/2.
+ */
+
+ // alt + insert 可以快速生成 get/set 方法等
+
+
+
+public class Student &#123;
+
+    private String name;
+    private int age;
+
+    public Student(String name,int age) &#123;
+        this.name = name;
+        this.age = age;
+
+    &#125;
+
+    public Student() &#123;
+    &#125;
+
+    public String getName() &#123;
+        return name;
+    &#125;
+
+    public void setName(String name) &#123;
+        this.name = name;
+    &#125;
+
+    public int getAge() &#123;
+        return age;
+    &#125;
+
+    public void setAge(int age) &#123;
+        this.age = age;
+    &#125;
+&#125;
+
+</code></pre>
 <h2 id="4、集合ArrayList"><a href="#4、集合ArrayList" class="headerlink" title="4、集合ArrayList"></a>4、集合ArrayList</h2><blockquote>
 <p>ArrayList<E>：</p>
 <ul>
@@ -1623,11 +1873,175 @@
 <li>size()  + get 方法</li>
 </ul>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.myArray;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayListDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建集合对象</span></span><br><span class="line">        ArrayList&lt;Object&gt; array = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 这里如果是String 接受就是String Object 接受就是Object</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// add(E e) 添加元素</span></span><br><span class="line">        array.add(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">        array.add(<span class="string">&quot;world&quot;</span>);</span><br><span class="line">        array.add(<span class="string">&quot;Data&quot;</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(array);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 在指定索引处添加一个元素</span></span><br><span class="line">        <span class="comment">// 第一个位置添加  Science</span></span><br><span class="line"></span><br><span class="line">        array.add(<span class="number">1</span>,<span class="string">&quot;Science&quot;</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;====&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;array&quot;</span>+ array);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取元素  get</span></span><br><span class="line"></span><br><span class="line">        System.out.println(array.get(<span class="number">1</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 集合长度 size</span></span><br><span class="line">        System.out.println(<span class="string">&quot;集合的长度：&quot;</span>+array.size());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 删除元素 remove</span></span><br><span class="line">        System.out.println(<span class="string">&quot;remove：&quot;</span>+array.remove(<span class="string">&quot;hello&quot;</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;remove：&quot;</span>+array.remove(<span class="string">&quot;hello&quot;</span>)); <span class="comment">// 不存在则失败，这里就是失败了 false</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//删除指定元素 remove (int index)</span></span><br><span class="line">        System.out.println(<span class="string">&quot;remove：&quot;</span>+ array.remove(<span class="number">1</span>));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 修改元素  set (int index , E element)</span></span><br><span class="line">        System.out.println(<span class="string">&quot;set:&quot;</span>+ array.set(<span class="number">1</span>,<span class="string">&quot;hhha&quot;</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        System.out.println(array);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 添加元素</span></span><br><span class="line">        array.add(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">        array.add(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">        array.add(<span class="string">&quot;acd&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//遍历集合</span></span><br><span class="line">        System.out.println(<span class="string">&quot;================&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;array.size() ; i++) &#123;</span><br><span class="line"></span><br><span class="line">            System.out.println(array.get(i));</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 标准遍历</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;array.size() ; i++) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// object</span></span><br><span class="line">            Object s = array.get(i);</span><br><span class="line">            System.out.println(s);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package com.myArray;
 
+import java.util.ArrayList;
+
+/**
+ * Created by JackFeng on 2020/3/
+ */
+
+
+public class ArrayListDemo &#123;
+
+    public static void main(String[] args) &#123;
+
+        // 创建集合对象
+        ArrayList&lt;Object&gt; array = new ArrayList&lt;&gt;();
+
+        // 这里如果是String 接受就是String Object 接受就是Object
+
+        // add(E e) 添加元素
+        array.add(&quot;hello&quot;);
+        array.add(&quot;world&quot;);
+        array.add(&quot;Data&quot;);
+
+        System.out.println(array);
+
+
+        // 在指定索引处添加一个元素
+        // 第一个位置添加  Science
+
+        array.add(1,&quot;Science&quot;);
+
+        System.out.println(&quot;====&quot;);
+        System.out.println(&quot;array&quot;+ array);
+
+        //获取元素  get
+
+        System.out.println(array.get(1));
+
+        // 集合长度 size
+        System.out.println(&quot;集合的长度：&quot;+array.size());
+
+        // 删除元素 remove
+        System.out.println(&quot;remove：&quot;+array.remove(&quot;hello&quot;));
+        System.out.println(&quot;remove：&quot;+array.remove(&quot;hello&quot;)); // 不存在则失败，这里就是失败了 false
+
+        //删除指定元素 remove (int index)
+        System.out.println(&quot;remove：&quot;+ array.remove(1));
+
+
+        // 修改元素  set (int index , E element)
+        System.out.println(&quot;set:&quot;+ array.set(1,&quot;hhha&quot;));
+
+        //
+        System.out.println(array);
+
+        // 添加元素
+        array.add(&quot;aaa&quot;);
+        array.add(&quot;abc&quot;);
+        array.add(&quot;acd&quot;);
+
+        //遍历集合
+        System.out.println(&quot;================&quot;);
+        for (int i = 0; i &lt;array.size() ; i++) &#123;
+
+            System.out.println(array.get(i));
+
+        &#125;
+
+
+        // 标准遍历
+
+        for (int i = 0; i &lt;array.size() ; i++) &#123;
+
+            // object
+            Object s = array.get(i);
+            System.out.println(s);
+        &#125;
+
+
+
+    &#125;
+&#125;
+
+</code></pre>
 <p><strong>Test</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.myArray;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* 创建一个集合：存储学生对象，学生对象的数据来自键盘录入，最后遍历集合</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* 分析：</span></span><br><span class="line"><span class="comment">*   A： 定义学生类 String name , String age </span></span><br><span class="line"><span class="comment">*   B： 创建集合对象</span></span><br><span class="line"><span class="comment">*   C： 键盘录入数据，创建学生对象，把键盘录入的数据赋值给学生对象的成员变量</span></span><br><span class="line"><span class="comment">*   D： 把学生对象作为元素存储到集合中</span></span><br><span class="line"><span class="comment">*   E： 遍历集合</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayListTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建集合对象</span></span><br><span class="line">        ArrayList&lt;Student&gt; array = <span class="keyword">new</span> ArrayList&lt;Student&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//d调用方法</span></span><br><span class="line"></span><br><span class="line">        addStudent(array);</span><br><span class="line">        addStudent(array);</span><br><span class="line">        addStudent(array);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//遍历集合</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;array.size() ; i++) &#123;</span><br><span class="line"></span><br><span class="line">            Student s = array.get(i);</span><br><span class="line"></span><br><span class="line">            System.out.println(s.getName() +<span class="string">&quot;-------&quot;</span>+ s.getAge());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 提高复用性，键盘录入学生信息 封装成一个方法</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * 两个明确：</span></span><br><span class="line"><span class="comment">    *       返回值类型： void</span></span><br><span class="line"><span class="comment">    *       参数列表：  ArrayList&lt;Student&gt;</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span>  <span class="title">addStudent</span> <span class="params">(ArrayList&lt;Student&gt; array)</span></span>&#123;</span><br><span class="line">        <span class="comment">//键盘录入</span></span><br><span class="line"></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;请输入姓名：&quot;</span>);</span><br><span class="line">        String name = sc.nextLine();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;请输入年龄：&quot;</span>);</span><br><span class="line">        String age = sc.nextLine();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//赋值给成员变量</span></span><br><span class="line">        Student s = <span class="keyword">new</span> Student();</span><br><span class="line">        s.setName(name);</span><br><span class="line">        s.setAge(age);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//学生对象存储到集合中</span></span><br><span class="line"></span><br><span class="line">        array.add(s);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package com.myArray;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/**
+ * Created by JackFeng on 2020/3/
+ */
+
+/*
+*
+* 创建一个集合：存储学生对象，学生对象的数据来自键盘录入，最后遍历集合
+*
+*
+* 分析：
+*   A： 定义学生类 String name , String age 
+*   B： 创建集合对象
+*   C： 键盘录入数据，创建学生对象，把键盘录入的数据赋值给学生对象的成员变量
+*   D： 把学生对象作为元素存储到集合中
+*   E： 遍历集合
+*
+* */
+
+
+public class ArrayListTest &#123;
+    public static void main(String[] args) &#123;
+
+        //创建集合对象
+        ArrayList&lt;Student&gt; array = new ArrayList&lt;Student&gt;();
+
+        //d调用方法
+
+        addStudent(array);
+        addStudent(array);
+        addStudent(array);
+
+        //遍历集合
+
+        for (int i = 0; i &lt;array.size() ; i++) &#123;
+
+            Student s = array.get(i);
+
+            System.out.println(s.getName() +&quot;-------&quot;+ s.getAge());
+        &#125;
+
+
+
+    &#125;
+
+
+    /*
+    * 提高复用性，键盘录入学生信息 封装成一个方法
+    *
+    * 两个明确：
+    *       返回值类型： void
+    *       参数列表：  ArrayList&lt;Student&gt;
+    *
+    *
+    * */
+
+    public static  void  addStudent (ArrayList&lt;Student&gt; array)&#123;
+        //键盘录入
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println(&quot;请输入姓名：&quot;);
+        String name = sc.nextLine();
+
+        System.out.println(&quot;请输入年龄：&quot;);
+        String age = sc.nextLine();
+
+        //赋值给成员变量
+        Student s = new Student();
+        s.setName(name);
+        s.setAge(age);
+
+        //学生对象存储到集合中
+
+        array.add(s);
+    &#125;
+
+&#125;
+
+</code></pre>
 <h3 id="简易学生管理系统"><a href="#简易学生管理系统" class="headerlink" title="简易学生管理系统"></a>简易学生管理系统</h3><blockquote>
 <p>步骤：</p>
 <p>​    A： 定义学生类</p>
@@ -1638,13 +2052,309 @@
 <p>​    F： 删除学生</p>
 </blockquote>
 <p><strong>Student</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myStudentManager;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/4.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* 学生类</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String id;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 姓名</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="keyword">private</span> String age;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String address;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(String id, String name, String age, String address)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="keyword">this</span>.address = address;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(String id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(String age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getAddress</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> address;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAddress</span><span class="params">(String address)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.address = address;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package myStudentManager;
 
+/**
+ * Created by JackFeng on 2020/3/4.
+ */
+
+
+/*
+*
+* 学生类
+* */
+public class Student &#123;
+
+    private String id;
+
+    // 姓名
+    private String name;
+
+    //
+    private String age;
+
+    private String address;
+
+    public Student() &#123;
+    &#125;
+
+    public Student(String id, String name, String age, String address) &#123;
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    &#125;
+
+    public String getId() &#123;
+        return id;
+    &#125;
+
+    public void setId(String id) &#123;
+        this.id = id;
+    &#125;
+
+    public String getName() &#123;
+        return name;
+    &#125;
+
+    public void setName(String name) &#123;
+        this.name = name;
+    &#125;
+
+    public String getAge() &#123;
+        return age;
+    &#125;
+
+    public void setAge(String age) &#123;
+        this.age = age;
+    &#125;
+
+    public String getAddress() &#123;
+        return address;
+    &#125;
+
+    public void setAddress(String address) &#123;
+        this.address = address;
+    &#125;
+&#125;
+
+</code></pre>
 <p><strong>Test</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myStudentManager;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/4.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentMangerTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建集合对象，存储学生数据</span></span><br><span class="line">        ArrayList&lt;Student&gt; array = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 主界面</span></span><br><span class="line">            System.out.println(<span class="string">&quot;---------欢迎来到学生管理系统----------&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;1 查看所有学生&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;2 添加学生&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;3 删除学生&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;4 修改学生&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;5 退出&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;请输入你的选择：&quot;</span>);</span><br><span class="line">            <span class="comment">// 键盘录入</span></span><br><span class="line">            Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            String choice = sc.nextLine();</span><br><span class="line">            <span class="keyword">switch</span> (choice) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&quot;1&quot;</span>:</span><br><span class="line">                    <span class="comment">// 查看所有学生</span></span><br><span class="line">                    findAllStudent(array);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&quot;2&quot;</span>:</span><br><span class="line">                    <span class="comment">// 添加学生</span></span><br><span class="line">                    addStudent(array);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&quot;3&quot;</span>:</span><br><span class="line">                    <span class="comment">//删除学生</span></span><br><span class="line">                    delStudent(array);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&quot;4&quot;</span>:</span><br><span class="line">                    <span class="comment">//修改学生</span></span><br><span class="line">                    updataStudent(array);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&quot;5&quot;</span>:</span><br><span class="line">                    <span class="comment">//退出</span></span><br><span class="line"><span class="comment">//                break; case 穿透</span></span><br><span class="line">                <span class="keyword">default</span>:</span><br><span class="line">                    System.out.println(<span class="string">&quot;谢谢你的使用！&quot;</span>);</span><br><span class="line">                    System.exit(<span class="number">0</span>); <span class="comment">// jvm 退出</span></span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//1 查看所有学生</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">findAllStudent</span><span class="params">(ArrayList&lt;Student&gt; array)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 判断集合中是否有数据，如果没有数据，给出提示，并让该方法不继续往下执行</span></span><br><span class="line">        <span class="keyword">if</span> (array.size()==<span class="number">0</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;不好意思，暂无学生信息，请重新选择你的操作&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span>;<span class="comment">// void 没有返回值 可以直接return</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// \t</span></span><br><span class="line">        System.out.println(<span class="string">&quot;学号\t\t姓名\t年龄\t地址&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.size(); i++) &#123;</span><br><span class="line">            Student s = array.get(i);</span><br><span class="line">            System.out.println(s.getId()+<span class="string">&quot;--&quot;</span>+s.getName()+<span class="string">&quot;--&quot;</span>+s.getAge()+<span class="string">&quot;---&quot;</span>+s.getAddress());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 添加学生</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">addStudent</span><span class="params">(ArrayList&lt;Student&gt; array)</span></span>&#123;</span><br><span class="line">        <span class="comment">//创建键盘录入对象</span></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// id 定义在外边 因为下边还要用</span></span><br><span class="line">        String id;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 代码重复使用</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>)&#123;</span><br><span class="line"></span><br><span class="line">            System.out.println(<span class="string">&quot;请输入 学生ID：&quot;</span>);</span><br><span class="line"><span class="comment">//            String id = sc.nextLine();</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            id = sc.nextLine();</span><br><span class="line">            <span class="comment">//判断学号是否存在</span></span><br><span class="line">            <span class="comment">//  定义标记默认为false</span></span><br><span class="line">            <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;array.size() ; i++) &#123;</span><br><span class="line"></span><br><span class="line">                Student s = array.get(i);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (s.getId().equals(id))&#123;</span><br><span class="line">                    flag = <span class="keyword">true</span>;  <span class="comment">// 说明学号被占用</span></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (flag)&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;你输入的学号已经被占用&quot;</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;请输入 学生姓名：&quot;</span>);</span><br><span class="line">        String name = sc.nextLine();</span><br><span class="line">        System.out.println(<span class="string">&quot;请输入 学生年龄：&quot;</span>);</span><br><span class="line">        String age = sc.nextLine();</span><br><span class="line">        System.out.println(<span class="string">&quot;请输入 学生地址：&quot;</span>);</span><br><span class="line">        String address = sc.nextLine();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建学生对象</span></span><br><span class="line">        Student s = <span class="keyword">new</span> Student();</span><br><span class="line"></span><br><span class="line">        s.setId(id);</span><br><span class="line">        s.setAge(age);</span><br><span class="line">        s.setName(name);</span><br><span class="line">        s.setAddress(address);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 把学生对象添进 集合</span></span><br><span class="line">        array.add(s);</span><br><span class="line">        System.out.println(<span class="string">&quot;学生信息添加成功====姓名为： &quot;</span>+s.getName());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">delStudent</span><span class="params">(ArrayList&lt;Student&gt; array)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//根据学号删除</span></span><br><span class="line"></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;请输入要删除学生的学号：&quot;</span>);</span><br><span class="line"></span><br><span class="line">        String id = sc.nextLine();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 定义一个索引</span></span><br><span class="line">        <span class="keyword">int</span> index = -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//遍历集合</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;array.size() ; i++) &#123;</span><br><span class="line">            <span class="comment">//获取每个学生的对象</span></span><br><span class="line">            Student s = array.get(i);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (s.getId().equals(id))&#123;</span><br><span class="line"><span class="comment">//                array.remove(i); // 根据索引删除</span></span><br><span class="line">                index = i;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line"><span class="comment">//            System.out.println(&quot;删除学生成功！&quot;);</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (index == -<span class="number">1</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;不好意思，您输入的学号不存在，请重新输入&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            array.remove(index); <span class="comment">// 根据索引删除</span></span><br><span class="line">            System.out.println(<span class="string">&quot;删除学生成功&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 修改学生</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">updataStudent</span><span class="params">(ArrayList&lt;Student&gt; array)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 创建键盘录入对象</span></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;请输入你要修改学生的学号：&quot;</span>);</span><br><span class="line">        String id = sc.nextLine();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 定义一个索引</span></span><br><span class="line">        <span class="keyword">int</span> index = -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;array.size() ; i++) &#123;</span><br><span class="line">            <span class="comment">//获取每一个学生对象</span></span><br><span class="line">            Student s = array.get(i);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (s.getId().equals(id))&#123;</span><br><span class="line">                index = i;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (index == -<span class="number">1</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;不好意思，你要修改的学生信息不存在，请重新你的选择&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;请输入学生新姓名：&quot;</span>);</span><br><span class="line">            String name = sc.nextLine();</span><br><span class="line"></span><br><span class="line">            System.out.println(<span class="string">&quot;请输入学生新年龄：&quot;</span>);</span><br><span class="line">            String age = sc.nextLine();</span><br><span class="line"></span><br><span class="line">            System.out.println(<span class="string">&quot;请输入学生新住址：&quot;</span>);</span><br><span class="line">            String address = sc.nextLine();</span><br><span class="line"></span><br><span class="line">            Student s = <span class="keyword">new</span> Student();</span><br><span class="line"></span><br><span class="line">            s.setId(id);</span><br><span class="line">            s.setName(name);</span><br><span class="line">            s.setAddress(address);</span><br><span class="line">            s.setAge(age);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 修改集合中的学生信息</span></span><br><span class="line">            array.set(index, s);</span><br><span class="line"></span><br><span class="line">            System.out.println(<span class="string">&quot;修改学生信息成功&quot;</span>);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package myStudentManager;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/**
+ * Created by JackFeng on 2020/3/4.
+ */
+
+
+public class StudentMangerTest &#123;
+
+    public static void main(String[] args) &#123;
+
+        //创建集合对象，存储学生数据
+        ArrayList&lt;Student&gt; array = new ArrayList&lt;&gt;();
 
 
 
+        while (true) &#123;
+
+            // 主界面
+            System.out.println(&quot;---------欢迎来到学生管理系统----------&quot;);
+            System.out.println(&quot;1 查看所有学生&quot;);
+            System.out.println(&quot;2 添加学生&quot;);
+            System.out.println(&quot;3 删除学生&quot;);
+            System.out.println(&quot;4 修改学生&quot;);
+            System.out.println(&quot;5 退出&quot;);
+            System.out.println(&quot;请输入你的选择：&quot;);
+            // 键盘录入
+            Scanner sc = new Scanner(System.in);
+
+
+            String choice = sc.nextLine();
+            switch (choice) &#123;
+                case &quot;1&quot;:
+                    // 查看所有学生
+                    findAllStudent(array);
+                    break;
+                case &quot;2&quot;:
+                    // 添加学生
+                    addStudent(array);
+                    break;
+                case &quot;3&quot;:
+                    //删除学生
+                    delStudent(array);
+                    break;
+                case &quot;4&quot;:
+                    //修改学生
+                    updataStudent(array);
+                    break;
+                case &quot;5&quot;:
+                    //退出
+//                break; case 穿透
+                default:
+                    System.out.println(&quot;谢谢你的使用！&quot;);
+                    System.exit(0); // jvm 退出
+                    break;
+            &#125;
+        &#125;
+
+    &#125;
+
+    //1 查看所有学生
+    public  static  void findAllStudent(ArrayList&lt;Student&gt; array)&#123;
+        // 判断集合中是否有数据，如果没有数据，给出提示，并让该方法不继续往下执行
+        if (array.size()==0)&#123;
+            System.out.println(&quot;不好意思，暂无学生信息，请重新选择你的操作&quot;);
+            return;// void 没有返回值 可以直接return
+        &#125;
+
+        // \t
+        System.out.println(&quot;学号\t\t姓名\t年龄\t地址&quot;);
+        for (int i = 0; i &lt; array.size(); i++) &#123;
+            Student s = array.get(i);
+            System.out.println(s.getId()+&quot;--&quot;+s.getName()+&quot;--&quot;+s.getAge()+&quot;---&quot;+s.getAddress());
+
+
+        &#125;
+
+    &#125;
+
+    // 添加学生
+
+    public  static  void addStudent(ArrayList&lt;Student&gt; array)&#123;
+        //创建键盘录入对象
+        Scanner sc = new Scanner(System.in);
+
+
+        // id 定义在外边 因为下边还要用
+        String id;
+
+        // 代码重复使用
+        while (true)&#123;
+
+            System.out.println(&quot;请输入 学生ID：&quot;);
+//            String id = sc.nextLine();
+
+
+            id = sc.nextLine();
+            //判断学号是否存在
+            //  定义标记默认为false
+            boolean flag = false;
+
+            for (int i = 0; i &lt;array.size() ; i++) &#123;
+
+                Student s = array.get(i);
+
+                if (s.getId().equals(id))&#123;
+                    flag = true;  // 说明学号被占用
+                &#125;
+
+            &#125;
+            if (flag)&#123;
+                System.out.println(&quot;你输入的学号已经被占用&quot;);
+            &#125;else &#123;
+                break;
+            &#125;
+        &#125;
+
+
+
+
+        System.out.println(&quot;请输入 学生姓名：&quot;);
+        String name = sc.nextLine();
+        System.out.println(&quot;请输入 学生年龄：&quot;);
+        String age = sc.nextLine();
+        System.out.println(&quot;请输入 学生地址：&quot;);
+        String address = sc.nextLine();
+
+        //创建学生对象
+        Student s = new Student();
+
+        s.setId(id);
+        s.setAge(age);
+        s.setName(name);
+        s.setAddress(address);
+
+
+        // 把学生对象添进 集合
+        array.add(s);
+        System.out.println(&quot;学生信息添加成功====姓名为： &quot;+s.getName());
+    &#125;
+
+
+
+    public static  void delStudent(ArrayList&lt;Student&gt; array)&#123;
+
+        //根据学号删除
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println(&quot;请输入要删除学生的学号：&quot;);
+
+        String id = sc.nextLine();
+
+        // 定义一个索引
+        int index = -1;
+
+        //遍历集合
+        for (int i = 0; i &lt;array.size() ; i++) &#123;
+            //获取每个学生的对象
+            Student s = array.get(i);
+
+            if (s.getId().equals(id))&#123;
+//                array.remove(i); // 根据索引删除
+                index = i;
+                break;
+            &#125;
+//            System.out.println(&quot;删除学生成功！&quot;);
+        &#125;
+        if (index == -1)&#123;
+            System.out.println(&quot;不好意思，您输入的学号不存在，请重新输入&quot;);
+        &#125;else &#123;
+            array.remove(index); // 根据索引删除
+            System.out.println(&quot;删除学生成功&quot;);
+        &#125;
+
+
+
+    &#125;
+
+    // 修改学生
+    public static void updataStudent(ArrayList&lt;Student&gt; array)&#123;
+        // 创建键盘录入对象
+        Scanner sc = new Scanner(System.in);
+        System.out.println(&quot;请输入你要修改学生的学号：&quot;);
+        String id = sc.nextLine();
+
+        // 定义一个索引
+        int index = -1;
+
+
+        for (int i = 0; i &lt;array.size() ; i++) &#123;
+            //获取每一个学生对象
+            Student s = array.get(i);
+
+            if (s.getId().equals(id))&#123;
+                index = i;
+                break;
+            &#125;
+        &#125;
+
+        if (index == -1)&#123;
+            System.out.println(&quot;不好意思，你要修改的学生信息不存在，请重新你的选择&quot;);
+        &#125;else &#123;
+            System.out.println(&quot;请输入学生新姓名：&quot;);
+            String name = sc.nextLine();
+
+            System.out.println(&quot;请输入学生新年龄：&quot;);
+            String age = sc.nextLine();
+
+            System.out.println(&quot;请输入学生新住址：&quot;);
+            String address = sc.nextLine();
+
+            Student s = new Student();
+
+            s.setId(id);
+            s.setName(name);
+            s.setAddress(address);
+            s.setAge(age);
+
+            // 修改集合中的学生信息
+            array.set(index, s);
+
+            System.out.println(&quot;修改学生信息成功&quot;);
+
+        &#125;
+
+
+    &#125;
+
+
+&#125;
+
+</code></pre>
 <h2 id="5、IO字符流"><a href="#5、IO字符流" class="headerlink" title="5、IO字符流"></a>5、IO字符流</h2><blockquote>
 <p>IO流用来处理设备之间的数据传输</p>
 <ul>
@@ -1677,12 +2387,195 @@
 </li>
 </ul>
 </blockquote>
-<h3 id="5-0、写数据"><a href="#5-0、写数据" class="headerlink" title="5.0、写数据"></a>5.0、写数据</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myIo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.FileWriter;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/8.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 需求： 往文件中写数据</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*       写数据  -- 输出流 ---FileWriter</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileWriterDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//  创建输出流对象</span></span><br><span class="line">        <span class="comment">//  调用系统资源创建一个文件,创建输出流对象，把输出流对象指向文件</span></span><br><span class="line">        <span class="comment">//  不写路径 就会在 在相对路径下创建！</span></span><br><span class="line"><span class="comment">//        FileWriter fw = new FileWriter(&quot;D:\\Practice\\Java\\JavaSE\\a.txt&quot;);  // 默认为false</span></span><br><span class="line">        FileWriter fw = <span class="keyword">new</span> FileWriter(<span class="string">&quot;D:\\Practice\\Java\\JavaSE\\a.txt&quot;</span>,<span class="keyword">true</span>); <span class="comment">// true 为追加写入</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 写字符串数据</span></span><br><span class="line"><span class="comment">//        fw.write(&quot;IO你好&quot;);</span></span><br><span class="line">        <span class="comment">// 数据没有直接写入 到文件中， 其实是写到了内存缓冲区</span></span><br><span class="line"><span class="comment">//        fw.flush(); // 刷新缓冲区</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 释放资源  通知系统释放和该文件相关的资源</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 写数据的几种方法</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        * 1、write(String str)  写一个字符串数据</span></span><br><span class="line"><span class="comment">        *</span></span><br><span class="line"><span class="comment">        * */</span></span><br><span class="line">        <span class="comment">// 1</span></span><br><span class="line"><span class="comment">//        fw.write(&quot;abcde&quot;);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//2</span></span><br><span class="line"><span class="comment">//        fw.write(&quot;abcd&quot;,1,2);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3</span></span><br><span class="line"><span class="comment">//        fw.write(97);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4 写一个数组</span></span><br><span class="line"><span class="comment">//        char[] chs = &#123;&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;&#125;;</span></span><br><span class="line"><span class="comment">//        fw.write(chs);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 5</span></span><br><span class="line"><span class="comment">//        fw.write(chs, 0, 1);</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 数据换行 + 数据追加写入</span></span><br><span class="line">        <span class="comment">// \n 可以换行，windows 没有换行 ，\r\n</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span> ; i++) &#123;</span><br><span class="line">            fw.write(<span class="string">&quot;Hi&quot;</span>+i);</span><br><span class="line">            fw.write(<span class="string">&quot;\r\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        fw.close(); <span class="comment">// 先刷新缓冲区。再通知系统释放资源</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="5-0、写数据"><a href="#5-0、写数据" class="headerlink" title="5.0、写数据"></a>5.0、写数据</h3><pre><code class="java">package myIo;
 
-<h3 id="5-1、读数据"><a href="#5-1、读数据" class="headerlink" title="5.1、读数据"></a>5.1、读数据</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myIo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.FileReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/8.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileReaderDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建输入流 对象</span></span><br><span class="line"></span><br><span class="line">        FileReader fr = <span class="keyword">new</span> FileReader(<span class="string">&quot;D:\\Practice\\Java\\JavaSE\\a.txt&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*        // 读数据方法</span></span><br><span class="line"><span class="comment">        // 1. int read()</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        // 第一次读数据</span></span><br><span class="line"><span class="comment">        int ch = fr.read();</span></span><br><span class="line"><span class="comment">        System.out.println(ch);</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        System.out.println((char)ch);</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        // 第二次</span></span><br><span class="line"><span class="comment">        ch = fr.read();</span></span><br><span class="line"><span class="comment">        System.out.println(ch);</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        System.out.println((char)ch);</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        // 如果读取数据的返回值 是 -1的时候  说明结束了*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 标准代码</span></span><br><span class="line">        <span class="comment">// 读取 字符串</span></span><br><span class="line"><span class="comment">/*        int ch;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        while ((ch=fr.read())!= -1)&#123;</span></span><br><span class="line"><span class="comment">//            System.out.println(ch);</span></span><br><span class="line"><span class="comment">            System.out.print((char)ch);</span></span><br><span class="line"><span class="comment">        &#125;*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//第二种读取数据方式  一次读取一个数组的数据</span></span><br><span class="line">        <span class="comment">// 标准代码  效率较高</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//        char[] chs = new char[5];</span></span><br><span class="line">        <span class="keyword">char</span>[] chs = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">1024</span>]; <span class="comment">// 一般写1024 及其整数倍</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> len;</span><br><span class="line">        <span class="keyword">while</span> ((len= fr.read(chs)) != -<span class="number">1</span>)&#123;</span><br><span class="line">            System.out.print(<span class="keyword">new</span> String(chs,<span class="number">0</span>,len));</span><br><span class="line">            <span class="comment">// 以数组方式读入</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        fr.close(); <span class="comment">// 释放资源</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+import java.io.FileWriter;
+import java.io.IOException;
 
-<h3 id="5-2、文件复制"><a href="#5-2、文件复制" class="headerlink" title="5.2、文件复制"></a>5.2、文件复制</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myIo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.FileReader;</span><br><span class="line"><span class="keyword">import</span> java.io.FileWriter;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/8.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CopyFileDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建输入刘对象</span></span><br><span class="line">        FileReader fr = <span class="keyword">new</span> FileReader(<span class="string">&quot;D:\\Practice\\Java\\JavaSE\\src\\myIo\\FileWriterDemo.java&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建输出流对象</span></span><br><span class="line"></span><br><span class="line">        FileWriter fw = <span class="keyword">new</span> FileWriter(<span class="string">&quot;Copy.java&quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//读写数据</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*        int ch;</span></span><br><span class="line"><span class="comment">        while ((ch=fr.read())!=-1)&#123;</span></span><br><span class="line"><span class="comment">            fw.write(ch);</span></span><br><span class="line"><span class="comment">        &#125;*/</span></span><br><span class="line">        <span class="keyword">char</span>[] chs = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">1024</span>];</span><br><span class="line">        <span class="keyword">int</span> len;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> ((len= fr.read(chs))!= -<span class="number">1</span>)&#123;</span><br><span class="line">            fw.write(chs,<span class="number">0</span>,len);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        fr.close();</span><br><span class="line">        fw.close();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+/**
+ * Created by JackFeng on 2020/3/8.
+ */
 
+
+/*
+* 需求： 往文件中写数据
+*
+*       写数据  -- 输出流 ---FileWriter
+*
+*
+* */
+
+public class FileWriterDemo &#123;
+    public static void main(String[] args) throws IOException &#123;
+
+        //  创建输出流对象
+        //  调用系统资源创建一个文件,创建输出流对象，把输出流对象指向文件
+        //  不写路径 就会在 在相对路径下创建！
+//        FileWriter fw = new FileWriter(&quot;D:\\Practice\\Java\\JavaSE\\a.txt&quot;);  // 默认为false
+        FileWriter fw = new FileWriter(&quot;D:\\Practice\\Java\\JavaSE\\a.txt&quot;,true); // true 为追加写入
+
+        // 写字符串数据
+//        fw.write(&quot;IO你好&quot;);
+        // 数据没有直接写入 到文件中， 其实是写到了内存缓冲区
+//        fw.flush(); // 刷新缓冲区
+
+        // 释放资源  通知系统释放和该文件相关的资源
+
+        // 写数据的几种方法
+        /*
+        * 1、write(String str)  写一个字符串数据
+        *
+        * */
+        // 1
+//        fw.write(&quot;abcde&quot;);
+
+        //2
+//        fw.write(&quot;abcd&quot;,1,2);
+
+        // 3
+//        fw.write(97);
+
+        // 4 写一个数组
+//        char[] chs = &#123;&#39;a&#39;, &#39;b&#39;, &#39;c&#39;&#125;;
+//        fw.write(chs);
+
+        // 5
+//        fw.write(chs, 0, 1);
+
+
+
+        // 数据换行 + 数据追加写入
+        // \n 可以换行，windows 没有换行 ，\r\n
+
+        for (int i = 0; i &lt; 10 ; i++) &#123;
+            fw.write(&quot;Hi&quot;+i);
+            fw.write(&quot;\r\n&quot;);
+        &#125;
+
+
+
+
+        fw.close(); // 先刷新缓冲区。再通知系统释放资源
+
+
+    &#125;
+
+&#125;
+
+</code></pre>
+<h3 id="5-1、读数据"><a href="#5-1、读数据" class="headerlink" title="5.1、读数据"></a>5.1、读数据</h3><pre><code class="java">package myIo;
+
+import java.io.FileReader;
+import java.io.IOException;
+
+/**
+ * Created by JackFeng on 2020/3/8.
+ */
+
+
+
+public class FileReaderDemo &#123;
+    public static void main(String[] args) throws IOException &#123;
+
+        // 创建输入流 对象
+
+        FileReader fr = new FileReader(&quot;D:\\Practice\\Java\\JavaSE\\a.txt&quot;);
+
+/*        // 读数据方法
+        // 1. int read()
+
+        // 第一次读数据
+        int ch = fr.read();
+        System.out.println(ch);
+
+        System.out.println((char)ch);
+
+        // 第二次
+        ch = fr.read();
+        System.out.println(ch);
+
+        System.out.println((char)ch);
+
+        // 如果读取数据的返回值 是 -1的时候  说明结束了*/
+
+
+
+// 标准代码
+        // 读取 字符串
+/*        int ch;
+
+        while ((ch=fr.read())!= -1)&#123;
+//            System.out.println(ch);
+            System.out.print((char)ch);
+        &#125;*/
+
+
+        //第二种读取数据方式  一次读取一个数组的数据
+        // 标准代码  效率较高
+
+//        char[] chs = new char[5];
+        char[] chs = new char[1024]; // 一般写1024 及其整数倍
+
+        int len;
+        while ((len= fr.read(chs)) != -1)&#123;
+            System.out.print(new String(chs,0,len));
+            // 以数组方式读入
+        &#125;
+
+
+        fr.close(); // 释放资源
+    &#125;
+&#125;
+
+</code></pre>
+<h3 id="5-2、文件复制"><a href="#5-2、文件复制" class="headerlink" title="5.2、文件复制"></a>5.2、文件复制</h3><pre><code class="java">package myIo;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+/**
+ * Created by JackFeng on 2020/3/8.
+ */
+
+
+
+public class CopyFileDemo &#123;
+
+    public static void main(String[] args) throws IOException &#123;
+
+
+        // 创建输入刘对象
+        FileReader fr = new FileReader(&quot;D:\\Practice\\Java\\JavaSE\\src\\myIo\\FileWriterDemo.java&quot;);
+
+        // 创建输出流对象
+
+        FileWriter fw = new FileWriter(&quot;Copy.java&quot;);
+
+
+        //读写数据
+
+/*        int ch;
+        while ((ch=fr.read())!=-1)&#123;
+            fw.write(ch);
+        &#125;*/
+        char[] chs = new char[1024];
+        int len;
+
+        while ((len= fr.read(chs))!= -1)&#123;
+            fw.write(chs,0,len);
+        &#125;
+
+
+
+        fr.close();
+        fw.close();
+
+    &#125;
+
+&#125;
+
+</code></pre>
 <h3 id="5-3、字符缓冲流"><a href="#5-3、字符缓冲流" class="headerlink" title="5.3、字符缓冲流"></a>5.3、字符缓冲流</h3><p><strong>BufferedWriter</strong> —- 高效写入</p>
 <p><strong>BufferedReader</strong> — 高效读取</p>
 <blockquote>
@@ -1698,17 +2591,271 @@
 <li>String readLine() —- 一次读取一行数据,但是不读取换行符</li>
 </ul>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myIo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/8.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BufferedDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建输出缓冲流对象</span></span><br><span class="line">        BufferedWriter bw = <span class="keyword">new</span> BufferedWriter(<span class="keyword">new</span> FileWriter(<span class="string">&quot;a.txt&quot;</span>));</span><br><span class="line"></span><br><span class="line">        bw.write(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line"><span class="comment">//        bw.flush();</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span> ; i++) &#123;</span><br><span class="line">            bw.write(<span class="string">&quot;Hi&quot;</span>+i);</span><br><span class="line"><span class="comment">//            bw.write(&quot;\r\n&quot;);</span></span><br><span class="line">            bw.newLine(); <span class="comment">// 等同于  bw.write(&quot;\r\n&quot;);</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        bw.close();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建输入缓冲流对象</span></span><br><span class="line"></span><br><span class="line">        BufferedReader br = <span class="keyword">new</span> BufferedReader( <span class="keyword">new</span> FileReader(<span class="string">&quot;a.txt&quot;</span>));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 一次写一个字符</span></span><br><span class="line"><span class="comment">/*        int ch;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        while ((ch=br.read())!= -1)&#123;</span></span><br><span class="line"><span class="comment">            System.out.print((char) ch);</span></span><br><span class="line"><span class="comment">        &#125;*/</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 一次读写一个数组</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">        char[] chs = new char[1024];</span></span><br><span class="line"><span class="comment">        int len;</span></span><br><span class="line"><span class="comment">        while ((len = br.read(chs))!= -1)</span></span><br><span class="line"><span class="comment">//            System.out.print(chs,0,len); 这里会报错  需要 new String 构造</span></span><br><span class="line"><span class="comment">            System.out.println(new String(chs,0,len));</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        br.close();*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        String line;</span><br><span class="line">        <span class="comment">// br.readLine</span></span><br><span class="line">        <span class="keyword">while</span>((line= br.readLine())!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            System.out.println(line);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        br.close();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package myIo;
 
+import java.io.*;
+
+/**
+ * Created by JackFeng on 2020/3/8.
+ */
+public class BufferedDemo &#123;
+    public static void main(String[] args) throws IOException &#123;
+
+        // 创建输出缓冲流对象
+        BufferedWriter bw = new BufferedWriter(new FileWriter(&quot;a.txt&quot;));
+
+        bw.write(&quot;hello world&quot;);
+//        bw.flush();
+
+
+        for (int i = 0; i &lt; 10 ; i++) &#123;
+            bw.write(&quot;Hi&quot;+i);
+//            bw.write(&quot;\r\n&quot;);
+            bw.newLine(); // 等同于  bw.write(&quot;\r\n&quot;);
+        &#125;
+
+        bw.close();
+
+
+        // 创建输入缓冲流对象
+
+        BufferedReader br = new BufferedReader( new FileReader(&quot;a.txt&quot;));
+
+
+        // 一次写一个字符
+/*        int ch;
+
+        while ((ch=br.read())!= -1)&#123;
+            System.out.print((char) ch);
+        &#125;*/
+
+        // 一次读写一个数组
+/*
+        char[] chs = new char[1024];
+        int len;
+        while ((len = br.read(chs))!= -1)
+//            System.out.print(chs,0,len); 这里会报错  需要 new String 构造
+            System.out.println(new String(chs,0,len));
+
+
+        br.close();*/
+
+
+        String line;
+        // br.readLine
+        while((line= br.readLine())!=null)&#123;
+            System.out.println(line);
+        &#125;
+
+        br.close();
+
+
+    &#125;
+&#125;
+
+</code></pre>
 <p><strong>集合数据写入文件</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myIo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.BufferedWriter;</span><br><span class="line"><span class="keyword">import</span> java.io.FileWriter;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/8.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayListToFileTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建集合对象</span></span><br><span class="line"></span><br><span class="line">        ArrayList&lt;String&gt; array = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 给集合添加元素</span></span><br><span class="line"></span><br><span class="line">        array.add(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">        array.add(<span class="string">&quot;world&quot;</span>);</span><br><span class="line">        array.add(<span class="string">&quot;今天是2020，三八妇女节&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建缓冲流输出对象</span></span><br><span class="line"></span><br><span class="line">        BufferedWriter bw = <span class="keyword">new</span> BufferedWriter( <span class="keyword">new</span> FileWriter(<span class="string">&quot;array.txt&quot;</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//遍历集合写入到文件</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;array.size() ; i++) &#123;</span><br><span class="line">            String s = array.get(i);</span><br><span class="line">            bw.write(s);</span><br><span class="line">            bw.newLine();  <span class="comment">// 读取换行</span></span><br><span class="line">            bw.flush();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        bw.close();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package myIo;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+
+/**
+ * Created by JackFeng on 2020/3/8.
+ */
+public class ArrayListToFileTest &#123;
+
+    public static void main(String[] args) throws IOException &#123;
+
+        // 创建集合对象
+
+        ArrayList&lt;String&gt; array = new ArrayList&lt;&gt;();
+
+        // 给集合添加元素
+
+        array.add(&quot;hello&quot;);
+        array.add(&quot;world&quot;);
+        array.add(&quot;今天是2020，三八妇女节&quot;);
+
+        // 创建缓冲流输出对象
+
+        BufferedWriter bw = new BufferedWriter( new FileWriter(&quot;array.txt&quot;));
+
+        //遍历集合写入到文件
+
+        for (int i = 0; i &lt;array.size() ; i++) &#123;
+            String s = array.get(i);
+            bw.write(s);
+            bw.newLine();  // 读取换行
+            bw.flush();
+        &#125;
+
+        bw.close();
+
+    &#125;
+
+&#125;
+
+</code></pre>
 <p><strong>文件存入集合</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myIo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.FileReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/8.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileToArrayList</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span>  <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建输入缓冲流对象</span></span><br><span class="line"></span><br><span class="line">        BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> FileReader(<span class="string">&quot;array.txt&quot;</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建集合对象</span></span><br><span class="line"></span><br><span class="line">        ArrayList&lt;String&gt; array = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 读取数据 每次读取一行数据， 把该行数据作为一个元素存储到集合中</span></span><br><span class="line">        String line;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> ((line = br.readLine())!= <span class="keyword">null</span>)&#123;</span><br><span class="line">            array.add(line);</span><br><span class="line">        &#125;</span><br><span class="line">        br.close();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//遍历集合</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;array.size() ; i++) &#123;</span><br><span class="line">            String s = array.get(i);</span><br><span class="line">            System.out.println(s);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package myIo;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+/**
+ * Created by JackFeng on 2020/3/8.
+ */
+public class FileToArrayList &#123;
+    public static void main(String[] args)  throws IOException &#123;
+
+        // 创建输入缓冲流对象
+
+        BufferedReader br = new BufferedReader(new FileReader(&quot;array.txt&quot;));
+
+        // 创建集合对象
+
+        ArrayList&lt;String&gt; array = new ArrayList&lt;String&gt;();
+
+        // 读取数据 每次读取一行数据， 把该行数据作为一个元素存储到集合中
+        String line;
+
+        while ((line = br.readLine())!= null)&#123;
+            array.add(line);
+        &#125;
+        br.close();
+
+        //遍历集合
+        for (int i = 0; i &lt;array.size() ; i++) &#123;
+            String s = array.get(i);
+            System.out.println(s);
+        &#125;
+
+
+
+    &#125;
+
+&#125;
+
+</code></pre>
 <p><strong>学生管理添加升级版本</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> myIo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> myStudentManager.Student;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.BufferedWriter;</span><br><span class="line"><span class="keyword">import</span> java.io.FileWriter;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by JackFeng on 2020/3/8.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArratListToFileTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line"></span><br><span class="line">        ArrayList&lt;Student&gt; array = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 写方法添加学生对象</span></span><br><span class="line"></span><br><span class="line">        addStudent(array);</span><br><span class="line">        addStudent(array);</span><br><span class="line">        addStudent(array);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建输出缓冲流对象</span></span><br><span class="line"></span><br><span class="line">        BufferedWriter bw = <span class="keyword">new</span> BufferedWriter(<span class="keyword">new</span> FileWriter(<span class="string">&quot;std.txt&quot;</span>));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;array.size() ; i++) &#123;</span><br><span class="line">            Student s = array.get(i);</span><br><span class="line">            <span class="comment">// 链式编程</span></span><br><span class="line">            <span class="comment">/// 姓名,年龄,。。。  采用 StringBuilder</span></span><br><span class="line">            StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line"></span><br><span class="line">            sb.append(s.getId()).append(<span class="string">&quot;,&quot;</span>).append(s.getName()).append(<span class="string">&quot;,&quot;</span>).append(s.getAddress()).append(<span class="string">&quot;,&quot;</span>).append(s.getAge());</span><br><span class="line"></span><br><span class="line">            bw.write(sb.toString());  <span class="comment">// 转化为string</span></span><br><span class="line">            bw.newLine();  <span class="comment">// 换行</span></span><br><span class="line">            bw.flush(); <span class="comment">// 刷新</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        bw.close();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 添加学生</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">addStudent</span><span class="params">(ArrayList&lt;Student&gt; array)</span></span>&#123;</span><br><span class="line">        <span class="comment">//创建键盘录入对象</span></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// id 定义在外边 因为下边还要用</span></span><br><span class="line">        String id;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 代码重复使用</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>)&#123;</span><br><span class="line"></span><br><span class="line">            System.out.println(<span class="string">&quot;请输入 学生ID：&quot;</span>);</span><br><span class="line"><span class="comment">//            String id = sc.nextLine();</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            id = sc.nextLine();</span><br><span class="line">            <span class="comment">//判断学号是否存在</span></span><br><span class="line">            <span class="comment">//  定义标记默认为false</span></span><br><span class="line">            <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;array.size() ; i++) &#123;</span><br><span class="line"></span><br><span class="line">                Student s = array.get(i);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (s.getId().equals(id))&#123;</span><br><span class="line">                    flag = <span class="keyword">true</span>;  <span class="comment">// 说明学号被占用</span></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (flag)&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;你输入的学号已经被占用&quot;</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;请输入 学生姓名：&quot;</span>);</span><br><span class="line">        String name = sc.nextLine();</span><br><span class="line">        System.out.println(<span class="string">&quot;请输入 学生年龄：&quot;</span>);</span><br><span class="line">        String age = sc.nextLine();</span><br><span class="line">        System.out.println(<span class="string">&quot;请输入 学生地址：&quot;</span>);</span><br><span class="line">        String address = sc.nextLine();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建学生对象</span></span><br><span class="line">        Student s = <span class="keyword">new</span> Student();</span><br><span class="line"></span><br><span class="line">        s.setId(id);</span><br><span class="line">        s.setAge(age);</span><br><span class="line">        s.setName(name);</span><br><span class="line">        s.setAddress(address);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 把学生对象添进 集合</span></span><br><span class="line">        array.add(s);</span><br><span class="line">        System.out.println(<span class="string">&quot;学生信息添加成功====姓名为： &quot;</span>+s.getName());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">package myIo;
 
+import myStudentManager.Student;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/**
+ * Created by JackFeng on 2020/3/8.
+ */
+public class ArratListToFileTest &#123;
+    public static void main(String[] args) throws IOException &#123;
+
+        ArrayList&lt;Student&gt; array = new ArrayList&lt;&gt;();
+
+        // 写方法添加学生对象
+
+        addStudent(array);
+        addStudent(array);
+        addStudent(array);
+
+        // 创建输出缓冲流对象
+
+        BufferedWriter bw = new BufferedWriter(new FileWriter(&quot;std.txt&quot;));
+
+        for (int i = 0; i &lt;array.size() ; i++) &#123;
+            Student s = array.get(i);
+            // 链式编程
+            /// 姓名,年龄,。。。  采用 StringBuilder
+            StringBuilder sb = new StringBuilder();
+
+            sb.append(s.getId()).append(&quot;,&quot;).append(s.getName()).append(&quot;,&quot;).append(s.getAddress()).append(&quot;,&quot;).append(s.getAge());
+
+            bw.write(sb.toString());  // 转化为string
+            bw.newLine();  // 换行
+            bw.flush(); // 刷新
+
+        &#125;
+
+        bw.close();
+
+
+    &#125;
+
+    // 添加学生
+
+    public  static  void addStudent(ArrayList&lt;Student&gt; array)&#123;
+        //创建键盘录入对象
+        Scanner sc = new Scanner(System.in);
+
+
+        // id 定义在外边 因为下边还要用
+        String id;
+
+        // 代码重复使用
+        while (true)&#123;
+
+            System.out.println(&quot;请输入 学生ID：&quot;);
+//            String id = sc.nextLine();
+
+
+            id = sc.nextLine();
+            //判断学号是否存在
+            //  定义标记默认为false
+            boolean flag = false;
+
+            for (int i = 0; i &lt;array.size() ; i++) &#123;
+
+                Student s = array.get(i);
+
+                if (s.getId().equals(id))&#123;
+                    flag = true;  // 说明学号被占用
+                &#125;
+
+            &#125;
+            if (flag)&#123;
+                System.out.println(&quot;你输入的学号已经被占用&quot;);
+            &#125;else &#123;
+                break;
+            &#125;
+        &#125;
+
+
+
+
+        System.out.println(&quot;请输入 学生姓名：&quot;);
+        String name = sc.nextLine();
+        System.out.println(&quot;请输入 学生年龄：&quot;);
+        String age = sc.nextLine();
+        System.out.println(&quot;请输入 学生地址：&quot;);
+        String address = sc.nextLine();
+
+        //创建学生对象
+        Student s = new Student();
+
+        s.setId(id);
+        s.setAge(age);
+        s.setName(name);
+        s.setAddress(address);
+
+
+        // 把学生对象添进 集合
+        array.add(s);
+        System.out.println(&quot;学生信息添加成功====姓名为： &quot;+s.getName());
+    &#125;
+
+
+
+&#125;
+</code></pre>
 
   
   
@@ -2907,6 +4054,8 @@ A...</p>
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2947,6 +4096,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3260,6 +4416,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

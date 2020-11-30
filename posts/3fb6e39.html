@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1483,8 +1487,37 @@
 <p>要求：假设本次活动1000人参加, 模拟游戏时各等级奖品个数需要准备多少个。</p>
 <p>解题思路：定义游戏规则（用字典表达）-构建函数-生成随机数-编写游戏逻辑-调用函数-遍历1000名用户-打印输出</p>
 <p><strong>参考答案：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random  <span class="comment">#导入随机数模块</span></span><br><span class="line"></span><br><span class="line">rewardDict = &#123;</span><br><span class="line">    <span class="string">&#x27;一等奖&#x27;</span>: (<span class="number">0</span>, <span class="number">0.08</span>),</span><br><span class="line">    <span class="string">&#x27;二等奖&#x27;</span>: (<span class="number">0.08</span>, <span class="number">0.3</span>),</span><br><span class="line">    <span class="string">&#x27;三等奖&#x27;</span>: (<span class="number">0.3</span>, <span class="number">1</span>)</span><br><span class="line">&#125;      <span class="comment">#因为该值为一对一映射，所以想到用字典定义得奖范围</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rewardFun</span>():</span>    <span class="comment">#开始构建函数</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;用户得奖等级&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 生成一个0～1之间的随机数</span></span><br><span class="line">    num = random.random()</span><br><span class="line">    <span class="comment"># 判断随机转盘转的数是几等奖</span></span><br><span class="line">    <span class="keyword">for</span> k, v <span class="keyword">in</span> rewardDict.items():  </span><br><span class="line">        <span class="comment"># 这里的v是元组</span></span><br><span class="line">        <span class="keyword">if</span> v[<span class="number">0</span>] &lt;= num &lt; v[<span class="number">1</span>]:</span><br><span class="line">            <span class="keyword">return</span> k</span><br><span class="line"></span><br><span class="line"><span class="comment"># print rewardFun()</span></span><br><span class="line">resultDict = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1000</span>):</span><br><span class="line">    <span class="comment"># res:本次转盘的等级(一/二/三等奖)</span></span><br><span class="line">    res = rewardFun()  <span class="comment">#调用函数</span></span><br><span class="line">    <span class="keyword">if</span> res <span class="keyword">not</span> <span class="keyword">in</span> resultDict:</span><br><span class="line">        resultDict[res] = <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        resultDict[res] = resultDict[res] + <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> k, v <span class="keyword">in</span> resultDict.items():</span><br><span class="line">    <span class="keyword">print</span> k, <span class="string">&#x27;----------&gt;&#x27;</span>, v</span><br></pre></td></tr></table></figure>
+<pre><code class="python">import random  #导入随机数模块
 
+rewardDict = &#123;
+    &#39;一等奖&#39;: (0, 0.08),
+    &#39;二等奖&#39;: (0.08, 0.3),
+    &#39;三等奖&#39;: (0.3, 1)
+&#125;      #因为该值为一对一映射，所以想到用字典定义得奖范围
+
+def rewardFun():    #开始构建函数
+    &quot;&quot;&quot;用户得奖等级&quot;&quot;&quot;
+    # 生成一个0～1之间的随机数
+    num = random.random()
+    # 判断随机转盘转的数是几等奖
+    for k, v in rewardDict.items():  
+        # 这里的v是元组
+        if v[0] &lt;= num &lt; v[1]:
+            return k
+
+# print rewardFun()
+resultDict = &#123;&#125;
+
+for i in range(1000):
+    # res:本次转盘的等级(一/二/三等奖)
+    res = rewardFun()  #调用函数
+    if res not in resultDict:
+        resultDict[res] = 1
+    else:
+        resultDict[res] = resultDict[res] + 1
+
+for k, v in resultDict.items():
+    print k, &#39;----------&gt;&#39;, v</code></pre>
 <p><strong>学习引导：</strong></p>
 <ul>
 <li>函数概念</li>
@@ -1518,24 +1551,38 @@
 </li>
 </ul>
 <p><strong>函数定义的一般格式：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#函数定义的一般格式：</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> 函数名 (<span class="params">参数列表</span>)：</span></span><br><span class="line"><span class="function">    函数体</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">#函数定义的一般格式：
+def 函数名 (参数列表)：
+    函数体</code></pre>
+<pre><code class="python">#实例1
+def hello():
+    print(&#39;Hello World&#39;)
 
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#实例1</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span>():</span></span><br><span class="line">    print(<span class="string">&#x27;Hello World&#x27;</span>)</span><br><span class="line">    </span><br><span class="line">hello()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Hello World</span></span><br></pre></td></tr></table></figure>
-
+hello()</code></pre>
+<pre><code class="python">#Hello World</code></pre>
 <p><strong>实例2-计算圆的面积,带参数</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#实例2-计算圆的面积,带参数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">area</span>(<span class="params">r</span>):</span></span><br><span class="line">    pi=<span class="number">3.412</span></span><br><span class="line">    <span class="keyword">return</span> pi*(r^<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">r=<span class="number">5</span></span><br><span class="line">print(<span class="string">&#x27;圆的面积为:&#x27;</span>,area(r))</span><br></pre></td></tr></table></figure>
+<pre><code class="python">#实例2-计算圆的面积,带参数
+def area(r):
+    pi=3.412
+    return pi*(r^2)
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#圆的面积为: 23.884</span></span><br></pre></td></tr></table></figure>
-
+r=5
+print(&#39;圆的面积为:&#39;,area(r))</code></pre>
+<pre><code class="python">#圆的面积为: 23.884</code></pre>
 <h3 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h3><p>即使用函数的过程</p>
 <p><strong>简单的调用应用</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#函数功能：打印该字符串</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">println</span>(<span class="params">str</span>):</span></span><br><span class="line">    print(str)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#调用函数</span></span><br><span class="line">println(<span class="string">&#x27;调用上述函数&#x27;</span>)</span><br><span class="line">println(<span class="string">&#x27;打印这段字符串&#x27;</span>)</span><br><span class="line">println(<span class="string">&#x27;多次调用函数&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">#函数功能：打印该字符串
+def println(str):
+    print(str)
+    return
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#调用上述函数</span></span><br><span class="line"><span class="comment">#打印这段字符串</span></span><br><span class="line"><span class="comment">#多次调用函数</span></span><br></pre></td></tr></table></figure>
-
+#调用函数
+println(&#39;调用上述函数&#39;)
+println(&#39;打印这段字符串&#39;)
+println(&#39;多次调用函数&#39;)</code></pre>
+<pre><code class="python">#调用上述函数
+#打印这段字符串
+#多次调用函数</code></pre>
 <h3 id="参数调用"><a href="#参数调用" class="headerlink" title="参数调用"></a>参数调用</h3><p>参数分为形参、实参</p>
 <ul>
 <li><p>形参：函数定义时括号内的参数</p>
@@ -1547,8 +1594,15 @@
 <li>形参相当于变量，实参相当于变量的值</li>
 </ul>
 <p>在实际代码中表示如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义时：</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">a,b,c</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">其中 a,b,c 为形参</span><br><span class="line"></span><br><span class="line"><span class="comment">#调用时：</span></span><br><span class="line">func(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">其中<span class="number">1</span>，<span class="number">2</span>，<span class="number">3</span>为实参</span><br></pre></td></tr></table></figure>
+<pre><code class="python">#定义时：
+def func(a,b,c):
+    pass
 
+其中 a,b,c 为形参
+
+#调用时：
+func(1,2,3)
+其中1，2，3为实参</code></pre>
 <h4 id="形参："><a href="#形参：" class="headerlink" title="形参："></a>形参：</h4><p>只在被调用时，才分配存储单元。调用结束，立刻释放所分配的内存。</p>
 <p>形参只在函数内部有效</p>
 <h4 id="实参："><a href="#实参：" class="headerlink" title="实参："></a>实参：</h4><p>可以是：常量、变量、表达式、函数</p>
@@ -1563,16 +1617,27 @@
 <li><p>位置参数必须以正确的顺序传入函数。调用时的数量必须和声明时的一样。</p>
 </li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">a,b,c</span>):</span></span><br><span class="line">    <span class="keyword">return</span> a+b+c</span><br><span class="line"></span><br><span class="line"><span class="comment">#调用</span></span><br><span class="line">print(func(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>))   </span><br></pre></td></tr></table></figure>
+<pre><code class="python">def func(a,b,c):
+    return a+b+c
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#9</span></span><br></pre></td></tr></table></figure>
-
+#调用
+print(func(2,3,4))   </code></pre>
+<pre><code class="python">#9</code></pre>
 <p>错误演示：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">a,b,c</span>):</span></span><br><span class="line">    <span class="keyword">return</span> a+b+c</span><br><span class="line"></span><br><span class="line"><span class="comment">#调用</span></span><br><span class="line">print(func(<span class="number">2</span>,<span class="number">3</span>)) <span class="comment">#实参数量不对应，报错</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">def func(a,b,c):
+    return a+b+c
 
+#调用
+print(func(2,3)) #实参数量不对应，报错</code></pre>
+<pre><code class="python">---------------------------------------------------------------------------
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">TypeError                                 Traceback (most recent call last)</span><br><span class="line"></span><br><span class="line">&lt;ipython-input<span class="number">-21</span><span class="number">-38</span>b482e25fef&gt; <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">      <span class="number">3</span> </span><br><span class="line">      <span class="number">4</span> <span class="comment">#调用</span></span><br><span class="line">----&gt; 5 print(func(2,3))</span><br><span class="line">TypeError: func() missing <span class="number">1</span> required positional argument: <span class="string">&#x27;c&#x27;</span></span><br></pre></td></tr></table></figure>
+TypeError                                 Traceback (most recent call last)
 
+&lt;ipython-input-21-38b482e25fef&gt; in &lt;module&gt;
+      3 
+      4 #调用
+----&gt; 5 print(func(2,3))
+TypeError: func() missing 1 required positional argument: &#39;c&#39;</code></pre>
 <h4 id="关键参数："><a href="#关键参数：" class="headerlink" title="关键参数："></a>关键参数：</h4><ul>
 <li><p>正常情况下，给函数传参数，要按顺序。如果不想按顺序，就用关键参数。</p>
 </li>
@@ -1583,10 +1648,12 @@
 <li><p>调用函数时，关键参数可以和位置参数一起用，但是关键参数必须在位置参数的后面。不然会报错。</p>
 </li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">a,b,c</span>):</span></span><br><span class="line">    <span class="keyword">return</span> a+b+c</span><br><span class="line"></span><br><span class="line"><span class="comment">#调用</span></span><br><span class="line">print(func(<span class="number">4</span>,c=<span class="number">3</span>,b=<span class="number">2</span>))   </span><br></pre></td></tr></table></figure>
+<pre><code class="python">def func(a,b,c):
+    return a+b+c
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#9</span></span><br></pre></td></tr></table></figure>
-
+#调用
+print(func(4,c=3,b=2))   </code></pre>
+<pre><code class="python">#9</code></pre>
 <h4 id="默认参数："><a href="#默认参数：" class="headerlink" title="默认参数："></a>默认参数：</h4><blockquote>
 <ul>
 <li><p>函数定义时，默认参数必须在位置形参的后面。</p>
@@ -1602,33 +1669,64 @@
 <p>默认参数是在函数定义时，指定参数名的值。</p>
 </li>
 <li><p>写法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> (<span class="params">a, b=<span class="number">100</span></span>):</span></span><br><span class="line">   <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">def (a, b=100):
+   pass</code></pre>
 </li>
 <li><p>定义时，有默认参数的话，调用时，这个实参可以不写。如果实参不写的话，这个形参的参数值是他的默认值。</p>
 </li>
 </ul>
 </blockquote>
 <p>实例演示：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">info</span>(<span class="params">name,age=<span class="number">18</span></span>):</span></span><br><span class="line">    print(<span class="string">&#x27;名字:&#x27;</span>,name)</span><br><span class="line">    print(<span class="string">&#x27;年龄:&#x27;</span>,age)</span><br><span class="line">    <span class="keyword">return</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">#调用</span></span><br><span class="line">info(age=<span class="number">22</span>,name=<span class="string">&#x27;Jack&#x27;</span>)</span><br><span class="line">print(<span class="string">&#x27;****************&#x27;</span>)</span><br><span class="line">info(name=<span class="string">&#x27;Jack&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">def info(name,age=18):
+    print(&#39;名字:&#39;,name)
+    print(&#39;年龄:&#39;,age)
+    return 
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">名字: Jack</span></span><br><span class="line"><span class="string">年龄: 22</span></span><br><span class="line"><span class="string">*****************</span></span><br><span class="line"><span class="string">名字: Jack</span></span><br><span class="line"><span class="string">年龄: 18</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
+#调用
+info(age=22,name=&#39;Jack&#39;)
+print(&#39;****************&#39;)
+info(name=&#39;Jack&#39;)</code></pre>
+<pre><code class="python">&#39;&#39;&#39;
+名字: Jack
+年龄: 22
+*****************
+名字: Jack
+年龄: 18
+&#39;&#39;&#39;</code></pre>
 <h4 id="动态参数：-args-kwargs"><a href="#动态参数：-args-kwargs" class="headerlink" title="动态参数： * args    ** kwargs"></a>动态参数： * args    ** kwargs</h4><p>当你需要一个函数能处理很多参数，超过已声明的参数数量，这时就需要动态参数。与上述两中参数不同的是，该参数声明不需要命名。</p>
 <h5 id="args"><a href="#args" class="headerlink" title="* args"></a>* args</h5><p>一个’* ‘的参数会以元组(tuple)的形式导入，存放未命名的变量参数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params">arg1,*vartuple</span>):</span></span><br><span class="line">    print(<span class="string">&#x27;输出：&#x27;</span>)</span><br><span class="line">    print(arg1)</span><br><span class="line">    print(vartuple)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#调用</span></span><br><span class="line">printinfo(<span class="number">34</span>,<span class="number">45</span>,<span class="number">32</span>,<span class="number">12</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">#函数定义
+def printinfo(arg1,*vartuple):
+    print(&#39;输出：&#39;)
+    print(arg1)
+    print(vartuple)
 
+#调用
+printinfo(34,45,32,12)</code></pre>
 <pre><code>#输出：
 #34
 #(45, 32, 12)</code></pre>
 <p>如果函数调用时没有指定参数，动态参数则表现为空元组。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params">arg1,*vartuple</span>):</span></span><br><span class="line">    print(<span class="string">&#x27;输出：&#x27;</span>)</span><br><span class="line">    print(arg1)</span><br><span class="line">    print(vartuple)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#调用</span></span><br><span class="line">printinfo(<span class="number">34</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">#函数定义
+def printinfo(arg1,*vartuple):
+    print(&#39;输出：&#39;)
+    print(arg1)
+    print(vartuple)
 
+#调用
+printinfo(34)</code></pre>
 <pre><code>#输出：
 #34
 #()</code></pre>
 <h5 id="kwargs"><a href="#kwargs" class="headerlink" title="** kwargs"></a>** kwargs</h5><p>还有一种动态参数,加了两个星号则以字典的形式导入</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params">arg1,**vardict</span>):</span></span><br><span class="line">    print(<span class="string">&#x27;输出：&#x27;</span>)</span><br><span class="line">    print(arg1)</span><br><span class="line">    print(vardict)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#调用</span></span><br><span class="line">printinfo(<span class="number">34</span>,a=<span class="number">45</span>,b=<span class="number">32</span>,c=<span class="number">12</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">#函数定义
+def printinfo(arg1,**vardict):
+    print(&#39;输出：&#39;)
+    print(arg1)
+    print(vardict)
 
+#调用
+printinfo(34,a=45,b=32,c=12)</code></pre>
 <pre><code>#输出：
 #34
 #&#123;&#39;a&#39;: 45, &#39;b&#39;: 32, &#39;c&#39;: 12&#125;</code></pre>
@@ -1636,17 +1734,22 @@
 <p>声明函数时，参数中的* 可以单独出现。</p>
 <p>如果* 单独出现，后面的参数必须以关键字传入</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">a,b,*,c</span>):</span></span><br><span class="line">    <span class="keyword">return</span> a+b-c</span><br><span class="line"></span><br><span class="line">func(<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>)   <span class="comment">#非关键字传入报错</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">def func(a,b,*,c):
+    return a+b-c
 
+func(3,2,4)   #非关键字传入报错</code></pre>
+<pre><code class="python">---------------------------------------------------------------------------
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">TypeError                                 Traceback (most recent call last)</span><br><span class="line"></span><br><span class="line">&lt;ipython-input<span class="number">-34</span>-f69556d382a4&gt; <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">      <span class="number">2</span>     <span class="keyword">return</span> a+b-c</span><br><span class="line">      <span class="number">3</span> </span><br><span class="line">----&gt; 4 func(3,2,4)</span><br><span class="line">TypeError: func() takes <span class="number">2</span> positional arguments but <span class="number">3</span> were given</span><br></pre></td></tr></table></figure>
+TypeError                                 Traceback (most recent call last)
 
+&lt;ipython-input-34-f69556d382a4&gt; in &lt;module&gt;
+      2     return a+b-c
+      3 
+----&gt; 4 func(3,2,4)
+TypeError: func() takes 2 positional arguments but 3 were given</code></pre>
 <p>关键字传入正确</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">func(<span class="number">3</span>,<span class="number">4</span>,c=<span class="number">5</span>)  </span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#2</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">func(3,4,c=5)  </code></pre>
+<pre><code class="python">#2</code></pre>
 <h4 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h4><blockquote>
 <p>python语言中，类型属于对象，变量是没有类型的,例如:</p>
 <p>a=[1,2,3]</p>
@@ -1670,17 +1773,31 @@
 </ul>
 <p>python 中一切都是对象，严格意义我们不能说值传递还是引用传递，我们应该说传不可变对象和传可变对象。</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#传不可变对象实例</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">changeInt</span>(<span class="params">a</span>):</span></span><br><span class="line">    a=<span class="number">10</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">#函数调用</span></span><br><span class="line">b=<span class="number">5</span></span><br><span class="line">changeInt(b)</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">#传不可变对象实例
+#
+#函数定义
+def changeInt(a):
+    a=10
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#5</span></span><br></pre></td></tr></table></figure>
-
-
+#函数调用
+b=5
+changeInt(b)
+print(b)</code></pre>
+<pre><code class="python">#5</code></pre>
 <p>实例中有 int 对象 2，指向它的变量是 b，在传递给 ChangeInt 函数时，按传值的方式复制了变量 b，a 和 b 都指向了同一个 Int 对象，在 a=10 时，则新生成一个 int 值对象 10，并让 a 指向它。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#传可变对象实例</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">changelist</span>(<span class="params">List</span>):</span></span><br><span class="line">    <span class="comment">#对传入的列表进行扩展</span></span><br><span class="line">    List.append([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">    print(<span class="string">&#x27;函数内取值:&#x27;</span>,List)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#函数调用</span></span><br><span class="line">List=[<span class="string">&#x27;datascience&#x27;</span>]</span><br><span class="line">changelist(List)</span><br><span class="line">print(<span class="string">&#x27;函数外取值:&#x27;</span>,List)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">#传可变对象实例
+def changelist(List):
+    #对传入的列表进行扩展
+    List.append([1,2,3,4])
+    print(&#39;函数内取值:&#39;,List)
+    return
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#函数内取值: [&#x27;datascience&#x27;, [1, 2, 3, 4]]</span></span><br><span class="line"><span class="comment">#函数外取值: [&#x27;datascience&#x27;, [1, 2, 3, 4]]</span></span><br></pre></td></tr></table></figure>
-
-
+#函数调用
+List=[&#39;datascience&#39;]
+changelist(List)
+print(&#39;函数外取值:&#39;,List)</code></pre>
+<pre><code class="python">#函数内取值: [&#39;datascience&#39;, [1, 2, 3, 4]]
+#函数外取值: [&#39;datascience&#39;, [1, 2, 3, 4]]</code></pre>
 <p>可变对象在函数里修改了参数，那么在调用这个函数的函数里，原始的参数也被改变了。</p>
 <p>传入函数的和在末尾添加新内容的对象用的是同一个引用。</p>
 <h4 id="小作业"><a href="#小作业" class="headerlink" title="小作业"></a>小作业</h4><ol>
@@ -1711,7 +1828,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\59346.html" title="12.Python面向对象(3)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191225231208.png" /><span class="title">12.Python面向对象(3)</span><span class="excerpt">Python面向对象单例模式</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\80ca38c0.html" title="Day2.Python变量和运算符" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.Python变量和运算符</span><span class="excerpt">Python变量与运算符！！！</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\fbd6efa0.html" title="Day1.Python基本操作与格式规范" rel="bookmark "><img src="https://7.dusays.com/2020/09/14/ba18a9c432ad6.png" /><span class="title">Day1.Python基本操作与格式规范</span><span class="excerpt">Python基本操作与格式规范！！！</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1873,7 +1990,7 @@
 
 例题引导：
 有两个班英语班和数学班，需要统计这两个班中报名情况，例如统计既报名了英语班又报名数学班的同学名字,即统计为交集。
-12english_...</p>
+english_c ...</p>
         </a>
       
     </div>
@@ -2883,6 +3000,8 @@
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2923,6 +3042,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3236,6 +3362,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

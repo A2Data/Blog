@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1427,7 +1431,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>216 words</p>
+      <p>221 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1481,18 +1485,64 @@
 <a id="more"></a>
 
 
-<h1 id="磁盘管理"><a href="#磁盘管理" class="headerlink" title="磁盘管理"></a>磁盘管理</h1><h2 id="查看磁盘"><a href="#查看磁盘" class="headerlink" title="查看磁盘"></a>查看磁盘</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">fdisk -l </span><br><span class="line"></span><br><span class="line">fdisk /dev/sdb 磁盘分区</span><br><span class="line"></span><br><span class="line">指令 m</span><br><span class="line"></span><br><span class="line">l    list known partition   列出所有的分区</span><br><span class="line"></span><br><span class="line">n   add a new partition      创建一个新的分区</span><br><span class="line"></span><br><span class="line">p   print the partition table  打印分区内容</span><br><span class="line"></span><br><span class="line">t   change a partition&#x27;s system id  改变分区系统id</span><br><span class="line"></span><br><span class="line">w  write table to disk an exit  保存并退出分区</span><br><span class="line"></span><br><span class="line">d  delete a partition 删除一个分区</span><br></pre></td></tr></table></figure>
+<h1 id="磁盘管理"><a href="#磁盘管理" class="headerlink" title="磁盘管理"></a>磁盘管理</h1><h2 id="查看磁盘"><a href="#查看磁盘" class="headerlink" title="查看磁盘"></a>查看磁盘</h2><pre><code class="shell">fdisk -l 
 
-<h2 id="查看分区"><a href="#查看分区" class="headerlink" title="查看分区"></a>查看分区</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fdisk -l </span><br><span class="line"></span><br><span class="line">fdisk /dev/sdb  磁盘分区</span><br><span class="line"></span><br><span class="line">n----创建</span><br><span class="line"></span><br><span class="line">d----删除</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+fdisk /dev/sdb 磁盘分区
 
-<h2 id="交换分区"><a href="#交换分区" class="headerlink" title="交换分区"></a>交换分区</h2> <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fdisk  /dev/sdb格式化为 swap 命令</span><br><span class="line"></span><br><span class="line">mkswp  /dev/sdb1</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+指令 m
+
+l    list known partition   列出所有的分区
+
+n   add a new partition      创建一个新的分区
+
+p   print the partition table  打印分区内容
+
+t   change a partition&#39;s system id  改变分区系统id
+
+w  write table to disk an exit  保存并退出分区
+
+d  delete a partition 删除一个分区</code></pre>
+<h2 id="查看分区"><a href="#查看分区" class="headerlink" title="查看分区"></a>查看分区</h2><pre><code class="shell">fdisk -l 
+
+fdisk /dev/sdb  磁盘分区
+
+n----创建
+
+d----删除
+</code></pre>
+<h2 id="交换分区"><a href="#交换分区" class="headerlink" title="交换分区"></a>交换分区</h2><pre><code class="shell">fdisk  /dev/sdb格式化为 swap 命令
+
+mkswp  /dev/sdb1
+</code></pre>
+<h2 id="设置分区"><a href="#设置分区" class="headerlink" title="设置分区"></a>设置分区</h2><pre><code class="shell">mkswap /dev/sdb1 (做成交换文件系统）
+
+free 查看一下内存
+
+swapon /dev/sdb1 开启交换内存
+
+free 查看内存
+
+swapoff  /dev/sdb1 关闭交换内存
+
+free 最后查看 是否存在</code></pre>
+<h2 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h2><pre><code class="shell">umount 卸载
+mount 挂载
+
+1、创建
+mkfs - t ext3 /dev/sdb1
+
+mkfs ext3/dev/sdb1
+
+挂载
+
+mount /dev/sdb /mnt
+
+查看
+
+df -hT 
 
 
-
-<h2 id="设置分区"><a href="#设置分区" class="headerlink" title="设置分区"></a>设置分区</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mkswap /dev/sdb1 (做成交换文件系统）</span><br><span class="line"></span><br><span class="line">free 查看一下内存</span><br><span class="line"></span><br><span class="line">swapon /dev/sdb1 开启交换内存</span><br><span class="line"></span><br><span class="line">free 查看内存</span><br><span class="line"></span><br><span class="line">swapoff  /dev/sdb1 关闭交换内存</span><br><span class="line"></span><br><span class="line">free 最后查看 是否存在</span><br></pre></td></tr></table></figure>
-
-<h2 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">umount 卸载</span><br><span class="line">mount 挂载</span><br><span class="line"></span><br><span class="line">1、创建</span><br><span class="line">mkfs - t ext3 /dev/sdb1</span><br><span class="line"></span><br><span class="line">mkfs ext3/dev/sdb1</span><br><span class="line"></span><br><span class="line">挂载</span><br><span class="line"></span><br><span class="line">mount /dev/sdb /mnt</span><br><span class="line"></span><br><span class="line">查看</span><br><span class="line"></span><br><span class="line">df -hT </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+</code></pre>
 
   
   
@@ -1506,7 +1556,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\39704.html" title="Linux 计划任务" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux 计划任务</span><span class="excerpt">计划任务</span></a><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\10415.html" title="Linux NFS网络文件" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux NFS网络文件</span><span class="excerpt">Linux 手把手教你搭建NFS网络文件系统。</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\43857.html" title="Linux Shell脚本" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell脚本</span><span class="excerpt">Linux Shell脚本相关学习。</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\61794.html" title="Linux Mdadm案例" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Mdadm案例</span><span class="excerpt">Linux  Mdadm 案例 raid5。</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\10415.html" title="Linux NFS网络文件" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux NFS网络文件</span><span class="excerpt">Linux 手把手教你搭建NFS网络文件系统。</span></a><a class="item" href="\posts\43857.html" title="Linux Shell脚本" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell脚本</span><span class="excerpt">Linux Shell脚本相关学习。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1569,7 +1619,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>216 words</p>
+      <p>221 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1660,9 +1710,9 @@
 LVM逻辑卷
  创建lvm
 
-创建物理卷__PV123pvcreate /dev/sdb,c,d,e (创建pv）pvdisplay(显示pv）
+创建物理卷__PV   pvcreate /dev/sdb,c,d,e (创建pv）
 
-创建卷...</p>
+   pvdisplay(显示pv）...</p>
         </a>
       
       
@@ -2686,6 +2736,8 @@ LVM逻辑卷
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2726,6 +2778,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3039,6 +3098,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

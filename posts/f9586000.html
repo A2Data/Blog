@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1479,8 +1483,8 @@
 <p><strong>例题引导:</strong></p>
 <p>把True变为False，把False变为True后输出：</p>
 <p><strong>参考答案：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> <span class="keyword">not</span> <span class="literal">True</span></span><br><span class="line"><span class="keyword">print</span> <span class="keyword">not</span> <span class="literal">False</span> </span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">print not True
+print not False </code></pre>
 <p><strong>学习引导：</strong></p>
 <ul>
 <li>数据类型-布尔</li>
@@ -1494,10 +1498,16 @@
 <li>布尔类型通常在 if （判断）和 while （循环）语句中应用</li>
 </ul>
 <p>下面是一个简单的案例演示</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="literal">True</span>==<span class="number">1</span>)</span><br><span class="line">print(<span class="literal">False</span>==<span class="number">0</span>)</span><br><span class="line">print(<span class="number">2</span>&gt;<span class="number">1</span>)</span><br><span class="line">print(<span class="number">0</span>&gt;<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">True</span></span><br><span class="line"><span class="string">True</span></span><br><span class="line"><span class="string">True</span></span><br><span class="line"><span class="string">False</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">print(True==1)
+print(False==0)
+print(2&gt;1)
+print(0&gt;3)</code></pre>
+<pre><code class="python">&#39;&#39;&#39;
+True
+True
+True
+False
+&#39;&#39;&#39;</code></pre>
 <h4 id="小测试："><a href="#小测试：" class="headerlink" title="小测试："></a>小测试：</h4><p>请列举布尔值是false的值：</p>
 <h2 id="数据类型-元组"><a href="#数据类型-元组" class="headerlink" title="数据类型-元组"></a>数据类型-元组</h2><p>和列表很相似，区别在于</p>
 <ul>
@@ -1509,73 +1519,70 @@
 </li>
 </ul>
 <p>下面我们直接演示一些元组的方法</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#索引、长度、切片、循环</span></span><br><span class="line">a=[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="string">&#x27;32&#x27;</span>,<span class="string">&#x27;你好&#x27;</span>]</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[2, 3, 4, 5, &#x27;32&#x27;, &#x27;你好&#x27;]</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">4</span>]  <span class="comment">#元组中第5个元素</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#x27;32&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">len(a)  <span class="comment">#元组a的长度</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#6</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">0</span>:<span class="number">3</span>]  <span class="comment">#取该元组中第一个到第三个的值</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[2, 3, 4]</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="遍历元组"><a href="#遍历元组" class="headerlink" title="遍历元组"></a>遍历元组</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> a:</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">32</span></span><br><span class="line">你好</span><br></pre></td></tr></table></figure>
-
-<h4 id="查询判断"><a href="#查询判断" class="headerlink" title="查询判断"></a>查询判断</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;32&#x27;</span> <span class="keyword">in</span> a  <span class="comment">#判断字符串32是否在元组a中</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#True</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">32</span> <span class="keyword">in</span> a  <span class="comment">#判断整数32是否在元组a中</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#False</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">#索引、长度、切片、循环
+a=[2,3,4,5,&#39;32&#39;,&#39;你好&#39;]
+a</code></pre>
+<pre><code class="python">#[2, 3, 4, 5, &#39;32&#39;, &#39;你好&#39;]</code></pre>
+<pre><code class="python">a[4]  #元组中第5个元素</code></pre>
+<pre><code class="python">#&#39;32&#39;</code></pre>
+<pre><code class="python">len(a)  #元组a的长度</code></pre>
+<pre><code class="python">#6</code></pre>
+<pre><code class="python">a[0:3]  #取该元组中第一个到第三个的值</code></pre>
+<pre><code class="python">#[2, 3, 4]</code></pre>
+<h4 id="遍历元组"><a href="#遍历元组" class="headerlink" title="遍历元组"></a>遍历元组</h4><pre><code class="python">for i in a:
+    print(i)</code></pre>
+<pre><code class="python">2
+3
+4
+5
+32
+你好</code></pre>
+<h4 id="查询判断"><a href="#查询判断" class="headerlink" title="查询判断"></a>查询判断</h4><pre><code class="python">&#39;32&#39; in a  #判断字符串32是否在元组a中</code></pre>
+<pre><code class="python">#True</code></pre>
+<pre><code class="python">32 in a  #判断整数32是否在元组a中</code></pre>
+<pre><code class="python">#False</code></pre>
 <p><strong>如果不可变的元组中包含可变的元素（例如列表），则元组可变</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tuple_=(<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="string">&#x27;元组&#x27;</span>,[<span class="number">3</span>,<span class="number">4</span>,<span class="string">&#x27;d&#x27;</span>,<span class="string">&#x27;2&#x27;</span>],<span class="string">&#x27;32&#x27;</span>)</span><br><span class="line">tuple_</span><br></pre></td></tr></table></figure>
+<pre><code class="python">tuple_=(3,4,2,&#39;元组&#39;,[3,4,&#39;d&#39;,&#39;2&#39;],&#39;32&#39;)
+tuple_</code></pre>
+<pre><code class="python">#(3, 4, 2, &#39;元组&#39;, [3, 4, &#39;d&#39;, &#39;2&#39;], &#39;32&#39;)</code></pre>
+<pre><code class="python">#更改数据会报错
+tuple_[3]=1
+tuple_</code></pre>
+<pre><code class="python">---------------------------------------------------------------------------
 
+TypeError                                 Traceback (most recent call last)
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#(3, 4, 2, &#x27;元组&#x27;, [3, 4, &#x27;d&#x27;, &#x27;2&#x27;], &#x27;32&#x27;)</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#更改数据会报错</span></span><br><span class="line">tuple_[<span class="number">3</span>]=<span class="number">1</span></span><br><span class="line">tuple_</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">TypeError                                 Traceback (most recent call last)</span><br><span class="line"></span><br><span class="line">&lt;ipython-input<span class="number">-9</span><span class="number">-13</span>fb7bda7784&gt; <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">----&gt; 1 tuple_[3]=1</span><br><span class="line">      <span class="number">2</span> tuple_</span><br><span class="line">TypeError: <span class="string">&#x27;tuple&#x27;</span> object does <span class="keyword">not</span> support item assignment</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#更改元组中的列表部分</span></span><br><span class="line">tuple_[<span class="number">4</span>][<span class="number">0</span>]=<span class="string">&#x27;数据&#x27;</span></span><br><span class="line">tuple_</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#(3, 4, 2, &#x27;元组&#x27;, [&#x27;数据&#x27;, 4, &#x27;d&#x27;, &#x27;2&#x27;], &#x27;32&#x27;)</span></span><br></pre></td></tr></table></figure>
-
-
-
+&lt;ipython-input-9-13fb7bda7784&gt; in &lt;module&gt;
+----&gt; 1 tuple_[3]=1
+      2 tuple_
+TypeError: &#39;tuple&#39; object does not support item assignment</code></pre>
+<pre><code class="python">#更改元组中的列表部分
+tuple_[4][0]=&#39;数据&#39;
+tuple_</code></pre>
+<pre><code class="python">#(3, 4, 2, &#39;元组&#39;, [&#39;数据&#39;, 4, &#39;d&#39;, &#39;2&#39;], &#39;32&#39;)</code></pre>
 <h2 id="string字符串"><a href="#string字符串" class="headerlink" title="string字符串"></a>string字符串</h2><ul>
 <li>和列表操作类似</li>
 <li>切片 索引 </li>
 <li><strong>特点是不可变性</strong></li>
 </ul>
 <p>python中单引号和双引号使用完全相同。<br>使用三引号(‘’’或”””)可以指定一个多行字符串。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;data science&#x27;</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;data science&quot;</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;&#x27;&#x27;this is data science</span></span><br><span class="line"><span class="string">Learning together&#x27;&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;&quot;&quot;this is data science</span></span><br><span class="line"><span class="string">Learning together&quot;&quot;&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">print(&#39;data science&#39;)
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">data science</span></span><br><span class="line"><span class="string">data science</span></span><br><span class="line"><span class="string">this is data science</span></span><br><span class="line"><span class="string">Learning together</span></span><br><span class="line"><span class="string">this is data science</span></span><br><span class="line"><span class="string">Learning together</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+print(&quot;data science&quot;)
 
+print(&#39;&#39;&#39;this is data science
+Learning together&#39;&#39;&#39;)
+
+print(&quot;&quot;&quot;this is data science
+Learning together&quot;&quot;&quot;)</code></pre>
+<pre><code class="python">&#39;&#39;&#39;
+data science
+data science
+this is data science
+Learning together
+this is data science
+Learning together
+&#39;&#39;&#39;</code></pre>
 <ul>
 <li>转义符 ‘’:反斜杠可以用来转义，使用r可以让反斜杠不发生转义。</li>
 <li>如 r”data science \n” </li>
@@ -1583,37 +1590,47 @@
 <li>按字面意义级联字符串，如”this “ “is “ “data science”会被自动转换为this is data science。</li>
 </ul>
 <p>转义字符演示</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;data\nscience&#x27;</span>)  <span class="comment">#表示换行</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">r&#x27;data\nscience&#x27;</span>)  <span class="comment">#加r则无特殊意义，正常输出</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;this&#x27;</span>,<span class="string">&#x27;is&#x27;</span>,<span class="string">&#x27;DataScience&#x27;</span>)  <span class="comment">#逐个输出字符串</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">print(&#39;data\nscience&#39;)  #表示换行
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">data</span></span><br><span class="line"><span class="string">science</span></span><br><span class="line"><span class="string">data\nscience</span></span><br><span class="line"><span class="string">this is DataScience</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+print(r&#39;data\nscience&#39;)  #加r则无特殊意义，正常输出
 
-
+print(&#39;this&#39;,&#39;is&#39;,&#39;DataScience&#39;)  #逐个输出字符串</code></pre>
+<pre><code class="python">&#39;&#39;&#39;
+data
+science
+data\nscience
+this is DataScience
+&#39;&#39;&#39;</code></pre>
 <p>字符串可以用 ‘+’运算符连接在一起，用 ‘*’ 运算符重复。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str=<span class="string">&#x27;DataScience&#x27;</span></span><br><span class="line">print(str+<span class="string">&#x27;你好&#x27;</span>)  <span class="comment">#连接两个字符串</span></span><br><span class="line">print(str*<span class="number">5</span>)  <span class="comment">#打印该字符串5次</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#DataScience你好</span></span><br><span class="line"><span class="comment">#DataScienceDataScienceDataScienceDataScienceDataScience</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">str=&#39;DataScience&#39;
+print(str+&#39;你好&#39;)  #连接两个字符串
+print(str*5)  #打印该字符串5次</code></pre>
+<pre><code class="python">#DataScience你好
+#DataScienceDataScienceDataScienceDataScienceDataScience</code></pre>
 <p>Python 中的字符串有两种索引方式，从左往右以 0 开始，从右往左以 -1 开始。</p>
 <p>索引演示：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str=<span class="string">&#x27;DataScience&#x27;</span></span><br><span class="line">print(str[<span class="number">1</span>])  <span class="comment">#打印该字符串中第一个元素</span></span><br><span class="line">print(str[<span class="number">2</span>:<span class="number">-1</span>])  <span class="comment">#打印该字符串中第三个元素到倒数第二个元素</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#a</span></span><br><span class="line"><span class="comment">#taScienc</span></span><br></pre></td></tr></table></figure>
-
-
+<pre><code class="python">str=&#39;DataScience&#39;
+print(str[1])  #打印该字符串中第一个元素
+print(str[2:-1])  #打印该字符串中第三个元素到倒数第二个元素</code></pre>
+<pre><code class="python">#a
+#taScienc</code></pre>
 <p>Python中的字符串不能改变。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str=<span class="string">&#x27;DataScience&#x27;</span></span><br><span class="line">str[<span class="number">0</span>]=<span class="string">&#x27;s&#x27;</span></span><br><span class="line">print(str[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+<pre><code class="python">str=&#39;DataScience&#39;
+str[0]=&#39;s&#39;
+print(str[0])</code></pre>
+<pre><code class="python">---------------------------------------------------------------------------
 
+TypeError                                 Traceback (most recent call last)
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">TypeError                                 Traceback (most recent call last)</span><br><span class="line"></span><br><span class="line">&lt;ipython-input<span class="number">-31</span>-f432ac1ed2d2&gt; <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">      <span class="number">1</span> str=<span class="string">&#x27;DataScience&#x27;</span></span><br><span class="line">----&gt; 2 str[0]=&#x27;s&#x27;</span><br><span class="line">      <span class="number">3</span> print(str[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TypeError: <span class="string">&#x27;str&#x27;</span> object does <span class="keyword">not</span> support item assignment</span><br></pre></td></tr></table></figure>
-
+&lt;ipython-input-31-f432ac1ed2d2&gt; in &lt;module&gt;
+      1 str=&#39;DataScience&#39;
+----&gt; 2 str[0]=&#39;s&#39;
+      3 print(str[0])</code></pre>
+<pre><code class="python">TypeError: &#39;str&#39; object does not support item assignment</code></pre>
 <p>Python 没有单独的字符类型，一个字符就是长度为 1 的字符串。<br>字符串的截取的语法格式如下：<strong>变量[头下标:尾下标:步长]</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str=<span class="string">&#x27;welcome to the DataScience&#x27;</span></span><br><span class="line">print(str[<span class="number">0</span>:<span class="number">13</span>:<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#wloet h</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">str=&#39;welcome to the DataScience&#39;
+print(str[0:13:2])</code></pre>
+<pre><code class="python">#wloet h</code></pre>
 <p>关于字符串的内容，后面有一节会详细讲解。</p>
 <p>今天没有很多小练习，建议复习一下之前的学习内容。</p>
 
@@ -1629,7 +1646,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\59346.html" title="12.Python面向对象(3)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191225231208.png" /><span class="title">12.Python面向对象(3)</span><span class="excerpt">Python面向对象单例模式</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\80ca38c0.html" title="Day2.Python变量和运算符" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.Python变量和运算符</span><span class="excerpt">Python变量与运算符！！！</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\fbd6efa0.html" title="Day1.Python基本操作与格式规范" rel="bookmark "><img src="https://7.dusays.com/2020/09/14/ba18a9c432ad6.png" /><span class="title">Day1.Python基本操作与格式规范</span><span class="excerpt">Python基本操作与格式规范！！！</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2812,6 +2829,8 @@ cat id_rsa....</p>
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2852,6 +2871,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3165,6 +3191,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

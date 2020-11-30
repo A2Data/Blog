@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1511,8 +1515,20 @@
 </ol>
 <p>还有一点要说的是，如果使用* 的方式进行了导入，这时只想使用里面的某个或某些功能时，可以使用__ all__来进行约束；</p>
 <p>注意：__ all__只是用来约束* 方式的，其他方式导入的话，不会生效；</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#直接导入</span></span><br><span class="line"><span class="keyword">import</span> pandas</span><br><span class="line"></span><br><span class="line"><span class="comment">#加别名</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># #看一下from.....import 的使用</span></span><br><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> modules</span><br><span class="line">print(modules)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># #再看一下使用as引用这个模块的某个功能；</span></span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="comment">#这样在之后我们要调用这个模块只需要用plt即可，相当于起别名。</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">#直接导入
+import pandas
 
+#加别名
+import pandas as pd
+
+# #看一下from.....import 的使用
+from sys import modules
+print(modules)
+
+
+# #再看一下使用as引用这个模块的某个功能；
+from matplotlib import pyplot as plt
+#这样在之后我们要调用这个模块只需要用plt即可，相当于起别名。</code></pre>
 <h2 id="包"><a href="#包" class="headerlink" title="包"></a>包</h2><p>包是一种组织管理代码的方式，包里放着模块</p>
 <p>用于将模块包含在一起的一个文件夹</p>
 <p>假如一个模块的名称是 A.B，那么他表示一个包 A中的子模块B 。</p>
@@ -1552,8 +1568,17 @@
 <h2 id="包和模块区别"><a href="#包和模块区别" class="headerlink" title="包和模块区别"></a>包和模块区别</h2><p>包是比模块更高层的概念，模块一般是一个文件，包是一个目录，一个包中可以包含很多个模块。</p>
 <p>包的<strong>all</strong> 定义在init.py文件中，模块的<strong>all</strong>定义在模块文件的开头</p>
 <p><em>以下包用P表示，模块用M表示，方法用F表示</em></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#在Python中引入模块可以用</span></span><br><span class="line"><span class="keyword">import</span> M</span><br><span class="line"><span class="keyword">from</span> M <span class="keyword">import</span> * </span><br><span class="line"><span class="keyword">from</span> M <span class="keyword">import</span> F</span><br><span class="line"></span><br><span class="line"><span class="comment">#引入包的方式可以是</span></span><br><span class="line"><span class="keyword">import</span> P</span><br><span class="line"><span class="keyword">from</span> P <span class="keyword">import</span> M</span><br><span class="line"><span class="keyword">from</span> P <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> P.M <span class="keyword">import</span> F</span><br><span class="line"><span class="keyword">from</span> P1.P2.M <span class="keyword">import</span> F</span><br></pre></td></tr></table></figure>
+<pre><code class="python">#在Python中引入模块可以用
+import M
+from M import * 
+from M import F
 
+#引入包的方式可以是
+import P
+from P import M
+from P import *
+from P.M import F
+from P1.P2.M import F</code></pre>
 <p>另外，包的init.py文件不能少。</p>
 <h3 id="概念说明"><a href="#概念说明" class="headerlink" title="概念说明"></a>概念说明</h3><p>这里理清python中模块、库、包之间的概念差异</p>
 <p>模块(module)其实就是py文件，里面定义了一些函数、类、变量等。</p>
@@ -1572,7 +1597,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\59346.html" title="12.Python面向对象(3)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191225231208.png" /><span class="title">12.Python面向对象(3)</span><span class="excerpt">Python面向对象单例模式</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\80ca38c0.html" title="Day2.Python变量和运算符" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.Python变量和运算符</span><span class="excerpt">Python变量与运算符！！！</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\fbd6efa0.html" title="Day1.Python基本操作与格式规范" rel="bookmark "><img src="https://7.dusays.com/2020/09/14/ba18a9c432ad6.png" /><span class="title">Day1.Python基本操作与格式规范</span><span class="excerpt">Python基本操作与格式规范！！！</span></a><a class="item" href="\posts\53d1dcfb.html" title="Day16.文件" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day16.文件</span><span class="excerpt">文件操作。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2750,6 +2775,8 @@
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2790,6 +2817,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3103,6 +3137,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

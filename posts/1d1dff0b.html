@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1423,13 +1427,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.1k words</p>
+      <p>1k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>5 min</p>
+      <p>4 min</p>
     </a>
   </div>
 
@@ -1478,12 +1482,31 @@
 
 <p><strong>例题引导：</strong></p>
 <p>有两个班英语班和数学班，需要统计这两个班中报名情况，例如统计既报名了英语班又报名数学班的同学名字,即统计为交集。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">english_c =&#123;<span class="string">&quot;ZhangSan&quot;</span>,<span class="string">&quot;LiSi&quot;</span>,<span class="string">&quot;James&quot;</span>,<span class="string">&quot;Alex&quot;</span>&#125;</span><br><span class="line">math_c =&#123;<span class="string">&quot;WangWu&quot;</span>,<span class="string">&quot;LiuDeHua&quot;</span>,<span class="string">&quot;James&quot;</span>,<span class="string">&quot;Alex&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">english_c =&#123;&quot;ZhangSan&quot;,&quot;LiSi&quot;,&quot;James&quot;,&quot;Alex&quot;&#125;
+math_c =&#123;&quot;WangWu&quot;,&quot;LiuDeHua&quot;,&quot;James&quot;,&quot;Alex&quot;&#125;</code></pre>
 <p>解题思路：统计两个集合中相同的元素 ，应想到利用集合的相关函数来实现，这道题没什么套路，只需要掌握知识点，会用即可。</p>
 <p><strong>参考答案：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">english_c =&#123;<span class="string">&quot;ZhangSan&quot;</span>,<span class="string">&quot;LiSi&quot;</span>,<span class="string">&quot;James&quot;</span>,<span class="string">&quot;Alex&quot;</span>&#125;</span><br><span class="line">math_c =&#123;<span class="string">&quot;WangWu&quot;</span>,<span class="string">&quot;LiuDeHua&quot;</span>,<span class="string">&quot;James&quot;</span>,<span class="string">&quot;Alex&quot;</span>&#125;</span><br><span class="line"><span class="comment">#1、交集--&gt; in a and in b</span></span><br><span class="line"><span class="comment">#统计既报了英语班又报了数学班的同学print(english_c &amp; math_c)</span></span><br><span class="line">print(english_c.intersection(math_c))</span><br><span class="line"><span class="comment">#输出为：&#123;&#x27;Alex&#x27;, &#x27;James&#x27;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#2、并集--&gt; in a or in b</span></span><br><span class="line"><span class="comment">#统计报名了两个班的所有同学print(english_c | math_c)</span></span><br><span class="line">print(english_c.union(math_c))</span><br><span class="line"><span class="comment">#输出为：&#123;&#x27;James&#x27;, &#x27;ZhangSan&#x27;, &#x27;LiuDeHua&#x27;, &#x27;LiSi&#x27;, &#x27;Alex&#x27;, &#x27;WangWu&#x27;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#3、差集--&gt; in a not in b</span></span><br><span class="line"><span class="comment">#统计只报名英语班的同学print(english_c - math_c)</span></span><br><span class="line">print(english_c.difference(math_c))</span><br><span class="line"><span class="comment">#输出为：&#123;&#x27;LiSi&#x27;, &#x27;ZhangSan&#x27;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="number">4</span>、交差补集</span><br><span class="line"><span class="comment">#统计只报名一个班的同学</span></span><br><span class="line">print(english_c ^ math_c)</span><br><span class="line"><span class="comment">#输出为：&#123;&#x27;LiuDeHua&#x27;, &#x27;ZhangSan&#x27;, &#x27;WangWu&#x27;, &#x27;LiSi&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">english_c =&#123;&quot;ZhangSan&quot;,&quot;LiSi&quot;,&quot;James&quot;,&quot;Alex&quot;&#125;
+math_c =&#123;&quot;WangWu&quot;,&quot;LiuDeHua&quot;,&quot;James&quot;,&quot;Alex&quot;&#125;
+#1、交集--&gt; in a and in b
+#统计既报了英语班又报了数学班的同学print(english_c &amp; math_c)
+print(english_c.intersection(math_c))
+#输出为：&#123;&#39;Alex&#39;, &#39;James&#39;&#125;
 
+#2、并集--&gt; in a or in b
+#统计报名了两个班的所有同学print(english_c | math_c)
+print(english_c.union(math_c))
+#输出为：&#123;&#39;James&#39;, &#39;ZhangSan&#39;, &#39;LiuDeHua&#39;, &#39;LiSi&#39;, &#39;Alex&#39;, &#39;WangWu&#39;&#125;
+
+#3、差集--&gt; in a not in b
+#统计只报名英语班的同学print(english_c - math_c)
+print(english_c.difference(math_c))
+#输出为：&#123;&#39;LiSi&#39;, &#39;ZhangSan&#39;&#125;
+
+4、交差补集
+#统计只报名一个班的同学
+print(english_c ^ math_c)
+#输出为：&#123;&#39;LiuDeHua&#39;, &#39;ZhangSan&#39;, &#39;WangWu&#39;, &#39;LiSi&#39;&#125;</code></pre>
 <p><strong>学习引导：</strong></p>
 <ul>
 <li>数据类型-集合<ul>
@@ -1503,115 +1526,80 @@
 <li><p>无序。不能像列表一样通过索引来标记其元素在列表中的位置，例如{1，2，3}和{2，1，3}是同一个集合。</p>
 </li>
 </ul>
-<h4 id="集合的创建"><a href="#集合的创建" class="headerlink" title="集合的创建"></a>集合的创建</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#集合的创建</span></span><br><span class="line">s=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="string">&#x27;32&#x27;</span>,<span class="string">&#x27;data&#x27;</span>,<span class="string">&#x27;文字&#x27;</span>,<span class="string">&#x27;d&#x27;</span>,<span class="string">&#x27;f&#x27;</span>&#125;</span><br><span class="line">s</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;1, 2, 3, &#x27;32&#x27;, &#x27;d&#x27;, &#x27;data&#x27;, &#x27;f&#x27;, &#x27;文字&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type(s)  <span class="comment">#查看类型</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#set</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="列表转集合"><a href="#列表转集合" class="headerlink" title="列表转集合"></a>列表转集合</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#列表转集合</span></span><br><span class="line">l=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="string">&#x27;df&#x27;</span>,<span class="string">&#x27;ffd&#x27;</span>]</span><br><span class="line">l</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#[1, 2, 3, &#x27;df&#x27;, &#x27;ffd&#x27;]</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set(l)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;1, 2, 3, &#x27;df&#x27;, &#x27;ffd&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="集合的新增-add"><a href="#集合的新增-add" class="headerlink" title="集合的新增 add"></a>集合的新增 add</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#新增</span></span><br><span class="line">s.add(<span class="string">&#x27;科学&#x27;</span>)</span><br><span class="line">s</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;1, 2, 3, &#x27;32&#x27;, &#x27;d&#x27;, &#x27;data&#x27;, &#x27;f&#x27;, &#x27;文字&#x27;, &#x27;科学&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
+<h4 id="集合的创建"><a href="#集合的创建" class="headerlink" title="集合的创建"></a>集合的创建</h4><pre><code class="python">#集合的创建
+s=&#123;1,2,3,&#39;32&#39;,&#39;data&#39;,&#39;文字&#39;,&#39;d&#39;,&#39;f&#39;&#125;
+s</code></pre>
+<pre><code class="python">#&#123;1, 2, 3, &#39;32&#39;, &#39;d&#39;, &#39;data&#39;, &#39;f&#39;, &#39;文字&#39;&#125;</code></pre>
+<pre><code class="python">type(s)  #查看类型</code></pre>
+<pre><code class="python">#set</code></pre>
+<h4 id="列表转集合"><a href="#列表转集合" class="headerlink" title="列表转集合"></a>列表转集合</h4><pre><code class="python">#列表转集合
+l=[1,2,3,&#39;df&#39;,&#39;ffd&#39;]
+l</code></pre>
+<pre><code class="python">#[1, 2, 3, &#39;df&#39;, &#39;ffd&#39;]</code></pre>
+<pre><code class="python">set(l)</code></pre>
+<pre><code class="python">#&#123;1, 2, 3, &#39;df&#39;, &#39;ffd&#39;&#125;</code></pre>
+<h4 id="集合的新增-add"><a href="#集合的新增-add" class="headerlink" title="集合的新增 add"></a>集合的新增 add</h4><pre><code class="python">#新增
+s.add(&#39;科学&#39;)
+s</code></pre>
+<pre><code class="python">#&#123;1, 2, 3, &#39;32&#39;, &#39;d&#39;, &#39;data&#39;, &#39;f&#39;, &#39;文字&#39;, &#39;科学&#39;&#125;</code></pre>
 <h4 id="集合的删除-discard-remove-pop"><a href="#集合的删除-discard-remove-pop" class="headerlink" title="集合的删除 discard/remove/pop"></a>集合的删除 discard/remove/pop</h4><p><strong>法一</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#删除</span></span><br><span class="line">s.discard(<span class="string">&#x27;32&#x27;</span>)</span><br><span class="line">s</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;1, 2, 3, &#x27;d&#x27;, &#x27;data&#x27;, &#x27;f&#x27;, &#x27;文字&#x27;, &#x27;科学&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">#删除
+s.discard(&#39;32&#39;)
+s</code></pre>
+<pre><code class="python">#&#123;1, 2, 3, &#39;d&#39;, &#39;data&#39;, &#39;f&#39;, &#39;文字&#39;, &#39;科学&#39;&#125;</code></pre>
 <p><strong>法二</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s.remove(<span class="number">2</span>)</span><br><span class="line">s</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;1, 3, &#x27;d&#x27;, &#x27;data&#x27;, &#x27;f&#x27;, &#x27;文字&#x27;, &#x27;科学&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">s.remove(2)
+s</code></pre>
+<pre><code class="python">#&#123;1, 3, &#39;d&#39;, &#39;data&#39;, &#39;f&#39;, &#39;文字&#39;, &#39;科学&#39;&#125;</code></pre>
 <p><strong>法三</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s.pop()</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;3, &#x27;d&#x27;, &#x27;data&#x27;, &#x27;f&#x27;, &#x27;文字&#x27;, &#x27;科学&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="集合的循环"><a href="#集合的循环" class="headerlink" title="集合的循环"></a>集合的循环</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#循环</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> s:</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">科学</span></span><br><span class="line"><span class="string">文字</span></span><br><span class="line"><span class="string">data</span></span><br><span class="line"><span class="string">d</span></span><br><span class="line"><span class="string">f</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="集合的关系运算"><a href="#集合的关系运算" class="headerlink" title="集合的关系运算"></a>集合的关系运算</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#集合的关系运算</span></span><br><span class="line">s=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="string">&#x27;32&#x27;</span>,<span class="string">&#x27;data&#x27;</span>,<span class="string">&#x27;文字&#x27;</span>,<span class="string">&#x27;d&#x27;</span>,<span class="string">&#x27;f&#x27;</span>&#125;</span><br><span class="line">s2=&#123;<span class="string">&#x27;science&#x27;</span>,<span class="string">&#x27;学长&#x27;</span>,<span class="string">&#x27;学员&#x27;</span>,<span class="string">&#x27;e&#x27;</span>,<span class="string">&#x27;f&#x27;</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">7</span>&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">s.pop()</code></pre>
+<pre><code class="python">#1</code></pre>
+<pre><code class="python">s</code></pre>
+<pre><code class="python">#&#123;3, &#39;d&#39;, &#39;data&#39;, &#39;f&#39;, &#39;文字&#39;, &#39;科学&#39;&#125;</code></pre>
+<h4 id="集合的循环"><a href="#集合的循环" class="headerlink" title="集合的循环"></a>集合的循环</h4><pre><code class="python">#循环
+for i in s:
+    print(i)</code></pre>
+<pre><code class="python">&#39;&#39;&#39;
+3
+科学
+文字
+data
+d
+f
+&#39;&#39;&#39;</code></pre>
+<h4 id="集合的关系运算"><a href="#集合的关系运算" class="headerlink" title="集合的关系运算"></a>集合的关系运算</h4><pre><code class="python">#集合的关系运算
+s=&#123;1,2,3,&#39;32&#39;,&#39;data&#39;,&#39;文字&#39;,&#39;d&#39;,&#39;f&#39;&#125;
+s2=&#123;&#39;science&#39;,&#39;学长&#39;,&#39;学员&#39;,&#39;e&#39;,&#39;f&#39;,3,2,6,7&#125;</code></pre>
 <p><strong>交集</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s&amp;s2</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;2, 3, &#x27;f&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">s&amp;s2</code></pre>
+<pre><code class="python">#&#123;2, 3, &#39;f&#39;&#125;</code></pre>
 <p><strong>并集</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#并集</span></span><br><span class="line">s | s2</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;1, 2, 3, &#x27;32&#x27;, 6, 7, &#x27;d&#x27;, &#x27;data&#x27;, &#x27;e&#x27;, &#x27;f&#x27;, &#x27;science&#x27;, &#x27;学员&#x27;, &#x27;学长&#x27;, &#x27;文字&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">#并集
+s | s2</code></pre>
+<pre><code class="python">#&#123;1, 2, 3, &#39;32&#39;, 6, 7, &#39;d&#39;, &#39;data&#39;, &#39;e&#39;, &#39;f&#39;, &#39;science&#39;, &#39;学员&#39;, &#39;学长&#39;, &#39;文字&#39;&#125;</code></pre>
 <p><strong>差集</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#差集</span></span><br><span class="line">s-s2</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;1, &#x27;32&#x27;, &#x27;d&#x27;, &#x27;data&#x27;, &#x27;文字&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">#差集
+s-s2</code></pre>
+<pre><code class="python">#&#123;1, &#39;32&#39;, &#39;d&#39;, &#39;data&#39;, &#39;文字&#39;&#125;</code></pre>
 <p><strong>对称差集</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#对称差集</span></span><br><span class="line">s ^ s2</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#123;1, &#x27;32&#x27;, 6, 7, &#x27;d&#x27;, &#x27;data&#x27;, &#x27;e&#x27;, &#x27;science&#x27;, &#x27;学员&#x27;, &#x27;学长&#x27;, &#x27;文字&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">#对称差集
+s ^ s2</code></pre>
+<pre><code class="python">#&#123;1, &#39;32&#39;, 6, 7, &#39;d&#39;, &#39;data&#39;, &#39;e&#39;, &#39;science&#39;, &#39;学员&#39;, &#39;学长&#39;, &#39;文字&#39;&#125;</code></pre>
 <p><strong>判断两个集合是否包含相同的元素，不包含返回true，包含返回false</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s.isdisjoint(s2)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#False</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s.isdisjoint(&#123;<span class="number">123</span>&#125;)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#True</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">s.isdisjoint(s2)</code></pre>
+<pre><code class="python">#False</code></pre>
+<pre><code class="python">s.isdisjoint(&#123;123&#125;)</code></pre>
+<pre><code class="python">#True</code></pre>
 <p><strong>子集</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#是否为子集的判断</span></span><br><span class="line">s.issubset(s2)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#False</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;.issubset(&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#True</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">#是否为子集的判断
+s.issubset(s2)</code></pre>
+<pre><code class="python">#False</code></pre>
+<pre><code class="python">&#123;1,2,3&#125;.issubset(&#123;1,2,3,4,5&#125;)</code></pre>
+<pre><code class="python">#True</code></pre>
 <h4 id="小作业"><a href="#小作业" class="headerlink" title="小作业"></a>小作业</h4><ol>
 <li><p>以下代码输出结果是：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;</span><br><span class="line">print(s[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">s = &#123;1,2,3&#125;
+print(s[1])</code></pre>
 <p>A. 1</p>
 <p>B. 2</p>
 <p>C. 无法输出</p>
@@ -1632,7 +1620,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\59346.html" title="12.Python面向对象(3)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191225231208.png" /><span class="title">12.Python面向对象(3)</span><span class="excerpt">Python面向对象单例模式</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\80ca38c0.html" title="Day2.Python变量和运算符" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.Python变量和运算符</span><span class="excerpt">Python变量与运算符！！！</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\fbd6efa0.html" title="Day1.Python基本操作与格式规范" rel="bookmark "><img src="https://7.dusays.com/2020/09/14/ba18a9c432ad6.png" /><span class="title">Day1.Python基本操作与格式规范</span><span class="excerpt">Python基本操作与格式规范！！！</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1695,13 +1683,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.1k words</p>
+      <p>1k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>5 min</p>
+      <p>4 min</p>
     </a>
   </div>
 
@@ -2806,6 +2794,8 @@
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2846,6 +2836,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3159,6 +3156,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

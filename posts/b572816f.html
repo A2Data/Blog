@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1481,8 +1485,11 @@
 <p>要求：使用lambda表达式和函数sorted()，分别按照元组第一个元素排序(即abcd排序)，按照元组第二个元素排序(即1234排序)，输出相应的列表结果。</p>
 <p>要点：了解lambda表达式和排序函数sorted()用法</p>
 <p><strong>参考答案：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = [(<span class="string">&#x27;b&#x27;</span>,<span class="number">3</span>), (<span class="string">&#x27;a&#x27;</span>,<span class="number">2</span>), (<span class="string">&#x27;d&#x27;</span>,<span class="number">4</span>), (<span class="string">&#x27;c&#x27;</span>,<span class="number">1</span>)]</span><br><span class="line"></span><br><span class="line">print(sorted(a, key=<span class="keyword">lambda</span> x:x[<span class="number">0</span>]))</span><br><span class="line"></span><br><span class="line">print(sorted(a, key=<span class="keyword">lambda</span> x:x[<span class="number">1</span>]))</span><br></pre></td></tr></table></figure>
+<pre><code class="python">a = [(&#39;b&#39;,3), (&#39;a&#39;,2), (&#39;d&#39;,4), (&#39;c&#39;,1)]
 
+print(sorted(a, key=lambda x:x[0]))
+
+print(sorted(a, key=lambda x:x[1]))</code></pre>
 <p><strong>学习引导：</strong></p>
 <ul>
 <li>匿名函数</li>
@@ -1505,20 +1512,19 @@
 </li>
 </ul>
 <p>lambda的语法只包含一个语句，格式如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">lambda</span> [arg1[,arg2,...,argN]]:expression</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">lambda [arg1[,arg2,...,argN]]:expression</code></pre>
 <p>下面用几个例子对两种函数进行对比，以便大家理解。</p>
 <p><strong>用def格式写</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#用def格式写</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">x,y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x*y</span><br><span class="line">func(<span class="number">2</span>,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-
-
+<pre><code class="python">#用def格式写
+def func(x,y):
+    return x*y
+func(2,3)</code></pre>
 <pre><code>#6</code></pre>
 <p><strong>用匿名函数写</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#用匿名函数写</span></span><br><span class="line">func=<span class="keyword">lambda</span> x,y:x*y</span><br><span class="line">func(<span class="number">3</span>,<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#12</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">#用匿名函数写
+func=lambda x,y:x*y
+func(3,4)</code></pre>
+<pre><code class="python">#12</code></pre>
 <p>从上面例子可以看出<strong>匿名函数相较标准函数的优点有</strong>：</p>
 <ul>
 <li>不用取名称，因为给函数取名是比较头疼的一件事，特别是函数比较多的时候<br>可以直接在使用的地方定义，如果需要修改，直接找到修改即可，方便以后代码的维护工作</li>
@@ -1526,10 +1532,17 @@
 </ul>
 <h3 id="函数的返回值"><a href="#函数的返回值" class="headerlink" title="函数的返回值"></a>函数的返回值</h3><p><strong>return[表达式]语句用于退出函数，选择性的向调用方返回一个表达式。不带参数值的return语句返回None。</strong></p>
 <p>下面演示一下return语句的用法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum</span>(<span class="params">arg1,arg2</span>):</span></span><br><span class="line">    <span class="string">&quot;返回两个参数的和&quot;</span></span><br><span class="line">    total=arg1+arg2</span><br><span class="line">    print(<span class="string">&#x27;函数内：&#x27;</span>,total)</span><br><span class="line">    <span class="keyword">return</span> total</span><br><span class="line"></span><br><span class="line"><span class="comment">#调用sum函数</span></span><br><span class="line">total=sum(<span class="number">23</span>,<span class="number">32</span>)</span><br><span class="line">print(<span class="string">&#x27;函数外：&#x27;</span>,total)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">def sum(arg1,arg2):
+    &quot;返回两个参数的和&quot;
+    total=arg1+arg2
+    print(&#39;函数内：&#39;,total)
+    return total
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#函数内： 55</span></span><br><span class="line"><span class="comment">#函数外： 55</span></span><br></pre></td></tr></table></figure>
-
+#调用sum函数
+total=sum(23,32)
+print(&#39;函数外：&#39;,total)</code></pre>
+<pre><code class="python">#函数内： 55
+#函数外： 55</code></pre>
 <h3 id="函数的说明文档"><a href="#函数的说明文档" class="headerlink" title="函数的说明文档"></a>函数的说明文档</h3><ul>
 <li><p>定义：即对函数进行简单的解释说明（一般对参数和返回值进行说明）</p>
 </li>
@@ -1537,20 +1550,33 @@
 </li>
 </ul>
 <p><strong>语法结构如下：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> 函数名（参数）:</span></span><br><span class="line">    <span class="string">&#x27;函数的说明文档内容&#x27;</span></span><br><span class="line">    函数体</span><br><span class="line">    <span class="keyword">return</span> 返回值</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">def 函数名（参数）:
+    &#39;函数的说明文档内容&#39;
+    函数体
+    return 返回值</code></pre>
 <p>对于函数的内置函数，可以使用help()函数查看其内置文档。</p>
 <h3 id="函数的嵌套"><a href="#函数的嵌套" class="headerlink" title="函数的嵌套"></a>函数的嵌套</h3><p>在函数中再定义一个函数</p>
 <p><strong>语法结构如下：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">outer</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span>():</span></span><br><span class="line">        print(<span class="string">&#x27;inner&#x27;</span>)</span><br><span class="line">    print(<span class="string">&#x27;outer&#x27;</span>)</span><br><span class="line">    inner()</span><br><span class="line">outer()</span><br><span class="line"><span class="comment"># inner()  #该句会报错</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#outer</span></span><br><span class="line"><span class="comment">#inner</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">def outer():
+    def inner():
+        print(&#39;inner&#39;)
+    print(&#39;outer&#39;)
+    inner()
+outer()
+# inner()  #该句会报错</code></pre>
+<pre><code class="python">#outer
+#inner</code></pre>
 <p><strong>一个案例</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#一个案例</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">outer</span>():</span></span><br><span class="line">    str=<span class="string">&#x27;Hello World&#x27;</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span>():</span></span><br><span class="line">        print(str)</span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line">info=outer()</span><br><span class="line">info()      </span><br></pre></td></tr></table></figure>
+<pre><code class="python">#一个案例
+def outer():
+    str=&#39;Hello World&#39;
+    def inner():
+        print(str)
+    return inner
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Hello World</span></span><br></pre></td></tr></table></figure>
-
+info=outer()
+info()      </code></pre>
+<pre><code class="python">#Hello World</code></pre>
 <h3 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h3><p>一个标识符的可见范围，就是标识符的作用域。一般常说的是变量的作用域。</p>
 <ul>
 <li><p>函数中的局部作用域：local</p>
@@ -1567,44 +1593,109 @@
 </li>
 </ul>
 <p><strong>案例演示</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Demo1</span>():</span></span><br><span class="line">    num=<span class="number">1</span></span><br><span class="line">    print(num)</span><br><span class="line">    </span><br><span class="line">Demo1()</span><br><span class="line">print(num)    <span class="comment">#该句报错。因为num是局部作用，所以在函数外面是找不到num这个变量的。</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">def Demo1():
+    num=1
+    print(num)
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1</span></span><br></pre></td></tr></table></figure>
+Demo1()
+print(num)    #该句报错。因为num是局部作用，所以在函数外面是找不到num这个变量的。</code></pre>
+<pre><code class="python">#1</code></pre>
+<pre><code class="python">---------------------------------------------------------------------------
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">NameError                                 Traceback (most recent call last)</span><br><span class="line"></span><br><span class="line">&lt;ipython-input<span class="number">-56</span>-d3aaf0ba8dea&gt; <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">      <span class="number">5</span> </span><br><span class="line">      <span class="number">6</span> Demo1()</span><br><span class="line">----&gt; 7 print(num)</span><br><span class="line">NameError: name <span class="string">&#x27;num&#x27;</span> <span class="keyword">is</span> <span class="keyword">not</span> defined</span><br></pre></td></tr></table></figure>
+NameError                                 Traceback (most recent call last)
 
+&lt;ipython-input-56-d3aaf0ba8dea&gt; in &lt;module&gt;
+      5 
+      6 Demo1()
+----&gt; 7 print(num)
+NameError: name &#39;num&#39; is not defined</code></pre>
 <p>对上例的解释</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="number">0</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Demo1</span>():</span></span><br><span class="line">    num = <span class="number">1</span></span><br><span class="line">    print(<span class="string">&quot;在demo1中的结果:&quot;</span>,num)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Demo2</span>():</span></span><br><span class="line">    print(<span class="string">&quot;在demo2中的结果:&quot;</span>,num)</span><br><span class="line"></span><br><span class="line">Demo1()</span><br><span class="line">Demo2()</span><br></pre></td></tr></table></figure>
+<pre><code class="python">num = 0
+def Demo1():
+    num = 1
+    print(&quot;在demo1中的结果:&quot;,num)
+def Demo2():
+    print(&quot;在demo2中的结果:&quot;,num)
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#在demo1中的结果: 1</span></span><br><span class="line"><span class="comment">#在demo2中的结果: 0</span></span><br></pre></td></tr></table></figure>
-
+Demo1()
+Demo2()</code></pre>
+<pre><code class="python">#在demo1中的结果: 1
+#在demo2中的结果: 0</code></pre>
 <blockquote>
 <p>从结果可以看出，我们在demo1中num = 1，只在demo1内部起作用，而全局变量num仍然是0；因为在python中，在函数内部改变全局变量的值，会默认的在函数内部创建一个新的变量，全局变量并没有改变。</p>
 <p>要想要改变全局变量的值，需要在函数内部用global声明。</p>
 </blockquote>
 <p>现修改上面代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="number">0</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Demo1</span>():</span></span><br><span class="line">    <span class="keyword">global</span> num</span><br><span class="line">    num = <span class="number">1</span></span><br><span class="line">    print(<span class="string">&quot;在demo1中的结果:&quot;</span>,num)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Demo2</span>():</span></span><br><span class="line">    print(<span class="string">&quot;在demo2中的结果:&quot;</span>,num)</span><br><span class="line"></span><br><span class="line">Demo1()</span><br><span class="line">Demo2()</span><br><span class="line">print(<span class="string">&quot;在函数外面中的结果:&quot;</span>,num)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">num = 0
+def Demo1():
+    global num
+    num = 1
+    print(&quot;在demo1中的结果:&quot;,num)
+def Demo2():
+    print(&quot;在demo2中的结果:&quot;,num)
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#在demo1中的结果: 1</span></span><br><span class="line"><span class="comment">#在demo2中的结果: 1</span></span><br><span class="line"><span class="comment">#在函数外面中的结果: 1</span></span><br></pre></td></tr></table></figure>
-
+Demo1()
+Demo2()
+print(&quot;在函数外面中的结果:&quot;,num)</code></pre>
+<pre><code class="python">#在demo1中的结果: 1
+#在demo2中的结果: 1
+#在函数外面中的结果: 1</code></pre>
 <blockquote>
 <p>还有一种情况是当全局变量是可变数据类形，我们可以通过修改可变数据类型的方法，修改可变类型的内容，从而实现修改全局变量。<br>（这里因为可变数据类型改变时，会在内存中改变数据的值）</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">num_list = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Demo1</span>(<span class="params">demo1_list</span>):</span></span><br><span class="line">    demo1_list.append(<span class="number">4</span>)</span><br><span class="line">    print(<span class="string">&quot;在demo1中的结果:&quot;</span>,demo1_list)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Demo2</span>():</span></span><br><span class="line"></span><br><span class="line">    print(<span class="string">&quot;在demo2中的结果:&quot;</span>,num_list)</span><br><span class="line"></span><br><span class="line">Demo1(num_list)</span><br><span class="line">Demo2()</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;在函数外面中的结果:&quot;</span>,num_list)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">num_list = [1,2,3]
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#在demo1中的结果: [1, 2, 3, 4]</span></span><br><span class="line"><span class="comment">#在demo2中的结果: [1, 2, 3, 4]</span></span><br><span class="line"><span class="comment">#在函数外面中的结果: [1, 2, 3, 4]</span></span><br></pre></td></tr></table></figure>
+def Demo1(demo1_list):
+    demo1_list.append(4)
+    print(&quot;在demo1中的结果:&quot;,demo1_list)
 
+def Demo2():
+
+    print(&quot;在demo2中的结果:&quot;,num_list)
+
+Demo1(num_list)
+Demo2()
+
+print(&quot;在函数外面中的结果:&quot;,num_list)</code></pre>
+<pre><code class="python">#在demo1中的结果: [1, 2, 3, 4]
+#在demo2中的结果: [1, 2, 3, 4]
+#在函数外面中的结果: [1, 2, 3, 4]</code></pre>
 <p><strong>列表 += 与 + 的区别</strong></p>
 <p>#+：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">num_list = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Demo1</span>(<span class="params">demo1_list</span>):</span></span><br><span class="line">    demo1_list = demo1_list + [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">    print(<span class="string">&quot;在demo1中的结果:&quot;</span>,demo1_list)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Demo2</span>():</span></span><br><span class="line">    print(<span class="string">&quot;在demo2中的结果:&quot;</span>,num_list)</span><br><span class="line"></span><br><span class="line">Demo1(num_list)</span><br><span class="line">Demo2()</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;在函数外面中的结果:&quot;</span>,num_list)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">num_list = [1,2,3]
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#在demo1中的结果: [1, 2, 3, 4, 5, 6]</span></span><br><span class="line"><span class="comment">#在demo2中的结果: [1, 2, 3]</span></span><br><span class="line"><span class="comment">#在函数外面中的结果: [1, 2, 3]</span></span><br></pre></td></tr></table></figure>
+def Demo1(demo1_list):
+    demo1_list = demo1_list + [4,5,6]
+    print(&quot;在demo1中的结果:&quot;,demo1_list)
 
+def Demo2():
+    print(&quot;在demo2中的结果:&quot;,num_list)
+
+Demo1(num_list)
+Demo2()
+
+print(&quot;在函数外面中的结果:&quot;,num_list)</code></pre>
+<pre><code class="python">#在demo1中的结果: [1, 2, 3, 4, 5, 6]
+#在demo2中的结果: [1, 2, 3]
+#在函数外面中的结果: [1, 2, 3]</code></pre>
 <p>#+=：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">num_list = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Demo1</span>(<span class="params">demo1_list</span>):</span></span><br><span class="line">    demo1_list +=  [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">    print(<span class="string">&quot;在demo1中的结果:&quot;</span>,demo1_list)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Demo2</span>():</span></span><br><span class="line"></span><br><span class="line">    print(<span class="string">&quot;在demo2中的结果:&quot;</span>,num_list)</span><br><span class="line"></span><br><span class="line">Demo1(num_list)</span><br><span class="line">Demo2()</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;在函数外面中的结果:&quot;</span>,num_list)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">num_list = [1,2,3]
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#在demo1中的结果: [1, 2, 3, 4, 5, 6]</span></span><br><span class="line"><span class="comment">#在demo2中的结果: [1, 2, 3, 4, 5, 6]</span></span><br><span class="line"><span class="comment">#在函数外面中的结果: [1, 2, 3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
+def Demo1(demo1_list):
+    demo1_list +=  [4,5,6]
+    print(&quot;在demo1中的结果:&quot;,demo1_list)
 
+def Demo2():
+
+    print(&quot;在demo2中的结果:&quot;,num_list)
+
+Demo1(num_list)
+Demo2()
+
+print(&quot;在函数外面中的结果:&quot;,num_list)</code></pre>
+<pre><code class="python">#在demo1中的结果: [1, 2, 3, 4, 5, 6]
+#在demo2中的结果: [1, 2, 3, 4, 5, 6]
+#在函数外面中的结果: [1, 2, 3, 4, 5, 6]</code></pre>
 <blockquote>
 <p>因为：</p>
 <p>对于+号操作，可变对象和不可变对象调用的都是__add__操作</p>
@@ -1616,8 +1707,23 @@
 <li><p>递归调用最多能调用999层。</p>
 </li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#基础模型一</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>():</span></span><br><span class="line">    print(<span class="string">&#x27;from func&#x27;</span>)</span><br><span class="line">    func()　　　　<span class="comment">#直接调用自身</span></span><br><span class="line">    </span><br><span class="line">func()</span><br><span class="line">    </span><br><span class="line"><span class="comment">#基础模型二</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>():</span></span><br><span class="line">    print(<span class="string">&#x27;from func&#x27;</span>)</span><br><span class="line">    bar()　　　　<span class="comment">#间接调用自身</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bar</span>():</span></span><br><span class="line">    print(<span class="string">&quot;from bar&quot;</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line">func()</span><br></pre></td></tr></table></figure>
+<pre><code class="python">#基础模型一
+def func():
+    print(&#39;from func&#39;)
+    func()　　　　#直接调用自身
 
+func()
+
+#基础模型二
+def func():
+    print(&#39;from func&#39;)
+    bar()　　　　#间接调用自身
+
+def bar():
+    print(&quot;from bar&quot;)
+    func()
+
+func()</code></pre>
 <blockquote>
 <p>虽然以上两中方式为函数递归的基础模型，但往往不能直接这样使用。因为没有一个函数的结束条件，仅仅相当于一个死循环。</p>
 <h6 id="递归分为两个重要的阶段-递推-回溯"><a href="#递归分为两个重要的阶段-递推-回溯" class="headerlink" title="递归分为两个重要的阶段: 递推+回溯"></a>递归分为两个重要的阶段: 递推+回溯</h6><ul>
@@ -1628,10 +1734,21 @@
 </ul>
 </blockquote>
 <p>下面为一个练习题：解决年龄问题，求出Jack的年龄</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">Jack 他比小王 大两岁。  4   age(3) + 2</span></span><br><span class="line"><span class="string">小王 他比大枫 大两岁。  3   age(2) + 2</span></span><br><span class="line"><span class="string">大枫 他比美丽 大两岁。  2   age(1)  + 2</span></span><br><span class="line"><span class="string">美丽：我今年18.         1   18</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">age</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">18</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> age(n<span class="number">-1</span>) + <span class="number">2</span></span><br><span class="line"></span><br><span class="line">print(age(<span class="number">4</span>))</span><br></pre></td></tr></table></figure>
+<pre><code class="python">&quot;&quot;&quot;
+Jack 他比小王 大两岁。  4   age(3) + 2
+小王 他比大枫 大两岁。  3   age(2) + 2
+大枫 他比美丽 大两岁。  2   age(1)  + 2
+美丽：我今年18.         1   18
+&quot;&quot;&quot;
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#24</span></span><br></pre></td></tr></table></figure>
+def age(n):
+    if n == 1:
+        return 18
+    else:
+        return age(n-1) + 2
 
+print(age(4))</code></pre>
+<pre><code class="python">#24</code></pre>
 <blockquote>
 <p>注意在Python：</p>
 <p>　　　　1、递归调用必须有一个明确的结束条件</p>
@@ -1639,33 +1756,62 @@
 <p>　　　　3、进入下一次递归时,问题的规模必须降低</p>
 <p>再来一个例子<br>输入任意一个数，让其除以2，直到不能再除</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span>  <span class="title">cal</span>(<span class="params">num</span>):</span></span><br><span class="line">    <span class="keyword">if</span>  num%<span class="number">2</span>==<span class="number">0</span>:<span class="comment">#先判断能不能整除</span></span><br><span class="line">        num=num//<span class="number">2</span></span><br><span class="line">        <span class="keyword">return</span> cal(num)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> num</span><br><span class="line">print(cal(<span class="number">8</span>))</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1</span></span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code class="python">def  cal(num):
+    if  num%2==0:#先判断能不能整除
+        num=num//2
+        return cal(num)
+    else:
+        return num
+print(cal(8))</code></pre>
+<pre><code class="python">#1</code></pre>
 <h4 id="小作业："><a href="#小作业：" class="headerlink" title="小作业："></a>小作业：</h4><ol>
 <li><p>定义并调用两个函数*fib(n)<em>和</em>PrintFN(m,n)*，输出指定的斐波那契数信息(斐波那契数列：1,1,2,3,5,8,…不了解的自行百度)。函数要求：</p>
 <p>fib(n)*：返回斐波那契数列的第n个值</p>
 <p>PrintFN(m,n)*：用列表返回[m, n]中的所有斐波那契数。</p>
 <p>例如输入：<em>20 100 6</em>，输出：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fib(<span class="number">6</span>) = <span class="number">13</span></span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">fib(6) = 13
+4</code></pre>
 </li>
 <li><p>解决汉诺塔问题（汉诺塔规则请自行百度）：</p>
 <p>有ABC三根柱子，将A柱上的n个盘子移动到C柱。控制台输入盘子个数n，输出移动的所有步骤，格式样例“A–&gt;C”。</p>
 </li>
 <li><p>假设你正在爬楼梯。需要 <em>n</em> 阶你才能到达楼顶（给定n为正整数），每次可以爬 1 或 2 个台阶。编写函数，返回有多少种不同的方法可以爬到楼顶。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">climbStairs</span>(<span class="params">n</span>):</span></span><br><span class="line">    dp = []</span><br><span class="line">    dp.append(<span class="number">1</span>) <span class="comment"># 初始状态，只有1阶的时候有一种走法</span></span><br><span class="line">    dp.append(<span class="number">2</span>) <span class="comment"># 有2阶的时候有两种走法</span></span><br><span class="line">    <span class="keyword">if</span> n==<span class="number">1</span>:        <span class="comment">#终止条件</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>        </span><br><span class="line">    <span class="keyword">if</span> n==<span class="number">2</span>:        <span class="comment">#终止条件</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>,n):</span><br><span class="line">        dp.append(dp[i<span class="number">-1</span>]+dp[i<span class="number">-2</span>])      <span class="comment">#递归</span></span><br><span class="line">        </span><br><span class="line">    <span class="keyword">return</span> dp[<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+<pre><code class="python">def climbStairs(n):
+    dp = []
+    dp.append(1) # 初始状态，只有1阶的时候有一种走法
+    dp.append(2) # 有2阶的时候有两种走法
+    if n==1:        #终止条件
+        return 1        
+    if n==2:        #终止条件
+        return 2
+    for i in range(2,n):
+        dp.append(dp[i-1]+dp[i-2])      #递归
+
+    return dp[-1]</code></pre>
 </li>
 <li><p>以下代码是否能执行，原因是？如何修改？</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span>():</span></span><br><span class="line">    x = <span class="number">3</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun2</span>():</span></span><br><span class="line">        x *= x</span><br><span class="line">        <span class="keyword">return</span> x</span><br><span class="line">    <span class="keyword">return</span> fun2()</span><br><span class="line"></span><br><span class="line">print(fun1())</span><br></pre></td></tr></table></figure>
+<pre><code class="python">def fun1():
+    x = 3
+    def fun2():
+        x *= x
+        return x
+    return fun2()
+
+print(fun1())</code></pre>
 </li>
 <li><p>写出以下代码的执行结果：</p>
 </li>
 </ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span>():</span></span><br><span class="line">    print(<span class="number">2</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun3</span>():</span></span><br><span class="line">        print(<span class="number">6</span>)</span><br><span class="line">    print(<span class="number">4</span>)</span><br><span class="line">    fun3()</span><br><span class="line">    print(<span class="number">8</span>)</span><br><span class="line">print(<span class="number">3</span>)</span><br><span class="line">fun2()</span><br><span class="line">print(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">def fun2():
+    print(2)
+    def fun3():
+        print(6)
+    print(4)
+    fun3()
+    print(8)
+print(3)
+fun2()
+print(5)</code></pre>
 
   
   
@@ -1679,7 +1825,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\59346.html" title="12.Python面向对象(3)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191225231208.png" /><span class="title">12.Python面向对象(3)</span><span class="excerpt">Python面向对象单例模式</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\80ca38c0.html" title="Day2.Python变量和运算符" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day2.Python变量和运算符</span><span class="excerpt">Python变量与运算符！！！</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\fbd6efa0.html" title="Day1.Python基本操作与格式规范" rel="bookmark "><img src="https://7.dusays.com/2020/09/14/ba18a9c432ad6.png" /><span class="title">Day1.Python基本操作与格式规范</span><span class="excerpt">Python基本操作与格式规范！！！</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2855,6 +3001,8 @@
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2895,6 +3043,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3208,6 +3363,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

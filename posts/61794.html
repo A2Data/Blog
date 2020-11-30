@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1427,7 +1431,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>174 words</p>
+      <p>175 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1480,14 +1484,33 @@
   <p>Linux  Mdadm 案例 raid5。</p>
 <a id="more"></a>
 
-<h1 id="Mdadm-案例-raid5"><a href="#Mdadm-案例-raid5" class="headerlink" title="Mdadm 案例 raid5"></a>Mdadm 案例 raid5</h1><h2 id="一、添加RAID5"><a href="#一、添加RAID5" class="headerlink" title="一、添加RAID5"></a>一、添加RAID5</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mdadm -C /dev/md5 -l 5 -n 3 /dev/sd[b,c,d]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="Mdadm-案例-raid5"><a href="#Mdadm-案例-raid5" class="headerlink" title="Mdadm 案例 raid5"></a>Mdadm 案例 raid5</h1><h2 id="一、添加RAID5"><a href="#一、添加RAID5" class="headerlink" title="一、添加RAID5"></a>一、添加RAID5</h2><pre><code class="shell">mdadm -C /dev/md5 -l 5 -n 3 /dev/sd[b,c,d]
+</code></pre>
+<h2 id="二、创建文件系统"><a href="#二、创建文件系统" class="headerlink" title="二、创建文件系统"></a>二、创建文件系统</h2><pre><code class="shell">   格式化：mkfs.ext3 /dev/md5 
+   makir /raid5</code></pre>
+<h2 id="三、挂载文件系统"><a href="#三、挂载文件系统" class="headerlink" title="三、挂载文件系统"></a>三、挂载文件系统</h2><pre><code class="shell">    mount /dev/md5 /raid5  挂载文件系统
 
-<h2 id="二、创建文件系统"><a href="#二、创建文件系统" class="headerlink" title="二、创建文件系统"></a>二、创建文件系统</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">格式化：mkfs.ext3 /dev/md5 </span><br><span class="line">makir /raid5</span><br></pre></td></tr></table></figure>
+    df -hT  查看</code></pre>
+<h2 id="RAID容错"><a href="#RAID容错" class="headerlink" title="RAID容错"></a>RAID容错</h2><pre><code class="shell">mdadm /dev/md5 -f /dev/sdb  损坏磁盘b
 
-<h2 id="三、挂载文件系统"><a href="#三、挂载文件系统" class="headerlink" title="三、挂载文件系统"></a>三、挂载文件系统</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mount /dev/md5 /raid5  挂载文件系统</span><br><span class="line"></span><br><span class="line">df -hT  查看</span><br></pre></td></tr></table></figure>
+mdadm -D /dev/md5 查看
 
-<h2 id="RAID容错"><a href="#RAID容错" class="headerlink" title="RAID容错"></a>RAID容错</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">mdadm /dev/md5 -f /dev/sdb  损坏磁盘b</span><br><span class="line"></span><br><span class="line">mdadm -D /dev/md5 查看</span><br><span class="line"></span><br><span class="line">mdadm /dev/md5 -a /dev/sdf 增加一块磁盘</span><br><span class="line"></span><br><span class="line">mdadm /dev/md5 -r /dev/sdb 移除坏磁盘</span><br><span class="line"></span><br><span class="line">echo &quot;DEVICE /dev/sdc /dev/sdd /dev/sde /dev/sdf&quot; &gt;&gt;（写入到哪） /etc/mdadm.conf  把UUID 写入 /etc/.......文件中</span><br><span class="line"></span><br><span class="line">mdadm -Ds &gt;&gt; /etc/mdadm.conf  把UUID 读写出来</span><br><span class="line"></span><br><span class="line">cat /etc/mdadm.conf</span><br><span class="line"></span><br><span class="line">mdadm -S --scan /dev/md5 关闭RAID（需要卸载md5）</span><br><span class="line"></span><br><span class="line">mdadm -A --scan /dev/md5 开启RAID</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">恢复快照！</span><br></pre></td></tr></table></figure>
+mdadm /dev/md5 -a /dev/sdf 增加一块磁盘
 
+mdadm /dev/md5 -r /dev/sdb 移除坏磁盘
+
+echo &quot;DEVICE /dev/sdc /dev/sdd /dev/sde /dev/sdf&quot; &gt;&gt;（写入到哪） /etc/mdadm.conf  把UUID 写入 /etc/.......文件中
+
+mdadm -Ds &gt;&gt; /etc/mdadm.conf  把UUID 读写出来
+
+cat /etc/mdadm.conf
+
+mdadm -S --scan /dev/md5 关闭RAID（需要卸载md5）
+
+mdadm -A --scan /dev/md5 开启RAID
+
+
+恢复快照！</code></pre>
 
   
   
@@ -1501,7 +1524,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\43150.html" title="Linux安装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux安装</span><span class="excerpt">linux介绍及安装</span></a><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\43857.html" title="Linux Shell脚本" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell脚本</span><span class="excerpt">Linux Shell脚本相关学习。</span></a><a class="item" href="\posts\39704.html" title="Linux 计划任务" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux 计划任务</span><span class="excerpt">计划任务</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\41055.html" title="Linux Apache论坛" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Apache论坛</span><span class="excerpt">Linux 手把手教你搭建Apahce论坛</span></a><a class="item" href="\posts\630.html" title="Linux SSH协议" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux SSH协议</span><span class="excerpt">Linux  SSH协议。</span></a><a class="item" href="\posts\10415.html" title="Linux NFS网络文件" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux NFS网络文件</span><span class="excerpt">Linux 手把手教你搭建NFS网络文件系统。</span></a><a class="item" href="\posts\43857.html" title="Linux Shell脚本" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell脚本</span><span class="excerpt">Linux Shell脚本相关学习。</span></a><a class="item" href="\posts\64423.html" title="Linux Shell语法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Linux Shell语法</span><span class="excerpt">Linux Shell 语言得一些基本语法。</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1564,7 +1587,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>174 words</p>
+      <p>175 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1651,7 +1674,9 @@
 
 
 
-SSH 协议123456789101112131415161718默认端口 ：TCP：22 FTP:21 SSH:22 Apache（阿帕奇）：80步骤1： p...</p>
+SSH 协议默认端口 ：TCP：22 FTP:21 SSH:22 Apache（阿帕奇）：80
+
+步骤1： ping 192.168.18.221 （ping得...</p>
         </a>
       
       
@@ -1665,9 +1690,9 @@ SSH 协议123456789101112131415161718默认端口 ：TCP：22 FTP:21 SSH:22 Apac
 LVM逻辑卷
  创建lvm
 
-创建物理卷__PV123pvcreate /dev/sdb,c,d,e (创建pv）pvdisplay(显示pv）
+创建物理卷__PV   pvcreate /dev/sdb,c,d,e (创建pv）
 
-创建卷...</p>
+   pvdisplay(显示pv）...</p>
         </a>
       
     </div>
@@ -2677,6 +2702,8 @@ LVM逻辑卷
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2717,6 +2744,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3030,6 +3064,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

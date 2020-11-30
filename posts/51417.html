@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1486,12 +1490,26 @@
 <p>答：else</p>
 </blockquote>
 <h3 id="1-1、使用格式"><a href="#1-1、使用格式" class="headerlink" title="1.1、使用格式"></a>1.1、使用格式</h3><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 条件:</span><br><span class="line">    满足条件时要做的事情<span class="number">1</span></span><br><span class="line">    满足条件时要做的事情<span class="number">2</span></span><br><span class="line">    满足条件时要做的事情<span class="number">3</span></span><br><span class="line">    ...(省略)...</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    不满足条件时要做的事情<span class="number">1</span></span><br><span class="line">    不满足条件时要做的事情<span class="number">2</span></span><br><span class="line">    不满足条件时要做的事情<span class="number">3</span></span><br><span class="line">    ...(省略)...</span><br></pre></td></tr></table></figure>
+<pre><code class="python">if 条件:
+    满足条件时要做的事情1
+    满足条件时要做的事情2
+    满足条件时要做的事情3
+    ...(省略)...
+else:
+    不满足条件时要做的事情1
+    不满足条件时要做的事情2
+    不满足条件时要做的事情3
+    ...(省略)...</code></pre>
 </blockquote>
 <p><strong>demo</strong></p>
 <p>马上要过年了，又到了抢票的季节。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">chePiao = <span class="number">1</span> <span class="comment"># 用1代表有车票，0代表没有车票</span></span><br><span class="line"><span class="keyword">if</span> chePiao == <span class="number">1</span>:</span><br><span class="line">    print(<span class="string">&quot;有车票，可以上火车&quot;</span>)</span><br><span class="line">    print(<span class="string">&quot;终于可以坐着回家了，美滋滋~~~&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;没有车票，不能上车&quot;</span>)</span><br><span class="line">    print(<span class="string">&quot;可否上车补票啊，真是一票难求啊~~~~(&gt;_&lt;)~~~~&quot;</span>)</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">    chePiao = 1 # 用1代表有车票，0代表没有车票
+    if chePiao == 1:
+        print(&quot;有车票，可以上火车&quot;)
+        print(&quot;终于可以坐着回家了，美滋滋~~~&quot;)
+    else:
+        print(&quot;没有车票，不能上车&quot;)
+        print(&quot;可否上车补票啊，真是一票难求啊~~~~(&gt;_&lt;)~~~~&quot;)</code></pre>
 <h3 id="1-2、练一练"><a href="#1-2、练一练" class="headerlink" title="1.2、练一练"></a>1.2、练一练</h3><blockquote>
 <p>要求：从键盘输入刀子的长度，如果刀子长度没有超过10cm，则允许上火车，否则不允许上火车 </p>
 </blockquote>
@@ -1514,8 +1532,12 @@
 </li>
 </ul>
 <h3 id="2-1、elif的功能"><a href="#2-1、elif的功能" class="headerlink" title="2.1、elif的功能"></a>2.1、elif的功能</h3><p><em>elif的使用格式如下</em></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> xxx1:</span><br><span class="line">    事情<span class="number">1</span></span><br><span class="line"><span class="keyword">elif</span> xxx2:</span><br><span class="line">    事情<span class="number">2</span></span><br><span class="line"><span class="keyword">elif</span> xxx3:</span><br><span class="line">    事情<span class="number">3</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">    if xxx1:
+        事情1
+    elif xxx2:
+        事情2
+    elif xxx3:
+        事情3</code></pre>
 <p>说明:</p>
 <ul>
 <li>当xxx1满足时，执行事情1，然后整个if结束</li>
@@ -1523,12 +1545,29 @@
 <li>当xxx1不满足时，xxx2也不满足，如果xxx3满足，则执行事情3，然后整个if结束</li>
 </ul>
 <p><strong>demo</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">score = <span class="number">77</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> score&gt;=<span class="number">90</span> <span class="keyword">and</span> score&lt;=<span class="number">100</span>:</span><br><span class="line">    print(<span class="string">&#x27;本次考试，等级为A&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score&gt;=<span class="number">80</span> <span class="keyword">and</span> score&lt;<span class="number">90</span>:</span><br><span class="line">    print(<span class="string">&#x27;本次考试，等级为B&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score&gt;=<span class="number">70</span> <span class="keyword">and</span> score&lt;<span class="number">80</span>:</span><br><span class="line">    print(<span class="string">&#x27;本次考试，等级为C&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score&gt;=<span class="number">60</span> <span class="keyword">and</span> score&lt;<span class="number">70</span>:</span><br><span class="line">    print(<span class="string">&#x27;本次考试，等级为D&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score&gt;=<span class="number">0</span> <span class="keyword">and</span> score&lt;<span class="number">60</span>:</span><br><span class="line">    print(<span class="string">&#x27;本次考试，等级为E&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">    score = 77
 
+    if score&gt;=90 and score&lt;=100:
+        print(&#39;本次考试，等级为A&#39;)
+    elif score&gt;=80 and score&lt;90:
+        print(&#39;本次考试，等级为B&#39;)
+    elif score&gt;=70 and score&lt;80:
+        print(&#39;本次考试，等级为C&#39;)
+    elif score&gt;=60 and score&lt;70:
+        print(&#39;本次考试，等级为D&#39;)
+    elif score&gt;=0 and score&lt;60:
+        print(&#39;本次考试，等级为E&#39;)</code></pre>
 <h3 id="2-2、注意点"><a href="#2-2、注意点" class="headerlink" title="2.2、注意点"></a>2.2、注意点</h3><ul>
 <li><p>可以和else一起使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if 性别为男性:</span><br><span class="line">    输出男性的特征</span><br><span class="line">    ...</span><br><span class="line">elif 性别为女性:</span><br><span class="line">    输出女性的特征</span><br><span class="line">    ...</span><br><span class="line">else:</span><br><span class="line">    第三种性别的特征</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
-
+<pre><code class="reStructuredText">   if 性别为男性:
+       输出男性的特征
+       ...
+   elif 性别为女性:
+       输出女性的特征
+       ...
+   else:
+       第三种性别的特征
+       ...</code></pre>
 <p>说明:</p>
 <ul>
 <li>当 “性别为男性” 满足时，执行 “输出男性的特征”的相关代码</li>
@@ -1547,8 +1586,16 @@
 <blockquote>
 <p>if嵌套</p>
 </blockquote>
-<h3 id="3-1、嵌套格式"><a href="#3-1、嵌套格式" class="headerlink" title="3.1、嵌套格式"></a>3.1、嵌套格式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 条件<span class="number">1</span>:</span><br><span class="line"></span><br><span class="line">      满足条件<span class="number">1</span> 做的事情<span class="number">1</span></span><br><span class="line">      满足条件<span class="number">1</span> 做的事情<span class="number">2</span></span><br><span class="line">      ...(省略)...</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> 条件<span class="number">2</span>:</span><br><span class="line">          满足条件<span class="number">2</span> 做的事情<span class="number">1</span></span><br><span class="line">          满足条件<span class="number">2</span> 做的事情<span class="number">2</span></span><br><span class="line">          ...(省略)...</span><br></pre></td></tr></table></figure>
+<h3 id="3-1、嵌套格式"><a href="#3-1、嵌套格式" class="headerlink" title="3.1、嵌套格式"></a>3.1、嵌套格式</h3><pre><code class="python">  if 条件1:
 
+        满足条件1 做的事情1
+        满足条件1 做的事情2
+        ...(省略)...
+
+        if 条件2:
+            满足条件2 做的事情1
+            满足条件2 做的事情2
+            ...(省略)...</code></pre>
 <ul>
 <li>说明<ul>
 <li>外层的if判断，也可以是if-else</li>
@@ -1558,20 +1605,34 @@
 </li>
 </ul>
 <h3 id="3-2、嵌套应用"><a href="#3-2、嵌套应用" class="headerlink" title="3.2、嵌套应用"></a>3.2、嵌套应用</h3><p><strong>demo</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">chePiao = <span class="number">1</span>     <span class="comment"># 用1代表有车票，0代表没有车票</span></span><br><span class="line">daoLenght = <span class="number">9</span>     <span class="comment"># 刀子的长度，单位为cm</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> chePiao == <span class="number">1</span>:</span><br><span class="line">    print(<span class="string">&quot;有车票，可以进站&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> daoLenght &lt; <span class="number">10</span>:</span><br><span class="line">        print(<span class="string">&quot;通过安检&quot;</span>)</span><br><span class="line">        print(<span class="string">&quot;终于可以坐着回家了，美滋滋~~~&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">&quot;没有通过安检&quot;</span>)</span><br><span class="line">        print(<span class="string">&quot;刀子的长度超过规定，等待警察处理...&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;没有车票，不能进站&quot;</span>)</span><br><span class="line">    print(<span class="string">&quot;不要方，真是一票难求啊~~~~(&gt;_&lt;)~~~~&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">    chePiao = 1     # 用1代表有车票，0代表没有车票
+    daoLenght = 9     # 刀子的长度，单位为cm
 
+    if chePiao == 1:
+        print(&quot;有车票，可以进站&quot;)
+        if daoLenght &lt; 10:
+            print(&quot;通过安检&quot;)
+            print(&quot;终于可以坐着回家了，美滋滋~~~&quot;)
+        else:
+            print(&quot;没有通过安检&quot;)
+            print(&quot;刀子的长度超过规定，等待警察处理...&quot;)
+    else:
+        print(&quot;没有车票，不能进站&quot;)
+        print(&quot;不要方，真是一票难求啊~~~~(&gt;_&lt;)~~~~&quot;)</code></pre>
 <p>结果1：chePiao = 1;daoLenght = 9</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">有车票，可以进站</span><br><span class="line">通过安检</span><br><span class="line">终于可以回家了，美滋滋~~~</span><br></pre></td></tr></table></figure>
-
+<pre><code>    有车票，可以进站
+    通过安检
+    终于可以回家了，美滋滋~~~</code></pre>
 <p>结果2：chePiao = 1;daoLenght = 20</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">有车票，可以进站</span><br><span class="line">没有通过安检</span><br><span class="line">刀子的长度超过规定，等待警察处理...</span><br></pre></td></tr></table></figure>
-
+<pre><code>    有车票，可以进站
+    没有通过安检
+    刀子的长度超过规定，等待警察处理...</code></pre>
 <p>结果3：chePiao = 0;daoLenght = 9</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">没有车票，不能进站</span><br><span class="line">一票难求啊~~~~(&gt;_&lt;)~~~~</span><br></pre></td></tr></table></figure>
-
+<pre><code>    没有车票，不能进站
+    一票难求啊~~~~(&gt;_&lt;)~~~~</code></pre>
 <p>结果4：chePiao = 0;daoLenght = 20</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">没有车票，不能进站</span><br><span class="line">一票难求啊~~~~(&gt;_&lt;)~~~~</span><br></pre></td></tr></table></figure>
-
+<pre><code>    没有车票，不能进站
+    一票难求啊~~~~(&gt;_&lt;)~~~~</code></pre>
 <blockquote>
 <p> 想一想:为什么结果3和结果4相同？？？</p>
 </blockquote>
@@ -1587,10 +1648,24 @@
 <blockquote>
 <p>优化以下代码，解决只能玩一次的问题</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">player = input(<span class="string">&#x27;请输入：剪刀(0)  石头(1)  布(2):&#x27;</span>)</span><br><span class="line"></span><br><span class="line">player = int(player)</span><br><span class="line"></span><br><span class="line">computer = random.randint(<span class="number">0</span>,<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 用来进行测试</span></span><br><span class="line"><span class="comment"># 感谢关注A2Data</span></span><br><span class="line"><span class="comment">#print(&#x27;player=%d,computer=%d&#x27;,(player,computer))</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> ((player == <span class="number">0</span>) <span class="keyword">and</span> (computer == <span class="number">2</span>)) <span class="keyword">or</span> ((player ==<span class="number">1</span>) <span class="keyword">and</span> (computer == <span class="number">0</span>)) <span class="keyword">or</span> ((player == <span class="number">2</span>) <span class="keyword">and</span> (computer == <span class="number">1</span>)):</span><br><span class="line">    print(<span class="string">&#x27;获胜，哈哈，你太厉害了&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> player == computer:</span><br><span class="line">    print(<span class="string">&#x27;平局，要不再来一局&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;输了，不要走，洗洗手接着来，决战到天亮&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">    import random
 
+    player = input(&#39;请输入：剪刀(0)  石头(1)  布(2):&#39;)
 
+    player = int(player)
 
+    computer = random.randint(0,2)
+
+    # 用来进行测试
+    # 感谢关注A2Data
+    #print(&#39;player=%d,computer=%d&#39;,(player,computer))
+
+    if ((player == 0) and (computer == 2)) or ((player ==1) and (computer == 0)) or ((player == 2) and (computer == 1)):
+        print(&#39;获胜，哈哈，你太厉害了&#39;)
+    elif player == computer:
+        print(&#39;平局，要不再来一局&#39;)
+    else:
+        print(&#39;输了，不要走，洗洗手接着来，决战到天亮&#39;)</code></pre>
 <h2 id="5、循环语句"><a href="#5、循环语句" class="headerlink" title="5、循环语句"></a>5、循环语句</h2><blockquote>
 <p>生活中的循环应用场景：</p>
 <p><strong>跑道、风扇、空调左右上下摆风、地铁日常运行等</strong></p>
@@ -1600,13 +1675,17 @@
 <p>某天，你惹你女朋友生气了，</p>
 <p>需要跟她<em>诚恳</em>地道歉。</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&quot;亲爱的，我错了&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;亲爱的，我错了&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;亲爱的，我错了&quot;</span>)</span><br><span class="line">...(还有<span class="number">99997</span>遍)...</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">    print(&quot;亲爱的，我错了&quot;)
+    print(&quot;亲爱的，我错了&quot;)
+    print(&quot;亲爱的，我错了&quot;)
+    ...(还有99997遍)...</code></pre>
 <ul>
 <li>使用循环语句呢？ 一句话搞定</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i&lt;<span class="number">10000</span>:</span><br><span class="line">    print(<span class="string">&quot;亲爱的，我错了&quot;</span>)</span><br><span class="line">    i+=<span class="number">1</span>  <span class="comment"># i+=1 同等于 i= i+1 </span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">    i = 0
+    while i&lt;10000:
+        print(&quot;亲爱的，我错了&quot;)
+        i+=1  # i+=1 同等于 i= i+1 </code></pre>
 <blockquote>
 <p>使用场景：</p>
 <ul>
@@ -1615,59 +1694,110 @@
 </ul>
 </blockquote>
 <h2 id="6、while循环"><a href="#6、while循环" class="headerlink" title="6、while循环"></a>6、while循环</h2><p><strong>格式</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> 条件:</span><br><span class="line">    条件满足时，做的事情<span class="number">1</span></span><br><span class="line">    条件满足时，做的事情<span class="number">2</span></span><br><span class="line">    条件满足时，做的事情<span class="number">3</span></span><br><span class="line">    ...(省略)...</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">    while 条件:
+        条件满足时，做的事情1
+        条件满足时，做的事情2
+        条件满足时，做的事情3
+        ...(省略)...</code></pre>
 <p><strong>demo</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i&lt;<span class="number">5</span>:</span><br><span class="line">    print(<span class="string">&quot;当前是第%d次执行循环&quot;</span>%(i+<span class="number">1</span>))</span><br><span class="line">    print(<span class="string">&quot;i=%d&quot;</span>%i)</span><br><span class="line">    i+=<span class="number">1</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">    i = 0
+    while i&lt;5:
+        print(&quot;当前是第%d次执行循环&quot;%(i+1))
+        print(&quot;i=%d&quot;%i)
+        i+=1</code></pre>
 <blockquote>
 <p>结果</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">当前是第1次执行循环</span><br><span class="line">i&#x3D;0</span><br><span class="line">当前是第2次执行循环</span><br><span class="line">i&#x3D;1</span><br><span class="line">当前是第3次执行循环</span><br><span class="line">i&#x3D;2</span><br><span class="line">当前是第4次执行循环</span><br><span class="line">i&#x3D;3</span><br><span class="line">当前是第5次执行循环</span><br><span class="line">i&#x3D;4</span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code>    当前是第1次执行循环
+    i=0
+    当前是第2次执行循环
+    i=1
+    当前是第3次执行循环
+    i=2
+    当前是第4次执行循环
+    i=3
+    当前是第5次执行循环
+    i=4</code></pre>
 <h2 id="7、while循环应用"><a href="#7、while循环应用" class="headerlink" title="7、while循环应用"></a>7、while循环应用</h2><h3 id="7-1、计算1-100累积和"><a href="#7-1、计算1-100累积和" class="headerlink" title="7.1、计算1~100累积和"></a>7.1、计算1~100累积和</h3><ul>
 <li>注意：包含 1 和 100</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># A2Data提供参考代码</span></span><br><span class="line"></span><br><span class="line">i = <span class="number">1</span></span><br><span class="line">sum = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i&lt;=<span class="number">100</span>:</span><br><span class="line">    sum = sum + i</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;1~100的累积和为:%d&quot;</span>%sum)</span><br></pre></td></tr></table></figure>
+<pre><code class="python"># A2Data提供参考代码
 
+i = 1
+sum = 0
+while i&lt;=100:
+    sum = sum + i
+    i += 1
+
+print(&quot;1~100的累积和为:%d&quot;%sum)</code></pre>
 <h3 id="7-2-、计算1-100偶数累积和"><a href="#7-2-、计算1-100偶数累积和" class="headerlink" title="7.2 、计算1~100偶数累积和"></a>7.2 、计算1~100偶数累积和</h3><ul>
 <li>注意： 同样包含1 和 100</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 欢迎关注A2Data 转发在看求支持哦</span></span><br><span class="line">i = <span class="number">1</span></span><br><span class="line">sum = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i&lt;=<span class="number">100</span>:</span><br><span class="line">    <span class="keyword">if</span> i%<span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        sum = sum + i</span><br><span class="line">    i+=<span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;1~100的累积和为:%d&quot;</span>%sum)</span><br></pre></td></tr></table></figure>
+<pre><code class="python"># 欢迎关注A2Data 转发在看求支持哦
+i = 1
+sum = 0
+while i&lt;=100:
+    if i%2 == 0:
+        sum = sum + i
+    i+=1
 
-
-
+print(&quot;1~100的累积和为:%d&quot;%sum)</code></pre>
 <h2 id="8、break和continue"><a href="#8、break和continue" class="headerlink" title="8、break和continue"></a>8、break和continue</h2><h3 id="8-1、break"><a href="#8-1、break" class="headerlink" title="8.1、break"></a>8.1、break</h3><h4 id="8-1-1、for循环"><a href="#8-1-1、for循环" class="headerlink" title="8.1.1、for循环"></a>8.1.1、for循环</h4><blockquote>
 <p>for循环场景下的使用案例。</p>
 <p>具体差别，自己动手输出看。</p>
 </blockquote>
 <p><strong>正常for循环</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&#x27;a2data&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> name:</span><br><span class="line">    print(<span class="string">&#x27;----&#x27;</span>)</span><br><span class="line">    print(x)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">name = &#39;a2data&#39;
 
+for x in name:
+    print(&#39;----&#39;)
+    print(x)</code></pre>
 <p><strong>带有break</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&#x27;a2data&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> name:</span><br><span class="line">    print(<span class="string">&#x27;----&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> x == <span class="string">&#x27;d&#x27;</span>: </span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    print(x)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">name = &#39;a2data&#39;
 
-
-
+for x in name:
+    print(&#39;----&#39;)
+    if x == &#39;d&#39;: 
+        break
+    print(x)</code></pre>
 <h4 id="8-1-2、while循环"><a href="#8-1-2、while循环" class="headerlink" title="8.1.2、while循环"></a>8.1.2、while循环</h4><blockquote>
 <p>普通循环如下</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> i&lt;<span class="number">10</span>:</span><br><span class="line">    i = i+<span class="number">1</span></span><br><span class="line">    print(<span class="string">&#x27;----&#x27;</span>)</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">i = 0
 
+while i&lt;10:
+    i = i+1
+    print(&#39;----&#39;)
+    print(i)</code></pre>
 <blockquote>
 <p>带有‘break’循环</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> i&lt;<span class="number">10</span>:</span><br><span class="line">    i = i+<span class="number">1</span></span><br><span class="line">    print(<span class="string">&#x27;----&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> i==<span class="number">5</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">i = 0
 
+while i&lt;10:
+    i = i+1
+    print(&#39;----&#39;)
+    if i==5:
+        break
+    print(i)</code></pre>
 <ul>
 <li>break的作用：用来结束整个循环 </li>
 </ul>
-<h3 id="8-2、continue"><a href="#8-2、continue" class="headerlink" title="8.2、continue"></a>8.2、continue</h3><h4 id="8-2-1、for循环"><a href="#8-2-1、for循环" class="headerlink" title="8.2.1、for循环"></a>8.2.1、for循环</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&#x27;a2data&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> name:</span><br><span class="line">    print(<span class="string">&#x27;----&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> x == <span class="string">&#x27;d&#x27;</span>: </span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    print(x)</span><br></pre></td></tr></table></figure>
+<h3 id="8-2、continue"><a href="#8-2、continue" class="headerlink" title="8.2、continue"></a>8.2、continue</h3><h4 id="8-2-1、for循环"><a href="#8-2-1、for循环" class="headerlink" title="8.2.1、for循环"></a>8.2.1、for循环</h4><pre><code class="python">name = &#39;a2data&#39;
 
-<h4 id="8-2-2、while循环"><a href="#8-2-2、while循环" class="headerlink" title="8.2.2、while循环"></a>8.2.2、while循环</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> i&lt;<span class="number">10</span>:</span><br><span class="line">    i = i+<span class="number">1</span></span><br><span class="line">    print(<span class="string">&#x27;----&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> i==<span class="number">5</span>:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
+for x in name:
+    print(&#39;----&#39;)
+    if x == &#39;d&#39;: 
+        continue
+    print(x)</code></pre>
+<h4 id="8-2-2、while循环"><a href="#8-2-2、while循环" class="headerlink" title="8.2.2、while循环"></a>8.2.2、while循环</h4><pre><code class="python">i = 0
 
+while i&lt;10:
+    i = i+1
+    print(&#39;----&#39;)
+    if i==5:
+        continue
+    print(i)</code></pre>
 <p><strong>总结:</strong></p>
 <ul>
 <li>continue的作用：用来结束本次循环，紧接着执行下一次的循环</li>
@@ -1678,15 +1808,34 @@
 <li>break/continue在嵌套循环中，只对最近的一层循环起作用</li>
 </ul>
 </blockquote>
-<h2 id="9、while循环嵌套"><a href="#9、while循环嵌套" class="headerlink" title="9、while循环嵌套"></a>9、while循环嵌套</h2><h3 id="9-1while嵌套格式"><a href="#9-1while嵌套格式" class="headerlink" title="9.1while嵌套格式"></a>9.1while嵌套格式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> 条件<span class="number">1</span>:</span><br><span class="line"></span><br><span class="line">    条件<span class="number">1</span>满足时，做的事情<span class="number">1</span></span><br><span class="line">    条件<span class="number">1</span>满足时，做的事情<span class="number">2</span></span><br><span class="line">    条件<span class="number">1</span>满足时，做的事情<span class="number">3</span></span><br><span class="line">    ...(省略)...</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> 条件<span class="number">2</span>:</span><br><span class="line">        条件<span class="number">2</span>满足时，做的事情<span class="number">1</span></span><br><span class="line">        条件<span class="number">2</span>满足时，做的事情<span class="number">2</span></span><br><span class="line">        条件<span class="number">2</span>满足时，做的事情<span class="number">3</span></span><br><span class="line">        ...(省略)...</span><br></pre></td></tr></table></figure>
+<h2 id="9、while循环嵌套"><a href="#9、while循环嵌套" class="headerlink" title="9、while循环嵌套"></a>9、while循环嵌套</h2><h3 id="9-1while嵌套格式"><a href="#9-1while嵌套格式" class="headerlink" title="9.1while嵌套格式"></a>9.1while嵌套格式</h3><pre><code class="python">    while 条件1:
 
+        条件1满足时，做的事情1
+        条件1满足时，做的事情2
+        条件1满足时，做的事情3
+        ...(省略)...
 
-
-<h3 id="9-2、练习打印如下图形"><a href="#9-2、练习打印如下图形" class="headerlink" title="9.2、练习打印如下图形"></a>9.2、练习打印如下图形</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line">* *</span><br><span class="line">* * *</span><br><span class="line">* * * *</span><br><span class="line">* * * * *</span><br></pre></td></tr></table></figure>
-
+        while 条件2:
+            条件2满足时，做的事情1
+            条件2满足时，做的事情2
+            条件2满足时，做的事情3
+            ...(省略)...</code></pre>
+<h3 id="9-2、练习打印如下图形"><a href="#9-2、练习打印如下图形" class="headerlink" title="9.2、练习打印如下图形"></a>9.2、练习打印如下图形</h3><pre><code class="python">    *
+    * *
+    * * *
+    * * * *
+    * * * * *</code></pre>
 <p><strong>参考代码</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> i&lt;=<span class="number">5</span>:</span><br><span class="line"></span><br><span class="line">    j = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> j&lt;=i:</span><br><span class="line">        print(<span class="string">&quot;* &quot;</span>,end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        j+=<span class="number">1</span></span><br><span class="line"></span><br><span class="line">    print(<span class="string">&quot;\n&quot;</span>)</span><br><span class="line">    i+=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">    i = 1
+    while i&lt;=5:
 
+        j = 1
+        while j&lt;=i:
+            print(&quot;* &quot;,end=&#39;&#39;)
+            j+=1
+
+        print(&quot;\n&quot;)
+        i+=1</code></pre>
 <h3 id="9-3、打印：九九乘法表"><a href="#9-3、打印：九九乘法表" class="headerlink" title="9.3、打印：九九乘法表"></a>9.3、打印：九九乘法表</h3><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191209083921.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191209083921.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="九九乘法表"></p>
 <h2 id="10、for循环"><a href="#10、for循环" class="headerlink" title="10、for循环"></a>10、for循环</h2><ul>
 <li>掌握 for 循环的语法格式</li>
@@ -1699,14 +1848,28 @@
 <p>请跟着操作如下demo！</p>
 </blockquote>
 <p><strong>demo0</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&#x27;a2data&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> name:</span><br><span class="line">    print(x)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">name = &#39;a2data&#39;
 
+for x in name:
+    print(x)</code></pre>
 <p><strong>demo1</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&#x27;hello1&#x27;</span> <span class="comment"># 皮一下很开心</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> name:</span><br><span class="line">    print(x)</span><br><span class="line">    <span class="keyword">if</span> x==<span class="string">&#x27;l&#x27;</span>:</span><br><span class="line">        <span class="keyword">break</span> <span class="comment">#退出for循环</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;==for循环过程中，如果没有break则执行==&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">name = &#39;hello1&#39; # 皮一下很开心
 
+for x in name:
+    print(x)
+    if x==&#39;l&#39;:
+        break #退出for循环
+else:
+    print(&quot;==for循环过程中，如果没有break则执行==&quot;)</code></pre>
 <p><strong>demo2</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> name:</span><br><span class="line">    print(x)</span><br><span class="line">    <span class="comment">#if x==&#x27;l&#x27;:</span></span><br><span class="line">    <span class="comment">#    break #退出for循环</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;==for循环过程中，如果没有break则执行==&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">name = &#39;hello&#39;
 
+for x in name:
+    print(x)
+    #if x==&#39;l&#39;:
+    #    break #退出for循环
+else:
+    print(&quot;==for循环过程中，如果没有break则执行==&quot;)</code></pre>
 <h2 id="11、总结与练习"><a href="#11、总结与练习" class="headerlink" title="11、总结与练习"></a>11、总结与练习</h2><p><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191209085033.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191209085033.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="总结"></p>
 <h3 id="11-1、必做题："><a href="#11-1、必做题：" class="headerlink" title="11.1、必做题："></a>11.1、必做题：</h3><p><strong>使用if，编写程序，实现以下功能</strong></p>
 <ul>
@@ -1714,8 +1877,15 @@
 <li>如果用户名和密码都正确（预先设定一个用户名和密码），那么就显示“欢迎进入xxx的世界”，否则提示密码或者用户名错误</li>
 </ul>
 <p><strong>使用while，完成以下图形的输出</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line">* *</span><br><span class="line">* * *</span><br><span class="line">* * * *</span><br><span class="line">* * * * *</span><br><span class="line">* * * *</span><br><span class="line">* * *</span><br><span class="line">* *</span><br><span class="line">*</span><br></pre></td></tr></table></figure>
-
+<pre><code>*
+* *
+* * *
+* * * *
+* * * * *
+* * * *
+* * *
+* *
+*</code></pre>
 <h3 id="11-2、选做题："><a href="#11-2、选做题：" class="headerlink" title="11.2、选做题："></a>11.2、选做题：</h3><p>根据以下信息提示，计算出每月乘坐地铁支出的总费用</p>
 <blockquote>
 <p>提示信息（票价）：</p>
@@ -1740,7 +1910,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\30675.html" title="11.Python面向对象(2)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191224164151.png" /><span class="title">11.Python面向对象(2)</span><span class="excerpt">Python面向对象介绍中篇</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\58489.html" title="4.Python列表介绍" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191212085923.png" /><span class="title">4.Python列表介绍</span><span class="excerpt">Python列表介绍</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\34771.html" title="10.Python面向对象(1)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223115817.png" /><span class="title">10.Python面向对象(1)</span><span class="excerpt">Python面向对象介绍上篇</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2902,6 +3072,8 @@
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2942,6 +3114,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3255,6 +3434,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

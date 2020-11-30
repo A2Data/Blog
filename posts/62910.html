@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1534,8 +1538,8 @@
 <h2 id="Python-你好！"><a href="#Python-你好！" class="headerlink" title="Python,你好！"></a>Python,你好！</h2><blockquote>
 <p>也许会迟到，但绝对不会缺席！</p>
 </blockquote>
-<h3 id="Anaconda-1"><a href="#Anaconda-1" class="headerlink" title="Anaconda"></a>Anaconda</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">print(<span class="string">&quot;Hello world&quot;</span>)</span><br></pre></td></tr></table></figure>
-
+<h3 id="Anaconda-1"><a href="#Anaconda-1" class="headerlink" title="Anaconda"></a>Anaconda</h3><pre><code class="python">
+print(&quot;Hello world&quot;)</code></pre>
 <ul>
 <li><em>全宇宙最亲近一行代码</em> 没有之一</li>
 </ul>
@@ -1579,10 +1583,21 @@
 <blockquote>
 <p><em>不是每次都好使</em></p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">在其配置文件ipython_notebook_config.py中，有如下一句</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> The directorytousefornotebooksandkernels.</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> c.NotebookApp.notebook_dir = u<span class="string">&#x27;&#x27;</span></span></span><br><span class="line"></span><br><span class="line">该句就是用来指定其工作空间的，例如，默认的工作空间是：用户名文件夹，例如，现在想要将工作空间变为D:\DataScience\Jupyter，那么，需要做如下更改(要记得删掉注释#)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> The directory to use <span class="keyword">for</span> notebooks and kernels.</span></span><br><span class="line"></span><br><span class="line">c.NotebookApp.notebook_dir =u&#x27;\DataScience\Jupyte&#x27;</span><br><span class="line"></span><br><span class="line">注意：路径最后一级后面不要加符号“\”</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="shell">在其配置文件ipython_notebook_config.py中，有如下一句
 
+# The directorytousefornotebooksandkernels.
 
+# c.NotebookApp.notebook_dir = u&#39;&#39;
 
+该句就是用来指定其工作空间的，例如，默认的工作空间是：用户名文件夹，例如，现在想要将工作空间变为D:\DataScience\Jupyter，那么，需要做如下更改(要记得删掉注释#)
+
+# The directory to use for notebooks and kernels.
+
+c.NotebookApp.notebook_dir =u&#39;\DataScience\Jupyte&#39;
+
+注意：路径最后一级后面不要加符号“\”
+
+</code></pre>
 <p><strong>如何找到该配置文件？</strong></p>
 <p>1.在cmd中输入jupyter notebook –generate-config</p>
 <p>如果该配置文件已经存在，那么，会出现如下信息,从中可以见到配置文件存在的位置，注意，此时，输入N，不要overwrite </p>
@@ -1590,11 +1605,14 @@
 <p>如果该配置文件不存在，那么，将会初始化产生一个配置文件</p>
 <p>在cmd中输入：ipython profile create </p>
 <p>2.打开 jupyter_notebook_config.py 文件，找到</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># The directory to use for notebooks and kernels.</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">c.NotebookApp.notebook_dir = <span class="string">&#x27;&#x27;</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">
+ ## The directory to use for notebooks and kernels.
+ #c.NotebookApp.notebook_dir = &#39;&#39;
+</code></pre>
 <p>　　将要指定的路径填入 #c.NotebookApp.notebook_dir = ‘  ‘ 中的 ‘  ‘ 中即可，同时注意将 #c 中的 # 删去，：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">c.NotebookApp.notebook_dir = &#x27;D:\DataScience\Jupyte&#x27;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">
+ c.NotebookApp.notebook_dir = &#39;D:\DataScience\Jupyte&#39;
+</code></pre>
 <p>3.保存，在命令行中再次输入 jupyter notebook 指令即可在指定的文件夹下启动。</p>
 <p><strong>方式2(绝招)：</strong></p>
 <p>进入工作目录文件夹</p>
@@ -1608,10 +1626,35 @@
 <p>注：有时候jupyter输出后，需要滚动条才能看全，执行下列命令，修改输出段的字号大小，就不需要滚动条了。</p>
 <p><strong>在cmd 命令行执行！！！</strong></p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#jt -t monokai -f fira -fs 13 -cellw 90% -ofs 11 -dfs 11 -T -N</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#-f(字体)  -fs(字体大小) -cellw(占屏比或宽度)  -ofs(输出段的字号)  -T(显示工具栏)  -N(显示自己主机名)</span></span><br><span class="line"> </span><br><span class="line">jt -t gruvboxl -f fira -fs 13 -cellw 90% -ofs 11 -dfs 11 -T -N</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 主题更改</span></span><br><span class="line">pip install --upgrade jupyterthemes</span><br><span class="line"></span><br><span class="line">jt -l</span><br><span class="line"></span><br><span class="line">jt -t chesterish -T</span><br><span class="line"></span><br><span class="line"><span class="comment"># 主题列表</span></span><br><span class="line">   chesterish</span><br><span class="line">   grade3</span><br><span class="line">   gruvboxd</span><br><span class="line">   gruvboxl</span><br><span class="line">   monokai</span><br><span class="line">   oceans16</span><br><span class="line">   onedork</span><br><span class="line">   solarizedd</span><br><span class="line">   solarizedl</span><br><span class="line">   </span><br><span class="line">恢复默认主题,只需执行代码：jt -r，即可恢复至原来的白色背景。</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">#jt -t monokai -f fira -fs 13 -cellw 90% -ofs 11 -dfs 11 -T -N
+
+#-f(字体)  -fs(字体大小) -cellw(占屏比或宽度)  -ofs(输出段的字号)  -T(显示工具栏)  -N(显示自己主机名)
+
+jt -t gruvboxl -f fira -fs 13 -cellw 90% -ofs 11 -dfs 11 -T -N
 
 
 
+# 主题更改
+pip install --upgrade jupyterthemes
+
+jt -l
+
+jt -t chesterish -T
+
+# 主题列表
+   chesterish
+   grade3
+   gruvboxd
+   gruvboxl
+   monokai
+   oceans16
+   onedork
+   solarizedd
+   solarizedl
+
+恢复默认主题,只需执行代码：jt -r，即可恢复至原来的白色背景。
+
+</code></pre>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/20200829103308.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200829103308.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h4 id="Jupyter-Notebook-的快捷键"><a href="#Jupyter-Notebook-的快捷键" class="headerlink" title="Jupyter Notebook 的快捷键"></a>Jupyter Notebook 的快捷键</h4><blockquote>
 <p>Jupyter</p>
@@ -1719,10 +1762,51 @@
 <p>windows: Settings - Editor - File and Code Templates</p>
 <p>Mac: Preferences - Editor - File and Code Templates</p>
 <h4 id="Pycharm-如何设置代码作者信息"><a href="#Pycharm-如何设置代码作者信息" class="headerlink" title="Pycharm 如何设置代码作者信息"></a>Pycharm 如何设置代码作者信息</h4><p>Pycharm 中 File -》Settings -》File and Code Templates》Python Script</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### 版本1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="string">&quot;&quot;</span><span class="string">&quot;</span></span><br><span class="line"><span class="string">-------------------------------------------------</span></span><br><span class="line"><span class="string"># @Project  :$&#123;PROJECT_NAME&#125;</span></span><br><span class="line"><span class="string"># @File     :$&#123;NAME&#125;</span></span><br><span class="line"><span class="string"># @Date     :$&#123;DATE&#125; $&#123;TIME&#125;</span></span><br><span class="line"><span class="string"># @Author   :作者名</span></span><br><span class="line"><span class="string"># @Email    :QQ号</span></span><br><span class="line"><span class="string"># @Software :$&#123;PRODUCT_NAME&#125;</span></span><br><span class="line"><span class="string"># @Blog	: www.a2data.cn</span></span><br><span class="line"><span class="string">-------------------------------------------------</span></span><br><span class="line"><span class="string">&quot;</span><span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### 版本2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="string">&quot;&quot;</span><span class="string">&quot;</span></span><br><span class="line"><span class="string">__title__ = &#x27;$Package_name&#x27;</span></span><br><span class="line"><span class="string">__author__ = &#x27;$USER&#x27;</span></span><br><span class="line"><span class="string">__mtime__ = &#x27;$DATE&#x27;</span></span><br><span class="line"><span class="string">——blog__ = &#x27;www.a2data.cn&#x27;</span></span><br><span class="line"><span class="string"># 多做多看多想。</span></span><br><span class="line"><span class="string">I love DataScience！</span></span><br><span class="line"><span class="string">　　 へ　　　　　／|</span></span><br><span class="line"><span class="string">　　/＼7　　　 ∠＿/</span></span><br><span class="line"><span class="string">　 /　│　　 ／　／</span></span><br><span class="line"><span class="string">　│　Z ＿,＜　／　　 /`ヽ</span></span><br><span class="line"><span class="string">　│　　　　　ヽ　　 /　　〉</span></span><br><span class="line"><span class="string">　 Y　　　　　`　 /　　/</span></span><br><span class="line"><span class="string">　ｲ●　､　●　　⊂⊃〈　　/</span></span><br><span class="line"><span class="string">　()　 へ　　　　|　＼〈</span></span><br><span class="line"><span class="string">　　&gt;ｰ ､_　 ィ　 │ ／／</span></span><br><span class="line"><span class="string">　 / へ　　 /　ﾉ＜| ＼＼</span></span><br><span class="line"><span class="string">　 ヽ_ﾉ　　(_／　 │／／</span></span><br><span class="line"><span class="string">　　7　　　　　　　|／</span></span><br><span class="line"><span class="string">　　＞―r￣￣`ｰ―＿</span></span><br><span class="line"><span class="string">====== Start Succeed =====</span></span><br><span class="line"><span class="string">&quot;</span><span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="yaml">### 版本1
+
+# -*- coding: utf-8 -*-
+&quot;&quot;&quot;
+-------------------------------------------------
+# @Project  :$&#123;PROJECT_NAME&#125;
+# @File     :$&#123;NAME&#125;
+# @Date     :$&#123;DATE&#125; $&#123;TIME&#125;
+# @Author   :作者名
+# @Email    :QQ号
+# @Software :$&#123;PRODUCT_NAME&#125;
+# @Blog    : www.a2data.cn
+-------------------------------------------------
+&quot;&quot;&quot;
 
 
 
+### 版本2
+
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+&quot;&quot;&quot;
+__title__ = &#39;$Package_name&#39;
+__author__ = &#39;$USER&#39;
+__mtime__ = &#39;$DATE&#39;
+——blog__ = &#39;www.a2data.cn&#39;
+# 多做多看多想。
+I love DataScience！
+　　 へ　　　　　／|
+　　/＼7　　　 ∠＿/
+　 /　│　　 ／　／
+　│　Z ＿,＜　／　　 /`ヽ
+　│　　　　　ヽ　　 /　　〉
+　 Y　　　　　`　 /　　/
+　ｲ●　､　●　　⊂⊃〈　　/
+　()　 へ　　　　|　＼〈
+　　&gt;ｰ ､_　 ィ　 │ ／／
+　 / へ　　 /　ﾉ＜| ＼＼
+　 ヽ_ﾉ　　(_／　 │／／
+　　7　　　　　　　|／
+　　＞―r￣￣`ｰ―＿
+====== Start Succeed =====
+&quot;&quot;&quot;
+
+</code></pre>
 <h3 id="5、文件默认编码"><a href="#5、文件默认编码" class="headerlink" title="5、文件默认编码"></a>5、文件默认编码</h3><p>File Encodings&gt; IDE Encoding: UTF-8;Project Encoding: UTF-8;</p>
 <h3 id="6-设置缩进符为制表符“Tab”"><a href="#6-设置缩进符为制表符“Tab”" class="headerlink" title="6. 设置缩进符为制表符“Tab”"></a>6. 设置缩进符为制表符“Tab”</h3><p> File -&gt; Default Settings -&gt; Code Style</p>
 <p> -&gt; General -&gt; 勾选“Use tab character”</p>
@@ -1901,7 +1985,9 @@
 anaconda下载源1.清华源
 CMD输入以下命令：
 
-12345678910111213141516171819 conda config --add c...</p>
+
+
+conda config --add channels https://mirrors.tuna...</p>
         </a>
       
       
@@ -1913,7 +1999,9 @@ CMD输入以下命令：
 Hexo语法
 Hexo 
 
-12345678910111213141516hexo new &quot;postName&quot; #新建文章hexo new pa...</p>
+hexo new &quot;postName&quot; #新建文章
+
+hexo new page &quot;pageName&quo...</p>
         </a>
       
     </div>
@@ -2923,6 +3011,8 @@ Hexo
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2963,6 +3053,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3276,6 +3373,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

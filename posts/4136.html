@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1423,7 +1427,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>112 words</p>
+      <p>113 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1484,16 +1488,20 @@
 <p><em>conda prompt</em></p>
 </blockquote>
 <p><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200414151257.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200414151257.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="2、执行命令"><a href="#2、执行命令" class="headerlink" title="2、执行命令"></a>2、执行命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda update anaconda-navigator</span><br><span class="line"></span><br><span class="line"><span class="comment"># 片刻之后 会遇到如下  输入y 即可</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="2、执行命令"><a href="#2、执行命令" class="headerlink" title="2、执行命令"></a>2、执行命令</h2><pre><code class="bash">conda update anaconda-navigator
 
+# 片刻之后 会遇到如下  输入y 即可
+</code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200414151045.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200414151045.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h2 id="3、-重启服务"><a href="#3、-重启服务" class="headerlink" title="3、 重启服务"></a>3、 重启服务</h2><p><strong>执行anaconda-navigator –reset</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">anaconda-navigator --reset</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">anaconda-navigator --reset
+</code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200414153017.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200414153017.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h2 id="4、更新客户端"><a href="#4、更新客户端" class="headerlink" title="4、更新客户端"></a>4、更新客户端</h2><p><strong>执行conda update anaconda-client</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda update anaconda-client</span><br><span class="line"></span><br><span class="line">conda update -f anaconda-client</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">conda update anaconda-client
 
+conda update -f anaconda-client
+</code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200414153906.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/20200414153906.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h2 id="5、-启动运行"><a href="#5、-启动运行" class="headerlink" title="5、 启动运行"></a>5、 启动运行</h2><blockquote>
 <p>以管理员身份运行 <code>anaconda</code></p>
@@ -1575,7 +1583,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>112 words</p>
+      <p>113 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2683,6 +2691,8 @@ Day2. Python基础语法基础语法想学好数据分析，最好掌握Python�
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2723,6 +2733,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3036,6 +3053,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

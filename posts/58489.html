@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1488,35 +1492,44 @@
 <p>列表</p>
 </blockquote>
 <h3 id="1-1、列表的格式"><a href="#1-1、列表的格式" class="headerlink" title="1.1、列表的格式"></a>1.1、列表的格式</h3><p>变量A的类型为列表</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">namesList = [<span class="string">&#x27;a2data&#x27;</span>,<span class="string">&#x27;a2data1&#x27;</span>,<span class="string">&#x27;a2data2&#x27;</span>]</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">namesList = [&#39;a2data&#39;,&#39;a2data1&#39;,&#39;a2data2&#39;]</code></pre>
 <p>比C语言的数组强大的地方在于列表中的元素可以是不同类型的</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">testList = [<span class="number">1</span>, <span class="string">&#x27;a&#x27;</span>]</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">testList = [1, &#39;a&#39;]</code></pre>
 <h3 id="1-2、打印列表"><a href="#1-2、打印列表" class="headerlink" title="1.2、打印列表"></a>1.2、打印列表</h3><p><strong>demo:</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">namesList = [<span class="string">&#x27;a2data&#x27;</span>,<span class="string">&#x27;a2data1&#x27;</span>,<span class="string">&#x27;a2data2&#x27;</span>]</span><br><span class="line">print(namesList[<span class="number">0</span>])</span><br><span class="line">print(namesList[<span class="number">1</span>])</span><br><span class="line">print(namesList[<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">    namesList = [&#39;a2data&#39;,&#39;a2data1&#39;,&#39;a2data2&#39;]
+    print(namesList[0])
+    print(namesList[1])
+    print(namesList[2])</code></pre>
 <p><strong>结果：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a2data</span><br><span class="line">a2data1</span><br><span class="line">a2data2</span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code class="python">    a2data
+    a2data1
+    a2data2</code></pre>
 <h2 id="2、列表的循环"><a href="#2、列表的循环" class="headerlink" title="2、列表的循环"></a>2、列表的循环</h2><h3 id="2-1、-使用for循环"><a href="#2-1、-使用for循环" class="headerlink" title="2.1、 使用for循环"></a>2.1、 使用for循环</h3><blockquote>
 <p>为了更有效率的输出列表的每个数据，可以使用循环来完成</p>
 </blockquote>
 <p><strong>demo:</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">namesList = [<span class="string">&#x27;a2data&#x27;</span>,<span class="string">&#x27;a2data1&#x27;</span>,<span class="string">&#x27;a2data2&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> namesList:</span><br><span class="line">    print(name)</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">    namesList = [&#39;a2data&#39;,&#39;a2data1&#39;,&#39;a2data2&#39;]
+    for name in namesList:
+        print(name)</code></pre>
 <p><strong>结果:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a2data</span><br><span class="line">a2data1</span><br><span class="line">a2data</span><br></pre></td></tr></table></figure>
-
+<pre><code>    a2data
+    a2data1
+    a2data</code></pre>
 <h3 id="2-2、-使用while循环"><a href="#2-2、-使用while循环" class="headerlink" title="2.2、 使用while循环"></a>2.2、 使用while循环</h3><p>为了更有效率的输出列表的每个数据，可以使用循环来完成</p>
 <p><strong>demo:</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">namesList = [<span class="string">&#x27;a2data&#x27;</span>,<span class="string">&#x27;a2data1&#x27;</span>,<span class="string">&#x27;a2data2&#x27;</span>]</span><br><span class="line"></span><br><span class="line">length = len(namesList)</span><br><span class="line"></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> i&lt;length:</span><br><span class="line">    print(namesList[i])</span><br><span class="line">    i+=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<pre><code class="python">    namesList = [&#39;a2data&#39;,&#39;a2data1&#39;,&#39;a2data2&#39;]
 
+    length = len(namesList)
+
+    i = 0
+
+    while i&lt;length:
+        print(namesList[i])
+        i+=1</code></pre>
 <p><strong>结果:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a2data</span><br><span class="line">a2data1</span><br><span class="line">a2data2</span><br></pre></td></tr></table></figure>
-
+<pre><code>    a2data
+    a2data1
+    a2data2</code></pre>
 <h2 id="3、列表的常见操作"><a href="#3、列表的常见操作" class="headerlink" title="3、列表的常见操作"></a>3、列表的常见操作</h2><blockquote>
 <p>列表中存放的数据是可以进行修改的，比如”增”、”删”、”改”、”查”</p>
 </blockquote>
@@ -1525,23 +1538,58 @@
 </blockquote>
 <h4 id="append"><a href="#append" class="headerlink" title="append"></a>append</h4><p>通过append可以向列表添加元素</p>
 <p><strong>demo:</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义变量A，默认有3个元素</span></span><br><span class="line">A = [<span class="string">&#x27;a2data&#x27;</span>,<span class="string">&#x27;a2data1&#x27;</span>,<span class="string">&#x27;a2data2&#x27;</span>]</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;-----添加之前，列表A的数据-----&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> tempName <span class="keyword">in</span> A:</span><br><span class="line">    print(tempName)</span><br><span class="line"></span><br><span class="line"><span class="comment">#提示、并添加元素</span></span><br><span class="line">temp = input(<span class="string">&#x27;请输入要添加的学生姓名:&#x27;</span>)</span><br><span class="line">A.append(temp)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;-----添加之后，列表A的数据-----&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> tempName <span class="keyword">in</span> A:</span><br><span class="line">    print(tempName)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">    #定义变量A，默认有3个元素
+    A = [&#39;a2data&#39;,&#39;a2data1&#39;,&#39;a2data2&#39;]
 
+    print(&quot;-----添加之前，列表A的数据-----&quot;)
+    for tempName in A:
+        print(tempName)
 
+    #提示、并添加元素
+    temp = input(&#39;请输入要添加的学生姓名:&#39;)
+    A.append(temp)
 
+    print(&quot;-----添加之后，列表A的数据-----&quot;)
+    for tempName in A:
+        print(tempName)</code></pre>
 <h4 id="extend"><a href="#extend" class="headerlink" title="extend"></a>extend</h4><p>通过extend可以将另一个集合中的元素逐一添加到列表中</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = [<span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.append(b)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, [<span class="number">3</span>, <span class="number">4</span>]]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.extend(b)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, [<span class="number">3</span>, <span class="number">4</span>], <span class="number">3</span>, <span class="number">4</span>]</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">&gt;&gt;&gt; a = [1, 2]
+&gt;&gt;&gt; b = [3, 4]
+&gt;&gt;&gt; a.append(b)
+&gt;&gt;&gt; a
+[1, 2, [3, 4]]
+&gt;&gt;&gt; a.extend(b)
+&gt;&gt;&gt; a
+[1, 2, [3, 4], 3, 4]</code></pre>
 <h4 id="insert"><a href="#insert" class="headerlink" title="insert"></a>insert</h4><p>insert(index, object) 在指定位置index前插入元素object</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.insert(<span class="number">1</span>, <span class="number">3</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">0</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">2</span>]</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">&gt;&gt;&gt; a = [0, 1, 2]
+&gt;&gt;&gt; a.insert(1, 3)
+&gt;&gt;&gt; a
+[0, 3, 1, 2]</code></pre>
 <h3 id="3-2、修改元素"><a href="#3-2、修改元素" class="headerlink" title="3.2、修改元素"></a>3.2、修改元素</h3><p>(“改”)：修改元素的时候，要通过下标来确定要修改的是哪个元素，然后才能进行修改</p>
 <p><strong>demo:</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义变量A，默认有3个元素</span></span><br><span class="line">A = [<span class="string">&#x27;a2data&#x27;</span>,<span class="string">&#x27;a2data1&#x27;</span>,<span class="string">&#x27;a2data2&#x27;</span>]</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;-----修改之前，列表A的数据-----&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> tempName <span class="keyword">in</span> A:</span><br><span class="line">    print(tempName)</span><br><span class="line"></span><br><span class="line"><span class="comment">#修改元素</span></span><br><span class="line">A[<span class="number">1</span>] = <span class="string">&#x27;a2data666&#x27;</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;-----修改之后，列表A的数据-----&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> tempName <span class="keyword">in</span> A:</span><br><span class="line">    print(tempName)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">    #定义变量A，默认有3个元素
+    A = [&#39;a2data&#39;,&#39;a2data1&#39;,&#39;a2data2&#39;]
 
+    print(&quot;-----修改之前，列表A的数据-----&quot;)
+    for tempName in A:
+        print(tempName)
+
+    #修改元素
+    A[1] = &#39;a2data666&#39;
+
+    print(&quot;-----修改之后，列表A的数据-----&quot;)
+    for tempName in A:
+        print(tempName)</code></pre>
 <p>结果:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-----修改之前，列表A的数据-----</span><br><span class="line">a2data</span><br><span class="line">a2data1</span><br><span class="line">a2data2</span><br><span class="line">-----修改之后，列表A的数据-----</span><br><span class="line">a2data</span><br><span class="line">a2data666</span><br><span class="line">a2data2</span><br></pre></td></tr></table></figure>
-
+<pre><code>    -----修改之前，列表A的数据-----
+    a2data
+    a2data1
+    a2data2
+    -----修改之后，列表A的数据-----
+    a2data
+    a2data666
+    a2data2</code></pre>
 <h3 id="3-3、查找元素"><a href="#3-3、查找元素" class="headerlink" title="3.3、查找元素"></a>3.3、查找元素</h3><blockquote>
 <p>(“查”in, not in, index, count)</p>
 </blockquote>
@@ -1554,15 +1602,33 @@
 </ul>
 </blockquote>
 <p><strong>demo</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#待查找的列表</span></span><br><span class="line">nameList = [<span class="string">&#x27;a2data&#x27;</span>,<span class="string">&#x27;a2data1&#x27;</span>,<span class="string">&#x27;a2data2&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取用户要查找的名字</span></span><br><span class="line">findName = input(<span class="string">&#x27;请输入要查找的姓名:&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#查找是否存在</span></span><br><span class="line"><span class="keyword">if</span> findName <span class="keyword">in</span> nameList:</span><br><span class="line">    print(<span class="string">&#x27;在字典中找到了相同的名字&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;没有找到&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">    #待查找的列表
+    nameList = [&#39;a2data&#39;,&#39;a2data1&#39;,&#39;a2data2&#39;]
 
+    #获取用户要查找的名字
+    findName = input(&#39;请输入要查找的姓名:&#39;)
+
+    #查找是否存在
+    if findName in nameList:
+        print(&#39;在字典中找到了相同的名字&#39;)
+    else:
+        print(&#39;没有找到&#39;)</code></pre>
 <p>说明：</p>
 <blockquote>
 <p>in的方法只要会用了，那么not in也是同样的用法，只不过not in判断的是不存在</p>
 </blockquote>
 <h4 id="index-count"><a href="#index-count" class="headerlink" title="index, count"></a>index, count</h4><p>index和count与字符串中的用法相同</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.index(<span class="string">&#x27;a&#x27;</span>, <span class="number">1</span>, <span class="number">3</span>) <span class="comment"># 注意是左闭右开区间</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">ValueError: <span class="string">&#x27;a&#x27;</span> <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">in</span> list</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.index(<span class="string">&#x27;a&#x27;</span>, <span class="number">1</span>, <span class="number">4</span>)</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.count(<span class="string">&#x27;b&#x27;</span>)</span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.count(<span class="string">&#x27;d&#x27;</span>)</span><br><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">&gt;&gt;&gt; a = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;a&#39;, &#39;b&#39;]
+&gt;&gt;&gt; a.index(&#39;a&#39;, 1, 3) # 注意是左闭右开区间
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+ValueError: &#39;a&#39; is not in list
+&gt;&gt;&gt; a.index(&#39;a&#39;, 1, 4)
+3
+&gt;&gt;&gt; a.count(&#39;b&#39;)
+2
+&gt;&gt;&gt; a.count(&#39;d&#39;)
+0</code></pre>
 <h3 id="3-4、删除元素"><a href="#3-4、删除元素" class="headerlink" title="3.4、删除元素"></a>3.4、删除元素</h3><blockquote>
 <p>(“删”del, pop, remove)</p>
 </blockquote>
@@ -1574,42 +1640,133 @@
 <li>remove：根据元素的值进行删除</li>
 </ul>
 <p><strong>demo:(del)</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">movieName = [<span class="string">&#x27;a2data&#x27;</span>,<span class="string">&#x27;a2data1&#x27;</span>,<span class="string">&#x27;a2data2&#x27;</span>,<span class="string">&#x27;a2data3&#x27;</span>,<span class="string">&#x27;a2data4&#x27;</span>,<span class="string">&#x27;a2data5&#x27;</span>]</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;------删除之前------&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> tempName <span class="keyword">in</span> movieName:</span><br><span class="line">    print(tempName)</span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> movieName[<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;------删除之后------&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> tempName <span class="keyword">in</span> movieName:</span><br><span class="line">    print(tempName)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">    movieName = [&#39;a2data&#39;,&#39;a2data1&#39;,&#39;a2data2&#39;,&#39;a2data3&#39;,&#39;a2data4&#39;,&#39;a2data5&#39;]
 
+    print(&#39;------删除之前------&#39;)
+    for tempName in movieName:
+        print(tempName)
+
+    del movieName[2]
+
+    print(&#39;------删除之后------&#39;)
+    for tempName in movieName:
+        print(tempName)</code></pre>
 <p><strong>结果:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">------删除之前------</span><br><span class="line">a2data</span><br><span class="line">a2data1</span><br><span class="line">a2data2</span><br><span class="line">a2data3</span><br><span class="line">a2data4</span><br><span class="line">a2data5</span><br><span class="line">------删除之后------</span><br><span class="line">a2data</span><br><span class="line">a2data1</span><br><span class="line">a2data3</span><br><span class="line">a2data4</span><br><span class="line">a2data5</span><br></pre></td></tr></table></figure>
-
+<pre><code>    ------删除之前------
+    a2data
+    a2data1
+    a2data2
+    a2data3
+    a2data4
+    a2data5
+    ------删除之后------
+    a2data
+    a2data1
+    a2data3
+    a2data4
+    a2data5</code></pre>
 <p><strong>demo:(pop)</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">movieName = [<span class="string">&#x27;a2data&#x27;</span>,<span class="string">&#x27;a2data1&#x27;</span>,<span class="string">&#x27;a2data2&#x27;</span>,<span class="string">&#x27;a2data3&#x27;</span>,<span class="string">&#x27;a2data4&#x27;</span>,<span class="string">&#x27;a2data5&#x27;</span>]</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;------删除之前------&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> tempName <span class="keyword">in</span> movieName:</span><br><span class="line">    print(tempName)</span><br><span class="line"></span><br><span class="line">movieName.pop()</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;------删除之后------&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> tempName <span class="keyword">in</span> movieName:</span><br><span class="line">    print(tempName)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">    movieName = [&#39;a2data&#39;,&#39;a2data1&#39;,&#39;a2data2&#39;,&#39;a2data3&#39;,&#39;a2data4&#39;,&#39;a2data5&#39;]
 
+    print(&#39;------删除之前------&#39;)
+    for tempName in movieName:
+        print(tempName)
+
+    movieName.pop()
+
+    print(&#39;------删除之后------&#39;)
+    for tempName in movieName:
+        print(tempName)</code></pre>
 <p><strong>结果:</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">------删除之前------</span><br><span class="line">a2data</span><br><span class="line">a2data1</span><br><span class="line">a2data2</span><br><span class="line">a2data3</span><br><span class="line">a2data4</span><br><span class="line">a2data5</span><br><span class="line">------删除之后------</span><br><span class="line">a2data</span><br><span class="line">a2data1</span><br><span class="line">a2data2</span><br><span class="line">a2data3</span><br><span class="line">a2data4</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">    ------删除之前------
+    a2data
+    a2data1
+    a2data2
+    a2data3
+    a2data4
+    a2data5
+    ------删除之后------
+    a2data
+    a2data1
+    a2data2
+    a2data3
+    a2data4</code></pre>
 <p><strong>demo:(remove)</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">movieName = [<span class="string">&#x27;a2data&#x27;</span>,<span class="string">&#x27;a2data1&#x27;</span>,<span class="string">&#x27;a2data2&#x27;</span>,<span class="string">&#x27;a2data3&#x27;</span>,<span class="string">&#x27;a2data4&#x27;</span>,<span class="string">&#x27;a2data5&#x27;</span>]</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;------删除之前------&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> tempName <span class="keyword">in</span> movieName:</span><br><span class="line">    print(tempName)</span><br><span class="line"></span><br><span class="line">movieName.remove(<span class="string">&#x27;a2data3&#x27;</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;------删除之后------&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> tempName <span class="keyword">in</span> movieName:</span><br><span class="line">    print(tempName)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">    movieName = [&#39;a2data&#39;,&#39;a2data1&#39;,&#39;a2data2&#39;,&#39;a2data3&#39;,&#39;a2data4&#39;,&#39;a2data5&#39;]
 
+    print(&#39;------删除之前------&#39;)
+    for tempName in movieName:
+        print(tempName)
+
+    movieName.remove(&#39;a2data3&#39;)
+
+    print(&#39;------删除之后------&#39;)
+    for tempName in movieName:
+        print(tempName)</code></pre>
 <p><strong>结果:</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">------删除之前------</span><br><span class="line">a2data</span><br><span class="line">a2data1</span><br><span class="line">a2data2</span><br><span class="line">a2data3</span><br><span class="line">a2data4</span><br><span class="line">a2data5</span><br><span class="line">------删除之后------</span><br><span class="line">a2data</span><br><span class="line">a2data1</span><br><span class="line">a2data2</span><br><span class="line">a2data4</span><br><span class="line">a2data5</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">    ------删除之前------
+    a2data
+    a2data1
+    a2data2
+    a2data3
+    a2data4
+    a2data5
+    ------删除之后------
+    a2data
+    a2data1
+    a2data2
+    a2data4
+    a2data5</code></pre>
 <h3 id="3-5、排序"><a href="#3-5、排序" class="headerlink" title="3.5、排序"></a>3.5、排序</h3><p><strong>(sort, reverse)</strong></p>
 <blockquote>
 <p>sort方法是将list按特定顺序重新排列，默认为由小到大，参数reverse=True可改为倒序，由大到小。</p>
 <p>reverse方法是将list逆置。</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.reverse()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">1</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.sort()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.sort(reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]</span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code class="python">&gt;&gt;&gt; a = [1, 4, 2, 3]
+&gt;&gt;&gt; a
+[1, 4, 2, 3]
+&gt;&gt;&gt; a.reverse()
+&gt;&gt;&gt; a
+[3, 2, 4, 1]
+&gt;&gt;&gt; a.sort()
+&gt;&gt;&gt; a
+[1, 2, 3, 4]
+&gt;&gt;&gt; a.sort(reverse=True)
+&gt;&gt;&gt; a
+[4, 3, 2, 1]</code></pre>
 <h2 id="4、列表的嵌套"><a href="#4、列表的嵌套" class="headerlink" title="4、列表的嵌套"></a>4、列表的嵌套</h2><h3 id="4-1-列表嵌套"><a href="#4-1-列表嵌套" class="headerlink" title="4.1 列表嵌套"></a>4.1 列表嵌套</h3><blockquote>
 <p>类似while循环的嵌套，列表也是支持嵌套的</p>
 <p>一个列表中的元素又是一个列表，那么这就是列表的嵌套</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">schoolNames = [[<span class="string">&#x27;北京&#x27;</span>,<span class="string">&#x27;山西&#x27;</span>],</span><br><span class="line">                [<span class="string">&#x27;湖南&#x27;</span>,<span class="string">&#x27;天津&#x27;</span>,<span class="string">&#x27;深圳&#x27;</span>],</span><br><span class="line">                [<span class="string">&#x27;长沙&#x27;</span>,<span class="string">&#x27;上海&#x27;</span>]]</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">    schoolNames = [[&#39;北京&#39;,&#39;山西&#39;],
+                    [&#39;湖南&#39;,&#39;天津&#39;,&#39;深圳&#39;],
+                    [&#39;长沙&#39;,&#39;上海&#39;]]</code></pre>
 <h3 id="4-2、-应用"><a href="#4-2、-应用" class="headerlink" title="4.2、 应用"></a>4.2、 应用</h3><blockquote>
 <p>一个公号，有5个长期运营，现在要分配其中3个位置，但是有8位运营者等待分配，请编写程序，完成随机的分配</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#encoding=utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义 一个运营管理者的列表</span></span><br><span class="line">offices = [[],[],[]]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个列表用来存储8位运营者的名字</span></span><br><span class="line">names = [<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;D&#x27;</span>,<span class="string">&#x27;E&#x27;</span>,<span class="string">&#x27;F&#x27;</span>,<span class="string">&#x27;G&#x27;</span>,<span class="string">&#x27;H&#x27;</span>]</span><br><span class="line"></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> names:</span><br><span class="line">    index = random.randint(<span class="number">0</span>,<span class="number">2</span>)    </span><br><span class="line">    offices[index].append(name)</span><br><span class="line"></span><br><span class="line">i = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> tempNames <span class="keyword">in</span> offices:</span><br><span class="line">    print(<span class="string">&#x27;运营%d的人数为:%d&#x27;</span>%(i,len(tempNames)))</span><br><span class="line">    i+=<span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> tempNames:</span><br><span class="line">        print(<span class="string">&quot;%s&quot;</span>%name,end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    print(<span class="string">&quot;\n&quot;</span>)</span><br><span class="line">    print(<span class="string">&quot;-&quot;</span>*<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">#encoding=utf-8
+
+import random
+
+# 定义 一个运营管理者的列表
+offices = [[],[],[]]
+
+# 定义一个列表用来存储8位运营者的名字
+names = [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;D&#39;,&#39;E&#39;,&#39;F&#39;,&#39;G&#39;,&#39;H&#39;]
+
+i = 0
+for name in names:
+    index = random.randint(0,2)    
+    offices[index].append(name)
+
+i = 1
+for tempNames in offices:
+    print(&#39;运营%d的人数为:%d&#39;%(i,len(tempNames)))
+    i+=1
+    for name in tempNames:
+        print(&quot;%s&quot;%name,end=&#39;&#39;)
+    print(&quot;\n&quot;)
+    print(&quot;-&quot;*20)</code></pre>
 
   
   
@@ -1623,7 +1780,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\30675.html" title="11.Python面向对象(2)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191224164151.png" /><span class="title">11.Python面向对象(2)</span><span class="excerpt">Python面向对象介绍中篇</span></a><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\b7cd6609.html" title="Day12.方法的重写和魔法方法" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day12.方法的重写和魔法方法</span><span class="excerpt">方法的重写和魔法方法</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\34771.html" title="10.Python面向对象(1)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223115817.png" /><span class="title">10.Python面向对象(1)</span><span class="excerpt">Python面向对象介绍上篇</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8b540f5a.html" title="Day10.高阶函数" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day10.高阶函数</span><span class="excerpt">高阶函数 定义 内置的有哪些</span></a><a class="item" href="\posts\80bb221f.html" title="Day11.封装" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day11.封装</span><span class="excerpt">Python 的封装学习。</span></a><a class="item" href="\posts\8f19a96e.html" title="Day13.继承和多态" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day13.继承和多态</span><span class="excerpt">继承 和多态</span></a><a class="item" href="\posts\5144bcf.html" title="Day14.模块和包" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" /><span class="title">Day14.模块和包</span><span class="excerpt">模块和包</span></a><a class="item" href="\posts\34771.html" title="10.Python面向对象(1)" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/20191223115817.png" /><span class="title">10.Python面向对象(1)</span><span class="excerpt">Python面向对象介绍上篇</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1777,7 +1934,7 @@
 元组
 Python的元组与列表类似，不同之处在于元组的元素不能修改。元组使用小括号，列表使用方括号。
 
-123&gt;&gt;&gt; aTuple = (&#...</p>
+&gt;&gt;&gt; aTuple = (&#39;...</p>
         </a>
       
       
@@ -2801,6 +2958,8 @@ Python的字符串1、字符串介绍
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2841,6 +3000,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3154,6 +3320,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1423,7 +1427,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>589 words</p>
+      <p>592 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1531,14 +1535,37 @@
 <blockquote>
 <p>默认值：</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">DEVICE=&quot;eth0&quot;</span><br><span class="line">BOOTPROTO=&quot;dhcp&quot;</span><br><span class="line">DHCP_HOSTNAME=&quot;quickstart.cloudera&quot;</span><br><span class="line">HOSTNAME=&quot;quickstart.cloudera&quot;</span><br><span class="line">HWADDR=&quot;00:0C:29:D3:4D:5C&quot;</span><br><span class="line">IPV6INIT=&quot;no&quot;</span><br><span class="line">MTU=&quot;1500&quot;</span><br><span class="line">NM_CONTROLLED=&quot;yes&quot;</span><br><span class="line">ONBOOT=&quot;yes&quot;</span><br><span class="line">TYPE=&quot;Ethernet&quot;</span><br><span class="line">UUID=&quot;f127faf3-7a1f-4bca-a404-0119665a8459&quot;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="shell">DEVICE=&quot;eth0&quot;
+BOOTPROTO=&quot;dhcp&quot;
+DHCP_HOSTNAME=&quot;quickstart.cloudera&quot;
+HOSTNAME=&quot;quickstart.cloudera&quot;
+HWADDR=&quot;00:0C:29:D3:4D:5C&quot;
+IPV6INIT=&quot;no&quot;
+MTU=&quot;1500&quot;
+NM_CONTROLLED=&quot;yes&quot;
+ONBOOT=&quot;yes&quot;
+TYPE=&quot;Ethernet&quot;
+UUID=&quot;f127faf3-7a1f-4bca-a404-0119665a8459&quot;
 
+</code></pre>
 <p> 注意：使用<code>sudo</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/sysconfig/network-scripts/ifcfg-eth0 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell"> sudo vim /etc/sysconfig/network-scripts/ifcfg-eth0 
+</code></pre>
 <p><strong>修改为</strong>:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">DEVICE=&quot;eth0&quot;</span><br><span class="line">BOOTPROTO=&quot;static&quot;</span><br><span class="line">DHCP_HOSTNAME=&quot;quickstart.cloudera&quot;</span><br><span class="line">HOSTNAME=&quot;quickstart.cloudera&quot;</span><br><span class="line">HWADDR=&quot;00:0C:29:D3:4D:5C&quot;</span><br><span class="line">IPV6INIT=&quot;no&quot;</span><br><span class="line">MTU=&quot;1500&quot;</span><br><span class="line">NM_CONTROLLED=&quot;yes&quot;</span><br><span class="line">ONBOOT=&quot;yes&quot;</span><br><span class="line">TYPE=&quot;Ethernet&quot;</span><br><span class="line">UUID=&quot;f127faf3-7a1f-4bca-a404-0119665a8459&quot;</span><br><span class="line">IPADDR=192.168.6.6</span><br><span class="line">NETMASK=255.255.255.0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">DEVICE=&quot;eth0&quot;
+BOOTPROTO=&quot;static&quot;
+DHCP_HOSTNAME=&quot;quickstart.cloudera&quot;
+HOSTNAME=&quot;quickstart.cloudera&quot;
+HWADDR=&quot;00:0C:29:D3:4D:5C&quot;
+IPV6INIT=&quot;no&quot;
+MTU=&quot;1500&quot;
+NM_CONTROLLED=&quot;yes&quot;
+ONBOOT=&quot;yes&quot;
+TYPE=&quot;Ethernet&quot;
+UUID=&quot;f127faf3-7a1f-4bca-a404-0119665a8459&quot;
+IPADDR=192.168.6.6
+NETMASK=255.255.255.0
+</code></pre>
 <p><code>重新启动即可:</code></p>
 <blockquote>
 <p>sudo service network restart</p>
@@ -1558,10 +1585,12 @@
 </blockquote>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223731768.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223731768.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200501093303582"></p>
 <p><strong>再次重新启动</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.重启服务</span><br><span class="line">sudo service network restart</span><br><span class="line"></span><br><span class="line">2.查看ip</span><br><span class="line">ip addr/ifconfig</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="shell">1.重启服务
+sudo service network restart
 
-
-
+2.查看ip
+ip addr/ifconfig
+</code></pre>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223731978.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223731978.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200501094403920"></p>
 <h1 id="MobaXterm"><a href="#MobaXterm" class="headerlink" title="MobaXterm"></a>MobaXterm</h1><h2 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a>1、安装</h2><p><strong>MobaXterm</strong></p>
 <blockquote>
@@ -1655,7 +1684,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>589 words</p>
+      <p>592 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1762,7 +1791,9 @@ DBeaver1、下载
 正则表达式
 是指用来描述或者匹配一系列符合某个句法规则的字符串的单个字符串。就是用某种模式去匹配一类字符串的一个公式。
 
-1234touch bb.txtgrep “m*”...</p>
+touch bb.txt
+
+grep “m*” b...</p>
         </a>
       
     </div>
@@ -2772,6 +2803,8 @@ DBeaver1、下载
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2812,6 +2845,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3125,6 +3165,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

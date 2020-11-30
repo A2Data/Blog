@@ -36,7 +36,7 @@
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
 
   
   
@@ -56,6 +56,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
   
   
     
@@ -101,8 +107,6 @@
             <img no-lazy class='logo' src='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'/>
           
           
-            <i class='https://7.dusays.com/2020/09/10/44b78460f8d58.jpg'></i>
-          
           
         </a>
       
@@ -121,7 +125,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -265,7 +269,7 @@
       theme='#1BCDFC'
       volume='0.3'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -715,7 +719,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-flag fa-fw'></i>开始
+                  <i class='fal fa-home fa-fw'></i>开始
                 </a>
                 
                   <ul class="list-v">
@@ -1427,13 +1431,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.2k words</p>
+      <p>1.3k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>4 min</p>
+      <p>5 min</p>
     </a>
   </div>
 
@@ -1484,10 +1488,13 @@
 <p>Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。</p>
 </blockquote>
 <h2 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h2><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">windows版本：</span><br><span class="line"> https://github.com/MSOpenTech/redis/releases</span><br><span class="line">Linux版本：</span><br><span class="line"> 官网下载：</span><br><span class="line">     http://www.redis.cn/</span><br><span class="line"> git下载</span><br><span class="line">     https://github.com/antirez/redis/releases</span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code class="python">windows版本：
+ https://github.com/MSOpenTech/redis/releases
+Linux版本：
+ 官网下载：
+     http://www.redis.cn/
+ git下载
+     https://github.com/antirez/redis/releases</code></pre>
 <p>我们现在讨论的是windows下的安装部署，目前windows下最新版本是：3.2.100。</p>
 <p>下载地址，提供多种下载内容，<br><code>Redis-x64-3.2.100.msi</code>是在windows下，最简单的安装文件，方便，直接会将Redis写入windows服务。<br><code>Redis-x64-3.2.100.zip</code>是需要解压安装的，接下来讨论的是这种。<br><code>Source code (zip) </code>源码的zip压缩版<br><code>Source code (tar.gz) </code>源码的tar.gz压缩版</p>
 </blockquote>
@@ -1504,12 +1511,77 @@
 <h2 id="4、使用"><a href="#4、使用" class="headerlink" title="4、使用"></a>4、使用</h2><blockquote>
 <p>参考安装完之后的生成文档</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">如果您使用MSI包安装了Redis，那么Redis已经作为Windows服务安装了。没有别的事可做。如果您想要更改它的设置，您可以更新Redis .windows-service.conf文件，然后重新启动Redis服务(运行-&gt;服务。msc -&gt; Redis -&gt;重启)。</span><br><span class="line">在安装MSI期间，您可以使用安装程序的用户界面来更新Redis监听的端口和防火墙异常，或者在没有UI的情况下静默运行它。下面的例子展示了如何从命令行安装:</span><br><span class="line"></span><br><span class="line">default install (port 6379 and firewall exception ON):</span><br><span class="line">        msiexec /i Redis-Windows-x64.msi </span><br><span class="line">set port and turn OFF firewall exception:</span><br><span class="line">        msiexec /i Redis-Windows-x64.msi PORT=1234 ADD_FIREWALL_RULE=&quot;&quot;</span><br><span class="line">set port and turn ON firewall exception:</span><br><span class="line">        msiexec /i Redis-Windows-x64.msi PORT=1234 ADD_FIREWALL_RULE =1</span><br><span class="line">install with no user interface:</span><br><span class="line">        msiexec /quiet /i Redis-Windows-x64.msi</span><br><span class="line"></span><br><span class="line">如果您没有使用MSI包安装Redis，那么您仍然可以按照以下说明运行Redis作为Windows服务:</span><br><span class="line">为了更好地与Windows服务模型集成，在Redis中引入了新的命令行参数。这些服务参数需要一个提升的用户上下文，以便连接到服务控制管理器。如果这些命令是从非提升的上下文调用的，那么Redis将尝试创建一个提升的上下文来执行这些命令。这将导致一个用户帐户控制对话框显示在窗口，并可能需要Admini</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">安装服务</span></span><br><span class="line">这必须是redis-server命令行的第一个参数。参数按服务启动时发生在Redis中的顺序传递。该服务将被配置为自动启动，并将作为“NT AUTHORITY\NetworkService”启动。安装成功后，将显示一条成功消息，Redis将退出。</span><br><span class="line">此命令不启动服务。</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">例如：</span></span><br><span class="line">redis-server --service-install redis.windows-service.conf --loglevel verbose</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">卸载服务</span></span><br><span class="line">--service-uninstall</span><br><span class="line"></span><br><span class="line">这将从注册表中删除Redis服务配置信息。卸载成功后，将显示一条成功消息，Redis将退出。</span><br><span class="line">这并不命令不停止服务。</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">例如</span></span><br><span class="line">redis-server --service-uninstall</span><br><span class="line">Starting the Service</span><br><span class="line">--service-start</span><br><span class="line">这将启动Redis服务。成功启动后，将显示一条成功消息并开始运行Redis。</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">例如</span></span><br><span class="line">redis-server --service-start</span><br><span class="line">Stopping the Service</span><br><span class="line">--service-stop</span><br><span class="line">这将停止Redis服务。成功终止后，将显示一条成功消息，Redis将退出。</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">例如</span></span><br><span class="line">redis-server --service-stop</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">命令服务</span></span><br><span class="line">--service-name name</span><br><span class="line"></span><br><span class="line">此可选参数可与前面的任何命令一起使用，以设置安装的服务的名称。该参数应该位于service-install、service-start、service-stop或service-uninstall命令之后，并位于通过service-install命令传递给Redis的任何参数之前。</span><br><span class="line">下面将安装并启动三个独立的Redis服务实例:</span><br><span class="line">redis-server --service-install --service-name redisService1 --port 10001</span><br><span class="line">redis-server --service-start --service-name redisService1</span><br><span class="line">redis-server --service-install --service-name redisService2 --port 10002</span><br><span class="line">redis-server --service-start --service-name redisService2</span><br><span class="line">redis-server --service-install --service-name redisService3 --port 10003</span><br><span class="line">redis-server --service-start --service-name redisService3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 测试</span></span><br><span class="line">启动服务</span><br><span class="line">redis-server --service-start</span><br><span class="line"></span><br><span class="line">客户端</span><br><span class="line">命令：</span><br><span class="line"></span><br><span class="line">精简模式：</span><br><span class="line">redis-cli.exe</span><br><span class="line">指定模式：</span><br><span class="line">redis-cli.exe -h 127.0.0.1 -p 6379 -a requirepass</span><br><span class="line">(-h 服务器地址  -p 指定端口号 -a 连接数据库的密码[可以在redis.windows.conf中配置]，默认无密码)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="shell">如果您使用MSI包安装了Redis，那么Redis已经作为Windows服务安装了。没有别的事可做。如果您想要更改它的设置，您可以更新Redis .windows-service.conf文件，然后重新启动Redis服务(运行-&gt;服务。msc -&gt; Redis -&gt;重启)。
+在安装MSI期间，您可以使用安装程序的用户界面来更新Redis监听的端口和防火墙异常，或者在没有UI的情况下静默运行它。下面的例子展示了如何从命令行安装:
+
+default install (port 6379 and firewall exception ON):
+        msiexec /i Redis-Windows-x64.msi 
+set port and turn OFF firewall exception:
+        msiexec /i Redis-Windows-x64.msi PORT=1234 ADD_FIREWALL_RULE=&quot;&quot;
+set port and turn ON firewall exception:
+        msiexec /i Redis-Windows-x64.msi PORT=1234 ADD_FIREWALL_RULE =1
+install with no user interface:
+        msiexec /quiet /i Redis-Windows-x64.msi
+
+如果您没有使用MSI包安装Redis，那么您仍然可以按照以下说明运行Redis作为Windows服务:
+为了更好地与Windows服务模型集成，在Redis中引入了新的命令行参数。这些服务参数需要一个提升的用户上下文，以便连接到服务控制管理器。如果这些命令是从非提升的上下文调用的，那么Redis将尝试创建一个提升的上下文来执行这些命令。这将导致一个用户帐户控制对话框显示在窗口，并可能需要Admini
+
+#安装服务
+这必须是redis-server命令行的第一个参数。参数按服务启动时发生在Redis中的顺序传递。该服务将被配置为自动启动，并将作为“NT AUTHORITY\NetworkService”启动。安装成功后，将显示一条成功消息，Redis将退出。
+此命令不启动服务。
+
+#例如：
+redis-server --service-install redis.windows-service.conf --loglevel verbose
+
+#卸载服务
+--service-uninstall
+
+这将从注册表中删除Redis服务配置信息。卸载成功后，将显示一条成功消息，Redis将退出。
+这并不命令不停止服务。
+
+#例如
+redis-server --service-uninstall
+Starting the Service
+--service-start
+这将启动Redis服务。成功启动后，将显示一条成功消息并开始运行Redis。
+
+#例如
+redis-server --service-start
+Stopping the Service
+--service-stop
+这将停止Redis服务。成功终止后，将显示一条成功消息，Redis将退出。
+
+#例如
+redis-server --service-stop
+
+#命令服务
+--service-name name
+
+此可选参数可与前面的任何命令一起使用，以设置安装的服务的名称。该参数应该位于service-install、service-start、service-stop或service-uninstall命令之后，并位于通过service-install命令传递给Redis的任何参数之前。
+下面将安装并启动三个独立的Redis服务实例:
+redis-server --service-install --service-name redisService1 --port 10001
+redis-server --service-start --service-name redisService1
+redis-server --service-install --service-name redisService2 --port 10002
+redis-server --service-start --service-name redisService2
+redis-server --service-install --service-name redisService3 --port 10003
+redis-server --service-start --service-name redisService3
 
 
+# 测试
+启动服务
+redis-server --service-start
+
+客户端
+命令：
+
+精简模式：
+redis-cli.exe
+指定模式：
+redis-cli.exe -h 127.0.0.1 -p 6379 -a requirepass
+(-h 服务器地址  -p 指定端口号 -a 连接数据库的密码[可以在redis.windows.conf中配置]，默认无密码)
 
 
-
+</code></pre>
 <h2 id="5、Redis工具"><a href="#5、Redis工具" class="headerlink" title="5、Redis工具"></a>5、Redis工具</h2><blockquote>
 <p>Redis Desktop Manager</p>
 <p><a target="_blank" rel="noopener" href="https://redisdesktop.com/pricing">https://redisdesktop.com/pricing</a></p>
@@ -1591,13 +1663,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.2k words</p>
+      <p>1.3k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>4 min</p>
+      <p>5 min</p>
     </a>
   </div>
 
@@ -2711,6 +2783,8 @@ DBeaver1、下载
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
   
 <script src="/js/app.js"></script>
@@ -2751,6 +2825,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
@@ -3064,6 +3145,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             newcomment();
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();
