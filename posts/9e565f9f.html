@@ -1427,13 +1427,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>592 words</p>
+      <p>865 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>2 min</p>
+      <p>3 min</p>
     </a>
   </div>
 
@@ -1479,8 +1479,20 @@
   
   <p>快速搭建Hadoop集群</p>
 <a id="more"></a>
-
-<h1 id="VM安装"><a href="#VM安装" class="headerlink" title="VM安装"></a>VM安装</h1><h2 id="0、下载"><a href="#0、下载" class="headerlink" title="0、下载"></a>0、下载</h2><blockquote>
+<h1 id="全网独家收藏的大数据学习环境"><a href="#全网独家收藏的大数据学习环境" class="headerlink" title="全网独家收藏的大数据学习环境"></a>全网独家收藏的大数据学习环境</h1><p>此版本为<strong>CDH 官网</strong>提供，小编早期独家收藏，便于快速学习的版本。目前已经没有了。</p>
+<blockquote>
+<p>默认情况下，Cloudera快速启动VM在Linux的服务和配置管理下运行Cloudera的发行版，包括Apache Hadoop (CDH)。如果您希望迁移到Cloudera Manager，您必须运行以下命令之一。</p>
+<p>要使用Cloudera Express(免费)，可以在桌面上运行Launch Cloudera Express。这需要至少<strong>8gb的RAM和至少2个虚拟cpu。</strong></p>
+<p>要开始一个具有先进管理功能的为期60天的Cloudera Enterprise试用版，请在桌面上运行Launch Cloudera Enterprise(试用版)。这需要至少1<strong>0gb的RAM和至少2个虚拟cpu。</strong></p>
+<p>请注意，在重启之后，Cloudera Manager可能需要几分钟时间才能启动它管理的所有服务，并准备好接受来自客户端的连接。</p>
+</blockquote>
+<h2 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h2><ul>
+<li>内存 8G</li>
+<li>CPU 最少2个</li>
+<li>空间 64GB</li>
+<li>Vmware</li>
+</ul>
+<h2 id="VM安装"><a href="#VM安装" class="headerlink" title="VM安装"></a>VM安装</h2><h3 id="0、下载"><a href="#0、下载" class="headerlink" title="0、下载"></a>0、下载</h3><blockquote>
 <p><a target="_blank" rel="noopener" href="https://www.vmware.com/cn/products/workstation-pro.html">VMware Workstation Pro</a> 确立了在单台 Linux 或 Windows PC 上运行多个操作系统的行业标准。</p>
 <p>Workstation 15.5 Pro 通过提供全新的用户界面控件，支持巨型帧以及最新的 Windows 和 Linux 操作系统等，进一步完善了领先的桌面…</p>
 </blockquote>
@@ -1488,50 +1500,56 @@
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://www.vmware.com/cn/products/workstation-pro/workstation-pro-evaluation.html">https://www.vmware.com/cn/products/workstation-pro/workstation-pro-evaluation.html</a></p>
 </blockquote>
-<h2 id="1、以管理员身份运行"><a href="#1、以管理员身份运行" class="headerlink" title="1、以管理员身份运行"></a>1、以管理员身份运行</h2><p>找到下载的程序，右击</p>
+<h3 id="1、以管理员身份运行"><a href="#1、以管理员身份运行" class="headerlink" title="1、以管理员身份运行"></a>1、以管理员身份运行</h3><p>找到下载的程序，右击</p>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223729370.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223729370.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="2、下一步"><a href="#2、下一步" class="headerlink" title="2、下一步"></a>2、下一步</h2><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223729474.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223729474.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="3、接收协议"><a href="#3、接收协议" class="headerlink" title="3、接收协议"></a>3、接收协议</h2><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223729580.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223729580.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="4、更改安装目录"><a href="#4、更改安装目录" class="headerlink" title="4、更改安装目录"></a>4、更改安装目录</h2><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223729671.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223729671.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="2、下一步"><a href="#2、下一步" class="headerlink" title="2、下一步"></a>2、下一步</h3><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223729474.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223729474.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="3、接收协议"><a href="#3、接收协议" class="headerlink" title="3、接收协议"></a>3、接收协议</h3><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223729580.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223729580.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="4、更改安装目录"><a href="#4、更改安装目录" class="headerlink" title="4、更改安装目录"></a>4、更改安装目录</h3><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223729671.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223729671.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223729761.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223729761.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="5、安装"><a href="#5、安装" class="headerlink" title="5、安装"></a>5、安装</h2><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223729865.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223729865.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="5、安装"><a href="#5、安装" class="headerlink" title="5、安装"></a>5、安装</h3><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223729865.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223729865.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223729960.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223729960.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p>点击下一步，点击<strong>安装</strong></p>
-<h2 id="6、完成"><a href="#6、完成" class="headerlink" title="6、完成"></a>6、完成</h2><p><img src="https://gitee.com/DataITems/cdn/raw/master/2020050122373070.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/2020050122373070.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="许可证"><a href="#许可证" class="headerlink" title="许可证"></a>许可证</h2><p><strong>激活密钥</strong></p>
+<h3 id="6、完成"><a href="#6、完成" class="headerlink" title="6、完成"></a>6、完成</h3><p><img src="https://gitee.com/DataITems/cdn/raw/master/2020050122373070.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/2020050122373070.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="许可证"><a href="#许可证" class="headerlink" title="许可证"></a>许可证</h3><p><strong>激活密钥</strong></p>
 <blockquote>
 <p>UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA</p>
 </blockquote>
-<h1 id="VM使用"><a href="#VM使用" class="headerlink" title="VM使用"></a>VM使用</h1><h2 id="0、启动"><a href="#0、启动" class="headerlink" title="0、启动"></a>0、启动</h2><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223730176.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223730176.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="1、更改存储位置"><a href="#1、更改存储位置" class="headerlink" title="1、更改存储位置"></a>1、更改存储位置</h2><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223730268.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223730268.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="2、更改共享位置"><a href="#2、更改共享位置" class="headerlink" title="2、更改共享位置"></a>2、更改共享位置</h2><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223730354.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223730354.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="3、虚拟网络"><a href="#3、虚拟网络" class="headerlink" title="3、虚拟网络"></a>3、虚拟网络</h2><blockquote>
+<h2 id="VM使用"><a href="#VM使用" class="headerlink" title="VM使用"></a>VM使用</h2><h3 id="0、启动"><a href="#0、启动" class="headerlink" title="0、启动"></a>0、启动</h3><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223730176.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223730176.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="1、更改存储位置"><a href="#1、更改存储位置" class="headerlink" title="1、更改存储位置"></a>1、更改存储位置</h3><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223730268.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223730268.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="2、更改共享位置"><a href="#2、更改共享位置" class="headerlink" title="2、更改共享位置"></a>2、更改共享位置</h3><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223730354.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223730354.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="3、虚拟网络"><a href="#3、虚拟网络" class="headerlink" title="3、虚拟网络"></a>3、虚拟网络</h3><blockquote>
 <p>虚拟机网络相关配置</p>
 </blockquote>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223730439.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223730439.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p><strong>详细设置</strong></p>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223730530.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223730530.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h1 id="cloudera"><a href="#cloudera" class="headerlink" title="cloudera"></a>cloudera</h1><blockquote>
+<h2 id="cloudera"><a href="#cloudera" class="headerlink" title="cloudera"></a>cloudera</h2><blockquote>
 <p>cloudera-quickstart-vm-5.13.0-0-vmware （目前已经不可下载）</p>
 <p><a target="_blank" rel="noopener" href="https://www.cloudera.com/products/open-source/apache-hadoop/key-cdh-components.html">https://www.cloudera.com/products/open-source/apache-hadoop/key-cdh-components.html</a></p>
 </blockquote>
-<h2 id="VM快速学习"><a href="#VM快速学习" class="headerlink" title="VM快速学习"></a>VM快速学习</h2><blockquote>
+<h3 id="VM快速学习"><a href="#VM快速学习" class="headerlink" title="VM快速学习"></a>VM快速学习</h3><blockquote>
 <p>目前最高版本是 5.16</p>
 <p><a target="_blank" rel="noopener" href="https://docs.cloudera.com/documentation/enterprise/5-16-x/topics/cloudera_quickstart_vm.html">https://docs.cloudera.com/documentation/enterprise/5-16-x/topics/cloudera_quickstart_vm.html</a></p>
 </blockquote>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223730616.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223730616.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="1、导入虚拟机"><a href="#1、导入虚拟机" class="headerlink" title="1、导入虚拟机"></a>1、导入虚拟机</h2><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223730703.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223730703.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="2、编辑虚拟机设置"><a href="#2、编辑虚拟机设置" class="headerlink" title="2、编辑虚拟机设置"></a>2、编辑虚拟机设置</h2><blockquote>
+<h4 id="1、导入虚拟机"><a href="#1、导入虚拟机" class="headerlink" title="1、导入虚拟机"></a>1、导入虚拟机</h4><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223730703.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223730703.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h4 id="2、编辑虚拟机设置"><a href="#2、编辑虚拟机设置" class="headerlink" title="2、编辑虚拟机设置"></a>2、编辑虚拟机设置</h4><blockquote>
 <p>最低配置： **4G，4G ，4G **—- 4G 1cores 64GB</p>
 <p>小编配置： 8G 2cores 64GB</p>
 </blockquote>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223730797.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223730797.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="3、开启虚拟机"><a href="#3、开启虚拟机" class="headerlink" title="3、开启虚拟机"></a>3、开启虚拟机</h2><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223730880.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223730880.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="4、成功启动"><a href="#4、成功启动" class="headerlink" title="4、成功启动"></a>4、成功启动</h2><blockquote>
+<h4 id="3、开启虚拟机"><a href="#3、开启虚拟机" class="headerlink" title="3、开启虚拟机"></a>3、开启虚拟机</h4><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223730880.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223730880.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h4 id="4、项目成功启动"><a href="#4、项目成功启动" class="headerlink" title="4、项目成功启动"></a>4、项目成功启动</h4><blockquote>
 <p>等候片刻，根据机器配置来讲，成功创建。如下图</p>
 </blockquote>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223730982.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223730982.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="5、更改IP"><a href="#5、更改IP" class="headerlink" title="5、更改IP"></a>5、更改IP</h2><p><strong>centos ip更改</strong></p>
+<p><strong>打开浏览器</strong> 如果你配置了<strong>ip</strong>，可以在外部浏览器打卡的。</p>
+<p><img src="https://7.dusays.com/2020/11/28/a494fcc330e4d.png" class="lazyload" data-srcset="https://7.dusays.com/2020/11/28/a494fcc330e4d.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p>点击 <strong>Cloudera Express</strong></p>
+<p><img src="https://7.dusays.com/2020/11/28/de39aee87d184.png" class="lazyload" data-srcset="https://7.dusays.com/2020/11/28/de39aee87d184.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><strong>启动成功</strong></p>
+<p><img src="https://7.dusays.com/2020/11/28/13b875be11a9b.png" class="lazyload" data-srcset="https://7.dusays.com/2020/11/28/13b875be11a9b.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h4 id="5、更改IP"><a href="#5、更改IP" class="headerlink" title="5、更改IP"></a>5、更改IP</h4><p><strong>centos ip更改</strong></p>
 <blockquote>
 <p>默认值：</p>
 </blockquote>
@@ -1570,7 +1588,7 @@ NETMASK=255.255.255.0
 <blockquote>
 <p>sudo service network restart</p>
 </blockquote>
-<h2 id="6、启动异常解决方案"><a href="#6、启动异常解决方案" class="headerlink" title="6、启动异常解决方案"></a>6、启动异常解决方案</h2><p><strong>异常解决</strong></p>
+<h4 id="6、启动异常解决方案"><a href="#6、启动异常解决方案" class="headerlink" title="6、启动异常解决方案"></a>6、启动异常解决方案</h4><p><strong>异常解决</strong></p>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223731194.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223731194.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200501093409630"></p>
 <p><strong>重新添加网卡</strong></p>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223731377.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223731377.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200501093456619"></p>
@@ -1592,18 +1610,18 @@ sudo service network restart
 ip addr/ifconfig
 </code></pre>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223731978.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223731978.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200501094403920"></p>
-<h1 id="MobaXterm"><a href="#MobaXterm" class="headerlink" title="MobaXterm"></a>MobaXterm</h1><h2 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a>1、安装</h2><p><strong>MobaXterm</strong></p>
+<h2 id="MobaXterm"><a href="#MobaXterm" class="headerlink" title="MobaXterm"></a>MobaXterm</h2><h3 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a>1、安装</h3><p><strong>MobaXterm</strong></p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://mobaxterm.mobatek.net/download-home-edition.html">https://mobaxterm.mobatek.net/download-home-edition.html</a></p>
 </blockquote>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/2020050122373275.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/2020050122373275.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200430232141238"></p>
-<h2 id="2、启动"><a href="#2、启动" class="headerlink" title="2、启动"></a>2、启动</h2><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223732163.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223732163.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200430231358860"></p>
-<h2 id="3、配置"><a href="#3、配置" class="headerlink" title="3、配置"></a>3、配置</h2><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223732353.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223732353.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200501094919514"></p>
-<h2 id="4、登录"><a href="#4、登录" class="headerlink" title="4、登录"></a>4、登录</h2><blockquote>
+<h3 id="2、启动"><a href="#2、启动" class="headerlink" title="2、启动"></a>2、启动</h3><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223732163.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223732163.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200430231358860"></p>
+<h3 id="3、配置"><a href="#3、配置" class="headerlink" title="3、配置"></a>3、配置</h3><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223732353.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223732353.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200501094919514"></p>
+<h3 id="4、登录"><a href="#4、登录" class="headerlink" title="4、登录"></a>4、登录</h3><blockquote>
 <p> 输入密码，保存。</p>
 </blockquote>
 <p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223732553.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223732553.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200501094730836"></p>
-<h2 id="5、查看"><a href="#5、查看" class="headerlink" title="5、查看"></a>5、查看</h2><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223732744.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223732744.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200501095056624"></p>
+<h3 id="5、查看"><a href="#5、查看" class="headerlink" title="5、查看"></a>5、查看</h3><p><img src="https://gitee.com/DataITems/cdn/raw/master/20200501223732744.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/20200501223732744.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200501095056624"></p>
 <blockquote>
 <p>相关安装包，请联系小编获取。</p>
 <p>欢迎访问 小编博客 ：  <a href="http://www.a2data.cn/">www.a2data.cn</a><br>全力打造 SQL社区：   <a target="_blank" rel="noopener" href="http://www.sqlsq.cn/">www.sqlsq.cn</a></p>
@@ -1660,10 +1678,10 @@ ip addr/ifconfig
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-18T10:25:54+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-02T00:24:26+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 18, 2020</p>
+    <p>更新于：Dec 2, 2020</p>
   </a>
 </div>
 
@@ -1684,13 +1702,13 @@ ip addr/ifconfig
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>592 words</p>
+      <p>865 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>2 min</p>
+      <p>3 min</p>
     </a>
   </div>
 
@@ -1954,7 +1972,7 @@ grep “m*” b...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0%E3%80%81%E4%B8%8B%E8%BD%BD"><span class="toc-text">0、下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%BB%A5%E7%AE%A1%E7%90%86%E5%91%98%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8C"><span class="toc-text">1、以管理员身份运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E4%B8%8B%E4%B8%80%E6%AD%A5"><span class="toc-text">2、下一步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%8E%A5%E6%94%B6%E5%8D%8F%E8%AE%AE"><span class="toc-text">3、接收协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E6%9B%B4%E6%94%B9%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95"><span class="toc-text">4、更改安装目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E5%AE%89%E8%A3%85"><span class="toc-text">5、安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E5%AE%8C%E6%88%90"><span class="toc-text">6、完成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B8%E5%8F%AF%E8%AF%81"><span class="toc-text">许可证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0%E3%80%81%E5%90%AF%E5%8A%A8"><span class="toc-text">0、启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%9B%B4%E6%94%B9%E5%AD%98%E5%82%A8%E4%BD%8D%E7%BD%AE"><span class="toc-text">1、更改存储位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%9B%B4%E6%94%B9%E5%85%B1%E4%BA%AB%E4%BD%8D%E7%BD%AE"><span class="toc-text">2、更改共享位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E8%99%9A%E6%8B%9F%E7%BD%91%E7%BB%9C"><span class="toc-text">3、虚拟网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VM%E5%BF%AB%E9%80%9F%E5%AD%A6%E4%B9%A0"><span class="toc-text">VM快速学习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%AF%BC%E5%85%A5%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-text">1、导入虚拟机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E7%BC%96%E8%BE%91%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%AE%BE%E7%BD%AE"><span class="toc-text">2、编辑虚拟机设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%BC%80%E5%90%AF%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-text">3、开启虚拟机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E6%88%90%E5%8A%9F%E5%90%AF%E5%8A%A8"><span class="toc-text">4、成功启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E6%9B%B4%E6%94%B9IP"><span class="toc-text">5、更改IP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E5%90%AF%E5%8A%A8%E5%BC%82%E5%B8%B8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">6、启动异常解决方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85"><span class="toc-text">1、安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%90%AF%E5%8A%A8"><span class="toc-text">2、启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E9%85%8D%E7%BD%AE"><span class="toc-text">3、配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E7%99%BB%E5%BD%95"><span class="toc-text">4、登录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E6%9F%A5%E7%9C%8B"><span class="toc-text">5、查看</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82"><span class="toc-text">环境要求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VM%E5%AE%89%E8%A3%85"><span class="toc-text">VM安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0%E3%80%81%E4%B8%8B%E8%BD%BD"><span class="toc-text">0、下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E4%BB%A5%E7%AE%A1%E7%90%86%E5%91%98%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8C"><span class="toc-text">1、以管理员身份运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E4%B8%8B%E4%B8%80%E6%AD%A5"><span class="toc-text">2、下一步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%8E%A5%E6%94%B6%E5%8D%8F%E8%AE%AE"><span class="toc-text">3、接收协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E6%9B%B4%E6%94%B9%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95"><span class="toc-text">4、更改安装目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E5%AE%89%E8%A3%85"><span class="toc-text">5、安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E5%AE%8C%E6%88%90"><span class="toc-text">6、完成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B8%E5%8F%AF%E8%AF%81"><span class="toc-text">许可证</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VM%E4%BD%BF%E7%94%A8"><span class="toc-text">VM使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0%E3%80%81%E5%90%AF%E5%8A%A8"><span class="toc-text">0、启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%9B%B4%E6%94%B9%E5%AD%98%E5%82%A8%E4%BD%8D%E7%BD%AE"><span class="toc-text">1、更改存储位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%9B%B4%E6%94%B9%E5%85%B1%E4%BA%AB%E4%BD%8D%E7%BD%AE"><span class="toc-text">2、更改共享位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E8%99%9A%E6%8B%9F%E7%BD%91%E7%BB%9C"><span class="toc-text">3、虚拟网络</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cloudera"><span class="toc-text">cloudera</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#VM%E5%BF%AB%E9%80%9F%E5%AD%A6%E4%B9%A0"><span class="toc-text">VM快速学习</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%AF%BC%E5%85%A5%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-text">1、导入虚拟机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E7%BC%96%E8%BE%91%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%AE%BE%E7%BD%AE"><span class="toc-text">2、编辑虚拟机设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E5%BC%80%E5%90%AF%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-text">3、开启虚拟机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81%E9%A1%B9%E7%9B%AE%E6%88%90%E5%8A%9F%E5%90%AF%E5%8A%A8"><span class="toc-text">4、项目成功启动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5%E3%80%81%E6%9B%B4%E6%94%B9IP"><span class="toc-text">5、更改IP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6%E3%80%81%E5%90%AF%E5%8A%A8%E5%BC%82%E5%B8%B8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">6、启动异常解决方案</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MobaXterm"><span class="toc-text">MobaXterm</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85"><span class="toc-text">1、安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%90%AF%E5%8A%A8"><span class="toc-text">2、启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E9%85%8D%E7%BD%AE"><span class="toc-text">3、配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E7%99%BB%E5%BD%95"><span class="toc-text">4、登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E6%9F%A5%E7%9C%8B"><span class="toc-text">5、查看</span></a></li></ol></li></ol>
     </div>
   </section>
 
