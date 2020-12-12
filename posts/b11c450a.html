@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -19,9 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Category: Python - DataScience</title>
+  <title>Day2.数据可视化基本图像绘制 - DataScience</title>
+  
+    <meta name="keywords" content="数据可视化">
   
 
+  
+    <meta name="description" content="数据可视化，基本图像的绘制。">
   
 
   <!-- feed -->
@@ -1295,7 +1297,7 @@
   
     
     
-        <div class='cover-wrapper  featured' style="display: none;">
+        <div class='cover-wrapper post featured' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://7.dusays.com/2020/09/10/bcac99047bac5.png"></div>
           
@@ -1377,8 +1379,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">Day2.数据可视化基本图像绘制</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -1407,568 +1409,493 @@
         
         
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
-    
-      
-  <section class="post-list">
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
+
+
   
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/55248.html">
-        13.Python面向对象(4)
+    <div class='headimg-div'>
+      <a class='headimg-a'>
+        <img class='headimg' src='https://7.dusays.com/2020/12/12/81f543c3f64a9.png'/>
       </a>
-    </h2>
+    </div>
   
-  <div class='md'>
+  <div class="article-meta" id="top">
     
-      <p>Python面向对象异常、模块</p>
     
+    
+      <h1 class="title">
+        Day2.数据可视化基本图像绘制
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://gitee.com/DataITems/cdn/raw/master/avatar.png">
+    <p>JackFeng</p>
+  </a>
+</div>
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Dec 12, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>2.1k words</p>
+    </a>
   </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>7 min</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Day2.数据可视化基本图像绘制" data-path="/posts/b11c450a.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2019-12-25</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E9%80%9F%E6%88%90/">Python速成</a>
+  <a href="/posts/b11c450a.html#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/posts/b11c450a.html">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <p>数据可视化，基本图像的绘制。</p>
+<a id="more"></a>
+
+
+<h1 id="数据可视化的基础语法"><a href="#数据可视化的基础语法" class="headerlink" title="数据可视化的基础语法"></a>数据可视化的基础语法</h1><p><strong>可视化</strong>主要是以图像来展示数据间的关系，</p>
+<p>常见的图形种类有</p>
+<ul>
+<li>==<strong>折线图,散点图,条形图，直方图，饼图</strong>==。</li>
+<li>此外在接下来课程中还会用到==<strong>箱线图，热力图，蜘蛛图</strong>==，表示二元变量分布和成对关系的视图。<!--学好可视化，不仅要会画图，更要梳理数据见的关系，以合适的方式将数据通过图形表达出来。--></li>
+</ul>
+<p>今天我们要来了解折线图，散点图，条形图，直方图，饼图和器特点。认识Matplotlib的图像结构，并以Matplotlib绘制折线图为例来掌握设置辅助显示层；此外，用Matplotlob设置辅助显示层，内容还增添拓展部份，平时用到的不是很多，作为了解即可。</p>
+<h2 id="常见图像"><a href="#常见图像" class="headerlink" title="常见图像"></a>常见图像</h2><h3 id="折线图"><a href="#折线图" class="headerlink" title="折线图"></a>折线图</h3><ul>
+<li><p>以折线的上升或下降来表示统计数量的增减变化的统计图</p>
+<p><strong>特点：能够显示数据的变化趋势，反映事物的变化情况。(变化)</strong></p>
+</li>
+</ul>
+<p><img src="https://7.dusays.com/2020/12/12/254095fa511a0.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/254095fa511a0.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="散点图（Scatter）"><a href="#散点图（Scatter）" class="headerlink" title="散点图（Scatter）"></a>散点图（Scatter）</h3><ul>
+<li><p>用两组数据构成多个坐标点，考察坐标点的分布,判断两变量之间是否存在某种关联或总结坐标点的分布模式。</p>
+<p><strong>特点：判断变量之间是否存在数量关联趋势,展示离群点(分布规律)</strong></p>
+</li>
+</ul>
+<p><img src="https://7.dusays.com/2020/12/12/dbe0312f890ac.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/dbe0312f890ac.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="条形图"><a href="#条形图" class="headerlink" title="条形图"></a>条形图</h3><ul>
+<li><p>排列在工作表的列或行中的数据可以绘制到柱状图中。</p>
+<p><strong>特点：绘制连离散的数据,能够一眼看出各个数据的大小,比较数据之间的差别。(统计/对比)</strong></p>
+<p><img src="https://7.dusays.com/2020/12/12/3cf443222b86f.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/3cf443222b86f.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+</li>
+</ul>
+<h3 id="直方图-Histogram"><a href="#直方图-Histogram" class="headerlink" title="直方图(Histogram)"></a>直方图(Histogram)</h3><ul>
+<li><p>由一系列高度不等的纵向条纹或线段表示数据分布的情况。一般用横轴表示数据范围，纵轴表示分布情况。</p>
+<p><strong>特点：绘制连续性的数据展示一组或者多组数据的分布状况(统计)</strong></p>
+<p><img src="https://7.dusays.com/2020/12/12/cec9385d8c640.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/cec9385d8c640.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+</li>
+</ul>
+<h3 id="饼图-pie"><a href="#饼图-pie" class="headerlink" title="饼图(pie)"></a>饼图(pie)</h3><ul>
+<li><p>用于表示不同分类的占比情况，通过弧度大小来对比各种分类。</p>
+<p><strong>特点：分类数据的占比情况(占比)</strong></p>
+</li>
+</ul>
+<p><img src="https://7.dusays.com/2020/12/12/05f654838d7db.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/05f654838d7db.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h2 id="Matplotlib画图基础"><a href="#Matplotlib画图基础" class="headerlink" title="Matplotlib画图基础"></a>Matplotlib画图基础</h2><p><img src="https://7.dusays.com/2020/12/12/058262e3eff96.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/058262e3eff96.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><code>Matplotlib</code>，它是一个Python 2D绘图库，它可以在各种平台上以各种硬拷贝格式和交互式环境生成出具有出版品质的图形。只需几行代码即可生成绘图，直方图，条形图,散点图等。</p>
+<h3 id="Matplotlib画图的简单实现"><a href="#Matplotlib画图的简单实现" class="headerlink" title="Matplotlib画图的简单实现"></a>Matplotlib画图的简单实现</h3><hr>
+<pre><code class="python"># 导入模块
+import matplotlib.pyplot as plt
+# 在jupyter中执行的时候显示图片
+#matplotlib inline
+# 传入x和y, 通过plot画图
+plt.plot([3, 1, 7], [4, 5, 6])
+# 在执行程序的时候展示图形
+plt.show()</code></pre>
+<p><strong>传入x和y时，括号中的第一个列表是x轴上的值，第二个列表是y上的值。</strong></p>
+<p>运行结果：</p>
+<p><img src="https://7.dusays.com/2020/12/08/990cfd5747284.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/08/990cfd5747284.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="折线图"></p>
+<p><strong>如何应用呢？</strong></p>
+<p><img src="https://7.dusays.com/2020/12/12/88a060ede7c1d.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/88a060ede7c1d.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="对Matplotlib图像结构的认识"><a href="#对Matplotlib图像结构的认识" class="headerlink" title="对Matplotlib图像结构的认识"></a>对Matplotlib图像结构的认识</h3><p><img src="https://7.dusays.com/2020/12/12/34213fa879892.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/34213fa879892.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p>在学习Matplotlib的过程中，大家一定会遇到这样那样的问题，</p>
+<p><code>比如说</code>，</p>
+<ul>
+<li><p>背景图怎么设置？</p>
+</li>
+<li><p>坐标轴怎么设置？</p>
+</li>
+<li><p>坐标轴上的刻度值怎么设置？</p>
+</li>
+</ul>
+<p>  因此对于Matplotlib的图像结构组成我们要有一定的了解。通常情况下，我们可以将一副Matplotlib图像分成三层结构：</p>
+<ol>
+<li><p><strong>第一层是底层的容器层</strong></p>
+<p>主要包括Canvas(画板)底层、Figure（画布）用户操作第一层设置画布的大小和背景颜色、Axes（绘图区）独立的坐标系；</p>
+</li>
+<li><p><strong>第二层：辅助显示层</strong></p>
+<p>主要包括Axis（轴）、Spines（边框线）、Tick（坐标轴刻度）、Grid（网格线）、Legend（图例说明）、Title（标题）等，该层可通过set_axis_off()或set_frame_on(False)等方法设置不显示。</p>
+<p>该层的设置可使图像显示更加直观更加容易被用户理解，但又并不会对图像产生实质的影响。</p>
+</li>
+<li><p><strong>第三层：图像层</strong></p>
+<p>即通过plot、hist、contour、scatter等方法绘制的图像。</p>
+</li>
+</ol>
+<h2 id="Matplotlib绘制折线图"><a href="#Matplotlib绘制折线图" class="headerlink" title="Matplotlib绘制折线图"></a>Matplotlib绘制折线图</h2><h3 id="折线图的绘制"><a href="#折线图的绘制" class="headerlink" title="折线图的绘制"></a>折线图的绘制</h3><p><img src="https://7.dusays.com/2020/12/12/76be1441f6b25.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/76be1441f6b25.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><code>代码解析：</code></p>
+<p>x轴数值的产生使用range函数，开始数字是1，结束时7，不包含8。</p>
+<h3 id="折线的颜色和形状设置"><a href="#折线的颜色和形状设置" class="headerlink" title="折线的颜色和形状设置"></a>折线的颜色和形状设置</h3><pre><code class="python">from matplotlib import pyplot as plt
+x = range(1,8) # x轴的位置
+y = [17, 17, 18, 15, 11, 11, 13]
+# 传入x和y, 通过plot画折线图
+plt.plot(x, y, color=&#39;red&#39;,alpha=0.5,linestyle=&#39;--&#39;,linewidth=3)
+plt.show()
+
+&#39;&#39;&#39;基础属性设置
+color=&#39;red&#39; : 折线的颜色
+alpha=0.5 : 折线的透明度(0-1)
+linestyle=&#39;--&#39; : 折线的样式
+linewidth=3 : 折线的宽度
+&#39;&#39;&#39;
+&#39;&#39;&#39;线的样式
+- 实线(solid)
+-- 短线(dashed)
+-. 短点相间线(dashdot)
+：虚点线(dotted)
+&#39;&#39;&#39;</code></pre>
+<p>运行结果：</p>
+<p><img src="https://7.dusays.com/2020/12/12/4a55ca3278d64.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/4a55ca3278d64.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="折点样式"><a href="#折点样式" class="headerlink" title="折点样式"></a>折点样式</h3><p><img src="https://7.dusays.com/2020/12/12/8a44c8c643961.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/8a44c8c643961.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><strong>折点形状选择：</strong></p>
+<pre><code class="xml">标记maker            描述
+
+‘o’                 圆圈
+‘.’                 点
+‘D’                 菱形
+‘s’                 正方形
+‘h’                 六边形1
+‘*’                 星号
+‘H’                 六边形2
+‘d’                 小菱形
+‘_’                 水平线
+‘v’                 一角朝下的三角形
+‘8’                 八边形
+‘&lt;’                 一角朝左的三角形
+‘p’                 五边形
+‘&gt;’                 一角朝右的三角形
+‘,’                 像素
+‘^’                 一角朝上的三角形
+‘+’                 加号
+‘\  ‘               竖线
+‘None’,’’,’ ‘       无
+‘x’                 X</code></pre>
+<h3 id="设置图片的大小和保存"><a href="#设置图片的大小和保存" class="headerlink" title="设置图片的大小和保存"></a>设置图片的大小和保存</h3><pre><code class="python">from matplotlib import pyplot as plt
+import random
+x = range(2,20,2) # x轴的位置
+y = [random.randint(15, 30) for i in x]
+# 设置图片的大小
+&#39;&#39;&#39;
+figsize:指定figure的宽和高，单位为英寸；
+dpi参数指定绘图对象的分辨率，即每英寸多少个像素，缺省值为80 1英寸等于2.5cm,A4纸是 21*30cm的纸张
+&#39;&#39;&#39;
+# 设置画布对象
+plt.figure(figsize=(20,8),dpi=80)
+plt.plot(x,y) # 传入x和y, 通过plot画图
+# 保存(注意：要放在show的上面，plt.show()会释放figure资源，如果在显示图像之后保存图片将只能保存空图片。)
+plt.savefig(&#39;./t1.png&#39;)
+#./表示放在当前python文件的目录
+plt.show()
+# 图片的格式也可以保存为svg这种矢量图格式，这种矢量图放在网页中放大后不会有锯齿
+# plt.savefig(&#39;./t1.svg&#39;)</code></pre>
+<p><code>x轴</code>的数值，使用range(),step为2,不包括20；</p>
+<p><code>y轴</code>的数值是一个列表表达式，由随机数产生，import random之后，randint产生随机整数，范围是15-30。“for i in x”是一个循环，作用是表明y轴数值产生随机数的次数，次数由x轴上数值的个数决定。</p>
+<p>运行结果：</p>
+<p><img src="https://7.dusays.com/2020/12/12/0e272fba538a3.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/0e272fba538a3.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="绘制x轴和y轴的刻度"><a href="#绘制x轴和y轴的刻度" class="headerlink" title="绘制x轴和y轴的刻度"></a>绘制x轴和y轴的刻度</h3><p><img src="https://7.dusays.com/2020/12/12/e86cf5c8b7397.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/e86cf5c8b7397.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p>在设置Y轴标签时，标签数值的取值范围range(min(y),max(y)+1)，这里min()和max()时是函数，分别取y中的最小和最大值，由于range函数不包集合右边的值，故加<code>1</code>。plt.yticks(range(min(y),max(y)+1),y_ticks_label)中，y_ticks_label表示y轴刻度产生的次数。</p>
+<h3 id="设置显示中文"><a href="#设置显示中文" class="headerlink" title="设置显示中文"></a>设置显示中文</h3><p>matplotlib只显示英文，无法显示中文，需要修改<strong>matplotlib</strong>的默认字体。通过模块<code>font_manager</code>使用中文字体可以解决。</p>
+<p>以表示两个小时内心脏每分钟跳动变化为例，x轴需要加上标题“时间”，y轴“次数”，图像标题“每分钟跳动次数”,如下图所示：</p>
+<p><img src="https://7.dusays.com/2020/12/12/928e72fbfaef4.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/928e72fbfaef4.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="一图多线"><a href="#一图多线" class="headerlink" title="一图多线"></a>一图多线</h3><p><img src="https://7.dusays.com/2020/12/12/c22bd5f846129.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/c22bd5f846129.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="拓展部分：一图多个坐标系"><a href="#拓展部分：一图多个坐标系" class="headerlink" title="拓展部分：一图多个坐标系"></a>拓展部分：一图多个坐标系</h3><pre><code class="python"># 方法add_subplot：给figure新增子图
+
+# 这里引进的科学计算库Numpy,把它看作一个[列表]即可，目的是要使用log方法画log对数函数。
+import numpy as np
+from matplotlib import pyplot as plt
+x = np.arange(1, 100) #与range（）相同
+#新建figure画布对象，三个坐标轴（子图）建立在同一个画布上
+fig=plt.figure(figsize=(20,10),dpi=80)
+
+#利用画布对象，在上面放置三个坐标系
+#新建子图1
+ax1=fig.add_subplot(2,2,1)
+ax1.plot(x, x)
+#新建子图2
+ax2=fig.add_subplot(2,2,2)
+ax2.plot(x, x ** 2) #x的二次方，如果是x**3是x的三次方
+ax2.grid(color=&#39;r&#39;, linestyle=&#39;--&#39;, linewidth=1,alpha=0.3)
+#新建子图3
+ax3=fig.add_subplot(2,2,3)
+ax3.plot(x, np.log(x))
+plt.show()</code></pre>
+<p>在这里解释一下add_subplot(2,2,1)里的参数的含义。在一个画布上放置三个图，需要排列位置。</p>
+<p>首先将一张图，分成两列，再分成两行，总共划分出四个格子，子图1按照从左到右从上到下的顺序放在第一个格子里。</p>
+<p>运行结果：</p>
+<p><img src="https://7.dusays.com/2020/12/12/cbcd8370ea5dd.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/cbcd8370ea5dd.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="拓展部分：设置坐标轴范围"><a href="#拓展部分：设置坐标轴范围" class="headerlink" title="拓展部分：设置坐标轴范围"></a>拓展部分：设置坐标轴范围</h3><p><img src="https://7.dusays.com/2020/12/12/995f86b8b988f.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/995f86b8b988f.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><img src="https://7.dusays.com/2020/12/12/86ff8a15b6b54.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/86ff8a15b6b54.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h2 id="打卡格式"><a href="#打卡格式" class="headerlink" title="打卡格式"></a>打卡格式</h2><p><img src="https://7.dusays.com/2020/12/12/dc25a73e68f33.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/12/dc25a73e68f33.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h2 id="小作业"><a href="#小作业" class="headerlink" title="小作业"></a><strong>小作业</strong></h2><ul>
+<li><p><strong>1、</strong>说出你理解的五种常用图像的特点，你有没有地方需要用得到呢？。</p>
+</li>
+<li><p><strong>2、</strong>运用<code>Matplotlib</code>,自己编数据设计样式，绘制一幅自己的折线图。</p>
+</li>
+</ul>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/posts/55248.html'>
-            Read More
-          </a>
+      
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\posts\cc50857e.html" title="零基础数据可视化入门学习" rel="bookmark "><img src="https://7.dusays.com/2020/12/07/d140015c4734a.png" /><span class="title">零基础数据可视化入门学习</span><span class="excerpt">零基础学习数据可视化。</span></a><a class="item" href="\posts\6e2faa04.html" title="Anaconda利器" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/p0.png" /><span class="title">Anaconda利器</span><span class="excerpt">数据可视化，环境搭建。</span></a><a class="item" href="\posts\bb9346ce.html" title="Day1.数据可视化Python语法" rel="bookmark "><img src="https://7.dusays.com/2020/12/07/7600d50cd555c.png" /><span class="title">Day1.数据可视化Python语法</span><span class="excerpt">数据可视化，基础语法。</span></a><a class="item" href="\posts\773d5f8c.html" title="1.DBeaver安装" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200502181911650.png" /><span class="title">1.DBeaver安装</span><span class="excerpt">DBeaver安装步骤</span></a></div></section></div>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>版权声明：本网站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="/">数据科学</a></p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/b11c450a.html>http://www.a2data.cn/posts/b11c450a.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+        <div class='donate'>
+          <div class='imgs'>
+            
+              <img src='https://gitee.com/DataITems/cdn/raw/master/alipay.jpg'>
+            
+              <img src='https://gitee.com/DataITems/cdn/raw/master/wechat.png'>
+            
+          </div>
         </div>
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-12T09:57:57+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Dec 12, 2020</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
+          
   
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/59346.html">
-        12.Python面向对象(3)
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Python面向对象单例模式</p>
-    
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>数据可视化</p></a></div>
+
+
+        
+      
+        
+      
+        
+          
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>2.1k words</p>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2019-12-25</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E9%80%9F%E6%88%90/">Python速成</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/59346.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/30675.html">
-        11.Python面向对象(2)
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Python面向对象介绍中篇</p>
-    
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>7 min</p>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2019-12-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E9%80%9F%E6%88%90/">Python速成</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/30675.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/16550.html">
-        Python烤地瓜案例
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Python烤地瓜实例解析</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2019-12-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E9%80%9F%E6%88%90/">Python速成</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/16550.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/34771.html">
-        10.Python面向对象(1)
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Python面向对象介绍上篇</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2019-12-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E9%80%9F%E6%88%90/">Python速成</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/34771.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/8573.html">
-        9.Python文件操作及应用
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Python的基础语法</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2019-12-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E9%80%9F%E6%88%90/">Python速成</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/8573.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/6275.html">
-        8.Python函数(下)
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Python函数介绍下篇</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2019-12-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E9%80%9F%E6%88%90/">Python速成</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/6275.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/30873.html">
-        7.Python函数(中)
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Python函数介绍中篇</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2019-12-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E9%80%9F%E6%88%90/">Python速成</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/30873.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/34946.html">
-        6.Python函数(上)
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Python函数介绍上篇</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2019-12-14</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E9%80%9F%E6%88%90/">Python速成</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/34946.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/520.html">
-        5.Python元组与字典
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>Python的元组与字典</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2019-12-13</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E9%80%9F%E6%88%90/">Python速成</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/520.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/categories/Python/page/2/">
-            <section class="post prev white-box shadow" >
-              <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          3 / 4
-        </p>
-        
-          <a class="next" rel="next" href="/categories/Python/page/4/">
-            <section class="post next white-box shadow">
-              &nbsp;Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
 
 
-    
-  
-</div>
-<aside class='l_side'>
-  
-  
-    
-    
-
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://7.dusays.com/2020/09/10/3694a41d52ade.jpg'/>
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/b11c450a.html&title=Day2.数据可视化基本图像绘制 - DataScience&summary=数据可视化，基本图像的绘制。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
         </a>
       
     
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/b11c450a.html&title=Day2.数据可视化基本图像绘制 - DataScience&summary=数据可视化，基本图像的绘制。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
     
-      <div class='text'>
-        
-          <h2>Jack` Féng</h2>
-        
-        
-          <p>放弃不难,但坚持一定很酷！</p>
-
-        
-        
-      </div>
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/b11c450a.html&title=Day2.数据可视化基本图像绘制 - DataScience&summary=数据可视化，基本图像的绘制。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
     
-    
-      <div class="social-wrapper">
+      
         
-          
-            <a href="https://github.com/A2Data"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=a2data@163.com"
-              class="social fas fa-envelope-open flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=66860619"
-              class="social fab fa-qq flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://gitee.com/DataITems/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
-              class="social fab fa-weixin flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://me.csdn.net/weixin_47093227"
-              class="social fab fa-cuttlefish flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACOUlEQVR42u3aQXLCQAwEQP//08kLKFYjORC59wZlbPVyGWt1/Tx0XeDg4ODg4IvgV7he3vjFda9+V31et15wcHBwcPCN8OMAcAg4vb5aR7decHBwcHDwzfDTAFGF3Qap1gsODg4ODg5+fP27gNMNOuDg4ODg4ODz8KlgAw4ODg4ODn7fgUL1YCAdBPi6kxRwcHBwcPAvgscDcx/6/PHJRnBwcHBw8C+Ad9ddgwPvGhpxveDg4ODg4IvgaUDoNhq6GxbXBw4ODg4OvhheDS5TkPT70z8CHBwcHBz8ifB0cO/dhkwNJJTvAw4ODg4Ovgh+eqO0MZA+J21gvP0eHBwcHBx8EbwaDK6bV9ogGT9JAQcHBwcH/wfw6ot/2ijoQqYGDMDBwcHBwTfB0xf8NHj8VZA5Tm7g4ODg4OAL4WlwSRsa1QAV1wUODg4ODr4QXm0sVBv53YGC2wIMODg4ODj4QngaVLpBKG1UHB8wgIODg4ODL4ZXC5wKKungQbUucHBwcHDwJ8KrAaZb6PSBBDg4ODg4+JPg1Rf/9AAivS5uTICDg4ODgy+Cd1e1oTB9v/LGgIODg4ODL4Jf4ao2KqYHAaqDCeDg4ODg4Jvh3YDR3aDpQYXygQI4ODg4OPgCeBogpoDdg4XbT1LAwcHBwcEXwruDAtNBBxwcHBwcHLwPn9qI7vPAwcHBwcGfAK8eKHQbCd3nlRsk4ODg4ODgC+HdIJIW2n1OdUPBwcHBwcE3wZ+2wMHBwcHBF6xfKZQFH0aS1+YAAAAASUVORK5CYII=">
+          </div>
+        </div>
+      
     
   </div>
-</section>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/bb9346ce.html'>
+          <p class='title'>Day1.数据可视化Python语法<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>数据可视化，基础语法。
+
+
+
+数据可视化-Python基础语法Python简单？想学好数据分析，最好最快的方式是掌握==Python语言==。
+Python语言的强大
+
+简洁，有大量的第三方库，...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
 
   
 
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
   
     
     
@@ -2091,230 +2018,28 @@
     
     
 
-<section class="widget text shadow desktop mobile">
-  
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
   <header>
     
-      <i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i><span class='name'>公告</span>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-  <div class='content'>
-    
-      <p>本站默认替换了右键菜单，唤醒原系统菜单：<code>Ctrl</code> + <code>右键</code></p>
-
-    
-      <p>回归本心、去繁从简</p>
-
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobile">
-  
-  <header>
-    
-      <i class="fas fa-qrcode fa-fw fa-fw" aria-hidden="true"></i><span class='name'>公众号</span>
-    
-  </header>
-
-
-  <div class='content article-entry'>
-    
-      
-        <img src='https://7.dusays.com/2020/09/18/78ec698db1297.png'
-        >
-      
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobule">
-  
-  <header>
-    
-      <i class="fas fa-mobile fa-fw" aria-hidden="true"></i><span class='name'>小程序</span>
-    
-  </header>
-
-
-  <div class='content article-entry'>
-    
-      
-        <img src='https://7.dusays.com/2020/09/18/d3e9c15023e78.png'
-        >
-      
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget text shadow desktop">
-  
-  <header>
-    
-      <i class="far fa-comments fa-fw" aria-hidden="true"></i><span class='name'>最新评论</span>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <div id="hot-comments"></div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop">
-  
-  <header>
-    
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>104 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2018/12/18'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>144.2k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Sat Dec 12 2020 10:04:24 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2020-12-12 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2020-12-12 日';
-          }
-        </script>
-        
-      
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E5%9B%BE%E5%83%8F"><span class="toc-text">常见图像</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%98%E7%BA%BF%E5%9B%BE"><span class="toc-text">折线图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%A3%E7%82%B9%E5%9B%BE%EF%BC%88Scatter%EF%BC%89"><span class="toc-text">散点图（Scatter）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E5%BD%A2%E5%9B%BE"><span class="toc-text">条形图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%96%B9%E5%9B%BE-Histogram"><span class="toc-text">直方图(Histogram)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A5%BC%E5%9B%BE-pie"><span class="toc-text">饼图(pie)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Matplotlib%E7%94%BB%E5%9B%BE%E5%9F%BA%E7%A1%80"><span class="toc-text">Matplotlib画图基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Matplotlib%E7%94%BB%E5%9B%BE%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0"><span class="toc-text">Matplotlib画图的简单实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9Matplotlib%E5%9B%BE%E5%83%8F%E7%BB%93%E6%9E%84%E7%9A%84%E8%AE%A4%E8%AF%86"><span class="toc-text">对Matplotlib图像结构的认识</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Matplotlib%E7%BB%98%E5%88%B6%E6%8A%98%E7%BA%BF%E5%9B%BE"><span class="toc-text">Matplotlib绘制折线图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%98%E7%BA%BF%E5%9B%BE%E7%9A%84%E7%BB%98%E5%88%B6"><span class="toc-text">折线图的绘制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%98%E7%BA%BF%E7%9A%84%E9%A2%9C%E8%89%B2%E5%92%8C%E5%BD%A2%E7%8A%B6%E8%AE%BE%E7%BD%AE"><span class="toc-text">折线的颜色和形状设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%98%E7%82%B9%E6%A0%B7%E5%BC%8F"><span class="toc-text">折点样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%9B%BE%E7%89%87%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%92%8C%E4%BF%9D%E5%AD%98"><span class="toc-text">设置图片的大小和保存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%98%E5%88%B6x%E8%BD%B4%E5%92%8Cy%E8%BD%B4%E7%9A%84%E5%88%BB%E5%BA%A6"><span class="toc-text">绘制x轴和y轴的刻度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87"><span class="toc-text">设置显示中文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E5%9B%BE%E5%A4%9A%E7%BA%BF"><span class="toc-text">一图多线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%93%E5%B1%95%E9%83%A8%E5%88%86%EF%BC%9A%E4%B8%80%E5%9B%BE%E5%A4%9A%E4%B8%AA%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-text">拓展部分：一图多个坐标系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%93%E5%B1%95%E9%83%A8%E5%88%86%EF%BC%9A%E8%AE%BE%E7%BD%AE%E5%9D%90%E6%A0%87%E8%BD%B4%E8%8C%83%E5%9B%B4"><span class="toc-text">拓展部分：设置坐标轴范围</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%93%E5%8D%A1%E6%A0%BC%E5%BC%8F"><span class="toc-text">打卡格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E4%BD%9C%E4%B8%9A"><span class="toc-text">小作业</span></a></li></ol>
     </div>
-  </div>
-</section>
+  </section>
+
 
   
 
 
 </aside>
+
 
 
       </div>
