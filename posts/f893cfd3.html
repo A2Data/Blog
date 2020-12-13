@@ -17,13 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>什么是需求？ - DataScience</title>
+  <title>Day3.常见图形的不同绘制方法 - DataScience</title>
   
-    <meta name="keywords" content="数仓">
+    <meta name="keywords" content="数据可视化">
   
 
   
-    <meta name="description" content="数仓需求的来源,以及流程。">
+    <meta name="description" content="数据可视化，常见图形的不同绘制方式。">
   
 
   <!-- feed -->
@@ -1380,7 +1380,7 @@
  
 <div id="pjax-data" style="display: none"> 
   <div id="pjax-ispage">true</div> 
-  <div id="pjax-pageTitle">什么是需求？</div> 
+  <div id="pjax-pageTitle">Day3.常见图形的不同绘制方法</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -1415,12 +1415,18 @@
 
 
   
+    <div class='headimg-div'>
+      <a class='headimg-a'>
+        <img class='headimg' src='https://7.dusays.com/2020/12/13/dfab47d3fe08d.png'/>
+      </a>
+    </div>
+  
   <div class="article-meta" id="top">
     
     
     
       <h1 class="title">
-        什么是需求？
+        Day3.常见图形的不同绘制方法
       </h1>
       <div class='new-meta-box'>
         
@@ -1439,7 +1445,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Nov 10, 2020</p>
+    <p>发布于：Dec 13, 2020</p>
   </a>
 </div>
 
@@ -1455,7 +1461,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.7k words</p>
+      <p>1.4k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1473,7 +1479,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="什么是需求？" data-path="/posts/6f521982.html">
+      <div id="lc-pv" data-title="Day3.常见图形的不同绘制方法" data-path="/posts/f893cfd3.html">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -1488,9 +1494,9 @@
             
 <div class="new-meta-item comments-count">
   
-  <a href="/posts/6f521982.html#comments">
+  <a href="/posts/f893cfd3.html#comments">
     <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/posts/6f521982.html">0</span>
+    <span class="valine-comment-count" data-xid="/posts/f893cfd3.html">0</span>
     <span class="leancloud-comments-count">&nbsp;</span>
   </a>
 </div>
@@ -1505,63 +1511,125 @@
 
   
   
-  <p>数仓需求的来源,以及流程。</p>
+  <p>数据可视化，常见图形的不同绘制方式。</p>
 <a id="more"></a>
 
-<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><blockquote>
-<p>概述: </p>
+
+<p>我们了解了常用的五种图形：</p>
 <ul>
-<li>业务需求(business requirement)表示组织或客户高层次的目标</li>
-<li>用户需求(user requirement)描述的是用户的目标,或是用户要求系统必须完成的任务</li>
-<li>功能需求(functional requirement)规定开发人员必须在产品中实现的软件功能，用户利用这些功能来完成任务，满足业务需求。</li>
+<li>散点图</li>
+<li>折线图</li>
+<li>柱状图</li>
+<li>直方图</li>
+<li>饼图</li>
 </ul>
+<p>那么如何用<code>Matplotlib</code>和<code>Seaborn</code>来画出它们。</p>
+<p><strong>Matplotlib</strong>：它在使用时灵活，可以定制化绘图，但是时间上的花费也比较多。为了提高画图效率，包<strong>Seaborn</strong>基于Matplotlib底层开发，使用更少的代码，将常用的可视化绘图过程进行封装，有时只需要一行代码便可以画出我们想要的图形，省时省力；此外seaborn还提供更为丰富的图像以及3D图形供我们使用。掌握两个库的使用可以满足我们在不同情况下的需求。</p>
+<h2 id="散点图"><a href="#散点图" class="headerlink" title="散点图"></a>散点图</h2><p>散点图（scatter plot），它将两组数据（或者变量）的值显示在二维坐标中，适合展示两个变量之间的关系。</p>
+<p>第一张散点图用matplotlib绘制，第二张用seaborn绘制。我们可以看到两张图的区别：matplotlib默认情况下绘图区呈现是一个<code>长方形</code>，而seaborn是<code>正方形并且含有x轴和y轴的标签</code>；seaborn还展示散点图还给出了两组数据（变量）的分布情况。</p>
+<p><img src="https://7.dusays.com/2020/12/13/fd3c885300a79.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/13/fd3c885300a79.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><code>说明：</code></p>
+<ul>
+<li><p>用==seaborn==画图时，使用函数 <!--sns.jointplot(x, y,data=None, kind=‘scatter’)--> 画散点图。其中x,y是data中的下标，data就是我们要传入的数据。</p>
+</li>
+<li><p>在Seaborn中，数据格式需要转换一下，采用科学计算库Pandas中的数据格式DataFrame；对DataFrame的概念我们了解即可，下期DataScience也会推出科学计算库Numpy和Pandas的使用中会有讲解。</p>
+</li>
+</ul>
+<h2 id="折线图"><a href="#折线图" class="headerlink" title="折线图"></a>折线图</h2><p>折线图能够显示数据的变化趋势，在matplotlib使用plot函数绘制，而在<strong>seaborn使用 lineplot(x,y,data=None)函数</strong>；data是传入的数据，一般是pandas中的DataFrame数据结构。</p>
+<p><img src="https://7.dusays.com/2020/12/13/a5efe79af3f26.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/13/a5efe79af3f26.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h2 id="直方图"><a href="#直方图" class="headerlink" title="直方图"></a>直方图</h2><p>直方图( histogram )将横坐标等分成一定数量的小区间，在小区间内填充图形，它的高度是y值。特点是用来绘制连续性的数据，展示一组或者多组数据的分布状况(统计)。</p>
+<pre><code class="python">#数据准备：创建一个一维随机数组
+import numpy as np
+import random
+import pandas as pd
+
+a = np.random.randn(100)
+x = pd.Series(a) # Series是pandas中用来存放一维数组的数据格式
+
+# ⽤Matplotlib画直⽅图；
+&quot;&quot;&quot;
+使用plt.hist(x, bins=10)函数
+参数x是一维数组，bins代表小区间的数量，默认是10。
+&quot;&quot;&quot;
+
+import matplotlib.pyplot as plt
+plt.hist(x, bins=10)
+plt.show()
+
+# ⽤Seaborn画直⽅图：
+&#39;&#39;&#39;
+使用sns.distplot(x, bins=10, kde=True)函数
+参数x是一维数组，bins代表直方图中的小区间数量，kde代表显示核密度估计，默认是True。
+核密度估计是通过核函数来估计概率密度的方法。
+&#39;&#39;&#39;
+import seaborn as sns
+sns.distplot(x, kde=False)
+plt.show()
+# 图三显示用核函数估计概率密度
+sns.distplot(x, kde=True)
+plt.show()</code></pre>
+<p>Matplotlib 运行结果：</p>
+<p><img src="https://7.dusays.com/2020/12/13/206b15a0a2267.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/13/206b15a0a2267.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p>Seaborn运行结果:</p>
+<p><img src="https://7.dusays.com/2020/12/13/8e080441cbce0.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/13/8e080441cbce0.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h2 id="条形图"><a href="#条形图" class="headerlink" title="条形图"></a>条形图</h2><p>通过直方图可以看到变量的数值分布，那么条形图可以帮我们查看类别的特征。在条形图中，长条形的长度表示类别的频数，宽度表示类别。</p>
+<p>条形图(bar chart)绘制离散的数据,能够一眼看出各个数据的大小,比较数据之间的差别。(<strong>统计/对比</strong>)</p>
+<pre><code class="python"># 数据准备
+x = [&#39;Cat1&#39;, &#39;Cat2&#39;, &#39;Cat3&#39;, &#39;Cat4&#39;, &#39;Cat5&#39;]
+y = [3, 5, 7, 2, 9]
+
+# ⽤Matplotlib画条形图
+# plt.bar(x, height)函数，参数x代表x轴的类别，height是y轴的数值
+import matplotlib.pyplot as plt
+plt.bar(x,y)
+plt.show
+
+# ⽤Seaborn画条形图
+# sns.barplot(x=None,y=None,data=None)函数；参数data为DataFrame类型
+import seaborn as sns
+sns.barplot(x,y)
+plt.show()</code></pre>
+<p>运行结果:</p>
+<p><img src="https://7.dusays.com/2020/12/13/f04022513c620.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/13/f04022513c620.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h2 id="饼图"><a href="#饼图" class="headerlink" title="饼图"></a>饼图</h2><p>饼图（Pie Chart）可以显示每个部分大小与总和之间的比例。在Python数据可视化中，主要用<strong>Matplotlib的pie函数</strong>来绘制。</p>
+<ul>
+<li><p>用到的方法 <code>matplotlib.pyplot.pie()</code></p>
+</li>
+<li><p>参数解析:</p>
+</li>
+<li><pre><code class="python">pie(x, explode=None, labels=None,
+    colors=(&#39;b&#39;, &#39;g&#39;, &#39;r&#39;, &#39;c&#39;, &#39;m&#39;, &#39;y&#39;, &#39;k&#39;, &#39;w&#39;),
+    autopct=None, pctdistance=0.6, shadow=False,
+    labeldistance=1.1, startangle=None, radius=None,
+    counterclock=True, wedgeprops=None, textprops=None,
+    center = (0, 0), frame = False )
+</code></pre>
+</li>
+<li><p>参数说明：</p>
+</li>
+<li><blockquote>
+<p>x (每一块)的比例，如果sum(x) &gt; 1会使用sum(x)归一化 labels (每一块)饼图外侧显示的说明文字<br>explode (每一块)离开中心距离 startangle 起始绘制角度,默认图是从x轴正方向逆时针画起,如设定=90则从y轴正方向画起</p>
+<p>shadow 是否阴影 labeldistance label绘制位置,相对于半径的比例, 如&lt;1则绘制在饼图内侧 autopct<br>控制饼图内百分比设置,可以使用format字符串或者format function<br>‘%1.1f’指小数点前后位数(没有用空格补齐) pctdistance 类似于labeldistance,指定autopct的位置刻度 radius 控制饼图半径</p>
+<p>返回值: 如果没有设置autopct,返回(patches, texts) 如果设置autopct,返回(patches, texts,<br>autotexts) patches – list –matplotlib.patches.Wedge对象 texts<br>autotexts – matplotlib.text.Text对象</p>
 </blockquote>
-<p><strong>需求</strong>是数仓的核心,无论从广度还是深度的层面上做好需求调研的工作,对数仓的建设百利而无一害</p>
-<h2 id="需求分类"><a href="#需求分类" class="headerlink" title="需求分类"></a>需求分类</h2><ul>
-<li>项目需求:搭建数仓需要完成哪些基础目标,以模板作为导向</li>
-<li>业务部门的需求:通过需求调研,了解业务部门希望在数仓搭建完成后,能对业务有多少<strong>实质性</strong>的帮助</li>
+</li>
 </ul>
-<p><img src="https://gitee.com/DataITems/cdn/raw/master/1601215112590.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/1601215112590.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h2 id="需求调研步骤"><a href="#需求调研步骤" class="headerlink" title="需求调研步骤"></a>需求调研步骤</h2><h3 id="1-确定调研对象"><a href="#1-确定调研对象" class="headerlink" title="1.确定调研对象"></a>1.确定调研对象</h3><p>在数仓调研过程中,不可避免的会遇到业务人员以为某项功能可以很轻松的实现,而技术人员完全听不懂专业的业务术语,会影响整个项目进度,而且在需求不清晰地情况下盲目的进行工作,会给日后的工作留下很多隐患.</p>
-<p>数仓团队中往往会存在一个业务咨询师的角色,主要就是负责技术和业务两方面的需求调研工作</p>
-<p>我记得以前做过一个银行数仓的搭建项目,整个团队埋头苦干,一个星期整理的需求分析的可用度不高,公司调来了一位高级咨询师,只用了三天,就把大致的需求分析做完了.</p>
-<p>术业有精通,这就是提高了整个项目的工作效率,数据仓库团队在进行需求调研时,需要把业务人员、技术人员和类似业务咨询师的项目成员召集起来一起反复谈论需求的细节</p>
-<h3 id="2-了解源系统"><a href="#2-了解源系统" class="headerlink" title="2.了解源系统"></a>2.了解源系统</h3><p>需要了解业务的源系统,包括源系统的所有者,源系统的业务流程,源系统的数据规范,源系统的数据存储方式,源系统的数据流程,源系统是否存在更新换代情况,源系统的数据库类型,源系统的源表等等,可以按照下图进行源系统文档的整理.</p>
-<p><img src="https://gitee.com/DataITems/cdn/raw/master/1601214627558.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/1601214627558.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="3-需求调研"><a href="#3-需求调研" class="headerlink" title="3.需求调研"></a>3.需求调研</h3><p>需求调研的目标是发现问题以及找到现阶段未发现的边界范围</p>
-<p>调查系统需求,主要是通过面谈、问卷调查法、观察法、体验法等方式,了解用户对系统的期待性功能,从而找到系统对应的相关事件,需求调研的重点应该放在业务过程上,而不是侧重于业务部门,例如有三个部门在某一个业务上存在交叉,那这个时候就不应该把部门需求放在第一位,首先应该梳理业务需求,数据服务于部门,而不是部门服务于业务.</p>
-<p>如果基于业务部门建立数据仓库总线矩阵雏形,会造成很多数据的重复性和交叉性,无法完成在数据应用上的目标.</p>
-<p>需要先对源数据进行初步评估,以便日后进行源数据处理</p>
-<h3 id="4-需求分析的内容"><a href="#4-需求分析的内容" class="headerlink" title="4.需求分析的内容"></a>4.需求分析的内容</h3><p>需求分析的内容主要可以分为下面三步:</p>
-<ul>
-<li>1.对象 </li>
+<pre><code class="python"># 数据准备，显示各学历人数的比例
+nums = [20, 42, 18, 7, 6]
+labels = [&#39;High-school&#39;, &#39;Bachelor&#39;, &#39;Master&#39;, &#39;Ph.d&#39;, &#39;Other&#39;]
+
+# pie(x, labels=None)函数,x代表绘制饼图的数据，labels是缺省值，可以为饼图添加标签
+import matplotlib.pyplot as plt
+plt.pie(x=nums, labels=labels, autopct=&#39;%1.1f%%&#39;)
+# autopct:设置圆内的文本 # &#39;1.1f%&#39;指图片上显示的数字格式，表示小数点前后位数# 另外两个%%是format格式的符号plt.show()</code></pre>
+<p>运行结果：</p>
+<p><img src="https://7.dusays.com/2020/12/13/96a91263d216d.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/13/96a91263d216d.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h2 id="小作业"><a href="#小作业" class="headerlink" title="小作业"></a><strong>小作业</strong></h2><ul>
+<li><p><strong>1、</strong>说出Matplotlib和Seaborn库的区别。</p>
+</li>
+<li><p><strong>2、</strong>总结画出五种常见图像的函数。</p>
+</li>
 </ul>
-<p>拿到一个需求之后首先要分析的就是这个需求的主体是什么，关键对象是什么，然后再来分析于此相关联的对象都有什么，是否有什么漏洞 </p>
-<ul>
-<li>2.约束</li>
-</ul>
-<p>每一个需求之间都多多少少有关联，而需求分析的难点就在于把众多业务联系在一个平面上，从而解决数据搭建过程中的边界问题。需求的约束有哪些？限制有哪些？这些问题才是重点。</p>
-<p>例如：在银行数仓大环境中，同一个业务名称的指标在不同的业务部门之间会有不同的逻辑，对于A指标，财务部和风险部对其定义可能存在不一样的逻辑，这个时候就需要在需求分析过程中对该指标进行细化调研，搞明白该指标在不同的部门中的逻辑约束关系，为何会出现一个指标，而存在不同逻辑。当这些搞清楚后，对于轻度化汇总的宽表设计会有很大帮助。</p>
-<ul>
-<li>3.关系</li>
-</ul>
-<p>需求之间的关系往往错综复杂，一层套一层。即便不能搞清楚数仓搭建过程中所有的需求关系，但是重要的指标需求一定要搞清楚，避免给以后留下坑。</p>
-<p>例如：A部门的一个需求指标可能是由其他部门的指标加工而来的，或许还存在一些人工录入的数据，搞清楚这些后，可以解决基础层数据存储和模型层逻辑加工的很多问题。</p>
-<p>银行数仓中，有很多指标是交叉的，例如<strong>存量贷款</strong>这个词在财务中可能只需要未核销未结清的贷款部分，而在风险部中不仅需要这部分，还需要90天转表外的不良贷款金额，而这部分的金额是记录在外部账中，不始于财务的统计规则。</p>
-<h3 id="5-编写需求文档"><a href="#5-编写需求文档" class="headerlink" title="5.编写需求文档"></a>5.编写需求文档</h3><p>经过以上步骤产出的文档主要有<strong>需求规格文档</strong>、<strong>源系统跟踪报告</strong>、<strong>总线矩阵文档</strong>、<strong>数据评估报告</strong>。 </p>
-<blockquote>
-<p>下边大概为大家分享总结一些流程以及文档规范。</p>
-</blockquote>
-<h4 id="需求流程"><a href="#需求流程" class="headerlink" title="需求流程"></a>需求流程</h4><p><img src="https://7.dusays.com/2020/11/10/3bc2939923cf9.png" class="lazyload" data-srcset="https://7.dusays.com/2020/11/10/3bc2939923cf9.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h4 id="分析需求"><a href="#分析需求" class="headerlink" title="分析需求"></a>分析需求</h4><p>可行性分析：数据产品经理主导，邀请设计、数据安全与合规人员，对需求进行评估。</p>
-<ul>
-<li>需求合理性：评估该需求的合理性。</li>
-<li>数据可行性：评估当前已有数据能否支撑需求开发，如果缺少数据，则需要另行规划缺失数<br>据的抽取方案。<br>同时建议进行深入的数据探查，包括但不限于数据完整性、字段离散值分布情况、空值、零<br>值、重复值占比等情况。</li>
-<li>技术可行性：评估当前已有数据模型能否支撑需求开发，如果不能，则需要规划模型改造方<br>案，并充分评估其影响。同时在测试环境进行模型测试。</li>
-</ul>
-<h4 id="数据仓库业务模板"><a href="#数据仓库业务模板" class="headerlink" title="数据仓库业务模板"></a>数据仓库业务模板</h4><p><img src="https://7.dusays.com/2020/11/10/a62b65078e1d1.png" class="lazyload" data-srcset="https://7.dusays.com/2020/11/10/a62b65078e1d1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h4 id="单元测试报告"><a href="#单元测试报告" class="headerlink" title="单元测试报告"></a>单元测试报告</h4><p><img src="https://7.dusays.com/2020/11/10/0620bd84cad7a.png" class="lazyload" data-srcset="https://7.dusays.com/2020/11/10/0620bd84cad7a.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h4 id="数据评估报告"><a href="#数据评估报告" class="headerlink" title="数据评估报告"></a>数据评估报告</h4><p><img src="https://7.dusays.com/2020/11/10/d185b375a84ae.png" class="lazyload" data-srcset="https://7.dusays.com/2020/11/10/d185b375a84ae.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 
   
   
@@ -1575,7 +1643,7 @@
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\19a88b12.html" title="数据仓库是什么" rel="bookmark "><img src="https://7.dusays.com/2020/11/09/a244f012d5f64.png" /><span class="title">数据仓库是什么</span><span class="excerpt">数据仓库是什么?</span></a><a class="item" href="\posts\646dbc2e.html" title="数据仓库之任务调度" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/1600587263291.png" /><span class="title">数据仓库之任务调度</span><span class="excerpt">数据仓库之任务调度。</span></a><a class="item" href="\posts\ca165cd5.html" title="ETL开发" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/1600580328638.png" /><span class="title">ETL开发</span><span class="excerpt">数据仓库之ETL开发。</span></a><a class="item" href="\posts\6637aa6e.html" title="数据仓库元数据" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/%E5%85%83%E6%95%B0%E6%8D%AE.png" /><span class="title">数据仓库元数据</span><span class="excerpt">数据仓库架构到底是怎么设计的，意义是什么?</span></a><a class="item" href="\posts\cfcef26f.html" title="活动三步走" rel="bookmark "><img src="https://7.dusays.com/2020/12/10/e50eb621069d5.png" /><span class="title">活动三步走</span><span class="excerpt">进来看看 不吃亏，肯定有你不会的。不信你来看看</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\bb9346ce.html" title="Day1.数据可视化Python语法" rel="bookmark "><img src="https://7.dusays.com/2020/12/07/7600d50cd555c.png" /><span class="title">Day1.数据可视化Python语法</span><span class="excerpt">数据可视化，基础语法。</span></a><a class="item" href="\posts\6e2faa04.html" title="Anaconda利器" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/p0.png" /><span class="title">Anaconda利器</span><span class="excerpt">数据可视化，环境搭建。</span></a><a class="item" href="\posts\b11c450a.html" title="Day2.数据可视化基本图像绘制" rel="bookmark "><img src="https://7.dusays.com/2020/12/12/254095fa511a0.png" /><span class="title">Day2.数据可视化基本图像绘制</span><span class="excerpt">数据可视化，基本图像的绘制。</span></a><a class="item" href="\posts\cc50857e.html" title="零基础数据可视化入门学习" rel="bookmark "><img src="https://7.dusays.com/2020/12/07/d140015c4734a.png" /><span class="title">零基础数据可视化入门学习</span><span class="excerpt">零基础学习数据可视化。</span></a><a class="item" href="\posts\cfcef26f.html" title="活动三步走" rel="bookmark "><img src="https://7.dusays.com/2020/12/10/e50eb621069d5.png" /><span class="title">活动三步走</span><span class="excerpt">进来看看 不吃亏，肯定有你不会的。不信你来看看</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1587,7 +1655,7 @@
               
             
               
-                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/6f521982.html>http://www.a2data.cn/posts/6f521982.html</a></p>
+                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/f893cfd3.html>http://www.a2data.cn/posts/f893cfd3.html</a></p>
               
             
           </blockquote>
@@ -1614,10 +1682,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-10T09:11:48+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-13T09:54:30+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Nov 10, 2020</p>
+    <p>更新于：Dec 13, 2020</p>
   </a>
 </div>
 
@@ -1626,7 +1694,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E4%BB%93/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>数仓</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>数据可视化</p></a></div>
 
 
         
@@ -1638,7 +1706,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.7k words</p>
+      <p>1.4k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1659,7 +1727,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/6f521982.html&title=什么是需求？ - DataScience&summary=数仓需求的来源,以及流程。"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/f893cfd3.html&title=Day3.常见图形的不同绘制方法 - DataScience&summary=数据可视化，常见图形的不同绘制方式。"
           
           >
           
@@ -1671,7 +1739,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/6f521982.html&title=什么是需求？ - DataScience&summary=数仓需求的来源,以及流程。"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/f893cfd3.html&title=Day3.常见图形的不同绘制方法 - DataScience&summary=数据可视化，常见图形的不同绘制方式。"
           
           >
           
@@ -1683,7 +1751,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/6f521982.html&title=什么是需求？ - DataScience&summary=数仓需求的来源,以及流程。"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/f893cfd3.html&title=Day3.常见图形的不同绘制方法 - DataScience&summary=数据可视化，常见图形的不同绘制方式。"
           
           >
           
@@ -1697,7 +1765,7 @@
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACO0lEQVR42u3aS27DMAwFQN//0s0BCsPiR0ZCjXZtEpuj1QPJ6+/Qc4GDg4ODgw+CX8lz9/t/Lwp+Hn1f+Pfg4ODg4OAD4csBYBH+9P/o89vqBQcHBwcHHwxfDRBdQSQbeLL1goODg4ODg8cDTBQUDTTg4ODg4ODg+wJMNYiAg4ODg4OD9w8UsheyayDx2iQFHBwcHBz8i+DRkx3kd/2drhccHBwcHHwQvHq6g8lTI6JcLzg4ODg4+CD47sKyA4lqI2Q5uYGDg4ODg/8wPPuAroK7gOGBAjg4ODg4+CB4NpBEFwGyDY1qYwQcHBwcHHwivCuYRAf42QBSDjzg4ODg4OCD4F3BIBto3gou4ODg4ODgE+GrjYNo0IkuFlTrWK4LHBwcHBz8IHgWlF0wqD738fvg4ODg4OAHwKMD/uz3Vz/vGkSAg4ODg4NPgldf2BV4qosH4ODg4ODgJ8Ojg/9q4797gLBcFzg4ODg4+CB4doCfvYhqo2O17tvngIODg4ODD4J3n2zjIXvh4eAEDg4ODg4+EF5dnIsGluUBQPKAg4ODg4OfBO8OLNmBQNdg4jYIgYODg4ODD4JXA0J1MFBtSIQHH+Dg4ODg4APhXYGlGjCeQNmLBAcHBwcHPwHeteBXDSrVgLXciAAHBwcHBz8YHgVGBxHZi9keYMDBwcHBwQfDq42H6nvBwcHBwcFPhO9auHsduHsxABwcHBwc/Ivg6QZ9EJgNQF0LC+Dg4ODg4JPgpx1wcHBwcPAB5wNzf0L9jsp+LQAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACO0lEQVR42u3aS3KDQAwFQO5/6eQELvSbmIieHWUbpofNs6Tr56XrAgcHBwcHXwS/iiv9wA+/yz6vu19wcHBwcPCN8C7gbmN394nuo7tfcHBwcHDwzfBogMgGk2OQ7H7BwcHBwcHB09fZQDN1f3BwcHBwcPA+vFpwAAcHBwcHBz/XUMjCqoMAj+ukgIODg4ODPwheHpj70vXXJxvBwcHBwcEfAO+u7IOr9x3bLzg4ODg4+CJ4NSBE//hPFSDG9gcODg4ODr4Q3gWebgR0Gxjg4ODg4OBvgGcDxF8VGO6CVrkQAQ4ODg4O/o/h1QPoFhiyn1dfEDg4ODg4+Gb4qYL+9KDgVDACBwcHBwd/A7xaGOg2CKoHHG5sgIODg4ODL4RPN/yjhYZuISR6kODg4ODg4JvhUwN92UBUHeQrByZwcHBwcPBF8HQASAKzsGxgKQcYcHBwcHDwBfBuQaA9cDc0UBBuMICDg4ODgy+GTxUguqDuPtIBBhwcHBwcfBH87kbZAbtqg7+7P3BwcHBw8DfBp4JEt9BxrDABDg4ODg6+CN5d3YZ+9uCqDQlwcHBwcPCN8KnCf3WgIBpEskEn3FAABwcHBwdfAO8GjuwBVQNN+8DBwcHBwcEXw6PBonpw2QO7hhY4ODg4ODj43OD+VHBJDyCAg4ODg4ODl79fLSBUA83xQgQ4ODg4OPiD4NmGQrXR3w0y1QIJODg4ODj4Rni5QH/o827B4+OLAwcHBwcHXwR/2wIHBwcHB1+wfgEQbwQu6KaglgAAAABJRU5ErkJggg==">
           </div>
         </div>
       
@@ -1719,23 +1787,18 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/c54e1e5.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>数据仓库架构的设计</p>
-          <p class='content'>数据仓库架构到底是怎么设计的，意义是什么?
-
-
-概述架构是数据仓库建设的总体规划，从整体视角描述了解决方案的高层模型，描述了各个子系统的功能以及关系，描述了数据从源系统到决策系统的数据流程。业务...</p>
-        </a>
       
-      
-        <a class='next' href='/posts/5c0875d6.html'>
-          <p class='title'>任务栏调整神器<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>任务栏调整神器–7+ taskbar tweaker
+        <a class='next' href='/posts/b11c450a.html'>
+          <p class='title'>Day2.数据可视化基本图像绘制<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>数据可视化，基本图像的绘制。
 
 
 
+数据可视化的基础语法可视化主要是以图像来展示数据间的关系，
+常见的图形种类有
 
-7+ Taskbar Tweaker 是Windows任务栏自定义设置即优化调整实用工具，允许用户通过配置任务栏程序行为、分组&am...</p>
+==折线图,散点图,条形图，直方图，饼图==。
+此外在接下来课程中还会用到==...</p>
         </a>
       
     </div>
@@ -1896,7 +1959,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E6%B1%82"><span class="toc-text">需求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E7%B1%BB"><span class="toc-text">需求分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E8%B0%83%E7%A0%94%E6%AD%A5%E9%AA%A4"><span class="toc-text">需求调研步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%A1%AE%E5%AE%9A%E8%B0%83%E7%A0%94%E5%AF%B9%E8%B1%A1"><span class="toc-text">1.确定调研对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BA%86%E8%A7%A3%E6%BA%90%E7%B3%BB%E7%BB%9F"><span class="toc-text">2.了解源系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%9C%80%E6%B1%82%E8%B0%83%E7%A0%94"><span class="toc-text">3.需求调研</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-text">4.需求分析的内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%BC%96%E5%86%99%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3"><span class="toc-text">5.编写需求文档</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E6%B5%81%E7%A8%8B"><span class="toc-text">需求流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%9E%90%E9%9C%80%E6%B1%82"><span class="toc-text">分析需求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E4%B8%9A%E5%8A%A1%E6%A8%A1%E6%9D%BF"><span class="toc-text">数据仓库业务模板</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A"><span class="toc-text">单元测试报告</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%AF%84%E4%BC%B0%E6%8A%A5%E5%91%8A"><span class="toc-text">数据评估报告</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="toc-text">散点图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%98%E7%BA%BF%E5%9B%BE"><span class="toc-text">折线图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B4%E6%96%B9%E5%9B%BE"><span class="toc-text">直方图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A1%E5%BD%A2%E5%9B%BE"><span class="toc-text">条形图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A5%BC%E5%9B%BE"><span class="toc-text">饼图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E4%BD%9C%E4%B8%9A"><span class="toc-text">小作业</span></a></li></ol>
     </div>
   </section>
 
@@ -3152,4 +3215,5 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
       </script>
 
   </div>
-<script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+</body>
+</html>
