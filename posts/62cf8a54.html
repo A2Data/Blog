@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -19,9 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2019/12 - DataScience</title>
+  <title>Day4.数据可视化箱线图与热力图 - DataScience</title>
+  
+    <meta name="keywords" content="数据可视化">
   
 
+  
+    <meta name="description" content="数据可视化，箱线图与热力图">
   
 
   <!-- feed -->
@@ -1295,7 +1297,7 @@
   
     
     
-        <div class='cover-wrapper  featured' style="display: none;">
+        <div class='cover-wrapper post featured' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://7.dusays.com/2020/09/10/bcac99047bac5.png"></div>
           
@@ -1377,8 +1379,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">Day4.数据可视化箱线图与热力图</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -1387,14 +1389,14 @@
  
 <script> 
   // 处理封面 此时 jquery 还没加载 
-  if ("half" == "none") { // 移除封面 
+  if ("none" == "none") { // 移除封面 
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none"; 
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
   } else { 
-    if ("half" == "half") { // 半屏 
+    if ("none" == "half") { // 半屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half'); 
       document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
-    } else if ("half" == "full") { // 全屏 
+    } else if ("none" == "full") { // 全屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full'); 
       document.getElementsByClassName('scroll-down')[0].style.display = ""; 
     } 
@@ -1408,162 +1410,349 @@
         
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
   
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/59977.html">
-        1.Python基础知识
+    <div class='headimg-div'>
+      <a class='headimg-a'>
+        <img class='headimg' src='https://7.dusays.com/2020/12/14/0d1840e21ca68.png'/>
       </a>
-    </h2>
+    </div>
   
-  <div class='md'>
+  <div class="article-meta" id="top">
     
-      <p>Python的基础语法</p>
     
+    
+      <h1 class="title">
+        Day4.数据可视化箱线图与热力图
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://gitee.com/DataITems/cdn/raw/master/avatar.png">
+    <p>JackFeng</p>
+  </a>
+</div>
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Dec 14, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>550 words</p>
+    </a>
   </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>2 min</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Day4.数据可视化箱线图与热力图" data-path="/posts/62cf8a54.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2019-12-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/Python%E9%80%9F%E6%88%90/">Python速成</a>
+  <a href="/posts/62cf8a54.html#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/posts/62cf8a54.html">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <p>数据可视化，箱线图与热力图</p>
+<a id="more"></a>
+
+
+
+<p>使用<strong>Matplotlib和Seaborn</strong>进行绘制<code>箱线图和热力图</code>。</p>
+<h2 id="箱线图"><a href="#箱线图" class="headerlink" title="箱线图"></a>箱线图</h2><p>箱线图(boxplot)又称盒式图，可以显示数据的分散情况，由五个数值点组成：最大值(max)-上界、最小值(min)-下界、中位数(median)和上下四分位数(Q1, Q3)。它可以帮我们分析出数据的差异性、离散程度和异常值等。</p>
+<p><img src="https://7.dusays.com/2020/12/14/0d1840e21ca68.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/14/0d1840e21ca68.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">****</p>
+<pre><code class="python"># 数据准备
+# ⽣成0-1之间的10*4维度数据(10行，4列的数组)
+import numpy as np
+data = np.random.normal(size=(10,4))
+lables = [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;]
+
+# ⽤Matplotlib画箱线图
+# boxplot(x,labels=None)函数，x代表绘图数据，labels是缺省值，可以为箱线图添加标签。
+import matplotlib.pyplot as plt
+plt.boxplot(data, labels=lables) #注意单词labels和lables
+plt.show()
+
+# ⽤Seaborn画箱线图
+# boxplot(x=None,y=None,data=None)函数。data为DataFrame类型，x、y是data中的变量。
+import seaborn as sns
+import pandas as pd
+df = pd.DataFrame(data, columns=lables)
+sns.boxplot(data=df)
+plt.show()</code></pre>
+<p>运行结果：</p>
+<p><img src="https://7.dusays.com/2020/12/14/56b3913a3970c.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/14/56b3913a3970c.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><img src="https://7.dusays.com/2020/12/14/c61d40fb5b151.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/14/c61d40fb5b151.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h2 id="热力图"><a href="#热力图" class="headerlink" title="热力图"></a>热力图</h2><p>热力图（heat map）是一种矩阵表示方法，其中矩阵中的元素值用颜色来代表，不同的颜色代表不同大小的值。通过颜色的深浅就能直观地知道某个位置上数值的大小。另外也可以某个位置上的颜色与其他位置颜色进行比较，是一种非常直观的多元变量分析方法。</p>
+<h3 id="1、基本热力图"><a href="#1、基本热力图" class="headerlink" title="1、基本热力图"></a>1、基本热力图</h3><p><img src="https://7.dusays.com/2020/12/14/6cf54e57603fa.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/14/6cf54e57603fa.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="2、设置热力图区间"><a href="#2、设置热力图区间" class="headerlink" title="2、设置热力图区间"></a>2、设置热力图区间</h3><p><img src="https://7.dusays.com/2020/12/14/11ded4857f2fa.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/14/11ded4857f2fa.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="> </p>
+<h3 id="3、颜色差异更大的原因"><a href="#3、颜色差异更大的原因" class="headerlink" title="3、颜色差异更大的原因"></a>3、颜色差异更大的原因</h3><p><img src="https://7.dusays.com/2020/12/14/92ba714a135f8.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/14/92ba714a135f8.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="4、使用Seaborn自带数据"><a href="#4、使用Seaborn自带数据" class="headerlink" title="4、使用Seaborn自带数据"></a>4、使用Seaborn自带数据</h3><p><img src="https://7.dusays.com/2020/12/14/8d520e6523290.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/14/8d520e6523290.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p>一般使用Sarborn中的sns.heatmap(data)函数绘制，我们使用Seaborn中自带的数据集ﬂights，该数据集记录了1949年到1960年期间，每个月的航班乘客的数量。 一般可能会出网络问题导致的失败。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/mwaskom/seaborn-data">https://github.com/mwaskom/seaborn-data</a></p>
+<p>运行结果：</p>
+<p><img src="https://7.dusays.com/2020/12/14/ea451b988f5cf.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/14/ea451b988f5cf.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="5、指定调色板"><a href="#5、指定调色板" class="headerlink" title="5、指定调色板"></a>5、指定调色板</h3><p><img src="https://7.dusays.com/2020/12/14/5aacb72c4f34f.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/14/5aacb72c4f34f.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><img src="https://7.dusays.com/2020/12/14/8a57933d2dc1d.png" class="lazyload" data-srcset="https://7.dusays.com/2020/12/14/8a57933d2dc1d.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h2 id="小作业"><a href="#小作业" class="headerlink" title="小作业"></a><strong>小作业</strong></h2><p><strong>1、</strong>Seaborn数据集中自带了car_crashes数据集，这是一个国外车祸的数据集，对这个数据集进行成对关系的探索。并用Seaborn画二元变量(x=”total,y=”speeding”)分布图，如果想要画散点图，核密度图，Hexbin图该怎样写.</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/posts/59977.html'>
-            Read More
-          </a>
+      
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\posts\bb9346ce.html" title="Day1.数据可视化Python语法" rel="bookmark "><img src="https://7.dusays.com/2020/12/07/7600d50cd555c.png" /><span class="title">Day1.数据可视化Python语法</span><span class="excerpt">数据可视化，基础语法。</span></a><a class="item" href="\posts\6e2faa04.html" title="Anaconda利器" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/A2Data/cdn/img/p0.png" /><span class="title">Anaconda利器</span><span class="excerpt">数据可视化，环境搭建。</span></a><a class="item" href="\posts\b11c450a.html" title="Day2.数据可视化基本图像绘制" rel="bookmark "><img src="https://7.dusays.com/2020/12/12/254095fa511a0.png" /><span class="title">Day2.数据可视化基本图像绘制</span><span class="excerpt">数据可视化，基本图像的绘制。</span></a><a class="item" href="\posts\cc50857e.html" title="零基础数据可视化入门学习" rel="bookmark "><img src="https://7.dusays.com/2020/12/07/d140015c4734a.png" /><span class="title">零基础数据可视化入门学习</span><span class="excerpt">零基础学习数据可视化。</span></a><a class="item" href="\posts\cfcef26f.html" title="活动三步走" rel="bookmark "><img src="https://7.dusays.com/2020/12/10/e50eb621069d5.png" /><span class="title">活动三步走</span><span class="excerpt">进来看看 不吃亏，肯定有你不会的。不信你来看看</span></a></div></section></div>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>版权声明：本网站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="/">数据科学</a></p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.a2data.cn/posts/62cf8a54.html>http://www.a2data.cn/posts/62cf8a54.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+        <div class='donate'>
+          <div class='imgs'>
+            
+              <img src='https://gitee.com/DataITems/cdn/raw/master/alipay.jpg'>
+            
+              <img src='https://gitee.com/DataITems/cdn/raw/master/wechat.png'>
+            
+          </div>
         </div>
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-14T09:58:51+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Dec 14, 2020</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/archives/2019/12/page/2/">
-            <section class="post prev white-box shadow" >
-              <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          3 / 3
-        </p>
-        
-      </div>
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>数据可视化</p></a></div>
 
 
-	
-</div>
-<aside class='l_side'>
-  
-  
-    
-    
+        
+      
+        
+      
+        
+          
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>550 words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>2 min</p>
+    </a>
+  </div>
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://7.dusays.com/2020/09/10/3694a41d52ade.jpg'/>
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.a2data.cn/posts/62cf8a54.html&title=Day4.数据可视化箱线图与热力图 - DataScience&summary=数据可视化，箱线图与热力图"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
         </a>
       
     
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.a2data.cn/posts/62cf8a54.html&title=Day4.数据可视化箱线图与热力图 - DataScience&summary=数据可视化，箱线图与热力图"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
     
-      <div class='text'>
-        
-          <h2>Jack` Féng</h2>
-        
-        
-          <p>放弃不难,但坚持一定很酷！</p>
-
-        
-        
-      </div>
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.a2data.cn/posts/62cf8a54.html&title=Day4.数据可视化箱线图与热力图 - DataScience&summary=数据可视化，箱线图与热力图"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
     
-    
-      <div class="social-wrapper">
+      
         
-          
-            <a href="https://github.com/A2Data"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=a2data@163.com"
-              class="social fas fa-envelope-open flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=66860619"
-              class="social fab fa-qq flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://gitee.com/DataITems/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
-              class="social fab fa-weixin flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://me.csdn.net/weixin_47093227"
-              class="social fab fa-cuttlefish flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACSUlEQVR42u3cS47DQAgFQN//0jP7kaKBR1uKcfUukT8U2SBAuX5eei5wcHBwcPBF8Cs8f+//9Ln6ffd9cbzg4ODg4OAL4eUCoBlINQHVRI7jBQcHBwcHXwzvFiyf7qt+X33OqXjBwcHBwcHBr/L9KSh9Hzg4ODg4OHhewEwbDo+t3MDBwcHBwb8A3m3QV69PGxVfO0kBBwcHBwf/IvhdC353fT624AcODg4ODv5g+PScGkhUGxHjeMHBwcHBwRfB08ZAd2BQ/f7Uc8uVGzg4ODg4+IPh3QHANGHTwcV4AQEcHBwcHHwRvBtoNzHVwE4vAnyMCxwcHBwcfBH8rhekDYw0rnLBAw4ODg4OvgjeLVTSwma6OHjshwAHBwcHB38RvFuYpAt86SCjmwhwcHBwcPCN8DSg6eJA9fpjhRE4ODg4OPgieLVB310AmBYi/72/ez84ODg4OPib4Olg/1Qj4a7EgoODg4ODb4SnBcGp6+5OFDg4ODg4+EZ4OmhPF/bShb5qY2K84AcODg4ODv4g+LTx0B04pNedKqDAwcHBwcE3wqeFSVr4pImrPhccHBwcHPwN8PSkhUb6/DQx4ODg4ODgG+GnBgXVAX0K6Q4SyosB4ODg4ODgC+CnCpZjDYPmdeV4wcHBwcHBF8OnBUsc0D/vmx5wcHBwcHDw/I9xToHGjQtwcHBwcHDw8R/KpQ2OaSEFDg4ODg6+GZ4u3HULjunCYJwYcHBwcHDwhfC4QX+ogOkmME4YODg4ODj4IvjbDjg4ODg4+ILzC0FqQCr12BqcAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
     
   </div>
-</section>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/f893cfd3.html'>
+          <p class='title'>Day3.常见图形的不同绘制方法<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>数据可视化，常见图形的不同绘制方式。
+
+
+
+我们了解了常用的五种图形：
+
+散点图
+折线图
+柱状图
+直方图
+饼图
+
+那么如何用Matplotlib和Seaborn来画出它们。
+Matplotlib...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
 
   
 
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
   
     
     
@@ -1686,230 +1875,28 @@
     
     
 
-<section class="widget text shadow desktop mobile">
-  
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
   <header>
     
-      <i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i><span class='name'>公告</span>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-  <div class='content'>
-    
-      <p>本站默认替换了右键菜单，唤醒原系统菜单：<code>Ctrl</code> + <code>右键</code></p>
-
-    
-      <p>回归本心、去繁从简</p>
-
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobile">
-  
-  <header>
-    
-      <i class="fas fa-qrcode fa-fw fa-fw" aria-hidden="true"></i><span class='name'>公众号</span>
-    
-  </header>
-
-
-  <div class='content article-entry'>
-    
-      
-        <img src='https://7.dusays.com/2020/09/18/78ec698db1297.png'
-        >
-      
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobule">
-  
-  <header>
-    
-      <i class="fas fa-mobile fa-fw" aria-hidden="true"></i><span class='name'>小程序</span>
-    
-  </header>
-
-
-  <div class='content article-entry'>
-    
-      
-        <img src='https://7.dusays.com/2020/09/18/d3e9c15023e78.png'
-        >
-      
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget text shadow desktop">
-  
-  <header>
-    
-      <i class="far fa-comments fa-fw" aria-hidden="true"></i><span class='name'>最新评论</span>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <div id="hot-comments"></div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop">
-  
-  <header>
-    
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>106 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2018/12/18'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>146.2k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Mon Dec 14 2020 09:59:03 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2020-12-14 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2020-12-14 日';
-          }
-        </script>
-        
-      
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%B1%E7%BA%BF%E5%9B%BE"><span class="toc-text">箱线图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%83%AD%E5%8A%9B%E5%9B%BE"><span class="toc-text">热力图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%9F%BA%E6%9C%AC%E7%83%AD%E5%8A%9B%E5%9B%BE"><span class="toc-text">1、基本热力图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E8%AE%BE%E7%BD%AE%E7%83%AD%E5%8A%9B%E5%9B%BE%E5%8C%BA%E9%97%B4"><span class="toc-text">2、设置热力图区间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E9%A2%9C%E8%89%B2%E5%B7%AE%E5%BC%82%E6%9B%B4%E5%A4%A7%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-text">3、颜色差异更大的原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E4%BD%BF%E7%94%A8Seaborn%E8%87%AA%E5%B8%A6%E6%95%B0%E6%8D%AE"><span class="toc-text">4、使用Seaborn自带数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E6%8C%87%E5%AE%9A%E8%B0%83%E8%89%B2%E6%9D%BF"><span class="toc-text">5、指定调色板</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E4%BD%9C%E4%B8%9A"><span class="toc-text">小作业</span></a></li></ol>
     </div>
-  </div>
-</section>
+  </section>
+
 
   
 
 
 </aside>
+
 
 
       </div>
