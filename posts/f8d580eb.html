@@ -402,6 +402,22 @@
             
           
                     
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/relax/home
+                  
+                  
+                  
+                    id="relaxhome"
+                  >
+                  <i class='fas fa-info-circle fa-fw fa-fw'></i>home
+                </a>
+                
+              </li>
+            
+          
+                    
                   </ul>
                 
               </li>
@@ -980,6 +996,22 @@
             
           
                     
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/relax/home
+                  
+                  
+                  
+                    id="relaxhome"
+                  >
+                  <i class='fas fa-info-circle fa-fw fa-fw'></i>home
+                </a>
+                
+              </li>
+            
+          
+                    
                   </ul>
                 
               </li>
@@ -1297,7 +1329,7 @@
   
     
     
-        <div class='cover-wrapper post featured' style="display: none;">
+        <div class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://7.dusays.com/2020/09/10/bcac99047bac5.png"></div>
           
@@ -1432,7 +1464,7 @@
             
 <div class='new-meta-item author'>
   <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://gitee.com/DataITems/cdn/raw/master/avatar.png">
+    <img no-lazy src="https://gitee.com/DataITems_admin/cdn/raw/master/avatar.png">
     <p>JackFeng</p>
   </a>
 </div>
@@ -1532,20 +1564,20 @@
 案例：
 create user &#39;csg1&#39; identified by &#39;123&#39;;
 </code></pre>
-<p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614195339691.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200614195339691.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614195339691"></p>
+<p><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200614195339691.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200614195339691.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614195339691"></p>
 <p>用Create创建的用户仅有系统默认权限usage，无其他权限。</p>
 <h2 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h2><pre><code class="sql">DROP USER &#39;username&#39;@&#39;hostname&#39;;
 
 案例：
 drop user csg1;</code></pre>
-<p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614195455547.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200614195455547.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614195455547"></p>
+<p><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200614195455547.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200614195455547.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614195455547"></p>
 <h1 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h1><h3 id="赋权"><a href="#赋权" class="headerlink" title="赋权"></a>赋权</h3><pre><code class="sql">GRANT priviledge_name[(list_name1,list?_name2)] ON dbname.table_name FROM &#39;username&#39;@&#39;hostname&#39;;
 
 案例：
 对账号&#39;csg1&#39;添加数据库&#39;mysqlpractice&#39;所有表的&#39;select&#39;权限。
 grant select on mysqlpractice.* to csg1;
 </code></pre>
-<p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614201705116.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200614201705116.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614201705116"></p>
+<p><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200614201705116.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200614201705116.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614201705116"></p>
 <pre><code class="sql">案例：
 对全库全表赋权所有权限。
 
@@ -1559,7 +1591,7 @@ SHOW GRANTS;</code></pre>
 
 案例：
 revoke select on mysqlpractice.* from csg1;</code></pre>
-<p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614202521110.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200614202521110.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614202521110"></p>
+<p><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200614202521110.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200614202521110.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200614202521110"></p>
 
   
   
@@ -1573,7 +1605,7 @@ revoke select on mysqlpractice.* from csg1;</code></pre>
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\773d5f8c.html" title="1.DBeaver安装" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200502181911650.png" /><span class="title">1.DBeaver安装</span><span class="excerpt">DBeaver安装步骤</span></a><a class="item" href="\posts\b794162c.html" title="2.数据库操作-DDL" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/image-20200421154433187.png" /><span class="title">2.数据库操作-DDL</span><span class="excerpt">数据库操作DDL</span></a><a class="item" href="\posts\4354b039.html" title="1.认识Mysql" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/20200610232427.png" /><span class="title">1.认识Mysql</span><span class="excerpt">认识mysql！</span></a><a class="item" href="\posts\6656ad65.html" title="3.数据库操作-DML" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200615211933034.png" /><span class="title">3.数据库操作-DML</span><span class="excerpt">数据库操作DML</span></a><a class="item" href="\posts\e4f3239b.html" title="5.数据库操作-TCL" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614215919792.png" /><span class="title">5.数据库操作-TCL</span><span class="excerpt">数据库操作TCL</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\773d5f8c.html" title="1.DBeaver安装" rel="bookmark "><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200502181911650.png" /><span class="title">1.DBeaver安装</span><span class="excerpt">DBeaver安装步骤</span></a><a class="item" href="\posts\4354b039.html" title="1.认识Mysql" rel="bookmark "><img src="https://gitee.com/DataITems_admin/cdn/raw/master/20200610232427.png" /><span class="title">1.认识Mysql</span><span class="excerpt">认识mysql！</span></a><a class="item" href="\posts\b794162c.html" title="2.数据库操作-DDL" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/image-20200421154433187.png" /><span class="title">2.数据库操作-DDL</span><span class="excerpt">数据库操作DDL</span></a><a class="item" href="\posts\6656ad65.html" title="3.数据库操作-DML" rel="bookmark "><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200615211933034.png" /><span class="title">3.数据库操作-DML</span><span class="excerpt">数据库操作DML</span></a><a class="item" href="\posts\e4f3239b.html" title="5.数据库操作-TCL" rel="bookmark "><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200614215919792.png" /><span class="title">5.数据库操作-TCL</span><span class="excerpt">数据库操作TCL</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1595,9 +1627,9 @@ revoke select on mysqlpractice.* from csg1;</code></pre>
         <div class='donate'>
           <div class='imgs'>
             
-              <img src='https://gitee.com/DataITems/cdn/raw/master/alipay.jpg'>
+              <img src='https://gitee.com/DataITems_admin/cdn/raw/master/alipay.jpg'>
             
-              <img src='https://gitee.com/DataITems/cdn/raw/master/wechat.png'>
+              <img src='https://gitee.com/DataITems_admin/cdn/raw/master/wechat.png'>
             
           </div>
         </div>
@@ -1612,10 +1644,10 @@ revoke select on mysqlpractice.* from csg1;</code></pre>
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-18T10:25:43+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-01-24T21:53:55+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 18, 2020</p>
+    <p>更新于：Jan 24, 2021</p>
   </a>
 </div>
 
@@ -1717,27 +1749,26 @@ revoke select on mysqlpractice.* from csg1;</code></pre>
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/4354b039.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>1.认识Mysql</p>
-          <p class='content'>认识mysql！
-
-
-背景介绍
-数据库，就是数据的仓库。它是长期存储在计算机内，有组织、可共享的数据的集合。简而言之，即放置信息的文件柜。
-
-数据库分类
-当今互联网中，最常见的数据库模型主要为两...</p>
-        </a>
-      
-      
-        <a class='next' href='/posts/6656ad65.html'>
-          <p class='title'>3.数据库操作-DML<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/posts/6656ad65.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>3.数据库操作-DML</p>
           <p class='content'>数据库操作DML
 
 
 DML
 DML（Data Manipulation Language），是通过对表中数据的插入、删除和修改等操作，实现对数据库的基本操作。
 主要用途：对数据表进行数据插入、...</p>
+        </a>
+      
+      
+        <a class='next' href='/posts/e4f3239b.html'>
+          <p class='title'>5.数据库操作-TCL<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>数据库操作TCL
+
+
+TCL
+TCL（Transaction Control Language），事务控制语言。
+主要用途：对数据库进行事务控制的指令。
+操纵命令：COMMIT、ROLLBACK...</p>
         </a>
       
     </div>
@@ -1948,7 +1979,7 @@ DML（Data Manipulation Language），是通过对表中数据的插入、删除
                         
                     
                         
-                            <a href="https://gitee.com/DataITems/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
+                            <a href="https://gitee.com/DataITems_admin/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
                                class="social fab fa-weixin flat-btn"
                                target="_blank"
                                rel="external nofollow noopener noreferrer">
@@ -2066,7 +2097,7 @@ DML（Data Manipulation Language），是通过对表中数据的插入、删除
 
                 <div class="github-badge">
                     <a style="color: #fff" rel="license" href="https://www.a2data.cn/" target="_blank" title="DataScience提供内容创作">
-                        <span class="badge-subject">Copyright © 2018-2020</span><span class="badge-value bg-blueviolet">A2Data</span></a>
+                        <span class="badge-subject">Copyright © 2018-2021</span><span class="badge-value bg-blueviolet">A2Data</span></a>
                 </div>
                 <div class="github-badge">
                     <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
@@ -2079,14 +2110,6 @@ DML（Data Manipulation Language），是通过对表中数据的插入、删除
                 <div class="github-badge">
                     <a style="color: #fff" rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
                         <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
-                </div>
-                <div class="github-badge">
-                    <a style="color: #fff" rel="license" href="https://md.openwrite.cn/" target="_blank" title="OpenWrite.cn 特约提供服务">
-                        <span class="badge-subject">微信</span><span class="badge-value bg-orange">公众号编辑器</span></a>
-                </div>
-                <div class="github-badge">
-                    <a style="color: #fff" rel="license" href="https://www.leileitalk.com/" target="_blank" title="类类有话说 ">
-                        <span class="badge-subject">类类</span><span class="badge-value bg-red">有话说</span></a>
                 </div>
 
             
@@ -2293,12 +2316,12 @@ DML（Data Manipulation Language），是通过对表中数据的插入、删除
         
           
     <li>
-      <a class='vlts-menu fix-cursor-default' href=https://gitee.com/DataITems/cdn/raw/master/sys.png
+      <a class='vlts-menu fix-cursor-default' href=https://gitee.com/DataITems_admin/cdn/raw/master/sys.png
       
       
       
       
-         id="https:giteecomDataITemscdnrawmastersyspng"
+         id="https:giteecomDataITems_admincdnrawmastersyspng"
               >
         <i class='fa fa-fan fa-spin fa-fw'></i> 公众号
       </a>
@@ -2595,7 +2618,7 @@ DML（Data Manipulation Language），是通过对表中数据的插入、删除
 <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
 
 
 <script>

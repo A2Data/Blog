@@ -402,6 +402,22 @@
             
           
                     
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/relax/home
+                  
+                  
+                  
+                    id="relaxhome"
+                  >
+                  <i class='fas fa-info-circle fa-fw fa-fw'></i>home
+                </a>
+                
+              </li>
+            
+          
+                    
                   </ul>
                 
               </li>
@@ -980,6 +996,22 @@
             
           
                     
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/relax/home
+                  
+                  
+                  
+                    id="relaxhome"
+                  >
+                  <i class='fas fa-info-circle fa-fw fa-fw'></i>home
+                </a>
+                
+              </li>
+            
+          
+                    
                   </ul>
                 
               </li>
@@ -1297,7 +1329,7 @@
   
     
     
-        <div class='cover-wrapper post featured' style="display: none;">
+        <div class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://7.dusays.com/2020/09/10/bcac99047bac5.png"></div>
           
@@ -1432,7 +1464,7 @@
             
 <div class='new-meta-item author'>
   <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://gitee.com/DataITems/cdn/raw/master/avatar.png">
+    <img no-lazy src="https://gitee.com/DataITems_admin/cdn/raw/master/avatar.png">
     <p>JackFeng</p>
   </a>
 </div>
@@ -1548,12 +1580,12 @@ UPDATE USER SET age = 25 , sex = 1;</code></pre>
 <pre><code class="sql">INSERT INTO table_name1 SELECT * FROM table_name2 ON DUPLICATE KEY UPDATE column_name = VALUES(column_name);</code></pre>
 <p><strong>注意：</strong>在使用on duplicate key update时，表中必须要存在至少一个unique key或者primary key。</p>
 <p>案例：<br>现有表v1和v2如下：</p>
-<p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200615211933034.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200615211933034.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200615211933034" style="zoom: 50%;" /><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200615211959140.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200615211959140.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200615211959140" style="zoom:50%;" /></p>
+<p><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200615211933034.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200615211933034.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200615211933034" style="zoom: 50%;" /><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200615211959140.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200615211959140.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200615211959140" style="zoom:50%;" /></p>
 <p>v1表与v2表同时存在id为005的行，且name字段值不一致。</p>
 <p>我们使用on duplicate key update对v1表插入v2内容：</p>
 <pre><code class="sql">insert into v1 select name,tel,remove from v2 on duplicate key update name = values(name);</code></pre>
 <p>查看执行后的v1表内容，可以看到id为005的记录，其name字段值已修改为v2的相应记录：</p>
-<img src="https://gitee.com/DataITems/cdn/raw/master/image-20200615212924946.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200615212924946.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200615212924946" style="zoom:67%;" />
+<img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200615212924946.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200615212924946.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200615212924946" style="zoom:67%;" />
 
 
 
@@ -1618,7 +1650,7 @@ WHERE 条件语句
 SELECT user_id,user_name FROM user
 WHERE age &gt; 20 and tel IS NOT NULL
 LIMIT 10;</code></pre>
-<img src="https://gitee.com/DataITems/cdn/raw/master/image-20200612100312585.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200612100312585.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612100312585" style="zoom: 50%;" />
+<img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200612100312585.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200612100312585.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612100312585" style="zoom: 50%;" />
 
 <p>别名</p>
 <pre><code class="sql">column_name AS 别名
@@ -1635,14 +1667,14 @@ SELECT user_dept,AVG(age) as &#39;年龄&#39; FROM `user`
 GROUP BY user_dept
 HAVING AVG(age)&gt;25;
 </code></pre>
-<p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200612100428397.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200612100428397.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612100428397"></p>
+<p><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200612100428397.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200612100428397.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612100428397"></p>
 <p>HAVING语句用于对分组后的结果进行统计</p>
 <p>ORDER BY：对查询结果进行排序,默认为ASC升序，DESC为降序</p>
 <pre><code class="sql">案例：
 
 SELECT user_id,user_name FROM `user`
 ORDER BY user_name ;</code></pre>
-<img src="https://gitee.com/DataITems/cdn/raw/master/image-20200612100524629.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200612100524629.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612100524629" style="zoom:50%;" />
+<img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200612100524629.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200612100524629.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612100524629" style="zoom:50%;" />
 
 
 
@@ -1650,7 +1682,7 @@ ORDER BY user_name ;</code></pre>
 <pre><code class="sql">案例：
 
 SELECT DISTINCT user_dept FROM `user`;</code></pre>
-<img src="https://gitee.com/DataITems/cdn/raw/master/image-20200612100558579.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200612100558579.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612100558579" style="zoom:50%;" />
+<img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200612100558579.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200612100558579.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612100558579" style="zoom:50%;" />
 
 <h2 id="5-2、模糊查询"><a href="#5-2、模糊查询" class="headerlink" title="5.2、模糊查询"></a>5.2、模糊查询</h2><h3 id="LIKE"><a href="#LIKE" class="headerlink" title="LIKE"></a>LIKE</h3><pre><code class="sql">SELECT column_name FROM table_name
 WHERE column_name LIKE 模式字符串</code></pre>
@@ -1676,7 +1708,7 @@ WHERE column_name LIKE 模式字符串</code></pre>
 SELECT * FROM user
 WHERE user_name like &#39;A%&#39;;
 </code></pre>
-<img src="https://gitee.com/DataITems/cdn/raw/master/image-20200612100631405.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200612100631405.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612100631405" style="zoom: 67%;" />
+<img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200612100631405.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200612100631405.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612100631405" style="zoom: 67%;" />
 
 
 
@@ -1724,7 +1756,7 @@ select * from user where user_name rlike &#39;n$&#39;;
 
 查询user表中姓名存在an字段的人员。
 select * from user where user_name rlike &#39;an&#39;;</code></pre>
-<img src="https://gitee.com/DataITems/cdn/raw/master/image-20200615223316834.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200615223316834.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200615223316834" style="zoom: 67%;" />
+<img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200615223316834.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200615223316834.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200615223316834" style="zoom: 67%;" />
 
 
 
@@ -1754,24 +1786,24 @@ END
 调用存储体：
 CALL u1()//
 </code></pre>
-<p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200612095224202.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200612095224202.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612095224202"></p>
+<p><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200612095224202.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200612095224202.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200612095224202"></p>
 <h2 id="5-4、多表查询"><a href="#5-4、多表查询" class="headerlink" title="5.4、多表查询"></a>5.4、多表查询</h2><h3 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h3><pre><code class="sql">SELECT * FROM TABLE_A INNER JOIN TABLE_B 
 ON TABLE_A.COLUMN 比较运算符 TABLE_B.COLUMN;</code></pre>
 <p>内连接用于比较并返回满足连接条件的数据行，结果取交集。</p>
 <p>inner join示意图：</p>
-<img src="https://gitee.com/DataITems/cdn/raw/master/image-20200616222620841.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200616222620841.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616222620841" style="zoom: 33%;" />
+<img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200616222620841.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200616222620841.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616222620841" style="zoom: 33%;" />
 
 <p><strong>注意：</strong>如果两边的表行数不一致，可能会出现丢失数据。</p>
 <h3 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h3><pre><code class="sql">SELECT * FROM TABLE_A LEFT|RIGHT|FULL JOIN TABLE_B
 ON TABLE_A.COLUMN 比较运算符 TABLE_B.COLUMN;</code></pre>
 <p>外连接的两个表有主从之分，主表全部保存，从表适配保存。</p>
 <p>full outer join示意图：</p>
-<img src="https://gitee.com/DataITems/cdn/raw/master/image-20200616223251275.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200616223251275.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616223251275" style="zoom: 50%;" />
+<img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200616223251275.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200616223251275.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616223251275" style="zoom: 50%;" />
 
 
 
 <p>left/right outer join示意图：</p>
-<img src="https://gitee.com/DataITems/cdn/raw/master/image-20200616223435500.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200616223435500.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616223435500" style="zoom:50%;" />
+<img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200616223435500.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200616223435500.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616223435500" style="zoom:50%;" />
 
 
 
@@ -1780,12 +1812,12 @@ LOCK TABLES table_name LOCK_TYPE
 
 解锁：
 UNLOCK TABLES;</code></pre>
-<p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200616123547201.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200616123547201.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616123547201"></p>
+<p><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200616123547201.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200616123547201.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616123547201"></p>
 <p>Lock_type包含read和write等。</p>
 <p>锁为read类型的表，可读但不可写；其他会话对该表可读，但写入需要等到解锁后：</p>
-<p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200616123953421.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200616123953421.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616123953421"></p>
+<p><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200616123953421.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200616123953421.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616123953421"></p>
 <p>锁为write类型的表，可读也可写；但其他会话对该表的读或写需要等到解锁以后：</p>
-<p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200616124427459.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200616124427459.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616124427459"></p>
+<p><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200616124427459.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200616124427459.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616124427459"></p>
 <h1 id="7、MYSQL慢查询：EXPLAIN"><a href="#7、MYSQL慢查询：EXPLAIN" class="headerlink" title="7、MYSQL慢查询：EXPLAIN"></a>7、MYSQL慢查询：EXPLAIN</h1><p>explain语句用于分析MYSQL的查询性能，可以显示MySQL如何使用索引等来处理select语句以及连接表。</p>
 <pre><code class="sql">用explain查看查询是否使用索引：
 
@@ -1795,7 +1827,7 @@ EXPLAIN SELECT * FROM table_name WHERE 查询条件；
 对表Sheet1建立索引i1后，用explain查看任意查询情况：
 explain select * from Sheet1 where number = 1601;</code></pre>
 <p>explain查询结果type为ref，即使用了索引查询，而非全表遍历查询all；所使用的索引(possible keys/key)为i1：</p>
-<p><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200616213133759.png" class="lazyload" data-srcset="https://gitee.com/DataITems/cdn/raw/master/image-20200616213133759.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616213133759"></p>
+<p><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200616213133759.png" class="lazyload" data-srcset="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200616213133759.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20200616213133759"></p>
 
   
   
@@ -1809,7 +1841,7 @@ explain select * from Sheet1 where number = 1601;</code></pre>
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\773d5f8c.html" title="1.DBeaver安装" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200502181911650.png" /><span class="title">1.DBeaver安装</span><span class="excerpt">DBeaver安装步骤</span></a><a class="item" href="\posts\b794162c.html" title="2.数据库操作-DDL" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/image-20200421154433187.png" /><span class="title">2.数据库操作-DDL</span><span class="excerpt">数据库操作DDL</span></a><a class="item" href="\posts\4354b039.html" title="1.认识Mysql" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/20200610232427.png" /><span class="title">1.认识Mysql</span><span class="excerpt">认识mysql！</span></a><a class="item" href="\posts\f8d580eb.html" title="4.数据库操作-DCL" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614195339691.png" /><span class="title">4.数据库操作-DCL</span><span class="excerpt">数据库操作DCL</span></a><a class="item" href="\posts\e4f3239b.html" title="5.数据库操作-TCL" rel="bookmark "><img src="https://gitee.com/DataITems/cdn/raw/master/image-20200614215919792.png" /><span class="title">5.数据库操作-TCL</span><span class="excerpt">数据库操作TCL</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\773d5f8c.html" title="1.DBeaver安装" rel="bookmark "><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200502181911650.png" /><span class="title">1.DBeaver安装</span><span class="excerpt">DBeaver安装步骤</span></a><a class="item" href="\posts\4354b039.html" title="1.认识Mysql" rel="bookmark "><img src="https://gitee.com/DataITems_admin/cdn/raw/master/20200610232427.png" /><span class="title">1.认识Mysql</span><span class="excerpt">认识mysql！</span></a><a class="item" href="\posts\b794162c.html" title="2.数据库操作-DDL" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/MineSQL/cdn/img/image-20200421154433187.png" /><span class="title">2.数据库操作-DDL</span><span class="excerpt">数据库操作DDL</span></a><a class="item" href="\posts\f8d580eb.html" title="4.数据库操作-DCL" rel="bookmark "><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200614195339691.png" /><span class="title">4.数据库操作-DCL</span><span class="excerpt">数据库操作DCL</span></a><a class="item" href="\posts\e4f3239b.html" title="5.数据库操作-TCL" rel="bookmark "><img src="https://gitee.com/DataITems_admin/cdn/raw/master/image-20200614215919792.png" /><span class="title">5.数据库操作-TCL</span><span class="excerpt">数据库操作TCL</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -1831,9 +1863,9 @@ explain select * from Sheet1 where number = 1601;</code></pre>
         <div class='donate'>
           <div class='imgs'>
             
-              <img src='https://gitee.com/DataITems/cdn/raw/master/alipay.jpg'>
+              <img src='https://gitee.com/DataITems_admin/cdn/raw/master/alipay.jpg'>
             
-              <img src='https://gitee.com/DataITems/cdn/raw/master/wechat.png'>
+              <img src='https://gitee.com/DataITems_admin/cdn/raw/master/wechat.png'>
             
           </div>
         </div>
@@ -1848,10 +1880,10 @@ explain select * from Sheet1 where number = 1601;</code></pre>
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-18T10:25:54+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-01-24T21:53:54+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 18, 2020</p>
+    <p>更新于：Jan 24, 2021</p>
   </a>
 </div>
 
@@ -1953,8 +1985,24 @@ explain select * from Sheet1 where number = 1601;</code></pre>
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/f8d580eb.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>4.数据库操作-DCL</p>
+        <a class='prev' href='/posts/b794162c.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>2.数据库操作-DDL</p>
+          <p class='content'>数据库操作DDL
+
+
+DDL
+DDL（Data Definition Language）是连接存储世界与现实世界的高铁！
+
+
+主要用途：
+对数据库对象进行创建、修改、删除等操作。
+操作对象：
+数...</p>
+        </a>
+      
+      
+        <a class='next' href='/posts/f8d580eb.html'>
+          <p class='title'>4.数据库操作-DCL<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>数据库操作DCL
 
 
@@ -1963,18 +2011,6 @@ DCL（Data Control Language），数据库控制语言。
 主要用途：对数据库访问权限进行控制的指令。
 操纵命令：GRANT、REVOKE
 GRANT：...</p>
-        </a>
-      
-      
-        <a class='next' href='/posts/e4f3239b.html'>
-          <p class='title'>5.数据库操作-TCL<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>数据库操作TCL
-
-
-TCL
-TCL（Transaction Control Language），事务控制语言。
-主要用途：对数据库进行事务控制的指令。
-操纵命令：COMMIT、ROLLBACK...</p>
         </a>
       
     </div>
@@ -2185,7 +2221,7 @@ TCL（Transaction Control Language），事务控制语言。
                         
                     
                         
-                            <a href="https://gitee.com/DataITems/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
+                            <a href="https://gitee.com/DataITems_admin/cdn/raw/master/baeab3a662ef96c3403f558a0bb578c.jpg"
                                class="social fab fa-weixin flat-btn"
                                target="_blank"
                                rel="external nofollow noopener noreferrer">
@@ -2303,7 +2339,7 @@ TCL（Transaction Control Language），事务控制语言。
 
                 <div class="github-badge">
                     <a style="color: #fff" rel="license" href="https://www.a2data.cn/" target="_blank" title="DataScience提供内容创作">
-                        <span class="badge-subject">Copyright © 2018-2020</span><span class="badge-value bg-blueviolet">A2Data</span></a>
+                        <span class="badge-subject">Copyright © 2018-2021</span><span class="badge-value bg-blueviolet">A2Data</span></a>
                 </div>
                 <div class="github-badge">
                     <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
@@ -2316,14 +2352,6 @@ TCL（Transaction Control Language），事务控制语言。
                 <div class="github-badge">
                     <a style="color: #fff" rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
                         <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
-                </div>
-                <div class="github-badge">
-                    <a style="color: #fff" rel="license" href="https://md.openwrite.cn/" target="_blank" title="OpenWrite.cn 特约提供服务">
-                        <span class="badge-subject">微信</span><span class="badge-value bg-orange">公众号编辑器</span></a>
-                </div>
-                <div class="github-badge">
-                    <a style="color: #fff" rel="license" href="https://www.leileitalk.com/" target="_blank" title="类类有话说 ">
-                        <span class="badge-subject">类类</span><span class="badge-value bg-red">有话说</span></a>
                 </div>
 
             
@@ -2530,12 +2558,12 @@ TCL（Transaction Control Language），事务控制语言。
         
           
     <li>
-      <a class='vlts-menu fix-cursor-default' href=https://gitee.com/DataITems/cdn/raw/master/sys.png
+      <a class='vlts-menu fix-cursor-default' href=https://gitee.com/DataITems_admin/cdn/raw/master/sys.png
       
       
       
       
-         id="https:giteecomDataITemscdnrawmastersyspng"
+         id="https:giteecomDataITems_admincdnrawmastersyspng"
               >
         <i class='fa fa-fan fa-spin fa-fw'></i> 公众号
       </a>
@@ -2832,7 +2860,7 @@ TCL（Transaction Control Language），事务控制语言。
 <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
 
 
 <script>
